@@ -1,4 +1,3 @@
-
 """
 The main UI for the downloader tab.
 """
@@ -6,7 +5,7 @@ The main UI for the downloader tab.
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
-    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem, QMenu
+    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -55,10 +54,13 @@ class DownloaderTab(QWidget):
         top_bar_layout.setSpacing(15)
         
         # App Logo, Speed, User, URL Input...
-        self.logo_label = QLabel("Logo")
+        self.logo_label = QLabel("Logo") # Placeholder text
+        # self.logo_label.setPixmap(QPixmap(":/images/logo.png")) # Real icon
         self.logo_label.setFixedSize(64, 64)
         self.logo_label.setAlignment(Qt.AlignCenter)
         self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
+
+        # Speed and User Info
         info_layout = QVBoxLayout()
         info_layout.setSpacing(2)
         self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
@@ -67,19 +69,31 @@ class DownloaderTab(QWidget):
         self.username_label.setObjectName("username_label")
         self.username_label.setCursor(Qt.PointingHandCursor)
         self.username_label.mousePressEvent = self.edit_username_event
+        
         info_layout.addWidget(self.speed_label)
         info_layout.addWidget(self.username_label)
+        
+        # URL input
         url_layout = QHBoxLayout()
-        url_layout.setSpacing(0)
+        url_layout.setSpacing(0) # Join the line edit and button
         self.url_input = QLineEdit()
-        self.url_input.setPlaceholderText("Paste URL here and click 'Scrap' →")
+        self.url_input.setPlaceholderText("Paste URL here")
         self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
+        
+        self.add_to_queue_button = QPushButton("➕ Add to Queue")
+        self.add_to_queue_button.setObjectName("add_to_queue_button")
+        self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
+        self.add_to_queue_button.setStyleSheet("border-radius: 0;") # Remove roundness for joining
+        
         self.scrap_button = QPushButton("⚡ Scrap")
         self.scrap_button.setObjectName("scrap_button")
-        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-bottom-left-radius: 0;")
+        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-radius: 0;")
         self.scrap_button.clicked.connect(self.scrap_url)
+        
         url_layout.addWidget(self.url_input)
+        url_layout.addWidget(self.add_to_queue_button)
         url_layout.addWidget(self.scrap_button)
+
         top_bar_layout.addWidget(self.logo_label)
         top_bar_layout.addLayout(info_layout)
         top_bar_layout.addStretch()
@@ -132,10 +146,12 @@ class DownloaderTab(QWidget):
         self.global_status_label = QLabel("Ready")
         self.global_status_label.setObjectName("global_status_label")
         self.status_message.connect(self.global_status_label.setText)
+        
         self.download_button = QPushButton("⬇️ Download All")
         self.download_button.setObjectName("download_button")
         self.download_button.clicked.connect(self.start_download_from_queue)
         self.cancel_button = QPushButton("❌ Cancel All")
+        
         footer_layout.addWidget(self.global_status_label)
         footer_layout.addStretch()
         footer_layout.addWidget(self.download_button)
@@ -174,7 +190,20 @@ class DownloaderTab(QWidget):
             # Note: This is a simple removal. A more robust solution would need to
             # re-index the self.active_download_map if rows are not always removed from the end.
             # For now, this is sufficient as we are not re-ordering.
-    
+
+    @Slot()
+    def add_url_to_download_queue(self):
+        url = self.url_input.text().strip()
+        if not url:
+            self.status_message.emit("Please enter a URL to add to queue.")
+            return
+
+        row_position = self.queue_table_widget.rowCount()
+        self.queue_table_widget.insertRow(row_position)
+        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(url))
+        self.status_message.emit(f"URL added to queue: {url}")
+        self.url_input.clear() # Clear input after adding to queue
+
     @Slot()
     def scrap_url(self):
         url = self.url_input.text().strip()
@@ -211,6 +240,8 @@ class DownloaderTab(QWidget):
         
     @Slot()
     def start_download_from_queue(self):
+        # We need to process the items that are in the queue_table_widget
+        # For now, just trigger the downloader's process_queue
         if self.downloader.queue_empty():
             self.status_message.emit("Download queue is empty.")
             return
@@ -219,33 +250,24 @@ class DownloaderTab(QWidget):
 
     @Slot(str, str)
     def update_download_status(self, item_id, message):
-        self.status_message.emit(f"ID {item_id[:8]}...: {message}")
-        # Find item in activity_table and update status
+        """Updates the status of an item in the activity table."""
+        # Find the item in the activity table by item_id (need a mapping for this later)
+        # For now, just update the global status message
+        self.status_message.emit(f"ID {item_id[:8]}... status: {message}")
+        print(f"Update status for {item_id[:8]}...: {message}")
 
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
-        # Find item in activity_table and update progress bar
-        pass
+        """Updates the progress of an item in the activity table."""
+        # Find the item in the activity table by item_id and update its progress bar
+        print(f"Update progress for {item_id[:8]}...: {percentage}%")
 
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
-        # Find item in activity_table and update status
-        pass
-
-if __name__ == '__main__':
-    import sys, os
-    from PySide6.QtWidgets import QApplication, QMainWindow
-
-    app = QApplication(sys.argv)
-    
-    style_file = os.path.join(os.path.dirname(__file__), "..", "resources", "styles.qss")
-    if os.path.exists(style_file):
-        with open(style_file, "r") as f:
-            app.setStyleSheet(f.read())
-
-    window = QMainWindow()
-    downloader_tab = DownloaderTab()
-    window.setCentralWidget(downloader_tab)
-    window.resize(1200, 700)
-    window.show()
-    sys.exit(app.exec())
+        """Handles the completion or failure of a download."""
+        # Find the item in the activity table by item_id and update its final status
+        if success:
+            self.status_message.emit(f"ID {item_id[:8]}... completed.")
+        else:
+            self.status_message.emit(f"ID {item_id[:8]}... failed.")
+        print(f"Download finished for {item_id[:8]}... Success: {success}")
