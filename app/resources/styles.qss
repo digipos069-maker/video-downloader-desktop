@@ -1,0 +1,138 @@
+/*
+ * Modern Dark Theme for Video Downloader
+ */
+
+QWidget {
+    background-color: #2c313a;
+    color: #eff0f1;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 10pt;
+}
+
+QTabWidget::pane {
+    border: 1px solid #444;
+    border-top: 0px;
+}
+
+QTabBar::tab {
+    background-color: #383e48;
+    color: #eff0f1;
+    padding: 8px 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #444;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #2c313a;
+    border: 1px solid #444;
+    border-bottom: 1px solid #2c313a; /* Match pane background */
+}
+
+QTabBar::tab:!selected:hover {
+    background-color: #4a505a;
+}
+
+QMainWindow {
+    background-color: #2c313a;
+}
+
+QGroupBox {
+    background-color: #383e48;
+    border-radius: 6px;
+    border: 1px solid #444;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    left: 10px;
+    color: #b1b1b1;
+}
+
+QLineEdit {
+    background-color: #2c313a;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+    color: #eff0f1;
+}
+
+QLineEdit:focus {
+    border: 1px solid #7E57C2; /* A nice accent color */
+}
+
+QPushButton {
+    background-color: #5E81AC; /* A nice blue */
+    color: #eff0f1;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #6a91c2;
+}
+
+QPushButton:pressed {
+    background-color: #517094;
+}
+
+QPushButton#scrap_button, QPushButton#download_button {
+    background-color: #7E57C2; /* Primary action color */
+}
+
+QPushButton#scrap_button:hover, QPushButton#download_button:hover {
+    background-color: #8f6dcf;
+}
+
+QPushButton#scrap_button:pressed, QPushButton#download_button:pressed {
+    background-color: #6d4aac;
+}
+
+
+QTableWidget {
+    background-color: #383e48;
+    border: 1px solid #444;
+    border-radius: 4px;
+    gridline-color: #444;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QHeaderView::section {
+    background-color: #2c313a;
+    color: #b1b1b1;
+    padding: 4px;
+    border: 1px solid #444;
+    font-weight: bold;
+}
+
+QProgressBar {
+    border: 1px solid #555;
+    border-radius: 4px;
+    text-align: center;
+    color: #eff0f1;
+}
+
+QProgressBar::chunk {
+    background-color: #7E57C2;
+    width: 10px; 
+    margin: 1px;
+}
+
+QLabel#speed_label, QLabel#username_label, QLabel#global_status_label {
+    color: #b1b1b1;
+}
+
+QMessageBox {
+    background-color: #383e48;
+}

@@ -1,0 +1,216 @@
+
+"""
+The main UI for the downloader tab.
+"""
+
+from PySide6.QtWidgets import (
+    QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
+    QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
+    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem
+)
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt, Signal, Slot
+
+from app.platform_handler import PlatformHandlerFactory
+from app.downloader import Downloader
+
+class DownloaderTab(QWidget):
+    status_message = Signal(str)
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        
+        # --- Backend Setup ---
+        self.platform_handler_factory = PlatformHandlerFactory()
+        self.downloader = Downloader(self.platform_handler_factory)
+
+        # Connect signals from downloader to UI updates
+        self.downloader.status.connect(self.update_download_status)
+        self.downloader.progress.connect(self.update_download_progress)
+        self.downloader.finished.connect(self.download_finished_callback)
+
+        # --- UI Layout ---
+        main_layout = QHBoxLayout(self)
+        main_layout.setContentsMargins(15, 15, 15, 15)
+        main_layout.setSpacing(15)
+        
+        # --- Left Sidebar ---
+        left_sidebar_widget = QWidget()
+        left_sidebar_layout = QVBoxLayout(left_sidebar_widget)
+        left_sidebar_layout.setContentsMargins(0, 0, 0, 0)
+        left_sidebar_layout.setSpacing(10)
+        left_sidebar_widget.setFixedWidth(280)
+        
+        # --- Right Side (Main Content) ---
+        right_content_layout = QVBoxLayout()
+        right_content_layout.setSpacing(10)
+
+        # --- Top Bar ---
+        top_bar_layout = QHBoxLayout()
+        top_bar_layout.setSpacing(15)
+        
+        # App Logo
+        self.logo_label = QLabel("Logo") # Placeholder text
+        # self.logo_label.setPixmap(QPixmap(":/images/logo.png")) # Real icon
+        self.logo_label.setFixedSize(64, 64)
+        self.logo_label.setAlignment(Qt.AlignCenter)
+        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
+
+        # Speed and User Info
+        info_layout = QVBoxLayout()
+        info_layout.setSpacing(2)
+        self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
+        self.speed_label.setObjectName("speed_label")
+        self.username_label = QLabel("User: Guest")
+        self.username_label.setObjectName("username_label")
+        self.username_label.setCursor(Qt.PointingHandCursor)
+        self.username_label.mousePressEvent = self.edit_username_event
+        
+        info_layout.addWidget(self.speed_label)
+        info_layout.addWidget(self.username_label)
+        
+        # URL input
+        url_layout = QHBoxLayout()
+        url_layout.setSpacing(0) # Join the line edit and button
+        self.url_input = QLineEdit()
+        self.url_input.setPlaceholderText("Paste URL here and click 'Scrap' →")
+        self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
+        self.scrap_button = QPushButton("⚡ Scrap")
+        self.scrap_button.setObjectName("scrap_button")
+        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-bottom-left-radius: 0;")
+        self.scrap_button.clicked.connect(self.scrap_url)
+        
+        url_layout.addWidget(self.url_input)
+        url_layout.addWidget(self.scrap_button)
+
+        top_bar_layout.addWidget(self.logo_label)
+        top_bar_layout.addLayout(info_layout)
+        top_bar_layout.addStretch()
+        top_bar_layout.addLayout(url_layout)
+
+        # --- Left Sidebar Widgets ---
+        
+        # Download Paths
+        paths_group = QGroupBox("Download Paths")
+        paths_layout = QVBoxLayout()
+        self.video_path_button = QPushButton("📁 Video Path...")
+        self.photo_path_button = QPushButton("📁 Photo Path...")
+        paths_layout.addWidget(self.video_path_button)
+        paths_layout.addWidget(self.photo_path_button)
+        paths_group.setLayout(paths_layout)
+        
+        # Download Settings
+        settings_group = QGroupBox("Download Settings")
+        settings_layout = QVBoxLayout()
+        settings_layout.addWidget(QLabel("Format, resolution, etc.")) # Placeholder
+        settings_group.setLayout(settings_layout)
+
+        left_sidebar_layout.addWidget(paths_group)
+        left_sidebar_layout.addWidget(settings_group)
+        left_sidebar_layout.addStretch()
+
+        # --- Right Content Widgets ---
+        
+        # Activity Table
+        self.activity_table = QTableWidget()
+        self.activity_table.setColumnCount(7)
+        self.activity_table.setHorizontalHeaderLabels(["URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
+        self.activity_table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        
+        # Status Label and Bottom Buttons
+        bottom_layout = QHBoxLayout()
+        self.global_status_label = QLabel("Ready")
+        self.global_status_label.setObjectName("global_status_label")
+        self.status_message.connect(self.global_status_label.setText)
+        
+        self.download_button = QPushButton("⬇️ Download All")
+        self.download_button.setObjectName("download_button")
+        self.download_button.clicked.connect(self.start_download_from_queue)
+        self.cancel_button = QPushButton("❌ Cancel All")
+        
+        bottom_layout.addWidget(self.global_status_label)
+        bottom_layout.addStretch()
+        bottom_layout.addWidget(self.download_button)
+        bottom_layout.addWidget(self.cancel_button)
+
+        # Assemble right layout
+        right_content_layout.addLayout(top_bar_layout)
+        right_content_layout.addWidget(self.activity_table)
+        right_content_layout.addLayout(bottom_layout)
+        
+        # --- Assemble Main Layout ---
+        main_layout.addWidget(left_sidebar_widget)
+        main_layout.addLayout(right_content_layout)
+
+    def edit_username_event(self, event):
+        from PySide6.QtWidgets import QInputDialog
+        text, ok = QInputDialog.getText(self, 'Edit Username', 'Enter new username:')
+        if ok and text:
+            self.username_label.setText(f"User: {text}")
+
+    @Slot()
+    def scrap_url(self):
+        url = self.url_input.text().strip()
+        if not url:
+            self.status_message.emit("Please enter a URL to scrap.")
+            return
+
+        self.status_message.emit(f"Scraping URL: {url}...")
+        handler = self.platform_handler_factory.get_handler(url)
+
+        if handler:
+            try:
+                metadata_list = handler.get_metadata(url)
+                if metadata_list:
+                    for metadata in metadata_list:
+                        self.downloader.add_to_queue(metadata['url'], handler, {})
+                    self.status_message.emit(f"Found {len(metadata_list)} items for {url}. Added to queue.")
+                else:
+                    self.status_message.emit(f"No downloadable items found for {url}.")
+            except Exception as e:
+                self.status_message.emit(f"Error scraping {url}: {e}")
+        else:
+            self.status_message.emit(f"No handler found for URL: {url}")
+
+    @Slot()
+    def start_download_from_queue(self):
+        if self.downloader.queue_empty():
+            self.status_message.emit("Download queue is empty.")
+            return
+        self.status_message.emit("Starting downloads from queue...")
+        self.downloader.process_queue()
+
+    @Slot(str, str)
+    def update_download_status(self, item_id, message):
+        self.status_message.emit(f"ID {item_id[:8]}...: {message}")
+        # Find item in table and update status
+
+    @Slot(str, int)
+    def update_download_progress(self, item_id, percentage):
+        # Find item in table and update progress bar
+        pass
+
+    @Slot(str, bool)
+    def download_finished_callback(self, item_id, success):
+        # Find item in table and update status
+        pass
+
+if __name__ == '__main__':
+    import sys, os
+    from PySide6.QtWidgets import QApplication, QMainWindow
+
+    app = QApplication(sys.argv)
+    
+    style_file = os.path.join(os.path.dirname(__file__), "..", "resources", "styles.qss")
+    if os.path.exists(style_file):
+        with open(style_file, "r") as f:
+            app.setStyleSheet(f.read())
+
+    window = QMainWindow()
+    downloader_tab = DownloaderTab()
+    window.setCentralWidget(downloader_tab)
+    window.resize(1200, 700)
+    window.show()
+    sys.exit(app.exec())
