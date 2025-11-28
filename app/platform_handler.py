@@ -164,30 +164,53 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     """
     logging.info(f"Starting yt-dlp download for {url} to {output_path}")
     
-    file_type = settings.get('file_type', 'video')
-    file_format = settings.get('file_format', 'Best Available')
+    extension = settings.get('extension', 'best')
+    naming_style = settings.get('naming_style', 'Original Name')
+    subtitles = settings.get('subtitles', False)
+
+    # Define filename template based on naming style
+    if naming_style == 'Numbered (01. Name)':
+        outtmpl = f'{output_path}/%(autonumber)02d. %(title)s.%(ext)s'
+    else:
+        outtmpl = f'{output_path}/%(title)s.%(ext)s'
 
     ydl_opts = {
-        'outtmpl': f'{output_path}/%(title)s.%(ext)s',
+        'outtmpl': outtmpl,
         'progress_hooks': [lambda d: progress_callback(int(float(d.get('downloaded_bytes', 0)) / float(d.get('total_bytes', 1)) * 100)) if d['status'] == 'downloading' else None],
         'quiet': True,
         'no_warnings': True,
+        'noplaylist': True, # Process one at a time to avoid confusion, usually the queue handles lists
     }
 
-    if file_type == 'audio':
+    # Handle Subtitles
+    if subtitles:
+        ydl_opts['writesubtitles'] = True
+        # Optional: Embed subtitles if desired, or just download sidecar
+        # ydl_opts['embedsubtitles'] = True 
+
+    # Handle Extensions / Format selection
+    if extension in ['mp3', 'wav', 'm4a']:
+        # Audio Extraction
         ydl_opts['format'] = 'bestaudio/best'
-        if file_format != 'Best Available':
-            ydl_opts['postprocessors'] = [{
-                'key': 'FFmpegExtractAudio',
-                'preferredcodec': file_format,
-                'preferredquality': '192',
-            }]
-    else: # Video
-        if file_format != 'Best Available':
-             ydl_opts['format'] = f'bestvideo+bestaudio/best'
-             ydl_opts['merge_output_format'] = file_format
-        else:
-             ydl_opts['format'] = 'bestvideo+bestaudio/best'
+        ydl_opts['postprocessors'] = [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': extension,
+            'preferredquality': '192',
+        }]
+    elif extension in ['mp4', 'mkv', 'webm']:
+        # Video Format selection
+        ydl_opts['format'] = f'bestvideo+bestaudio/best'
+        ydl_opts['merge_output_format'] = extension
+    elif extension in ['jpg', 'png']:
+         # Thumbnail download? Or just ignore for video?
+         # For now, we can try to write thumbnail
+         ydl_opts['writethumbnail'] = True
+         ydl_opts['skip_download'] = True # Don't download video if only image requested?
+         # Note: This might be confusing if user expects the video frames. 
+         # But typically "jpg" means thumbnail in this context unless it's an image platform.
+    else:
+        # Best available
+        ydl_opts['format'] = 'bestvideo+bestaudio/best'
     
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:

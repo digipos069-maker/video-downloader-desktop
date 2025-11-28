@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog, QComboBox, QFormLayout
+    QFileDialog, QComboBox, QFormLayout, QCheckBox
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -211,14 +211,14 @@ class DownloaderTab(QWidget):
         
         # Bottom Section for Settings
         bottom_controls_layout = QHBoxLayout()
-        settings_group = QGroupBox("Download Settings")
+        settings_group = QGroupBox("Download Options")
         
         # Use a Horizontal layout for the settings group to place items side-by-side
         settings_layout = QHBoxLayout()
         settings_layout.setSpacing(20)
         
-        # Define a modern stylesheet for the combo boxes
-        combo_style = """
+        # Define a modern stylesheet for the combo boxes and checkbox
+        input_style = """
             QComboBox {
                 background-color: #2c313a;
                 border: 1px solid #555;
@@ -226,6 +226,7 @@ class DownloaderTab(QWidget):
                 padding: 5px 10px;
                 color: #eff0f1;
                 font-size: 10pt;
+                min-width: 100px;
             }
             QComboBox:hover {
                 border: 1px solid #7E57C2;
@@ -237,7 +238,7 @@ class DownloaderTab(QWidget):
                 border-left-width: 0px;
             }
             QComboBox::down-arrow {
-                image: none; /* Could use a custom image here */
+                image: none; 
                 border-left: 2px solid #eff0f1;
                 border-bottom: 2px solid #eff0f1;
                 width: 8px; 
@@ -246,43 +247,71 @@ class DownloaderTab(QWidget):
                 margin-top: -3px;
                 margin-left: 2px;
             }
-             QComboBox QAbstractItemView {
+            QComboBox QAbstractItemView {
                 background-color: #2c313a;
                 border: 1px solid #555;
                 selection-background-color: #7E57C2;
                 selection-color: #eff0f1;
                 outline: none;
             }
+            QCheckBox {
+                color: #eff0f1;
+                font-size: 10pt;
+                spacing: 8px;
+            }
+            QCheckBox::indicator {
+                width: 18px;
+                height: 18px;
+                border: 1px solid #555;
+                border-radius: 3px;
+                background-color: #2c313a;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #7E57C2;
+                border: 1px solid #7E57C2;
+                image: url(none); /* Placeholder for checkmark if needed, color change is usually enough */
+            }
         """
 
-        # File Type Section
-        type_layout = QVBoxLayout()
-        type_layout.setSpacing(5)
-        type_label = QLabel("File Type")
-        type_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
-        self.file_type_combo = QComboBox()
-        self.file_type_combo.addItems(["Video", "Audio"])
-        self.file_type_combo.setCursor(Qt.PointingHandCursor)
-        self.file_type_combo.setStyleSheet(combo_style)
-        self.file_type_combo.currentTextChanged.connect(self.update_format_options)
-        type_layout.addWidget(type_label)
-        type_layout.addWidget(self.file_type_combo)
+        # Extension Section (User's "File Type")
+        ext_layout = QVBoxLayout()
+        ext_layout.setSpacing(5)
+        ext_label = QLabel("Extension")
+        ext_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        self.extension_combo = QComboBox()
+        self.extension_combo.addItems(["Best", "mp4", "mp3", "mkv", "wav", "jpg", "png"])
+        self.extension_combo.setCursor(Qt.PointingHandCursor)
+        self.extension_combo.setStyleSheet(input_style)
+        ext_layout.addWidget(ext_label)
+        ext_layout.addWidget(self.extension_combo)
         
-        # File Format Section
-        format_layout = QVBoxLayout()
-        format_layout.setSpacing(5)
-        format_label = QLabel("File Format")
-        format_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
-        self.file_format_combo = QComboBox()
-        self.file_format_combo.addItems(["Best Available", "mp4", "mkv", "webm"]) # Default for Video
-        self.file_format_combo.setCursor(Qt.PointingHandCursor)
-        self.file_format_combo.setStyleSheet(combo_style)
-        format_layout.addWidget(format_label)
-        format_layout.addWidget(self.file_format_combo)
+        # Naming Style Section (User's "Video Format")
+        naming_layout = QVBoxLayout()
+        naming_layout.setSpacing(5)
+        naming_label = QLabel("Naming Style")
+        naming_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        self.naming_combo = QComboBox()
+        self.naming_combo.addItems(["Original Name", "Numbered (01. Name)"])
+        self.naming_combo.setCursor(Qt.PointingHandCursor)
+        self.naming_combo.setStyleSheet(input_style)
+        naming_layout.addWidget(naming_label)
+        naming_layout.addWidget(self.naming_combo)
         
-        settings_layout.addLayout(type_layout)
-        settings_layout.addLayout(format_layout)
-        settings_layout.addStretch() # Push everything to the left
+        # Extra Options Section
+        options_layout = QVBoxLayout()
+        options_layout.setSpacing(5)
+        options_label = QLabel("Extras")
+        options_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        self.subs_checkbox = QCheckBox("Download Subtitles")
+        self.subs_checkbox.setCursor(Qt.PointingHandCursor)
+        self.subs_checkbox.setStyleSheet(input_style)
+        options_layout.addWidget(options_label)
+        options_layout.addWidget(self.subs_checkbox)
+
+        settings_layout.addLayout(ext_layout)
+        settings_layout.addLayout(naming_layout)
+        settings_layout.addLayout(options_layout)
+        settings_layout.addStretch() 
         
         settings_group.setLayout(settings_layout)
         bottom_controls_layout.addWidget(settings_group)
@@ -461,15 +490,6 @@ class DownloaderTab(QWidget):
         for row in range(self.queue_table_widget.rowCount()):
             self.queue_table_widget.setItem(row, 0, QTableWidgetItem(str(row + 1)))
         
-    @Slot(str)
-    def update_format_options(self, file_type):
-        """Updates the available file formats based on the selected file type."""
-        self.file_format_combo.clear()
-        if file_type == "Video":
-            self.file_format_combo.addItems(["Best Available", "mp4", "mkv", "webm"])
-        elif file_type == "Audio":
-            self.file_format_combo.addItems(["Best Available", "mp3", "m4a", "wav"])
-
     @Slot()
     def start_download_from_queue(self):
         # Check if paths are selected
@@ -481,8 +501,9 @@ class DownloaderTab(QWidget):
         settings = {
             'video_path': self.video_download_path,
             'photo_path': self.photo_download_path,
-            'file_type': self.file_type_combo.currentText().lower(),
-            'file_format': self.file_format_combo.currentText()
+            'extension': self.extension_combo.currentText().lower(),
+            'naming_style': self.naming_combo.currentText(),
+            'subtitles': self.subs_checkbox.isChecked()
         }
         self.downloader.update_queue_settings(settings)
 
