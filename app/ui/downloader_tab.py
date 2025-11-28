@@ -386,13 +386,17 @@ class DownloaderTab(QWidget):
         # Activity Table
         self.activity_table = QTableWidget()
         self.activity_table.setColumnCount(9)
-        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Actions"])
+        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Progress"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
         for i in range(1, 9):
             self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
         self.activity_table.verticalHeader().setVisible(False)
         self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.activity_table.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.activity_table.customContextMenuRequested.connect(self.open_activity_context_menu)
+        
+        self.activity_row_map = {} # Maps item_id to row index
         
         activity_layout.addWidget(self.activity_table)
         activity_group.setLayout(activity_layout)
@@ -806,7 +810,7 @@ class DownloaderTab(QWidget):
                              if is_photo:
                                  download_settings['quality'] = settings['photo']['quality']
 
-                        self.downloader.add_to_queue(item_url, handler, download_settings)
+                        item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
                         
                         # Add item to the main activity table on the right
                         row_position_activity = self.activity_table.rowCount()
@@ -819,6 +823,32 @@ class DownloaderTab(QWidget):
                         self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler',''))) # Platform
                         self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--")) # ETA
                         self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--")) # Size
+                        
+                        # Add Progress Bar to Column 8
+                        progress_bar = QProgressBar()
+                        progress_bar.setRange(0, 100)
+                        progress_bar.setValue(0)
+                        progress_bar.setTextVisible(True)
+                        progress_bar.setAlignment(Qt.AlignCenter)
+                        progress_bar.setStyleSheet("""
+                            QProgressBar {
+                                border: 1px solid #27272A;
+                                border-radius: 5px;
+                                text-align: center;
+                                color: #F4F4F5;
+                                background-color: #1C1C21;
+                            }
+                            QProgressBar::chunk {
+                                background-color: #3B82F6;
+                                width: 10px;
+                            }
+                        """)
+                        self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
+                        
+                        # Map item_id to this row
+                        self.activity_row_map[item_id] = row_position_activity
+                        
+                        queued_count += 1
                         
                         queued_count += 1
                         
@@ -841,6 +871,69 @@ class DownloaderTab(QWidget):
         delete_action.triggered.connect(self.delete_selected_queue_item)
         
         menu.exec(self.queue_table_widget.viewport().mapToGlobal(position))
+
+    def open_activity_context_menu(self, position):
+        from PySide6.QtWidgets import QMenu
+        menu = QMenu()
+        add_queue_action = menu.addAction("Add to Queue")
+        add_queue_action.triggered.connect(self.add_selected_activity_to_queue)
+        
+        delete_action = menu.addAction("Remove Row")
+        delete_action.triggered.connect(self.delete_selected_activity_item)
+        
+        menu.exec(self.activity_table.viewport().mapToGlobal(position))
+
+    def add_selected_activity_to_queue(self):
+        selected_rows = set()
+        for item in self.activity_table.selectedItems():
+            selected_rows.add(item.row())
+            
+        if not selected_rows:
+            return
+
+        # Gather current settings
+        settings = {
+            'video_path': self.video_download_path,
+            'photo_path': self.photo_download_path,
+            'extension': self.extension_combo.currentText().lower(),
+            'naming_style': self.naming_combo.currentText(),
+            'subtitles': self.subs_checkbox.isChecked(),
+            'shutdown': self.shutdown_checkbox.isChecked()
+        }
+        
+        count = 0
+        for row in sorted(selected_rows):
+            url_item = self.activity_table.item(row, 2) # URL is column 2
+            if url_item:
+                url = url_item.text()
+                handler = self.platform_handler_factory.get_handler(url)
+                if handler:
+                    item_id = self.downloader.add_to_queue(url, handler, settings.copy())
+                    self.activity_table.setItem(row, 3, QTableWidgetItem("Queued")) # Update status
+                    self.activity_row_map[item_id] = row
+                    
+                    # Reset Progress Bar
+                    pb = self.activity_table.cellWidget(row, 8)
+                    if pb:
+                        pb.setValue(0)
+                    
+                    count += 1
+        
+        if count > 0:
+            self.status_message.emit(f"Re-queued {count} items. Click 'Download All' to start.")
+
+    def delete_selected_activity_item(self):
+        """Removes the selected row from the activity table."""
+        selected_rows = set()
+        for item in self.activity_table.selectedItems():
+            selected_rows.add(item.row())
+        
+        for row in sorted(selected_rows, reverse=True):
+            self.activity_table.removeRow(row)
+            
+        # Re-number
+        for row in range(self.activity_table.rowCount()):
+            self.activity_table.setItem(row, 0, QTableWidgetItem(str(row + 1)))
 
     def scrap_selected_queue_item(self):
         selected_items = self.queue_table_widget.selectedItems()
@@ -941,10 +1034,13 @@ class DownloaderTab(QWidget):
     @Slot(str, str)
     def update_download_status(self, item_id, message):
         """Updates the status of an item in the activity table."""
-        # Find the item in the activity table by item_id (need a mapping for this later)
-        # For now, just update the global status message
-        self.status_message.emit(f"ID {item_id[:8]}... status: {message}")
-        print(f"Update status for {item_id[:8]}...: {message}")
+        if item_id in self.activity_row_map:
+            row = self.activity_row_map[item_id]
+            self.activity_table.setItem(row, 3, QTableWidgetItem(message))
+            
+        # Optional: Also log to console/global status if needed, or just keep it clean
+        # self.status_message.emit(f"ID {item_id[:8]}... status: {message}")
+        # print(f"Update status for {item_id[:8]}...: {message}")
 
     @Slot(str)
     def update_status_message(self, message):
@@ -997,7 +1093,15 @@ class DownloaderTab(QWidget):
         """Updates the progress of an item in the activity table and footer."""
         # Update footer progress
         self._update_footer_progress(item_id, percentage)
-        print(f"Update progress for {item_id[:8]}...: {percentage}%")
+        
+        # Update Table Progress
+        if item_id in self.activity_row_map:
+            row = self.activity_row_map[item_id]
+            pb = self.activity_table.cellWidget(row, 8)
+            if pb:
+                pb.setValue(percentage)
+                
+        # print(f"Update progress for {item_id[:8]}...: {percentage}%")
 
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
@@ -1008,6 +1112,16 @@ class DownloaderTab(QWidget):
             self.active_downloads_layout.removeWidget(widget)
             widget.deleteLater()
             del self.active_progress_bars[item_id]
+        
+        # Update Table
+        if item_id in self.activity_row_map:
+            row = self.activity_row_map[item_id]
+            status = "Completed" if success else "Failed"
+            self.activity_table.setItem(row, 3, QTableWidgetItem(status))
+            
+            pb = self.activity_table.cellWidget(row, 8)
+            if pb:
+                pb.setValue(100 if success else 0)
         
         if success:
             self.completed_downloads += 1

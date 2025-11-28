@@ -81,6 +81,7 @@ class Downloader(QObject):
             'status': 'queued'
         })
         self.status.emit(item_id, "Added to queue")
+        return item_id
         # Do not automatically process queue here, wait for user action
 
     def update_queue_settings(self, new_settings):
@@ -155,8 +156,8 @@ class Downloader(QObject):
 
     def generate_item_id(self, url):
         """Generates a unique ID for a download item."""
-        # A more robust ID generation might be needed for real app
-        return str(hash(url))
+        import uuid
+        return str(uuid.uuid4())
 
     def queue_empty(self):
         return len(self.queue) == 0
