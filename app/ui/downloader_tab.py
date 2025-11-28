@@ -158,9 +158,11 @@ class DownloaderTab(QWidget):
         queue_group = QGroupBox("Downloading Queue")
         queue_layout = QVBoxLayout()
         self.queue_table_widget = QTableWidget()
-        self.queue_table_widget.setColumnCount(1)
-        self.queue_table_widget.setHorizontalHeaderLabels(["URL"])
-        self.queue_table_widget.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        self.queue_table_widget.setColumnCount(2)
+        self.queue_table_widget.setHorizontalHeaderLabels(["#", "URL"])
+        self.queue_table_widget.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
+        self.queue_table_widget.horizontalHeader().setSectionResizeMode(1, QHeaderView.Stretch) # For 'URL' column
+        self.queue_table_widget.verticalHeader().setVisible(False) # Hide default vertical row numbers
         self.queue_table_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.queue_table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         queue_layout.addWidget(self.queue_table_widget)
@@ -236,7 +238,8 @@ class DownloaderTab(QWidget):
         """Adds an item to the left-hand 'Downloading Queue' table."""
         row_position = self.queue_table_widget.rowCount()
         self.queue_table_widget.insertRow(row_position)
-        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(url))
+        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(str(row_position + 1))) # Add row number
+        self.queue_table_widget.setItem(row_position, 1, QTableWidgetItem(url)) # URL in second column
         self.active_download_map[item_id] = row_position
 
     @Slot(str)
@@ -256,9 +259,18 @@ class DownloaderTab(QWidget):
             self.status_message.emit("Please enter a URL to add to queue.")
             return
 
+        # Check for duplicates
+        for row in range(self.queue_table_widget.rowCount()):
+            item = self.queue_table_widget.item(row, 1) # Check URL column
+            if item and item.text() == url:
+                self.status_message.emit(f"URL already in queue: {url}")
+                self.url_input.clear()
+                return
+
         row_position = self.queue_table_widget.rowCount()
         self.queue_table_widget.insertRow(row_position)
-        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(url))
+        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(str(row_position + 1))) # Add row number
+        self.queue_table_widget.setItem(row_position, 1, QTableWidgetItem(url)) # URL in second column
         self.status_message.emit(f"URL added to queue: {url}")
         self.url_input.clear() # Clear input after adding to queue
 
