@@ -167,6 +167,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     extension = settings.get('extension', 'best')
     naming_style = settings.get('naming_style', 'Original Name')
     subtitles = settings.get('subtitles', False)
+    resolution = settings.get('resolution', 'Best Available')
 
     # Define filename template based on naming style
     if naming_style == 'Numbered (01. Name)':
@@ -199,7 +200,25 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         }]
     elif extension in ['mp4', 'mkv', 'webm']:
         # Video Format selection
-        ydl_opts['format'] = f'bestvideo+bestaudio/best'
+        if resolution != 'Best Available':
+            # Map resolution text to height
+            # "4K" -> 2160, "1080p" -> 1080, etc.
+            res_map = {
+                "4K": 2160,
+                "1080p": 1080,
+                "720p": 720,
+                "480p": 480,
+                "360p": 360
+            }
+            height = res_map.get(resolution)
+            if height:
+                # Select best video with height <= requested + best audio
+                ydl_opts['format'] = f'bestvideo[height<={height}]+bestaudio/best[height<={height}]'
+            else:
+                ydl_opts['format'] = f'bestvideo+bestaudio/best'
+        else:
+            ydl_opts['format'] = f'bestvideo+bestaudio/best'
+            
         ydl_opts['merge_output_format'] = extension
     elif extension in ['jpg', 'png']:
          # Thumbnail download? Or just ignore for video?

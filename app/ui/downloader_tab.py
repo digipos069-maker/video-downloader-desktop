@@ -540,7 +540,7 @@ class DownloaderTab(QWidget):
         import multiprocessing
         max_threads = multiprocessing.cpu_count()
         self.threads_spinbox.setRange(1, max_threads)
-        self.threads_spinbox.setValue(max_threads) # Default to max
+        self.threads_spinbox.setValue(max(1, int(max_threads / 2))) # Default to half max
         self.threads_spinbox.setSuffix(" Threads")
         self.threads_spinbox.setStyleSheet(input_style)
         self.threads_spinbox.setToolTip(f"Max detected threads: {max_threads}")

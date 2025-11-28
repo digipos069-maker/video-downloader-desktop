@@ -406,3 +406,49 @@
 2025-11-29 01:22:59,199 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 545709679870265195: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
 2025-11-29 01:22:59,315 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 276127020898716368: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
 2025-11-29 01:22:59,447 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 11822017767196351: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:28:15,819 - DEBUG - Using proactor: IocpProactor
+2025-11-29 01:28:16,696 - INFO - Playwright visiting: https://www.pinterest.com/pin/45810121243241077/
+2025-11-29 01:28:19,155 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 01:28:20,687 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 01:28:22,680 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 01:28:24,398 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 01:28:25,922 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 01:28:27,623 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 01:28:29,137 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 01:28:30,653 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 01:28:32,170 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 01:28:33,687 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 01:28:33,733 - INFO - Found 363 raw links on page.
+2025-11-29 01:28:33,734 - INFO - Filtered down to 16 unique valid links.
+2025-11-29 01:29:05,348 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/45810121243241077/# to E:/test
+2025-11-29 01:29:05,349 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/844493676137119/ to E:/test
+2025-11-29 01:29:05,350 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/552465079317413539/ to E:/test
+2025-11-29 01:29:07,493 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 552465079317413539: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:07,494 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 844493676137119: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:07,494 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/5981412001888450/ to E:/test
+2025-11-29 01:29:07,541 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/63543044738059165/ to E:/test
+2025-11-29 01:29:07,649 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 45810121243241077: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:07,767 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1266706141493141/ to E:/test
+2025-11-29 01:29:08,401 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 5981412001888450: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:08,402 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 63543044738059165: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:08,403 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/84583299248962948/ to E:/test
+2025-11-29 01:29:08,404 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/598838081742403082/ to E:/test
+2025-11-29 01:29:08,579 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 1266706141493141: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:09,228 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 84583299248962948: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:09,229 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/42643527718911830/ to E:/test
+2025-11-29 01:29:09,313 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/22799541860040459/ to E:/test
+2025-11-29 01:29:09,361 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 598838081742403082: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:09,501 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/52284045669985741/ to E:/test
+2025-11-29 01:29:10,150 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 42643527718911830: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:10,151 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/46232333733638400/ to E:/test
+2025-11-29 01:29:10,298 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 22799541860040459: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:10,299 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/73605775155235646/ to E:/test
+2025-11-29 01:29:10,299 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 52284045669985741: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:10,431 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/42432421485307748/ to E:/test
+2025-11-29 01:29:10,995 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 46232333733638400: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:10,996 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/24699498005756993/ to E:/test
+2025-11-29 01:29:11,155 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 73605775155235646: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:11,156 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/48484133483857629/ to E:/test
+2025-11-29 01:29:11,290 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 42432421485307748: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:11,847 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 24699498005756993: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 01:29:11,881 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 48484133483857629: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
