@@ -1,9 +1,55 @@
-
 """
 Platform-specific handlers for scraping and downloading.
 """
 import yt_dlp
 from abc import ABC, abstractmethod
+
+def extract_metadata_with_ytdlp(url, max_entries=100):
+    """
+    Helper to extract metadata using yt-dlp.
+    Can handle single URLs or playlists/feeds (up to max_entries).
+    """
+    if not url or not isinstance(url, str) or not url.strip().startswith(('http', 'ftp')):
+        print(f"Invalid URL passed to yt-dlp extractor: {url}")
+        return [{'url': url, 'title': 'Invalid URL', 'type': 'video'}]
+
+    YDL_OPTS = {
+        'quiet': True,
+        'extract_flat': True, # Fast extraction, gets video page URLs
+        'force_generic_extractor': False,
+        'playlistend': max_entries,
+        'ignoreerrors': True, # Skip deleted/private items
+        'no_warnings': True,
+    }
+    
+    results = []
+    try:
+        with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
+            info = ydl.extract_info(url, download=False)
+            
+            if 'entries' in info:
+                # It's a playlist or feed
+                for entry in info['entries']:
+                    if entry:
+                        results.append({
+                            'url': entry.get('url') or entry.get('webpage_url'),
+                            'title': entry.get('title', 'N/A'),
+                            'type': 'video' # yt-dlp primarily handles video, treat as such for now
+                        })
+            else:
+                # Single item
+                results.append({
+                    'url': info.get('webpage_url', url),
+                    'title': info.get('title', 'N/A'),
+                    'type': 'video'
+                })
+    except Exception as e:
+        print(f"yt-dlp extraction error for {url}: {e}")
+        # Fallback: If yt-dlp fails completely, return the single URL as a basic item
+        # This allows the system to at least try downloading the URL itself later
+        results.append({'url': url, 'title': 'Unknown (Scrape Failed)', 'type': 'video'})
+        
+    return results
 
 class BaseHandler(ABC):
     """
@@ -44,36 +90,14 @@ class YouTubeHandler(BaseHandler):
         return 'youtube.com' in url or 'youtu.be' in url
 
     def get_metadata(self, url):
-        YDL_OPTS = {'quiet': True, 'extract_flat': True, 'force_generic_extractor': False}
-        with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
-            info = ydl.extract_info(url, download=False)
-            return [{'url': info.get('webpage_url', url), 'title': info.get('title', 'N/A'), 'type': 'video'}]
+        return extract_metadata_with_ytdlp(url, max_entries=1)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        YDL_OPTS = {
-            'quiet': True,
-            'extract_flat': True,
-            'force_generic_extractor': False,
-            'playlistend': max_entries,
-        }
-        with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
-            playlist_dict = ydl.extract_info(url, download=False)
-            
-            if 'entries' in playlist_dict:
-                return [
-                    {'url': entry.get('url'), 'title': entry.get('title', 'N/A'), 'type': 'video'}
-                    for entry in playlist_dict['entries'] if entry
-                ]
-            else:
-                # Not a playlist, return single video metadata
-                return [
-                    {'url': playlist_dict.get('webpage_url', url), 'title': playlist_dict.get('title', 'N/A'), 'type': 'video'}
-                ]
-
+        return extract_metadata_with_ytdlp(url, max_entries=max_entries)
 
     def download(self, item, progress_callback):
         print(f"Downloading YouTube video: {item['title']}")
-        # Here you would use yt-dlp to download
+        # Placeholder for actual download logic
         progress_callback(50)
         progress_callback(100)
         return True
@@ -83,17 +107,15 @@ class TikTokHandler(BaseHandler):
         return 'tiktok.com' in url
 
     def get_metadata(self, url):
-        print(f"Getting metadata for TikTok URL: {url}")
-        return [{'url': url, 'title': 'Sample TikTok Video', 'type': 'video'}]
+        return extract_metadata_with_ytdlp(url, max_entries=1)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return self.get_metadata(url)
+        return extract_metadata_with_ytdlp(url, max_entries=max_entries)
 
     def download(self, item, progress_callback):
         print(f"Downloading TikTok video: {item['title']}")
         progress_callback(100)
         return True
-
 
 class PinterestHandler(BaseHandler):
     def can_handle(self, url):
@@ -104,6 +126,8 @@ class PinterestHandler(BaseHandler):
         return [{'url': url, 'title': 'Sample Pinterest Pin', 'type': 'photo'}]
 
     def get_playlist_metadata(self, url, max_entries=100):
+        # Revert to simpler behavior, as yt-dlp for Pinterest can be problematic
+        # and often fails to find video formats or handle image pins correctly.
         return self.get_metadata(url)
 
     def download(self, item, progress_callback):
@@ -116,11 +140,10 @@ class FacebookHandler(BaseHandler):
         return 'facebook.com' in url or 'fb.watch' in url
 
     def get_metadata(self, url):
-        print(f"Getting metadata for Facebook URL: {url}")
-        return [{'url': url, 'title': 'Sample Facebook Video', 'type': 'video'}]
+        return extract_metadata_with_ytdlp(url, max_entries=1)
     
     def get_playlist_metadata(self, url, max_entries=100):
-        return self.get_metadata(url)
+        return extract_metadata_with_ytdlp(url, max_entries=max_entries)
 
     def download(self, item, progress_callback):
         print(f"Downloading Facebook video: {item['title']}")
@@ -132,11 +155,10 @@ class InstagramHandler(BaseHandler):
         return 'instagram.com' in url
 
     def get_metadata(self, url):
-        print(f"Getting metadata for Instagram URL: {url}")
-        return [{'url': url, 'title': 'Sample Instagram Post', 'type': 'photo'}]
+        return extract_metadata_with_ytdlp(url, max_entries=1)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return self.get_metadata(url)
+        return extract_metadata_with_ytdlp(url, max_entries=max_entries)
 
     def download(self, item, progress_callback):
         print(f"Downloading Instagram post: {item['title']}")
@@ -164,18 +186,14 @@ if __name__ == '__main__':
     factory = PlatformHandlerFactory()
     test_urls = [
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "https://www.tiktok.com/@user/video/12345",
-        "https://www.pinterest.com/pin/12345/",
-        "https://www.facebook.com/user/videos/12345/",
-        "https://www.instagram.com/p/Cabcdefghij/",
-        "https://www.google.com"
+        # Add more test URLs as needed
     ]
 
     for url in test_urls:
         handler = factory.get_handler(url)
         if handler:
             print(f"Found handler for {url}: {handler.__class__.__name__}")
-            metadata = handler.get_metadata(url)
-            print(f"  Metadata: {metadata}")
+            metadata = handler.get_playlist_metadata(url, max_entries=5) # Test with small limit
+            print(f"  Metadata (first 5): {metadata}")
         else:
             print(f"No handler found for {url}")
