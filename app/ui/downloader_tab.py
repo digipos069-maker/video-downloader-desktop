@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog
+    QFileDialog, QComboBox, QFormLayout
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -212,8 +212,18 @@ class DownloaderTab(QWidget):
         # Bottom Section for Settings
         bottom_controls_layout = QHBoxLayout()
         settings_group = QGroupBox("Download Settings")
-        settings_layout = QVBoxLayout()
-        settings_layout.addWidget(QLabel("Format, resolution, etc.")) # Placeholder
+        settings_layout = QFormLayout()
+        
+        self.file_type_combo = QComboBox()
+        self.file_type_combo.addItems(["Video", "Audio"])
+        self.file_type_combo.currentTextChanged.connect(self.update_format_options)
+        
+        self.file_format_combo = QComboBox()
+        self.file_format_combo.addItems(["Best Available", "mp4", "mkv", "webm"]) # Default for Video
+        
+        settings_layout.addRow("File Type:", self.file_type_combo)
+        settings_layout.addRow("File Format:", self.file_format_combo)
+        
         settings_group.setLayout(settings_layout)
         bottom_controls_layout.addWidget(settings_group)
         bottom_controls_layout.addStretch()
@@ -391,6 +401,15 @@ class DownloaderTab(QWidget):
         for row in range(self.queue_table_widget.rowCount()):
             self.queue_table_widget.setItem(row, 0, QTableWidgetItem(str(row + 1)))
         
+    @Slot(str)
+    def update_format_options(self, file_type):
+        """Updates the available file formats based on the selected file type."""
+        self.file_format_combo.clear()
+        if file_type == "Video":
+            self.file_format_combo.addItems(["Best Available", "mp4", "mkv", "webm"])
+        elif file_type == "Audio":
+            self.file_format_combo.addItems(["Best Available", "mp3", "m4a", "wav"])
+
     @Slot()
     def start_download_from_queue(self):
         # Check if paths are selected
@@ -401,7 +420,9 @@ class DownloaderTab(QWidget):
         # Update settings in downloader
         settings = {
             'video_path': self.video_download_path,
-            'photo_path': self.photo_download_path
+            'photo_path': self.photo_download_path,
+            'file_type': self.file_type_combo.currentText().lower(),
+            'file_format': self.file_format_combo.currentText()
         }
         self.downloader.update_queue_settings(settings)
 

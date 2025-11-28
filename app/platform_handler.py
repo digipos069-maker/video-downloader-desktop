@@ -7,6 +7,9 @@ from abc import ABC, abstractmethod
 import time
 from urllib.parse import urlparse
 import logging
+import os
+import urllib.request
+
 
 # Configure logging
 logging.basicConfig(
@@ -155,6 +158,84 @@ def extract_metadata_with_playwright(url, max_entries=100):
         
     return results
 
+def download_with_ytdlp(url, output_path, progress_callback, settings={}):
+    """
+    Helper to download video using yt-dlp.
+    """
+    logging.info(f"Starting yt-dlp download for {url} to {output_path}")
+    
+    file_type = settings.get('file_type', 'video')
+    file_format = settings.get('file_format', 'Best Available')
+
+    ydl_opts = {
+        'outtmpl': f'{output_path}/%(title)s.%(ext)s',
+        'progress_hooks': [lambda d: progress_callback(int(float(d.get('downloaded_bytes', 0)) / float(d.get('total_bytes', 1)) * 100)) if d['status'] == 'downloading' else None],
+        'quiet': True,
+        'no_warnings': True,
+    }
+
+    if file_type == 'audio':
+        ydl_opts['format'] = 'bestaudio/best'
+        if file_format != 'Best Available':
+            ydl_opts['postprocessors'] = [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': file_format,
+                'preferredquality': '192',
+            }]
+    else: # Video
+        if file_format != 'Best Available':
+             ydl_opts['format'] = f'bestvideo+bestaudio/best'
+             ydl_opts['merge_output_format'] = file_format
+        else:
+             ydl_opts['format'] = 'bestvideo+bestaudio/best'
+    
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
+        logging.info(f"Download completed: {url}")
+        progress_callback(100)
+        return True
+    except Exception as e:
+        logging.error(f"Download failed: {e}")
+        return False
+
+def download_direct(url, output_path, title, progress_callback):
+    """
+    Helper to download a file directly using urllib.
+    """
+    logging.info(f"Starting direct download for {url} to {output_path}")
+    try:
+        # Determine filename
+        parsed = urlparse(url)
+        path = parsed.path
+        ext = os.path.splitext(path)[1]
+        if not ext:
+            ext = '.jpg' # Default to jpg if unknown for images? Or guess.
+        
+        # Sanitize title for filename
+        safe_title = "".join([c for c in title if c.isalpha() or c.isdigit() or c==' ']).rstrip()
+        if not safe_title:
+            safe_title = "downloaded_item"
+            
+        filename = f"{safe_title}{ext}"
+        full_path = os.path.join(output_path, filename)
+        
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+
+        def report_hook(block_num, block_size, total_size):
+            if total_size > 0:
+                percent = int((block_num * block_size * 100) / total_size)
+                progress_callback(min(percent, 100))
+
+        urllib.request.urlretrieve(url, full_path, report_hook)
+        logging.info(f"Direct download completed: {full_path}")
+        progress_callback(100)
+        return True
+    except Exception as e:
+        logging.error(f"Direct download failed: {e}")
+        return False
+
 class BaseHandler(ABC):
     @abstractmethod
     def can_handle(self, url):
@@ -195,25 +276,7 @@ class YouTubeHandler(BaseHandler):
         url = item['url']
         settings = item.get('settings', {})
         output_path = self.get_download_path(settings, is_video=True)
-        
-        logging.info(f"Starting YouTube download for {url} to {output_path}")
-        
-        ydl_opts = {
-            'outtmpl': f'{output_path}/%(title)s.%(ext)s',
-            'progress_hooks': [lambda d: progress_callback(int(float(d.get('downloaded_bytes', 0)) / float(d.get('total_bytes', 1)) * 100)) if d['status'] == 'downloading' else None],
-            'quiet': True,
-            'no_warnings': True,
-        }
-        
-        try:
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                ydl.download([url])
-            logging.info(f"YouTube download completed: {url}")
-            progress_callback(100)
-            return True
-        except Exception as e:
-            logging.error(f"YouTube download failed: {e}")
-            return False
+        return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class TikTokHandler(BaseHandler):
     def can_handle(self, url):
@@ -229,11 +292,7 @@ class TikTokHandler(BaseHandler):
         url = item['url']
         settings = item.get('settings', {})
         output_path = self.get_download_path(settings, is_video=True)
-        logging.info(f"Downloading TikTok video: {item.get('title', 'Unknown')} to {output_path}")
-        # Placeholder for actual TikTok download logic
-        time.sleep(1) # Simulate work
-        progress_callback(100)
-        return True
+        return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class PinterestHandler(BaseHandler):
     def can_handle(self, url):
@@ -247,16 +306,21 @@ class PinterestHandler(BaseHandler):
 
     def download(self, item, progress_callback):
         url = item['url']
+        title = item.get('title', 'Pinterest Download')
         settings = item.get('settings', {})
-        # Pinterest can be images or videos. Assuming image for now if title/metadata suggests?
-        # For safety, default to photo path if available, else video.
-        # But since we don't distinguish yet, let's assume photo for Pinterest.
-        output_path = self.get_download_path(settings, is_video=False)
-        logging.info(f"Downloading Pinterest item: {item.get('title', 'Unknown')} to {output_path}")
-        # Placeholder for actual Pinterest download logic
-        time.sleep(0.5)
-        progress_callback(100)
-        return True
+        
+        # Check if it's likely an image
+        is_image = url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
+        output_path = self.get_download_path(settings, is_video=not is_image)
+        
+        if is_image:
+             return download_direct(url, output_path, title, progress_callback)
+        else:
+            # Try yt-dlp for videos or let it handle extraction if supported
+            success = download_with_ytdlp(url, output_path, progress_callback, settings)
+            # If yt-dlp fails and it looks like it might be an image (but no extension), we could try direct? 
+            # But for now, let's assume if yt-dlp failed, it failed.
+            return success
 
 class FacebookHandler(BaseHandler):
     def can_handle(self, url):
@@ -272,10 +336,7 @@ class FacebookHandler(BaseHandler):
         url = item['url']
         settings = item.get('settings', {})
         output_path = self.get_download_path(settings, is_video=True)
-        logging.info(f"Downloading Facebook video: {item.get('title', 'Unknown')} to {output_path}")
-        time.sleep(1)
-        progress_callback(100)
-        return True
+        return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class InstagramHandler(BaseHandler):
     def can_handle(self, url):
@@ -289,12 +350,17 @@ class InstagramHandler(BaseHandler):
 
     def download(self, item, progress_callback):
         url = item['url']
+        title = item.get('title', 'Instagram Download')
         settings = item.get('settings', {})
-        output_path = self.get_download_path(settings, is_video=False) # Insta often photos
-        logging.info(f"Downloading Instagram post: {item.get('title', 'Unknown')} to {output_path}")
-        time.sleep(1)
-        progress_callback(100)
-        return True
+        
+        is_image = url.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))
+        output_path = self.get_download_path(settings, is_video=not is_image)
+        
+        if is_image:
+             return download_direct(url, output_path, title, progress_callback)
+        else:
+             return download_with_ytdlp(url, output_path, progress_callback, settings)
+
 
 
 class PlatformHandlerFactory:
