@@ -440,3 +440,77 @@
 2025-11-29 02:43:22,185 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/19/33/8f/19338f03bcb657151e29068bee014a19.m3u8 to E:/test
 2025-11-29 02:43:22,198 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
 2025-11-29 02:43:22,565 - ERROR - Download failed: [0;31mERROR:[0m [generic] 19338f03bcb657151e29068bee014a19: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:51:26,542 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:51:27,411 - INFO - Playwright visiting: https://www.pinterest.com/pin/3588874697361840/
+2025-11-29 02:51:32,737 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 02:51:34,261 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 02:51:35,803 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 02:51:37,321 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 02:51:38,838 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 02:51:40,355 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 02:51:41,871 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 02:51:43,387 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 02:51:44,903 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 02:51:46,421 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 02:51:46,455 - INFO - Found 134 raw links on page.
+2025-11-29 02:51:46,455 - INFO - Filtered down to 6 unique valid links.
+2025-11-29 02:52:02,161 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3588874697361840/# to E:/test
+2025-11-29 02:52:02,161 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3588874697361840/ to E:/test
+2025-11-29 02:52:02,162 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/68539225574316331/ to E:/test
+2025-11-29 02:52:02,162 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/6192518232712848/ to E:/test
+2025-11-29 02:52:02,162 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/96123773296391815/ to E:/test
+2025-11-29 02:52:02,162 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/819725569715850655/ to E:/test
+2025-11-29 02:52:02,207 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:02,208 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:02,209 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:02,209 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:02,210 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:02,211 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:05,312 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 3588874697361840: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:05,332 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 819725569715850655: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:05,332 - INFO - Standard download failed for https://www.pinterest.com/pin/3588874697361840/#. Attempting fallback extraction...
+2025-11-29 02:52:05,338 - INFO - Standard download failed for https://www.pinterest.com/pin/819725569715850655/. Attempting fallback extraction...
+2025-11-29 02:52:05,338 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 96123773296391815: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:05,339 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:05,339 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:05,339 - INFO - Standard download failed for https://www.pinterest.com/pin/96123773296391815/. Attempting fallback extraction...
+2025-11-29 02:52:05,339 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 3588874697361840: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:05,340 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:05,340 - INFO - Standard download failed for https://www.pinterest.com/pin/3588874697361840/. Attempting fallback extraction...
+2025-11-29 02:52:05,341 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:05,419 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 6192518232712848: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:05,419 - INFO - Standard download failed for https://www.pinterest.com/pin/6192518232712848/. Attempting fallback extraction...
+2025-11-29 02:52:05,419 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:06,253 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3588874697361840/#
+2025-11-29 02:52:06,260 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/819725569715850655/
+2025-11-29 02:52:06,278 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/96123773296391815/
+2025-11-29 02:52:06,295 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3588874697361840/
+2025-11-29 02:52:06,297 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/6192518232712848/
+2025-11-29 02:52:07,706 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 68539225574316331: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:07,706 - INFO - Standard download failed for https://www.pinterest.com/pin/68539225574316331/. Attempting fallback extraction...
+2025-11-29 02:52:07,706 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:52:07,896 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/89/c4/4f/89c44f2d97c9c65b67455e2df4de04e0.m3u8
+2025-11-29 02:52:07,896 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/89/c4/4f/89c44f2d97c9c65b67455e2df4de04e0.m3u8 to E:/test
+2025-11-29 02:52:07,908 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:08,526 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/68539225574316331/
+2025-11-29 02:52:08,736 - ERROR - Download failed: [0;31mERROR:[0m [generic] 89c44f2d97c9c65b67455e2df4de04e0: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:08,845 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/5c/3b/49/5c3b49e430937f52a64b3cf6f1a9d92a.m3u8
+2025-11-29 02:52:08,845 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/5c/3b/49/5c3b49e430937f52a64b3cf6f1a9d92a.m3u8 to E:/test
+2025-11-29 02:52:08,857 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8
+2025-11-29 02:52:08,857 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8 to E:/test
+2025-11-29 02:52:08,858 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:09,010 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:09,268 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8
+2025-11-29 02:52:09,268 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8 to E:/test
+2025-11-29 02:52:09,303 - ERROR - Download failed: [0;31mERROR:[0m [generic] 4af6792c0f7104a82a2f2a1f0bbf4fc2: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:09,304 - ERROR - Download failed: [0;31mERROR:[0m [generic] 5c3b49e430937f52a64b3cf6f1a9d92a: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:09,309 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:10,082 - ERROR - Download failed: [0;31mERROR:[0m [generic] 4af6792c0f7104a82a2f2a1f0bbf4fc2: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:10,396 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/b2/ed/27/b2ed274898e660670463b4b6056e30bf.m3u8
+2025-11-29 02:52:10,396 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/b2/ed/27/b2ed274898e660670463b4b6056e30bf.m3u8 to E:/test
+2025-11-29 02:52:10,419 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:10,673 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/0f/c0/ef/0fc0ef491b19c10e6b79742dedff618c.m3u8
+2025-11-29 02:52:10,673 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/0f/c0/ef/0fc0ef491b19c10e6b79742dedff618c.m3u8 to E:/test
+2025-11-29 02:52:10,684 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:52:10,812 - ERROR - Download failed: [0;31mERROR:[0m [generic] b2ed274898e660670463b4b6056e30bf: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:52:11,244 - ERROR - Download failed: [0;31mERROR:[0m [generic] 0fc0ef491b19c10e6b79742dedff618c: Requested format is not available. Use --list-formats for a list of available formats

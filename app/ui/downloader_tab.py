@@ -785,35 +785,44 @@ class DownloaderTab(QWidget):
     def process_scraping(self, url):
         """Helper method to handle the scraping logic for a given URL."""
         self.status_message.emit(f"Scraping URL: {url}...")
+        
+        settings = {}
+        if self.settings_tab:
+            settings = self.settings_tab.get_settings()
+            print(f"[DEBUG] Scraping with settings: {settings}")
+        else:
+            print("[ERROR] Settings tab not linked!")
+
         handler = self.platform_handler_factory.get_handler(url)
 
         if handler:
             try:
-                # Determine max_entries from settings
-                max_entries = 100 # Default
-                settings = None
-                if self.settings_tab:
-                    settings = self.settings_tab.get_settings()
-                    # Calculate max entries based on what is requested
-                    # If 'All' is checked for either, we grab a lot.
-                    # If only 'Top' is checked, we grab the max of the counts.
-                    video_req = settings['video']
-                    photo_req = settings['photo']
-                    
-                    if video_req['all'] or photo_req['all']:
-                        max_entries = 200 # Arbitrary high limit for "All"
-                    else:
-                        count = 0
-                        if video_req['enabled'] and video_req['top']:
-                            count = max(count, video_req['count'])
-                        if photo_req['enabled'] and photo_req['top']:
-                            count = max(count, photo_req['count'])
-                        
-                        if count > 0:
-                            max_entries = count + 5 # Add a buffer
+                # 1. Determine Fetch Limit based on settings
+                fetch_limit = 100 # Default
                 
-                # Use the playlist method for all scraping
-                metadata_list = handler.get_playlist_metadata(url, max_entries=max_entries)
+                video_opts = settings.get('video', {})
+                photo_opts = settings.get('photo', {})
+                
+                video_enabled = video_opts.get('enabled', False)
+                photo_enabled = photo_opts.get('enabled', False)
+                
+                # Helper booleans
+                limit_video = video_enabled and video_opts.get('top', False) and not video_opts.get('all', False)
+                limit_photo = photo_enabled and photo_opts.get('top', False) and not photo_opts.get('all', False)
+                
+                target_count = 0
+                if limit_video:
+                    target_count = max(target_count, video_opts.get('count', 5))
+                if limit_photo:
+                    target_count = max(target_count, photo_opts.get('count', 5))
+                
+                if video_opts.get('all', False) or photo_opts.get('all', False):
+                     fetch_limit = 200 
+                elif target_count > 0:
+                     fetch_limit = target_count + 5 
+                
+                # 2. Fetch Metadata
+                metadata_list = handler.get_playlist_metadata(url, max_entries=fetch_limit)
                 
                 if metadata_list:
                     queued_count = 0
@@ -822,65 +831,58 @@ class DownloaderTab(QWidget):
                     
                     for metadata in metadata_list:
                         item_url = metadata['url']
+                        
+                        # 3. Determine Type
                         is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
                         is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
                         
-                        # Fallback for platforms like YouTube where URL doesn't end in extension
                         if not is_video and not is_photo:
-                            # Assume video for YouTube/TikTok/Facebook "watch" links
-                            if 'youtube' in item_url or 'youtu.be' in item_url or 'tiktok' in item_url or 'facebook' in item_url:
+                            # Fallback detection
+                            if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
                                 is_video = True
-                            else:
-                                # Default to photo for Pinterest/Insta if uncertain? 
-                                # Or strictly follow settings?
-                                # Let's check settings to see what's allowed.
-                                pass
-
-                        # Apply Filtering
-                        if settings:
-                            # Check if type is enabled
-                            if is_video and not settings['video']['enabled']:
-                                continue
-                            if is_photo and not settings['photo']['enabled']:
-                                continue
+                            elif 'instagram' in item_url:
+                                is_photo = True # Default assumption for Insta if no extension
+                        
+                        # 4. Apply Filters
+                        
+                        # Skip if disabled
+                        if is_video and not video_enabled:
+                            continue
+                        if is_photo and not photo_enabled:
+                            continue
                             
-                            # Check counts
-                            if is_video:
-                                if not settings['video']['all'] and settings['video']['top']:
-                                    if video_count >= settings['video']['count']:
-                                        continue
-                                video_count += 1
+                        # Skip if count limit reached
+                        if is_video:
+                            if limit_video and video_count >= video_opts.get('count', 5):
+                                continue
+                            video_count += 1
                                 
-                            if is_photo:
-                                if not settings['photo']['all'] and settings['photo']['top']:
-                                    if photo_count >= settings['photo']['count']:
-                                        continue
-                                photo_count += 1
+                        if is_photo:
+                            if limit_photo and photo_count >= photo_opts.get('count', 5):
+                                continue
+                            photo_count += 1
 
-                        # Add to backend downloader queue
+                        # 5. Add to Queue
                         download_settings = {}
-                        if settings:
-                             # Pass resolution/quality settings if applicable
-                             if is_video:
-                                 download_settings['resolution'] = settings['video']['resolution']
-                             if is_photo:
-                                 download_settings['quality'] = settings['photo']['quality']
+                        if is_video:
+                             download_settings['resolution'] = video_opts.get('resolution', "Best Available")
+                        if is_photo:
+                             download_settings['quality'] = photo_opts.get('quality', "Best Available")
 
                         item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
                         
-                        # Add item to the main activity table on the right
+                        # Add to UI
                         row_position_activity = self.activity_table.rowCount()
                         self.activity_table.insertRow(row_position_activity)
-                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1))) # Row number
-                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A'))) # Title
-                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url)) # URL
-                        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued")) # Status
-                        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo")) # Type
-                        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler',''))) # Platform
-                        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--")) # ETA
-                        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--")) # Size
+                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
+                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
+                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
+                        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
+                        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
+                        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
+                        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
+                        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
                         
-                        # Add Progress Bar to Column 8
                         progress_bar = QProgressBar()
                         progress_bar.setRange(0, 100)
                         progress_bar.setValue(0)
@@ -901,11 +903,7 @@ class DownloaderTab(QWidget):
                         """)
                         self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
                         
-                        # Map item_id to this row
                         self.activity_row_map[item_id] = row_position_activity
-                        
-                        queued_count += 1
-                        
                         queued_count += 1
                         
                     self.status_message.emit(f"Found and queued {queued_count} items (Video: {video_count}, Photo: {photo_count}).")
@@ -913,7 +911,7 @@ class DownloaderTab(QWidget):
                     self.status_message.emit(f"No downloadable items found for {url}.")
             except Exception as e:
                 self.status_message.emit(f"Error scraping {url}: {e}")
-                print(f"ERROR scraping {url}: {e}") # Also print for debugging
+                print(f"ERROR scraping {url}: {e}")
         else:
             self.status_message.emit(f"No handler found for URL: {url}")
 
