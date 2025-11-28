@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame
+    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame, QProgressBar
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot, QTimer
@@ -44,6 +44,11 @@ class DownloaderTab(QWidget):
         self.timer.timeout.connect(self.update_timer_display)
         self.seconds_elapsed = 0
         
+        # --- Progress Tracking ---
+        self.total_downloads = 0
+        self.completed_downloads = 0
+        self.active_progress_bars = {} # item_id -> QProgressBar widget
+
         # --- Network Monitor Setup ---
         self.network_monitor = NetworkMonitor(self)
         self.network_monitor.stats_signal.connect(self.update_network_stats)
@@ -556,12 +561,22 @@ class DownloaderTab(QWidget):
         bottom_controls_layout.addWidget(system_group) # Add System Settings next to Download Options
         bottom_controls_layout.addStretch()
 
-        # Footer for Status and Action Buttons
+        # --- Footer Area ---
+        footer_main_layout = QVBoxLayout()
+        
+        # Active Downloads Area (Dynamic)
+        self.active_downloads_container = QWidget()
+        self.active_downloads_layout = QVBoxLayout(self.active_downloads_container)
+        self.active_downloads_layout.setContentsMargins(0, 0, 0, 10)
+        self.active_downloads_layout.setSpacing(5)
+        footer_main_layout.addWidget(self.active_downloads_container)
+
+        # Footer Controls
         footer_layout = QHBoxLayout()
-        self.global_status_label = QLabel("Ready")
+        self.global_status_label = QLabel("Completed: 0 / 0")
         self.global_status_label.setObjectName("global_status_label")
-        self.global_status_label.setStyleSheet("color: #3B82F6; font-weight: bold;")
-        self.status_message.connect(self.global_status_label.setText)
+        self.global_status_label.setStyleSheet("color: #3B82F6; font-weight: bold; font-size: 10pt;")
+        self.status_message.connect(self.update_status_message) # Custom handler for status text if needed
         
         action_btn_style = """
              QPushButton {
@@ -610,11 +625,13 @@ class DownloaderTab(QWidget):
         footer_layout.addStretch()
         footer_layout.addWidget(self.download_button)
         footer_layout.addWidget(self.cancel_button)
+        
+        footer_main_layout.addLayout(footer_layout)
 
         # --- Assemble Right Layout ---
         right_content_layout.addWidget(activity_group)
         right_content_layout.addLayout(bottom_controls_layout)
-        right_content_layout.addLayout(footer_layout)
+        right_content_layout.addLayout(footer_main_layout)
         
         # --- Assemble Content Layout ---
         content_layout.addWidget(left_sidebar_widget)
@@ -845,18 +862,105 @@ class DownloaderTab(QWidget):
         self.status_message.emit(f"ID {item_id[:8]}... status: {message}")
         print(f"Update status for {item_id[:8]}...: {message}")
 
+    @Slot(str)
+    def update_status_message(self, message):
+        """Slot to update the global status label."""
+        self.global_status_label.setText(message)
+
+    def _update_footer_progress(self, item_id, percentage):
+        """Updates or adds a progress bar in the footer for the given item."""
+        if item_id not in self.active_progress_bars:
+            # Create new bar container
+            container = QWidget()
+            layout = QHBoxLayout(container)
+            layout.setContentsMargins(0, 0, 0, 0)
+            layout.setSpacing(10)
+            
+            label = QLabel(f"Download {item_id[:6]}...")
+            label.setStyleSheet("color: #A1A1AA; font-size: 9pt;")
+            
+            bar = QProgressBar()
+            bar.setRange(0, 100)
+            bar.setValue(percentage)
+            bar.setFixedHeight(10)
+            bar.setTextVisible(False)
+            bar.setStyleSheet("""
+                QProgressBar {
+                    background-color: #27272A;
+                    border-radius: 5px;
+                }
+                QProgressBar::chunk {
+                    background-color: #3B82F6;
+                    border-radius: 5px;
+                }
+            """)
+            
+            layout.addWidget(label)
+            layout.addWidget(bar)
+            
+            self.active_downloads_layout.addWidget(container)
+            self.active_progress_bars[item_id] = {
+                'widget': container,
+                'bar': bar,
+                'label': label
+            }
+        else:
+            # Update existing bar
+            self.active_progress_bars[item_id]['bar'].setValue(percentage)
+
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
-        """Updates the progress of an item in the activity table."""
-        # Find the item in the activity table by item_id and update its progress bar
+        """Updates the progress of an item in the activity table and footer."""
+        # Update footer progress
+        self._update_footer_progress(item_id, percentage)
         print(f"Update progress for {item_id[:8]}...: {percentage}%")
 
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
         """Handles the completion or failure of a download."""
-        # Find the item in the activity table by item_id and update its final status
+        # Remove from footer
+        if item_id in self.active_progress_bars:
+            widget = self.active_progress_bars[item_id]['widget']
+            self.active_downloads_layout.removeWidget(widget)
+            widget.deleteLater()
+            del self.active_progress_bars[item_id]
+        
         if success:
-            self.status_message.emit(f"ID {item_id[:8]}... completed.")
+            self.completed_downloads += 1
+            self.status_message.emit(f"Completed: {self.completed_downloads} / {self.total_downloads}")
+            print(f"Download finished for {item_id[:8]}... Success: {success}")
         else:
-            self.status_message.emit(f"ID {item_id[:8]}... failed.")
-        print(f"Download finished for {item_id[:8]}... Success: {success}")
+             self.status_message.emit(f"Failed: {item_id[:8]}...")
+
+    @Slot()
+    def start_download_from_queue(self):
+        # Check if paths are selected
+        if not self.video_download_path and not self.photo_download_path:
+            QMessageBox.warning(self, "Download Paths Missing", "Please select a Video or Photo download path first.")
+            return
+
+        # Update settings in downloader
+        settings = {
+            'video_path': self.video_download_path,
+            'photo_path': self.photo_download_path,
+            'extension': self.extension_combo.currentText().lower(),
+            'naming_style': self.naming_combo.currentText(),
+            'subtitles': self.subs_checkbox.isChecked(),
+            'shutdown': self.shutdown_checkbox.isChecked()
+        }
+        self.downloader.update_queue_settings(settings);
+
+        # We need to process the items that are in the queue_table_widget
+        # For now, just trigger the downloader's process_queue
+        if self.downloader.queue_empty():
+            self.status_message.emit("Download queue is empty.")
+            return
+        
+        # Reset counts
+        self.total_downloads = len(self.downloader.queue) 
+        self.completed_downloads = 0
+        self.status_message.emit(f"Completed: 0 / {self.total_downloads}")
+        
+        self.status_message.emit("Starting downloads from queue...")
+        self.start_timer() # Start the timer
+        self.downloader.process_queue()
