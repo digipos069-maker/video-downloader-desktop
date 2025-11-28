@@ -330,6 +330,10 @@ class DownloaderTab(QWidget):
         menu = QMenu()
         scrap_action = menu.addAction("Scrap")
         scrap_action.triggered.connect(self.scrap_selected_queue_item)
+        
+        delete_action = menu.addAction("Delete")
+        delete_action.triggered.connect(self.delete_selected_queue_item)
+        
         menu.exec(self.queue_table_widget.viewport().mapToGlobal(position))
 
     def scrap_selected_queue_item(self):
@@ -344,6 +348,20 @@ class DownloaderTab(QWidget):
         url_item = self.queue_table_widget.item(row, 1)
         if url_item:
             self.process_scraping(url_item.text())
+
+    def delete_selected_queue_item(self):
+        """Removes the selected row from the queue table."""
+        selected_rows = set()
+        for item in self.queue_table_widget.selectedItems():
+            selected_rows.add(item.row())
+        
+        # Remove rows in reverse order to maintain indices
+        for row in sorted(selected_rows, reverse=True):
+            self.queue_table_widget.removeRow(row)
+        
+        # Optional: Re-number the '#' column after deletion
+        for row in range(self.queue_table_widget.rowCount()):
+            self.queue_table_widget.setItem(row, 0, QTableWidgetItem(str(row + 1)))
         
     @Slot()
     def start_download_from_queue(self):
