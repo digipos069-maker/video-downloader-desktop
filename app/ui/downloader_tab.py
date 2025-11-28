@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog, QComboBox, QFormLayout, QCheckBox
+    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -219,7 +219,7 @@ class DownloaderTab(QWidget):
         
         # Define a modern stylesheet for the combo boxes and checkbox
         input_style = """
-            QComboBox {
+            QComboBox, QSpinBox {
                 background-color: #2c313a;
                 border: 1px solid #555;
                 border-radius: 5px;
@@ -228,7 +228,7 @@ class DownloaderTab(QWidget):
                 font-size: 10pt;
                 min-width: 100px;
             }
-            QComboBox:hover {
+            QComboBox:hover, QSpinBox:hover {
                 border: 1px solid #7E57C2;
             }
             QComboBox::drop-down {
@@ -314,7 +314,41 @@ class DownloaderTab(QWidget):
         settings_layout.addStretch() 
         
         settings_group.setLayout(settings_layout)
+        
+        # --- System Settings Group ---
+        system_group = QGroupBox("System Settings")
+        system_layout = QVBoxLayout()
+        system_layout.setSpacing(10)
+        
+        # Threads Option
+        threads_layout = QHBoxLayout()
+        threads_label = QLabel("Threads:")
+        threads_label.setStyleSheet("color: #eff0f1;")
+        self.threads_spinbox = QSpinBox()
+        import multiprocessing
+        max_threads = multiprocessing.cpu_count()
+        self.threads_spinbox.setRange(1, max_threads)
+        self.threads_spinbox.setValue(max_threads) # Default to max
+        self.threads_spinbox.setSuffix(" Threads")
+        self.threads_spinbox.setStyleSheet(input_style)
+        self.threads_spinbox.setToolTip(f"Max detected threads: {max_threads}")
+        self.threads_spinbox.valueChanged.connect(self.update_thread_count)
+        
+        threads_layout.addWidget(threads_label)
+        threads_layout.addWidget(self.threads_spinbox)
+        
+        # Shutdown Option
+        self.shutdown_checkbox = QCheckBox("Shutdown when finished")
+        self.shutdown_checkbox.setCursor(Qt.PointingHandCursor)
+        self.shutdown_checkbox.setStyleSheet(input_style)
+        
+        system_layout.addLayout(threads_layout)
+        system_layout.addWidget(self.shutdown_checkbox)
+        system_layout.addStretch()
+        system_group.setLayout(system_layout)
+
         bottom_controls_layout.addWidget(settings_group)
+        bottom_controls_layout.addWidget(system_group) # Add System Settings next to Download Options
         bottom_controls_layout.addStretch()
 
         # Footer for Status and Action Buttons
@@ -490,6 +524,10 @@ class DownloaderTab(QWidget):
         for row in range(self.queue_table_widget.rowCount()):
             self.queue_table_widget.setItem(row, 0, QTableWidgetItem(str(row + 1)))
         
+    def update_thread_count(self, count):
+        """Updates the maximum thread count in the downloader."""
+        self.downloader.set_max_threads(count)
+
     @Slot()
     def start_download_from_queue(self):
         # Check if paths are selected
@@ -503,7 +541,8 @@ class DownloaderTab(QWidget):
             'photo_path': self.photo_download_path,
             'extension': self.extension_combo.currentText().lower(),
             'naming_style': self.naming_combo.currentText(),
-            'subtitles': self.subs_checkbox.isChecked()
+            'subtitles': self.subs_checkbox.isChecked(),
+            'shutdown': self.shutdown_checkbox.isChecked()
         }
         self.downloader.update_queue_settings(settings)
 

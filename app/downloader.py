@@ -64,6 +64,12 @@ class Downloader(QObject):
         self.thread_pool.setMaxThreadCount(self.max_concurrent_downloads)
         print(f"Initialized Downloader with max {self.max_concurrent_downloads} concurrent downloads.")
 
+    def set_max_threads(self, count):
+        """Updates the maximum number of concurrent downloads."""
+        self.max_concurrent_downloads = count
+        self.thread_pool.setMaxThreadCount(count)
+        print(f"Updated max concurrent downloads to {count}")
+
     def add_to_queue(self, url, handler, settings):
         """Adds a download task to the queue."""
         item_id = self.generate_item_id(url)
@@ -88,6 +94,39 @@ class Downloader(QObject):
         while not self.queue_empty() and self.thread_pool.activeThreadCount() < self.max_concurrent_downloads:
             self.start_next_download()
 
+    @Slot(str, bool)
+    def _download_finished_callback(self, item_id, success):
+        """Internal callback for when a worker finishes."""
+        # Emit the signal that a download has finished and should be removed from the active list
+        self.download_removed.emit(item_id)
+        
+        self.finished.emit(item_id, success)
+        
+        # Check for shutdown if queue is empty and no active threads
+        if self.queue_empty() and self.thread_pool.activeThreadCount() == 0:
+            # Check if any of the finished items had shutdown enabled.
+            # Since we remove items from queue, we can't check them there.
+            # However, the 'settings' are updated before processing.
+            # A cleaner way is to check a flag set during 'update_queue_settings' or pass it down.
+            # But since we don't persist finished items here easily, we'll rely on the fact that
+            # the UI passes 'shutdown' in the settings of items.
+            # We can assume if the LAST processed item had shutdown=True, we shut down.
+            # Better: The UI should manage the "shutdown after all" state, but user requested logic here.
+            # Let's check if we can find the settings for this item_id? No, it's gone from queue.
+            pass
+
+        self.process_queue() # Try to start another download
+
+    def check_shutdown(self, settings):
+         if settings.get('shutdown', False):
+             import os
+             import sys
+             if sys.platform == 'win32':
+                 os.system("shutdown /s /t 60") # Shutdown in 60 seconds
+             elif sys.platform == 'linux' or sys.platform == 'darwin':
+                 os.system("shutdown -h +1") # Shutdown in 1 minute
+             print("Shutdown initiated...")
+
     def start_next_download(self):
         """Starts the next download from the queue."""
         if self.queue_empty():
@@ -102,20 +141,17 @@ class Downloader(QObject):
         worker = DownloadWorker(item['id'], item['url'], item['handler'], item['settings'])
         worker.signals.progress.connect(self.progress)
         worker.signals.status.connect(self.status)
-        worker.signals.finished.connect(self._download_finished_callback)
+        # Pass settings to callback to check for shutdown
+        worker.signals.finished.connect(lambda i, s: self._download_finished_callback_with_settings(i, s, item['settings']))
 
         self.thread_pool.start(worker)
         self.status.emit(item['id'], 'Starting download...')
 
-
     @Slot(str, bool)
-    def _download_finished_callback(self, item_id, success):
-        """Internal callback for when a worker finishes."""
-        # Emit the signal that a download has finished and should be removed from the active list
-        self.download_removed.emit(item_id)
-        
-        self.finished.emit(item_id, success)
-        self.process_queue() # Try to start another download
+    def _download_finished_callback_with_settings(self, item_id, success, settings):
+        self._download_finished_callback(item_id, success)
+        if self.queue_empty() and self.thread_pool.activeThreadCount() == 0:
+            self.check_shutdown(settings)
 
     def generate_item_id(self, url):
         """Generates a unique ID for a download item."""
