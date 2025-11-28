@@ -23,6 +23,29 @@ except ImportError:
     PLAYWRIGHT_AVAILABLE = False
     logging.error("Playwright not installed. Please run: pip install playwright && playwright install")
 
+def is_valid_media_link(href, domain):
+    """
+    Determines if a link is a valid media (image/video) URL based on extension or platform patterns.
+    """
+    # 1. Check for direct media file extensions
+    media_extensions = ('.jpg', '.jpeg', '.png', '.gif', '.webp', '.mp4', '.mkv', '.avi', '.mov', '.webm')
+    if href.lower().endswith(media_extensions):
+        return True
+    
+    # 2. Platform-specific content patterns
+    if 'youtube.com' in domain or 'youtu.be' in domain:
+        return 'watch?v=' in href or 'shorts/' in href or 'youtu.be/' in href
+    elif 'tiktok.com' in domain:
+        return '/video/' in href
+    elif 'pinterest.com' in domain:
+        return '/pin/' in href
+    elif 'instagram.com' in domain:
+        return '/p/' in href or '/reel/' in href
+    elif 'facebook.com' in domain:
+         return '/watch' in href or '/videos/' in href
+    
+    return False
+
 def extract_metadata_with_playwright(url, max_entries=100):
     """
     Helper to extract metadata using Playwright.
@@ -92,12 +115,10 @@ def extract_metadata_with_playwright(url, max_entries=100):
                     
                     if domain not in href and not is_pin:
                         continue
-                    
-                    # If it's a pinterest search or board, we specifically want /pin/ links usually
-                    if 'pinterest.com' in domain and not is_pin:
-                        # Optional: skip non-pin links if we are on pinterest?
-                        # For now, keep them but prioritize pins effectively by order
-                        pass
+
+                    # Strict Content Filtering using helper
+                    if not is_valid_media_link(href, domain):
+                        continue
 
                     unique_urls.add(href)
                     results.append({
