@@ -35,3 +35,39 @@
 2025-11-28 22:42:01,721 - INFO - Downloading Pinterest pin: Unknown
 2025-11-28 22:42:01,722 - INFO - Downloading Pinterest pin: Unknown
 2025-11-28 22:42:01,722 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:10,441 - DEBUG - Using proactor: IocpProactor
+2025-11-28 22:48:11,291 - INFO - Playwright visiting: https://www.pinterest.com/pin/14847873767407256/
+2025-11-28 22:48:13,759 - DEBUG - Scroll iteration 1/10 completed
+2025-11-28 22:48:15,271 - DEBUG - Scroll iteration 2/10 completed
+2025-11-28 22:48:16,821 - DEBUG - Scroll iteration 3/10 completed
+2025-11-28 22:48:18,329 - DEBUG - Scroll iteration 4/10 completed
+2025-11-28 22:48:19,839 - DEBUG - Scroll iteration 5/10 completed
+2025-11-28 22:48:21,345 - DEBUG - Scroll iteration 6/10 completed
+2025-11-28 22:48:22,851 - DEBUG - Scroll iteration 7/10 completed
+2025-11-28 22:48:24,358 - DEBUG - Scroll iteration 8/10 completed
+2025-11-28 22:48:25,863 - DEBUG - Scroll iteration 9/10 completed
+2025-11-28 22:48:27,386 - DEBUG - Scroll iteration 10/10 completed
+2025-11-28 22:48:27,403 - INFO - Found 26 raw links on page.
+2025-11-28 22:48:27,404 - INFO - Filtered down to 22 unique valid links.
+2025-11-28 22:48:38,002 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,002 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,003 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,009 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,009 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,010 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,011 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,011 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,012 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,012 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,013 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,013 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,014 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,015 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,015 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,016 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,016 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,017 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,018 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,018 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,019 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:48:38,019 - INFO - Downloading Pinterest pin: Unknown

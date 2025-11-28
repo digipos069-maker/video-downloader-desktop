@@ -5,7 +5,8 @@ The main UI for the downloader tab.
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
-    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem
+    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
+    QFileDialog
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -22,6 +23,9 @@ class DownloaderTab(QWidget):
         # --- Backend Setup ---
         self.platform_handler_factory = PlatformHandlerFactory()
         self.downloader = Downloader(self.platform_handler_factory)
+        
+        self.video_download_path = None
+        self.photo_download_path = None
 
         # Connect signals from downloader to UI updates
         self.downloader.status.connect(self.update_download_status)
@@ -173,7 +177,9 @@ class DownloaderTab(QWidget):
         paths_group = QGroupBox("Download Paths")
         paths_layout = QVBoxLayout()
         self.video_path_button = QPushButton("📁 Video Path...")
+        self.video_path_button.clicked.connect(self.select_video_path)
         self.photo_path_button = QPushButton("📁 Photo Path...")
+        self.photo_path_button.clicked.connect(self.select_photo_path)
         paths_layout.addWidget(self.video_path_button)
         paths_layout.addWidget(self.photo_path_button)
         paths_group.setLayout(paths_layout)
@@ -245,6 +251,26 @@ class DownloaderTab(QWidget):
         text, ok = QInputDialog.getText(self, 'Edit Username', 'Enter new username:')
         if ok and text:
             self.username_label.setText(f"User: {text}")
+
+    @Slot()
+    def select_video_path(self):
+        """Opens a file dialog to select the download directory for videos."""
+        path = QFileDialog.getExistingDirectory(self, "Select Video Download Path")
+        if path:
+            self.video_download_path = path
+            self.video_path_button.setText(f"Video: {path}")
+            self.video_path_button.setToolTip(path)
+            self.status_message.emit(f"Video download path set to: {path}")
+
+    @Slot()
+    def select_photo_path(self):
+        """Opens a file dialog to select the download directory for photos."""
+        path = QFileDialog.getExistingDirectory(self, "Select Photo Download Path")
+        if path:
+            self.photo_download_path = path
+            self.photo_path_button.setText(f"Photo: {path}")
+            self.photo_path_button.setToolTip(path)
+            self.status_message.emit(f"Photo download path set to: {path}")
 
     @Slot(str, str)
     def add_to_queue_display(self, item_id, url):
