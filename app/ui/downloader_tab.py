@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox
+    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot, QTimer
@@ -61,19 +61,58 @@ class DownloaderTab(QWidget):
         self.logo_label.setAlignment(Qt.AlignCenter)
         self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
         
-        info_layout = QVBoxLayout()
-        info_layout.setSpacing(2)
+        # Speed Info Box
+        speed_box = QFrame()
+        speed_box.setFixedHeight(36)
+        speed_box.setStyleSheet("""
+            QFrame {
+                background-color: #1C1C21;
+                border: 1px solid #27272A;
+                border-radius: 8px;
+            }
+            QLabel {
+                border: none;
+                background-color: transparent;
+                color: #10B981; 
+                font-weight: bold; 
+                font-size: 9pt;
+            }
+        """)
+        speed_layout = QHBoxLayout(speed_box)
+        speed_layout.setContentsMargins(12, 0, 12, 0)
         self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
         self.speed_label.setObjectName("speed_label")
+        speed_layout.addWidget(self.speed_label)
+
+        # User Info Box
+        user_box = QFrame()
+        user_box.setFixedHeight(36)
+        user_box.setStyleSheet("""
+            QFrame {
+                background-color: #1C1C21;
+                border: 1px solid #27272A;
+                border-radius: 8px;
+            }
+            QLabel {
+                border: none;
+                background-color: transparent;
+                color: #9CA3AF; 
+                font-size: 9pt; 
+                font-weight: 500;
+            }
+        """)
+        user_layout = QHBoxLayout(user_box)
+        user_layout.setContentsMargins(12, 0, 12, 0)
         self.username_label = QLabel("User: Guest")
         self.username_label.setObjectName("username_label")
         self.username_label.setCursor(Qt.PointingHandCursor)
         self.username_label.mousePressEvent = self.edit_username_event
-        info_layout.addWidget(self.speed_label)
-        info_layout.addWidget(self.username_label)
+        user_layout.addWidget(self.username_label)
         
+        # Add widgets to row layout
         row1_layout.addWidget(self.logo_label)
-        row1_layout.addLayout(info_layout)
+        row1_layout.addWidget(speed_box)
+        row1_layout.addWidget(user_box)
         
         # Timer Box Display
         self.timer_label = QLabel("00:00:00")
