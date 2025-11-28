@@ -165,6 +165,8 @@ class DownloaderTab(QWidget):
         self.queue_table_widget.verticalHeader().setVisible(False) # Hide default vertical row numbers
         self.queue_table_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.queue_table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.queue_table_widget.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.queue_table_widget.customContextMenuRequested.connect(self.open_queue_context_menu)
         queue_layout.addWidget(self.queue_table_widget)
         queue_group.setLayout(queue_layout)
         
@@ -291,7 +293,10 @@ class DownloaderTab(QWidget):
         if not url:
             self.status_message.emit("Please enter a URL to scrap.")
             return
+        self.process_scraping(url)
 
+    def process_scraping(self, url):
+        """Helper method to handle the scraping logic for a given URL."""
         self.status_message.emit(f"Scraping URL: {url}...")
         handler = self.platform_handler_factory.get_handler(url)
 
@@ -319,6 +324,26 @@ class DownloaderTab(QWidget):
                 print(f"ERROR scraping {url}: {e}") # Also print for debugging
         else:
             self.status_message.emit(f"No handler found for URL: {url}")
+
+    def open_queue_context_menu(self, position):
+        from PySide6.QtWidgets import QMenu
+        menu = QMenu()
+        scrap_action = menu.addAction("Scrap")
+        scrap_action.triggered.connect(self.scrap_selected_queue_item)
+        menu.exec(self.queue_table_widget.viewport().mapToGlobal(position))
+
+    def scrap_selected_queue_item(self):
+        selected_items = self.queue_table_widget.selectedItems()
+        if not selected_items:
+            return
+        
+        # In a row selection, we get all items in the row.
+        # We want the URL, which is in column 1.
+        # We can find the row index of the first selected item.
+        row = selected_items[0].row()
+        url_item = self.queue_table_widget.item(row, 1)
+        if url_item:
+            self.process_scraping(url_item.text())
         
     @Slot()
     def start_download_from_queue(self):
