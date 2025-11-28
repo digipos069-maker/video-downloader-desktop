@@ -75,24 +75,70 @@ class DownloaderTab(QWidget):
 
         # Row 2: Input, Buttons, Supported Icons
         row2_layout = QHBoxLayout()
-        row2_layout.setSpacing(15) # Spacing between input block and icons
+        row2_layout.setSpacing(10) 
         
         input_block_layout = QHBoxLayout()
-        input_block_layout.setSpacing(5) # Added spacing between input and buttons
+        input_block_layout.setSpacing(5)
         
         self.url_input = QLineEdit()
-        self.url_input.setPlaceholderText("Paste URL here")
-        self.url_input.setStyleSheet("border-radius: 15px; padding: 5px;") 
+        self.url_input.setPlaceholderText("Paste video URL here...")
+        self.url_input.setFixedHeight(35)
+        self.url_input.setStyleSheet("""
+            QLineEdit {
+                background-color: #1C1C21;
+                border: 2px solid #27272A;
+                border-radius: 17px; /* approx 50% of 35px */
+                padding: 0 12px;
+                color: #F4F4F5;
+                font-size: 10pt;
+            }
+            QLineEdit:focus {
+                border-color: #3B82F6;
+                background-color: #202025;
+            }
+        """) 
         
-        self.add_to_queue_button = QPushButton("➕ Add to Queue")
-        self.add_to_queue_button.setObjectName("add_to_queue_button")
+        self.add_to_queue_button = QPushButton("Add to Queue")
+        self.add_to_queue_button.setCursor(Qt.PointingHandCursor)
+        self.add_to_queue_button.setFixedHeight(35)
         self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
-        self.add_to_queue_button.setStyleSheet("border-radius: 50%; padding: 5px;")
+        self.add_to_queue_button.setStyleSheet("""
+            QPushButton {
+                background-color: #3B82F6;
+                color: white;
+                border-radius: 17px;
+                padding: 0 16px;
+                font-weight: bold;
+                font-size: 10pt;
+            }
+            QPushButton:hover {
+                background-color: #2563EB;
+            }
+            QPushButton:pressed {
+                background-color: #1D4ED8;
+            }
+        """)
         
-        self.scrap_button = QPushButton("⚡ Scrap")
-        self.scrap_button.setObjectName("scrap_button")
+        self.scrap_button = QPushButton("Scrap")
+        self.scrap_button.setCursor(Qt.PointingHandCursor)
+        self.scrap_button.setFixedHeight(35)
         self.scrap_button.clicked.connect(self.scrap_url)
-        self.scrap_button.setStyleSheet("border-radius: 50%; padding: 5px;")
+        self.scrap_button.setStyleSheet("""
+            QPushButton {
+                background-color: #10B981;
+                color: white;
+                border-radius: 17px;
+                padding: 0 16px;
+                font-weight: bold;
+                font-size: 10pt;
+            }
+            QPushButton:hover {
+                background-color: #059669;
+            }
+            QPushButton:pressed {
+                background-color: #047857;
+            }
+        """)
         
         input_block_layout.addWidget(self.url_input)
         input_block_layout.addWidget(self.add_to_queue_button)
@@ -177,10 +223,35 @@ class DownloaderTab(QWidget):
         
         paths_group = QGroupBox("Download Paths")
         paths_layout = QVBoxLayout()
+        paths_layout.setSpacing(10)
+        
+        path_btn_style = """
+            QPushButton {
+                background-color: #1C1C21;
+                color: #A1A1AA;
+                border: 1px solid #27272A;
+                border-radius: 8px;
+                padding: 8px;
+                text-align: left;
+                font-size: 10pt;
+            }
+            QPushButton:hover {
+                background-color: #27272A;
+                color: #F4F4F5;
+                border-color: #3B82F6;
+            }
+        """
+        
         self.video_path_button = QPushButton("📁 Video Path...")
+        self.video_path_button.setCursor(Qt.PointingHandCursor)
+        self.video_path_button.setStyleSheet(path_btn_style)
         self.video_path_button.clicked.connect(self.select_video_path)
+        
         self.photo_path_button = QPushButton("📁 Photo Path...")
+        self.photo_path_button.setCursor(Qt.PointingHandCursor)
+        self.photo_path_button.setStyleSheet(path_btn_style)
         self.photo_path_button.clicked.connect(self.select_photo_path)
+        
         paths_layout.addWidget(self.video_path_button)
         paths_layout.addWidget(self.photo_path_button)
         paths_group.setLayout(paths_layout)
@@ -220,18 +291,18 @@ class DownloaderTab(QWidget):
         # Define a modern stylesheet for the combo boxes and checkbox
         input_style = """
             QComboBox, QSpinBox {
-                background-color: #2c313a;
-                border: 1px solid #4b5362;
-                border-radius: 6px;
-                padding: 6px 12px;
-                color: #ffffff;
+                background-color: #1C1C21;
+                border: 2px solid #27272A;
+                border-radius: 8px;
+                padding: 4px 8px;
+                color: #F4F4F5;
                 font-family: "Segoe UI", sans-serif;
                 font-size: 10pt;
                 min-width: 110px;
             }
             QComboBox:hover, QSpinBox:hover {
-                border: 1px solid #7E57C2;
-                background-color: #323842;
+                border-color: #3B82F6;
+                background-color: #202025;
             }
             QComboBox::drop-down {
                 subcontrol-origin: padding;
@@ -241,8 +312,8 @@ class DownloaderTab(QWidget):
             }
             QComboBox::down-arrow {
                 image: none; 
-                border-left: 2px solid #eff0f1;
-                border-bottom: 2px solid #eff0f1;
+                border-left: 2px solid #F4F4F5;
+                border-bottom: 2px solid #F4F4F5;
                 width: 8px; 
                 height: 8px;
                 transform: rotate(-45deg);
@@ -250,52 +321,52 @@ class DownloaderTab(QWidget):
                 margin-left: 2px;
             }
             QComboBox QAbstractItemView {
-                background-color: #2c313a;
-                border: 1px solid #4b5362;
-                selection-background-color: #7E57C2;
-                selection-color: #ffffff;
+                background-color: #1C1C21;
+                border: 1px solid #27272A;
+                selection-background-color: #3B82F6;
+                selection-color: #FFFFFF;
                 outline: none;
                 padding: 4px;
             }
             
             /* Modern Checkbox Style */
             QCheckBox {
-                color: #eff0f1;
+                color: #F4F4F5;
                 font-size: 10pt;
                 font-weight: 500;
                 spacing: 10px;
+                background-color: transparent;
             }
             QCheckBox::indicator {
-                width: 18px;
-                height: 18px;
-                border: 2px solid #555;
-                border-radius: 4px;
+                width: 20px;
+                height: 20px;
+                border: 2px solid #3F3F46;
+                border-radius: 6px;
                 background-color: transparent;
             }
             QCheckBox::indicator:checked {
-                background-color: #7E57C2;
-                border-color: #7E57C2;
-                /* We use a simple color fill for checked state to keep it clean/vector-free */
+                background-color: #3B82F6;
+                border-color: #3B82F6;
             }
             QCheckBox::indicator:hover {
-                border-color: #9b7dd4;
+                border-color: #60A5FA;
             }
         """
         
         # New distinct style for section headers (Labels)
         label_style = """
-            color: #8a9eb5;
+            color: #A1A1AA;
             background-color: transparent;
             font-weight: 700;
             font-size: 8pt;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         """
 
         # Extension Section (User's "File Type")
         ext_layout = QVBoxLayout()
-        ext_layout.setSpacing(2)
+        ext_layout.setSpacing(4)
         ext_label = QLabel("Extension")
         ext_label.setStyleSheet(label_style)
         self.extension_combo = QComboBox()
@@ -308,7 +379,7 @@ class DownloaderTab(QWidget):
         
         # Naming Style Section (User's "Video Format")
         naming_layout = QVBoxLayout()
-        naming_layout.setSpacing(2)
+        naming_layout.setSpacing(4)
         naming_label = QLabel("Naming Style")
         naming_label.setStyleSheet(label_style)
         self.naming_combo = QComboBox()
@@ -321,12 +392,12 @@ class DownloaderTab(QWidget):
         
         # Extra Options Section
         options_layout = QVBoxLayout()
-        options_layout.setSpacing(2)
+        options_layout.setSpacing(4)
         options_label = QLabel("Extras")
         options_label.setStyleSheet(label_style)
         self.subs_checkbox = QCheckBox("Download Subtitles")
         self.subs_checkbox.setCursor(Qt.PointingHandCursor)
-        self.subs_checkbox.setStyleSheet(input_style + "QCheckBox { background-color: transparent; }")
+        self.subs_checkbox.setStyleSheet(input_style)
         options_layout.addWidget(options_label)
         options_layout.addWidget(self.subs_checkbox)
         options_layout.addStretch()
@@ -341,12 +412,12 @@ class DownloaderTab(QWidget):
         # --- System Settings Group ---
         system_group = QGroupBox("System Settings")
         system_layout = QVBoxLayout()
-        system_layout.setSpacing(10)
+        system_layout.setSpacing(12)
         
         # Threads Option
         threads_layout = QHBoxLayout()
         threads_label = QLabel("Threads:")
-        threads_label.setStyleSheet("color: #eff0f1; font-weight: 500; background-color: transparent;")
+        threads_label.setStyleSheet("color: #F4F4F5; font-weight: 500; background-color: transparent;")
         self.threads_spinbox = QSpinBox()
         import multiprocessing
         max_threads = multiprocessing.cpu_count()
@@ -363,7 +434,7 @@ class DownloaderTab(QWidget):
         # Shutdown Option
         self.shutdown_checkbox = QCheckBox("Shutdown when finished")
         self.shutdown_checkbox.setCursor(Qt.PointingHandCursor)
-        self.shutdown_checkbox.setStyleSheet(input_style + "QCheckBox { background-color: transparent; }")
+        self.shutdown_checkbox.setStyleSheet(input_style)
         
         system_layout.addLayout(threads_layout)
         system_layout.addWidget(self.shutdown_checkbox)
@@ -378,12 +449,50 @@ class DownloaderTab(QWidget):
         footer_layout = QHBoxLayout()
         self.global_status_label = QLabel("Ready")
         self.global_status_label.setObjectName("global_status_label")
+        self.global_status_label.setStyleSheet("color: #3B82F6; font-weight: bold;")
         self.status_message.connect(self.global_status_label.setText)
         
-        self.download_button = QPushButton("⬇️ Download All")
-        self.download_button.setObjectName("download_button")
+        action_btn_style = """
+             QPushButton {
+                border-radius: 17px; /* 50% of 35px height */
+                padding: 0 20px;
+                font-weight: bold;
+                font-size: 11pt;
+            }
+        """
+        
+        self.download_button = QPushButton("Download All")
+        self.download_button.setCursor(Qt.PointingHandCursor)
+        self.download_button.setFixedHeight(35)
         self.download_button.clicked.connect(self.start_download_from_queue)
-        self.cancel_button = QPushButton("❌ Cancel All")
+        self.download_button.setStyleSheet(action_btn_style + """
+            QPushButton {
+                background-color: #3B82F6;
+                color: white;
+            }
+            QPushButton:hover {
+                background-color: #2563EB;
+            }
+            QPushButton:pressed {
+                background-color: #1D4ED8;
+            }
+        """)
+        
+        self.cancel_button = QPushButton("Cancel All")
+        self.cancel_button.setCursor(Qt.PointingHandCursor)
+        self.cancel_button.setFixedHeight(35)
+        self.cancel_button.setStyleSheet(action_btn_style + """
+             QPushButton {
+                background-color: #EF4444;
+                color: white;
+            }
+            QPushButton:hover {
+                background-color: #DC2626;
+            }
+            QPushButton:pressed {
+                background-color: #B91C1C;
+            }
+        """)
         
         footer_layout.addWidget(self.global_status_label)
         footer_layout.addStretch()
