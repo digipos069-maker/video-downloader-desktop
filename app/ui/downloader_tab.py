@@ -88,7 +88,7 @@ class DownloaderTab(QWidget):
                 background-color: #1C1C21;
                 border: 2px solid #27272A;
                 border-radius: 17px; /* approx 50% of 35px */
-                padding: 0 12px;
+                padding: 0 8px;
                 color: #F4F4F5;
                 font-size: 10pt;
             }
@@ -107,7 +107,7 @@ class DownloaderTab(QWidget):
                 background-color: #3B82F6;
                 color: white;
                 border-radius: 17px;
-                padding: 0 16px;
+                padding: 0 10px;
                 font-weight: bold;
                 font-size: 10pt;
             }
@@ -128,7 +128,7 @@ class DownloaderTab(QWidget):
                 background-color: #10B981;
                 color: white;
                 border-radius: 17px;
-                padding: 0 16px;
+                padding: 0 10px;
                 font-weight: bold;
                 font-size: 10pt;
             }
@@ -231,7 +231,7 @@ class DownloaderTab(QWidget):
                 color: #A1A1AA;
                 border: 1px solid #27272A;
                 border-radius: 8px;
-                padding: 8px;
+                padding: 5px;
                 text-align: left;
                 font-size: 10pt;
             }
@@ -294,7 +294,7 @@ class DownloaderTab(QWidget):
                 background-color: #1C1C21;
                 border: 2px solid #27272A;
                 border-radius: 8px;
-                padding: 4px 8px;
+                padding: 2px 6px;
                 color: #F4F4F5;
                 font-family: "Segoe UI", sans-serif;
                 font-size: 10pt;
@@ -455,7 +455,7 @@ class DownloaderTab(QWidget):
         action_btn_style = """
              QPushButton {
                 border-radius: 17px; /* 50% of 35px height */
-                padding: 0 20px;
+                padding: 0 12px;
                 font-weight: bold;
                 font-size: 11pt;
             }
