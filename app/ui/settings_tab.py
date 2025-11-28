@@ -5,8 +5,9 @@ The UI for the Settings tab.
 
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QGroupBox, QTabWidget, QHBoxLayout, 
-    QCheckBox, QSpinBox, QComboBox, QLabel, QFormLayout
+    QCheckBox, QSpinBox, QComboBox, QLabel, QFormLayout, QPushButton, QMessageBox
 )
+from app.config.settings_manager import load_settings, save_settings
 
 class SettingsTab(QWidget):
     def __init__(self, parent=None):
@@ -179,7 +180,33 @@ class SettingsTab(QWidget):
         credentials_group.setLayout(cred_layout)
 
         layout.addWidget(credentials_group)
+
+        # Save Button
+        save_btn = QPushButton("Save Settings")
+        save_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #3B82F6;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 10pt;
+            }
+            QPushButton:hover {
+                background-color: #2563EB;
+            }
+            QPushButton:pressed {
+                background-color: #1D4ED8;
+            }
+        """)
+        save_btn.clicked.connect(self.save_current_settings)
+        layout.addWidget(save_btn)
+        
         layout.addStretch() # Pushes the group to the top
+        
+        # Load initial settings
+        self.load_initial_settings()
 
     def get_settings(self):
         """Returns the current global settings as a dictionary."""
@@ -199,6 +226,45 @@ class SettingsTab(QWidget):
                 'quality': self.photo_res_combo.currentText()
             }
         }
+
+    def set_settings(self, settings):
+        """Updates the UI elements with the provided settings."""
+        # Video Settings
+        video_settings = settings.get('video', {})
+        self.enable_video_chk.setChecked(video_settings.get('enabled', False))
+        self.top_video_chk.setChecked(video_settings.get('top', False))
+        self.top_video_count.setValue(video_settings.get('count', 5))
+        self.all_video_chk.setChecked(video_settings.get('all', False))
+        
+        res_text = video_settings.get('resolution', "Best Available")
+        index = self.video_res_combo.findText(res_text)
+        if index >= 0:
+            self.video_res_combo.setCurrentIndex(index)
+
+        # Photo Settings
+        photo_settings = settings.get('photo', {})
+        self.enable_photo_chk.setChecked(photo_settings.get('enabled', False))
+        self.top_photo_chk.setChecked(photo_settings.get('top', False))
+        self.top_photo_count.setValue(photo_settings.get('count', 5))
+        self.all_photo_chk.setChecked(photo_settings.get('all', False))
+        
+        qual_text = photo_settings.get('quality', "Best Available")
+        index = self.photo_res_combo.findText(qual_text)
+        if index >= 0:
+            self.photo_res_combo.setCurrentIndex(index)
+
+    def load_initial_settings(self):
+        """Loads settings from disk and populates the UI."""
+        settings = load_settings()
+        self.set_settings(settings)
+
+    def save_current_settings(self):
+        """Saves the current UI state to disk."""
+        settings = self.get_settings()
+        if save_settings(settings):
+            QMessageBox.information(self, "Success", "Settings saved successfully!")
+        else:
+            QMessageBox.critical(self, "Error", "Failed to save settings.")
 
 if __name__ == '__main__':
     import sys, os

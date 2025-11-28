@@ -366,3 +366,77 @@
 2025-11-29 02:11:24,194 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8 to E:/test
 2025-11-29 02:11:24,216 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
 2025-11-29 02:11:24,886 - ERROR - Download failed: [0;31mERROR:[0m [generic] 4af6792c0f7104a82a2f2a1f0bbf4fc2: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:41:53,950 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:41:54,825 - INFO - Playwright visiting: https://www.pinterest.com/pin/3588874697361840/
+2025-11-29 02:42:00,303 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 02:42:01,911 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 02:42:03,428 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 02:42:04,943 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 02:42:06,459 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 02:42:07,976 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 02:42:09,493 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 02:42:11,010 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 02:42:12,527 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 02:42:14,043 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 02:42:14,085 - INFO - Found 152 raw links on page.
+2025-11-29 02:42:14,086 - INFO - Filtered down to 6 unique valid links.
+2025-11-29 02:43:12,398 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3588874697361840/# to E:/test
+2025-11-29 02:43:12,398 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/4574037117494081/ to E:/test
+2025-11-29 02:43:12,398 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/blooming-pink-flowers-in-the-sun--444378688254700111/ to E:/test
+2025-11-29 02:43:12,398 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/laleler-in-2025--48273027252731819/ to E:/test
+2025-11-29 02:43:12,415 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:12,417 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:12,418 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:12,418 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:15,068 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 3588874697361840: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:15,068 - INFO - Standard download failed for https://www.pinterest.com/pin/3588874697361840/#. Attempting fallback extraction...
+2025-11-29 02:43:15,069 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:15,069 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 4574037117494081: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:15,069 - INFO - Standard download failed for https://www.pinterest.com/pin/4574037117494081/. Attempting fallback extraction...
+2025-11-29 02:43:15,069 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:15,070 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 444378688254700111: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:15,070 - INFO - Standard download failed for https://www.pinterest.com/pin/blooming-pink-flowers-in-the-sun--444378688254700111/. Attempting fallback extraction...
+2025-11-29 02:43:15,071 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:15,785 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 48273027252731819: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:15,786 - INFO - Standard download failed for https://www.pinterest.com/pin/laleler-in-2025--48273027252731819/. Attempting fallback extraction...
+2025-11-29 02:43:15,786 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:15,989 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/blooming-pink-flowers-in-the-sun--444378688254700111/
+2025-11-29 02:43:15,991 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/4574037117494081/
+2025-11-29 02:43:16,025 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3588874697361840/#
+2025-11-29 02:43:16,672 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/laleler-in-2025--48273027252731819/
+2025-11-29 02:43:17,564 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/86/ca/36/86ca36499b26176ed40240db9f18ae7e.m3u8
+2025-11-29 02:43:17,564 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/86/ca/36/86ca36499b26176ed40240db9f18ae7e.m3u8 to E:/test
+2025-11-29 02:43:17,577 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:17,701 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/66/0c/46/660c467739fd8c601ba5dfae0a54aa93.m3u8
+2025-11-29 02:43:17,733 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/66/0c/46/660c467739fd8c601ba5dfae0a54aa93.m3u8 to E:/test
+2025-11-29 02:43:17,779 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8
+2025-11-29 02:43:17,795 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/4a/f6/79/4af6792c0f7104a82a2f2a1f0bbf4fc2.m3u8 to E:/test
+2025-11-29 02:43:18,006 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:18,095 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:18,478 - ERROR - Download failed: [0;31mERROR:[0m [generic] 4af6792c0f7104a82a2f2a1f0bbf4fc2: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:18,479 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/in-2025--16607092371909800/ to E:/test
+2025-11-29 02:43:18,491 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:18,631 - ERROR - Download failed: [0;31mERROR:[0m [generic] 86ca36499b26176ed40240db9f18ae7e: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:18,662 - ERROR - Download failed: [0;31mERROR:[0m [generic] 660c467739fd8c601ba5dfae0a54aa93: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:18,662 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3588874697383514/ to E:/test
+2025-11-29 02:43:18,674 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:19,424 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 16607092371909800: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:19,424 - INFO - Standard download failed for https://www.pinterest.com/pin/in-2025--16607092371909800/. Attempting fallback extraction...
+2025-11-29 02:43:19,424 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:19,521 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/fd/d1/10/fdd110a29f6cfa10761697e88e7247eb.m3u8
+2025-11-29 02:43:19,521 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/fd/d1/10/fdd110a29f6cfa10761697e88e7247eb.m3u8 to E:/test
+2025-11-29 02:43:19,539 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:19,702 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 3588874697383514: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:19,702 - INFO - Standard download failed for https://www.pinterest.com/pin/3588874697383514/. Attempting fallback extraction...
+2025-11-29 02:43:19,702 - DEBUG - Using proactor: IocpProactor
+2025-11-29 02:43:20,250 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/in-2025--16607092371909800/
+2025-11-29 02:43:20,581 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3588874697383514/
+2025-11-29 02:43:20,717 - ERROR - Download failed: [0;31mERROR:[0m [generic] fdd110a29f6cfa10761697e88e7247eb: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:21,794 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/96/bf/21/96bf210a0fea85d70c92d5702fb4e478.m3u8
+2025-11-29 02:43:21,794 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/96/bf/21/96bf210a0fea85d70c92d5702fb4e478.m3u8 to E:/test
+2025-11-29 02:43:21,813 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:22,145 - ERROR - Download failed: [0;31mERROR:[0m [generic] 96bf210a0fea85d70c92d5702fb4e478: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 02:43:22,185 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/19/33/8f/19338f03bcb657151e29068bee014a19.m3u8
+2025-11-29 02:43:22,185 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/19/33/8f/19338f03bcb657151e29068bee014a19.m3u8 to E:/test
+2025-11-29 02:43:22,198 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 02:43:22,565 - ERROR - Download failed: [0;31mERROR:[0m [generic] 19338f03bcb657151e29068bee014a19: Requested format is not available. Use --list-formats for a list of available formats

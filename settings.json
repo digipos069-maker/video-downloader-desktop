@@ -1,0 +1,27 @@
+{
+    "video": {
+        "enabled": false,
+        "top": false,
+        "count": 5,
+        "all": false,
+        "resolution": "Best Available"
+    },
+    "photo": {
+        "enabled": true,
+        "top": true,
+        "count": 2,
+        "all": false,
+        "quality": "Best Available"
+    },
+    "download": {
+        "extension": "Best",
+        "naming": "Original Name",
+        "subtitles": false,
+        "video_path": "",
+        "photo_path": "E:/test"
+    },
+    "system": {
+        "threads": 11,
+        "shutdown": false
+    }
+}

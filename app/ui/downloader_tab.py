@@ -14,6 +14,7 @@ from PySide6.QtCore import Qt, Signal, Slot, QTimer
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
 from app.network import NetworkMonitor
+from app.config.settings_manager import load_settings
 
 class DownloaderTab(QWidget):
     status_message = Signal(str)
@@ -647,11 +648,66 @@ class DownloaderTab(QWidget):
         main_layout.addLayout(top_bar_layout)
         main_layout.addLayout(content_layout)
 
+        # Load initial UI state
+        self.load_ui_state()
+
     def edit_username_event(self, event):
         from PySide6.QtWidgets import QInputDialog
         text, ok = QInputDialog.getText(self, 'Edit Username', 'Enter new username:')
         if ok and text:
             self.username_label.setText(f"User: {text}")
+
+    def load_ui_state(self):
+        """Loads the UI state from settings."""
+        settings = load_settings()
+        
+        # Download Settings
+        dl_settings = settings.get('download', {})
+        
+        ext_text = dl_settings.get('extension', "Best")
+        idx = self.extension_combo.findText(ext_text)
+        if idx >= 0: self.extension_combo.setCurrentIndex(idx)
+        
+        name_text = dl_settings.get('naming', "Original Name")
+        idx = self.naming_combo.findText(name_text)
+        if idx >= 0: self.naming_combo.setCurrentIndex(idx)
+        
+        self.subs_checkbox.setChecked(dl_settings.get('subtitles', False))
+        
+        self.video_download_path = dl_settings.get('video_path', "")
+        if self.video_download_path:
+            self.video_path_button.setText(f"Video: {self.video_download_path}")
+            self.video_path_button.setToolTip(self.video_download_path)
+            
+        self.photo_download_path = dl_settings.get('photo_path', "")
+        if self.photo_download_path:
+            self.photo_path_button.setText(f"Photo: {self.photo_download_path}")
+            self.photo_path_button.setToolTip(self.photo_download_path)
+
+        # System Settings
+        sys_settings = settings.get('system', {})
+        self.shutdown_checkbox.setChecked(sys_settings.get('shutdown', False))
+        
+        # Threads (Only set if valid and saved)
+        saved_threads = sys_settings.get('threads', 4)
+        if saved_threads > 0:
+             self.threads_spinbox.setValue(saved_threads)
+
+    def get_ui_state(self):
+        """Returns the current UI state as a dictionary for saving."""
+        return {
+            'download': {
+                'extension': self.extension_combo.currentText(),
+                'naming': self.naming_combo.currentText(),
+                'subtitles': self.subs_checkbox.isChecked(),
+                'video_path': self.video_download_path if self.video_download_path else "",
+                'photo_path': self.photo_download_path if self.photo_download_path else ""
+            },
+            'system': {
+                'threads': self.threads_spinbox.value(),
+                'shutdown': self.shutdown_checkbox.isChecked()
+            }
+        }
 
     @Slot()
     def select_video_path(self):

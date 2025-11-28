@@ -3,6 +3,7 @@ import os
 from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget
 from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
+from app.config.settings_manager import save_settings
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -24,6 +25,24 @@ class MainWindow(QMainWindow):
         
         # Connect settings to downloader
         self.downloader_tab.set_settings_tab(self.settings_tab)
+
+    def closeEvent(self, event):
+        """Handle application closure to save settings."""
+        try:
+            # Gather settings from tabs
+            settings_tab_data = self.settings_tab.get_settings()
+            downloader_tab_data = self.downloader_tab.get_ui_state()
+            
+            # Merge settings
+            full_settings = {**settings_tab_data, **downloader_tab_data}
+            
+            # Save to file
+            save_settings(full_settings)
+            # print("Settings saved on exit.")
+        except Exception as e:
+            print(f"Error saving settings on exit: {e}")
+            
+        event.accept()
 
 
 def main():
