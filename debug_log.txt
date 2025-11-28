@@ -1,0 +1,37 @@
+2025-11-28 22:31:47,582 - ERROR - Playwright not installed. Please run: pip install playwright && playwright install
+2025-11-28 22:41:04,321 - DEBUG - Using proactor: IocpProactor
+2025-11-28 22:41:05,900 - INFO - Playwright visiting: https://www.pinterest.com/pin/14847873767407256/
+2025-11-28 22:41:10,558 - DEBUG - Scroll iteration 1/10 completed
+2025-11-28 22:41:12,071 - DEBUG - Scroll iteration 2/10 completed
+2025-11-28 22:41:13,578 - DEBUG - Scroll iteration 3/10 completed
+2025-11-28 22:41:15,124 - DEBUG - Scroll iteration 4/10 completed
+2025-11-28 22:41:16,631 - DEBUG - Scroll iteration 5/10 completed
+2025-11-28 22:41:18,139 - DEBUG - Scroll iteration 6/10 completed
+2025-11-28 22:41:19,647 - DEBUG - Scroll iteration 7/10 completed
+2025-11-28 22:41:21,155 - DEBUG - Scroll iteration 8/10 completed
+2025-11-28 22:41:22,663 - DEBUG - Scroll iteration 9/10 completed
+2025-11-28 22:41:24,171 - DEBUG - Scroll iteration 10/10 completed
+2025-11-28 22:41:24,192 - INFO - Found 26 raw links on page.
+2025-11-28 22:41:24,192 - INFO - Filtered down to 22 unique valid links.
+2025-11-28 22:42:01,712 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,713 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,713 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,713 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,714 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,714 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,715 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,715 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,716 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,716 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,717 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,717 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,718 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,718 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,719 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,719 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,720 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,720 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,721 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,721 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,722 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:42:01,722 - INFO - Downloading Pinterest pin: Unknown
