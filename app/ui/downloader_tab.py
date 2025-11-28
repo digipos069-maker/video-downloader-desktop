@@ -13,6 +13,7 @@ from PySide6.QtCore import Qt, Signal, Slot, QTimer
 
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
+from app.network import NetworkMonitor
 
 class DownloaderTab(QWidget):
     status_message = Signal(str)
@@ -42,6 +43,11 @@ class DownloaderTab(QWidget):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_timer_display)
         self.seconds_elapsed = 0
+        
+        # --- Network Monitor Setup ---
+        self.network_monitor = NetworkMonitor(self)
+        self.network_monitor.stats_signal.connect(self.update_network_stats)
+        self.network_monitor.start()
 
         # --- UI Layout ---
         main_layout = QVBoxLayout(self) # Changed to QVBoxLayout
@@ -224,7 +230,7 @@ class DownloaderTab(QWidget):
             }
         """)
         
-        self.scrap_button = QPushButton("Scrap")
+        self.scrap_button = QPushButton("Scrap Now")
         self.scrap_button.setCursor(Qt.PointingHandCursor)
         self.scrap_button.setFixedHeight(35)
         self.scrap_button.clicked.connect(self.scrap_url)
@@ -788,6 +794,12 @@ class DownloaderTab(QWidget):
         seconds = self.seconds_elapsed % 60
         
         self.timer_label.setText(f"{hours:02}:{minutes:02}:{seconds:02}")
+
+    @Slot(float, float, float)
+    def update_network_stats(self, down_mbps, up_mbps, ping_ms):
+        """Updates the network speed and ping display."""
+        # Format: Ping: 25ms  ↓ 12.5 Mbps  ↑ 5.2 Mbps
+        self.speed_label.setText(f"Ping: {int(ping_ms)}ms   ↓ {down_mbps:.2f} Mbps   ↑ {up_mbps:.2f} Mbps")
 
     @Slot()
     def start_download_from_queue(self):

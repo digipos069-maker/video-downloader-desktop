@@ -1,67 +1,87 @@
-
-"""
-Network-related utilities, such as monitoring internet speed.
-"""
-
-from PySide6.QtCore import QThread, Signal
-import time
 import psutil
+import time
+from PySide6.QtCore import QThread, Signal
+import platform
+import subprocess
 
-class NetworkSpeedMonitor(QThread):
-    """
-    A thread that monitors and emits network upload and download speeds.
-    """
-    speed_updated = Signal(float, float)  # download_speed (Mbps), upload_speed (Mbps)
+class NetworkMonitor(QThread):
+    stats_signal = Signal(float, float, float) # download_mbps, upload_mbps, ping_ms
 
-    def __init__(self, interval=2):
-        super().__init__()
-        self.interval = interval
-        self._is_running = True
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.running = True
+        self.last_net_io = psutil.net_io_counters()
+        self.last_time = time.time()
+        self.cached_ping = 0.0
+        self.last_ping_time = 0
 
     def run(self):
-        """Monitors network speed at a set interval."""
-        last_bytes_sent = psutil.net_io_counters().bytes_sent
-        last_bytes_recv = psutil.net_io_counters().bytes_recv
-        time.sleep(self.interval)
+        while self.running:
+            current_time = time.time()
+            current_net_io = psutil.net_io_counters()
 
-        while self._is_running:
-            current_bytes_sent = psutil.net_io_counters().bytes_sent
-            current_bytes_recv = psutil.net_io_counters().bytes_recv
+            time_delta = current_time - self.last_time
+            if time_delta >= 1.0:
+                # Calculate Bytes per second
+                bytes_recv = current_net_io.bytes_recv - self.last_net_io.bytes_recv
+                bytes_sent = current_net_io.bytes_sent - self.last_net_io.bytes_sent
 
-            upload_speed = (current_bytes_sent - last_bytes_sent) / self.interval
-            download_speed = (current_bytes_recv - last_bytes_recv) / self.interval
+                # Convert to Mbps (Megabits per second)
+                down_mbps = (bytes_recv * 8) / (1024 * 1024) / time_delta
+                up_mbps = (bytes_sent * 8) / (1024 * 1024) / time_delta
 
-            # Convert to Mbps
-            upload_mbps = (upload_speed * 8) / (1024 * 1024)
-            download_mbps = (download_speed * 8) / (1024 * 1024)
+                # Measure Ping every 15 seconds
+                if current_time - self.last_ping_time >= 15.0:
+                    self.cached_ping = self.measure_ping()
+                    self.last_ping_time = current_time
 
-            self.speed_updated.emit(download_mbps, upload_mbps)
+                self.stats_signal.emit(down_mbps, up_mbps, self.cached_ping)
 
-            last_bytes_sent = current_bytes_sent
-            last_bytes_recv = current_bytes_recv
-            time.sleep(self.interval)
+                self.last_net_io = current_net_io
+                self.last_time = current_time
+            
+            time.sleep(1) # Update stats every second
+
+    def measure_ping(self):
+        host = "8.8.8.8"  # Google DNS
+        param = '-n' if platform.system().lower() == 'windows' else '-c'
+        command = ['ping', param, '1', host]
+        
+        try:
+            # Using subprocess to run ping command
+            # We need to parse the output to get the time, or just return -1 if failed
+            # For simplicity in this blocking thread (since it sleeps anyway), we can run it.
+            # Ideally ping should be non-blocking or quick.
+            
+            # Startupinfo to hide console window on Windows
+            startupinfo = None
+            if platform.system().lower() == 'windows':
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            
+            output = subprocess.run(
+                command, 
+                stdout=subprocess.PIPE, 
+                stderr=subprocess.PIPE, 
+                startupinfo=startupinfo,
+                timeout=1.5 # Short timeout
+            )
+            
+            if output.returncode == 0:
+                # Parse output for time
+                output_str = output.stdout.decode('utf-8')
+                # Windows: "time=12ms" or "time<1ms"
+                # Linux: "time=12.3 ms"
+                if "time=" in output_str:
+                    part = output_str.split("time=")[1]
+                    ms_part = part.split("ms")[0].strip()
+                    return float(ms_part)
+                elif "time<" in output_str:
+                    return 1.0
+            return 0.0
+        except Exception:
+            return 0.0
 
     def stop(self):
-        self._is_running = False
-
-if __name__ == '__main__':
-    # This is not how it will be used in the app, this is for testing
-    import sys
-    from PySide6.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
-
-    app = QApplication(sys.argv)
-    window = QWidget()
-    layout = QVBoxLayout(window)
-    speed_label = QLabel("Loading...")
-    layout.addWidget(speed_label)
-
-    def update_speed_label(down, up):
-        speed_label.setText(f"Download: {down:.2f} Mbps\nUpload: {up:.2f} Mbps")
-
-    monitor = NetworkSpeedMonitor()
-    monitor.speed_updated.connect(update_speed_label)
-    monitor.start()
-
-    window.show()
-    app.aboutToQuit.connect(monitor.stop)
-    sys.exit(app.exec())
+        self.running = False
+        self.wait()
