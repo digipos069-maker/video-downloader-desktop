@@ -212,17 +212,77 @@ class DownloaderTab(QWidget):
         # Bottom Section for Settings
         bottom_controls_layout = QHBoxLayout()
         settings_group = QGroupBox("Download Settings")
-        settings_layout = QFormLayout()
         
+        # Use a Horizontal layout for the settings group to place items side-by-side
+        settings_layout = QHBoxLayout()
+        settings_layout.setSpacing(20)
+        
+        # Define a modern stylesheet for the combo boxes
+        combo_style = """
+            QComboBox {
+                background-color: #2c313a;
+                border: 1px solid #555;
+                border-radius: 5px;
+                padding: 5px 10px;
+                color: #eff0f1;
+                font-size: 10pt;
+            }
+            QComboBox:hover {
+                border: 1px solid #7E57C2;
+            }
+            QComboBox::drop-down {
+                subcontrol-origin: padding;
+                subcontrol-position: top right;
+                width: 25px;
+                border-left-width: 0px;
+            }
+            QComboBox::down-arrow {
+                image: none; /* Could use a custom image here */
+                border-left: 2px solid #eff0f1;
+                border-bottom: 2px solid #eff0f1;
+                width: 8px; 
+                height: 8px;
+                transform: rotate(-45deg);
+                margin-top: -3px;
+                margin-left: 2px;
+            }
+             QComboBox QAbstractItemView {
+                background-color: #2c313a;
+                border: 1px solid #555;
+                selection-background-color: #7E57C2;
+                selection-color: #eff0f1;
+                outline: none;
+            }
+        """
+
+        # File Type Section
+        type_layout = QVBoxLayout()
+        type_layout.setSpacing(5)
+        type_label = QLabel("File Type")
+        type_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
         self.file_type_combo = QComboBox()
         self.file_type_combo.addItems(["Video", "Audio"])
+        self.file_type_combo.setCursor(Qt.PointingHandCursor)
+        self.file_type_combo.setStyleSheet(combo_style)
         self.file_type_combo.currentTextChanged.connect(self.update_format_options)
+        type_layout.addWidget(type_label)
+        type_layout.addWidget(self.file_type_combo)
         
+        # File Format Section
+        format_layout = QVBoxLayout()
+        format_layout.setSpacing(5)
+        format_label = QLabel("File Format")
+        format_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
         self.file_format_combo = QComboBox()
         self.file_format_combo.addItems(["Best Available", "mp4", "mkv", "webm"]) # Default for Video
+        self.file_format_combo.setCursor(Qt.PointingHandCursor)
+        self.file_format_combo.setStyleSheet(combo_style)
+        format_layout.addWidget(format_label)
+        format_layout.addWidget(self.file_format_combo)
         
-        settings_layout.addRow("File Type:", self.file_type_combo)
-        settings_layout.addRow("File Format:", self.file_format_combo)
+        settings_layout.addLayout(type_layout)
+        settings_layout.addLayout(format_layout)
+        settings_layout.addStretch() # Push everything to the left
         
         settings_group.setLayout(settings_layout)
         bottom_controls_layout.addWidget(settings_group)
