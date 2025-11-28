@@ -38,15 +38,19 @@ class DownloaderTab(QWidget):
         main_layout.setContentsMargins(15, 15, 15, 15)
         main_layout.setSpacing(15)
 
-        # --- Top Bar (Full Width) ---
-        top_bar_layout = QHBoxLayout()
-        top_bar_layout.setSpacing(15)
-        
-        # App Logo, Speed, User, URL Input...
+        # --- Top Bar (Two Rows) ---
+        top_bar_layout = QVBoxLayout()
+        top_bar_layout.setSpacing(10)
+
+        # Row 1: Logo, Network Speed, User
+        row1_layout = QHBoxLayout()
+        row1_layout.setSpacing(15)
+
         self.logo_label = QLabel("Logo") 
         self.logo_label.setFixedSize(64, 64)
         self.logo_label.setAlignment(Qt.AlignCenter)
         self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
+        
         info_layout = QVBoxLayout()
         info_layout.setSpacing(2)
         self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
@@ -57,26 +61,83 @@ class DownloaderTab(QWidget):
         self.username_label.mousePressEvent = self.edit_username_event
         info_layout.addWidget(self.speed_label)
         info_layout.addWidget(self.username_label)
-        url_layout = QHBoxLayout()
-        url_layout.setSpacing(0)
+        
+        row1_layout.addWidget(self.logo_label)
+        row1_layout.addLayout(info_layout)
+        row1_layout.addStretch()
+        
+        top_bar_layout.addLayout(row1_layout)
+
+        # Row 2: Input, Buttons, Supported Icons
+        row2_layout = QHBoxLayout()
+        row2_layout.setSpacing(15) # Spacing between input block and icons
+        
+        input_block_layout = QHBoxLayout()
+        input_block_layout.setSpacing(5) # Added spacing between input and buttons
+        
         self.url_input = QLineEdit()
         self.url_input.setPlaceholderText("Paste URL here")
-        self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
+        self.url_input.setStyleSheet("border-radius: 15px; padding: 5px;") 
+        
         self.add_to_queue_button = QPushButton("➕ Add to Queue")
         self.add_to_queue_button.setObjectName("add_to_queue_button")
         self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
-        self.add_to_queue_button.setStyleSheet("border-radius: 0;")
+        self.add_to_queue_button.setStyleSheet("border-radius: 50%; padding: 5px;")
+        
         self.scrap_button = QPushButton("⚡ Scrap")
         self.scrap_button.setObjectName("scrap_button")
-        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-radius: 0;")
         self.scrap_button.clicked.connect(self.scrap_url)
-        url_layout.addWidget(self.url_input)
-        url_layout.addWidget(self.add_to_queue_button)
-        url_layout.addWidget(self.scrap_button)
-        top_bar_layout.addWidget(self.logo_label)
-        top_bar_layout.addLayout(info_layout)
-        top_bar_layout.addStretch()
-        top_bar_layout.addLayout(url_layout)
+        self.scrap_button.setStyleSheet("border-radius: 50%; padding: 5px;")
+        
+        input_block_layout.addWidget(self.url_input)
+        input_block_layout.addWidget(self.add_to_queue_button)
+        input_block_layout.addWidget(self.scrap_button)
+        
+        row2_layout.addLayout(input_block_layout)
+        row2_layout.addStretch()
+        
+        # Supported Platform Icons
+        platform_icons_layout = QHBoxLayout()
+        platform_icons_layout.setSpacing(5) # Spacing between icons
+        platform_icons_layout.setAlignment(Qt.AlignRight | Qt.AlignVCenter) # Align icons to the right and vertically center
+
+        # Helper to create a circular icon label with an image
+        def create_circular_icon_with_image(image_path, tooltip):
+            icon_label = QLabel()
+            icon_label.setFixedSize(30, 30) # Small circular icon
+            icon_label.setAlignment(Qt.AlignCenter)
+            
+            # Use a stylesheet for circular shape and background, image is set via QPixmap
+            icon_label.setStyleSheet(
+                "border-radius: 15px; " # Half of width/height for circular shape
+                "background-color: #383838; " # A neutral background for the circle
+                "border: 1px solid #555555;" # Optional: add a subtle border
+            )
+
+            pixmap = QPixmap(image_path)
+            if not pixmap.isNull():
+                # Scale pixmap to fit inside the 30x30 label, preserving aspect ratio
+                scaled_pixmap = pixmap.scaled(24, 24, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                icon_label.setPixmap(scaled_pixmap)
+            else:
+                # Fallback if image not found, display '?'
+                icon_label.setText("?") 
+                icon_label.setStyleSheet(icon_label.styleSheet() + "color: white; font-weight: bold;")
+                
+            icon_label.setToolTip(tooltip)
+            return icon_label
+
+        # Base path for icons - assuming images are in app/resources/images/
+        icon_base_path = "app/resources/images/" 
+
+        # Add icons for supported platforms (YouTube, TikTok, Facebook)
+        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "youtube.png", "YouTube"))
+        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "tiktok.png", "TikTok"))
+        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "facebook.png", "Facebook"))
+        
+        row2_layout.addLayout(platform_icons_layout)
+        
+        top_bar_layout.addLayout(row2_layout)
 
         # --- Content Area (Two Columns) ---
         content_layout = QHBoxLayout()
