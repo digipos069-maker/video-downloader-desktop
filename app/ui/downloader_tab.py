@@ -189,10 +189,10 @@ class DownloaderTab(QWidget):
 
         # Activity Table
         self.activity_table = QTableWidget()
-        self.activity_table.setColumnCount(8)
-        self.activity_table.setHorizontalHeaderLabels(["#", "URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
+        self.activity_table.setColumnCount(9)
+        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
-        for i in range(1, 8):
+        for i in range(1, 9):
             self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
         self.activity_table.verticalHeader().setVisible(False)
         self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
@@ -313,8 +313,9 @@ class DownloaderTab(QWidget):
                         row_position_activity = self.activity_table.rowCount()
                         self.activity_table.insertRow(row_position_activity)
                         self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1))) # Row number
-                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata['url']))
-                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem("Queued"))
+                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A'))) # Title
+                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(metadata['url'])) # URL
+                        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued")) # Status
                         
                     self.status_message.emit(f"Found and queued {len(metadata_list)} items.")
                 else:
