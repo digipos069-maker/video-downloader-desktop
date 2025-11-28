@@ -181,13 +181,24 @@ class DownloaderTab(QWidget):
         left_sidebar_layout.addStretch()
         
         # --- Right Content Widgets ---
+        activity_group = QGroupBox("Download Activity")
+        activity_layout = QVBoxLayout()
+        activity_layout.setContentsMargins(0, 10, 0, 0) 
+
         # Activity Table
         self.activity_table = QTableWidget()
-        self.activity_table.setColumnCount(7)
-        self.activity_table.setHorizontalHeaderLabels(["URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
-        self.activity_table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.activity_table.setColumnCount(8)
+        self.activity_table.setHorizontalHeaderLabels(["#", "URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
+        self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
+        for i in range(1, 8):
+            self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
+        self.activity_table.verticalHeader().setVisible(False)
         self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        
+        activity_layout.addWidget(self.activity_table)
+        activity_group.setLayout(activity_layout)
+
         
         # Bottom Section for Settings
         bottom_controls_layout = QHBoxLayout()
@@ -215,7 +226,7 @@ class DownloaderTab(QWidget):
         footer_layout.addWidget(self.cancel_button)
 
         # --- Assemble Right Layout ---
-        right_content_layout.addWidget(self.activity_table)
+        right_content_layout.addWidget(activity_group)
         right_content_layout.addLayout(bottom_controls_layout)
         right_content_layout.addLayout(footer_layout)
         
@@ -296,8 +307,9 @@ class DownloaderTab(QWidget):
                         # Add item to the main activity table on the right
                         row_position_activity = self.activity_table.rowCount()
                         self.activity_table.insertRow(row_position_activity)
-                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(metadata['url']))
-                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem("Queued"))
+                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1))) # Row number
+                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata['url']))
+                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem("Queued"))
                         
                     self.status_message.emit(f"Found and queued {len(metadata_list)} items.")
                 else:
