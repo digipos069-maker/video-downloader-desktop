@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (
     QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox
 )
 from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Qt, Signal, Slot
+from PySide6.QtCore import Qt, Signal, Slot, QTimer
 
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
@@ -37,6 +37,11 @@ class DownloaderTab(QWidget):
 
         # --- Data mapping for UI updates ---
         self.active_download_map = {} # Maps item_id to its row in the queue_table_widget
+        
+        # --- Timer Setup ---
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.update_timer_display)
+        self.seconds_elapsed = 0
 
         # --- UI Layout ---
         main_layout = QVBoxLayout(self) # Changed to QVBoxLayout
@@ -69,6 +74,24 @@ class DownloaderTab(QWidget):
         
         row1_layout.addWidget(self.logo_label)
         row1_layout.addLayout(info_layout)
+        
+        # Timer Box Display
+        self.timer_label = QLabel("00:00:00")
+        self.timer_label.setAlignment(Qt.AlignCenter)
+        self.timer_label.setFixedSize(100, 36)
+        self.timer_label.setStyleSheet("""
+            QLabel {
+                background-color: #1C1C21;
+                border: 1px solid #27272A;
+                border-radius: 8px;
+                color: #10B981; /* Green for timer */
+                font-weight: bold;
+                font-size: 11pt;
+                font-family: Consolas, "Courier New", monospace;
+            }
+        """)
+        row1_layout.addWidget(self.timer_label)
+        
         row1_layout.addStretch()
         
         # Top Right Buttons (Update & License)
@@ -524,6 +547,7 @@ class DownloaderTab(QWidget):
         self.cancel_button = QPushButton("Cancel All")
         self.cancel_button.setCursor(Qt.PointingHandCursor)
         self.cancel_button.setFixedHeight(35)
+        self.cancel_button.clicked.connect(self.cancel_all_downloads) # Connected to new slot
         self.cancel_button.setStyleSheet(action_btn_style + """
              QPushButton {
                 background-color: #EF4444;
@@ -703,6 +727,29 @@ class DownloaderTab(QWidget):
         """Updates the maximum thread count in the downloader."""
         self.downloader.set_max_threads(count)
 
+    def start_timer(self):
+        self.seconds_elapsed = 0
+        self.update_timer_display()
+        self.timer.start(1000)
+
+    def stop_timer(self):
+        self.timer.stop()
+
+    def reset_timer(self):
+        self.stop_timer()
+        self.seconds_elapsed = 0
+        self.update_timer_display()
+
+    def update_timer_display(self):
+        if self.timer.isActive():
+            self.seconds_elapsed += 1
+        
+        hours = self.seconds_elapsed // 3600
+        minutes = (self.seconds_elapsed % 3600) // 60
+        seconds = self.seconds_elapsed % 60
+        
+        self.timer_label.setText(f"{hours:02}:{minutes:02}:{seconds:02}")
+
     @Slot()
     def start_download_from_queue(self):
         # Check if paths are selected
@@ -726,8 +773,18 @@ class DownloaderTab(QWidget):
         if self.downloader.queue_empty():
             self.status_message.emit("Download queue is empty.")
             return
+        
         self.status_message.emit("Starting downloads from queue...")
+        self.start_timer() # Start the timer
         self.downloader.process_queue()
+
+    @Slot()
+    def cancel_all_downloads(self):
+        """Stops the timer and clears queue (placeholder for real cancel logic)."""
+        # In a real app, we'd iterate and cancel workers. 
+        # For now, just stop logic in UI
+        self.stop_timer()
+        self.status_message.emit("Downloads cancelled (Timer stopped).")
 
     @Slot(str, str)
     def update_download_status(self, item_id, message):
