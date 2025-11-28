@@ -161,8 +161,13 @@ class SettingsTab(QWidget):
 
         layout.addLayout(global_settings_layout)
 
-        # Platform Credentials
-        credentials_group = QGroupBox("Platform Credentials")
+        # Platform Credentials Header
+        cred_header = QLabel("Platform Credentials")
+        cred_header.setStyleSheet("color: #3B82F6; font-size: 12pt; font-weight: bold; margin-bottom: 2px; margin-top: 15px;")
+        layout.addWidget(cred_header)
+
+        credentials_group = QGroupBox()
+        credentials_group.setStyleSheet("QGroupBox { margin-top: 0px; }")
         cred_layout = QVBoxLayout()
         
         credentials_tabs = QTabWidget()
