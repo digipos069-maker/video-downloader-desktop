@@ -71,6 +71,49 @@ class DownloaderTab(QWidget):
         row1_layout.addLayout(info_layout)
         row1_layout.addStretch()
         
+        # Top Right Buttons (Update & License)
+        self.check_update_button = QPushButton("Check Update")
+        self.check_update_button.setCursor(Qt.PointingHandCursor)
+        self.check_update_button.setFixedHeight(30)
+        self.check_update_button.setStyleSheet("""
+            QPushButton {
+                background-color: #1C1C21;
+                color: #A1A1AA;
+                border: 1px solid #27272A;
+                border-radius: 15px;
+                padding: 0 12px;
+                font-size: 9pt;
+                font-weight: 600;
+            }
+            QPushButton:hover {
+                background-color: #27272A;
+                color: #F4F4F5;
+                border-color: #3B82F6;
+            }
+        """)
+        
+        self.license_status_button = QPushButton("License Status")
+        self.license_status_button.setCursor(Qt.PointingHandCursor)
+        self.license_status_button.setFixedHeight(30)
+        self.license_status_button.setStyleSheet("""
+            QPushButton {
+                background-color: #1C1C21;
+                color: #F59E0B;
+                border: 1px solid #27272A;
+                border-radius: 15px;
+                padding: 0 12px;
+                font-size: 9pt;
+                font-weight: 600;
+            }
+            QPushButton:hover {
+                background-color: #27272A;
+                border-color: #F59E0B;
+            }
+        """)
+        
+        row1_layout.addWidget(self.check_update_button)
+        row1_layout.addWidget(self.license_status_button)
+        
         top_bar_layout.addLayout(row1_layout)
 
         # Row 2: Input, Buttons, Supported Icons
