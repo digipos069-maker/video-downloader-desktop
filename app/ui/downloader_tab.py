@@ -6,7 +6,7 @@ The main UI for the downloader tab.
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
-    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem
+    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -40,23 +40,20 @@ class DownloaderTab(QWidget):
         left_sidebar_layout.setContentsMargins(0, 0, 0, 0)
         left_sidebar_layout.setSpacing(10)
         left_sidebar_widget.setFixedWidth(280)
-        
+
         # --- Right Side (Main Content) ---
         right_content_layout = QVBoxLayout()
         right_content_layout.setSpacing(10)
 
-        # --- Top Bar ---
+        # --- Top Bar (in right side) ---
         top_bar_layout = QHBoxLayout()
         top_bar_layout.setSpacing(15)
         
-        # App Logo
-        self.logo_label = QLabel("Logo") # Placeholder text
-        # self.logo_label.setPixmap(QPixmap(":/images/logo.png")) # Real icon
+        # App Logo, Speed, User, URL Input...
+        self.logo_label = QLabel("Logo")
         self.logo_label.setFixedSize(64, 64)
         self.logo_label.setAlignment(Qt.AlignCenter)
         self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
-
-        # Speed and User Info
         info_layout = QVBoxLayout()
         info_layout.setSpacing(2)
         self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
@@ -65,13 +62,10 @@ class DownloaderTab(QWidget):
         self.username_label.setObjectName("username_label")
         self.username_label.setCursor(Qt.PointingHandCursor)
         self.username_label.mousePressEvent = self.edit_username_event
-        
         info_layout.addWidget(self.speed_label)
         info_layout.addWidget(self.username_label)
-        
-        # URL input
         url_layout = QHBoxLayout()
-        url_layout.setSpacing(0) # Join the line edit and button
+        url_layout.setSpacing(0)
         self.url_input = QLineEdit()
         self.url_input.setPlaceholderText("Paste URL here and click 'Scrap' →")
         self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
@@ -79,18 +73,25 @@ class DownloaderTab(QWidget):
         self.scrap_button.setObjectName("scrap_button")
         self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-bottom-left-radius: 0;")
         self.scrap_button.clicked.connect(self.scrap_url)
-        
         url_layout.addWidget(self.url_input)
         url_layout.addWidget(self.scrap_button)
-
         top_bar_layout.addWidget(self.logo_label)
         top_bar_layout.addLayout(info_layout)
         top_bar_layout.addStretch()
         top_bar_layout.addLayout(url_layout)
 
         # --- Left Sidebar Widgets ---
+        queue_group = QGroupBox("Downloading Queue")
+        queue_layout = QVBoxLayout()
+        self.queue_table_widget = QTableWidget()
+        self.queue_table_widget.setColumnCount(1) # CHANGED: Only one column
+        self.queue_table_widget.setHorizontalHeaderLabels(["URL"]) # CHANGED: Header label
+        self.queue_table_widget.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        self.queue_table_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.queue_table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        queue_layout.addWidget(self.queue_table_widget)
+        queue_group.setLayout(queue_layout)
         
-        # Download Paths
         paths_group = QGroupBox("Download Paths")
         paths_layout = QVBoxLayout()
         self.video_path_button = QPushButton("📁 Video Path...")
@@ -98,19 +99,12 @@ class DownloaderTab(QWidget):
         paths_layout.addWidget(self.video_path_button)
         paths_layout.addWidget(self.photo_path_button)
         paths_group.setLayout(paths_layout)
-        
-        # Download Settings
-        settings_group = QGroupBox("Download Settings")
-        settings_layout = QVBoxLayout()
-        settings_layout.addWidget(QLabel("Format, resolution, etc.")) # Placeholder
-        settings_group.setLayout(settings_layout)
 
+        left_sidebar_layout.addWidget(queue_group)
         left_sidebar_layout.addWidget(paths_group)
-        left_sidebar_layout.addWidget(settings_group)
         left_sidebar_layout.addStretch()
-
-        # --- Right Content Widgets ---
         
+        # --- Right Content Widgets ---
         # Activity Table
         self.activity_table = QTableWidget()
         self.activity_table.setColumnCount(7)
@@ -119,26 +113,34 @@ class DownloaderTab(QWidget):
         self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         
-        # Status Label and Bottom Buttons
-        bottom_layout = QHBoxLayout()
+        # Bottom Section for Settings
+        bottom_controls_layout = QHBoxLayout()
+        settings_group = QGroupBox("Download Settings")
+        settings_layout = QVBoxLayout()
+        settings_layout.addWidget(QLabel("Format, resolution, etc.")) # Placeholder
+        settings_group.setLayout(settings_layout)
+        bottom_controls_layout.addWidget(settings_group)
+        bottom_controls_layout.addStretch()
+
+        # Footer for Status and Action Buttons
+        footer_layout = QHBoxLayout()
         self.global_status_label = QLabel("Ready")
         self.global_status_label.setObjectName("global_status_label")
         self.status_message.connect(self.global_status_label.setText)
-        
         self.download_button = QPushButton("⬇️ Download All")
         self.download_button.setObjectName("download_button")
         self.download_button.clicked.connect(self.start_download_from_queue)
         self.cancel_button = QPushButton("❌ Cancel All")
-        
-        bottom_layout.addWidget(self.global_status_label)
-        bottom_layout.addStretch()
-        bottom_layout.addWidget(self.download_button)
-        bottom_layout.addWidget(self.cancel_button)
+        footer_layout.addWidget(self.global_status_label)
+        footer_layout.addStretch()
+        footer_layout.addWidget(self.download_button)
+        footer_layout.addWidget(self.cancel_button)
 
-        # Assemble right layout
+        # --- Assemble Right Layout ---
         right_content_layout.addLayout(top_bar_layout)
         right_content_layout.addWidget(self.activity_table)
-        right_content_layout.addLayout(bottom_layout)
+        right_content_layout.addLayout(bottom_controls_layout)
+        right_content_layout.addLayout(footer_layout)
         
         # --- Assemble Main Layout ---
         main_layout.addWidget(left_sidebar_widget)
@@ -165,7 +167,20 @@ class DownloaderTab(QWidget):
                 metadata_list = handler.get_metadata(url)
                 if metadata_list:
                     for metadata in metadata_list:
+                        # Add to backend downloader queue
                         self.downloader.add_to_queue(metadata['url'], handler, {})
+                        
+                        # Add to left "Downloading Queue" table
+                        row_position_queue = self.queue_table_widget.rowCount()
+                        self.queue_table_widget.insertRow(row_position_queue)
+                        self.queue_table_widget.setItem(row_position_queue, 0, QTableWidgetItem(metadata['url'])) # URL column
+                        
+                        # Also add to right "Activity" table
+                        row_position_activity = self.activity_table.rowCount()
+                        self.activity_table.insertRow(row_position_activity)
+                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(metadata['url']))
+                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem("Queued"))
+                        
                     self.status_message.emit(f"Found {len(metadata_list)} items for {url}. Added to queue.")
                 else:
                     self.status_message.emit(f"No downloadable items found for {url}.")
@@ -185,16 +200,16 @@ class DownloaderTab(QWidget):
     @Slot(str, str)
     def update_download_status(self, item_id, message):
         self.status_message.emit(f"ID {item_id[:8]}...: {message}")
-        # Find item in table and update status
+        # Find item in queue list and update it
 
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
-        # Find item in table and update progress bar
+        # Find item in queue list and update it
         pass
 
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
-        # Find item in table and update status
+        # Find item in queue list and remove it
         pass
 
 if __name__ == '__main__':
