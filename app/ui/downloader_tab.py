@@ -34,10 +34,54 @@ class DownloaderTab(QWidget):
         self.active_download_map = {} # Maps item_id to its row in the queue_table_widget
 
         # --- UI Layout ---
-        main_layout = QHBoxLayout(self)
+        main_layout = QVBoxLayout(self) # Changed to QVBoxLayout
         main_layout.setContentsMargins(15, 15, 15, 15)
         main_layout.setSpacing(15)
+
+        # --- Top Bar (Full Width) ---
+        top_bar_layout = QHBoxLayout()
+        top_bar_layout.setSpacing(15)
         
+        # App Logo, Speed, User, URL Input...
+        self.logo_label = QLabel("Logo") 
+        self.logo_label.setFixedSize(64, 64)
+        self.logo_label.setAlignment(Qt.AlignCenter)
+        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
+        info_layout = QVBoxLayout()
+        info_layout.setSpacing(2)
+        self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
+        self.speed_label.setObjectName("speed_label")
+        self.username_label = QLabel("User: Guest")
+        self.username_label.setObjectName("username_label")
+        self.username_label.setCursor(Qt.PointingHandCursor)
+        self.username_label.mousePressEvent = self.edit_username_event
+        info_layout.addWidget(self.speed_label)
+        info_layout.addWidget(self.username_label)
+        url_layout = QHBoxLayout()
+        url_layout.setSpacing(0)
+        self.url_input = QLineEdit()
+        self.url_input.setPlaceholderText("Paste URL here")
+        self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
+        self.add_to_queue_button = QPushButton("➕ Add to Queue")
+        self.add_to_queue_button.setObjectName("add_to_queue_button")
+        self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
+        self.add_to_queue_button.setStyleSheet("border-radius: 0;")
+        self.scrap_button = QPushButton("⚡ Scrap")
+        self.scrap_button.setObjectName("scrap_button")
+        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-radius: 0;")
+        self.scrap_button.clicked.connect(self.scrap_url)
+        url_layout.addWidget(self.url_input)
+        url_layout.addWidget(self.add_to_queue_button)
+        url_layout.addWidget(self.scrap_button)
+        top_bar_layout.addWidget(self.logo_label)
+        top_bar_layout.addLayout(info_layout)
+        top_bar_layout.addStretch()
+        top_bar_layout.addLayout(url_layout)
+
+        # --- Content Area (Two Columns) ---
+        content_layout = QHBoxLayout()
+        content_layout.setSpacing(15)
+
         # --- Left Sidebar ---
         left_sidebar_widget = QWidget()
         left_sidebar_layout = QVBoxLayout(left_sidebar_widget)
@@ -48,57 +92,7 @@ class DownloaderTab(QWidget):
         # --- Right Side (Main Content) ---
         right_content_layout = QVBoxLayout()
         right_content_layout.setSpacing(10)
-
-        # --- Top Bar (in right side) ---
-        top_bar_layout = QHBoxLayout()
-        top_bar_layout.setSpacing(15)
         
-        # App Logo, Speed, User, URL Input...
-        self.logo_label = QLabel("Logo") # Placeholder text
-        # self.logo_label.setPixmap(QPixmap(":/images/logo.png")) # Real icon
-        self.logo_label.setFixedSize(64, 64)
-        self.logo_label.setAlignment(Qt.AlignCenter)
-        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
-
-        # Speed and User Info
-        info_layout = QVBoxLayout()
-        info_layout.setSpacing(2)
-        self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
-        self.speed_label.setObjectName("speed_label")
-        self.username_label = QLabel("User: Guest")
-        self.username_label.setObjectName("username_label")
-        self.username_label.setCursor(Qt.PointingHandCursor)
-        self.username_label.mousePressEvent = self.edit_username_event
-        
-        info_layout.addWidget(self.speed_label)
-        info_layout.addWidget(self.username_label)
-        
-        # URL input
-        url_layout = QHBoxLayout()
-        url_layout.setSpacing(0) # Join the line edit and button
-        self.url_input = QLineEdit()
-        self.url_input.setPlaceholderText("Paste URL here")
-        self.url_input.setStyleSheet("border-top-right-radius: 0; border-bottom-right-radius: 0;")
-        
-        self.add_to_queue_button = QPushButton("➕ Add to Queue")
-        self.add_to_queue_button.setObjectName("add_to_queue_button")
-        self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
-        self.add_to_queue_button.setStyleSheet("border-radius: 0;") # Remove roundness for joining
-        
-        self.scrap_button = QPushButton("⚡ Scrap")
-        self.scrap_button.setObjectName("scrap_button")
-        self.scrap_button.setStyleSheet("border-top-left-radius: 0; border-radius: 0;")
-        self.scrap_button.clicked.connect(self.scrap_url)
-        
-        url_layout.addWidget(self.url_input)
-        url_layout.addWidget(self.add_to_queue_button)
-        url_layout.addWidget(self.scrap_button)
-
-        top_bar_layout.addWidget(self.logo_label)
-        top_bar_layout.addLayout(info_layout)
-        top_bar_layout.addStretch()
-        top_bar_layout.addLayout(url_layout)
-
         # --- Left Sidebar Widgets ---
         queue_group = QGroupBox("Downloading Queue")
         queue_layout = QVBoxLayout()
@@ -158,14 +152,17 @@ class DownloaderTab(QWidget):
         footer_layout.addWidget(self.cancel_button)
 
         # --- Assemble Right Layout ---
-        right_content_layout.addLayout(top_bar_layout)
         right_content_layout.addWidget(self.activity_table)
         right_content_layout.addLayout(bottom_controls_layout)
         right_content_layout.addLayout(footer_layout)
         
+        # --- Assemble Content Layout ---
+        content_layout.addWidget(left_sidebar_widget)
+        content_layout.addLayout(right_content_layout)
+
         # --- Assemble Main Layout ---
-        main_layout.addWidget(left_sidebar_widget)
-        main_layout.addLayout(right_content_layout)
+        main_layout.addLayout(top_bar_layout)
+        main_layout.addLayout(content_layout)
 
     def edit_username_event(self, event):
         from PySide6.QtWidgets import QInputDialog
