@@ -21,6 +21,8 @@ class DownloaderTab(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         
+        self.settings_tab = None # Reference to settings tab
+
         # --- Backend Setup ---
         self.platform_handler_factory = PlatformHandlerFactory()
         self.downloader = Downloader(self.platform_handler_factory)
@@ -708,6 +710,10 @@ class DownloaderTab(QWidget):
         self.status_message.emit(f"URL added to queue: {url}")
         self.url_input.clear() # Clear input after adding to queue
 
+    def set_settings_tab(self, settings_tab):
+        """Sets the reference to the settings tab."""
+        self.settings_tab = settings_tab
+
     @Slot()
     def scrap_url(self):
         url = self.url_input.text().strip()
@@ -723,22 +729,100 @@ class DownloaderTab(QWidget):
 
         if handler:
             try:
+                # Determine max_entries from settings
+                max_entries = 100 # Default
+                settings = None
+                if self.settings_tab:
+                    settings = self.settings_tab.get_settings()
+                    # Calculate max entries based on what is requested
+                    # If 'All' is checked for either, we grab a lot.
+                    # If only 'Top' is checked, we grab the max of the counts.
+                    video_req = settings['video']
+                    photo_req = settings['photo']
+                    
+                    if video_req['all'] or photo_req['all']:
+                        max_entries = 200 # Arbitrary high limit for "All"
+                    else:
+                        count = 0
+                        if video_req['enabled'] and video_req['top']:
+                            count = max(count, video_req['count'])
+                        if photo_req['enabled'] and photo_req['top']:
+                            count = max(count, photo_req['count'])
+                        
+                        if count > 0:
+                            max_entries = count + 5 # Add a buffer
+                
                 # Use the playlist method for all scraping
-                metadata_list = handler.get_playlist_metadata(url)
+                metadata_list = handler.get_playlist_metadata(url, max_entries=max_entries)
+                
                 if metadata_list:
+                    queued_count = 0
+                    video_count = 0
+                    photo_count = 0
+                    
                     for metadata in metadata_list:
+                        item_url = metadata['url']
+                        is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
+                        is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
+                        
+                        # Fallback for platforms like YouTube where URL doesn't end in extension
+                        if not is_video and not is_photo:
+                            # Assume video for YouTube/TikTok/Facebook "watch" links
+                            if 'youtube' in item_url or 'youtu.be' in item_url or 'tiktok' in item_url or 'facebook' in item_url:
+                                is_video = True
+                            else:
+                                # Default to photo for Pinterest/Insta if uncertain? 
+                                # Or strictly follow settings?
+                                # Let's check settings to see what's allowed.
+                                pass
+
+                        # Apply Filtering
+                        if settings:
+                            # Check if type is enabled
+                            if is_video and not settings['video']['enabled']:
+                                continue
+                            if is_photo and not settings['photo']['enabled']:
+                                continue
+                            
+                            # Check counts
+                            if is_video:
+                                if not settings['video']['all'] and settings['video']['top']:
+                                    if video_count >= settings['video']['count']:
+                                        continue
+                                video_count += 1
+                                
+                            if is_photo:
+                                if not settings['photo']['all'] and settings['photo']['top']:
+                                    if photo_count >= settings['photo']['count']:
+                                        continue
+                                photo_count += 1
+
                         # Add to backend downloader queue
-                        self.downloader.add_to_queue(metadata['url'], handler, {})
+                        download_settings = {}
+                        if settings:
+                             # Pass resolution/quality settings if applicable
+                             if is_video:
+                                 download_settings['resolution'] = settings['video']['resolution']
+                             if is_photo:
+                                 download_settings['quality'] = settings['photo']['quality']
+
+                        self.downloader.add_to_queue(item_url, handler, download_settings)
                         
                         # Add item to the main activity table on the right
                         row_position_activity = self.activity_table.rowCount()
                         self.activity_table.insertRow(row_position_activity)
                         self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1))) # Row number
                         self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A'))) # Title
-                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(metadata['url'])) # URL
+                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url)) # URL
                         self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued")) # Status
+                        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo")) # Type
+                        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler',''))) # Platform
+                        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--")) # ETA
+                        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--")) # Size
                         
-                    self.status_message.emit(f"Found and queued {len(metadata_list)} items.")
+                        queued_count += 1
+                        
+                    self.status_message.emit(f"Found and queued {queued_count} items (Video: {video_count}, Photo: {photo_count}).")
                 else:
                     self.status_message.emit(f"No downloadable items found for {url}.")
             except Exception as e:

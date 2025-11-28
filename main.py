@@ -21,6 +21,9 @@ class MainWindow(QMainWindow):
         # Add the settings tab
         self.settings_tab = SettingsTab()
         self.tabs.addTab(self.settings_tab, "Settings")
+        
+        # Connect settings to downloader
+        self.downloader_tab.set_settings_tab(self.settings_tab)
 
 
 def main():

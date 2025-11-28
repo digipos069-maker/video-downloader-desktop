@@ -181,6 +181,25 @@ class SettingsTab(QWidget):
         layout.addWidget(credentials_group)
         layout.addStretch() # Pushes the group to the top
 
+    def get_settings(self):
+        """Returns the current global settings as a dictionary."""
+        return {
+            'video': {
+                'enabled': self.enable_video_chk.isChecked(),
+                'top': self.top_video_chk.isChecked(),
+                'count': self.top_video_count.value(),
+                'all': self.all_video_chk.isChecked(),
+                'resolution': self.video_res_combo.currentText()
+            },
+            'photo': {
+                'enabled': self.enable_photo_chk.isChecked(),
+                'top': self.top_photo_chk.isChecked(),
+                'count': self.top_photo_count.value(),
+                'all': self.all_photo_chk.isChecked(),
+                'quality': self.photo_res_combo.currentText()
+            }
+        }
+
 if __name__ == '__main__':
     import sys, os
     from PySide6.QtWidgets import QApplication, QMainWindow
