@@ -221,15 +221,17 @@ class DownloaderTab(QWidget):
         input_style = """
             QComboBox, QSpinBox {
                 background-color: #2c313a;
-                border: 1px solid #555;
-                border-radius: 5px;
-                padding: 5px 10px;
-                color: #eff0f1;
+                border: 1px solid #4b5362;
+                border-radius: 6px;
+                padding: 6px 12px;
+                color: #ffffff;
+                font-family: "Segoe UI", sans-serif;
                 font-size: 10pt;
-                min-width: 100px;
+                min-width: 110px;
             }
             QComboBox:hover, QSpinBox:hover {
                 border: 1px solid #7E57C2;
+                background-color: #323842;
             }
             QComboBox::drop-down {
                 subcontrol-origin: padding;
@@ -249,64 +251,85 @@ class DownloaderTab(QWidget):
             }
             QComboBox QAbstractItemView {
                 background-color: #2c313a;
-                border: 1px solid #555;
+                border: 1px solid #4b5362;
                 selection-background-color: #7E57C2;
-                selection-color: #eff0f1;
+                selection-color: #ffffff;
                 outline: none;
+                padding: 4px;
             }
+            
+            /* Modern Checkbox Style */
             QCheckBox {
                 color: #eff0f1;
                 font-size: 10pt;
-                spacing: 8px;
+                font-weight: 500;
+                spacing: 10px;
             }
             QCheckBox::indicator {
                 width: 18px;
                 height: 18px;
-                border: 1px solid #555;
-                border-radius: 3px;
-                background-color: #2c313a;
+                border: 2px solid #555;
+                border-radius: 4px;
+                background-color: transparent;
             }
             QCheckBox::indicator:checked {
                 background-color: #7E57C2;
-                border: 1px solid #7E57C2;
-                image: url(none); /* Placeholder for checkmark if needed, color change is usually enough */
+                border-color: #7E57C2;
+                /* We use a simple color fill for checked state to keep it clean/vector-free */
             }
+            QCheckBox::indicator:hover {
+                border-color: #9b7dd4;
+            }
+        """
+        
+        # New distinct style for section headers (Labels)
+        label_style = """
+            color: #8a9eb5;
+            background-color: transparent;
+            font-weight: 700;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
         """
 
         # Extension Section (User's "File Type")
         ext_layout = QVBoxLayout()
-        ext_layout.setSpacing(5)
+        ext_layout.setSpacing(2)
         ext_label = QLabel("Extension")
-        ext_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        ext_label.setStyleSheet(label_style)
         self.extension_combo = QComboBox()
         self.extension_combo.addItems(["Best", "mp4", "mp3", "mkv", "wav", "jpg", "png"])
         self.extension_combo.setCursor(Qt.PointingHandCursor)
         self.extension_combo.setStyleSheet(input_style)
         ext_layout.addWidget(ext_label)
         ext_layout.addWidget(self.extension_combo)
+        ext_layout.addStretch()
         
         # Naming Style Section (User's "Video Format")
         naming_layout = QVBoxLayout()
-        naming_layout.setSpacing(5)
+        naming_layout.setSpacing(2)
         naming_label = QLabel("Naming Style")
-        naming_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        naming_label.setStyleSheet(label_style)
         self.naming_combo = QComboBox()
         self.naming_combo.addItems(["Original Name", "Numbered (01. Name)"])
         self.naming_combo.setCursor(Qt.PointingHandCursor)
         self.naming_combo.setStyleSheet(input_style)
         naming_layout.addWidget(naming_label)
         naming_layout.addWidget(self.naming_combo)
+        naming_layout.addStretch()
         
         # Extra Options Section
         options_layout = QVBoxLayout()
-        options_layout.setSpacing(5)
+        options_layout.setSpacing(2)
         options_label = QLabel("Extras")
-        options_label.setStyleSheet("color: #b1b1b1; font-weight: bold; font-size: 9pt; text-transform: uppercase;")
+        options_label.setStyleSheet(label_style)
         self.subs_checkbox = QCheckBox("Download Subtitles")
         self.subs_checkbox.setCursor(Qt.PointingHandCursor)
-        self.subs_checkbox.setStyleSheet(input_style)
+        self.subs_checkbox.setStyleSheet(input_style + "QCheckBox { background-color: transparent; }")
         options_layout.addWidget(options_label)
         options_layout.addWidget(self.subs_checkbox)
+        options_layout.addStretch()
 
         settings_layout.addLayout(ext_layout)
         settings_layout.addLayout(naming_layout)
@@ -323,7 +346,7 @@ class DownloaderTab(QWidget):
         # Threads Option
         threads_layout = QHBoxLayout()
         threads_label = QLabel("Threads:")
-        threads_label.setStyleSheet("color: #eff0f1;")
+        threads_label.setStyleSheet("color: #eff0f1; font-weight: 500; background-color: transparent;")
         self.threads_spinbox = QSpinBox()
         import multiprocessing
         max_threads = multiprocessing.cpu_count()
@@ -340,7 +363,7 @@ class DownloaderTab(QWidget):
         # Shutdown Option
         self.shutdown_checkbox = QCheckBox("Shutdown when finished")
         self.shutdown_checkbox.setCursor(Qt.PointingHandCursor)
-        self.shutdown_checkbox.setStyleSheet(input_style)
+        self.shutdown_checkbox.setStyleSheet(input_style + "QCheckBox { background-color: transparent; }")
         
         system_layout.addLayout(threads_layout)
         system_layout.addWidget(self.shutdown_checkbox)
