@@ -379,7 +379,7 @@ class DownloaderTab(QWidget):
         # Activity Table
         self.activity_table = QTableWidget()
         self.activity_table.setColumnCount(9)
-        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Progress", "Retries", "ETA", "Size", "Actions"])
+        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Actions"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
         for i in range(1, 9):
             self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
