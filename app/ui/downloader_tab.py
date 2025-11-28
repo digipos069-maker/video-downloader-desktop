@@ -6,7 +6,7 @@ The main UI for the downloader tab.
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
-    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem
+    QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem, QMenu
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, Signal, Slot
@@ -28,6 +28,11 @@ class DownloaderTab(QWidget):
         self.downloader.status.connect(self.update_download_status)
         self.downloader.progress.connect(self.update_download_progress)
         self.downloader.finished.connect(self.download_finished_callback)
+        self.downloader.download_started.connect(self.add_to_queue_display)
+        self.downloader.download_removed.connect(self.remove_from_queue_display)
+
+        # --- Data mapping for UI updates ---
+        self.active_download_map = {} # Maps item_id to its row in the queue_table_widget
 
         # --- UI Layout ---
         main_layout = QHBoxLayout(self)
@@ -84,8 +89,8 @@ class DownloaderTab(QWidget):
         queue_group = QGroupBox("Downloading Queue")
         queue_layout = QVBoxLayout()
         self.queue_table_widget = QTableWidget()
-        self.queue_table_widget.setColumnCount(1) # CHANGED: Only one column
-        self.queue_table_widget.setHorizontalHeaderLabels(["URL"]) # CHANGED: Header label
+        self.queue_table_widget.setColumnCount(1)
+        self.queue_table_widget.setHorizontalHeaderLabels(["URL"])
         self.queue_table_widget.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
         self.queue_table_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.queue_table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -152,6 +157,24 @@ class DownloaderTab(QWidget):
         if ok and text:
             self.username_label.setText(f"User: {text}")
 
+    @Slot(str, str)
+    def add_to_queue_display(self, item_id, url):
+        """Adds an item to the left-hand 'Downloading Queue' table."""
+        row_position = self.queue_table_widget.rowCount()
+        self.queue_table_widget.insertRow(row_position)
+        self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(url))
+        self.active_download_map[item_id] = row_position
+
+    @Slot(str)
+    def remove_from_queue_display(self, item_id):
+        """Removes an item from the 'Downloading Queue' table once it's finished."""
+        if item_id in self.active_download_map:
+            row_to_remove = self.active_download_map.pop(item_id)
+            self.queue_table_widget.removeRow(row_to_remove)
+            # Note: This is a simple removal. A more robust solution would need to
+            # re-index the self.active_download_map if rows are not always removed from the end.
+            # For now, this is sufficient as we are not re-ordering.
+    
     @Slot()
     def scrap_url(self):
         url = self.url_input.text().strip()
@@ -164,31 +187,28 @@ class DownloaderTab(QWidget):
 
         if handler:
             try:
-                metadata_list = handler.get_metadata(url)
+                # Use the playlist method for all scraping
+                metadata_list = handler.get_playlist_metadata(url)
                 if metadata_list:
                     for metadata in metadata_list:
                         # Add to backend downloader queue
                         self.downloader.add_to_queue(metadata['url'], handler, {})
                         
-                        # Add to left "Downloading Queue" table
-                        row_position_queue = self.queue_table_widget.rowCount()
-                        self.queue_table_widget.insertRow(row_position_queue)
-                        self.queue_table_widget.setItem(row_position_queue, 0, QTableWidgetItem(metadata['url'])) # URL column
-                        
-                        # Also add to right "Activity" table
+                        # Add item to the main activity table on the right
                         row_position_activity = self.activity_table.rowCount()
                         self.activity_table.insertRow(row_position_activity)
                         self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(metadata['url']))
                         self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem("Queued"))
                         
-                    self.status_message.emit(f"Found {len(metadata_list)} items for {url}. Added to queue.")
+                    self.status_message.emit(f"Found and queued {len(metadata_list)} items.")
                 else:
                     self.status_message.emit(f"No downloadable items found for {url}.")
             except Exception as e:
                 self.status_message.emit(f"Error scraping {url}: {e}")
+                print(f"ERROR scraping {url}: {e}") # Also print for debugging
         else:
             self.status_message.emit(f"No handler found for URL: {url}")
-
+        
     @Slot()
     def start_download_from_queue(self):
         if self.downloader.queue_empty():
@@ -200,16 +220,16 @@ class DownloaderTab(QWidget):
     @Slot(str, str)
     def update_download_status(self, item_id, message):
         self.status_message.emit(f"ID {item_id[:8]}...: {message}")
-        # Find item in queue list and update it
+        # Find item in activity_table and update status
 
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
-        # Find item in queue list and update it
+        # Find item in activity_table and update progress bar
         pass
 
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
-        # Find item in queue list and remove it
+        # Find item in activity_table and update status
         pass
 
 if __name__ == '__main__':

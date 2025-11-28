@@ -49,16 +49,17 @@ class Downloader(QObject):
     """
     The main downloader class.
     """
-    progress = Signal(str, int)  # item_id, percentage
-    status = Signal(str, str)    # item_id, status_message
-    finished = Signal(str, bool) # item_id, success (from Downloader, not WorkerSignals)
+    progress = Signal(str, int)
+    status = Signal(str, str)
+    finished = Signal(str, bool)
+    download_started = Signal(str, str) # New signal: item_id, url
+    download_removed = Signal(str)      # New signal: item_id
 
     def __init__(self, platform_handler_factory, max_concurrent_downloads=3):
         super().__init__()
         self.platform_handler_factory = platform_handler_factory
         self.max_concurrent_downloads = max_concurrent_downloads
         self.queue = []
-        self.active_downloads = 0
         self.thread_pool = QThreadPool()
         self.thread_pool.setMaxThreadCount(self.max_concurrent_downloads)
         print(f"Initialized Downloader with max {self.max_concurrent_downloads} concurrent downloads.")
@@ -73,8 +74,8 @@ class Downloader(QObject):
             'settings': settings,
             'status': 'queued'
         })
-        self.process_queue()
         self.status.emit(item_id, "Added to queue")
+        # Do not automatically process queue here, wait for user action
 
     def process_queue(self):
         """Processes the download queue."""
@@ -89,6 +90,9 @@ class Downloader(QObject):
         item = self.queue.pop(0)
         item['status'] = 'downloading'
         
+        # Emit the signal that a download has started
+        self.download_started.emit(item['id'], item['url'])
+
         worker = DownloadWorker(item['id'], item['url'], item['handler'], item['settings'])
         worker.signals.progress.connect(self.progress)
         worker.signals.status.connect(self.status)
@@ -101,7 +105,10 @@ class Downloader(QObject):
     @Slot(str, bool)
     def _download_finished_callback(self, item_id, success):
         """Internal callback for when a worker finishes."""
-        self.finished.emit(item_id, success) # Emit the downloader's own finished signal
+        # Emit the signal that a download has finished and should be removed from the active list
+        self.download_removed.emit(item_id)
+        
+        self.finished.emit(item_id, success)
         self.process_queue() # Try to start another download
 
     def generate_item_id(self, url):

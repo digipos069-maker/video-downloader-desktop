@@ -2,7 +2,7 @@
 """
 Platform-specific handlers for scraping and downloading.
 """
-
+import yt_dlp
 from abc import ABC, abstractmethod
 
 class BaseHandler(ABC):
@@ -17,8 +17,16 @@ class BaseHandler(ABC):
     @abstractmethod
     def get_metadata(self, url):
         """
-        Scrapes metadata from the URL.
-        Should return a list of items to be added to the download queue.
+        Scrapes metadata from a single URL.
+        Should return a list containing one item dictionary.
+        """
+        pass
+
+    @abstractmethod
+    def get_playlist_metadata(self, url, max_entries=100):
+        """
+        Scrapes metadata from a playlist URL.
+        Should return a list of item dictionaries.
         """
         pass
 
@@ -36,9 +44,32 @@ class YouTubeHandler(BaseHandler):
         return 'youtube.com' in url or 'youtu.be' in url
 
     def get_metadata(self, url):
-        print(f"Getting metadata for YouTube URL: {url}")
-        # Here you would use yt-dlp to get info
-        return [{'url': url, 'title': 'Sample YouTube Video', 'type': 'video'}]
+        YDL_OPTS = {'quiet': True, 'extract_flat': True, 'force_generic_extractor': False}
+        with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
+            info = ydl.extract_info(url, download=False)
+            return [{'url': info.get('webpage_url', url), 'title': info.get('title', 'N/A'), 'type': 'video'}]
+
+    def get_playlist_metadata(self, url, max_entries=100):
+        YDL_OPTS = {
+            'quiet': True,
+            'extract_flat': True,
+            'force_generic_extractor': False,
+            'playlistend': max_entries,
+        }
+        with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
+            playlist_dict = ydl.extract_info(url, download=False)
+            
+            if 'entries' in playlist_dict:
+                return [
+                    {'url': entry.get('url'), 'title': entry.get('title', 'N/A'), 'type': 'video'}
+                    for entry in playlist_dict['entries'] if entry
+                ]
+            else:
+                # Not a playlist, return single video metadata
+                return [
+                    {'url': playlist_dict.get('webpage_url', url), 'title': playlist_dict.get('title', 'N/A'), 'type': 'video'}
+                ]
+
 
     def download(self, item, progress_callback):
         print(f"Downloading YouTube video: {item['title']}")
@@ -55,6 +86,9 @@ class TikTokHandler(BaseHandler):
         print(f"Getting metadata for TikTok URL: {url}")
         return [{'url': url, 'title': 'Sample TikTok Video', 'type': 'video'}]
 
+    def get_playlist_metadata(self, url, max_entries=100):
+        return self.get_metadata(url)
+
     def download(self, item, progress_callback):
         print(f"Downloading TikTok video: {item['title']}")
         progress_callback(100)
@@ -69,6 +103,9 @@ class PinterestHandler(BaseHandler):
         print(f"Getting metadata for Pinterest URL: {url}")
         return [{'url': url, 'title': 'Sample Pinterest Pin', 'type': 'photo'}]
 
+    def get_playlist_metadata(self, url, max_entries=100):
+        return self.get_metadata(url)
+
     def download(self, item, progress_callback):
         print(f"Downloading Pinterest pin: {item['title']}")
         progress_callback(100)
@@ -81,6 +118,9 @@ class FacebookHandler(BaseHandler):
     def get_metadata(self, url):
         print(f"Getting metadata for Facebook URL: {url}")
         return [{'url': url, 'title': 'Sample Facebook Video', 'type': 'video'}]
+    
+    def get_playlist_metadata(self, url, max_entries=100):
+        return self.get_metadata(url)
 
     def download(self, item, progress_callback):
         print(f"Downloading Facebook video: {item['title']}")
@@ -94,6 +134,9 @@ class InstagramHandler(BaseHandler):
     def get_metadata(self, url):
         print(f"Getting metadata for Instagram URL: {url}")
         return [{'url': url, 'title': 'Sample Instagram Post', 'type': 'photo'}]
+
+    def get_playlist_metadata(self, url, max_entries=100):
+        return self.get_metadata(url)
 
     def download(self, item, progress_callback):
         print(f"Downloading Instagram post: {item['title']}")
