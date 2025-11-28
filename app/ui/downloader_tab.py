@@ -31,8 +31,9 @@ class DownloaderTab(QWidget):
         self.downloader.status.connect(self.update_download_status)
         self.downloader.progress.connect(self.update_download_progress)
         self.downloader.finished.connect(self.download_finished_callback)
-        self.downloader.download_started.connect(self.add_to_queue_display)
-        self.downloader.download_removed.connect(self.remove_from_queue_display)
+        # Removed automatic queue display updates to keep scraped items out of the manual queue
+        # self.downloader.download_started.connect(self.add_to_queue_display)
+        # self.downloader.download_removed.connect(self.remove_from_queue_display)
 
         # --- Data mapping for UI updates ---
         self.active_download_map = {} # Maps item_id to its row in the queue_table_widget
@@ -392,6 +393,18 @@ class DownloaderTab(QWidget):
         
     @Slot()
     def start_download_from_queue(self):
+        # Check if paths are selected
+        if not self.video_download_path and not self.photo_download_path:
+            QMessageBox.warning(self, "Download Paths Missing", "Please select a Video or Photo download path first.")
+            return
+
+        # Update settings in downloader
+        settings = {
+            'video_path': self.video_download_path,
+            'photo_path': self.photo_download_path
+        }
+        self.downloader.update_queue_settings(settings)
+
         # We need to process the items that are in the queue_table_widget
         # For now, just trigger the downloader's process_queue
         if self.downloader.queue_empty():

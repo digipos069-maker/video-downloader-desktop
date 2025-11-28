@@ -77,6 +77,12 @@ class Downloader(QObject):
         self.status.emit(item_id, "Added to queue")
         # Do not automatically process queue here, wait for user action
 
+    def update_queue_settings(self, new_settings):
+        """Updates settings for all queued items."""
+        for item in self.queue:
+            if item['status'] == 'queued':
+                item['settings'].update(new_settings)
+
     def process_queue(self):
         """Processes the download queue."""
         while not self.queue_empty() and self.thread_pool.activeThreadCount() < self.max_concurrent_downloads:

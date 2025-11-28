@@ -71,3 +71,75 @@
 2025-11-28 22:48:38,018 - INFO - Downloading Pinterest pin: Unknown
 2025-11-28 22:48:38,019 - INFO - Downloading Pinterest pin: Unknown
 2025-11-28 22:48:38,019 - INFO - Downloading Pinterest pin: Unknown
+2025-11-28 22:53:24,042 - DEBUG - Using proactor: IocpProactor
+2025-11-28 22:53:24,866 - INFO - Playwright visiting: https://www.pinterest.com/pin/14847873767407256/
+2025-11-28 22:53:27,674 - DEBUG - Scroll iteration 1/10 completed
+2025-11-28 22:53:29,178 - DEBUG - Scroll iteration 2/10 completed
+2025-11-28 22:53:30,695 - DEBUG - Scroll iteration 3/10 completed
+2025-11-28 22:53:32,211 - DEBUG - Scroll iteration 4/10 completed
+2025-11-28 22:53:33,718 - DEBUG - Scroll iteration 5/10 completed
+2025-11-28 22:53:35,226 - DEBUG - Scroll iteration 6/10 completed
+2025-11-28 22:53:36,731 - DEBUG - Scroll iteration 7/10 completed
+2025-11-28 22:53:38,237 - DEBUG - Scroll iteration 8/10 completed
+2025-11-28 22:53:39,743 - DEBUG - Scroll iteration 9/10 completed
+2025-11-28 22:53:41,252 - DEBUG - Scroll iteration 10/10 completed
+2025-11-28 22:53:41,275 - INFO - Found 26 raw links on page.
+2025-11-28 22:53:41,276 - INFO - Filtered down to 22 unique valid links.
+2025-11-28 22:53:58,368 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:58,369 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:58,369 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:58,872 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:58,873 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:58,873 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,373 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,375 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,375 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,876 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,877 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:53:59,878 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,380 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,381 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,382 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,881 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,886 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:00,887 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:01,383 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:01,423 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:01,424 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:54:01,886 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:04,793 - DEBUG - Using proactor: IocpProactor
+2025-11-28 22:55:05,621 - INFO - Playwright visiting: https://www.pinterest.com/pin/14847873767407256/
+2025-11-28 22:55:08,606 - DEBUG - Scroll iteration 1/10 completed
+2025-11-28 22:55:10,123 - DEBUG - Scroll iteration 2/10 completed
+2025-11-28 22:55:11,652 - DEBUG - Scroll iteration 3/10 completed
+2025-11-28 22:55:13,158 - DEBUG - Scroll iteration 4/10 completed
+2025-11-28 22:55:14,664 - DEBUG - Scroll iteration 5/10 completed
+2025-11-28 22:55:16,172 - DEBUG - Scroll iteration 6/10 completed
+2025-11-28 22:55:17,677 - DEBUG - Scroll iteration 7/10 completed
+2025-11-28 22:55:19,183 - DEBUG - Scroll iteration 8/10 completed
+2025-11-28 22:55:20,689 - DEBUG - Scroll iteration 9/10 completed
+2025-11-28 22:55:22,196 - DEBUG - Scroll iteration 10/10 completed
+2025-11-28 22:55:22,215 - INFO - Found 26 raw links on page.
+2025-11-28 22:55:22,216 - INFO - Filtered down to 22 unique valid links.
+2025-11-28 22:55:28,994 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:28,994 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:28,995 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:29,496 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:29,497 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:29,499 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:29,999 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:30,000 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:30,001 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:30,501 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:30,503 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:30,504 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,004 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,005 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,006 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,507 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,508 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:31,508 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:32,010 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:32,011 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:32,012 - INFO - Downloading Pinterest item: Unknown to E:/test
+2025-11-28 22:55:32,512 - INFO - Downloading Pinterest item: Unknown to E:/test

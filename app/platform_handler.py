@@ -151,6 +151,13 @@ class BaseHandler(ABC):
     def download(self, item, progress_callback):
         pass
 
+    def get_download_path(self, settings, is_video=True):
+        """Helper to determine the download path from settings."""
+        if is_video:
+            return settings.get('video_path') or settings.get('photo_path') or '.'
+        else:
+            return settings.get('photo_path') or settings.get('video_path') or '.'
+
 # --- Handlers now use Playwright for Scraping ---
 
 class YouTubeHandler(BaseHandler):
@@ -164,9 +171,28 @@ class YouTubeHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def download(self, item, progress_callback):
-        logging.info(f"Downloading YouTube video: {item.get('title', 'Unknown')}")
-        progress_callback(100)
-        return True
+        url = item['url']
+        settings = item.get('settings', {})
+        output_path = self.get_download_path(settings, is_video=True)
+        
+        logging.info(f"Starting YouTube download for {url} to {output_path}")
+        
+        ydl_opts = {
+            'outtmpl': f'{output_path}/%(title)s.%(ext)s',
+            'progress_hooks': [lambda d: progress_callback(int(float(d.get('downloaded_bytes', 0)) / float(d.get('total_bytes', 1)) * 100)) if d['status'] == 'downloading' else None],
+            'quiet': True,
+            'no_warnings': True,
+        }
+        
+        try:
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                ydl.download([url])
+            logging.info(f"YouTube download completed: {url}")
+            progress_callback(100)
+            return True
+        except Exception as e:
+            logging.error(f"YouTube download failed: {e}")
+            return False
 
 class TikTokHandler(BaseHandler):
     def can_handle(self, url):
@@ -179,7 +205,12 @@ class TikTokHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def download(self, item, progress_callback):
-        logging.info(f"Downloading TikTok video: {item.get('title', 'Unknown')}")
+        url = item['url']
+        settings = item.get('settings', {})
+        output_path = self.get_download_path(settings, is_video=True)
+        logging.info(f"Downloading TikTok video: {item.get('title', 'Unknown')} to {output_path}")
+        # Placeholder for actual TikTok download logic
+        time.sleep(1) # Simulate work
         progress_callback(100)
         return True
 
@@ -194,7 +225,15 @@ class PinterestHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def download(self, item, progress_callback):
-        logging.info(f"Downloading Pinterest pin: {item.get('title', 'Unknown')}")
+        url = item['url']
+        settings = item.get('settings', {})
+        # Pinterest can be images or videos. Assuming image for now if title/metadata suggests?
+        # For safety, default to photo path if available, else video.
+        # But since we don't distinguish yet, let's assume photo for Pinterest.
+        output_path = self.get_download_path(settings, is_video=False)
+        logging.info(f"Downloading Pinterest item: {item.get('title', 'Unknown')} to {output_path}")
+        # Placeholder for actual Pinterest download logic
+        time.sleep(0.5)
         progress_callback(100)
         return True
 
@@ -209,7 +248,11 @@ class FacebookHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def download(self, item, progress_callback):
-        logging.info(f"Downloading Facebook video: {item.get('title', 'Unknown')}")
+        url = item['url']
+        settings = item.get('settings', {})
+        output_path = self.get_download_path(settings, is_video=True)
+        logging.info(f"Downloading Facebook video: {item.get('title', 'Unknown')} to {output_path}")
+        time.sleep(1)
         progress_callback(100)
         return True
 
@@ -224,7 +267,11 @@ class InstagramHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def download(self, item, progress_callback):
-        logging.info(f"Downloading Instagram post: {item.get('title', 'Unknown')}")
+        url = item['url']
+        settings = item.get('settings', {})
+        output_path = self.get_download_path(settings, is_video=False) # Insta often photos
+        logging.info(f"Downloading Instagram post: {item.get('title', 'Unknown')} to {output_path}")
+        time.sleep(1)
         progress_callback(100)
         return True
 
