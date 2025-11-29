@@ -10,6 +10,56 @@ QWidget {
     font-size: 10pt;
 }
 
+/* --- Title Bar --- */
+QWidget#MainCentralWidget {
+    background-color: #101014;
+    border: 1px solid #27272A; /* Optional border for the whole window */
+    border-radius: 8px;       /* Rounded corners for the window */
+}
+
+QWidget#TitleBar {
+    background-color: #1C1C21;
+    border-bottom: 1px solid #27272A;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+QLabel#TitleBarTitle {
+    color: #F4F4F5;
+    font-weight: bold;
+    font-size: 10pt;
+    padding-left: 5px;
+}
+
+QPushButton#TitleBarButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    color: #A1A1AA;
+    font-size: 12pt;
+    border-bottom-left-radius: 0px;
+}
+
+QPushButton#TitleBarButton:hover {
+    background-color: #3F3F46;
+    color: #F4F4F5;
+}
+
+QPushButton#TitleBarCloseButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    color: #A1A1AA;
+    font-size: 12pt;
+    border-top-right-radius: 8px; /* Match window radius */
+}
+
+QPushButton#TitleBarCloseButton:hover {
+    background-color: #EF4444; /* Red */
+    color: #FFFFFF;
+    border-top-right-radius: 8px;
+}
+
 /* --- Tab Widget --- */
 QTabWidget::pane {
     border: 1px solid #27272A;

@@ -1,8 +1,10 @@
 import sys
 import os
-from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QSizeGrip
+from PySide6.QtCore import Qt
 from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
+from app.ui.widgets.title_bar import TitleBar
 from app.config.settings_manager import save_settings
 
 class MainWindow(QMainWindow):
@@ -10,10 +12,28 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Universal Video Downloader")
         self.resize(1280, 720)
+        
+        # Frameless window for custom title bar
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground) # Optional, for rounded corners if needed
+
+        # Central Widget Wrapper
+        central_widget = QWidget()
+        central_widget.setObjectName("MainCentralWidget") # For styling if needed
+        self.setCentralWidget(central_widget)
+
+        # Main Layout
+        main_layout = QVBoxLayout(central_widget)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # Custom Title Bar
+        self.title_bar = TitleBar(self, title="Universal Video Downloader")
+        main_layout.addWidget(self.title_bar)
 
         # Create a central tab widget
         self.tabs = QTabWidget()
-        self.setCentralWidget(self.tabs)
+        main_layout.addWidget(self.tabs)
 
         # Add the downloader tab
         self.downloader_tab = DownloaderTab()
@@ -25,6 +45,16 @@ class MainWindow(QMainWindow):
         
         # Connect settings to downloader
         self.downloader_tab.set_settings_tab(self.settings_tab)
+
+        # Size Grip (Bottom Right Resizing)
+        self.size_grip = QSizeGrip(self)
+        self.size_grip.setStyleSheet("width: 20px; height: 20px; margin: 5px; background-color: transparent;")
+
+    def resizeEvent(self, event):
+        # Position the size grip at the bottom right
+        rect = self.rect()
+        self.size_grip.move(rect.right() - self.size_grip.width(), rect.bottom() - self.size_grip.height())
+        super().resizeEvent(event)
 
     def closeEvent(self, event):
         """Handle application closure to save settings."""
