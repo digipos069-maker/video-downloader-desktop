@@ -61,6 +61,8 @@ class ScrapingWorker(QThread):
                 self.error.emit(f"No downloadable items found for {self.url}.")
                 return
 
+            print(f"[DEBUG] Total items scraped: {len(metadata_list)}")
+
             video_count = 0
             photo_count = 0
             filtered_count = 0
@@ -68,6 +70,7 @@ class ScrapingWorker(QThread):
             for metadata in metadata_list:
                 try:
                     item_url = metadata['url']
+                    print(f"[DEBUG] Processing URL: {item_url}")
                     
                     is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
                     is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
@@ -897,60 +900,69 @@ class DownloaderTab(QWidget):
     @Slot(str, dict, bool, bool, object)
     def on_scraping_item_found(self, item_url, metadata, is_video, is_photo, handler):
         """Slot to handle an item found by the scraping worker."""
-        
-        # Get current settings again for fresh download options if needed, 
-        # but mostly we use what was passed to worker or defaults.
-        # Actually, we need to build 'download_settings' here to pass to downloader.
-        
-        settings = {}
-        if self.settings_tab:
-             settings = self.settings_tab.get_settings()
-        
-        video_opts = settings.get('video', {})
-        photo_opts = settings.get('photo', {})
+        try:
+            print(f"[DEBUG] on_scraping_item_found called for: {item_url}")
+            
+            # Get current settings again for fresh download options if needed, 
+            # but mostly we use what was passed to worker or defaults.
+            # Actually, we need to build 'download_settings' here to pass to downloader.
+            
+            settings = {}
+            if self.settings_tab:
+                 settings = self.settings_tab.get_settings()
+            
+            video_opts = settings.get('video', {})
+            photo_opts = settings.get('photo', {})
+    
+            download_settings = {}
+            if is_video:
+                 download_settings['resolution'] = video_opts.get('resolution', "Best Available")
+            if is_photo:
+                 download_settings['quality'] = photo_opts.get('quality', "Best Available")
+    
+            # Add to Backend Queue
+            item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
+            print(f"[DEBUG] Added to backend queue: {item_id}")
+            
+            # Add to UI Table
+            row_position_activity = self.activity_table.rowCount()
+            self.activity_table.insertRow(row_position_activity)
+            self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
+            self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
+            self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
+            self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
+            self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
+            self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
+            self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
+            self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
+            
+            progress_bar = QProgressBar()
+            progress_bar.setRange(0, 100)
+            progress_bar.setValue(0)
+            progress_bar.setTextVisible(True)
+            progress_bar.setAlignment(Qt.AlignCenter)
+            progress_bar.setStyleSheet("""
+                QProgressBar {
+                    border: 1px solid #27272A;
+                    border-radius: 5px;
+                    text-align: center;
+                    color: #F4F4F5;
+                    background-color: #1C1C21;
+                }
+                QProgressBar::chunk {
+                    background-color: #3B82F6;
+                    width: 10px;
+                }
+            """)
+            self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
+            
+            self.activity_row_map[item_id] = row_position_activity
+            print(f"[DEBUG] Added to UI table at row {row_position_activity}")
 
-        download_settings = {}
-        if is_video:
-             download_settings['resolution'] = video_opts.get('resolution', "Best Available")
-        if is_photo:
-             download_settings['quality'] = photo_opts.get('quality', "Best Available")
-
-        # Add to Backend Queue
-        item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
-        
-        # Add to UI Table
-        row_position_activity = self.activity_table.rowCount()
-        self.activity_table.insertRow(row_position_activity)
-        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
-        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
-        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
-        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
-        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
-        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
-        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
-        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
-        
-        progress_bar = QProgressBar()
-        progress_bar.setRange(0, 100)
-        progress_bar.setValue(0)
-        progress_bar.setTextVisible(True)
-        progress_bar.setAlignment(Qt.AlignCenter)
-        progress_bar.setStyleSheet("""
-            QProgressBar {
-                border: 1px solid #27272A;
-                border-radius: 5px;
-                text-align: center;
-                color: #F4F4F5;
-                background-color: #1C1C21;
-            }
-            QProgressBar::chunk {
-                background-color: #3B82F6;
-                width: 10px;
-            }
-        """)
-        self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
-        
-        self.activity_row_map[item_id] = row_position_activity
+        except Exception as e:
+            print(f"[ERROR] Failed to add item to UI: {e}")
+            import traceback
+            traceback.print_exc()
 
     @Slot()
     def on_scraping_finished(self):

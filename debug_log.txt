@@ -715,3 +715,262 @@
 2025-11-29 21:24:29,212 - INFO - Found 49 raw links on page.
 2025-11-29 21:24:29,212 - INFO - Filtered down to 0 unique valid links.
 2025-11-29 21:24:29,212 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:38:29,659 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:38:30,501 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:38:35,022 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:38:36,688 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:38:38,220 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:38:39,755 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:38:41,286 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:38:42,930 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:38:44,453 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:38:45,987 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:38:47,537 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:38:49,086 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:38:49,113 - INFO - Found 49 raw links on page.
+2025-11-29 21:38:49,114 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:38:49,114 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:38:56,744 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom to E:/test
+2025-11-29 21:38:56,759 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 21:40:06,954 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:40:07,764 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:40:10,732 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:40:12,266 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:40:13,800 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:40:15,333 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:40:16,881 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:40:18,433 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:40:19,983 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:40:21,532 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:40:23,073 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:40:24,616 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:40:24,642 - INFO - Found 49 raw links on page.
+2025-11-29 21:40:24,642 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:40:24,642 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:56:46,866 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:56:47,711 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:56:53,042 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:56:54,559 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:56:56,092 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:56:57,626 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:56:59,159 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:57:00,694 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:57:02,226 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:57:04,017 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:57:05,542 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:57:07,075 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:57:07,102 - INFO - Found 49 raw links on page.
+2025-11-29 21:57:07,103 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:57:07,103 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 22:01:50,604 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:01:51,422 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:01:53,914 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 22:01:55,447 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 22:01:56,981 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 22:01:58,520 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 22:02:00,048 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 22:02:01,581 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 22:02:03,115 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 22:02:04,833 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 22:02:06,463 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 22:02:07,997 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 22:02:08,024 - INFO - Found 49 raw links on page.
+2025-11-29 22:02:08,024 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 22:02:08,024 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 22:05:10,628 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:05:11,491 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:05:14,501 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 22:05:16,039 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 22:05:17,573 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 22:05:19,106 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 22:05:20,639 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 22:05:22,173 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 22:05:23,706 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 22:05:25,239 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 22:05:26,772 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 22:05:28,305 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 22:05:28,325 - INFO - Found 49 raw links on page.
+2025-11-29 22:05:28,325 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 22:05:28,325 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 22:09:36,715 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:09:38,482 - INFO - yt-dlp found 10 entries.
+2025-11-29 22:09:59,275 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:10:00,488 - INFO - yt-dlp found 10 entries.
+2025-11-29 22:10:10,803 - INFO - Attempting metadata extraction with yt-dlp for: https://www.pinterest.com/pin/1548181186252937/
+2025-11-29 22:10:11,658 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-29 22:10:11,660 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:10:12,558 - INFO - Playwright visiting: https://www.pinterest.com/pin/1548181186252937/
+2025-11-29 22:10:15,418 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 22:10:16,945 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 22:10:18,500 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 22:10:20,006 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 22:10:21,513 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 22:10:23,022 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 22:10:24,529 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 22:10:26,037 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 22:10:27,545 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 22:10:29,054 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 22:10:29,103 - INFO - Found 191 raw links on page.
+2025-11-29 22:10:29,103 - INFO - Filtered down to 10 unique valid links.
+2025-11-29 22:11:07,002 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880 to E:/test
+2025-11-29 22:11:07,005 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023 to E:/test
+2025-11-29 22:11:07,006 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866 to E:/test
+2025-11-29 22:11:07,007 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991 to E:/test
+2025-11-29 22:11:07,007 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1548181186252937/# to E:/test
+2025-11-29 22:11:07,008 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498 to E:/test
+2025-11-29 22:11:07,008 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866 to E:/test
+2025-11-29 22:11:07,008 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991 to E:/test
+2025-11-29 22:11:07,008 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498 to E:/test
+2025-11-29 22:11:07,009 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023 to E:/test
+2025-11-29 22:11:07,009 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880 to E:/test
+2025-11-29 22:11:07,073 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,204 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,205 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,217 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,233 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,359 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:07,390 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:08,028 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:08,155 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:08,403 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:08,576 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:08,790 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 1548181186252937: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:08,791 - INFO - Standard download failed for https://www.pinterest.com/pin/1548181186252937/#. Attempting fallback extraction...
+2025-11-29 22:11:08,791 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:09,212 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866
+2025-11-29 22:11:09,249 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880
+2025-11-29 22:11:09,254 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1548181186252937/ to E:/test
+2025-11-29 22:11:09,255 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/9359111722036510/ to E:/test
+2025-11-29 22:11:09,283 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880
+2025-11-29 22:11:09,288 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/41095415345495933/ to E:/test
+2025-11-29 22:11:09,489 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866
+2025-11-29 22:11:09,534 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/13510867627869302/ to E:/test
+2025-11-29 22:11:09,560 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991
+2025-11-29 22:11:09,580 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:09,722 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/2955556003020138/ to E:/test
+2025-11-29 22:11:09,754 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:09,983 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1548181186252937/#
+2025-11-29 22:11:09,985 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:10,131 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:10,262 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:11,179 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 13510867627869302: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:11,179 - INFO - Standard download failed for https://www.pinterest.com/pin/13510867627869302/. Attempting fallback extraction...
+2025-11-29 22:11:11,179 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:11,651 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 2955556003020138: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:11,651 - INFO - Standard download failed for https://www.pinterest.com/pin/2955556003020138/. Attempting fallback extraction...
+2025-11-29 22:11:11,651 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:11,925 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 41095415345495933: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:11,926 - INFO - Standard download failed for https://www.pinterest.com/pin/41095415345495933/. Attempting fallback extraction...
+2025-11-29 22:11:11,926 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:12,074 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/13510867627869302/
+2025-11-29 22:11:12,546 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/2955556003020138/
+2025-11-29 22:11:12,786 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/41095415345495933/
+2025-11-29 22:11:13,209 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 9359111722036510: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:13,209 - INFO - Standard download failed for https://www.pinterest.com/pin/9359111722036510/. Attempting fallback extraction...
+2025-11-29 22:11:13,209 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:13,427 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 1548181186252937: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:13,427 - INFO - Standard download failed for https://www.pinterest.com/pin/1548181186252937/. Attempting fallback extraction...
+2025-11-29 22:11:13,427 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:14,001 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/9359111722036510/
+2025-11-29 22:11:14,324 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1548181186252937/
+2025-11-29 22:11:16,323 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991
+2025-11-29 22:11:16,324 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/12947917675523062/ to E:/test
+2025-11-29 22:11:16,336 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:17,596 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 12947917675523062: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:17,596 - INFO - Standard download failed for https://www.pinterest.com/pin/12947917675523062/. Attempting fallback extraction...
+2025-11-29 22:11:17,597 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:18,456 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/12947917675523062/
+2025-11-29 22:11:19,279 - INFO - Video extraction failed for https://www.pinterest.com/pin/13510867627869302/. Checking for image...
+2025-11-29 22:11:19,279 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:20,143 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/13510867627869302/
+2025-11-29 22:11:23,453 - INFO - Video extraction failed for https://www.pinterest.com/pin/1548181186252937/. Checking for image...
+2025-11-29 22:11:23,454 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:24,376 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1548181186252937/
+2025-11-29 22:11:26,075 - INFO - Video extraction failed for https://www.pinterest.com/pin/41095415345495933/. Checking for image...
+2025-11-29 22:11:26,075 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:26,680 - INFO - Found direct image URL: https://i.pinimg.com/736x/46/58/68/46586829fbdacad02b68e3b4bd8e0621.jpg
+2025-11-29 22:11:26,681 - INFO - Starting direct download for https://i.pinimg.com/736x/46/58/68/46586829fbdacad02b68e3b4bd8e0621.jpg to E:/test
+2025-11-29 22:11:26,741 - INFO - Video extraction failed for https://www.pinterest.com/pin/2955556003020138/. Checking for image...
+2025-11-29 22:11:26,742 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:26,794 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:26,795 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/61713457390887336/ to E:/test
+2025-11-29 22:11:26,806 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:26,994 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/41095415345495933/
+2025-11-29 22:11:27,527 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 61713457390887336: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:27,528 - INFO - Standard download failed for https://www.pinterest.com/pin/61713457390887336/. Attempting fallback extraction...
+2025-11-29 22:11:27,528 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:27,535 - INFO - Found direct image URL: https://i.pinimg.com/736x/28/3b/15/283b15f7bf391a3c75b7b051f48cfb7c.jpg
+2025-11-29 22:11:27,535 - INFO - Starting direct download for https://i.pinimg.com/736x/28/3b/15/283b15f7bf391a3c75b7b051f48cfb7c.jpg to E:/test
+2025-11-29 22:11:27,599 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:27,601 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/2955556003020138/
+2025-11-29 22:11:27,614 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/22799541859996095/ to E:/test
+2025-11-29 22:11:27,625 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:28,348 - INFO - Video extraction failed for https://www.pinterest.com/pin/1548181186252937/#. Checking for image...
+2025-11-29 22:11:28,348 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:28,372 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/61713457390887336/
+2025-11-29 22:11:28,623 - INFO - Video extraction failed for https://www.pinterest.com/pin/9359111722036510/. Checking for image...
+2025-11-29 22:11:28,623 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:28,908 - INFO - Video extraction failed for https://www.pinterest.com/pin/12947917675523062/. Checking for image...
+2025-11-29 22:11:28,909 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:29,134 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1548181186252937/#
+2025-11-29 22:11:29,395 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 22799541859996095: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:29,395 - INFO - Standard download failed for https://www.pinterest.com/pin/22799541859996095/. Attempting fallback extraction...
+2025-11-29 22:11:29,395 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:29,457 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/9359111722036510/
+2025-11-29 22:11:29,724 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/12947917675523062/
+2025-11-29 22:11:30,190 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/22799541859996095/
+2025-11-29 22:11:31,489 - INFO - Found direct image URL: https://i.pinimg.com/736x/17/1b/e6/171be6a54f1b0ab16159a0f5677c4455.jpg
+2025-11-29 22:11:31,489 - INFO - Starting direct download for https://i.pinimg.com/736x/17/1b/e6/171be6a54f1b0ab16159a0f5677c4455.jpg to E:/test
+2025-11-29 22:11:31,585 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:31,587 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/105130972550703745/ to E:/test
+2025-11-29 22:11:31,592 - INFO - Found direct image URL: https://i.pinimg.com/736x/65/2b/fb/652bfbc366cbd244192151d85963a6b6.jpg
+2025-11-29 22:11:31,592 - INFO - Starting direct download for https://i.pinimg.com/736x/65/2b/fb/652bfbc366cbd244192151d85963a6b6.jpg to E:/test
+2025-11-29 22:11:31,602 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:11:31,738 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:33,017 - INFO - Found direct image URL: https://i.pinimg.com/736x/28/3b/15/283b15f7bf391a3c75b7b051f48cfb7c.jpg
+2025-11-29 22:11:33,017 - INFO - Starting direct download for https://i.pinimg.com/736x/28/3b/15/283b15f7bf391a3c75b7b051f48cfb7c.jpg to E:/test
+2025-11-29 22:11:33,409 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 105130972550703745: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:11:33,410 - INFO - Standard download failed for https://www.pinterest.com/pin/105130972550703745/. Attempting fallback extraction...
+2025-11-29 22:11:33,410 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:33,490 - INFO - Found direct image URL: https://i.pinimg.com/736x/0a/17/b6/0a17b62d7ec56725a22df5c97bb2483e.jpg
+2025-11-29 22:11:33,490 - INFO - Starting direct download for https://i.pinimg.com/736x/0a/17/b6/0a17b62d7ec56725a22df5c97bb2483e.jpg to E:/test
+2025-11-29 22:11:33,572 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:34,037 - ERROR - Direct download failed: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>
+2025-11-29 22:11:34,324 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/105130972550703745/
+2025-11-29 22:11:35,131 - INFO - Video extraction failed for https://www.pinterest.com/pin/61713457390887336/. Checking for image...
+2025-11-29 22:11:35,132 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:36,061 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/61713457390887336/
+2025-11-29 22:11:37,641 - INFO - Found direct image URL: https://i.pinimg.com/736x/ee/c7/19/eec719b62c7f52f921b47208d432b70c.jpg
+2025-11-29 22:11:37,641 - INFO - Starting direct download for https://i.pinimg.com/736x/ee/c7/19/eec719b62c7f52f921b47208d432b70c.jpg to E:/test
+2025-11-29 22:11:37,753 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:39,027 - INFO - Found direct image URL: https://i.pinimg.com/736x/c6/8b/e3/c68be388ac91f696b6e8bfefe1afb089.jpg
+2025-11-29 22:11:39,027 - INFO - Starting direct download for https://i.pinimg.com/736x/c6/8b/e3/c68be388ac91f696b6e8bfefe1afb089.jpg to E:/test
+2025-11-29 22:11:39,126 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:40,424 - INFO - Video extraction failed for https://www.pinterest.com/pin/22799541859996095/. Checking for image...
+2025-11-29 22:11:40,424 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:41,058 - INFO - Video extraction failed for https://www.pinterest.com/pin/105130972550703745/. Checking for image...
+2025-11-29 22:11:41,058 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:11:41,201 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/22799541859996095/
+2025-11-29 22:11:41,855 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/105130972550703745/
+2025-11-29 22:11:42,276 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\\u1798\u1780\u1795\u17d2\u1791\u17c7\u1789\u17bb\u1798\u1791\u17c0\u178f\u17a0\u17c1\u17b8\u1799\U0001f613#fyp @JChingCEO\u179f\u17c6\u17a1\u17b8\u1795\u17d2\u1780\u17b6\U0001f338 .mp4.part' -> 'E:\\test\\\u1798\u1780\u1795\u17d2\u1791\u17c7\u1789\u17bb\u1798\u1791\u17c0\u178f\u17a0\u17c1\u17b8\u1799\U0001f613#fyp @JChingCEO\u179f\u17c6\u17a1\u17b8\u1795\u17d2\u1780\u17b6\U0001f338 .mp4'. Giving up after 3 retries
+2025-11-29 22:11:43,531 - INFO - Found direct image URL: https://i.pinimg.com/736x/c0/f0/54/c0f0548f639c1245f57892b8baf626a3.jpg
+2025-11-29 22:11:43,531 - INFO - Starting direct download for https://i.pinimg.com/736x/c0/f0/54/c0f0548f639c1245f57892b8baf626a3.jpg to E:/test
+2025-11-29 22:11:43,623 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:44,985 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\\u1798\u1780\u1791\u17c0\u178f\u17a0\u17c1\u17b8\u1799\U0001f618@JChingCEO\u179f\u17c6\u17a1\u17b8\u1795\u17d2\u1780\u17b6\U0001f338 .mp4.part' -> 'E:\\test\\\u1798\u1780\u1791\u17c0\u178f\u17a0\u17c1\u17b8\u1799\U0001f618@JChingCEO\u179f\u17c6\u17a1\u17b8\u1795\u17d2\u1780\u17b6\U0001f338 .mp4'. Giving up after 3 retries
+2025-11-29 22:11:45,013 - INFO - Found direct image URL: https://i.pinimg.com/736x/aa/5a/ce/aa5ace4c824ab0accfbeb62a15ac73c6.jpg
+2025-11-29 22:11:45,014 - INFO - Starting direct download for https://i.pinimg.com/736x/aa/5a/ce/aa5ace4c824ab0accfbeb62a15ac73c6.jpg to E:/test
+2025-11-29 22:11:45,176 - INFO - Direct download completed: E:/test\Pinterest Download.jpg
+2025-11-29 22:11:48,904 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498
+2025-11-29 22:11:50,381 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023
+2025-11-29 22:12:39,739 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/2955556003020138/ to E:/test
+2025-11-29 22:12:39,753 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:12:40,486 - ERROR - Download failed: [0;31mERROR:[0m [Pinterest] 2955556003020138: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-29 22:12:40,487 - INFO - Standard download failed for https://www.pinterest.com/pin/2955556003020138/. Attempting fallback extraction...
+2025-11-29 22:12:40,487 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:12:41,375 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/2955556003020138/
+2025-11-29 22:12:47,567 - INFO - Video extraction failed for https://www.pinterest.com/pin/2955556003020138/. Checking for image...
+2025-11-29 22:12:47,567 - DEBUG - Using proactor: IocpProactor
+2025-11-29 22:12:48,420 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/2955556003020138/
+2025-11-29 22:12:50,059 - INFO - Found direct image URL: https://i.pinimg.com/736x/0a/17/b6/0a17b62d7ec56725a22df5c97bb2483e.jpg
+2025-11-29 22:12:50,059 - INFO - Starting direct download for https://i.pinimg.com/736x/0a/17/b6/0a17b62d7ec56725a22df5c97bb2483e.jpg to E:/test
+2025-11-29 22:12:50,138 - INFO - Direct download completed: E:/test\Pinterest Download.jpg

@@ -162,6 +162,68 @@ def extract_metadata_with_playwright(url, max_entries=100):
 
 import shutil # Ensure shutil is imported
 
+def extract_metadata_with_ytdlp(url, max_entries=100):
+    """
+    Helper to extract metadata using yt-dlp (better for playlists/profiles).
+    """
+    logging.info(f"Attempting metadata extraction with yt-dlp for: {url}")
+    results = []
+    try:
+        ydl_opts = {
+            'extract_flat': 'in_playlist', # Extract entries but don't resolve them fully if in playlist
+            'playlistend': max_entries,
+            'quiet': True,
+            'no_warnings': True,
+            'ignoreerrors': True,
+        }
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+            
+            if 'entries' in info:
+                # It's a playlist/profile
+                entries = info['entries']
+                logging.info(f"yt-dlp found {len(entries)} entries.")
+                for entry in entries:
+                    # entry is a dict
+                    if not entry: continue
+                    
+                    entry_url = entry.get('url') or entry.get('webpage_url')
+                    title = entry.get('title', 'Untitled')
+                    
+                    # Construct for specific platforms if needed
+                    if not entry_url:
+                         if 'id' in entry and 'ie_key' in entry:
+                             if entry['ie_key'] == 'TikTok':
+                                 entry_url = f"https://www.tiktok.com/@{entry.get('uploader_id', 'user')}/video/{entry['id']}"
+                             elif entry['ie_key'] == 'Youtube':
+                                 entry_url = f"https://www.youtube.com/watch?v={entry['id']}"
+                    
+                    if entry_url:
+                        results.append({
+                            'url': entry_url,
+                            'title': title,
+                            'type': 'video'
+                        })
+            else:
+                # It's a single video
+                logging.info("yt-dlp found single video.")
+                results.append({
+                    'url': info.get('webpage_url', url),
+                    'title': info.get('title', 'Untitled'),
+                    'type': 'video'
+                })
+
+    except Exception as e:
+        logging.error(f"yt-dlp metadata extraction failed: {e}")
+        # Fallback to playwright
+        return extract_metadata_with_playwright(url, max_entries)
+        
+    if not results:
+         logging.warning("yt-dlp returned no results, falling back to playwright.")
+         return extract_metadata_with_playwright(url, max_entries)
+
+    return results
+
 def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     """
     Helper to download video using yt-dlp.
@@ -555,7 +617,7 @@ class YouTubeHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_playwright(url)
+        return extract_metadata_with_ytdlp(url, max_entries)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -571,7 +633,7 @@ class TikTokHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_playwright(url)
+        return extract_metadata_with_ytdlp(url, max_entries)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -587,7 +649,7 @@ class PinterestHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_playwright(url)
+        return extract_metadata_with_ytdlp(url, max_entries)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -636,7 +698,7 @@ class FacebookHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
     
     def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_playwright(url)
+        return extract_metadata_with_ytdlp(url, max_entries)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -652,7 +714,7 @@ class InstagramHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_playwright(url)
+        return extract_metadata_with_ytdlp(url, max_entries)
 
     def download(self, item, progress_callback):
         url = item['url']
