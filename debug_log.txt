@@ -1057,3 +1057,37 @@
 2025-11-29 22:33:53,753 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866
 2025-11-29 22:33:54,333 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991
 2025-11-29 22:33:58,577 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498
+2025-11-29 22:42:13,707 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:42:15,138 - INFO - yt-dlp found 10 entries.
+2025-11-29 22:42:38,765 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:42:38,780 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:42:39,393 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880
+2025-11-29 22:42:44,515 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:42:44,516 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:42:44,517 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:42:44,517 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:42:44,541 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:42:44,542 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:42:44,557 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:42:44,557 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:42:45,589 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866
+2025-11-29 22:42:45,650 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991
+2025-11-29 22:42:45,709 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023
+2025-11-29 22:42:45,766 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498
+2025-11-29 22:43:06,595 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 22:43:08,190 - INFO - yt-dlp found 10 entries.
+2025-11-29 22:43:13,262 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:43:13,263 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:43:13,263 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:43:13,264 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:43:13,265 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880 to E:/test\jingkokomasokolaboomboom
+2025-11-29 22:43:13,292 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:43:13,292 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:43:13,524 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:43:13,539 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:43:13,542 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 22:43:14,174 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377111765961991
+2025-11-29 22:43:14,322 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558436162910702866
+2025-11-29 22:43:14,609 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558562529224559880
+2025-11-29 22:43:14,682 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558377537794100498
+2025-11-29 22:43:14,711 - INFO - Download completed: https://www.tiktok.com/@jingkokomasokolaboomboom/video/7558471309768822023

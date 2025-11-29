@@ -666,19 +666,36 @@ class DownloaderTab(QWidget):
         # --- Footer Area ---
         footer_main_layout = QVBoxLayout()
         
-        # Active Downloads Area (Dynamic)
-        self.active_downloads_container = QWidget()
-        self.active_downloads_layout = QVBoxLayout(self.active_downloads_container)
-        self.active_downloads_layout.setContentsMargins(0, 0, 0, 10)
-        self.active_downloads_layout.setSpacing(5)
-        footer_main_layout.addWidget(self.active_downloads_container)
+        # Remove dynamic active downloads container
+        # self.active_downloads_container = QWidget() ...
 
         # Footer Controls
         footer_layout = QHBoxLayout()
-        self.global_status_label = QLabel("Completed: 0 / 0")
-        self.global_status_label.setObjectName("global_status_label")
-        self.global_status_label.setStyleSheet("color: #3B82F6; font-weight: bold; font-size: 10pt;")
-        self.status_message.connect(self.update_status_message) # Custom handler for status text if needed
+        
+        # Replaced Label with Global Progress Bar
+        self.global_progress_bar = QProgressBar()
+        self.global_progress_bar.setRange(0, 1) # Default 0/1 to avoid div/0
+        self.global_progress_bar.setValue(0)
+        self.global_progress_bar.setTextVisible(True)
+        self.global_progress_bar.setFormat("Completed: %v / %m") # Shows value / max
+        self.global_progress_bar.setFixedHeight(24)
+        self.global_progress_bar.setStyleSheet("""
+            QProgressBar {
+                border: 1px solid #27272A;
+                border-radius: 12px;
+                text-align: center;
+                color: #F4F4F5;
+                background-color: #1C1C21;
+                font-weight: bold;
+                font-size: 10pt;
+            }
+            QProgressBar::chunk {
+                background-color: #3B82F6;
+                border-radius: 11px;
+            }
+        """)
+        
+        # self.status_message.connect(self.update_status_message) # We will use bar text now
         
         action_btn_style = """
              QPushButton {
@@ -723,8 +740,8 @@ class DownloaderTab(QWidget):
             }
         """)
         
-        footer_layout.addWidget(self.global_status_label)
-        footer_layout.addStretch()
+        footer_layout.addWidget(self.global_progress_bar, 1) # Give it stretch 1 to expand
+        footer_layout.addSpacing(10)
         footer_layout.addWidget(self.download_button)
         footer_layout.addWidget(self.cancel_button)
         
@@ -1030,6 +1047,12 @@ class DownloaderTab(QWidget):
         if item_ids:
             self.status_message.emit(f"Starting {len(item_ids)} selected downloads...")
             
+            # Update global progress bar for selected batch
+            self.total_downloads = len(item_ids) # Reset total to this batch
+            self.completed_downloads = 0
+            self.global_progress_bar.setRange(0, self.total_downloads)
+            self.global_progress_bar.setValue(0)
+
             # Update settings for queue items before starting
             settings = {
                 'video_path': self.video_download_path,
@@ -1259,9 +1282,9 @@ class DownloaderTab(QWidget):
 
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
-        """Updates the progress of an item in the activity table and footer."""
-        # Update footer progress
-        self._update_footer_progress(item_id, percentage)
+        """Updates the progress of an item in the activity table."""
+        # Footer progress update removed (replaced by global batch bar)
+        # self._update_footer_progress(item_id, percentage)
         
         # Update Table Progress
         if item_id in self.activity_row_map:
@@ -1275,12 +1298,10 @@ class DownloaderTab(QWidget):
     @Slot(str, bool)
     def download_finished_callback(self, item_id, success):
         """Handles the completion or failure of a download."""
-        # Remove from footer
+        # Remove from footer (logic removed in init, but good to cleanup if we kept dict)
         if item_id in self.active_progress_bars:
-            widget = self.active_progress_bars[item_id]['widget']
-            self.active_downloads_layout.removeWidget(widget)
-            widget.deleteLater()
-            del self.active_progress_bars[item_id]
+             # Just cleanup dict
+             del self.active_progress_bars[item_id]
         
         # Update Table
         if item_id in self.activity_row_map:
@@ -1294,7 +1315,8 @@ class DownloaderTab(QWidget):
         
         if success:
             self.completed_downloads += 1
-            self.status_message.emit(f"Completed: {self.completed_downloads} / {self.total_downloads}")
+            self.global_progress_bar.setValue(self.completed_downloads)
+            # self.status_message.emit(f"Completed: {self.completed_downloads} / {self.total_downloads}")
             print(f"Download finished for {item_id[:8]}... Success: {success}")
         else:
              self.status_message.emit(f"Failed: {item_id[:8]}...")
@@ -1326,7 +1348,10 @@ class DownloaderTab(QWidget):
         # Reset counts
         self.total_downloads = len(self.downloader.queue) 
         self.completed_downloads = 0
-        self.status_message.emit(f"Completed: 0 / {self.total_downloads}")
+        
+        self.global_progress_bar.setRange(0, self.total_downloads)
+        self.global_progress_bar.setValue(0)
+        # self.status_message.emit(f"Completed: 0 / {self.total_downloads}")
         
         self.status_message.emit("Starting downloads from queue...")
         
