@@ -354,7 +354,7 @@ class DownloaderTab(QWidget):
             }
         """)
         
-        input_block_layout.addWidget(self.url_input)
+        input_block_layout.addWidget(self.url_input, 1) # Assign stretch factor 1 to make it expand
         input_block_layout.addWidget(self.add_to_queue_button)
         input_block_layout.addWidget(self.scrap_button)
         

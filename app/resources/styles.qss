@@ -26,6 +26,7 @@ QWidget#TitleBar {
 
 QLabel#TitleBarTitle {
     color: #F4F4F5;
+    background-color: #1C1C21; /* Explicitly set background to match TitleBar */
     font-weight: bold;
     font-size: 10pt;
     padding-left: 5px;
