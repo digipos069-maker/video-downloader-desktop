@@ -601,7 +601,7 @@ class DownloaderTab(QWidget):
         naming_label = QLabel("Naming Style")
         naming_label.setStyleSheet(label_style)
         self.naming_combo = QComboBox()
-        self.naming_combo.addItems(["Original Name", "Numbered (01. Name)"])
+        self.naming_combo.addItems(["Original Name", "Numbered (01. Name)", "Video + Caption (.txt)"])
         self.naming_combo.setCursor(Qt.PointingHandCursor)
         self.naming_combo.setStyleSheet(input_style)
         naming_layout.addWidget(naming_label)
@@ -674,10 +674,10 @@ class DownloaderTab(QWidget):
         
         # Replaced Label with Global Progress Bar
         self.global_progress_bar = QProgressBar()
-        self.global_progress_bar.setRange(0, 1) # Default 0/1 to avoid div/0
+        self.global_progress_bar.setRange(0, 1) # Default range
         self.global_progress_bar.setValue(0)
         self.global_progress_bar.setTextVisible(True)
-        self.global_progress_bar.setFormat("Completed: %v / %m") # Shows value / max
+        self.global_progress_bar.setFormat("Ready") # Initial text
         self.global_progress_bar.setFixedHeight(24)
         self.global_progress_bar.setStyleSheet("""
             QProgressBar {
@@ -1069,6 +1069,7 @@ class DownloaderTab(QWidget):
             self.completed_downloads = 0
             self.global_progress_bar.setRange(0, self.total_downloads)
             self.global_progress_bar.setValue(0)
+            self.global_progress_bar.setFormat("Completed: %v / %m")
 
             # Update settings for queue items before starting
             settings = {
@@ -1368,6 +1369,7 @@ class DownloaderTab(QWidget):
         
         self.global_progress_bar.setRange(0, self.total_downloads)
         self.global_progress_bar.setValue(0)
+        self.global_progress_bar.setFormat("Completed: %v / %m")
         # self.status_message.emit(f"Completed: 0 / {self.total_downloads}")
         
         self.status_message.emit("Starting downloads from queue...")

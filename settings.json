@@ -2,7 +2,7 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 60,
+        "count": 1,
         "all": false,
         "resolution": "Best Available"
     },
@@ -15,8 +15,8 @@
     },
     "download": {
         "extension": "mp4",
-        "naming": "Numbered (01. Name)",
-        "subtitles": true,
+        "naming": "Video + Caption (.txt)",
+        "subtitles": false,
         "video_path": "",
         "photo_path": "E:/test"
     },

@@ -311,7 +311,37 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([url])
+            # Use extract_info with download=True to get metadata AND download
+            info = ydl.extract_info(url, download=True)
+            
+            # Handle Caption (.txt) generation
+            if naming_style == 'Video + Caption (.txt)':
+                try:
+                    # Determine final filename
+                    if 'requested_downloads' in info:
+                        # Multiformat/merged case
+                        final_filename = info['requested_downloads'][0]['filepath']
+                    else:
+                        # Direct single file case
+                        final_filename = ydl.prepare_filename(info)
+                    
+                    # Change extension to .txt
+                    base_name = os.path.splitext(final_filename)[0]
+                    txt_filename = f"{base_name}.txt"
+                    
+                    # Content: Title + Description
+                    title = info.get('title', '')
+                    desc = info.get('description', '')
+                    
+                    content = f"{title}\n\n{desc}"
+                    
+                    with open(txt_filename, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                        
+                    logging.info(f"Caption saved to: {txt_filename}")
+                except Exception as e:
+                    logging.error(f"Failed to save caption: {e}")
+
         logging.info(f"Download completed: {url}")
         progress_callback(100)
         return True
@@ -319,7 +349,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         logging.error(f"Download failed: {e}")
         return False
 
-def download_direct(url, output_path, title, progress_callback):
+def download_direct(url, output_path, title, progress_callback, settings={}):
     """
     Helper to download a file directly using urllib.
     """
@@ -349,6 +379,19 @@ def download_direct(url, output_path, title, progress_callback):
                 progress_callback(min(percent, 100))
 
         urllib.request.urlretrieve(url, full_path, report_hook)
+        
+        # Handle Caption (.txt) generation
+        naming_style = settings.get('naming_style', 'Original Name')
+        if naming_style == 'Video + Caption (.txt)':
+            try:
+                base_name = os.path.splitext(full_path)[0]
+                txt_filename = f"{base_name}.txt"
+                with open(txt_filename, 'w', encoding='utf-8') as f:
+                    f.write(title) # Direct downloads (images) usually only have title passed
+                logging.info(f"Caption saved to: {txt_filename}")
+            except Exception as e:
+                logging.error(f"Failed to save caption for direct download: {e}")
+
         logging.info(f"Direct download completed: {full_path}")
         progress_callback(100)
         return True
@@ -713,7 +756,7 @@ class PinterestHandler(BaseHandler):
         output_path = self.get_download_path(settings, is_video=not is_image, item_url=url)
         
         if is_image:
-             return download_direct(url, output_path, title, progress_callback)
+             return download_direct(url, output_path, title, progress_callback, settings)
         else:
             # 1. Try Standard yt-dlp
             # Note: yt-dlp might fail for simple images, so we consider failure as "try next method"
@@ -737,7 +780,7 @@ class PinterestHandler(BaseHandler):
                 logging.info(f"Found direct image URL: {image_url}")
                 # Update output path for image (since we defaulted to video path above)
                 output_path = self.get_download_path(settings, is_video=False, item_url=url)
-                return download_direct(image_url, output_path, title, progress_callback)
+                return download_direct(image_url, output_path, title, progress_callback, settings)
             else:
                 logging.error("Fallback extraction failed.")
                 return False
@@ -777,7 +820,7 @@ class InstagramHandler(BaseHandler):
         output_path = self.get_download_path(settings, is_video=not is_image, item_url=url)
         
         if is_image:
-             return download_direct(url, output_path, title, progress_callback)
+             return download_direct(url, output_path, title, progress_callback, settings)
         else:
              return download_with_ytdlp(url, output_path, progress_callback, settings)
 
