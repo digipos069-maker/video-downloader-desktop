@@ -101,6 +101,7 @@ class ScrapingWorker(QThread):
                             continue
                         photo_count += 1
 
+                    metadata['origin_url'] = self.url
                     self.item_found.emit(item_url, metadata, is_video, is_photo, handler)
                 except Exception as loop_error:
                     print(f"[ERROR] Loop failed for item {metadata}: {loop_error}")
@@ -919,7 +920,11 @@ class DownloaderTab(QWidget):
                  download_settings['resolution'] = video_opts.get('resolution', "Best Available")
             if is_photo:
                  download_settings['quality'] = photo_opts.get('quality', "Best Available")
-    
+            
+            # Pass origin URL to settings for folder organization
+            if 'origin_url' in metadata:
+                download_settings['origin_url'] = metadata['origin_url']
+
             # Add to Backend Queue
             item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
             print(f"[DEBUG] Added to backend queue: {item_id}")

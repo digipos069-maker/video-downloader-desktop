@@ -600,12 +600,64 @@ class BaseHandler(ABC):
     def download(self, item, progress_callback):
         pass
 
-    def get_download_path(self, settings, is_video=True):
+    def get_download_path(self, settings, is_video=True, item_url=None):
         """Helper to determine the download path from settings."""
-        if is_video:
-            return settings.get('video_path') or settings.get('photo_path') or '.'
-        else:
-            return settings.get('photo_path') or settings.get('video_path') or '.'
+        base_path = settings.get('video_path') if is_video else settings.get('photo_path')
+        if not base_path:
+             base_path = settings.get('photo_path') if is_video else settings.get('video_path')
+        if not base_path:
+             base_path = '.'
+             
+        # Check if we should create a subfolder based on origin
+        origin_url = settings.get('origin_url')
+        if origin_url and item_url:
+            # Normalize URLs for comparison (strip trailing slashes)
+            norm_origin = origin_url.rstrip('/')
+            norm_item = item_url.rstrip('/')
+            
+            # Only create folder if origin is different (i.e. it's a collection/profile scrape)
+            if norm_origin != norm_item:
+                from urllib.parse import urlparse
+                import re
+                
+                try:
+                    parsed = urlparse(norm_origin)
+                    path = parsed.path.strip('/')
+                    
+                    # If path is empty or just 'watch' (common for YT), fallback or skip
+                    # Actually, if it's different, we try to use the path.
+                    # For YT playlist: /playlist?list=... -> path is 'playlist'. Not great.
+                    # For TikTok: /@user -> @user. Good.
+                    
+                    folder_name = ""
+                    
+                    # Special handling for common platforms
+                    if 'youtube.com' in norm_origin or 'youtu.be' in norm_origin:
+                        if 'playlist' in path:
+                             # Use query param 'list' if possible, or just 'Playlist'
+                             # We don't have easy access to query params here without parsing query
+                             from urllib.parse import parse_qs
+                             qs = parse_qs(parsed.query)
+                             if 'list' in qs:
+                                 folder_name = f"Playlist_{qs['list'][0]}"
+                        elif 'channel' in path or 'c/' in path or 'user' in path or '@' in path:
+                             folder_name = path.replace('/', '_')
+                    elif 'tiktok.com' in norm_origin:
+                        folder_name = path.replace('/', '_')
+                    elif 'instagram.com' in norm_origin:
+                         folder_name = path.replace('/', '_')
+                    else:
+                        folder_name = path.replace('/', '_')
+                    
+                    # Sanitize
+                    if folder_name:
+                        safe_name = "".join([c for c in folder_name if c.isalpha() or c.isdigit() or c in (' ', '-', '_', '.')]).rstrip()
+                        if safe_name:
+                            base_path = os.path.join(base_path, safe_name)
+                except Exception as e:
+                    logging.error(f"Error creating folder path from origin: {e}")
+
+        return base_path
 
 # --- Handlers now use Playwright for Scraping ---
 
@@ -622,7 +674,7 @@ class YouTubeHandler(BaseHandler):
     def download(self, item, progress_callback):
         url = item['url']
         settings = item.get('settings', {})
-        output_path = self.get_download_path(settings, is_video=True)
+        output_path = self.get_download_path(settings, is_video=True, item_url=url)
         return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class TikTokHandler(BaseHandler):
@@ -638,7 +690,7 @@ class TikTokHandler(BaseHandler):
     def download(self, item, progress_callback):
         url = item['url']
         settings = item.get('settings', {})
-        output_path = self.get_download_path(settings, is_video=True)
+        output_path = self.get_download_path(settings, is_video=True, item_url=url)
         return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class PinterestHandler(BaseHandler):
@@ -658,7 +710,7 @@ class PinterestHandler(BaseHandler):
         
         # Check if it's likely an image
         is_image = url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
-        output_path = self.get_download_path(settings, is_video=not is_image)
+        output_path = self.get_download_path(settings, is_video=not is_image, item_url=url)
         
         if is_image:
              return download_direct(url, output_path, title, progress_callback)
@@ -684,7 +736,7 @@ class PinterestHandler(BaseHandler):
             if image_url:
                 logging.info(f"Found direct image URL: {image_url}")
                 # Update output path for image (since we defaulted to video path above)
-                output_path = self.get_download_path(settings, is_video=False)
+                output_path = self.get_download_path(settings, is_video=False, item_url=url)
                 return download_direct(image_url, output_path, title, progress_callback)
             else:
                 logging.error("Fallback extraction failed.")
@@ -703,7 +755,7 @@ class FacebookHandler(BaseHandler):
     def download(self, item, progress_callback):
         url = item['url']
         settings = item.get('settings', {})
-        output_path = self.get_download_path(settings, is_video=True)
+        output_path = self.get_download_path(settings, is_video=True, item_url=url)
         return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class InstagramHandler(BaseHandler):
@@ -722,7 +774,7 @@ class InstagramHandler(BaseHandler):
         settings = item.get('settings', {})
         
         is_image = url.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))
-        output_path = self.get_download_path(settings, is_video=not is_image)
+        output_path = self.get_download_path(settings, is_video=not is_image, item_url=url)
         
         if is_image:
              return download_direct(url, output_path, title, progress_callback)
