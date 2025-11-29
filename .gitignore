@@ -1,0 +1,4 @@
+/dist/*
+/build/*
+VideoDownloader.spec
+installer.cfg
