@@ -795,6 +795,10 @@ class DownloaderTab(QWidget):
         if self.photo_download_path:
             self.photo_path_button.setText(f"Photo: {self.photo_download_path}")
             self.photo_path_button.setToolTip(self.photo_download_path)
+            
+        # User Profile
+        username = settings.get('user_profile', {}).get('username', "Guest")
+        self.username_label.setText(f"User: {username}")
 
         # System Settings
         sys_settings = settings.get('system', {})
@@ -807,7 +811,11 @@ class DownloaderTab(QWidget):
 
     def get_ui_state(self):
         """Returns the current UI state as a dictionary for saving."""
+        username = self.username_label.text().replace("User: ", "")
         return {
+            'user_profile': {
+                'username': username
+            },
             'download': {
                 'extension': self.extension_combo.currentText(),
                 'naming': self.naming_combo.currentText(),
@@ -1013,6 +1021,11 @@ class DownloaderTab(QWidget):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
         
+        select_all_action = menu.addAction("Select All")
+        select_all_action.triggered.connect(self.select_all_activity_items)
+        
+        menu.addSeparator()
+        
         download_action = menu.addAction("Download Selected")
         download_action.triggered.connect(self.download_selected_activity_items)
         
@@ -1025,6 +1038,10 @@ class DownloaderTab(QWidget):
         delete_action.triggered.connect(self.delete_selected_activity_item)
         
         menu.exec(self.activity_table.viewport().mapToGlobal(position))
+
+    def select_all_activity_items(self):
+        """Selects all rows in the activity table."""
+        self.activity_table.selectAll()
 
     def download_selected_activity_items(self):
         """Promotes selected items to the top of the queue and starts downloading."""

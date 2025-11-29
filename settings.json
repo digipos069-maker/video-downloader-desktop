@@ -2,7 +2,7 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 5,
+        "count": 60,
         "all": false,
         "resolution": "Best Available"
     },
@@ -23,5 +23,8 @@
     "system": {
         "threads": 11,
         "shutdown": false
+    },
+    "user_profile": {
+        "username": "Phal"
     }
 }
