@@ -1324,5 +1324,9 @@ class DownloaderTab(QWidget):
         self.status_message.emit(f"Completed: 0 / {self.total_downloads}")
         
         self.status_message.emit("Starting downloads from queue...")
+        
+        # Queue all items (change status from held to queued)
+        self.downloader.queue_all()
+        
         self.start_timer() # Start the timer
         self.downloader.process_queue()

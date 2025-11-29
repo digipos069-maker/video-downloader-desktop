@@ -85,15 +85,16 @@ class Downloader(QObject):
         # Do not automatically process queue here, wait for user action
 
     def update_queue_settings(self, new_settings):
-        """Updates settings for all queued items."""
+        """Updates settings for all queued/held items."""
         for item in self.queue:
-            if item['status'] == 'queued':
+            if item['status'] in ['queued', 'held']:
                 item['settings'].update(new_settings)
 
     def process_queue(self):
         """Processes the download queue."""
         while not self.queue_empty() and self.thread_pool.activeThreadCount() < self.max_concurrent_downloads:
-            self.start_next_download()
+            if not self.start_next_download():
+                break # Stop loop if we couldn't start a download (e.g. only 'held' items remain)
 
     @Slot(str, bool)
     def _download_finished_callback(self, item_id, success):
@@ -105,15 +106,6 @@ class Downloader(QObject):
         
         # Check for shutdown if queue is empty and no active threads
         if self.queue_empty() and self.thread_pool.activeThreadCount() == 0:
-            # Check if any of the finished items had shutdown enabled.
-            # Since we remove items from queue, we can't check them there.
-            # However, the 'settings' are updated before processing.
-            # A cleaner way is to check a flag set during 'update_queue_settings' or pass it down.
-            # But since we don't persist finished items here easily, we'll rely on the fact that
-            # the UI passes 'shutdown' in the settings of items.
-            # We can assume if the LAST processed item had shutdown=True, we shut down.
-            # Better: The UI should manage the "shutdown after all" state, but user requested logic here.
-            # Let's check if we can find the settings for this item_id? No, it's gone from queue.
             pass
 
         self.process_queue() # Try to start another download
@@ -157,7 +149,7 @@ class Downloader(QObject):
                 break
         
         if idx_to_pop == -1:
-            return # No items ready to download
+            return False # No items ready to download
 
         item = self.queue.pop(idx_to_pop)
         item['status'] = 'downloading'
@@ -173,6 +165,7 @@ class Downloader(QObject):
 
         self.thread_pool.start(worker)
         self.status.emit(item['id'], 'Starting download...')
+        return True
 
     @Slot(str, bool)
     def _download_finished_callback_with_settings(self, item_id, success, settings):
