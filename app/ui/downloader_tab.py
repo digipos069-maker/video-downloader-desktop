@@ -9,12 +9,103 @@ from PySide6.QtWidgets import (
     QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame, QProgressBar
 )
 from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Qt, Signal, Slot, QTimer
+from PySide6.QtCore import Qt, Signal, Slot, QTimer, QThread
 
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
 from app.network import NetworkMonitor
 from app.config.settings_manager import load_settings
+
+class ScrapingWorker(QThread):
+    item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
+    finished = Signal()
+    error = Signal(str)
+
+    def __init__(self, url, handler_factory, settings, parent=None):
+        super().__init__(parent)
+        self.url = url
+        self.handler_factory = handler_factory
+        self.settings = settings
+
+    def run(self):
+        try:
+            handler = self.handler_factory.get_handler(self.url)
+            if not handler:
+                self.error.emit(f"No handler found for URL: {self.url}")
+                return
+
+            video_opts = self.settings.get('video', {})
+            photo_opts = self.settings.get('photo', {})
+            
+            video_enabled = video_opts.get('enabled', False)
+            photo_enabled = photo_opts.get('enabled', False)
+            
+            limit_video = video_enabled and video_opts.get('top', False) and not video_opts.get('all', False)
+            limit_photo = photo_enabled and photo_opts.get('top', False) and not photo_opts.get('all', False)
+            
+            target_count = 0
+            if limit_video:
+                target_count = max(target_count, video_opts.get('count', 5))
+            if limit_photo:
+                target_count = max(target_count, photo_opts.get('count', 5))
+            
+            fetch_limit = 100 # Default
+            if video_opts.get('all', False) or photo_opts.get('all', False):
+                 fetch_limit = 200 # Increased limit for 'all'
+            elif target_count > 0:
+                 fetch_limit = target_count + 5 # Fetch a few more than target just in case of filters
+            
+            metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit)
+            
+            if not metadata_list:
+                self.error.emit(f"No downloadable items found for {self.url}.")
+                return
+
+            video_count = 0
+            photo_count = 0
+            filtered_count = 0
+
+            for metadata in metadata_list:
+                try:
+                    item_url = metadata['url']
+                    
+                    is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
+                    is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
+                    
+                    if not is_video and not is_photo:
+                        if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
+                            is_video = True
+                        elif 'instagram' in item_url:
+                            is_photo = True
+                    
+                    # Apply Filters
+                    if is_video and not video_enabled:
+                        filtered_count += 1
+                        continue
+                    if is_photo and not photo_enabled:
+                        filtered_count += 1
+                        continue
+                        
+                    if is_video:
+                        if limit_video and video_count >= video_opts.get('count', 5):
+                            filtered_count += 1
+                            continue
+                        video_count += 1
+                            
+                    if is_photo:
+                        if limit_photo and photo_count >= photo_opts.get('count', 5):
+                            filtered_count += 1
+                            continue
+                        photo_count += 1
+
+                    self.item_found.emit(item_url, metadata, is_video, is_photo, handler)
+                except Exception as loop_error:
+                    print(f"[ERROR] Loop failed for item {metadata}: {loop_error}")
+                    continue
+        except Exception as e:
+            self.error.emit(f"Error scraping {self.url}: {e}")
+        finally:
+            self.finished.emit()
 
 class DownloaderTab(QWidget):
     status_message = Signal(str)
@@ -783,9 +874,10 @@ class DownloaderTab(QWidget):
         self.process_scraping(url)
 
     def process_scraping(self, url):
-        """Helper method to handle the scraping logic for a given URL."""
+        """Helper method to handle the scraping logic for a given URL using a background thread."""
         self.status_message.emit(f"Scraping URL: {url}...")
         
+        # Get settings
         settings = {}
         if self.settings_tab:
             settings = self.settings_tab.get_settings()
@@ -793,127 +885,86 @@ class DownloaderTab(QWidget):
         else:
             print("[ERROR] Settings tab not linked!")
 
-        handler = self.platform_handler_factory.get_handler(url)
+        # Create and start worker
+        self.scraping_worker = ScrapingWorker(url, self.platform_handler_factory, settings)
+        self.scraping_worker.item_found.connect(self.on_scraping_item_found)
+        self.scraping_worker.finished.connect(self.on_scraping_finished)
+        self.scraping_worker.error.connect(self.on_scraping_error)
+        self.scraping_worker.start()
+        
+        self.scrap_button.setEnabled(False) # Disable button while scraping
 
-        if handler:
-            try:
-                # 1. Determine Fetch Limit based on settings
-                fetch_limit = 100 # Default
-                
-                video_opts = settings.get('video', {})
-                photo_opts = settings.get('photo', {})
-                
-                video_enabled = video_opts.get('enabled', False)
-                photo_enabled = photo_opts.get('enabled', False)
-                
-                # Helper booleans
-                limit_video = video_enabled and video_opts.get('top', False) and not video_opts.get('all', False)
-                limit_photo = photo_enabled and photo_opts.get('top', False) and not photo_opts.get('all', False)
-                
-                target_count = 0
-                if limit_video:
-                    target_count = max(target_count, video_opts.get('count', 5))
-                if limit_photo:
-                    target_count = max(target_count, photo_opts.get('count', 5))
-                
-                if video_opts.get('all', False) or photo_opts.get('all', False):
-                     fetch_limit = 200 
-                elif target_count > 0:
-                     fetch_limit = target_count + 5 
-                
-                # 2. Fetch Metadata
-                metadata_list = handler.get_playlist_metadata(url, max_entries=fetch_limit)
-                
-                if metadata_list:
-                    queued_count = 0
-                    video_count = 0
-                    photo_count = 0
-                    
-                    for metadata in metadata_list:
-                        item_url = metadata['url']
-                        
-                        # 3. Determine Type
-                        is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
-                        is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
-                        
-                        if not is_video and not is_photo:
-                            # Fallback detection
-                            if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
-                                is_video = True
-                            elif 'instagram' in item_url:
-                                is_photo = True # Default assumption for Insta if no extension
-                        
-                        # 4. Apply Filters
-                        
-                        # Skip if disabled
-                        if is_video and not video_enabled:
-                            continue
-                        if is_photo and not photo_enabled:
-                            continue
-                            
-                        # Skip if count limit reached
-                        if is_video:
-                            if limit_video and video_count >= video_opts.get('count', 5):
-                                continue
-                            video_count += 1
-                                
-                        if is_photo:
-                            if limit_photo and photo_count >= photo_opts.get('count', 5):
-                                continue
-                            photo_count += 1
+    @Slot(str, dict, bool, bool, object)
+    def on_scraping_item_found(self, item_url, metadata, is_video, is_photo, handler):
+        """Slot to handle an item found by the scraping worker."""
+        
+        # Get current settings again for fresh download options if needed, 
+        # but mostly we use what was passed to worker or defaults.
+        # Actually, we need to build 'download_settings' here to pass to downloader.
+        
+        settings = {}
+        if self.settings_tab:
+             settings = self.settings_tab.get_settings()
+        
+        video_opts = settings.get('video', {})
+        photo_opts = settings.get('photo', {})
 
-                        # 5. Add to Queue
-                        download_settings = {}
-                        if is_video:
-                             download_settings['resolution'] = video_opts.get('resolution', "Best Available")
-                        if is_photo:
-                             download_settings['quality'] = photo_opts.get('quality', "Best Available")
+        download_settings = {}
+        if is_video:
+             download_settings['resolution'] = video_opts.get('resolution', "Best Available")
+        if is_photo:
+             download_settings['quality'] = photo_opts.get('quality', "Best Available")
 
-                        item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
-                        
-                        # Add to UI
-                        row_position_activity = self.activity_table.rowCount()
-                        self.activity_table.insertRow(row_position_activity)
-                        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
-                        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
-                        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
-                        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
-                        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
-                        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
-                        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
-                        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
-                        
-                        progress_bar = QProgressBar()
-                        progress_bar.setRange(0, 100)
-                        progress_bar.setValue(0)
-                        progress_bar.setTextVisible(True)
-                        progress_bar.setAlignment(Qt.AlignCenter)
-                        progress_bar.setStyleSheet("""
-                            QProgressBar {
-                                border: 1px solid #27272A;
-                                border-radius: 5px;
-                                text-align: center;
-                                color: #F4F4F5;
-                                background-color: #1C1C21;
-                            }
-                            QProgressBar::chunk {
-                                background-color: #3B82F6;
-                                width: 10px;
-                            }
-                        """)
-                        self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
-                        
-                        self.activity_row_map[item_id] = row_position_activity
-                        queued_count += 1
-                        
-                    self.status_message.emit(f"Found and queued {queued_count} items (Video: {video_count}, Photo: {photo_count}).")
-                else:
-                    self.status_message.emit(f"No downloadable items found for {url}.")
-            except Exception as e:
-                self.status_message.emit(f"Error scraping {url}: {e}")
-                print(f"ERROR scraping {url}: {e}")
-        else:
-            self.status_message.emit(f"No handler found for URL: {url}")
+        # Add to Backend Queue
+        item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
+        
+        # Add to UI Table
+        row_position_activity = self.activity_table.rowCount()
+        self.activity_table.insertRow(row_position_activity)
+        self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
+        self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
+        self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
+        self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
+        self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
+        self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
+        self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
+        self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
+        
+        progress_bar = QProgressBar()
+        progress_bar.setRange(0, 100)
+        progress_bar.setValue(0)
+        progress_bar.setTextVisible(True)
+        progress_bar.setAlignment(Qt.AlignCenter)
+        progress_bar.setStyleSheet("""
+            QProgressBar {
+                border: 1px solid #27272A;
+                border-radius: 5px;
+                text-align: center;
+                color: #F4F4F5;
+                background-color: #1C1C21;
+            }
+            QProgressBar::chunk {
+                background-color: #3B82F6;
+                width: 10px;
+            }
+        """)
+        self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
+        
+        self.activity_row_map[item_id] = row_position_activity
+
+    @Slot()
+    def on_scraping_finished(self):
+        self.status_message.emit("Scraping completed.")
+        self.scrap_button.setEnabled(True)
+        # Clean up worker
+        if hasattr(self, 'scraping_worker'):
+            self.scraping_worker.deleteLater()
+            self.scraping_worker = None
+
+    @Slot(str)
+    def on_scraping_error(self, message):
+        self.status_message.emit(message)
+        self.scrap_button.setEnabled(True)
 
     def open_queue_context_menu(self, position):
         from PySide6.QtWidgets import QMenu

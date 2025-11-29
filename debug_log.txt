@@ -514,3 +514,144 @@
 2025-11-29 02:52:10,684 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
 2025-11-29 02:52:10,812 - ERROR - Download failed: [0;31mERROR:[0m [generic] b2ed274898e660670463b4b6056e30bf: Requested format is not available. Use --list-formats for a list of available formats
 2025-11-29 02:52:11,244 - ERROR - Download failed: [0;31mERROR:[0m [generic] 0fc0ef491b19c10e6b79742dedff618c: Requested format is not available. Use --list-formats for a list of available formats
+2025-11-29 20:28:24,943 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:28:25,842 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:28:30,240 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:28:32,005 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:28:33,539 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:28:35,072 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:28:36,605 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:28:38,162 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:28:39,688 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:28:41,222 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:28:42,754 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:28:44,274 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:28:44,300 - INFO - Found 49 raw links on page.
+2025-11-29 20:28:44,300 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:28:44,300 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 20:29:02,302 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:29:03,178 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:29:05,720 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:29:07,253 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:29:08,786 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:29:10,320 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:29:11,853 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:29:13,387 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:29:14,920 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:29:16,454 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:29:17,987 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:29:19,519 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:29:19,545 - INFO - Found 31 raw links on page.
+2025-11-29 20:29:19,545 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:29:19,546 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 20:29:32,982 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:29:33,859 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:29:36,334 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:29:37,869 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:29:39,404 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:29:40,936 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:29:42,469 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:29:44,002 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:29:45,535 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:29:47,110 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:29:48,636 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:29:50,169 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:29:50,191 - INFO - Found 49 raw links on page.
+2025-11-29 20:29:50,191 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:29:50,191 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 20:29:58,007 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom to E:/test
+2025-11-29 20:29:58,020 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 20:38:07,641 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:38:08,519 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:38:13,728 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:38:15,265 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:38:16,797 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:38:18,333 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:38:19,883 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:38:21,415 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:38:22,965 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:38:24,676 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:38:26,215 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:38:27,748 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:38:27,778 - INFO - Found 49 raw links on page.
+2025-11-29 20:38:27,778 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:38:27,778 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 20:42:21,977 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:42:22,877 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:42:25,663 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:42:27,189 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:42:28,720 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:42:30,255 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:42:31,854 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:42:33,388 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:42:34,921 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:42:36,454 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:42:38,039 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:42:39,571 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:42:39,602 - INFO - Found 49 raw links on page.
+2025-11-29 20:42:39,603 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:42:39,603 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 20:52:28,239 - DEBUG - Using proactor: IocpProactor
+2025-11-29 20:52:29,103 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 20:52:33,448 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 20:52:34,980 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 20:52:36,514 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 20:52:38,046 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 20:52:39,580 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 20:52:41,194 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 20:52:42,730 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 20:52:44,264 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 20:52:45,797 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 20:52:47,331 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 20:52:47,354 - INFO - Found 49 raw links on page.
+2025-11-29 20:52:47,354 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 20:52:47,355 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:02:27,659 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:02:28,546 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:02:31,498 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:02:33,023 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:02:34,557 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:02:36,090 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:02:37,641 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:02:39,189 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:02:40,723 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:02:42,273 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:02:43,807 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:02:45,340 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:02:45,366 - INFO - Found 49 raw links on page.
+2025-11-29 21:02:45,367 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:02:45,367 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:02:53,839 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom to E:/test
+2025-11-29 21:02:53,853 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 21:03:16,121 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:03:17,043 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:03:19,601 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:03:21,150 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:03:22,694 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:03:24,222 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:03:25,755 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:03:27,288 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:03:28,823 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:03:30,354 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:03:31,888 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:03:33,438 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:03:33,456 - INFO - Found 49 raw links on page.
+2025-11-29 21:03:33,457 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:03:33,457 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 21:03:59,631 - INFO - Starting yt-dlp download for https://www.tiktok.com/@jingkokomasokolaboomboom to E:/test
+2025-11-29 21:03:59,645 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 21:04:31,266 - DEBUG - Using proactor: IocpProactor
+2025-11-29 21:04:32,150 - INFO - Playwright visiting: https://www.tiktok.com/@jingkokomasokolaboomboom
+2025-11-29 21:04:35,039 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 21:04:36,568 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 21:04:38,101 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 21:04:39,634 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 21:04:41,168 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 21:04:42,702 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 21:04:44,235 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 21:04:45,777 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 21:04:47,302 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 21:04:48,834 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 21:04:48,861 - INFO - Found 49 raw links on page.
+2025-11-29 21:04:48,861 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 21:04:48,861 - WARNING - No links found after filtering. Returning page fallback.
