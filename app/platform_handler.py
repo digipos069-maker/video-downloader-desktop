@@ -257,6 +257,17 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     # Handle Subtitles
     if subtitles:
         ydl_opts['writesubtitles'] = True
+        
+    # Handle Cookies (Authentication)
+    cookie_file = settings.get('cookie_file')
+    if cookie_file and os.path.exists(cookie_file):
+        logging.info(f"Using cookie file: {cookie_file}")
+        ydl_opts['cookiefile'] = cookie_file
+        
+    browser_source = settings.get('cookies_from_browser')
+    if browser_source:
+        logging.info(f"Using cookies from browser: {browser_source}")
+        ydl_opts['cookiesfrombrowser'] = (browser_source, )
 
     # Handle Extensions / Format selection
     if extension in ['mp3', 'wav', 'm4a']:

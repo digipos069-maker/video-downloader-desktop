@@ -15,6 +15,7 @@ from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
 from app.network import NetworkMonitor
 from app.config.settings_manager import load_settings
+from app.config.credentials import CredentialsManager
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -122,6 +123,7 @@ class DownloaderTab(QWidget):
         # --- Backend Setup ---
         self.platform_handler_factory = PlatformHandlerFactory()
         self.downloader = Downloader(self.platform_handler_factory)
+        self.credentials_manager = CredentialsManager()
         
         self.video_download_path = None
         self.photo_download_path = None
@@ -949,6 +951,15 @@ class DownloaderTab(QWidget):
             # Pass origin URL to settings for folder organization
             if 'origin_url' in metadata:
                 download_settings['origin_url'] = metadata['origin_url']
+            
+            # --- Inject Facebook Credentials if detecting Facebook URL ---
+            if "facebook.com" in item_url or "fb.watch" in item_url:
+                fb_creds = self.credentials_manager.get_credential('facebook')
+                if fb_creds:
+                    if fb_creds.get('cookie_file'):
+                        download_settings['cookie_file'] = fb_creds.get('cookie_file')
+                    if fb_creds.get('browser') and fb_creds.get('browser') != "None":
+                        download_settings['cookies_from_browser'] = fb_creds.get('browser')
 
             # Add to Backend Queue
             item_id = self.downloader.add_to_queue(item_url, handler, download_settings)
@@ -1118,6 +1129,15 @@ class DownloaderTab(QWidget):
                 url = url_item.text()
                 handler = self.platform_handler_factory.get_handler(url)
                 if handler:
+                    # Re-inject Facebook credentials if needed, similar to on_scraping_item_found
+                    if "facebook.com" in url or "fb.watch" in url:
+                        fb_creds = self.credentials_manager.get_credential('facebook')
+                        if fb_creds:
+                             if fb_creds.get('cookie_file'):
+                                settings['cookie_file'] = fb_creds.get('cookie_file')
+                             if fb_creds.get('browser') and fb_creds.get('browser') != "None":
+                                settings['cookies_from_browser'] = fb_creds.get('browser')
+
                     item_id = self.downloader.add_to_queue(url, handler, settings.copy())
                     self.activity_table.setItem(row, 3, QTableWidgetItem("Queued")) # Update status
                     self.activity_row_map[item_id] = row

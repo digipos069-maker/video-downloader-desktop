@@ -1389,3 +1389,23 @@
 2025-11-29 23:00:12,227 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
 2025-11-29 23:00:20,474 - INFO - Caption saved to: E:\test\sokhom501\\u178a\u179b\u17cb\u179c\u1782\u17d2\u1782\u179f\u1794\u17d2\u1794\u17b6\u1799\u17d7\u17a0\u17be\u1799\U0001f923\U0001f602\U0001f60d#\u179f\u17b6\u1780\u179b\u179c\u17b7\u1791\u17d2\u1799\u17b6\u179b\u17d0\u1799\u1797\u17bc\u1798\u17b7\u1793\u17d2\u1791\u1797\u17d2\u1793\u17c6\u1796\u17c1\u1789 .txt
 2025-11-29 23:00:20,474 - INFO - Download completed: https://www.tiktok.com/@sokhom501/video/7578122088733494548
+2025-11-29 23:56:57,456 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61579938422467
+2025-11-29 23:57:04,136 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-29 23:57:04,137 - DEBUG - Using proactor: IocpProactor
+2025-11-29 23:57:11,709 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61579938422467
+2025-11-29 23:57:17,607 - DEBUG - Scroll iteration 1/10 completed
+2025-11-29 23:57:19,115 - DEBUG - Scroll iteration 2/10 completed
+2025-11-29 23:57:20,622 - DEBUG - Scroll iteration 3/10 completed
+2025-11-29 23:57:22,130 - DEBUG - Scroll iteration 4/10 completed
+2025-11-29 23:57:23,637 - DEBUG - Scroll iteration 5/10 completed
+2025-11-29 23:57:25,144 - DEBUG - Scroll iteration 6/10 completed
+2025-11-29 23:57:26,652 - DEBUG - Scroll iteration 7/10 completed
+2025-11-29 23:57:28,159 - DEBUG - Scroll iteration 8/10 completed
+2025-11-29 23:57:29,666 - DEBUG - Scroll iteration 9/10 completed
+2025-11-29 23:57:31,172 - DEBUG - Scroll iteration 10/10 completed
+2025-11-29 23:57:31,203 - INFO - Found 35 raw links on page.
+2025-11-29 23:57:31,203 - INFO - Filtered down to 0 unique valid links.
+2025-11-29 23:57:31,203 - WARNING - No links found after filtering. Returning page fallback.
+2025-11-29 23:57:48,729 - INFO - Starting yt-dlp download for https://www.facebook.com/profile.php?id=61579938422467 to E:/test
+2025-11-29 23:57:48,743 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-29 23:57:50,931 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.facebook.com/people/Cozy-chic-spaces/61579938422467/
