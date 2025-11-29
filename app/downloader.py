@@ -78,9 +78,9 @@ class Downloader(QObject):
             'url': url,
             'handler': handler,
             'settings': settings,
-            'status': 'queued'
+            'status': 'held'
         })
-        self.status.emit(item_id, "Added to queue")
+        self.status.emit(item_id, "Added to list")
         return item_id
         # Do not automatically process queue here, wait for user action
 
@@ -128,12 +128,38 @@ class Downloader(QObject):
                  os.system("shutdown -h +1") # Shutdown in 1 minute
              print("Shutdown initiated...")
 
+    def queue_items(self, item_ids):
+        """Sets the status of specific items to 'queued'."""
+        ids_set = set(item_ids)
+        count = 0
+        for item in self.queue:
+            if item['id'] in ids_set:
+                item['status'] = 'queued'
+                count += 1
+        print(f"Set {count} items to 'queued' status.")
+
+    def queue_all(self):
+        """Sets the status of all 'held' items to 'queued'."""
+        count = 0
+        for item in self.queue:
+            if item['status'] == 'held':
+                item['status'] = 'queued'
+                count += 1
+        print(f"Set {count} items to 'queued' status.")
+
     def start_next_download(self):
         """Starts the next download from the queue."""
-        if self.queue_empty():
-            return
+        # Find the first item with status 'queued'
+        idx_to_pop = -1
+        for i, item in enumerate(self.queue):
+            if item['status'] == 'queued':
+                idx_to_pop = i
+                break
+        
+        if idx_to_pop == -1:
+            return # No items ready to download
 
-        item = self.queue.pop(0)
+        item = self.queue.pop(idx_to_pop)
         item['status'] = 'downloading'
         
         # Emit the signal that a download has started
@@ -161,6 +187,27 @@ class Downloader(QObject):
 
     def queue_empty(self):
         return len(self.queue) == 0
+
+    def promote_to_front(self, item_ids):
+        """
+        Moves the specified items to the front of the queue.
+        """
+        # Filter out items that match the IDs and those that don't
+        promoted_items = []
+        remaining_items = []
+        
+        # Create a set for O(1) lookup
+        ids_to_promote = set(item_ids)
+        
+        for item in self.queue:
+            if item['id'] in ids_to_promote:
+                promoted_items.append(item)
+            else:
+                remaining_items.append(item)
+        
+        # Reconstruct the queue: promoted items first, then the rest
+        self.queue = promoted_items + remaining_items
+        print(f"Promoted {len(promoted_items)} items to the front of the queue.")
 
 if __name__ == '__main__':
     # Example usage would need a QApplication

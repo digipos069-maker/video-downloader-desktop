@@ -990,6 +990,12 @@ class DownloaderTab(QWidget):
     def open_activity_context_menu(self, position):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
+        
+        download_action = menu.addAction("Download Selected")
+        download_action.triggered.connect(self.download_selected_activity_items)
+        
+        menu.addSeparator()
+        
         add_queue_action = menu.addAction("Add to Queue")
         add_queue_action.triggered.connect(self.add_selected_activity_to_queue)
         
@@ -997,6 +1003,49 @@ class DownloaderTab(QWidget):
         delete_action.triggered.connect(self.delete_selected_activity_item)
         
         menu.exec(self.activity_table.viewport().mapToGlobal(position))
+
+    def download_selected_activity_items(self):
+        """Promotes selected items to the top of the queue and starts downloading."""
+        selected_rows = set()
+        for item in self.activity_table.selectedItems():
+            selected_rows.add(item.row())
+            
+        if not selected_rows:
+            return
+            
+        # Find item IDs for the selected rows
+        item_ids = []
+        for row in selected_rows:
+            # Inefficient reverse lookup, but safe given existing structure
+            for i_id, r_idx in self.activity_row_map.items():
+                if r_idx == row:
+                    item_ids.append(i_id)
+                    break
+        
+        if item_ids:
+            self.status_message.emit(f"Starting {len(item_ids)} selected downloads...")
+            
+            # Update settings for queue items before starting
+            settings = {
+                'video_path': self.video_download_path,
+                'photo_path': self.photo_download_path,
+                'extension': self.extension_combo.currentText().lower(),
+                'naming_style': self.naming_combo.currentText(),
+                'subtitles': self.subs_checkbox.isChecked(),
+                'shutdown': self.shutdown_checkbox.isChecked()
+            }
+            self.downloader.update_queue_settings(settings)
+            
+            # Promote and Queue selected items
+            self.downloader.promote_to_front(item_ids)
+            self.downloader.queue_items(item_ids)
+            
+            # Reset counts if starting fresh or just update UI?
+            # We'll just ensure timer is running
+            if not self.timer.isActive():
+                self.start_timer()
+                
+            self.downloader.process_queue()
 
     def add_selected_activity_to_queue(self):
         selected_rows = set()

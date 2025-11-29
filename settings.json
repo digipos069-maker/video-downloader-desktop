@@ -14,7 +14,7 @@
         "quality": "Best Available"
     },
     "download": {
-        "extension": "Best",
+        "extension": "mp4",
         "naming": "Numbered (01. Name)",
         "subtitles": true,
         "video_path": "",
