@@ -886,7 +886,7 @@ class DownloaderTab(QWidget):
             print("[ERROR] Settings tab not linked!")
 
         # Create and start worker
-        self.scraping_worker = ScrapingWorker(url, self.platform_handler_factory, settings)
+        self.scraping_worker = ScrapingWorker(url, self.platform_handler_factory, settings, parent=self)
         self.scraping_worker.item_found.connect(self.on_scraping_item_found)
         self.scraping_worker.finished.connect(self.on_scraping_finished)
         self.scraping_worker.error.connect(self.on_scraping_error)
@@ -957,9 +957,7 @@ class DownloaderTab(QWidget):
         self.status_message.emit("Scraping completed.")
         self.scrap_button.setEnabled(True)
         # Clean up worker
-        if hasattr(self, 'scraping_worker'):
-            self.scraping_worker.deleteLater()
-            self.scraping_worker = None
+
 
     @Slot(str)
     def on_scraping_error(self, message):
