@@ -31,32 +31,15 @@ QLabel#TitleBarTitle {
     padding-left: 5px;
 }
 
-QPushButton#TitleBarButton {
+/* Custom Caption Button Base */
+QAbstractButton#CaptionButton, QAbstractButton#CaptionCloseButton {
     background-color: transparent;
     border: none;
     border-radius: 0px;
-    color: #A1A1AA;
-    font-size: 12pt;
-    border-bottom-left-radius: 0px;
 }
 
-QPushButton#TitleBarButton:hover {
-    background-color: #3F3F46;
-    color: #F4F4F5;
-}
-
-QPushButton#TitleBarCloseButton {
-    background-color: transparent;
-    border: none;
-    border-radius: 0px;
-    color: #A1A1AA;
-    font-size: 12pt;
-    border-top-right-radius: 8px; /* Match window radius */
-}
-
-QPushButton#TitleBarCloseButton:hover {
-    background-color: #EF4444; /* Red */
-    color: #FFFFFF;
+/* Close button rounded corner fix */
+QAbstractButton#CaptionCloseButton {
     border-top-right-radius: 8px;
 }
 
