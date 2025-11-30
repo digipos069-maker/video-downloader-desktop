@@ -740,6 +740,12 @@ class BaseHandler(ABC):
                     folder_name = ""
                     
                     # Special handling for common platforms
+                    query_part = ""
+                    if parsed.query:
+                        # Use the first query parameter
+                        first_param = parsed.query.split('&')[0]
+                        query_part = f"_{first_param}"
+
                     if 'youtube.com' in norm_origin or 'youtu.be' in norm_origin:
                         if 'playlist' in path:
                              # Use query param 'list' if possible, or just 'Playlist'
@@ -749,13 +755,13 @@ class BaseHandler(ABC):
                              if 'list' in qs:
                                  folder_name = f"Playlist_{qs['list'][0]}"
                         elif 'channel' in path or 'c/' in path or 'user' in path or '@' in path:
-                             folder_name = path.replace('/', '_')
+                             folder_name = path.replace('/', '_') + query_part
                     elif 'tiktok.com' in norm_origin:
-                        folder_name = path.replace('/', '_')
+                        folder_name = path.replace('/', '_') + query_part
                     elif 'instagram.com' in norm_origin:
-                         folder_name = path.replace('/', '_')
+                         folder_name = path.replace('/', '_') + query_part
                     else:
-                        folder_name = path.replace('/', '_')
+                        folder_name = path.replace('/', '_') + query_part
                     
                     # Sanitize
                     if folder_name:

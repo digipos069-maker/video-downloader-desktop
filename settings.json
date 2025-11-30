@@ -15,14 +15,14 @@
     },
     "download": {
         "extension": "mkv",
-        "naming": "Video + Caption (.txt)",
+        "naming": "Original Name",
         "subtitles": false,
         "video_path": "",
         "photo_path": "E:/test"
     },
     "system": {
         "threads": 10,
-        "shutdown": true
+        "shutdown": false
     },
     "user_profile": {
         "username": "Phal"

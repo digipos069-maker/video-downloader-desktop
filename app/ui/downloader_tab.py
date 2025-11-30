@@ -661,13 +661,24 @@ class DownloaderTab(QWidget):
         # Footer Controls
         footer_layout = QHBoxLayout()
         
-        # Replaced Label with Global Progress Bar
+        # Global Status Label (For Scraping/Idle messages)
+        self.global_status_label = QLabel("Ready")
+        self.global_status_label.setAlignment(Qt.AlignCenter)
+        self.global_status_label.setFixedHeight(20)
+        self.global_status_label.setStyleSheet("""
+            color: #3B82F6;
+            font-weight: bold;
+            font-size: 9pt;
+        """)
+        
+        # Replaced Label with Global Progress Bar (For active downloads)
         self.global_progress_bar = QProgressBar()
         self.global_progress_bar.setRange(0, 1) # Default range
         self.global_progress_bar.setValue(0)
         self.global_progress_bar.setTextVisible(True)
         self.global_progress_bar.setFormat("Ready") # Initial text
         self.global_progress_bar.setFixedHeight(20)
+        self.global_progress_bar.setVisible(False) # Hidden by default
         self.global_progress_bar.setStyleSheet("""
             QProgressBar {
                 border: 1px solid #27272A;
@@ -684,7 +695,7 @@ class DownloaderTab(QWidget):
             }
         """)
         
-        # self.status_message.connect(self.update_status_message) # We will use bar text now
+        self.status_message.connect(self.handle_status_message)
         
         action_btn_style = """
              QPushButton {
@@ -729,6 +740,7 @@ class DownloaderTab(QWidget):
             }
         """)
         
+        footer_layout.addWidget(self.global_status_label, 1)
         footer_layout.addWidget(self.global_progress_bar, 1) # Give it stretch 1 to expand
         footer_layout.addSpacing(8)
         footer_layout.addWidget(self.download_button)
@@ -958,7 +970,7 @@ class DownloaderTab(QWidget):
 
     def process_scraping(self, url):
         """Helper method to handle the scraping logic for a given URL using a background thread."""
-        self.status_message.emit(f"Scraping URL: {url}...")
+        self.handle_status_message(f"Scraping URL: {url}...")
         
         # Get settings
         settings = {}
@@ -1132,9 +1144,10 @@ class DownloaderTab(QWidget):
             msg = f"Starting {len(valid_ids)} selected downloads..."
             if skipped_count > 0:
                 msg += f" ({skipped_count} items skipped/completed)"
-            self.status_message.emit(msg)
+            # self.status_message.emit(msg) # Removed to avoid mode conflict
             
             # Update global progress bar for selected batch
+            self.update_footer_mode("progress") # Switch to progress bar
             self.total_downloads = len(item_ids) # Total is what user selected
             self.completed_downloads = skipped_count # Treat missing ones as 'done'
             self.failed_downloads = 0 
@@ -1342,9 +1355,24 @@ class DownloaderTab(QWidget):
         # print(f"Update status for {item_id[:8]}...: {message}")
 
     @Slot(str)
-    def update_status_message(self, message):
-        """Slot to update the global status label."""
+    def handle_status_message(self, message):
+        """Updates the global status label and ensures it is visible."""
         self.global_status_label.setText(message)
+        self.update_footer_mode("status")
+
+    def update_footer_mode(self, mode):
+        """Switches footer display between 'status' (Label) and 'progress' (Bar)."""
+        if mode == "progress":
+            self.global_status_label.setVisible(False)
+            self.global_progress_bar.setVisible(True)
+        else:
+            self.global_progress_bar.setVisible(False)
+            self.global_status_label.setVisible(True)
+
+    @Slot(str)
+    def update_status_message(self, message):
+        """Legacy Slot to update the global status label."""
+        self.handle_status_message(message)
 
     def _update_footer_progress(self, item_id, percentage):
         """Updates or adds a progress bar in the footer for the given item."""
