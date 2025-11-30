@@ -18,6 +18,7 @@ from app.config.settings_manager import load_settings
 from app.config.credentials import CredentialsManager
 from app.config.license_manager import LicenseManager
 from app.ui.license_dialog import LicenseDialog
+from app.ui.edit_username_dialog import EditUsernameDialog
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -771,10 +772,11 @@ class DownloaderTab(QWidget):
         self.load_ui_state()
 
     def edit_username_event(self, event):
-        from PySide6.QtWidgets import QInputDialog
-        text, ok = QInputDialog.getText(self, 'Edit Username', 'Enter new username:')
-        if ok and text:
-            self.username_label.setText(f"User: {text}")
+        current_name = self.username_label.text().replace("User: ", "")
+        dialog = EditUsernameDialog(current_name, self)
+        if dialog.exec():
+            if dialog.new_username:
+                self.username_label.setText(f"User: {dialog.new_username}")
 
     def load_ui_state(self):
         """Loads the UI state from settings."""
