@@ -20,6 +20,7 @@ from app.config.license_manager import LicenseManager
 from app.ui.license_dialog import LicenseDialog
 from app.ui.edit_username_dialog import EditUsernameDialog
 from app.ui.widgets.custom_message_box import CustomMessageBox
+from app.ui.widgets.social_icon import SocialIcon
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -162,25 +163,25 @@ class DownloaderTab(QWidget):
 
         # --- UI Layout ---
         main_layout = QVBoxLayout(self) # Changed to QVBoxLayout
-        main_layout.setContentsMargins(15, 15, 15, 15)
-        main_layout.setSpacing(15)
+        main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(10)
 
         # --- Top Bar (Two Rows) ---
         top_bar_layout = QVBoxLayout()
-        top_bar_layout.setSpacing(10)
+        top_bar_layout.setSpacing(5)
 
         # Row 1: Logo, Network Speed, User
         row1_layout = QHBoxLayout()
-        row1_layout.setSpacing(15)
+        row1_layout.setSpacing(10)
 
         self.logo_label = QLabel("Logo") 
-        self.logo_label.setFixedSize(64, 64)
+        self.logo_label.setFixedSize(48, 48)
         self.logo_label.setAlignment(Qt.AlignCenter)
-        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 32px; font-weight: bold;")
+        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 24px; font-weight: bold;")
         
         # Speed Info Box
         speed_box = QFrame()
-        speed_box.setFixedHeight(36)
+        speed_box.setFixedHeight(30)
         speed_box.setStyleSheet("""
             QFrame {
                 background-color: #1C1C21;
@@ -196,14 +197,14 @@ class DownloaderTab(QWidget):
             }
         """)
         speed_layout = QHBoxLayout(speed_box)
-        speed_layout.setContentsMargins(12, 0, 12, 0)
+        speed_layout.setContentsMargins(8, 0, 8, 0)
         self.speed_label = QLabel("↓ 0.00 Mbps / ↑ 0.00 Mbps")
         self.speed_label.setObjectName("speed_label")
         speed_layout.addWidget(self.speed_label)
 
         # User Info Box
         user_box = QFrame()
-        user_box.setFixedHeight(36)
+        user_box.setFixedHeight(30)
         user_box.setStyleSheet("""
             QFrame {
                 background-color: #1C1C21;
@@ -219,7 +220,7 @@ class DownloaderTab(QWidget):
             }
         """)
         user_layout = QHBoxLayout(user_box)
-        user_layout.setContentsMargins(12, 0, 12, 0)
+        user_layout.setContentsMargins(8, 0, 8, 0)
         self.username_label = QLabel("User: Guest")
         self.username_label.setObjectName("username_label")
         self.username_label.setCursor(Qt.PointingHandCursor)
@@ -234,7 +235,7 @@ class DownloaderTab(QWidget):
         # Timer Box Display
         self.timer_label = QLabel("00:00:00")
         self.timer_label.setAlignment(Qt.AlignCenter)
-        self.timer_label.setFixedSize(100, 36)
+        self.timer_label.setFixedSize(90, 30)
         self.timer_label.setStyleSheet("""
             QLabel {
                 background-color: #1C1C21;
@@ -242,7 +243,7 @@ class DownloaderTab(QWidget):
                 border-radius: 8px;
                 color: #10B981; /* Green for timer */
                 font-weight: bold;
-                font-size: 11pt;
+                font-size: 10pt;
                 font-family: Consolas, "Courier New", monospace;
             }
         """)
@@ -253,14 +254,14 @@ class DownloaderTab(QWidget):
         # Top Right Buttons (Update & License)
         self.check_update_button = QPushButton("Check Update")
         self.check_update_button.setCursor(Qt.PointingHandCursor)
-        self.check_update_button.setFixedHeight(30)
+        self.check_update_button.setFixedHeight(26)
         self.check_update_button.setStyleSheet("""
             QPushButton {
                 background-color: #1C1C21;
                 color: #A1A1AA;
                 border: 1px solid #27272A;
-                border-radius: 15px;
-                padding: 0 12px;
+                border-radius: 13px;
+                padding: 0 10px;
                 font-size: 9pt;
                 font-weight: 600;
             }
@@ -273,14 +274,14 @@ class DownloaderTab(QWidget):
         
         self.license_status_button = QPushButton("License Status")
         self.license_status_button.setCursor(Qt.PointingHandCursor)
-        self.license_status_button.setFixedHeight(30)
+        self.license_status_button.setFixedHeight(26)
         self.license_status_button.setStyleSheet("""
             QPushButton {
                 background-color: #1C1C21;
                 color: #F59E0B;
                 border: 1px solid #27272A;
-                border-radius: 15px;
-                padding: 0 12px;
+                border-radius: 13px;
+                padding: 0 10px;
                 font-size: 9pt;
                 font-weight: 600;
             }
@@ -299,19 +300,19 @@ class DownloaderTab(QWidget):
 
         # Row 2: Input, Buttons, Supported Icons
         row2_layout = QHBoxLayout()
-        row2_layout.setSpacing(10) 
+        row2_layout.setSpacing(5) 
         
         input_block_layout = QHBoxLayout()
         input_block_layout.setSpacing(5)
         
         self.url_input = QLineEdit()
         self.url_input.setPlaceholderText("Paste video URL here...")
-        self.url_input.setFixedHeight(35)
+        self.url_input.setFixedHeight(30)
         self.url_input.setStyleSheet("""
             QLineEdit {
                 background-color: #1C1C21;
                 border: 2px solid #27272A;
-                border-radius: 17px; /* approx 50% of 35px */
+                border-radius: 15px; /* approx 50% of 30px */
                 padding: 0 8px;
                 color: #F4F4F5;
                 font-size: 10pt;
@@ -324,13 +325,13 @@ class DownloaderTab(QWidget):
         
         self.add_to_queue_button = QPushButton("Add to Queue")
         self.add_to_queue_button.setCursor(Qt.PointingHandCursor)
-        self.add_to_queue_button.setFixedHeight(35)
+        self.add_to_queue_button.setFixedHeight(30)
         self.add_to_queue_button.clicked.connect(self.add_url_to_download_queue)
         self.add_to_queue_button.setStyleSheet("""
             QPushButton {
                 background-color: #3B82F6;
                 color: white;
-                border-radius: 17px;
+                border-radius: 15px;
                 padding: 0 10px;
                 font-weight: bold;
                 font-size: 10pt;
@@ -345,13 +346,13 @@ class DownloaderTab(QWidget):
         
         self.scrap_button = QPushButton("Scrap Now")
         self.scrap_button.setCursor(Qt.PointingHandCursor)
-        self.scrap_button.setFixedHeight(35)
+        self.scrap_button.setFixedHeight(30)
         self.scrap_button.clicked.connect(self.scrap_url)
         self.scrap_button.setStyleSheet("""
             QPushButton {
                 background-color: #10B981;
                 color: white;
-                border-radius: 17px;
+                border-radius: 15px;
                 padding: 0 10px;
                 font-weight: bold;
                 font-size: 10pt;
@@ -373,42 +374,18 @@ class DownloaderTab(QWidget):
         
         # Supported Platform Icons
         platform_icons_layout = QHBoxLayout()
-        platform_icons_layout.setSpacing(5) # Spacing between icons
-        platform_icons_layout.setAlignment(Qt.AlignRight | Qt.AlignVCenter) # Align icons to the right and vertically center
+        platform_icons_layout.setSpacing(8) # Spacing between icons
+        platform_icons_layout.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
 
-        # Helper to create a circular icon label with an image
-        def create_circular_icon_with_image(image_path, tooltip):
-            icon_label = QLabel()
-            icon_label.setFixedSize(30, 30) # Small circular icon
-            icon_label.setAlignment(Qt.AlignCenter)
-            
-            # Use a stylesheet for circular shape and background, image is set via QPixmap
-            icon_label.setStyleSheet(
-                "border-radius: 15px; " # Half of width/height for circular shape
-                "background-color: #383838; " # A neutral background for the circle
-                "border: 1px solid #555555;" # Optional: add a subtle border
-            )
+        # Base path for icons
+        icon_base_path = "app/resources/images/icons/social/" 
 
-            pixmap = QPixmap(image_path)
-            if not pixmap.isNull():
-                # Scale pixmap to fit inside the 30x30 label, preserving aspect ratio
-                scaled_pixmap = pixmap.scaled(24, 24, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-                icon_label.setPixmap(scaled_pixmap)
-            else:
-                # Fallback if image not found, display '?'
-                icon_label.setText("?") 
-                icon_label.setStyleSheet(icon_label.styleSheet() + "color: white; font-weight: bold;")
-                
-            icon_label.setToolTip(tooltip)
-            return icon_label
-
-        # Base path for icons - assuming images are in app/resources/images/
-        icon_base_path = "app/resources/images/" 
-
-        # Add icons for supported platforms (YouTube, TikTok, Facebook)
-        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "youtube.png", "YouTube"))
-        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "tiktok.png", "TikTok"))
-        platform_icons_layout.addWidget(create_circular_icon_with_image(icon_base_path + "facebook.png", "Facebook"))
+        # Add icons using the new SocialIcon widget with animation
+        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "youtube.png", "YouTube", size=32))
+        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "tik-tok.png", "TikTok", size=32))
+        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "facebook.png", "Facebook", size=32))
+        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "instagram.png", "Instagram", size=32))
+        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "pinterest.png", "Pinterest", size=32))
         
         row2_layout.addLayout(platform_icons_layout)
         
@@ -416,23 +393,24 @@ class DownloaderTab(QWidget):
 
         # --- Content Area (Two Columns) ---
         content_layout = QHBoxLayout()
-        content_layout.setSpacing(15)
+        content_layout.setSpacing(10)
 
         # --- Left Sidebar ---
         left_sidebar_widget = QWidget()
         left_sidebar_layout = QVBoxLayout(left_sidebar_widget)
         left_sidebar_layout.setContentsMargins(0, 0, 0, 0)
-        left_sidebar_layout.setSpacing(10)
-        left_sidebar_widget.setFixedWidth(280)
+        left_sidebar_layout.setSpacing(8)
+        left_sidebar_widget.setFixedWidth(240)
 
         # --- Right Side (Main Content) ---
         right_content_layout = QVBoxLayout()
-        right_content_layout.setSpacing(10)
+        right_content_layout.setSpacing(8)
         
         # --- Left Sidebar Widgets ---
         queue_group = QGroupBox("Downloading Queue")
         queue_layout = QVBoxLayout()
         self.queue_table_widget = QTableWidget()
+        self.queue_table_widget.setMinimumHeight(150) # Increased height
         self.queue_table_widget.setColumnCount(2)
         self.queue_table_widget.setHorizontalHeaderLabels(["#", "URL"])
         self.queue_table_widget.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
@@ -447,7 +425,7 @@ class DownloaderTab(QWidget):
         
         paths_group = QGroupBox("Download Paths")
         paths_layout = QVBoxLayout()
-        paths_layout.setSpacing(10)
+        paths_layout.setSpacing(8)
         
         path_btn_style = """
             QPushButton {
@@ -455,7 +433,7 @@ class DownloaderTab(QWidget):
                 color: #A1A1AA;
                 border: 1px solid #27272A;
                 border-radius: 8px;
-                padding: 5px;
+                padding: 4px;
                 text-align: left;
                 font-size: 10pt;
             }
@@ -480,17 +458,18 @@ class DownloaderTab(QWidget):
         paths_layout.addWidget(self.photo_path_button)
         paths_group.setLayout(paths_layout)
 
-        left_sidebar_layout.addWidget(queue_group)
+        left_sidebar_layout.addWidget(queue_group, 1) # Stretch factor 1 to fill space
         left_sidebar_layout.addWidget(paths_group)
-        left_sidebar_layout.addStretch()
+        # left_sidebar_layout.addStretch() # Removed stretch to let queue_group expand
         
         # --- Right Content Widgets ---
         activity_group = QGroupBox("Download Activity")
         activity_layout = QVBoxLayout()
-        activity_layout.setContentsMargins(0, 10, 0, 0) 
+        activity_layout.setContentsMargins(0, 5, 0, 0) 
 
         # Activity Table
         self.activity_table = QTableWidget()
+        self.activity_table.setMinimumHeight(200) # Increased height
         self.activity_table.setColumnCount(9)
         self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Progress"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
@@ -514,7 +493,7 @@ class DownloaderTab(QWidget):
         
         # Use a Horizontal layout for the settings group to place items side-by-side
         settings_layout = QHBoxLayout()
-        settings_layout.setSpacing(20)
+        settings_layout.setSpacing(10)
         
         # Define a modern stylesheet for the combo boxes and checkbox
         input_style = """
@@ -640,7 +619,7 @@ class DownloaderTab(QWidget):
         # --- System Settings Group ---
         system_group = QGroupBox("System Settings")
         system_layout = QVBoxLayout()
-        system_layout.setSpacing(12)
+        system_layout.setSpacing(8)
         
         # Threads Option
         threads_layout = QHBoxLayout()
@@ -688,11 +667,11 @@ class DownloaderTab(QWidget):
         self.global_progress_bar.setValue(0)
         self.global_progress_bar.setTextVisible(True)
         self.global_progress_bar.setFormat("Ready") # Initial text
-        self.global_progress_bar.setFixedHeight(24)
+        self.global_progress_bar.setFixedHeight(20)
         self.global_progress_bar.setStyleSheet("""
             QProgressBar {
                 border: 1px solid #27272A;
-                border-radius: 12px;
+                border-radius: 10px;
                 text-align: center;
                 color: #F4F4F5;
                 background-color: #1C1C21;
@@ -701,7 +680,7 @@ class DownloaderTab(QWidget):
             }
             QProgressBar::chunk {
                 background-color: #3B82F6;
-                border-radius: 11px;
+                border-radius: 9px;
             }
         """)
         
@@ -709,7 +688,7 @@ class DownloaderTab(QWidget):
         
         action_btn_style = """
              QPushButton {
-                border-radius: 17px; /* 50% of 35px height */
+                border-radius: 15px; /* 50% of 30px height */
                 padding: 0 12px;
                 font-weight: bold;
                 font-size: 11pt;
@@ -718,7 +697,7 @@ class DownloaderTab(QWidget):
         
         self.download_button = QPushButton("Download All")
         self.download_button.setCursor(Qt.PointingHandCursor)
-        self.download_button.setFixedHeight(35)
+        self.download_button.setFixedHeight(30)
         self.download_button.clicked.connect(self.start_download_from_queue)
         self.download_button.setStyleSheet(action_btn_style + """
             QPushButton {
@@ -735,7 +714,7 @@ class DownloaderTab(QWidget):
         
         self.cancel_button = QPushButton("Cancel All")
         self.cancel_button.setCursor(Qt.PointingHandCursor)
-        self.cancel_button.setFixedHeight(35)
+        self.cancel_button.setFixedHeight(30)
         self.cancel_button.clicked.connect(self.cancel_all_downloads) # Connected to new slot
         self.cancel_button.setStyleSheet(action_btn_style + """
              QPushButton {
@@ -751,14 +730,14 @@ class DownloaderTab(QWidget):
         """)
         
         footer_layout.addWidget(self.global_progress_bar, 1) # Give it stretch 1 to expand
-        footer_layout.addSpacing(10)
+        footer_layout.addSpacing(8)
         footer_layout.addWidget(self.download_button)
         footer_layout.addWidget(self.cancel_button)
         
         footer_main_layout.addLayout(footer_layout)
 
         # --- Assemble Right Layout ---
-        right_content_layout.addWidget(activity_group)
+        right_content_layout.addWidget(activity_group, 1) # STRETCH FACTOR 1 - THIS MAKES IT EXPAND
         right_content_layout.addLayout(bottom_controls_layout)
         right_content_layout.addLayout(footer_main_layout)
         

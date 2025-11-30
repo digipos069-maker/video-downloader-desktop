@@ -10,7 +10,7 @@ class CustomMessageBox(CustomDialogBase):
     """
     def __init__(self, title, message, parent=None):
         super().__init__(title=title, parent=parent)
-        self.setFixedSize(400, 200)
+        self.setFixedSize(400, 160)
 
         # Message Label
         self.message_label = QLabel(message)
@@ -37,7 +37,7 @@ class CustomMessageBox(CustomDialogBase):
                 background-color: #3B82F6;
                 color: white;
                 border-radius: 4px;
-                padding: 8px;
+                padding: 6px 12px;
                 font-weight: 600;
             }
             QPushButton:hover {

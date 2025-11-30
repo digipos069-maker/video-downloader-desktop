@@ -25,11 +25,11 @@ VERIFY_BTN_STYLE = """
         background-color: #3B82F6;
         color: white;
         border: none;
-        padding: 8px 16px;
+        padding: 6px 12px;
         border-radius: 6px;
         font-weight: bold;
         font-size: 10pt;
-        margin-top: 10px;
+        margin-top: 8px;
     }
     QPushButton:hover {
         background-color: #2563EB;
@@ -44,7 +44,7 @@ SAVE_BTN_STYLE = """
         background-color: #3B82F6;
         color: white;
         border: none;
-        padding: 8px 16px;
+        padding: 6px 12px;
         border-radius: 6px;
         font-weight: bold;
         font-size: 10pt;
@@ -220,8 +220,8 @@ class SettingsTab(QWidget):
         self.credentials_manager = CredentialsManager()
 
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(15, 15, 15, 15)
-        layout.setSpacing(15)
+        layout.setContentsMargins(10, 10, 10, 10)
+        layout.setSpacing(10)
         
         label_style = "color: #A1A1AA; font-weight: 600; background-color: transparent;"
         
@@ -229,12 +229,12 @@ class SettingsTab(QWidget):
 
         # --- Global Settings ---
         global_settings_layout = QHBoxLayout()
-        global_settings_layout.setSpacing(20)
+        global_settings_layout.setSpacing(10)
 
         # 1. Video Settings Box
         video_group = QGroupBox("Video Settings")
         video_layout = QVBoxLayout()
-        video_layout.setSpacing(15)
+        video_layout.setSpacing(8)
 
         self.enable_video_chk = QCheckBox("Enable Video Download")
         
@@ -274,7 +274,7 @@ class SettingsTab(QWidget):
         # 2. Photo Settings Box
         photo_group = QGroupBox("Photo Settings")
         photo_layout = QVBoxLayout()
-        photo_layout.setSpacing(15)
+        photo_layout.setSpacing(8)
 
         self.enable_photo_chk = QCheckBox("Enable Photo Download")
         
@@ -336,8 +336,8 @@ class SettingsTab(QWidget):
         # --- Facebook Credentials Tab ---
         facebook_tab = QWidget()
         fb_layout = QVBoxLayout(facebook_tab)
-        fb_layout.setSpacing(10)
-        fb_layout.setContentsMargins(15, 15, 15, 15)
+        fb_layout.setSpacing(8)
+        fb_layout.setContentsMargins(10, 10, 10, 10)
         
         fb_desc = QLabel("For private or age-restricted content, you must be logged in.\nOption 1 (Preferred): Select a 'cookies.txt' file exported from your browser (Netscape format).\nOption 2: Select the browser where you are already logged into Facebook.")
         fb_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")

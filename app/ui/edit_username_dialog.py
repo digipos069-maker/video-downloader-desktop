@@ -7,7 +7,7 @@ from app.ui.widgets.custom_dialog import CustomDialogBase
 class EditUsernameDialog(CustomDialogBase):
     def __init__(self, current_username, parent=None):
         super().__init__(title="Edit Username", parent=parent)
-        self.setFixedSize(350, 180)
+        self.setFixedSize(350, 150)
         self.new_username = None
 
         # Input Field
@@ -17,7 +17,7 @@ class EditUsernameDialog(CustomDialogBase):
             QLineEdit {
                 background-color: #27272A;
                 border: 1px solid #3F3F46;
-                padding: 8px;
+                padding: 4px 8px;
                 border-radius: 4px;
                 color: #F4F4F5;
                 font-size: 10pt;

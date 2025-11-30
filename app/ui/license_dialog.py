@@ -9,7 +9,7 @@ from app.ui.widgets.custom_dialog import CustomDialogBase
 class LicenseDialog(CustomDialogBase):
     def __init__(self, parent=None):
         super().__init__(title="Activate License", parent=parent)
-        self.setFixedSize(400, 340)
+        self.setFixedSize(400, 300)
         
         self.license_manager = LicenseManager()
         
@@ -34,7 +34,7 @@ class LicenseDialog(CustomDialogBase):
             QLineEdit {
                 background-color: #27272A; 
                 border: 1px solid #3F3F46; 
-                padding: 8px; 
+                padding: 4px 8px; 
                 border-radius: 4px;
                 color: #F4F4F5;
             }
@@ -47,7 +47,7 @@ class LicenseDialog(CustomDialogBase):
                 background-color: #3B82F6; 
                 color: white; 
                 border-radius: 4px; 
-                padding: 8px 15px;
+                padding: 6px 12px;
                 font-weight: 600;
             }
             QPushButton:hover { background-color: #2563EB; }
@@ -69,7 +69,7 @@ class LicenseDialog(CustomDialogBase):
             QLineEdit {
                 background-color: #27272A; 
                 border: 1px solid #3F3F46; 
-                padding: 8px; 
+                padding: 4px 8px; 
                 border-radius: 4px;
                 color: #F4F4F5;
             }
@@ -80,14 +80,14 @@ class LicenseDialog(CustomDialogBase):
         # Activate Button
         self.activate_btn = QPushButton("Activate License")
         self.activate_btn.setCursor(Qt.PointingHandCursor)
-        self.activate_btn.setFixedHeight(40)
+        self.activate_btn.setFixedHeight(35)
         self.activate_btn.setStyleSheet("""
             QPushButton {
                 background-color: #10B981; 
                 color: white; 
                 font-weight: bold; 
                 border-radius: 6px;
-                font-size: 11pt;
+                font-size: 10pt;
             }
             QPushButton:hover { background-color: #059669; }
         """)

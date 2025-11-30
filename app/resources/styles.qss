@@ -54,7 +54,7 @@ QTabWidget::pane {
 QTabBar::tab {
     background-color: #1C1C21;
     color: #A1A1AA;
-    padding: 10px 20px;
+    padding: 6px 12px; /* Reduced padding */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border: 1px solid #27272A;
@@ -83,14 +83,14 @@ QGroupBox {
     background-color: #1C1C21;
     border-radius: 12px;
     border: 1px solid #27272A;
-    margin-top: 24px; /* Space for title */
-    padding: 20px;
+    margin-top: 10px; /* Reduced margin */
+    padding: 10px; /* Reduced padding */
 }
 
 QGroupBox::title {
     subcontrol-origin: margin;
     subcontrol-position: top left;
-    padding: 0 10px;
+    padding: 0 5px;
     left: 10px;
     color: #3B82F6; /* Accent color for titles */
     font-weight: bold;
@@ -102,7 +102,7 @@ QLineEdit {
     background-color: #101014;
     border: 2px solid #27272A;
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 4px 8px; /* Reduced padding */
     color: #F4F4F5;
     selection-background-color: #3B82F6;
 }
@@ -117,7 +117,7 @@ QPushButton {
     color: #F4F4F5;
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 6px 12px; /* Reduced padding */
     font-weight: 600;
 }
 
@@ -140,14 +140,14 @@ QTableWidget {
 }
 
 QTableWidget::item {
-    padding: 8px;
+    padding: 4px; /* Reduced padding */
     border-bottom: 1px solid #27272A;
 }
 
 QHeaderView::section {
     background-color: #101014;
     color: #A1A1AA;
-    padding: 8px;
+    padding: 4px; /* Reduced padding */
     border: none;
     border-bottom: 2px solid #27272A;
     font-weight: bold;

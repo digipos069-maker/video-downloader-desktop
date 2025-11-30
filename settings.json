@@ -14,7 +14,7 @@
         "quality": "Best Available"
     },
     "download": {
-        "extension": "Best",
+        "extension": "mkv",
         "naming": "Video + Caption (.txt)",
         "subtitles": false,
         "video_path": "",
@@ -22,7 +22,7 @@
     },
     "system": {
         "threads": 10,
-        "shutdown": false
+        "shutdown": true
     },
     "user_profile": {
         "username": "Phal"
