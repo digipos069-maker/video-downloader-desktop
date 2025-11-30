@@ -2294,3 +2294,107 @@
 2025-11-30 10:12:28,127 - DEBUG - Scroll iteration 10/10 completed
 2025-11-30 10:12:28,152 - INFO - Found 55 raw links on page.
 2025-11-30 10:12:28,153 - INFO - Filtered down to 29 unique valid links.
+2025-11-30 11:11:55,607 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:12:35,703 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:13:16,383 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:13:27,279 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:15:31,471 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:19:39,743 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:19:49,047 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:24:30,663 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:24:30,663 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:24:37,543 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:24:37,543 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:25:56,999 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:25:56,999 - ERROR - License verification failed: Signature mismatch. Got d1e9ca4885cf2360035492d301a31bee0317a67de75
+6e785cd33820685b1ff5e, Expected 56003a0f0386a38b81ca3c533b68ec2f2f8f8bf9d9eb63a5cb310c2b6d59a522
+2025-11-30 11:28:43,231 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:28:44,752 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:28:44,753 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:28:48,299 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:29:42,456 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:29:44,936 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:29:57,671 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:29:59,346 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:29:59,346 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 11:29:59,346 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 11:30:17,914 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 11:30:17,914 - DEBUG - Using proactor: IocpProactor
+2025-11-30 11:30:18,870 - INFO - Playwright visiting: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:30:25,373 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 11:30:26,880 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 11:30:28,387 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 11:30:29,895 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 11:30:31,403 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 11:30:32,908 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 11:30:34,416 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 11:30:35,923 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 11:30:37,431 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 11:30:38,939 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 11:30:38,960 - INFO - Found 24 raw links on page.
+2025-11-30 11:30:38,960 - INFO - Filtered down to 10 unique valid links.
+2025-11-30 11:30:46,038 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,040 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,040 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1138455897836320/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,041 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,042 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,042 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,042 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1126795395940619/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,042 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1113461410545247/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,043 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,043 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:30:46,109 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,109 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,109 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,229 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,229 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,229 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,230 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,231 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,232 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,398 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,398 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,398 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,433 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,450 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,529 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,572 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,633 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,680 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,884 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,884 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,916 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,942 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,942 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,942 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:46,943 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:46,944 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:46,946 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:47,071 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:30:47,198 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:30:47,208 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:30:52,375 - ERROR - Download failed: [0;31mERROR:[0m [facebook] 1138455897836320: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-30 11:30:57,673 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\pisethjs_reels\\Video.mp4.part' -> 'E:\\test\\pisethjs_reels\\Video.mp4'. Giving up after 3 retries
+2025-11-30 11:30:57,690 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\pisethjs_reels\\Video.mp4.part' -> 'E:\\test\\pisethjs_reels\\Video.mp4'. Giving up after 3 retries
+2025-11-30 11:30:59,056 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\pisethjs_reels\\Video.mp4.part' -> 'E:\\test\\pisethjs_reels\\Video.mp4'. Giving up after 3 retries
+2025-11-30 11:30:59,902 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1780\u17d2\u178f\u17b8\u179f\u17d2\u179a\u1798\u17c9\u17c3\u1793\u17b7\u1784\u1780\u17b6\u179a\u178f\u17b6\u17c6\u1784\u1785\u17b7\u178f\u17d2\u178f.txt
+2025-11-30 11:30:59,903 - INFO - Download completed: https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:31:02,076 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u1793\u17d2\u179b\u17b9\u17c7\u1784\u17b6\u1799\u17d7 \u178f\u17c2\u1796\u17b7\u1794\u17b6\u1780\u17a2\u1793\u17bb\u179c\u178f\u17d2\u178f\u1794\u17be\u1782\u17d2\u1798\u17b6\u1793\u179c\u17b7\u1793\u17d0\u1799.txt
+2025-11-30 11:31:02,079 - INFO - Download completed: https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:31:05,475 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\pisethjs_reels\\Video.mp4.part' -> 'E:\\test\\pisethjs_reels\\Video.mp4'. Giving up after 3 retries
+2025-11-30 11:31:12,450 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u17d2\u179a\u17bc\u1796\u17b7\u179f\u17b7\u178a\u17d2\u178b\u1794\u178e\u17d2\u178f\u17bb\u17c7\u1799\u17bb\u179c\u1787\u1793\u17a2\u17c4\u1799\u1780\u17d2\u179b\u17b6\u1799\u1787\u17b6 Developer \u1781\u17d2\u179b\u17b6\u17c6\u1784.txt
+2025-11-30 11:31:12,451 - INFO - Download completed: https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:31:12,979 - ERROR - Download failed: [0;31mERROR:[0m Unable to rename file: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\test\\pisethjs_reels\\Video.mp4.part' -> 'E:\\test\\pisethjs_reels\\Video.mp4'. Giving up after 3 retries
+2025-11-30 11:31:13,341 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:31:13,341 - INFO - Download completed: https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:31:59,013 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:32:20,470 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

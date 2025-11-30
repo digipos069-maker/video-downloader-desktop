@@ -8,6 +8,8 @@ import hmac
 import time
 from datetime import datetime, timedelta
 
+import logging
+
 # SECURITY WARNING: In a production app, obfuscate this key or use a compiled language for the core verifier.
 # For this Python app, we use a hardcoded secret. 
 # YOU (The Admin) must use this SAME secret in your key_gen.py script.
@@ -31,15 +33,23 @@ class LicenseManager:
             # Try to get disk serial number (Windows) for stronger locking
             if platform.system() == "Windows":
                 try:
+                    # Use 'wmic' but be robust about parsing
                     cmd = 'wmic diskdrive get serialnumber'
-                    serial = subprocess.check_output(cmd, shell=True).decode().split('\n')[1].strip()
-                    system_info.append(serial)
-                except:
+                    output = subprocess.check_output(cmd, shell=True).decode().strip()
+                    # Output format usually:
+                    # SerialNumber
+                    # <serial>
+                    lines = [line.strip() for line in output.split('\n') if line.strip()]
+                    if len(lines) > 1:
+                        system_info.append(lines[1])
+                except Exception as e:
+                    logging.debug(f"HWID generation (wmic) failed: {e}")
                     pass
             
             data_str = "".join(system_info)
             return hashlib.sha256(data_str.encode()).hexdigest().upper()[:32]
-        except Exception:
+        except Exception as e:
+            logging.error(f"HWID generation critical failure: {e}")
             return "UNKNOWN_HWID"
 
     def verify_key(self, license_key):
@@ -50,13 +60,18 @@ class LicenseManager:
         """
         try:
             if not license_key or "." not in license_key:
+                logging.error("License verification failed: Invalid format (missing dot)")
                 return False, "Invalid key format"
 
             b64_payload, signature = license_key.split(".")
             
+            # DEBUGGING: Log the key used for verification
+            logging.debug(f"Verifying with Key Hash: {hashlib.sha256(SECRET_KEY).hexdigest()}")
+            
             # 1. Verify Signature
             expected_sig = hmac.new(SECRET_KEY, b64_payload.encode(), hashlib.sha256).hexdigest()
             if not hmac.compare_digest(expected_sig, signature):
+                logging.error(f"License verification failed: Signature mismatch. Got {signature}, Expected {expected_sig}")
                 return False, "Invalid license signature"
 
             # 2. Decode Payload
@@ -65,6 +80,7 @@ class LicenseManager:
 
             # 3. Check HWID
             if data.get("hwid") != self.hwid:
+                logging.error(f"License verification failed: HWID mismatch. Key HWID: {data.get('hwid')}, Current HWID: {self.hwid}")
                 return False, "License key is for a different machine"
 
             # 4. Check Expiration
@@ -81,6 +97,7 @@ class LicenseManager:
             return False, "Invalid license data"
 
         except Exception as e:
+            logging.error(f"License verification exception: {e}")
             return False, f"Verification error: {str(e)}"
 
     def save_license(self, key):
