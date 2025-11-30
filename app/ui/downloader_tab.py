@@ -26,6 +26,8 @@ class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
     finished = Signal()
     error = Signal(str)
+    status_update = Signal(str) # New signal for status messages
+
 
     def __init__(self, url, handler_factory, settings, parent=None):
         super().__init__(parent)
@@ -67,6 +69,7 @@ class ScrapingWorker(QThread):
                 self.error.emit(f"No downloadable items found for {self.url}.")
                 return
 
+            self.status_update.emit(f"Scraping found {len(metadata_list)} items.")
             print(f"[DEBUG] Total items scraped: {len(metadata_list)}")
 
             video_count = 0
@@ -893,7 +896,7 @@ class DownloaderTab(QWidget):
         self.queue_table_widget.insertRow(row_position)
         self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(str(row_position + 1))) # Add row number
         self.queue_table_widget.setItem(row_position, 1, QTableWidgetItem(url)) # URL in second column
-        self.status_message.emit(f"URL added to queue: {url}")
+        self.status_message.emit("Added to queue")
         self.url_input.clear() # Clear input after adding to queue
 
     def set_settings_tab(self, settings_tab):
@@ -970,7 +973,7 @@ class DownloaderTab(QWidget):
 
     def process_scraping(self, url):
         """Helper method to handle the scraping logic for a given URL using a background thread."""
-        self.handle_status_message(f"Scraping URL: {url}...")
+        self.handle_status_message("Scraping...")
         
         # Get settings
         settings = {}
@@ -985,6 +988,7 @@ class DownloaderTab(QWidget):
         self.scraping_worker.item_found.connect(self.on_scraping_item_found)
         self.scraping_worker.finished.connect(self.on_scraping_finished)
         self.scraping_worker.error.connect(self.on_scraping_error)
+        self.scraping_worker.status_update.connect(self.handle_status_message) # Connect new signal
         self.scraping_worker.start()
         
         self.scrap_button.setEnabled(False) # Disable button while scraping
