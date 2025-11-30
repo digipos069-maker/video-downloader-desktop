@@ -16,6 +16,8 @@ from app.downloader import Downloader
 from app.network import NetworkMonitor
 from app.config.settings_manager import load_settings
 from app.config.credentials import CredentialsManager
+from app.config.license_manager import LicenseManager
+from app.ui.license_dialog import LicenseDialog
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -124,6 +126,7 @@ class DownloaderTab(QWidget):
         self.platform_handler_factory = PlatformHandlerFactory()
         self.downloader = Downloader(self.platform_handler_factory)
         self.credentials_manager = CredentialsManager()
+        self.license_manager = LicenseManager() # Initialize License Manager
         
         self.video_download_path = None
         self.photo_download_path = None
@@ -283,6 +286,8 @@ class DownloaderTab(QWidget):
                 border-color: #F59E0B;
             }
         """)
+        self.license_status_button.clicked.connect(self.open_license_dialog)
+        self.update_license_ui() # Set initial state
         
         row1_layout.addWidget(self.check_update_button)
         row1_layout.addWidget(self.license_status_button)
@@ -872,6 +877,10 @@ class DownloaderTab(QWidget):
 
     @Slot()
     def add_url_to_download_queue(self):
+        # LICENSE GATE
+        if not self.check_license_gate():
+            return
+
         url = self.url_input.text().strip()
         if not url:
             self.status_message.emit("Please enter a URL to add to queue.")
@@ -896,13 +905,73 @@ class DownloaderTab(QWidget):
         """Sets the reference to the settings tab."""
         self.settings_tab = settings_tab
 
-    @Slot()
+    def open_license_dialog(self):
+        dialog = LicenseDialog(self)
+        if dialog.exec():
+            self.update_license_ui()
+
+    def update_license_ui(self):
+        is_valid, msg, _ = self.license_manager.get_license_status()
+        if is_valid:
+            self.license_status_button.setText("PRO Active")
+            self.license_status_button.setStyleSheet("""
+                QPushButton {
+                    background-color: #1C1C21;
+                    color: #10B981; /* Green */
+                    border: 1px solid #27272A;
+                    border-radius: 15px;
+                    padding: 0 12px;
+                    font-size: 9pt;
+                    font-weight: 600;
+                }
+                QPushButton:hover { border-color: #10B981; }
+            """)
+        else:
+            self.license_status_button.setText("Activate License")
+            self.license_status_button.setStyleSheet("""
+                QPushButton {
+                    background-color: #1C1C21;
+                    color: #EF4444; /* Red */
+                    border: 1px solid #27272A;
+                    border-radius: 15px;
+                    padding: 0 12px;
+                    font-size: 9pt;
+                    font-weight: 600;
+                }
+                QPushButton:hover { border-color: #EF4444; }
+            """)
+
+    def check_license_gate(self):
+        """Checks license before performing an action. Returns True if valid."""
+        is_valid, msg, _ = self.license_manager.get_license_status()
+        if is_valid:
+            return True
+        
+        # License Invalid -> Prompt User
+        reply = QMessageBox.question(
+            self, 
+            "License Required", 
+            f"This feature requires a valid license.\nReason: {msg}\n\nDo you want to activate now?",
+            QMessageBox.Yes | QMessageBox.No
+        )
+        
+        if reply == QMessageBox.Yes:
+            self.open_license_dialog()
+            # Re-check after dialog closes
+            is_valid_after, _, _ = self.license_manager.get_license_status()
+            return is_valid_after
+            
+        return False
+
     def scrap_url(self):
-        url = self.url_input.text().strip()
-        if not url:
-            self.status_message.emit("Please enter a URL to scrap.")
+        """
+        Initiates the scraping process for the URL in the input field.
+        """
+        # LICENSE GATE
+        if not self.check_license_gate():
             return
-        self.process_scraping(url)
+
+        url = self.url_input.text().strip()
 
     def process_scraping(self, url):
         """Helper method to handle the scraping logic for a given URL using a background thread."""
