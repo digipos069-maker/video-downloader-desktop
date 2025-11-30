@@ -151,6 +151,7 @@ class DownloaderTab(QWidget):
         # --- Progress Tracking ---
         self.total_downloads = 0
         self.completed_downloads = 0
+        self.failed_downloads = 0 # Initialize failed downloads counter
         self.active_progress_bars = {} # item_id -> QProgressBar widget
 
         # --- Network Monitor Setup ---
@@ -1144,14 +1145,31 @@ class DownloaderTab(QWidget):
                     break
         
         if item_ids:
-            self.status_message.emit(f"Starting {len(item_ids)} selected downloads...")
+            # Filter item_ids to only those in the downloader queue (pending/held)
+            valid_ids = self.downloader.filter_existing_ids(item_ids)
+            skipped_count = len(item_ids) - len(valid_ids)
+
+            msg = f"Starting {len(valid_ids)} selected downloads..."
+            if skipped_count > 0:
+                msg += f" ({skipped_count} items skipped/completed)"
+            self.status_message.emit(msg)
             
             # Update global progress bar for selected batch
-            self.total_downloads = len(item_ids) # Reset total to this batch
-            self.completed_downloads = 0
+            self.total_downloads = len(item_ids) # Total is what user selected
+            self.completed_downloads = skipped_count # Treat missing ones as 'done'
+            self.failed_downloads = 0 
+            
             self.global_progress_bar.setRange(0, self.total_downloads)
-            self.global_progress_bar.setValue(0)
+            self.global_progress_bar.setValue(self.completed_downloads)
             self.global_progress_bar.setFormat("Completed: %v / %m")
+
+            if not valid_ids:
+                # If all selected items were already done, trigger summary immediately
+                self.download_finished_callback("dummy", True) # Hacky trigger or manual check?
+                # Better: Manual check
+                if (self.completed_downloads + self.failed_downloads) == self.total_downloads:
+                     QMessageBox.information(self, "Download Summary", f"All selected items processed.\n\nSkipped/Completed: {skipped_count}")
+                return
 
             # Update settings for queue items before starting
             settings = {
@@ -1165,8 +1183,8 @@ class DownloaderTab(QWidget):
             self.downloader.update_queue_settings(settings)
             
             # Promote and Queue selected items
-            self.downloader.promote_to_front(item_ids)
-            self.downloader.queue_items(item_ids)
+            self.downloader.promote_to_front(valid_ids)
+            self.downloader.queue_items(valid_ids)
             
             # Reset counts if starting fresh or just update UI?
             # We'll just ensure timer is running
@@ -1424,11 +1442,22 @@ class DownloaderTab(QWidget):
         
         if success:
             self.completed_downloads += 1
-            self.global_progress_bar.setValue(self.completed_downloads)
-            # self.status_message.emit(f"Completed: {self.completed_downloads} / {self.total_downloads}")
             print(f"Download finished for {item_id[:8]}... Success: {success}")
         else:
+             self.failed_downloads += 1
              self.status_message.emit(f"Failed: {item_id[:8]}...")
+
+        # Update global progress bar (it counts processed items, whether success or fail)
+        self.global_progress_bar.setValue(self.completed_downloads + self.failed_downloads)
+
+        # Check if all downloads are finished
+        if (self.completed_downloads + self.failed_downloads) == self.total_downloads and self.total_downloads > 0:
+            self.stop_timer()
+            msg = f"All downloads finished.\n\nCompleted: {self.completed_downloads}\nFailed: {self.failed_downloads}"
+            if self.failed_downloads > 0:
+                QMessageBox.warning(self, "Download Summary", msg)
+            else:
+                QMessageBox.information(self, "Download Summary", msg)
 
     @Slot()
     def start_download_from_queue(self):
@@ -1457,6 +1486,7 @@ class DownloaderTab(QWidget):
         # Reset counts
         self.total_downloads = len(self.downloader.queue) 
         self.completed_downloads = 0
+        self.failed_downloads = 0 # Reset failed count
         
         self.global_progress_bar.setRange(0, self.total_downloads)
         self.global_progress_bar.setValue(0)

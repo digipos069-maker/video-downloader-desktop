@@ -181,6 +181,11 @@ class Downloader(QObject):
     def queue_empty(self):
         return len(self.queue) == 0
 
+    def filter_existing_ids(self, item_ids):
+        """Returns a list of IDs from item_ids that exist in the current queue."""
+        existing_ids = set(item['id'] for item in self.queue)
+        return [i_id for i_id in item_ids if i_id in existing_ids]
+
     def promote_to_front(self, item_ids):
         """
         Moves the specified items to the front of the queue.

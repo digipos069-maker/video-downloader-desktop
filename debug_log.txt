@@ -2424,3 +2424,153 @@
 2025-11-30 11:39:44,401 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-11-30 11:39:53,002 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-11-30 11:39:55,402 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:40:44,235 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:41:15,965 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:45:23,633 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:45:53,472 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:46:56,208 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:47:05,896 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:47:07,595 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:47:07,595 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 11:47:07,595 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 11:47:20,992 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 11:47:20,993 - DEBUG - Using proactor: IocpProactor
+2025-11-30 11:47:21,883 - INFO - Playwright visiting: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:47:27,828 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 11:47:29,335 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 11:47:30,844 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 11:47:32,352 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 11:47:33,861 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 11:47:35,368 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 11:47:36,877 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 11:47:38,383 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 11:47:39,891 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 11:47:41,412 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 11:47:41,433 - INFO - Found 24 raw links on page.
+2025-11-30 11:47:41,433 - INFO - Filtered down to 10 unique valid links.
+2025-11-30 11:47:48,916 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:47:48,916 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:47:48,918 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:47:48,935 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:47:48,935 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:47:48,935 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:47:48,935 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:47:48,935 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:47:48,936 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:47:48,936 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:47:48,936 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:47:48,937 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:47:51,474 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u17d2\u179a\u17bc\u1796\u17b7\u179f\u17b7\u178a\u17d2\u178b\u1794\u178e\u17d2\u178f\u17bb\u17c7\u1799\u17bb\u179c\u1787\u1793\u17a2\u17c4\u1799\u1780\u17d2\u179b\u17b6\u1799\u1787\u17b6 Developer \u1781\u17d2\u179b\u17b6\u17c6\u1784.txt
+2025-11-30 11:47:51,475 - INFO - Download completed: https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:47:52,188 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:47:52,188 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u1793\u17d2\u179b\u17b9\u17c7\u1784\u17b6\u1799\u17d7 \u178f\u17c2\u1796\u17b7\u1794\u17b6\u1780\u17a2\u1793\u17bb\u179c\u178f\u17d2\u178f\u1794\u17be\u1782\u17d2\u1798\u17b6\u1793\u179c\u17b7\u1793\u17d0\u1799.txt
+2025-11-30 11:47:52,189 - INFO - Download completed: https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:47:52,189 - INFO - Download completed: https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:00,904 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,904 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,905 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1138455897836320/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,906 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,906 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1126795395940619/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,908 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1113461410545247/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,908 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:48:00,956 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:00,956 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:00,956 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,007 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,037 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,037 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,038 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,038 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,087 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,087 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,087 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,087 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,119 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,169 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,171 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,570 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,570 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,644 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:01,789 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:48:01,789 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:48:01,790 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:48:03,507 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:48:03,509 - INFO - Download completed: https://www.facebook.com/reel/1113461410545247/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:04,701 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:48:04,701 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:48:04,715 - INFO - Download completed: https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:04,717 - INFO - Download completed: https://www.facebook.com/reel/1126795395940619/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:04,718 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:48:04,722 - INFO - Download completed: https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:05,652 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:48:05,652 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1780\u17d2\u178f\u17b8\u179f\u17d2\u179a\u1798\u17c9\u17c3\u1793\u17b7\u1784\u1780\u17b6\u179a\u178f\u17b6\u17c6\u1784\u1785\u17b7\u178f\u17d2\u178f.txt
+2025-11-30 11:48:05,653 - INFO - Download completed: https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:05,653 - INFO - Download completed: https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:48:05,885 - ERROR - Download failed: [0;31mERROR:[0m [facebook] 1138455897836320: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-30 11:52:31,062 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:52:38,456 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:52:40,306 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:52:40,307 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 11:52:40,307 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 11:52:53,531 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 11:52:53,532 - DEBUG - Using proactor: IocpProactor
+2025-11-30 11:52:54,371 - INFO - Playwright visiting: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:52:57,880 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 11:52:59,388 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 11:53:00,896 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 11:53:02,405 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 11:53:03,916 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 11:53:05,423 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 11:53:06,930 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 11:53:08,449 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 11:53:09,956 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 11:53:11,464 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 11:53:11,488 - INFO - Found 24 raw links on page.
+2025-11-30 11:53:11,489 - INFO - Filtered down to 10 unique valid links.
+2025-11-30 11:53:17,060 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:17,061 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:17,078 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:17,078 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:17,078 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:17,079 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:17,086 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:17,117 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:20,129 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:53:20,141 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:53:20,141 - INFO - Download completed: https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:53:20,143 - INFO - Download completed: https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:53:25,786 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1138455897836320/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:25,787 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:25,804 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:25,804 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:25,804 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:25,804 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:25,804 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:25,805 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:28,099 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1780\u17d2\u178f\u17b8\u179f\u17d2\u179a\u1798\u17c9\u17c3\u1793\u17b7\u1784\u1780\u17b6\u179a\u178f\u17b6\u17c6\u1784\u1785\u17b7\u178f\u17d2\u178f.txt
+2025-11-30 11:53:28,100 - INFO - Download completed: https://www.facebook.com/reel/1223979396429351/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:53:28,884 - ERROR - Download failed: [0;31mERROR:[0m [facebook] 1138455897836320: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-11-30 11:53:38,920 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:38,921 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:38,922 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:53:38,939 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:38,939 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:38,940 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:38,940 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:38,940 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:38,953 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:39,184 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:53:39,185 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:53:39,186 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:53:41,175 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u17d2\u179a\u17bc\u1796\u17b7\u179f\u17b7\u178a\u17d2\u178b\u1794\u178e\u17d2\u178f\u17bb\u17c7\u1799\u17bb\u179c\u1787\u1793\u17a2\u17c4\u1799\u1780\u17d2\u179b\u17b6\u1799\u1787\u17b6 Developer \u1781\u17d2\u179b\u17b6\u17c6\u1784.txt
+2025-11-30 11:53:41,176 - INFO - Download completed: https://www.facebook.com/reel/564813673295115/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:53:41,588 - INFO - Caption saved to: E:\test\pisethjs_reels\\u1782\u1793\u17d2\u179b\u17b9\u17c7\u1784\u17b6\u1799\u17d7 \u178f\u17c2\u1796\u17b7\u1794\u17b6\u1780\u17a2\u1793\u17bb\u179c\u178f\u17d2\u178f\u1794\u17be\u1782\u17d2\u1798\u17b6\u1793\u179c\u17b7\u1793\u17d0\u1799.txt
+2025-11-30 11:53:41,589 - INFO - Download completed: https://www.facebook.com/reel/1409300813832841/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:53:41,909 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:53:41,910 - INFO - Download completed: https://www.facebook.com/reel/1434870854629978/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:54:03,207 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:54:03,221 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:54:03,221 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:54:03,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:54:05,800 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:54:05,801 - INFO - Download completed: https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0
