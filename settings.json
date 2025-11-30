@@ -2,7 +2,7 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 10,
+        "count": 4,
         "all": false,
         "resolution": "Best Available"
     },

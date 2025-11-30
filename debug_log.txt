@@ -2574,3 +2574,40 @@
 2025-11-30 11:54:03,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
 2025-11-30 11:54:05,800 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
 2025-11-30 11:54:05,801 - INFO - Download completed: https://www.facebook.com/reel/657451160564728/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:55:29,579 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:55:49,864 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 11:55:51,747 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:55:51,747 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 11:55:51,748 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 11:56:06,331 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 11:56:06,332 - DEBUG - Using proactor: IocpProactor
+2025-11-30 11:56:07,176 - INFO - Playwright visiting: https://www.facebook.com/pisethjs/reels/
+2025-11-30 11:56:10,657 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 11:56:12,163 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 11:56:13,675 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 11:56:15,183 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 11:56:16,691 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 11:56:18,199 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 11:56:19,706 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 11:56:21,213 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 11:56:22,721 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 11:56:24,228 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 11:56:24,252 - INFO - Found 24 raw links on page.
+2025-11-30 11:56:24,253 - INFO - Filtered down to 9 unique valid links.
+2025-11-30 11:56:30,228 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:56:30,230 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:56:30,246 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:56:30,246 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:56:30,247 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:56:30,247 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:56:30,247 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:56:30,247 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:56:32,970 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:56:32,970 - INFO - Download completed: https://www.facebook.com/reel/1574790960240397/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:56:33,351 - INFO - Caption saved to: E:\test\pisethjs_reels\Video.txt
+2025-11-30 11:56:33,352 - INFO - Download completed: https://www.facebook.com/reel/1209689724301287/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 11:56:41,478 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1138455897836320/?s=fb_shorts_profile&stack_idx=0 to E:/test\pisethjs_reels
+2025-11-30 11:56:41,490 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 11:56:41,490 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 11:56:41,490 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 11:56:44,401 - ERROR - Download failed: [0;31mERROR:[0m [facebook] 1138455897836320: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U

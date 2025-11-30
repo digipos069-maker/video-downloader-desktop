@@ -19,6 +19,7 @@ from app.config.credentials import CredentialsManager
 from app.config.license_manager import LicenseManager
 from app.ui.license_dialog import LicenseDialog
 from app.ui.edit_username_dialog import EditUsernameDialog
+from app.ui.widgets.custom_message_box import CustomMessageBox
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -1168,7 +1169,7 @@ class DownloaderTab(QWidget):
                 self.download_finished_callback("dummy", True) # Hacky trigger or manual check?
                 # Better: Manual check
                 if (self.completed_downloads + self.failed_downloads) == self.total_downloads:
-                     QMessageBox.information(self, "Download Summary", f"All selected items processed.\n\nSkipped/Completed: {skipped_count}")
+                     CustomMessageBox("Download Summary", f"All selected items processed.\n\nSkipped/Completed: {skipped_count}", self).exec()
                 return
 
             # Update settings for queue items before starting
@@ -1454,10 +1455,7 @@ class DownloaderTab(QWidget):
         if (self.completed_downloads + self.failed_downloads) == self.total_downloads and self.total_downloads > 0:
             self.stop_timer()
             msg = f"All downloads finished.\n\nCompleted: {self.completed_downloads}\nFailed: {self.failed_downloads}"
-            if self.failed_downloads > 0:
-                QMessageBox.warning(self, "Download Summary", msg)
-            else:
-                QMessageBox.information(self, "Download Summary", msg)
+            CustomMessageBox("Download Summary", msg, self).exec()
 
     @Slot()
     def start_download_from_queue(self):
