@@ -3826,3 +3826,622 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-11-30 15:44:15,198 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
 2025-11-30 15:44:15,198 - INFO - Scraping loop finished. Found 10 items.
 2025-11-30 15:44:15,198 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:44:35,704 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:45:09,759 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:45:11,619 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:45:12,378 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:12,423 - INFO - Added 9 cookies to browser context.
+2025-11-30 15:45:12,487 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:45:12,487 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:45:14,414 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:45:14,426 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:45:20,035 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:45:20,114 - INFO - Loop status: Iteration 1, Found 41/55 items (+41 new valid, +51 raw)
+2025-11-30 15:45:25,659 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:45:25,674 - INFO - Loop status: Iteration 2, Found 59/55 items (+18 new valid, +25 raw)
+2025-11-30 15:45:25,674 - INFO - Scraping loop finished. Found 59 items.
+2025-11-30 15:45:25,674 - INFO - Scraping found 59 unique valid links.
+2025-11-30 15:45:44,694 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/?s=tab to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,694 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,695 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,696 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,696 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,697 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,697 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,698 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,698 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,699 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:44,758 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,759 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,759 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,767 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,768 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,769 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,770 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,770 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,770 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,771 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,771 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,771 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,773 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,773 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,773 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,774 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,774 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,775 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,775 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,775 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,775 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,775 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,776 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,776 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,776 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,777 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,777 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:44,777 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:44,777 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:44,778 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:49,769 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e3_796640345709178.txt
+2025-11-30 15:45:49,802 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e4_243731712094520.txt
+2025-11-30 15:45:49,803 - INFO - Download completed: https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:50,102 - INFO - Download completed: https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:50,133 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:50,134 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e3_1126197768520371.txt
+2025-11-30 15:45:50,139 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/778827660550372/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:50,145 - INFO - Download completed: https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:50,171 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e4_1934294320402609.txt
+2025-11-30 15:45:50,172 - INFO - Download completed: https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:50,180 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/404019605731823/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:50,182 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1067526980989461/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:51,690 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e5_397279599822232.txt
+2025-11-30 15:45:51,692 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Video_1061484168287638.txt
+2025-11-30 15:45:51,694 - INFO - Download completed: https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:51,700 - INFO - Download completed: https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:51,729 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e1_971824101110396.txt
+2025-11-30 15:45:51,729 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e2_3675091852732551.txt
+2025-11-30 15:45:51,730 - INFO - Download completed: https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:51,730 - INFO - Download completed: https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:51,737 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/970396151113514/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:51,739 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/407356572043781/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:51,740 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/339173282473969/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:51,741 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3674975639456768/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:52,183 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e6_1134637264556497.txt
+2025-11-30 15:45:52,184 - INFO - Download completed: https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:52,189 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1598145317675464/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:52,211 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,211 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,211 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:52,342 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,342 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,343 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:52,481 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,481 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,482 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:52,482 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,483 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,483 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:52,835 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,836 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,836 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:52,938 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:52,938 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:52,939 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:53,116 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:53,116 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:53,116 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:53,116 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:53,117 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:53,118 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:53,435 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:53,435 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:53,435 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:54,699 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u200b\u17e2_795527635803576.txt
+2025-11-30 15:45:54,701 - INFO - Download completed: https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:45:54,705 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1361043134593812/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:54,725 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:54,725 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:54,725 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:45:59,836 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.facebook.com/reel/?s=tab
+2025-11-30 15:45:59,840 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/930950582063178/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:45:59,883 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:45:59,883 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:45:59,884 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:47:32,927 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e5_778827660550372.txt
+2025-11-30 15:47:32,929 - INFO - Download completed: https://www.facebook.com/reel/778827660550372/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:47:32,931 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1643192756419648/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:47:32,948 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:47:32,949 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:47:32,949 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:19,696 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1782\u17d2\u179a\u17bc\u1780\u17b6\u1785\u179f\u17b7\u179f\u17d2\u179f\u1796\u17bc\u1780\u17c2\u179a\u200b ( \u1780\u17bb\u17c6\u1780\u17bb\u17c6\u200b )\u1797\u17b6\u1782\u17e2_1067526980989461.txt
+2025-11-30 15:48:19,697 - INFO - Download completed: https://www.facebook.com/reel/1067526980989461/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:19,702 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/446074264532408/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:19,716 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:19,716 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:19,717 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:21,921 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Video_446074264532408.txt
+2025-11-30 15:48:21,922 - INFO - Download completed: https://www.facebook.com/reel/446074264532408/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:21,926 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/631095889204722/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:21,939 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:21,939 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:21,939 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:23,543 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1782\u17d2\u179a\u17bc\u1780\u17b6\u1785\u179f\u17b7\u179f\u17d2\u179f\u1796\u17bc\u1780\u17c2\u179a\u200b ( \u1780\u17bb\u17c6\u1780\u17bb\u17c6\u200b )\u1797\u17b6\u1782\u17e1_407356572043781.txt
+2025-11-30 15:48:23,545 - INFO - Download completed: https://www.facebook.com/reel/407356572043781/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:23,577 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1064528261290937/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:23,592 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:23,592 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:23,592 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:26,132 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Video_631095889204722.txt
+2025-11-30 15:48:26,134 - INFO - Download completed: https://www.facebook.com/reel/631095889204722/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:26,136 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/434340705735518/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:26,149 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:26,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:26,149 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:41,526 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5\u200b \u1797\u17b6\u1782\u17e1_404019605731823.txt
+2025-11-30 15:48:41,528 - INFO - Download completed: https://www.facebook.com/reel/404019605731823/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:41,532 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1184766066267182/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:41,546 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:41,546 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:41,546 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:48:50,787 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1782\u17d2\u179a\u17bc\u1780\u17b6\u1785\u179f\u17b7\u179f\u17d2\u179f\u1796\u17bc\u1780\u17c2\u179a\u200b ( \u1780\u17bb\u17c6\u1780\u17bb\u17c6\u200b )\u1797\u17b6\u1782\u17e4_970396151113514.txt
+2025-11-30 15:48:50,788 - INFO - Download completed: https://www.facebook.com/reel/970396151113514/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:48:50,791 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/773266921409029/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:48:50,804 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:48:50,805 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:48:50,805 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:51:06,493 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1796\u17d2\u179a\u17c1\u1784\u1794\u17bb\u179a\u17b6\u178e \u1792\u1793\u1789\u17d2\u1787\u17d0\u1799\u200b \u1797\u17b6\u1782\u17e5_930950582063178.txt
+2025-11-30 15:51:06,495 - INFO - Download completed: https://www.facebook.com/reel/930950582063178/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:51:06,499 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1151458755757851/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:51:06,514 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:51:06,515 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:51:06,515 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:52:38,142 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a, \u178f\u17bb\u179b\u17b6\u1780\u17b6\u179a\u1785\u17b7\u178f\u17d2\u178f\u178a\u17c2\u1780 ( \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 ) \u1797\u17b6\u1782 \u200b\u17e2_773266921409029.txt
+2025-11-30 15:52:38,144 - INFO - Download completed: https://www.facebook.com/reel/773266921409029/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:52:38,148 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/778832600489325/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:52:38,160 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:52:38,160 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:52:38,160 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:53:25,838 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1782\u17d2\u179a\u17bc\u1780\u17b6\u1785\u179f\u17b7\u179f\u17d2\u179f\u1796\u17bc\u1780\u17c2\u179a\u200b ( \u1780\u17bb\u17c6\u1780\u17bb\u17c6\u200b )\u1797\u17b6\u1782\u17e3_339173282473969.txt
+2025-11-30 15:53:25,839 - INFO - Download completed: https://www.facebook.com/reel/339173282473969/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:53:25,843 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/770934634743336/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:53:25,862 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:53:25,862 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:53:25,863 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:53:28,159 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a, \u178f\u17bb\u179b\u17b6\u1780\u17b6\u179a\u1785\u17b7\u178f\u17d2\u178f\u178a\u17c2\u1780 ( \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 ) \u1797\u17b6\u1782\u200b \u17e3_1184766066267182.txt
+2025-11-30 15:53:28,161 - INFO - Download completed: https://www.facebook.com/reel/1184766066267182/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:53:28,163 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/7049662491830206/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:53:28,174 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:53:28,175 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:53:28,175 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:54:54,458 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u1798\u17b6\u1799\u17be\u1784  \u1797\u17b6\u1782\u17e1_1064528261290937.txt
+2025-11-30 15:54:54,460 - INFO - Download completed: https://www.facebook.com/reel/1064528261290937/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:54:54,462 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/909206350991545/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:54:54,474 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:54:54,475 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:54:54,475 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:54:59,426 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a, \u178f\u17bb\u179b\u17b6\u1780\u17b6\u179a\u1785\u17b7\u178f\u17d2\u178f\u178a\u17c2\u1780 ( \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 ) \u1797\u17b6\u1782 \u200b\u17e1_1151458755757851.txt
+2025-11-30 15:54:59,427 - INFO - Download completed: https://www.facebook.com/reel/1151458755757851/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:54:59,430 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/428824379660983/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:54:59,443 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:54:59,443 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:54:59,443 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:57:14,786 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1796\u17d2\u179a\u17c1\u1784\u1794\u17bb\u179a\u17b6\u178e \u1792\u1793\u1789\u17d2\u1787\u17d0\u1799\u200b \u1797\u17b6\u1782\u17e3_1361043134593812.txt
+2025-11-30 15:57:14,788 - INFO - Download completed: https://www.facebook.com/reel/1361043134593812/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:57:14,790 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1125837968749667/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:57:14,805 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:57:14,806 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:57:14,806 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:57:23,000 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1781\u17d2\u1798\u17c2\u179a \u1781\u17d2\u1798\u17c4\u1785\u1785\u17c1\u1780\u1787\u17d2\u179c\u17b6 \u1797\u17b6\u1782\u200b\u17e2_770934634743336.txt
+2025-11-30 15:57:23,003 - INFO - Download completed: https://www.facebook.com/reel/770934634743336/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:57:23,006 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/403285512404071/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:57:23,020 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:57:23,020 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:57:23,020 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:57:54,801 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1796\u17d2\u179a\u17c1\u1784\u1794\u17bb\u179a\u17b6\u178e \u1792\u1793\u1789\u17d2\u1787\u17d0\u1799\u200b \u1797\u17b6\u1782\u17e2_3674975639456768.txt
+2025-11-30 15:57:54,801 - INFO - Download completed: https://www.facebook.com/reel/3674975639456768/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:57:54,804 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1418369235552999/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:57:54,816 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:57:54,816 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:57:54,816 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:59:38,987 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1796\u17d2\u179a\u17c1\u1784\u1794\u17bb\u179a\u17b6\u178e \u1792\u1793\u1789\u17d2\u1787\u17d0\u1799\u200b \u1797\u17b6\u1782\u17e4_1598145317675464.txt
+2025-11-30 15:59:38,988 - INFO - Download completed: https://www.facebook.com/reel/1598145317675464/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:59:38,991 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/430376702859289/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:59:39,009 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:59:39,009 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:59:39,009 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:59:58,820 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1796\u17d2\u179a\u17c1\u1784\u1794\u17bb\u179a\u17b6\u178e \u1792\u1793\u1789\u17d2\u1787\u17d0\u1799\u200b \u1797\u17b6\u1782\u17e1_1643192756419648.txt
+2025-11-30 15:59:58,821 - INFO - Download completed: https://www.facebook.com/reel/1643192756419648/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:59:58,824 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/439947848564413/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:59:58,839 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:59:58,839 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:59:58,840 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:01:23,821 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u1798\u17b6\u1799\u17be\u1784  \u1797\u17b6\u1782\u17e2_434340705735518.txt
+2025-11-30 16:01:23,823 - INFO - Download completed: https://www.facebook.com/reel/434340705735518/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:01:23,827 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1149667272638183/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:01:23,840 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:01:23,840 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:01:23,840 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:03:03,643 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u1794\u17d2\u179a\u1796\u1793\u17d2\u1792\u1781\u17d2\u1798\u17c4\u1785 \u1797\u17b6\u1782\u200b\u17e2_428824379660983.txt
+2025-11-30 16:03:03,644 - INFO - Download completed: https://www.facebook.com/reel/428824379660983/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:03:03,649 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/761535012607008/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:03:03,661 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:03:03,661 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:03:03,661 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:03:18,128 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u17a2\u17b6\u1781\u17d2\u179c\u17b6\u1780\u17cb \u17a2\u17b6\u1781\u17d2\u179c\u17b7\u1793 2_403285512404071.txt
+2025-11-30 16:03:18,130 - INFO - Download completed: https://www.facebook.com/reel/403285512404071/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:03:18,134 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1313537766009694/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:03:18,147 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:03:18,147 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:03:18,147 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:04:48,725 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1781\u17d2\u1798\u17c2\u179a \u1781\u17d2\u1798\u17c4\u1785\u1785\u17c1\u1780\u1787\u17d2\u179c\u17b6 \u1797\u17b6\u1782\u200b\u17e1_778832600489325.txt
+2025-11-30 16:04:48,726 - INFO - Download completed: https://www.facebook.com/reel/778832600489325/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:04:48,730 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/25022289964085771/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:04:48,743 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:04:48,744 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:04:48,744 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:05:00,956 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u17a2\u17b6\u1781\u17d2\u179c\u17b6\u1780\u17cb \u17a2\u17b6\u1781\u17d2\u179c\u17b7\u1793 1_1418369235552999.txt
+2025-11-30 16:05:00,957 - INFO - Download completed: https://www.facebook.com/reel/1418369235552999/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:05:00,960 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/387318284075911/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:05:00,973 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:05:00,973 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:05:00,973 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:05:58,846 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u1794\u17d2\u179a\u1796\u1793\u17d2\u1792\u1781\u17d2\u1798\u17c4\u1785 \u1797\u17b6\u1782\u200b\u17e1_1125837968749667.txt
+2025-11-30 16:05:58,847 - INFO - Download completed: https://www.facebook.com/reel/1125837968749667/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:05:58,853 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1871575786636025/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:05:58,867 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:05:58,867 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:05:58,867 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:07:37,466 - ERROR - Download failed: [0;31mERROR:[0m [download] Got error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-11-30 16:07:37,469 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1064514801284115/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:07:37,491 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:07:37,492 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:07:37,492 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:08:12,443 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u1780\u17c6\u1796\u17bc\u179b\u178f\u17b6\u179a\u17b6\u179f\u17c6\u178e\u17b6\u1784\u1791\u17b6\u17c6\u1784\u17e4 \u1792\u17b6\u1793\u17b6\u179f\u17be\u1785\u1796\u17b8\u178a\u17be\u1798\u178a\u179b\u17cb\u1785\u1794\u17cb \u1797\u17b6\u1782\u17e2_7049662491830206.txt
+2025-11-30 16:08:12,444 - INFO - Download completed: https://www.facebook.com/reel/7049662491830206/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:08:12,448 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/410317894978758/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:08:12,462 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:08:12,462 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:08:12,463 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:08:39,683 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u17aa\u1781\u17d2\u1798\u17c4\u1785\u1780\u17cf\u17a2\u1789\u1798\u17b7\u1793\u1781\u17d2\u179b\u17b6\u1785\u178a\u17c2\u179a 1988 \u1797\u17b6\u1782\u17e1_410317894978758.txt
+2025-11-30 16:08:39,685 - INFO - Download completed: https://www.facebook.com/reel/410317894978758/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:08:39,691 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1587027865365290/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:08:39,706 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:08:39,706 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:08:39,706 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:08:58,516 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u1793\u17b7\u179f\u17d2\u179f\u17b7\u178f\u1795\u17d2\u178f\u17b6\u1785\u17cb\u179f\u1784\u17d2\u1781\u17b6\u179a \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 \u1793\u17b7\u1799\u17b6\u1799\u1797\u17b6\u179f\u17b6\u1781\u17d2\u1798\u17c2\u179a 2_430376702859289.txt
+2025-11-30 16:08:58,517 - INFO - Download completed: https://www.facebook.com/reel/430376702859289/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:08:58,521 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1117063379329521/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:08:58,535 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:08:58,535 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:08:58,535 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:10:48,191 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u17aa\u1781\u17d2\u1798\u17c4\u1785\u1780\u17cf\u17a2\u1789\u1798\u17b7\u1793\u1781\u17d2\u179b\u17b6\u1785\u178a\u17c2\u179a  1988 \u1797\u17b6\u1782\u17e2_1064514801284115.txt
+2025-11-30 16:10:48,192 - INFO - Download completed: https://www.facebook.com/reel/1064514801284115/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:10:48,194 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/955136272997193/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 16:10:48,205 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:10:48,205 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 16:10:48,206 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 16:11:11,256 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784 \u1780\u17c6\u1796\u17bc\u179b\u178f\u17b6\u179a\u17b6\u179f\u17c6\u178e\u17b6\u1784\u1791\u17b6\u17c6\u1784\u17e4 \u1792\u17b6\u1793\u17b6\u179f\u17be\u1785\u1796\u17b8\u178a\u17be\u1798\u178a\u179b\u17cb\u1785\u1794\u17cb \u1797\u17b6\u1782\u17e1_909206350991545.txt
+2025-11-30 16:11:11,257 - INFO - Download completed: https://www.facebook.com/reel/909206350991545/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:12:25,960 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17b7\u1791\u17d2\u1792\u17b7\u179f\u17c2\u1793\u1793\u17b6\u1784\u1780\u1784\u17d2\u179a\u17b8 2_1149667272638183.txt
+2025-11-30 16:12:25,961 - INFO - Download completed: https://www.facebook.com/reel/1149667272638183/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:12:32,850 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u17aa\u1781\u17d2\u1798\u17c4\u1785\u1780\u17cf\u17a2\u1789\u1798\u17b7\u1793\u1781\u17d2\u179b\u17b6\u1785\u178a\u17c2\u179a  1988 \u1797\u17b6\u1782\u17e3_1587027865365290.txt
+2025-11-30 16:12:32,851 - INFO - Download completed: https://www.facebook.com/reel/1587027865365290/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:12:38,361 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u17aa\u1781\u17d2\u1798\u17c4\u1785\u1780\u17cf\u17a2\u1789\u1798\u17b7\u1793\u1781\u17d2\u179b\u17b6\u1785\u178a\u17c2\u179a  1988 \u1797\u17b6\u1782\u17e4_955136272997193.txt
+2025-11-30 16:12:38,362 - INFO - Download completed: https://www.facebook.com/reel/955136272997193/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:13:08,204 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u17aa\u1781\u17d2\u1798\u17c4\u1785\u1780\u17cf\u17a2\u1789\u1798\u17b7\u1793\u1781\u17d2\u179b\u17b6\u1785\u178a\u17c2\u179a 1988 \u1797\u17b6\u1782\u17e5_1117063379329521.txt
+2025-11-30 16:13:08,205 - INFO - Download completed: https://www.facebook.com/reel/1117063379329521/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:14:13,651 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17b7\u1791\u17d2\u1792\u17b7\u179f\u17c2\u1793\u1793\u17b6\u1784\u1780\u1784\u17d2\u179a\u17b8 1_761535012607008.txt
+2025-11-30 16:14:13,652 - INFO - Download completed: https://www.facebook.com/reel/761535012607008/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:14:39,283 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Khmer Movie \u179a\u17bf\u1784 \u1798\u179a\u178e\u1798\u17b6\u178f\u17b6 Moranak Meada 2_387318284075911.txt
+2025-11-30 16:14:39,284 - INFO - Download completed: https://www.facebook.com/reel/387318284075911/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:16:15,276 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u1787\u1793 \u1794\u1784\u17d2\u1780\u1794\u17cb  \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 1_25022289964085771.txt
+2025-11-30 16:16:15,277 - INFO - Download completed: https://www.facebook.com/reel/25022289964085771/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:16:16,165 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u1787\u1793 \u1794\u1784\u17d2\u1780\u1794\u17cb  \u1791\u17b7\u1793\u17a0\u17d2\u179c\u17b8 2_1313537766009694.txt
+2025-11-30 16:16:16,166 - INFO - Download completed: https://www.facebook.com/reel/1313537766009694/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:17:42,337 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Khmer Movie \u179a\u17bf\u1784 \u1798\u179a\u178e\u1798\u17b6\u178f\u17b6 Moranak Meada 1_1871575786636025.txt
+2025-11-30 16:17:42,338 - INFO - Download completed: https://www.facebook.com/reel/1871575786636025/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 16:27:08,497 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 16:28:09,454 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 16:28:15,158 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@ly.lysa42
+2025-11-30 16:28:15,158 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 16:28:15,158 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 16:28:18,630 - INFO - yt-dlp found 55 entries.
+2025-11-30 16:28:43,830 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7577061890304527623 to E:/test\ly.lysa42
+2025-11-30 16:28:43,832 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7577047867823639815 to E:/test\ly.lysa42
+2025-11-30 16:28:43,833 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7576887817582677266 to E:/test\ly.lysa42
+2025-11-30 16:28:43,833 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7575762747019857159 to E:/test\ly.lysa42
+2025-11-30 16:28:43,833 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7574662370346208519 to E:/test\ly.lysa42
+2025-11-30 16:28:43,834 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7576501020285472007 to E:/test\ly.lysa42
+2025-11-30 16:28:43,834 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7573909018578603272 to E:/test\ly.lysa42
+2025-11-30 16:28:43,834 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7574456488811433223 to E:/test\ly.lysa42
+2025-11-30 16:28:43,835 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7574662435244723474 to E:/test\ly.lysa42
+2025-11-30 16:28:43,835 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7576549788309622024 to E:/test\ly.lysa42
+2025-11-30 16:28:43,886 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:43,886 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:43,887 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,014 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,014 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,014 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,015 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,016 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,016 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,036 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,036 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,036 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,052 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,098 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,098 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,367 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,367 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,367 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,538 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,555 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,568 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,676 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,677 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,677 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,685 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,865 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:44,888 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:44,965 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:44,976 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:45,002 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:46,672 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f972#lyysha #foryou #fyp _7574456488811433223.txt
+2025-11-30 16:28:46,672 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7574456488811433223
+2025-11-30 16:28:46,673 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7573908209962847506 to E:/test\ly.lysa42
+2025-11-30 16:28:46,686 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:46,686 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:46,686 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:46,845 - INFO - Caption saved to: E:\test\ly.lysa42\Pnheak dol jas#lyysha #foryou #fyp _7574662370346208519.txt
+2025-11-30 16:28:46,846 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7574662370346208519
+2025-11-30 16:28:46,850 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7572834683361185031 to E:/test\ly.lysa42
+2025-11-30 16:28:46,897 - INFO - Caption saved to: E:\test\ly.lysa42\\u1787\u17bd\u1799\u1799\u1780\u1789\u17bb\u1798\u1785\u17c1\u1789\u1795\u1784\u1794\u17b6\u1793\u17a2\u178f\u17cb\U0001f611#lyysha #foryou #fyp _7573909018578603272.txt
+2025-11-30 16:28:46,897 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7573909018578603272
+2025-11-30 16:28:46,901 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7572801190476500231 to E:/test\ly.lysa42
+2025-11-30 16:28:46,918 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:46,918 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:46,918 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:47,051 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:47,051 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:47,052 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:47,176 - INFO - Caption saved to: E:\test\ly.lysa42\TikTok video #7574662435244723474_7574662435244723474.txt
+2025-11-30 16:28:47,177 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7574662435244723474
+2025-11-30 16:28:47,217 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7572582970268208402 to E:/test\ly.lysa42
+2025-11-30 16:28:47,229 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:47,229 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:47,229 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:48,016 - INFO - Caption saved to: E:\test\ly.lysa42\Olaaaa#lyysha #foryou #fyp _7576549788309622024.txt
+2025-11-30 16:28:48,016 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7576549788309622024
+2025-11-30 16:28:48,019 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7572575377843965191 to E:/test\ly.lysa42
+2025-11-30 16:28:48,033 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:48,033 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:48,033 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:48,871 - INFO - Caption saved to: E:\test\ly.lysa42\Ort sneha tea jg sad #lyysha #foryou #fyp _7573908209962847506.txt
+2025-11-30 16:28:48,871 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7573908209962847506
+2025-11-30 16:28:48,873 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7572061626862423304 to E:/test\ly.lysa42
+2025-11-30 16:28:48,894 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:48,894 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:48,894 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:49,055 - INFO - Caption saved to: E:\test\ly.lysa42\Mnus pozz kur oy klach\U0001f62c#lyysha #foryou #fyp _7577061890304527623.txt
+2025-11-30 16:28:49,055 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7577061890304527623
+2025-11-30 16:28:49,110 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7569983347603098888 to E:/test\ly.lysa42
+2025-11-30 16:28:49,117 - INFO - Caption saved to: E:\test\ly.lysa42\Dol sloy jg men ban sl nh#lyysha #foryou #fyp _7572834683361185031.txt
+2025-11-30 16:28:49,117 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7572834683361185031
+2025-11-30 16:28:49,120 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7568718070395587858 to E:/test\ly.lysa42
+2025-11-30 16:28:49,137 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:49,137 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:49,137 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:49,138 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:49,138 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:49,138 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:49,503 - INFO - Caption saved to: E:\test\ly.lysa42\Haiyaa\U0001fae7\U0001fae7#lyysha #foryou #fyp _7576887817582677266.txt
+2025-11-30 16:28:49,503 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7576887817582677266
+2025-11-30 16:28:49,505 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7568527890724277512 to E:/test\ly.lysa42
+2025-11-30 16:28:49,518 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:49,518 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:49,518 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:49,673 - INFO - Caption saved to: E:\test\ly.lysa42\#lyysha #foryou #fyp #\u1780\u17c4\u17c7\u1780\u17bb\u1784 #kohkong _7572575377843965191.txt
+2025-11-30 16:28:49,674 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7572575377843965191
+2025-11-30 16:28:49,675 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7567719964837186823 to E:/test\ly.lysa42
+2025-11-30 16:28:49,691 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:49,691 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:49,691 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:50,295 - INFO - Caption saved to: E:\test\ly.lysa42\\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6\u179f\u17bb\u1791\u17d2\u1792 \U0001f1f0\U0001f1ed #lyysha #foryou #fyp _7572061626862423304.txt
+2025-11-30 16:28:50,295 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7572061626862423304
+2025-11-30 16:28:50,299 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7567399632809053448 to E:/test\ly.lysa42
+2025-11-30 16:28:50,321 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:50,321 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:50,321 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:50,542 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f32a\ufe0f#lyysha #foryou #fyp _7568718070395587858.txt
+2025-11-30 16:28:50,542 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7568718070395587858
+2025-11-30 16:28:50,544 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7567378426894634248 to E:/test\ly.lysa42
+2025-11-30 16:28:50,555 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:50,555 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:50,555 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:50,712 - INFO - Caption saved to: E:\test\ly.lysa42\Draft\u2728#lyysha #foryou #fyp _7577047867823639815.txt
+2025-11-30 16:28:50,714 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7577047867823639815
+2025-11-30 16:28:50,737 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7567363609513315591 to E:/test\ly.lysa42
+2025-11-30 16:28:50,738 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f615#lyysha #foryou #fyp #livephoto _7568527890724277512.txt
+2025-11-30 16:28:50,738 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7568527890724277512
+2025-11-30 16:28:50,740 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7566990271968283922 to E:/test\ly.lysa42
+2025-11-30 16:28:50,754 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:50,754 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:50,754 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:50,847 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:50,847 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:50,863 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:51,153 - INFO - Caption saved to: E:\test\ly.lysa42\\u17a2\u1799 steav#lyysha #foryou #fyp #livephoto _7569983347603098888.txt
+2025-11-30 16:28:51,153 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7569983347603098888
+2025-11-30 16:28:51,155 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7566615118621035794 to E:/test\ly.lysa42
+2025-11-30 16:28:51,184 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001fae9#lyysha #foryou #fyp _7567719964837186823.txt
+2025-11-30 16:28:51,185 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7567719964837186823
+2025-11-30 16:28:51,186 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7566595007268850962 to E:/test\ly.lysa42
+2025-11-30 16:28:51,191 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:51,192 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:51,192 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:51,399 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:51,399 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:51,399 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:52,782 - INFO - Caption saved to: E:\test\ly.lysa42\Khan u\U0001f611#lyysha #foryou #fyp #onlyacc _7567399632809053448.txt
+2025-11-30 16:28:52,782 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7567399632809053448
+2025-11-30 16:28:52,783 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7566110683251641607 to E:/test\ly.lysa42
+2025-11-30 16:28:52,800 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:52,800 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:52,800 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:53,792 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f42d #lyysha #foryou #fyp _7567378426894634248.txt
+2025-11-30 16:28:53,793 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7567378426894634248
+2025-11-30 16:28:53,795 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7565853912813538568 to E:/test\ly.lysa42
+2025-11-30 16:28:53,806 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:53,806 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:53,806 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:55,504 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f976#lyysha #foryou #fyp _7575762747019857159.txt
+2025-11-30 16:28:55,505 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7575762747019857159
+2025-11-30 16:28:55,507 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7565488664592125191 to E:/test\ly.lysa42
+2025-11-30 16:28:55,518 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:55,518 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:55,518 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:56,261 - INFO - Caption saved to: E:\test\ly.lysa42\Tah nv \u179b\u17b8\u179c sby jg ai\U0001f925#lyysha #foryou #fyp _7572801190476500231.txt
+2025-11-30 16:28:56,261 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7572801190476500231
+2025-11-30 16:28:56,263 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7565133894580751624 to E:/test\ly.lysa42
+2025-11-30 16:28:56,283 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:56,283 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:56,283 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:57,013 - INFO - Caption saved to: E:\test\ly.lysa42\Tver dch klun eg mean sneha\U0001fae0#lyysha #foryou #fyp _7567363609513315591.txt
+2025-11-30 16:28:57,013 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7567363609513315591
+2025-11-30 16:28:57,014 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7564604650813410567 to E:/test\ly.lysa42
+2025-11-30 16:28:57,027 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:57,027 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:57,028 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:57,480 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f42d#lyysha #foryou #fyp _7566990271968283922.txt
+2025-11-30 16:28:57,480 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7566990271968283922
+2025-11-30 16:28:57,482 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7564008423252036871 to E:/test\ly.lysa42
+2025-11-30 16:28:57,510 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:57,510 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:57,510 - DEBUG - No cookies configured for download.
+2025-11-30 16:28:57,963 - INFO - Caption saved to: E:\test\ly.lysa42\Kjol tjeak lysa eka#lyysha #foryou #fyp _7576501020285472007.txt
+2025-11-30 16:28:57,964 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7576501020285472007
+2025-11-30 16:28:57,965 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7562585773501992210 to E:/test\ly.lysa42
+2025-11-30 16:28:57,976 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:28:57,976 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:28:57,976 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:00,418 - INFO - Caption saved to: E:\test\ly.lysa42\Gvet nis jam tas ke bork#lyysha #foryou #fyp _7565133894580751624.txt
+2025-11-30 16:29:00,418 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7565133894580751624
+2025-11-30 16:29:00,419 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7562568913859480839 to E:/test\ly.lysa42
+2025-11-30 16:29:00,452 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f42d#lyysha #foryou #fyp _7565853912813538568.txt
+2025-11-30 16:29:00,452 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7565853912813538568
+2025-11-30 16:29:00,453 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7562523653561257223 to E:/test\ly.lysa42
+2025-11-30 16:29:00,459 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:00,459 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:00,459 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:00,612 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:00,612 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:00,612 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:01,505 - INFO - Caption saved to: E:\test\ly.lysa42\Mer ban ham p’louk\U0001f42d\u2728#lyysha #foryou #fyp _7562568913859480839.txt
+2025-11-30 16:29:01,505 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7562568913859480839
+2025-11-30 16:29:01,506 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7562396704499141895 to E:/test\ly.lysa42
+2025-11-30 16:29:01,520 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:01,520 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:01,520 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:01,724 - INFO - Caption saved to: E:\test\ly.lysa42\#lyysha #foryou #fyp _7566595007268850962.txt
+2025-11-30 16:29:01,725 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7566595007268850962
+2025-11-30 16:29:01,727 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7560549608175226130 to E:/test\ly.lysa42
+2025-11-30 16:29:01,746 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:01,746 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:01,747 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:02,138 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f611#lyysha #foryou #fyp _7566110683251641607.txt
+2025-11-30 16:29:02,138 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7566110683251641607
+2025-11-30 16:29:02,139 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7560004876671978760 to E:/test\ly.lysa42
+2025-11-30 16:29:02,153 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:02,153 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:02,153 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:02,331 - INFO - Caption saved to: E:\test\ly.lysa42\Khos men Kron oy smos ng ah jkea\uff1f#lyysha #foryou #fyp _7564008423252036871.txt
+2025-11-30 16:29:02,331 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7564008423252036871
+2025-11-30 16:29:02,332 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7559791398673763592 to E:/test\ly.lysa42
+2025-11-30 16:29:02,343 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:02,343 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:02,343 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:02,496 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f644#lyysha #foryou #fyp _7562585773501992210.txt
+2025-11-30 16:29:02,496 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7562585773501992210
+2025-11-30 16:29:02,499 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7559788876877843720 to E:/test\ly.lysa42
+2025-11-30 16:29:02,512 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:02,512 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:02,513 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:02,683 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f42d#lyysha #foryou #fyp _7572582970268208402.txt
+2025-11-30 16:29:02,683 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7572582970268208402
+2025-11-30 16:29:02,796 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7559625395612503303 to E:/test\ly.lysa42
+2025-11-30 16:29:02,807 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:02,807 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:02,807 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:03,451 - INFO - Caption saved to: E:\test\ly.lysa42\Call tv ban ta hai#lyysha #foryou #fyp _7565488664592125191.txt
+2025-11-30 16:29:03,451 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7565488664592125191
+2025-11-30 16:29:03,452 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7559043114711780616 to E:/test\ly.lysa42
+2025-11-30 16:29:03,473 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:03,473 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:03,473 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:04,056 - INFO - Caption saved to: E:\test\ly.lysa42\Sad tang prik\U0001fae9#lyysha #foryou #fyp _7564604650813410567.txt
+2025-11-30 16:29:04,056 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7564604650813410567
+2025-11-30 16:29:04,057 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7558683396336061704 to E:/test\ly.lysa42
+2025-11-30 16:29:04,068 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:04,069 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:04,069 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:04,426 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f4ab#lyysha #foryou #fyp _7560549608175226130.txt
+2025-11-30 16:29:04,426 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7560549608175226130
+2025-11-30 16:29:04,427 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7558680885214579976 to E:/test\ly.lysa42
+2025-11-30 16:29:04,439 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:04,439 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:04,439 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:05,087 - INFO - Caption saved to: E:\test\ly.lysa42\\u2764\ufe0f\u200d\U0001fa79#lyysha #foryou #fyp _7566615118621035794.txt
+2025-11-30 16:29:05,088 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7566615118621035794
+2025-11-30 16:29:05,089 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7558534477337709842 to E:/test\ly.lysa42
+2025-11-30 16:29:05,101 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:05,101 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:05,101 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:06,040 - INFO - Caption saved to: E:\test\ly.lysa42\Khan u\U0001f42d#lyysha #foryou #fyp _7559791398673763592.txt
+2025-11-30 16:29:06,040 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7559791398673763592
+2025-11-30 16:29:06,052 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7558431302379244818 to E:/test\ly.lysa42
+2025-11-30 16:29:06,069 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:06,069 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:06,069 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:07,352 - INFO - Caption saved to: E:\test\ly.lysa42\I need a’boy\U0001f639#lyysha #foryou #fyp _7562523653561257223.txt
+2025-11-30 16:29:07,353 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7562523653561257223
+2025-11-30 16:29:07,359 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7558309319255592199 to E:/test\ly.lysa42
+2025-11-30 16:29:07,382 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001fa90#lyysha #foryou #fyp _7559625395612503303.txt
+2025-11-30 16:29:07,385 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7559625395612503303
+2025-11-30 16:29:07,387 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7557959477966703890 to E:/test\ly.lysa42
+2025-11-30 16:29:07,402 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:07,402 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:07,402 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:07,538 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:07,538 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:07,538 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:08,174 - INFO - Caption saved to: E:\test\ly.lysa42\no need to be good for anyone, just be good for yourself is enough\U0001fa90#l..._7559043114711780616.txt
+2025-11-30 16:29:08,174 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7559043114711780616
+2025-11-30 16:29:08,176 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7557566997815512338 to E:/test\ly.lysa42
+2025-11-30 16:29:08,195 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:08,195 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:08,195 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:08,674 - INFO - Caption saved to: E:\test\ly.lysa42\\u1781\u17d2\u1798\u17c2\u179a\u179f\u17bb\u1791\u17d2\u1792\u179f\u17c4\u17c7\U0001f979#lyysha #foryou #fyp _7558683396336061704.txt
+2025-11-30 16:29:08,674 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7558683396336061704
+2025-11-30 16:29:08,675 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42/video/7557328225815268615 to E:/test\ly.lysa42
+2025-11-30 16:29:08,686 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 16:29:08,686 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 16:29:08,686 - DEBUG - No cookies configured for download.
+2025-11-30 16:29:08,889 - INFO - Caption saved to: E:\test\ly.lysa42\\u2728#lyysha #foryou #fyp _7558431302379244818.txt
+2025-11-30 16:29:08,890 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7558431302379244818
+2025-11-30 16:29:09,809 - INFO - Caption saved to: E:\test\ly.lysa42\Drafts\U0001f48b#lyysha #foryou #fyp _7557959477966703890.txt
+2025-11-30 16:29:09,810 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7557959477966703890
+2025-11-30 16:29:10,153 - INFO - Caption saved to: E:\test\ly.lysa42\Serjjjj@SCthou’s #lyysha #foryou #fyp #\u1780\u17c4\u17c7\u1780\u17bb\u1784 _7557566997815512338.txt
+2025-11-30 16:29:10,153 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7557566997815512338
+2025-11-30 16:29:10,165 - INFO - Caption saved to: E:\test\ly.lysa42\TikTok video #7558534477337709842_7558534477337709842.txt
+2025-11-30 16:29:10,165 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7558534477337709842
+2025-11-30 16:29:10,192 - INFO - Caption saved to: E:\test\ly.lysa42\#lyysha #foryou #fyp _7560004876671978760.txt
+2025-11-30 16:29:10,192 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7560004876671978760
+2025-11-30 16:29:10,240 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f440#lyysha #foryou #fyp _7562396704499141895.txt
+2025-11-30 16:29:10,240 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7562396704499141895
+2025-11-30 16:29:11,037 - INFO - Caption saved to: E:\test\ly.lysa42\Kom sad pek\U0001fae9#lyysha #foryou #fyp #\u1780\u17c4\u17c7\u1780\u17bb\u1784 _7557328225815268615.txt
+2025-11-30 16:29:11,038 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7557328225815268615
+2025-11-30 16:29:12,452 - INFO - Caption saved to: E:\test\ly.lysa42\\U0001f912#lyysha #foryou #fyp _7558309319255592199.txt
+2025-11-30 16:29:12,452 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7558309319255592199
+2025-11-30 16:29:19,255 - INFO - Caption saved to: E:\test\ly.lysa42\\u1782\u17bc\u1780\u1798\u17d2\u1798\uff1f#lyysha #foryou #fyp _7559788876877843720.txt
+2025-11-30 16:29:19,255 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7559788876877843720
+2025-11-30 16:29:21,540 - INFO - Caption saved to: E:\test\ly.lysa42\\u17a2\u17c4\u1799\u179a\u17bd\u1785\u178f\u17c2\u1790\u17d2\u179b\u17c3\u179b\u17c1\u1798\u1780\U0001f616\U0001f923#lyysha #foryou #fyp _7558680885214579976.txt
+2025-11-30 16:29:21,540 - INFO - Download completed: https://www.tiktok.com/@ly.lysa42/video/7558680885214579976

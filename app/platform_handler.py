@@ -927,8 +927,8 @@ class TikTokHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        # Prefer Playwright for scrolling/scraping lists on TikTok
-        return extract_metadata_with_playwright(url, max_entries, settings=settings)
+        # Prefer yt-dlp for scraping lists on TikTok as it is more robust than raw Playwright
+        return extract_metadata_with_ytdlp(url, max_entries, settings=settings)
 
     def download(self, item, progress_callback):
         url = item['url']
