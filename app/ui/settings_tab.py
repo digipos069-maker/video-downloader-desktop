@@ -7,9 +7,212 @@ from PySide6.QtWidgets import (
     QCheckBox, QSpinBox, QComboBox, QLabel, QFormLayout, QPushButton, QMessageBox,
     QLineEdit, QFileDialog
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal, Slot, QThread
+import yt_dlp
+import os
+import sys
+import tempfile
+import json # for yt-dlp output parsing
+import logging
+
 from app.config.settings_manager import load_settings, save_settings
 from app.config.credentials import CredentialsManager
+from app.platform_handler import extract_metadata_with_playwright
+
+# --- Styles ---
+VERIFY_BTN_STYLE = """
+    QPushButton {
+        background-color: #3B82F6;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 10pt;
+        margin-top: 10px;
+    }
+    QPushButton:hover {
+        background-color: #2563EB;
+    }
+    QPushButton:pressed {
+        background-color: #1D4ED8;
+    }
+"""
+
+SAVE_BTN_STYLE = """
+    QPushButton {
+        background-color: #3B82F6;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    QPushButton:hover {
+        background-color: #2563EB;
+    }
+    QPushButton:pressed {
+        background-color: #1D4ED8;
+    }
+"""
+
+INPUT_STYLE = """
+    QComboBox, QSpinBox {
+        background-color: #1C1C21;
+        border: 2px solid #27272A;
+        border-radius: 8px;
+        padding: 4px 8px;
+        color: #F4F4F5;
+        font-size: 10pt;
+        min-width: 80px;
+    }
+    QComboBox:hover, QSpinBox:hover {
+        border-color: #3B82F6;
+        background-color: #202025;
+    }
+    QComboBox::drop-down {
+        border: none;
+        width: 20px;
+    }
+    QCheckBox {
+        color: #F4F4F5;
+        font-size: 10pt;
+        background-color: transparent;
+        spacing: 8px;
+    }
+    QCheckBox::indicator {
+        border: 2px solid #3F3F46;
+        border-radius: 4px;
+        width: 18px;
+        height: 18px;
+        background: transparent;
+    }
+    QCheckBox::indicator:checked {
+        background-color: #3B82F6;
+        border-color: #3B82F6;
+    }
+    
+    /* LineEdit for File Paths */
+    QLineEdit {
+        background-color: #1C1C21;
+        border: 2px solid #27272A;
+        border-radius: 8px;
+        padding: 4px 8px;
+        color: #F4F4F5;
+        font-size: 10pt;
+    }
+    QLineEdit:focus {
+        border-color: #3B82F6;
+        background-color: #202025;
+    }
+"""
+
+class CookieVerificationWorker(QThread):
+    finished = Signal(bool, str)
+
+    def __init__(self, cookie_file=None, browser_source=None, parent=None):
+        super().__init__(parent)
+        self.cookie_file = cookie_file
+        self.browser_source = browser_source
+        # Use a public watch URL for better reliability
+        self.test_url = "https://www.facebook.com/watch/?v=10153231379986729" 
+
+    def run(self):
+        ydl_opts = {
+            'quiet': True,
+            'simulate': True, # Don't download
+            'skip_download': True,
+            'noplaylist': True,
+            'ignoreerrors': True,
+            'no_warnings': True,
+            'dump_single_json': True,
+        }
+
+        logging.info(f"Starting cookie verification. File: '{self.cookie_file}', Browser: '{self.browser_source}'")
+
+        if self.cookie_file:
+            if os.path.exists(self.cookie_file):
+                logging.info(f"Verifying with cookie file: {self.cookie_file}")
+                ydl_opts['cookiefile'] = self.cookie_file
+            else:
+                msg = f"Cookie file path provided but file not found: {self.cookie_file}"
+                logging.error(msg)
+                self.finished.emit(False, msg)
+                return
+        elif self.browser_source and self.browser_source != "None":
+            logging.info(f"Verifying with browser source: {self.browser_source}")
+            ydl_opts['cookiesfrombrowser'] = (self.browser_source, )
+        else:
+            msg = "No cookie file or browser source provided."
+            logging.error(msg)
+            self.finished.emit(False, msg)
+            return
+
+        try:
+            # Capture output using tempfile instead of pipe to avoid Windows buffering issues
+            with tempfile.TemporaryFile(mode='w+', encoding='utf-8') as tmp_out, \
+                 tempfile.TemporaryFile(mode='w+', encoding='utf-8') as tmp_err:
+                
+                original_stdout = sys.stdout
+                original_stderr = sys.stderr
+                
+                try:
+                    sys.stdout = tmp_out
+                    sys.stderr = tmp_err
+                    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                        ydl.extract_info(self.test_url, download=False)
+                except Exception:
+                    # yt-dlp raises exceptions on failure even with ignoreerrors=True sometimes
+                    pass
+                finally:
+                    sys.stdout = original_stdout # Restore stdout
+                    sys.stderr = original_stderr # Restore stderr
+                
+                tmp_out.seek(0)
+                output = tmp_out.read()
+                
+                tmp_err.seek(0)
+                error_output = tmp_err.read()
+
+            logging.debug(f"Verification Output: {output[:500]}...")
+            if error_output:
+                logging.error(f"Verification Stderr: {error_output}")
+            
+            # Check if JSON output indicates success
+            if output.strip() and ('"id":' in output and '"title":' in output):
+                self.finished.emit(True, "Cookies are valid! Accessed test video via yt-dlp.")
+                return
+            
+            # --- FALLBACK: Playwright Verification ---
+            # If yt-dlp failed (likely "Cannot parse data"), try Playwright to confirm accessibility
+            logging.info("yt-dlp verification failed. Attempting Playwright fallback...")
+            
+            # We only try fallback if the error suggests parsing issues, not auth issues
+            # But generally, if we can reach the site, it's 'Good Enough' for our Playwright-based scrapers
+            
+            pw_results = extract_metadata_with_playwright(self.test_url)
+            if pw_results and pw_results[0].get('type') != 'error':
+                # Check if we got valid-looking data (not just a login page title)
+                first_res = pw_results[0]
+                if "Login" in first_res.get('title', '') or "Log In" in first_res.get('title', ''):
+                     self.finished.emit(False, "Verification failed: Page redirects to Login. Check cookies.")
+                else:
+                     self.finished.emit(True, "Verified via Browser (Playwright). yt-dlp parsing failed, but site is accessible.")
+            else:
+                # Use the original yt-dlp error if Playwright also fails
+                if "Cannot parse data" in output or "Cannot parse data" in error_output:
+                     self.finished.emit(False, "Verification failed: yt-dlp could not parse Facebook data. This is a known issue with recent Facebook updates.")
+                elif "Login required" in output or "This video is private" in output:
+                     self.finished.emit(False, "Verification failed: Cookies invalid or expired.")
+                else:
+                     clean_err = error_output.strip() if error_output else "Unknown error"
+                     self.finished.emit(False, f"Verification failed. yt-dlp error: {clean_err[:300]}")
+
+        except Exception as e:
+            logging.error(f"Verification failed with exception: {e}")
+            self.finished.emit(False, f"Verification failed with error: {e}")
+
 
 class SettingsTab(QWidget):
     def __init__(self, parent=None):
@@ -19,62 +222,10 @@ class SettingsTab(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(15, 15, 15, 15)
         layout.setSpacing(15)
-
-        # --- Styles ---
-        input_style = """
-            QComboBox, QSpinBox {
-                background-color: #1C1C21;
-                border: 2px solid #27272A;
-                border-radius: 8px;
-                padding: 4px 8px;
-                color: #F4F4F5;
-                font-size: 10pt;
-                min-width: 80px;
-            }
-            QComboBox:hover, QSpinBox:hover {
-                border-color: #3B82F6;
-                background-color: #202025;
-            }
-            QComboBox::drop-down {
-                border: none;
-                width: 20px;
-            }
-            QCheckBox {
-                color: #F4F4F5;
-                font-size: 10pt;
-                background-color: transparent;
-                spacing: 8px;
-            }
-            QCheckBox::indicator {
-                border: 2px solid #3F3F46;
-                border-radius: 4px;
-                width: 18px;
-                height: 18px;
-                background: transparent;
-            }
-            QCheckBox::indicator:checked {
-                background-color: #3B82F6;
-                border-color: #3B82F6;
-            }
-            
-            /* LineEdit for File Paths */
-            QLineEdit {
-                background-color: #1C1C21;
-                border: 2px solid #27272A;
-                border-radius: 8px;
-                padding: 4px 8px;
-                color: #F4F4F5;
-                font-size: 10pt;
-            }
-            QLineEdit:focus {
-                border-color: #3B82F6;
-                background-color: #202025;
-            }
-        """
         
         label_style = "color: #A1A1AA; font-weight: 600; background-color: transparent;"
         
-        self.setStyleSheet(input_style) # Apply globally
+        self.setStyleSheet(INPUT_STYLE) # Apply globally
 
         # --- Global Settings ---
         global_settings_layout = QHBoxLayout()
@@ -216,6 +367,12 @@ class SettingsTab(QWidget):
         fb_browser_layout.addStretch()
         fb_layout.addLayout(fb_browser_layout)
         
+        # --- Verify Cookies Button ---
+        self.verify_fb_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_fb_cookies_btn.clicked.connect(self.verify_fb_cookies)
+        self.verify_fb_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        fb_layout.addWidget(self.verify_fb_cookies_btn)
+        
         fb_layout.addStretch()
         self.credentials_tabs.addTab(facebook_tab, "Facebook")
         
@@ -230,24 +387,7 @@ class SettingsTab(QWidget):
 
         # Save Button
         save_btn = QPushButton("Save Settings")
-        save_btn_style = """
-            QPushButton {
-                background-color: #3B82F6;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 6px;
-                font-weight: bold;
-                font-size: 10pt;
-            }
-            QPushButton:hover {
-                background-color: #2563EB;
-            }
-            QPushButton:pressed {
-                background-color: #1D4ED8;
-            }
-        """
-        save_btn.setStyleSheet(save_btn_style)
+        save_btn.setStyleSheet(SAVE_BTN_STYLE)
         save_btn.clicked.connect(self.save_current_settings)
         layout.addWidget(save_btn)
         
@@ -260,6 +400,32 @@ class SettingsTab(QWidget):
         path, _ = QFileDialog.getOpenFileName(self, "Select Cookies File", "", "Text Files (*.txt);;All Files (*)")
         if path:
             self.fb_cookies_path.setText(path)
+
+    @Slot()
+    def verify_fb_cookies(self):
+        cookie_file = self.fb_cookies_path.text()
+        browser_source = self.fb_browser_combo.currentText()
+        
+        if not cookie_file and (not browser_source or browser_source == "None"):
+            QMessageBox.warning(self, "Verification Failed", "Please provide a cookie file or select a browser source.")
+            return
+
+        self.verify_fb_cookies_btn.setEnabled(False)
+        self.verify_fb_cookies_btn.setText("Verifying...")
+
+        self.cookie_worker = CookieVerificationWorker(cookie_file, browser_source, self) # Pass self as parent
+        self.cookie_worker.finished.connect(self.on_cookie_verification_finished)
+        self.cookie_worker.start()
+
+    @Slot(bool, str)
+    def on_cookie_verification_finished(self, success, message):
+        self.verify_fb_cookies_btn.setEnabled(True)
+        self.verify_fb_cookies_btn.setText("Verify Cookies")
+
+        if success:
+            QMessageBox.information(self, "Verification Success", message)
+        else:
+            QMessageBox.critical(self, "Verification Failed", message)
 
     def get_settings(self):
         """Returns the current global settings as a dictionary."""

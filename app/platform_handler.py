@@ -3,6 +3,7 @@ Platform-specific handlers for scraping and downloading.
 Now utilizing Playwright for robust metadata extraction.
 """
 import yt_dlp
+from yt_dlp.utils import DownloadError
 from abc import ABC, abstractmethod
 import time
 from urllib.parse import urlparse
@@ -11,7 +12,8 @@ import os
 import urllib.request
 import re
 import json
-
+import shutil
+import psutil
 
 # Configure logging
 logging.basicConfig(
@@ -47,9 +49,33 @@ def is_valid_media_link(href, domain):
     elif 'instagram.com' in domain:
         return '/p/' in href or '/reel/' in href
     elif 'facebook.com' in domain:
-         return '/watch' in href or '/videos/' in href
+         return '/watch' in href or '/videos/' in href or '/reel/' in href
     
     return False
+
+def check_browser_process(browser_name):
+    """
+    Checks if the specified browser is running and raises an exception if it is.
+    """
+    browser_processes = {
+        'chrome': ['chrome.exe', 'chrome'],
+        'firefox': ['firefox.exe', 'firefox'],
+        'opera': ['opera.exe', 'opera'],
+        'edge': ['msedge.exe', 'msedge'],
+        'brave': ['brave.exe', 'brave'],
+        'vivaldi': ['vivaldi.exe', 'vivaldi']
+    }
+    
+    target_procs = browser_processes.get(browser_name.lower(), [])
+    if not target_procs:
+        return
+
+    for proc in psutil.process_iter(['name']):
+        try:
+            if proc.info['name'] in target_procs:
+                raise Exception(f"Browser '{browser_name}' is open. Please close it to allow access to cookies.")
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
 
 def extract_metadata_with_playwright(url, max_entries=100):
     """
@@ -160,9 +186,7 @@ def extract_metadata_with_playwright(url, max_entries=100):
         
     return results
 
-import shutil # Ensure shutil is imported
-
-def extract_metadata_with_ytdlp(url, max_entries=100):
+def extract_metadata_with_ytdlp(url, max_entries=100, settings={}):
     """
     Helper to extract metadata using yt-dlp (better for playlists/profiles).
     """
@@ -176,6 +200,22 @@ def extract_metadata_with_ytdlp(url, max_entries=100):
             'no_warnings': True,
             'ignoreerrors': True,
         }
+        
+        # Handle Cookies (Authentication)
+        cookie_file = settings.get('cookie_file')
+        browser_source = settings.get('cookies_from_browser')
+        
+        logging.debug(f"Cookie setup (metadata): File='{cookie_file}', Browser='{browser_source}'")
+
+        if cookie_file and os.path.exists(cookie_file):
+            logging.info(f"Using cookie file: {cookie_file}")
+            ydl_opts['cookiefile'] = cookie_file
+        elif browser_source and browser_source.lower() != 'none':
+            logging.info(f"Using cookies from browser: {browser_source}")
+            ydl_opts['cookiesfrombrowser'] = (browser_source, )
+        else:
+            logging.debug("No cookies configured for metadata extraction.")
+
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(url, download=False)
             
@@ -260,14 +300,19 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         
     # Handle Cookies (Authentication)
     cookie_file = settings.get('cookie_file')
+    browser_source = settings.get('cookies_from_browser')
+    
+    logging.debug(f"Cookie setup (download): File='{cookie_file}', Browser='{browser_source}'")
+
     if cookie_file and os.path.exists(cookie_file):
         logging.info(f"Using cookie file: {cookie_file}")
         ydl_opts['cookiefile'] = cookie_file
-        
-    browser_source = settings.get('cookies_from_browser')
-    if browser_source:
+    elif browser_source and browser_source.lower() != 'none':
         logging.info(f"Using cookies from browser: {browser_source}")
+        check_browser_process(browser_source) # Check if browser is open
         ydl_opts['cookiesfrombrowser'] = (browser_source, )
+    else:
+        logging.debug("No cookies configured for download.")
 
     # Handle Extensions / Format selection
     if extension in ['mp3', 'wav', 'm4a']:
@@ -323,7 +368,13 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             # Use extract_info with download=True to get metadata AND download
-            info = ydl.extract_info(url, download=True)
+            try:
+                info = ydl.extract_info(url, download=True)
+            except DownloadError as e:
+                if "Could not copy Chrome cookie database" in str(e):
+                    raise Exception("Please close Chrome to allow cookie access, or use 'Cookies File' option.")
+                else:
+                    raise e # Re-raise other download errors
             
             # Handle Caption (.txt) generation
             if naming_style == 'Video + Caption (.txt)':
@@ -358,6 +409,9 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         return True
     except Exception as e:
         logging.error(f"Download failed: {e}")
+        # Re-raise to allow worker to capture the specific message
+        if "Please close Chrome" in str(e):
+            raise e 
         return False
 
 def download_direct(url, output_path, title, progress_callback, settings={}):
@@ -525,12 +579,12 @@ def extract_pinterest_direct_url(url):
 
             # Strategy 4: Regex search in page content (Last resort)
             content = page.content()
-            m3u8_matches = re.findall(r'(https?://[^"]+pinimg[^"]+\.m3u8)', content)
+            m3u8_matches = re.findall(r'(https?://[^"]+pinimg[^"].m3u8)', content)
             if m3u8_matches:
                 browser.close()
                 return m3u8_matches[0]
             
-            mp4_matches = re.findall(r'(https?://[^"]+pinimg[^"]+\.mp4)', content)
+            mp4_matches = re.findall(r'(https?://[^"]+pinimg[^"].mp4)', content)
             if mp4_matches:
                 browser.close()
                 return mp4_matches[0]
@@ -647,7 +701,7 @@ class BaseHandler(ABC):
         pass
 
     @abstractmethod
-    def get_playlist_metadata(self, url, max_entries=100):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
         pass
 
     @abstractmethod
@@ -722,8 +776,8 @@ class YouTubeHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_ytdlp(url, max_entries)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+        return extract_metadata_with_ytdlp(url, max_entries, settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -738,8 +792,8 @@ class TikTokHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_ytdlp(url, max_entries)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+        return extract_metadata_with_ytdlp(url, max_entries, settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -754,8 +808,8 @@ class PinterestHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_ytdlp(url, max_entries)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+        return extract_metadata_with_ytdlp(url, max_entries, settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -803,8 +857,8 @@ class FacebookHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
     
-    def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_ytdlp(url, max_entries)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+        return extract_metadata_with_ytdlp(url, max_entries, settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -819,8 +873,8 @@ class InstagramHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100):
-        return extract_metadata_with_ytdlp(url, max_entries)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+        return extract_metadata_with_ytdlp(url, max_entries, settings)
 
     def download(self, item, progress_callback):
         url = item['url']

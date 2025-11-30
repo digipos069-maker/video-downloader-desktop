@@ -2,7 +2,7 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 1,
+        "count": 50,
         "all": false,
         "resolution": "Best Available"
     },
@@ -14,14 +14,14 @@
         "quality": "Best Available"
     },
     "download": {
-        "extension": "mp4",
+        "extension": "Best",
         "naming": "Video + Caption (.txt)",
         "subtitles": false,
         "video_path": "",
         "photo_path": "E:/test"
     },
     "system": {
-        "threads": 11,
+        "threads": 10,
         "shutdown": false
     },
     "user_profile": {
