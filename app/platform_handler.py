@@ -283,7 +283,12 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     # Define filename template based on naming style
     if naming_style == 'Numbered (01. Name)':
         outtmpl = f'{output_path}/%(autonumber)02d. %(title)s.%(ext)s'
+    elif naming_style == 'Video + Caption (.txt)':
+        # Add ID to prevent collisions which cause rename errors on Windows (WinError 32)
+        # especially when concurrent downloads share the same generic title like "Video"
+        outtmpl = f'{output_path}/%(title)s_%(id)s.%(ext)s'
     else:
+        # Original Name
         outtmpl = f'{output_path}/%(title)s.%(ext)s'
 
     ydl_opts = {

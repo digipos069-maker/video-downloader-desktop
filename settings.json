@@ -15,7 +15,7 @@
     },
     "download": {
         "extension": "mkv",
-        "naming": "Original Name",
+        "naming": "Video + Caption (.txt)",
         "subtitles": false,
         "video_path": "",
         "photo_path": "E:/test"
