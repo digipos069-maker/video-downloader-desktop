@@ -3687,3 +3687,142 @@
 2025-11-30 15:29:19,316 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
 2025-11-30 15:29:19,316 - INFO - Scraping loop finished. Found 10 items.
 2025-11-30 15:29:19,316 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:33:11,786 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:33:34,478 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:33:37,242 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:33:38,063 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:33:38,063 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:33:40,365 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:33:40,376 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:33:45,922 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:33:45,936 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new valid, +22 raw)
+2025-11-30 15:33:51,488 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:33:51,499 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:33:57,032 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:33:57,043 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:34:02,576 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:34:02,588 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:34:02,588 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:34:09,637 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:34:09,648 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:34:09,648 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:34:16,709 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:34:16,719 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:34:16,719 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:34:23,766 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:34:23,777 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:34:23,778 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-11-30 15:34:23,778 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:34:23,778 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:37:26,296 - INFO - Starting cookie verification. File: '', Browser: 'chrome'
+2025-11-30 15:37:26,296 - INFO - Verifying with browser source: chrome
+2025-11-30 15:37:31,683 - DEBUG - Verification Output: ...
+2025-11-30 15:37:31,683 - ERROR - Verification Stderr: ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-dlp/issues/7271  for more info
+ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-dlp/issues/7271  for more info
+
+2025-11-30 15:37:31,683 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-11-30 15:37:31,683 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:37:32,509 - INFO - Playwright visiting: https://www.facebook.com/watch/?v=10153231379986729
+2025-11-30 15:37:32,509 - INFO - Scraping target limit (max_entries): 100
+2025-11-30 15:37:33,969 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-11-30 15:37:33,992 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-11-30 15:37:39,541 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:37:39,560 - INFO - Loop status: Iteration 1, Found 29/100 items (+29 new valid, +37 raw)
+2025-11-30 15:37:45,092 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:37:45,103 - INFO - Loop status: Iteration 2, Found 29/100 items (+0 new valid, +0 raw)
+2025-11-30 15:37:50,631 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:37:50,646 - INFO - Loop status: Iteration 3, Found 29/100 items (+0 new valid, +0 raw)
+2025-11-30 15:37:56,175 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:37:56,190 - INFO - Loop status: Iteration 4, Found 29/100 items (+0 new valid, +0 raw)
+2025-11-30 15:37:56,191 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:38:02,093 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:38:08,047 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:38:08,080 - INFO - Added 9 cookies to browser context.
+2025-11-30 15:38:08,498 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61579938422467
+2025-11-30 15:38:08,498 - INFO - Scraping target limit (max_entries): 50
+2025-11-30 15:38:10,248 - INFO - Starting scroll loop. Planned iterations: 5 for max 50 items.
+2025-11-30 15:38:10,280 - INFO - Starting dynamic scroll loop. Target: 50 items.
+2025-11-30 15:38:15,997 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:38:16,074 - INFO - Loop status: Iteration 1, Found 1/50 items (+1 new valid, +58 raw)
+2025-11-30 15:38:21,618 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:38:21,652 - INFO - Loop status: Iteration 2, Found 1/50 items (+0 new valid, +25 raw)
+2025-11-30 15:38:27,214 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:38:27,268 - INFO - Loop status: Iteration 3, Found 1/50 items (+0 new valid, +30 raw)
+2025-11-30 15:38:32,804 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:38:32,850 - INFO - Loop status: Iteration 4, Found 6/50 items (+5 new valid, +35 raw)
+2025-11-30 15:38:38,386 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:38:38,440 - INFO - Loop status: Iteration 5, Found 36/50 items (+30 new valid, +59 raw)
+2025-11-30 15:38:44,021 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:38:44,075 - INFO - Loop status: Iteration 6, Found 41/50 items (+5 new valid, +41 raw)
+2025-11-30 15:38:49,626 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:38:49,676 - INFO - Loop status: Iteration 7, Found 41/50 items (+0 new valid, +29 raw)
+2025-11-30 15:38:55,203 - DEBUG - Scroll iteration 8 completed
+2025-11-30 15:38:55,252 - INFO - Loop status: Iteration 8, Found 41/50 items (+0 new valid, +35 raw)
+2025-11-30 15:39:00,792 - DEBUG - Scroll iteration 9 completed
+2025-11-30 15:39:00,818 - INFO - Loop status: Iteration 9, Found 41/50 items (+0 new valid, +22 raw)
+2025-11-30 15:39:06,379 - DEBUG - Scroll iteration 10 completed
+2025-11-30 15:39:06,437 - INFO - Loop status: Iteration 10, Found 44/50 items (+3 new valid, +27 raw)
+2025-11-30 15:39:11,981 - DEBUG - Scroll iteration 11 completed
+2025-11-30 15:39:12,029 - INFO - Loop status: Iteration 11, Found 44/50 items (+0 new valid, +27 raw)
+2025-11-30 15:39:17,575 - DEBUG - Scroll iteration 12 completed
+2025-11-30 15:39:17,618 - INFO - Loop status: Iteration 12, Found 44/50 items (+0 new valid, +29 raw)
+2025-11-30 15:39:23,207 - DEBUG - Scroll iteration 13 completed
+2025-11-30 15:39:23,244 - INFO - Loop status: Iteration 13, Found 44/50 items (+0 new valid, +23 raw)
+2025-11-30 15:39:28,821 - DEBUG - Scroll iteration 14 completed
+2025-11-30 15:39:28,867 - INFO - Loop status: Iteration 14, Found 45/50 items (+1 new valid, +27 raw)
+2025-11-30 15:39:34,461 - DEBUG - Scroll iteration 15 completed
+2025-11-30 15:39:34,518 - INFO - Loop status: Iteration 15, Found 53/50 items (+8 new valid, +44 raw)
+2025-11-30 15:39:34,518 - INFO - Scraping loop finished. Found 53 items.
+2025-11-30 15:39:34,518 - INFO - Scraping found 53 unique valid links.
+2025-11-30 15:41:28,101 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:41:39,055 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:41:41,179 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:41:42,007 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:41:42,007 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:41:44,578 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:41:44,587 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:41:50,127 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:41:50,141 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new valid, +22 raw)
+2025-11-30 15:41:55,675 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:41:55,685 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:01,219 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:42:01,227 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:06,760 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:42:06,771 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:06,771 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:42:13,821 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:42:13,833 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:13,833 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:42:20,880 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:42:20,887 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:20,888 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:42:27,932 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:42:27,943 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:42:27,943 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-11-30 15:42:27,943 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:42:27,943 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:43:28,738 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:43:29,554 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:43:29,555 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:43:31,788 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:43:31,811 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:43:37,352 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:43:37,367 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new valid, +22 raw)
+2025-11-30 15:43:42,911 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:43:42,922 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:43:48,456 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:43:48,468 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:43:54,000 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:43:54,020 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:43:54,020 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:44:01,069 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:44:01,079 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:44:01,079 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:44:08,128 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:44:08,138 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:44:08,139 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:44:15,186 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:44:15,197 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:44:15,198 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-11-30 15:44:15,198 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:44:15,198 - INFO - Scraping found 10 unique valid links.

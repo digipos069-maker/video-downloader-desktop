@@ -70,7 +70,7 @@ class ScrapingWorker(QThread):
             print(f"Final Fetch Limit: {fetch_limit}")
             print(f"----------------------")
 
-            metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit)
+            metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit, settings=self.settings)
             
             if not metadata_list:
                 self.error.emit(f"No downloadable items found for {self.url}.")
@@ -993,6 +993,16 @@ class DownloaderTab(QWidget):
         settings = {}
         if self.settings_tab:
             settings = self.settings_tab.get_settings()
+            
+            # --- Inject Facebook Credentials for Scraper ---
+            if "facebook.com" in url or "fb.watch" in url:
+                fb_creds = self.credentials_manager.get_credential('facebook')
+                if fb_creds:
+                    if fb_creds.get('cookie_file'):
+                        settings['cookie_file'] = fb_creds.get('cookie_file')
+                    if fb_creds.get('browser') and fb_creds.get('browser') != "None":
+                        settings['cookies_from_browser'] = fb_creds.get('browser')
+                        
             print(f"[DEBUG] Scraping with settings: {settings}")
         else:
             print("[ERROR] Settings tab not linked!")
