@@ -3141,3 +3141,549 @@
 2025-11-30 14:22:37,553 - DEBUG - Scroll iteration 10/10 completed
 2025-11-30 14:22:37,576 - INFO - Found 24 raw links on page.
 2025-11-30 14:22:37,576 - INFO - Filtered down to 10 unique valid links.
+2025-11-30 14:27:02,288 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:27:16,789 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:27:18,552 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:27:18,552 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 14:27:18,552 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 14:27:44,958 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 14:27:44,959 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:27:45,836 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:27:48,063 - INFO - Starting scroll loop. Planned iterations: 102 for max 2000 items.
+2025-11-30 14:27:49,575 - DEBUG - Scroll iteration 1/102 completed
+2025-11-30 14:27:51,083 - DEBUG - Scroll iteration 2/102 completed
+2025-11-30 14:27:52,590 - DEBUG - Scroll iteration 3/102 completed
+2025-11-30 14:27:54,098 - DEBUG - Scroll iteration 4/102 completed
+2025-11-30 14:27:55,621 - DEBUG - Scroll iteration 5/102 completed
+2025-11-30 14:27:57,129 - DEBUG - Scroll iteration 6/102 completed
+2025-11-30 14:27:58,636 - DEBUG - Scroll iteration 7/102 completed
+2025-11-30 14:28:00,144 - DEBUG - Scroll iteration 8/102 completed
+2025-11-30 14:28:01,652 - DEBUG - Scroll iteration 9/102 completed
+2025-11-30 14:28:03,160 - DEBUG - Scroll iteration 10/102 completed
+2025-11-30 14:28:04,667 - DEBUG - Scroll iteration 11/102 completed
+2025-11-30 14:28:06,175 - DEBUG - Scroll iteration 12/102 completed
+2025-11-30 14:28:07,682 - DEBUG - Scroll iteration 13/102 completed
+2025-11-30 14:28:09,190 - DEBUG - Scroll iteration 14/102 completed
+2025-11-30 14:28:10,697 - DEBUG - Scroll iteration 15/102 completed
+2025-11-30 14:28:12,204 - DEBUG - Scroll iteration 16/102 completed
+2025-11-30 14:28:13,712 - DEBUG - Scroll iteration 17/102 completed
+2025-11-30 14:28:15,220 - DEBUG - Scroll iteration 18/102 completed
+2025-11-30 14:28:16,727 - DEBUG - Scroll iteration 19/102 completed
+2025-11-30 14:28:18,234 - DEBUG - Scroll iteration 20/102 completed
+2025-11-30 14:28:19,742 - DEBUG - Scroll iteration 21/102 completed
+2025-11-30 14:28:21,248 - DEBUG - Scroll iteration 22/102 completed
+2025-11-30 14:28:22,755 - DEBUG - Scroll iteration 23/102 completed
+2025-11-30 14:28:24,262 - DEBUG - Scroll iteration 24/102 completed
+2025-11-30 14:28:25,769 - DEBUG - Scroll iteration 25/102 completed
+2025-11-30 14:28:27,275 - DEBUG - Scroll iteration 26/102 completed
+2025-11-30 14:28:28,783 - DEBUG - Scroll iteration 27/102 completed
+2025-11-30 14:28:30,290 - DEBUG - Scroll iteration 28/102 completed
+2025-11-30 14:28:31,802 - DEBUG - Scroll iteration 29/102 completed
+2025-11-30 14:28:33,310 - DEBUG - Scroll iteration 30/102 completed
+2025-11-30 14:28:34,818 - DEBUG - Scroll iteration 31/102 completed
+2025-11-30 14:28:36,325 - DEBUG - Scroll iteration 32/102 completed
+2025-11-30 14:28:37,833 - DEBUG - Scroll iteration 33/102 completed
+2025-11-30 14:28:39,342 - DEBUG - Scroll iteration 34/102 completed
+2025-11-30 14:28:40,857 - DEBUG - Scroll iteration 35/102 completed
+2025-11-30 14:28:42,374 - DEBUG - Scroll iteration 36/102 completed
+2025-11-30 14:28:43,889 - DEBUG - Scroll iteration 37/102 completed
+2025-11-30 14:28:45,397 - DEBUG - Scroll iteration 38/102 completed
+2025-11-30 14:28:46,904 - DEBUG - Scroll iteration 39/102 completed
+2025-11-30 14:28:48,411 - DEBUG - Scroll iteration 40/102 completed
+2025-11-30 14:28:49,918 - DEBUG - Scroll iteration 41/102 completed
+2025-11-30 14:28:51,425 - DEBUG - Scroll iteration 42/102 completed
+2025-11-30 14:28:52,932 - DEBUG - Scroll iteration 43/102 completed
+2025-11-30 14:28:54,440 - DEBUG - Scroll iteration 44/102 completed
+2025-11-30 14:28:55,947 - DEBUG - Scroll iteration 45/102 completed
+2025-11-30 14:28:57,454 - DEBUG - Scroll iteration 46/102 completed
+2025-11-30 14:28:58,961 - DEBUG - Scroll iteration 47/102 completed
+2025-11-30 14:29:00,468 - DEBUG - Scroll iteration 48/102 completed
+2025-11-30 14:29:01,977 - DEBUG - Scroll iteration 49/102 completed
+2025-11-30 14:29:03,484 - DEBUG - Scroll iteration 50/102 completed
+2025-11-30 14:29:04,992 - DEBUG - Scroll iteration 51/102 completed
+2025-11-30 14:29:06,499 - DEBUG - Scroll iteration 52/102 completed
+2025-11-30 14:29:08,006 - DEBUG - Scroll iteration 53/102 completed
+2025-11-30 14:29:09,514 - DEBUG - Scroll iteration 54/102 completed
+2025-11-30 14:29:11,021 - DEBUG - Scroll iteration 55/102 completed
+2025-11-30 14:29:12,528 - DEBUG - Scroll iteration 56/102 completed
+2025-11-30 14:29:14,035 - DEBUG - Scroll iteration 57/102 completed
+2025-11-30 14:29:15,543 - DEBUG - Scroll iteration 58/102 completed
+2025-11-30 14:29:17,050 - DEBUG - Scroll iteration 59/102 completed
+2025-11-30 14:29:18,558 - DEBUG - Scroll iteration 60/102 completed
+2025-11-30 14:29:20,065 - DEBUG - Scroll iteration 61/102 completed
+2025-11-30 14:29:21,572 - DEBUG - Scroll iteration 62/102 completed
+2025-11-30 14:29:23,079 - DEBUG - Scroll iteration 63/102 completed
+2025-11-30 14:29:24,587 - DEBUG - Scroll iteration 64/102 completed
+2025-11-30 14:29:26,095 - DEBUG - Scroll iteration 65/102 completed
+2025-11-30 14:29:27,602 - DEBUG - Scroll iteration 66/102 completed
+2025-11-30 14:29:29,109 - DEBUG - Scroll iteration 67/102 completed
+2025-11-30 14:29:30,616 - DEBUG - Scroll iteration 68/102 completed
+2025-11-30 14:29:32,123 - DEBUG - Scroll iteration 69/102 completed
+2025-11-30 14:29:33,631 - DEBUG - Scroll iteration 70/102 completed
+2025-11-30 14:29:35,138 - DEBUG - Scroll iteration 71/102 completed
+2025-11-30 14:29:36,645 - DEBUG - Scroll iteration 72/102 completed
+2025-11-30 14:29:38,153 - DEBUG - Scroll iteration 73/102 completed
+2025-11-30 14:29:39,661 - DEBUG - Scroll iteration 74/102 completed
+2025-11-30 14:29:41,168 - DEBUG - Scroll iteration 75/102 completed
+2025-11-30 14:29:42,675 - DEBUG - Scroll iteration 76/102 completed
+2025-11-30 14:29:44,182 - DEBUG - Scroll iteration 77/102 completed
+2025-11-30 14:29:45,689 - DEBUG - Scroll iteration 78/102 completed
+2025-11-30 14:29:47,196 - DEBUG - Scroll iteration 79/102 completed
+2025-11-30 14:29:48,703 - DEBUG - Scroll iteration 80/102 completed
+2025-11-30 14:29:50,210 - DEBUG - Scroll iteration 81/102 completed
+2025-11-30 14:29:51,719 - DEBUG - Scroll iteration 82/102 completed
+2025-11-30 14:29:53,226 - DEBUG - Scroll iteration 83/102 completed
+2025-11-30 14:29:54,733 - DEBUG - Scroll iteration 84/102 completed
+2025-11-30 14:29:56,241 - DEBUG - Scroll iteration 85/102 completed
+2025-11-30 14:29:57,748 - DEBUG - Scroll iteration 86/102 completed
+2025-11-30 14:29:59,256 - DEBUG - Scroll iteration 87/102 completed
+2025-11-30 14:30:00,763 - DEBUG - Scroll iteration 88/102 completed
+2025-11-30 14:30:02,270 - DEBUG - Scroll iteration 89/102 completed
+2025-11-30 14:30:03,777 - DEBUG - Scroll iteration 90/102 completed
+2025-11-30 14:30:05,284 - DEBUG - Scroll iteration 91/102 completed
+2025-11-30 14:30:06,792 - DEBUG - Scroll iteration 92/102 completed
+2025-11-30 14:30:08,299 - DEBUG - Scroll iteration 93/102 completed
+2025-11-30 14:30:09,806 - DEBUG - Scroll iteration 94/102 completed
+2025-11-30 14:30:11,314 - DEBUG - Scroll iteration 95/102 completed
+2025-11-30 14:30:12,822 - DEBUG - Scroll iteration 96/102 completed
+2025-11-30 14:30:14,330 - DEBUG - Scroll iteration 97/102 completed
+2025-11-30 14:30:15,837 - DEBUG - Scroll iteration 98/102 completed
+2025-11-30 14:30:17,345 - DEBUG - Scroll iteration 99/102 completed
+2025-11-30 14:30:18,860 - DEBUG - Scroll iteration 100/102 completed
+2025-11-30 14:30:20,369 - DEBUG - Scroll iteration 101/102 completed
+2025-11-30 14:30:21,876 - DEBUG - Scroll iteration 102/102 completed
+2025-11-30 14:30:21,900 - INFO - Found 24 raw links on page.
+2025-11-30 14:30:21,900 - INFO - Filtered down to 10 unique valid links.
+2025-11-30 14:31:05,841 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,843 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,844 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,845 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,845 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,845 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,846 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,846 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,847 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,847 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:31:05,907 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:05,907 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:05,908 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,038 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,039 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,039 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,039 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,040 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,040 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,041 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,041 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,041 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,394 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,394 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,401 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,426 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,426 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,426 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,531 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,532 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,593 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,744 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,744 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,760 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,765 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,788 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,788 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:06,881 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:31:06,881 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:31:06,991 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:31:08,618 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Video_1061484168287638.txt
+2025-11-30 14:31:08,620 - INFO - Download completed: https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:31:11,741 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e2_3675091852732551.txt
+2025-11-30 14:31:11,742 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e3_796640345709178.txt
+2025-11-30 14:31:11,758 - INFO - Download completed: https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:31:11,759 - INFO - Download completed: https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:31:11,801 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e1_971824101110396.txt
+2025-11-30 14:31:11,805 - INFO - Download completed: https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:19,992 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e4_1934294320402609.txt
+2025-11-30 14:32:19,994 - INFO - Download completed: https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:27,800 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u200b\u17e2_795527635803576.txt
+2025-11-30 14:32:27,801 - INFO - Download completed: https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:34,569 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e3_1126197768520371.txt
+2025-11-30 14:32:34,570 - INFO - Download completed: https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:35,252 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e6_1134637264556497.txt
+2025-11-30 14:32:35,254 - INFO - Download completed: https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:40,620 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e4_243731712094520.txt
+2025-11-30 14:32:40,621 - INFO - Download completed: https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:32:44,797 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e5_397279599822232.txt
+2025-11-30 14:32:44,798 - INFO - Download completed: https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:35:03,606 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:35:26,773 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:35:28,568 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:35:28,568 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 14:35:28,568 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 14:35:41,303 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 14:35:41,304 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:35:42,124 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:35:44,505 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:35:46,034 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:35:47,541 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:35:49,049 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:35:50,556 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:35:52,065 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:35:53,574 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:35:55,094 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:35:56,612 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:35:58,129 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:35:59,647 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:35:59,658 - INFO - Scraping found 10 unique valid links.
+2025-11-30 14:36:37,669 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:36:45,934 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:36:47,720 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:36:47,720 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 14:36:47,720 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 14:37:00,167 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 14:37:00,168 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:37:01,033 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:37:03,281 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:37:04,799 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:37:06,306 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:37:07,814 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:37:09,321 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:37:10,830 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:37:12,337 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:37:13,868 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:37:15,386 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:37:16,903 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:37:18,420 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:37:18,431 - INFO - Scraping found 10 unique valid links.
+2025-11-30 14:39:59,800 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:40:18,982 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:40:21,256 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:40:21,256 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 14:40:21,256 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 14:40:36,616 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 14:40:36,617 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:40:37,469 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:40:37,469 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 14:40:39,755 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:40:41,778 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:40:43,802 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:40:45,819 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:40:45,830 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:40:49,874 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:40:49,885 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:40:53,914 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:40:53,924 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:40:55,933 - INFO - Scraping found 10 unique valid links.
+2025-11-30 14:47:18,472 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:47:30,470 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:47:31,945 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:47:32,783 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:47:32,783 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 14:47:37,097 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:47:39,263 - DEBUG - Scroll iteration 1/5 completed
+2025-11-30 14:47:41,293 - DEBUG - Scroll iteration 2/5 completed
+2025-11-30 14:47:43,312 - DEBUG - Scroll iteration 3/5 completed
+2025-11-30 14:47:43,323 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:47:47,344 - DEBUG - Scroll iteration 4/5 completed
+2025-11-30 14:47:47,354 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:47:51,371 - DEBUG - Scroll iteration 5/5 completed
+2025-11-30 14:47:51,381 - INFO - Scroll stagnant. Attempting 'End' key press.
+2025-11-30 14:47:53,390 - INFO - Scraping found 10 unique valid links.
+2025-11-30 14:48:18,995 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:48:19,008 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:48:19,008 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:48:19,008 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:48:23,812 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e3_796640345709178.txt
+2025-11-30 14:48:23,813 - INFO - Download completed: https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:51:45,219 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:51:50,686 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:51:52,161 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:51:53,008 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:51:53,008 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 14:51:55,267 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:51:55,280 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 14:51:57,313 - DEBUG - Scroll iteration 1 completed
+2025-11-30 14:51:57,337 - DEBUG - Current count: 10
+2025-11-30 14:51:59,360 - DEBUG - Scroll iteration 2 completed
+2025-11-30 14:51:59,370 - DEBUG - Current count: 10
+2025-11-30 14:52:01,393 - DEBUG - Scroll iteration 3 completed
+2025-11-30 14:52:01,404 - DEBUG - Current count: 10
+2025-11-30 14:52:05,438 - DEBUG - Scroll iteration 4 completed
+2025-11-30 14:52:05,449 - DEBUG - Current count: 10
+2025-11-30 14:52:09,480 - DEBUG - Scroll iteration 5 completed
+2025-11-30 14:52:09,491 - DEBUG - Current count: 10
+2025-11-30 14:52:13,524 - DEBUG - Scroll iteration 6 completed
+2025-11-30 14:52:13,535 - DEBUG - Current count: 10
+2025-11-30 14:52:13,535 - INFO - Scroll stagnant for 5 iterations. Assuming end of feed.
+2025-11-30 14:52:13,535 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 14:52:13,535 - INFO - Scraping found 10 unique valid links.
+2025-11-30 14:53:37,747 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:37,760 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:37,760 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:37,760 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:40,654 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e4_243731712094520.txt
+2025-11-30 14:53:40,655 - INFO - Download completed: https://www.facebook.com/reel/243731712094520/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:53:43,765 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:43,778 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:43,778 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:43,779 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:47,479 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e5_397279599822232.txt
+2025-11-30 14:53:47,480 - INFO - Download completed: https://www.facebook.com/reel/397279599822232/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:53:58,405 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:58,407 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:58,408 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:58,408 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:58,409 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:53:58,439 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:58,439 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:58,439 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:58,439 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:58,439 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:58,440 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:58,440 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:58,440 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:58,440 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:58,787 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:58,787 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:58,793 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:53:58,823 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:53:58,933 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:53:58,946 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:54:01,955 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e1_971824101110396.txt
+2025-11-30 14:54:01,957 - INFO - Download completed: https://www.facebook.com/reel/971824101110396/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:02,712 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e3_796640345709178.txt
+2025-11-30 14:54:02,712 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e6_1134637264556497.txt
+2025-11-30 14:54:02,713 - INFO - Download completed: https://www.facebook.com/reel/796640345709178/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:02,713 - INFO - Download completed: https://www.facebook.com/reel/1134637264556497/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:03,430 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e4_1934294320402609.txt
+2025-11-30 14:54:03,441 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b,\u200b \u1794\u17c1\u179f\u1780\u1780\u1798\u17d2\u1798\u200b\u178a\u17c4\u17c7\u200b\u1782\u17d2\u179a\u17b6\u1794\u17cb\u1794\u17c2\u1780\u200b (\u200b \u179b\u17b8\u178f\u17b6\u179c\u17a0\u17ca\u17bd\u200b )\u200b\u200b\u1797\u17b6\u1782 \u17e2_3675091852732551.txt
+2025-11-30 14:54:03,441 - INFO - Download completed: https://www.facebook.com/reel/1934294320402609/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:03,443 - INFO - Download completed: https://www.facebook.com/reel/3675091852732551/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:17,637 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:54:17,638 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 14:54:17,653 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:54:17,653 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:54:17,653 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 14:54:17,654 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 14:54:17,654 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:54:17,654 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 14:54:20,099 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u17e3_1126197768520371.txt
+2025-11-30 14:54:20,100 - INFO - Download completed: https://www.facebook.com/reel/1126197768520371/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:54:20,414 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\\u179a\u17bf\u1784\u1785\u17b7\u1793\u1793\u17b7\u1799\u17b6\u1799\u1781\u17d2\u1798\u17c2\u179a\u200b \u1782\u17d2\u179a\u17bc\u1798\u17c9\u17c5\u1780\u17c6\u1785\u17b6\u178f\u17cb\u1781\u17d2\u1798\u17c4\u1785\u1786\u17c5 \u1797\u17b6\u1782\u200b\u17e2_795527635803576.txt
+2025-11-30 14:54:20,414 - INFO - Download completed: https://www.facebook.com/reel/795527635803576/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 14:55:09,871 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:55:15,230 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:55:17,099 - DEBUG - Using proactor: IocpProactor
+2025-11-30 14:55:17,901 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 14:55:17,901 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 14:55:20,893 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 14:55:20,912 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 14:55:22,958 - DEBUG - Scroll iteration 1 completed
+2025-11-30 14:55:22,971 - INFO - Loop status: Iteration 1, Found 10/55 items
+2025-11-30 14:55:24,994 - DEBUG - Scroll iteration 2 completed
+2025-11-30 14:55:25,004 - INFO - Loop status: Iteration 2, Found 10/55 items
+2025-11-30 14:55:27,027 - DEBUG - Scroll iteration 3 completed
+2025-11-30 14:55:27,038 - INFO - Loop status: Iteration 3, Found 10/55 items
+2025-11-30 14:55:31,077 - DEBUG - Scroll iteration 4 completed
+2025-11-30 14:55:31,087 - INFO - Loop status: Iteration 4, Found 10/55 items
+2025-11-30 14:55:35,124 - DEBUG - Scroll iteration 5 completed
+2025-11-30 14:55:35,133 - INFO - Loop status: Iteration 5, Found 10/55 items
+2025-11-30 14:55:39,167 - DEBUG - Scroll iteration 6 completed
+2025-11-30 14:55:39,175 - INFO - Loop status: Iteration 6, Found 10/55 items
+2025-11-30 14:55:39,175 - INFO - Scroll stagnant for 5 iterations. Assuming end of feed.
+2025-11-30 14:55:39,176 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 14:55:39,176 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:00:44,570 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:00:55,438 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:00:57,250 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:00:58,115 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:00:58,115 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:01:00,235 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:01:00,251 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:01:04,284 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:01:04,298 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new)
+2025-11-30 15:01:08,323 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:01:08,335 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new)
+2025-11-30 15:01:12,360 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:01:12,370 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new)
+2025-11-30 15:01:16,395 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:01:16,406 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new)
+2025-11-30 15:01:16,406 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:01:21,947 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:01:21,958 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new)
+2025-11-30 15:01:21,958 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:01:27,496 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:01:27,507 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new)
+2025-11-30 15:01:27,507 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:01:33,046 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:01:33,056 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new)
+2025-11-30 15:01:33,057 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2025-11-30 15:01:33,057 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:01:33,057 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:04:46,539 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:04:55,735 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:04:57,586 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:04:58,395 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:04:58,396 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:05:01,475 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:05:01,493 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:05:05,552 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:05:05,567 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new)
+2025-11-30 15:05:09,592 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:05:09,603 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new)
+2025-11-30 15:05:13,627 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:05:13,638 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new)
+2025-11-30 15:05:17,662 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:05:17,672 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new)
+2025-11-30 15:05:17,673 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:05:23,223 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:05:23,234 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new)
+2025-11-30 15:05:23,235 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:05:28,775 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:05:28,785 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new)
+2025-11-30 15:05:28,785 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:05:34,325 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:05:34,335 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new)
+2025-11-30 15:05:34,335 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2025-11-30 15:05:34,335 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:05:34,336 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:06:09,246 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:06:11,433 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:06:12,245 - INFO - Playwright visiting: https://www.tiktok.com/@ly.lysa42
+2025-11-30 15:06:12,245 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:06:12,854 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:06:12,867 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:06:17,258 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:06:17,272 - INFO - Loop status: Iteration 1, Found 0/55 items (+0 new)
+2025-11-30 15:06:21,323 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:06:21,351 - INFO - Loop status: Iteration 2, Found 0/55 items (+0 new)
+2025-11-30 15:06:25,394 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:06:25,415 - INFO - Loop status: Iteration 3, Found 0/55 items (+0 new)
+2025-11-30 15:06:25,415 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:06:31,007 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:06:31,022 - INFO - Loop status: Iteration 4, Found 0/55 items (+0 new)
+2025-11-30 15:06:31,023 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:06:36,607 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:06:36,620 - INFO - Loop status: Iteration 5, Found 0/55 items (+0 new)
+2025-11-30 15:06:36,620 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:06:42,207 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:06:42,220 - INFO - Loop status: Iteration 6, Found 0/55 items (+0 new)
+2025-11-30 15:06:42,220 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2025-11-30 15:06:42,221 - INFO - Scraping loop finished. Found 0 items.
+2025-11-30 15:06:42,221 - INFO - Scraping found 0 unique valid links.
+2025-11-30 15:06:42,221 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-11-30 15:07:08,849 - INFO - Starting yt-dlp download for https://www.tiktok.com/@ly.lysa42 to E:/test
+2025-11-30 15:07:08,863 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:07:08,863 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-11-30 15:07:08,863 - DEBUG - No cookies configured for download.
+2025-11-30 15:10:46,120 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:11:10,086 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:11:12,754 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:11:13,564 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:11:13,564 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:11:15,784 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:11:15,804 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:11:19,835 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:11:19,847 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new)
+2025-11-30 15:11:23,880 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:11:23,891 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new)
+2025-11-30 15:11:27,916 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:11:27,926 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new)
+2025-11-30 15:11:31,950 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:11:31,974 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new)
+2025-11-30 15:11:31,974 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:11:37,514 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:11:37,525 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new)
+2025-11-30 15:11:37,526 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:11:43,066 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:11:43,076 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new)
+2025-11-30 15:11:43,076 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:11:48,615 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:11:48,625 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new)
+2025-11-30 15:11:48,626 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2025-11-30 15:11:48,626 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:11:48,626 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:12:16,171 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61557240704315
+2025-11-30 15:12:16,186 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 15:12:16,186 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 15:12:16,187 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 15:12:19,096 - INFO - Caption saved to: E:\test\profile.php_id61557240704315\Video_1061484168287638.txt
+2025-11-30 15:12:19,097 - INFO - Download completed: https://www.facebook.com/reel/1061484168287638/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 15:12:55,562 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:13:05,342 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:13:07,211 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:13:08,105 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:13:08,105 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:13:10,465 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:13:10,479 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:13:14,510 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:13:14,524 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new)
+2025-11-30 15:13:18,549 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:13:18,560 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new)
+2025-11-30 15:13:22,586 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:13:22,597 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new)
+2025-11-30 15:13:26,621 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:13:26,632 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new)
+2025-11-30 15:13:26,632 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:13:32,186 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:13:32,197 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new)
+2025-11-30 15:13:32,197 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:13:37,738 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:13:37,748 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new)
+2025-11-30 15:13:37,748 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:13:43,289 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:13:43,298 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new)
+2025-11-30 15:13:43,299 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2025-11-30 15:13:43,299 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:13:43,299 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:27:17,705 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:27:33,375 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 15:27:34,859 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:27:35,714 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:27:35,715 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:27:40,822 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:27:40,833 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:27:46,375 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:27:46,390 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new valid, +22 raw)
+2025-11-30 15:27:51,924 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:27:51,936 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:27:57,467 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:27:57,477 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:03,008 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:28:03,019 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:03,019 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:28:10,068 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:28:10,079 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:10,080 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:28:17,126 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:28:17,136 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:17,136 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:28:24,186 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:28:24,196 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:24,196 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-11-30 15:28:24,196 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:28:24,197 - INFO - Scraping found 10 unique valid links.
+2025-11-30 15:28:32,866 - DEBUG - Using proactor: IocpProactor
+2025-11-30 15:28:33,689 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61557240704315&sk=reels_tab
+2025-11-30 15:28:33,689 - INFO - Scraping target limit (max_entries): 55
+2025-11-30 15:28:35,906 - INFO - Starting scroll loop. Planned iterations: 5 for max 55 items.
+2025-11-30 15:28:35,922 - INFO - Starting dynamic scroll loop. Target: 55 items.
+2025-11-30 15:28:41,468 - DEBUG - Scroll iteration 1 completed
+2025-11-30 15:28:41,481 - INFO - Loop status: Iteration 1, Found 10/55 items (+10 new valid, +22 raw)
+2025-11-30 15:28:47,013 - DEBUG - Scroll iteration 2 completed
+2025-11-30 15:28:47,024 - INFO - Loop status: Iteration 2, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:52,557 - DEBUG - Scroll iteration 3 completed
+2025-11-30 15:28:52,568 - INFO - Loop status: Iteration 3, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:58,101 - DEBUG - Scroll iteration 4 completed
+2025-11-30 15:28:58,121 - INFO - Loop status: Iteration 4, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:28:58,121 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:29:05,173 - DEBUG - Scroll iteration 5 completed
+2025-11-30 15:29:05,183 - INFO - Loop status: Iteration 5, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:29:05,183 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:29:12,247 - DEBUG - Scroll iteration 6 completed
+2025-11-30 15:29:12,257 - INFO - Loop status: Iteration 6, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:29:12,257 - INFO - Stuck. Trying random jumps...
+2025-11-30 15:29:19,305 - DEBUG - Scroll iteration 7 completed
+2025-11-30 15:29:19,316 - INFO - Loop status: Iteration 7, Found 10/55 items (+0 new valid, +0 raw)
+2025-11-30 15:29:19,316 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-11-30 15:29:19,316 - INFO - Scraping loop finished. Found 10 items.
+2025-11-30 15:29:19,316 - INFO - Scraping found 10 unique valid links.

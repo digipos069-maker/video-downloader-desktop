@@ -77,7 +77,43 @@ def check_browser_process(browser_name):
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
 
-def extract_metadata_with_playwright(url, max_entries=100):
+def parse_cookie_file(cookie_file):
+    """
+    Parses a Netscape format cookie file into a list of dicts for Playwright.
+    """
+    cookies = []
+    try:
+        with open(cookie_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.startswith('#') or not line.strip():
+                    continue
+                
+                parts = line.strip().split('\t')
+                if len(parts) >= 7:
+                    domain = parts[0]
+                    flag = parts[1] == 'TRUE'
+                    path = parts[2]
+                    secure = parts[3] == 'TRUE'
+                    expiration = int(parts[4]) if parts[4].isdigit() else 0
+                    name = parts[5]
+                    value = parts[6]
+                    
+                    cookie = {
+                        'name': name,
+                        'value': value,
+                        'domain': domain,
+                        'path': path,
+                        'expires': expiration,
+                        'httpOnly': False, # Netscape doesn't specify, assume False
+                        'secure': secure,
+                        'sameSite': 'Lax' # Default safe bet
+                    }
+                    cookies.append(cookie)
+    except Exception as e:
+        logging.error(f"Error parsing cookie file: {e}")
+    return cookies
+
+def extract_metadata_with_playwright(url, max_entries=100, settings={}):
     """
     Helper to extract metadata using Playwright.
     """
@@ -97,76 +133,163 @@ def extract_metadata_with_playwright(url, max_entries=100):
             context = browser.new_context(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
             )
+            
+            # Load Cookies if provided
+            cookie_file = settings.get('cookie_file')
+            if cookie_file and os.path.exists(cookie_file):
+                logging.info(f"Loading cookies from: {cookie_file}")
+                cookies = parse_cookie_file(cookie_file)
+                if cookies:
+                    try:
+                        context.add_cookies(cookies)
+                        logging.info(f"Added {len(cookies)} cookies to browser context.")
+                    except Exception as e:
+                        logging.error(f"Failed to add cookies to context: {e}")
+            
             page = context.new_page()
             
             logging.info(f"Playwright visiting: {url}")
             try:
+                logging.info(f"Scraping target limit (max_entries): {max_entries}")
                 page.goto(url, timeout=60000, wait_until="domcontentloaded")
                 
                 # Scroll to fetch more content (simulate lazy loading)
-                # Increased scroll iterations for Pinterest
-                for i in range(10): 
-                    page.mouse.wheel(0, 15000)
-                    time.sleep(1.5) # Increased wait time
-                    logging.debug(f"Scroll iteration {i+1}/10 completed")
+                # Dynamic scroll iterations based on max_entries
+                # Assume approx 20 items per scroll, but ensure at least 5 scrolls
+                estimated_scrolls = max(5, int(max_entries / 20) + 2)
+                logging.info(f"Starting scroll loop. Planned iterations: {estimated_scrolls} for max {max_entries} items.")
+
+                # Center mouse to ensure scroll works on the main container
+                if page.viewport_size:
+                    page.mouse.move(page.viewport_size['width'] / 2, page.viewport_size['height'] / 2)
 
                 # Parse the domain to filter links
                 parsed_url = urlparse(url)
                 domain = parsed_url.netloc.replace('www.', '') # Remove www for broader matching
                 
-                # Extract links
-                extracted_links = page.evaluate("""
+                unique_urls = set()
+                all_seen_links = set() # Track all seen links to detect true stagnation
+                results = []
+
+                # Extraction function to run in browser (reusable)
+                extract_func = """
                     () => {
                         return Array.from(document.querySelectorAll('a[href]')).map(a => ({
                             url: a.href,
                             text: a.innerText
                         }));
                     }
-                """)
+                """
                 
-                logging.info(f"Found {len(extracted_links)} raw links on page.")
-
-                unique_urls = set()
-                count = 0
+                # Dynamic Loop
+                # Use a while loop to ensure we keep scrolling until we get enough items
+                # or we hit a hard limit/stagnation.
                 
-                for link in extracted_links:
-                    href = link['url']
-                    text = link['text'] or "Scraped Link"
+                iteration = 0
+                max_iterations = 200 # Safety hard limit
+                previous_count = 0
+                stagnant_scrolls = 0
+                
+                logging.info(f"Starting dynamic scroll loop. Target: {max_entries} items.")
+                
+                while len(results) < max_entries and iteration < max_iterations:
+                    iteration += 1
                     
-                    # Basic filtering
-                    if href in unique_urls:
-                        continue
+                    # Scroll Strategy: Aggressive Mix
+                    
+                    # 1. Key Press (PageDown is usually most reliable for feeds)
+                    page.keyboard.press("PageDown")
+                    time.sleep(0.5)
+                    
+                    # 2. Mouse Wheel (Backup trigger)
+                    page.mouse.wheel(0, 15000)
+                    time.sleep(0.5)
+
+                    # 3. End Key (Aggressive - good for infinite scrolls)
+                    page.keyboard.press("End")
+                    time.sleep(0.5)
+                    
+                    # 4. Scroll ALL potential containers (Facebook/Insta specific)
+                    try:
+                        page.evaluate("""
+                            () => {
+                                const containers = document.querySelectorAll('[role="feed"], .scrollable, [style*="overflow: auto"], [style*="overflow: scroll"], [style*="overflow-y: auto"], [style*="overflow-y: scroll"]');
+                                containers.forEach(el => {
+                                    el.scrollTop += 1500;
+                                });
+                                // Also try window scroll to bottom
+                                window.scrollTo(0, document.body.scrollHeight);
+                            }
+                        """)
+                    except Exception:
+                        pass
+
+                    # Wait for load (increased to 4s for reliability)
+                    time.sleep(4.0)
+                    
+                    logging.debug(f"Scroll iteration {iteration} completed")
+                    
+                    # Incremental extraction
+                    extracted_links = page.evaluate(extract_func)
+                    
+                    new_items_found = 0
+                    raw_new_items = 0
+                    
+                    for link in extracted_links:
+                        href = link['url']
+                        text = link['text'] or "Scraped Link"
                         
-                    if not href.startswith('http'):
-                        continue
+                        # Track raw progress to prevent premature stagnation
+                        if href not in all_seen_links:
+                            all_seen_links.add(href)
+                            raw_new_items += 1
                         
-                    # Check if link belongs to same domain (fuzzy match)
-                    # Special handling for Pinterest pins
-                    is_pin = 'pinterest.com/pin/' in href
-                    
-                    if domain not in href and not is_pin:
-                        continue
+                        # Basic filtering
+                        if href in unique_urls: continue
+                        if not href.startswith('http'): continue
+                        
+                        # Check if link belongs to same domain (fuzzy match)
+                        is_pin = 'pinterest.com/pin/' in href
+                        if domain not in href and not is_pin: continue
 
-                    # Strict Content Filtering using helper
-                    if not is_valid_media_link(href, domain):
-                        continue
+                        # Strict Content Filtering using helper
+                        if not is_valid_media_link(href, domain): continue
 
-                    unique_urls.add(href)
-                    results.append({
-                        'url': href,
-                        'title': text.strip(),
-                        'type': 'scraped_link'
-                    })
+                        unique_urls.add(href)
+                        results.append({
+                            'url': href,
+                            'title': text.strip(),
+                            'type': 'scraped_link'
+                        })
+                        new_items_found += 1
                     
-                    count += 1
-                    if count >= max_entries:
-                        break
+                    current_count = len(results)
+                    logging.info(f"Loop status: Iteration {iteration}, Found {current_count}/{max_entries} items (+{new_items_found} new valid, +{raw_new_items} raw)")
+
+                    if raw_new_items == 0:
+                        stagnant_scrolls += 1
+                        if stagnant_scrolls >= 6: # Increased tolerance
+                            logging.info("Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.")
+                            break
+                        
+                        # Super aggressive fallback if stuck
+                        if stagnant_scrolls >= 3:
+                             logging.info("Stuck. Trying random jumps...")
+                             # Jump up a bit then way down to trigger 'scroll event' detection
+                             page.mouse.wheel(0, -500)
+                             time.sleep(0.5)
+                             page.keyboard.press("End")
+                             time.sleep(1)
+                    else:
+                        stagnant_scrolls = 0
                 
-                logging.info(f"Filtered down to {len(results)} unique valid links.")
+                logging.info(f"Scraping loop finished. Found {len(results)} items.")
+                
+                logging.info(f"Scraping found {len(results)} unique valid links.")
 
                 if not results:
-                    logging.warning("No links found after filtering. Returning page fallback.")
-                    # Fallback: just return the page itself
+                    # Fallback: try one last scrape or just return page
+                    logging.warning("No links found after scraping loop. Returning page fallback.")
                     page_title = page.title()
                     results.append({
                         'url': url,
@@ -804,7 +927,8 @@ class TikTokHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        return extract_metadata_with_ytdlp(url, max_entries, settings)
+        # Prefer Playwright for scrolling/scraping lists on TikTok
+        return extract_metadata_with_playwright(url, max_entries, settings=settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -820,7 +944,8 @@ class PinterestHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        return extract_metadata_with_ytdlp(url, max_entries, settings)
+        # Prefer Playwright for scrolling/scraping lists on Pinterest
+        return extract_metadata_with_playwright(url, max_entries, settings=settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -869,7 +994,8 @@ class FacebookHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
     
     def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        return extract_metadata_with_ytdlp(url, max_entries, settings)
+        # Prefer Playwright for scrolling/scraping lists on Facebook
+        return extract_metadata_with_playwright(url, max_entries, settings=settings)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -885,7 +1011,8 @@ class InstagramHandler(BaseHandler):
         return extract_metadata_with_playwright(url)
 
     def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        return extract_metadata_with_ytdlp(url, max_entries, settings)
+        # Prefer Playwright for scrolling/scraping lists on Instagram
+        return extract_metadata_with_playwright(url, max_entries, settings=settings)
 
     def download(self, item, progress_callback):
         url = item['url']

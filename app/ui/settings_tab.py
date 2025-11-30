@@ -243,7 +243,7 @@ class SettingsTab(QWidget):
         self.top_video_chk = QCheckBox("Top Videos")
         
         self.top_video_count = QSpinBox()
-        self.top_video_count.setRange(1, 100)
+        self.top_video_count.setRange(1, 10000)
         self.top_video_count.setValue(5)
         
         top_video_layout.addWidget(self.top_video_chk)
@@ -283,7 +283,7 @@ class SettingsTab(QWidget):
         self.top_photo_chk = QCheckBox("Top Photos")
         
         self.top_photo_count = QSpinBox()
-        self.top_photo_count.setRange(1, 100)
+        self.top_photo_count.setRange(1, 10000)
         self.top_photo_count.setValue(5)
         
         top_photo_layout.addWidget(self.top_photo_chk)

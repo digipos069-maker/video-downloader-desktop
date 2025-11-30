@@ -59,10 +59,17 @@ class ScrapingWorker(QThread):
             
             fetch_limit = 100 # Default
             if video_opts.get('all', False) or photo_opts.get('all', False):
-                 fetch_limit = 200 # Increased limit for 'all'
+                 fetch_limit = 2000 # Increased limit for 'all'
             elif target_count > 0:
                  fetch_limit = target_count + 5 # Fetch a few more than target just in case of filters
             
+            print(f"--- DEBUG SETTINGS ---")
+            print(f"Video Enabled: {video_enabled}, Top: {video_opts.get('top')}, Count: {video_opts.get('count')}, All: {video_opts.get('all')}")
+            print(f"Photo Enabled: {photo_enabled}, Top: {photo_opts.get('top')}, Count: {photo_opts.get('count')}, All: {photo_opts.get('all')}")
+            print(f"Calculated Target Count: {target_count}")
+            print(f"Final Fetch Limit: {fetch_limit}")
+            print(f"----------------------")
+
             metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit)
             
             if not metadata_list:
