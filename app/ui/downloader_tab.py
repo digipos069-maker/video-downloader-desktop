@@ -1457,7 +1457,7 @@ class DownloaderTab(QWidget):
             print(f"Download finished for {item_id[:8]}... Success: {success}")
         else:
              self.failed_downloads += 1
-             self.status_message.emit(f"Failed: {item_id[:8]}...")
+             print(f"Failed: {item_id[:8]}...")
 
         # Update global progress bar (it counts processed items, whether success or fail)
         self.global_progress_bar.setValue(self.completed_downloads + self.failed_downloads)
@@ -1465,8 +1465,9 @@ class DownloaderTab(QWidget):
         # Check if all downloads are finished
         if (self.completed_downloads + self.failed_downloads) == self.total_downloads and self.total_downloads > 0:
             self.stop_timer()
-            msg = f"All downloads finished.\n\nCompleted: {self.completed_downloads}\nFailed: {self.failed_downloads}"
-            CustomMessageBox("Download Summary", msg, self).exec()
+            
+            self.update_footer_mode("status")
+            self.global_status_label.setText(f"Total: {self.total_downloads} | Completed: {self.completed_downloads} | Failed: {self.failed_downloads}")
 
     @Slot()
     def start_download_from_queue(self):

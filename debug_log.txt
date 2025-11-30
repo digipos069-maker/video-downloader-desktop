@@ -2918,3 +2918,79 @@
 2025-11-30 13:00:35,256 - INFO - Download completed: https://www.facebook.com/reel/1335314095039785/?s=fb_shorts_profile&stack_idx=0
 2025-11-30 13:00:37,142 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1121233083180693.txt
 2025-11-30 13:00:37,143 - INFO - Download completed: https://www.facebook.com/reel/1121233083180693/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:02:49,622 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:03:01,237 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:03:04,183 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-11-30 13:03:04,184 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 13:03:04,184 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 13:03:13,485 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 13:03:13,486 - DEBUG - Using proactor: IocpProactor
+2025-11-30 13:03:14,385 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-11-30 13:03:20,272 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 13:03:21,779 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 13:03:23,287 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 13:03:24,805 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 13:03:26,313 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 13:03:27,821 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 13:03:29,329 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 13:03:30,837 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 13:03:32,344 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 13:03:33,852 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 13:03:33,872 - INFO - Found 22 raw links on page.
+2025-11-30 13:03:33,873 - INFO - Filtered down to 9 unique valid links.
+2025-11-30 13:04:04,105 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1213707420622793/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:04:04,106 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1165373782248404/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:04:04,121 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:04:04,121 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:04:04,122 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:04:04,122 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:04:04,122 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:04:04,139 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:04:06,515 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1165373782248404.txt
+2025-11-30 13:04:06,516 - INFO - Download completed: https://www.facebook.com/reel/1165373782248404/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:04:06,917 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1213707420622793.txt
+2025-11-30 13:04:06,918 - INFO - Download completed: https://www.facebook.com/reel/1213707420622793/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:04:20,400 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:04:24,061 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:04:25,656 - INFO - Attempting metadata extraction with yt-dlp for: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-11-30 13:04:25,656 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-11-30 13:04:25,656 - DEBUG - No cookies configured for metadata extraction.
+2025-11-30 13:04:34,834 - ERROR - yt-dlp metadata extraction failed: argument of type 'NoneType' is not iterable
+2025-11-30 13:04:34,834 - DEBUG - Using proactor: IocpProactor
+2025-11-30 13:04:35,721 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-11-30 13:04:40,372 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 13:04:41,880 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 13:04:43,387 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 13:04:44,896 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 13:04:46,404 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 13:04:47,911 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 13:04:49,426 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 13:04:50,933 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 13:04:52,441 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 13:04:53,948 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 13:04:53,972 - INFO - Found 22 raw links on page.
+2025-11-30 13:04:53,972 - INFO - Filtered down to 9 unique valid links.
+2025-11-30 13:04:57,272 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1121233083180693/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:04:57,274 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1335314095039785/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:04:57,289 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:04:57,289 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:04:57,289 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:04:57,342 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:04:57,358 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:04:57,375 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:04:59,618 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1335314095039785.txt
+2025-11-30 13:04:59,618 - INFO - Download completed: https://www.facebook.com/reel/1335314095039785/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:05:00,229 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1121233083180693.txt
+2025-11-30 13:05:00,230 - INFO - Download completed: https://www.facebook.com/reel/1121233083180693/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:05:07,842 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1165373782248404/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:05:07,843 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1213707420622793/?s=fb_shorts_profile&stack_idx=0 to E:/test\profile.php_id61570884125592
+2025-11-30 13:05:07,860 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:05:07,860 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:05:07,860 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-11-30 13:05:07,860 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:05:07,860 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-11-30 13:05:07,861 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 13:05:10,615 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1213707420622793.txt
+2025-11-30 13:05:10,616 - INFO - Download completed: https://www.facebook.com/reel/1213707420622793/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:05:12,406 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1165373782248404.txt
+2025-11-30 13:05:12,407 - INFO - Download completed: https://www.facebook.com/reel/1165373782248404/?s=fb_shorts_profile&stack_idx=0
