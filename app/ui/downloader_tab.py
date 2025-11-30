@@ -8,8 +8,8 @@ from PySide6.QtWidgets import (
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
     QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame, QProgressBar
 )
-from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Qt, Signal, Slot, QTimer, QThread
+from PySide6.QtGui import QPixmap, QIcon
+from PySide6.QtCore import Qt, Signal, Slot, QTimer, QThread, QSize
 
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
@@ -277,13 +277,13 @@ class DownloaderTab(QWidget):
         
         self.license_status_button = QPushButton("License Status")
         self.license_status_button.setCursor(Qt.PointingHandCursor)
-        self.license_status_button.setFixedHeight(26)
+        self.license_status_button.setFixedHeight(30)
         self.license_status_button.setStyleSheet("""
             QPushButton {
                 background-color: #1C1C21;
                 color: #F59E0B;
                 border: 1px solid #27272A;
-                border-radius: 13px;
+                border-radius: 15px;
                 padding: 0 10px;
                 font-size: 9pt;
                 font-weight: 600;
@@ -911,13 +911,19 @@ class DownloaderTab(QWidget):
     def update_license_ui(self):
         is_valid, msg, _ = self.license_manager.get_license_status()
         if is_valid:
-            self.license_status_button.setText("PRO Active")
+            self.license_status_button.setText("Licensed")
+            # Load and set the tick icon
+            icon_path = "app/resources/images/icons/checklist.png"
+            self.license_status_button.setIcon(QIcon(icon_path))
+            # Set the icon size for better appearance
+            self.license_status_button.setIconSize(QSize(16, 16)) # Assuming 16x16 is a good size for a 30px high button
+
             self.license_status_button.setStyleSheet("""
                 QPushButton {
                     background-color: #1C1C21;
                     color: #10B981; /* Green */
                     border: 1px solid #27272A;
-                    border-radius: 15px;
+                    border-radius: 15px; /* Matches 50% of 30px height */
                     padding: 0 12px;
                     font-size: 9pt;
                     font-weight: 600;
@@ -926,12 +932,13 @@ class DownloaderTab(QWidget):
             """)
         else:
             self.license_status_button.setText("Activate License")
+            self.license_status_button.setIcon(QIcon()) # Clear icon when not licensed
             self.license_status_button.setStyleSheet("""
                 QPushButton {
                     background-color: #1C1C21;
                     color: #EF4444; /* Red */
                     border: 1px solid #27272A;
-                    border-radius: 15px;
+                    border-radius: 15px; /* Matches 50% of 30px height */
                     padding: 0 12px;
                     font-size: 9pt;
                     font-weight: 600;

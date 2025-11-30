@@ -2994,3 +2994,9 @@
 2025-11-30 13:05:10,616 - INFO - Download completed: https://www.facebook.com/reel/1213707420622793/?s=fb_shorts_profile&stack_idx=0
 2025-11-30 13:05:12,406 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_1165373782248404.txt
 2025-11-30 13:05:12,407 - INFO - Download completed: https://www.facebook.com/reel/1165373782248404/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 13:13:07,497 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:14:44,148 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:17:42,085 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 13:53:27,112 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:14:49,994 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-11-30 14:14:52,609 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
