@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QLabel, QLineEdit, QPushButton, QHBoxLayout, 
-    QMessageBox, QApplication, QFrame
+    QMessageBox, QApplication, QFrame, QStyle
 )
 from PySide6.QtCore import Qt, QPoint
 from PySide6.QtGui import QMouseEvent
@@ -53,21 +53,19 @@ class LicenseDialog(QDialog):
         title_layout.addStretch()
         
         # Close Button
-        self.close_btn = QPushButton("✕")
+        self.close_btn = QPushButton()
+        self.close_btn.setIcon(self.style().standardIcon(QStyle.SP_TitleBarCloseButton))
         self.close_btn.setFixedSize(30, 30)
         self.close_btn.setCursor(Qt.PointingHandCursor)
         self.close_btn.clicked.connect(self.reject)
         self.close_btn.setStyleSheet("""
             QPushButton {
                 background-color: transparent;
-                color: #A1A1AA;
                 border: none;
-                font-size: 12pt;
                 border-radius: 4px;
             }
             QPushButton:hover {
                 background-color: #EF4444;
-                color: white;
             }
         """)
         title_layout.addWidget(self.close_btn)
@@ -187,9 +185,31 @@ class LicenseDialog(QDialog):
             self.status_label.setStyleSheet("font-size: 14pt; font-weight: bold; color: #10B981;") # Green
             self.activate_btn.setText("Update License")
             self.key_input.setText("License is valid.")
+            # Make close button red to indicate "Active/Done" state visually if desired
+            self.close_btn.setStyleSheet("""
+                QPushButton {
+                    background-color: #EF4444;
+                    border: none;
+                    border-radius: 4px;
+                }
+                QPushButton:hover {
+                    background-color: #DC2626;
+                }
+            """)
         else:
             self.status_label.setText("License Required")
             self.status_label.setStyleSheet("font-size: 14pt; font-weight: bold; color: #EF4444;") # Red
+            # Reset close button style for inactive state
+            self.close_btn.setStyleSheet("""
+                QPushButton {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 4px;
+                }
+                QPushButton:hover {
+                    background-color: #EF4444;
+                }
+            """)
 
     def copy_hwid(self):
         clipboard = QApplication.clipboard()
