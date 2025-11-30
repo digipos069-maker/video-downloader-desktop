@@ -2274,3 +2274,23 @@
 2025-11-30 10:09:59,256 - INFO - Download completed: https://www.facebook.com/reel/730852016111198/?s=fb_shorts_profile&stack_idx=0
 2025-11-30 10:09:59,633 - INFO - Caption saved to: E:\test\profile.php\Save \u1791\u17bb\u1780\u179b\u17c1\u1784\u17d7\u1791\u17c5\u1780\u17d2\u179a\u17c2\u1784\u17a1\u179a\u178f\u17d2\u179a\u17bc\u179c\u1791\u17c5\u1798\u17c9\u17b6\u17a1\u17c1\u179f\u17bb\u17b8 \U0001f601\u2728.txt
 2025-11-30 10:09:59,633 - INFO - Download completed: https://www.facebook.com/reel/1365679518371385/?s=fb_shorts_profile&stack_idx=0
+2025-11-30 10:12:08,160 - INFO - Starting cookie verification. File: 'C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser: 'chrome'
+2025-11-30 10:12:08,160 - INFO - Verifying with cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-11-30 10:12:11,333 - DEBUG - Verification Output: ...
+2025-11-30 10:12:11,333 - ERROR - Verification Stderr: ERROR: [facebook] 10153231379986729: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2025-11-30 10:12:11,333 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-11-30 10:12:11,335 - DEBUG - Using proactor: IocpProactor
+2025-11-30 10:12:12,223 - INFO - Playwright visiting: https://www.facebook.com/watch/?v=10153231379986729
+2025-11-30 10:12:14,563 - DEBUG - Scroll iteration 1/10 completed
+2025-11-30 10:12:16,070 - DEBUG - Scroll iteration 2/10 completed
+2025-11-30 10:12:17,577 - DEBUG - Scroll iteration 3/10 completed
+2025-11-30 10:12:19,084 - DEBUG - Scroll iteration 4/10 completed
+2025-11-30 10:12:20,592 - DEBUG - Scroll iteration 5/10 completed
+2025-11-30 10:12:22,099 - DEBUG - Scroll iteration 6/10 completed
+2025-11-30 10:12:23,606 - DEBUG - Scroll iteration 7/10 completed
+2025-11-30 10:12:25,113 - DEBUG - Scroll iteration 8/10 completed
+2025-11-30 10:12:26,621 - DEBUG - Scroll iteration 9/10 completed
+2025-11-30 10:12:28,127 - DEBUG - Scroll iteration 10/10 completed
+2025-11-30 10:12:28,152 - INFO - Found 55 raw links on page.
+2025-11-30 10:12:28,153 - INFO - Filtered down to 29 unique valid links.

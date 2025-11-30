@@ -368,10 +368,13 @@ class SettingsTab(QWidget):
         fb_layout.addLayout(fb_browser_layout)
         
         # --- Verify Cookies Button ---
+        verify_btn_layout = QHBoxLayout()
         self.verify_fb_cookies_btn = QPushButton("Verify Cookies")
         self.verify_fb_cookies_btn.clicked.connect(self.verify_fb_cookies)
         self.verify_fb_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
-        fb_layout.addWidget(self.verify_fb_cookies_btn)
+        verify_btn_layout.addStretch()
+        verify_btn_layout.addWidget(self.verify_fb_cookies_btn)
+        fb_layout.addLayout(verify_btn_layout)
         
         fb_layout.addStretch()
         self.credentials_tabs.addTab(facebook_tab, "Facebook")
