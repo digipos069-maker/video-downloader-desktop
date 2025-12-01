@@ -2,19 +2,19 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 50,
+        "count": 300,
         "all": false,
         "resolution": "Best Available"
     },
     "photo": {
         "enabled": true,
         "top": true,
-        "count": 2,
+        "count": 20,
         "all": false,
         "quality": "Best Available"
     },
     "download": {
-        "extension": "mkv",
+        "extension": "Best",
         "naming": "Video + Caption (.txt)",
         "subtitles": false,
         "video_path": "",

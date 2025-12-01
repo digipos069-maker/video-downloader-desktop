@@ -244,8 +244,11 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}):
                             all_seen_links.add(href)
                             raw_new_items += 1
                         
+                        # Normalize URL for de-duplication
+                        clean_href = href.split('#')[0].split('?')[0].rstrip('/')
+                        
                         # Basic filtering
-                        if href in unique_urls: continue
+                        if clean_href in unique_urls: continue
                         if not href.startswith('http'): continue
                         
                         # Check if link belongs to same domain (fuzzy match)
@@ -255,9 +258,9 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}):
                         # Strict Content Filtering using helper
                         if not is_valid_media_link(href, domain): continue
 
-                        unique_urls.add(href)
+                        unique_urls.add(clean_href)
                         results.append({
-                            'url': href,
+                            'url': clean_href,
                             'title': text.strip(),
                             'type': 'scraped_link'
                         })
@@ -404,7 +407,10 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         logging.warning("FFmpeg not found! Fallback to 'best' single file format to avoid merging.")
 
     # Define filename template based on naming style
-    if naming_style == 'Numbered (01. Name)':
+    if settings.get('forced_filename'):
+        # Platform specific override to ensure uniqueness (e.g. Pinterest)
+        outtmpl = f"{output_path}/{settings['forced_filename']}.%(ext)s"
+    elif naming_style == 'Numbered (01. Name)':
         outtmpl = f'{output_path}/%(autonumber)02d. %(title)s.%(ext)s'
     elif naming_style == 'Video + Caption (.txt)':
         # Add ID to prevent collisions which cause rename errors on Windows (WinError 32)
@@ -536,9 +542,17 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         progress_callback(100)
         return True
     except Exception as e:
-        logging.error(f"Download failed: {e}")
+        msg = str(e)
+        # Check if we should suppress specific expected errors (e.g. Pinterest images)
+        is_expected_error = "No video formats found" in msg or "Requested format is not available" in msg
+        
+        if settings.get('suppress_expected_errors') and is_expected_error:
+             logging.info(f"yt-dlp did not find video (likely an image/mixed content): {msg}")
+        else:
+             logging.error(f"Download failed: {e}")
+             
         # Re-raise to allow worker to capture the specific message
-        if "Please close Chrome" in str(e):
+        if "Please close Chrome" in msg:
             raise e 
         return False
 
@@ -952,6 +966,48 @@ class PinterestHandler(BaseHandler):
         title = item.get('title', 'Pinterest Download')
         settings = item.get('settings', {})
         
+        logging.debug(f"[PinterestHandler] Processing: {url} | Title: {title}")
+
+        # EXTRACT PIN ID to ensure unique filenames
+        # URL format is usually: https://pinterest.com/pin/123456789/
+        try:
+            pin_id = ""
+            parts = url.strip('/').split('/')
+            # Look for 'pin' and take the next segment
+            if 'pin' in parts:
+                idx = parts.index('pin')
+                if idx + 1 < len(parts):
+                    pin_id = parts[idx+1]
+            
+            # Fallback: if no 'pin' keyword, take last numeric segment
+            if not pin_id:
+                 for part in reversed(parts):
+                     if part.isdigit():
+                         pin_id = part
+                         break
+            
+            logging.debug(f"[PinterestHandler] Extracted Pin ID: '{pin_id}'")
+
+            if pin_id:
+                # Check if title already contains ID to avoid duplication
+                if pin_id not in title:
+                    title = f"{title}_{pin_id}"
+                    
+            # Sanitize title for filename usage
+            # Note: download_direct uses strictly alnum/space. We should match that robustness or rely on it.
+            safe_title = "".join([c for c in title if c.isalpha() or c.isdigit() or c in (' ', '_', '-')]).rstrip()
+            
+            if not safe_title:
+                 safe_title = f"pinterest_{pin_id}" if pin_id else "pinterest_download"
+            
+            logging.debug(f"[PinterestHandler] Final Forced Filename: '{safe_title}'")
+            
+            # Pass unique filename to yt-dlp to prevent collisions
+            settings['forced_filename'] = safe_title
+            
+        except Exception as e:
+            logging.warning(f"Failed to extract Pin ID for unique filename: {e}")
+
         # Check if it's likely an image
         is_image = url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
         output_path = self.get_download_path(settings, is_video=not is_image, item_url=url)
@@ -961,6 +1017,8 @@ class PinterestHandler(BaseHandler):
         else:
             # 1. Try Standard yt-dlp
             # Note: yt-dlp might fail for simple images, so we consider failure as "try next method"
+            # Suppress "No video formats found" errors for Pinterest as they are common for images
+            settings['suppress_expected_errors'] = True 
             if download_with_ytdlp(url, output_path, progress_callback, settings):
                 return True
             

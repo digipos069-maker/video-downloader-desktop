@@ -96,6 +96,12 @@ class ScrapingWorker(QThread):
                             is_video = True
                         elif 'instagram' in item_url:
                             is_photo = True
+                        elif 'pinterest' in item_url:
+                            # Pinterest items are ambiguous (can be video or photo)
+                            # Enable based on user preference to ensure they pass filters
+                            # and receive appropriate settings.
+                            if video_enabled: is_video = True
+                            if photo_enabled: is_photo = True
                     
                     # Apply Filters
                     if is_video and not video_enabled:
