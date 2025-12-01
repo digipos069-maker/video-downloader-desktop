@@ -5799,3 +5799,5 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-01 23:27:14,536 - INFO - Starting direct download for https://i.pinimg.com/736x/b4/88/ce/b488cee97fd4c0e153b1993ef0065abc.jpg to E:/test\pin_91268329946183547
 2025-12-01 23:27:14,606 - INFO - Caption saved to: E:/test\pin_91268329946183547\Pinterest Download2603712282139170.txt
 2025-12-01 23:27:14,606 - INFO - Direct download completed: E:/test\pin_91268329946183547\Pinterest Download2603712282139170.jpg
+2025-12-01 23:43:04,404 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-01 23:44:52,441 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

@@ -1,5 +1,5 @@
 
-# Universal Video Downloader
+# Social download manager
 
 A cross-platform desktop application for downloading videos and photos from various platforms.
 

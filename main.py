@@ -10,7 +10,7 @@ from app.config.settings_manager import save_settings
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Universal Video Downloader")
+        self.setWindowTitle("Social download manager")
         self.resize(1280, 720)
         
         # Frameless window for custom title bar
@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
         main_layout.setSpacing(0)
 
         # Custom Title Bar
-        self.title_bar = TitleBar(self, title="Universal Video Downloader")
+        self.title_bar = TitleBar(self, title="Social download manager")
         main_layout.addWidget(self.title_bar)
 
         # Create a central tab widget
