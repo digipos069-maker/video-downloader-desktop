@@ -1160,10 +1160,32 @@ class DownloaderTab(QWidget):
     def download_selected_activity_items(self):
         """Promotes selected items to the top of the queue and starts downloading."""
         selected_rows = set()
+        has_video_work = False
+        has_photo_work = False
+
         for item in self.activity_table.selectedItems():
-            selected_rows.add(item.row())
+            row = item.row()
+            selected_rows.add(row)
+            
+            # Check item type for validation
+            type_item = self.activity_table.item(row, 4) # Column 4 is Type
+            if type_item:
+                item_type = type_item.text()
+                if "Video" in item_type:
+                    has_video_work = True
+                elif "Photo" in item_type:
+                    has_photo_work = True
             
         if not selected_rows:
+            return
+
+        # Validate Paths
+        if has_video_work and not self.video_download_path:
+            QMessageBox.warning(self, "Video Path Missing", "You have selected videos to download.\nPlease select a Video Download Path.")
+            return
+            
+        if has_photo_work and not self.photo_download_path:
+            QMessageBox.warning(self, "Photo Path Missing", "You have selected photos to download.\nPlease select a Photo Download Path.")
             return
             
         # Find item IDs for the selected rows
