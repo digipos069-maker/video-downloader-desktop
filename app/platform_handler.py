@@ -113,7 +113,7 @@ def parse_cookie_file(cookie_file):
         logging.error(f"Error parsing cookie file: {e}")
     return cookies
 
-def extract_metadata_with_playwright(url, max_entries=100, settings={}):
+def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback=None):
     """
     Helper to extract metadata using Playwright.
     """
@@ -259,11 +259,15 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}):
                         if not is_valid_media_link(href, domain): continue
 
                         unique_urls.add(clean_href)
-                        results.append({
+                        item = {
                             'url': clean_href,
                             'title': text.strip(),
                             'type': 'scraped_link'
-                        })
+                        }
+                        results.append(item)
+                        if callback:
+                            callback(item)
+
                         new_items_found += 1
                     
                     current_count = len(results)
@@ -294,11 +298,14 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}):
                     # Fallback: try one last scrape or just return page
                     logging.warning("No links found after scraping loop. Returning page fallback.")
                     page_title = page.title()
-                    results.append({
+                    item = {
                         'url': url,
                         'title': page_title.strip() if page_title else "No Title",
                         'type': 'webpage' 
-                    })
+                    }
+                    results.append(item)
+                    if callback:
+                        callback(item)
                 
             except Exception as e:
                 logging.error(f"Error processing page {url}: {e}")
@@ -312,7 +319,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}):
         
     return results
 
-def extract_metadata_with_ytdlp(url, max_entries=100, settings={}):
+def extract_metadata_with_ytdlp(url, max_entries=100, settings={}, callback=None):
     """
     Helper to extract metadata using yt-dlp (better for playlists/profiles).
     """
@@ -365,28 +372,34 @@ def extract_metadata_with_ytdlp(url, max_entries=100, settings={}):
                                  entry_url = f"https://www.youtube.com/watch?v={entry['id']}"
                     
                     if entry_url:
-                        results.append({
+                        item = {
                             'url': entry_url,
                             'title': title,
                             'type': 'video'
-                        })
+                        }
+                        results.append(item)
+                        if callback:
+                            callback(item)
             else:
                 # It's a single video
                 logging.info("yt-dlp found single video.")
-                results.append({
+                item = {
                     'url': info.get('webpage_url', url),
                     'title': info.get('title', 'Untitled'),
                     'type': 'video'
-                })
+                }
+                results.append(item)
+                if callback:
+                    callback(item)
 
     except Exception as e:
         logging.error(f"yt-dlp metadata extraction failed: {e}")
         # Fallback to playwright
-        return extract_metadata_with_playwright(url, max_entries)
+        return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
         
     if not results:
          logging.warning("yt-dlp returned no results, falling back to playwright.")
-         return extract_metadata_with_playwright(url, max_entries)
+         return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
 
     return results
 
@@ -843,7 +856,7 @@ class BaseHandler(ABC):
         pass
 
     @abstractmethod
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
         pass
 
     @abstractmethod
@@ -924,8 +937,8 @@ class YouTubeHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
-        return extract_metadata_with_ytdlp(url, max_entries, settings)
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
+        return extract_metadata_with_ytdlp(url, max_entries, settings, callback=callback)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -940,9 +953,9 @@ class TikTokHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
         # Prefer yt-dlp for scraping lists on TikTok as it is more robust than raw Playwright
-        return extract_metadata_with_ytdlp(url, max_entries, settings=settings)
+        return extract_metadata_with_ytdlp(url, max_entries, settings=settings, callback=callback)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -957,9 +970,9 @@ class PinterestHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
         # Prefer Playwright for scrolling/scraping lists on Pinterest
-        return extract_metadata_with_playwright(url, max_entries, settings=settings)
+        return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -1051,9 +1064,9 @@ class FacebookHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
     
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
         # Prefer Playwright for scrolling/scraping lists on Facebook
-        return extract_metadata_with_playwright(url, max_entries, settings=settings)
+        return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
 
     def download(self, item, progress_callback):
         url = item['url']
@@ -1068,9 +1081,9 @@ class InstagramHandler(BaseHandler):
     def get_metadata(self, url):
         return extract_metadata_with_playwright(url)
 
-    def get_playlist_metadata(self, url, max_entries=100, settings={}):
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
         # Prefer Playwright for scrolling/scraping lists on Instagram
-        return extract_metadata_with_playwright(url, max_entries, settings=settings)
+        return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
 
     def download(self, item, progress_callback):
         url = item['url']

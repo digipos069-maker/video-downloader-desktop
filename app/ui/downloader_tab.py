@@ -71,20 +71,16 @@ class ScrapingWorker(QThread):
             print(f"Final Fetch Limit: {fetch_limit}")
             print(f"----------------------")
 
-            metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit, settings=self.settings)
-            
-            if not metadata_list:
-                self.error.emit(f"No downloadable items found for {self.url}.")
-                return
+            # State for callback
+            state = {
+                'video_count': 0,
+                'photo_count': 0,
+                'filtered_count': 0,
+                'items_found_total': 0
+            }
 
-            self.status_update.emit(f"Scraping found {len(metadata_list)} items.")
-            print(f"[DEBUG] Total items scraped: {len(metadata_list)}")
-
-            video_count = 0
-            photo_count = 0
-            filtered_count = 0
-
-            for metadata in metadata_list:
+            def on_item_found_callback(metadata):
+                state['items_found_total'] += 1
                 try:
                     item_url = metadata['url']
                     print(f"[DEBUG] Processing URL: {item_url}")
@@ -98,37 +94,44 @@ class ScrapingWorker(QThread):
                         elif 'instagram' in item_url:
                             is_photo = True
                         elif 'pinterest' in item_url:
-                            # Pinterest items are ambiguous (can be video or photo)
-                            # Enable based on user preference to ensure they pass filters
-                            # and receive appropriate settings.
                             if video_enabled: is_video = True
                             if photo_enabled: is_photo = True
                     
                     # Apply Filters
                     if is_video and not video_enabled:
-                        filtered_count += 1
-                        continue
+                        state['filtered_count'] += 1
+                        return
                     if is_photo and not photo_enabled:
-                        filtered_count += 1
-                        continue
+                        state['filtered_count'] += 1
+                        return
                         
                     if is_video:
-                        if limit_video and video_count >= video_opts.get('count', 5):
-                            filtered_count += 1
-                            continue
-                        video_count += 1
+                        if limit_video and state['video_count'] >= video_opts.get('count', 5):
+                            state['filtered_count'] += 1
+                            return
+                        state['video_count'] += 1
                             
                     if is_photo:
-                        if limit_photo and photo_count >= photo_opts.get('count', 5):
-                            filtered_count += 1
-                            continue
-                        photo_count += 1
+                        if limit_photo and state['photo_count'] >= photo_opts.get('count', 5):
+                            state['filtered_count'] += 1
+                            return
+                        state['photo_count'] += 1
 
                     metadata['origin_url'] = self.url
                     self.item_found.emit(item_url, metadata, is_video, is_photo, handler)
+                    self.status_update.emit(f"Found {state['items_found_total']} items...")
+
                 except Exception as loop_error:
-                    print(f"[ERROR] Loop failed for item {metadata}: {loop_error}")
-                    continue
+                    print(f"[ERROR] Callback failed for item {metadata}: {loop_error}")
+
+            metadata_list = handler.get_playlist_metadata(self.url, max_entries=fetch_limit, settings=self.settings, callback=on_item_found_callback)
+            
+            if not metadata_list and state['items_found_total'] == 0:
+                self.error.emit(f"No downloadable items found for {self.url}.")
+                return
+
+            print(f"[DEBUG] Total items scraped: {state['items_found_total']}")
+            
         except Exception as e:
             self.error.emit(f"Error scraping {self.url}: {e}")
         finally:
