@@ -6,6 +6,7 @@ from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
 from app.ui.widgets.title_bar import TitleBar
 from app.config.settings_manager import save_settings
+from app.helpers import resource_path
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -82,7 +83,7 @@ def main():
     app = QApplication(sys.argv)
 
     # Load and apply stylesheet
-    style_file = os.path.join(os.path.dirname(__file__), "app", "resources", "styles.qss")
+    style_file = resource_path(os.path.join("app", "resources", "styles.qss"))
     if os.path.exists(style_file):
         with open(style_file, "r") as f:
             app.setStyleSheet(f.read())

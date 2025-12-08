@@ -21,6 +21,7 @@ from app.ui.license_dialog import LicenseDialog
 from app.ui.edit_username_dialog import EditUsernameDialog
 from app.ui.widgets.custom_message_box import CustomMessageBox
 from app.ui.widgets.social_icon import SocialIcon
+from app.helpers import resource_path
 
 class ScrapingWorker(QThread):
     item_found = Signal(str, dict, bool, bool, object) # item_url, metadata, is_video, is_photo, handler
@@ -394,7 +395,7 @@ class DownloaderTab(QWidget):
         platform_icons_layout.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
 
         # Base path for icons
-        icon_base_path = "app/resources/images/icons/social/" 
+        icon_base_path = resource_path("app/resources/images/icons/social/")
 
         # Add icons using the new SocialIcon widget with animation
         platform_icons_layout.addWidget(SocialIcon(icon_base_path + "youtube.png", "YouTube", size=32))
@@ -926,7 +927,7 @@ class DownloaderTab(QWidget):
         if is_valid:
             self.license_status_button.setText("Licensed")
             # Load and set the tick icon
-            icon_path = "app/resources/images/icons/checklist.png"
+            icon_path = resource_path("app/resources/images/icons/checklist.png")
             self.license_status_button.setIcon(QIcon(icon_path))
             # Set the icon size for better appearance
             self.license_status_button.setIconSize(QSize(16, 16)) # Assuming 16x16 is a good size for a 30px high button

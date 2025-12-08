@@ -5801,3 +5801,79 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-01 23:27:14,606 - INFO - Direct download completed: E:/test\pin_91268329946183547\Pinterest Download2603712282139170.jpg
 2025-12-01 23:43:04,404 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-01 23:44:52,441 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:57:41,741 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:57:54,149 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:57:57,483 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:57:58,506 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:58:13,116 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 21:58:26,047 - DEBUG - Using proactor: IocpProactor
+2025-12-08 21:58:33,625 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 21:58:33,665 - INFO - Added 8 cookies to browser context.
+2025-12-08 21:58:34,161 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 21:58:34,161 - INFO - Scraping target limit (max_entries): 25
+2025-12-08 21:58:38,565 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-08 21:58:38,731 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-08 21:58:44,310 - DEBUG - Scroll iteration 1 completed
+2025-12-08 21:58:44,342 - INFO - Loop status: Iteration 1, Found 41/25 items (+41 new valid, +49 raw)
+2025-12-08 21:58:44,342 - INFO - Scraping loop finished. Found 41 items.
+2025-12-08 21:58:44,343 - INFO - Scraping found 41 unique valid links.
+2025-12-08 21:58:49,845 - INFO - Starting cookie verification. File: 'C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser: 'chrome'
+2025-12-08 21:58:49,846 - INFO - Verifying with cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 21:58:54,593 - DEBUG - Verification Output: ...
+2025-12-08 21:58:54,593 - ERROR - Verification Stderr: ERROR: [facebook] 10153231379986729: Cannot parse data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2025-12-08 21:58:54,593 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-12-08 21:58:54,593 - DEBUG - Using proactor: IocpProactor
+2025-12-08 21:58:55,543 - INFO - Playwright visiting: https://www.facebook.com/watch/?v=10153231379986729
+2025-12-08 21:58:55,544 - INFO - Scraping target limit (max_entries): 100
+2025-12-08 21:58:56,681 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-12-08 21:58:56,697 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-12-08 21:59:02,265 - DEBUG - Scroll iteration 1 completed
+2025-12-08 21:59:02,290 - INFO - Loop status: Iteration 1, Found 21/100 items (+21 new valid, +37 raw)
+2025-12-08 21:59:07,823 - DEBUG - Scroll iteration 2 completed
+2025-12-08 21:59:07,839 - INFO - Loop status: Iteration 2, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:13,370 - DEBUG - Scroll iteration 3 completed
+2025-12-08 21:59:13,382 - INFO - Loop status: Iteration 3, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:18,910 - DEBUG - Scroll iteration 4 completed
+2025-12-08 21:59:18,921 - INFO - Loop status: Iteration 4, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:18,921 - INFO - Stuck. Trying random jumps...
+2025-12-08 21:59:23,739 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1610149507013424 to E:/test\profile.php_id61570884125592
+2025-12-08 21:59:23,749 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 21:59:23,749 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 21:59:23,749 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 21:59:25,963 - DEBUG - Scroll iteration 5 completed
+2025-12-08 21:59:25,979 - INFO - Loop status: Iteration 5, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:25,979 - INFO - Stuck. Trying random jumps...
+2025-12-08 21:59:27,863 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\\u179f\u17bd\u179f\u17d2\u178f\u17b8\u1794\u1784\u17d7\U0001f602\U0001f4a6\U0001f975_1610149507013424.txt
+2025-12-08 21:59:27,868 - INFO - Download completed: https://www.facebook.com/reel/1610149507013424
+2025-12-08 21:59:33,028 - DEBUG - Scroll iteration 6 completed
+2025-12-08 21:59:33,042 - INFO - Loop status: Iteration 6, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:33,042 - INFO - Stuck. Trying random jumps...
+2025-12-08 21:59:40,085 - DEBUG - Scroll iteration 7 completed
+2025-12-08 21:59:40,115 - INFO - Loop status: Iteration 7, Found 21/100 items (+0 new valid, +0 raw)
+2025-12-08 21:59:40,116 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-08 21:59:40,116 - INFO - Scraping loop finished. Found 21 items.
+2025-12-08 21:59:40,116 - INFO - Scraping found 21 unique valid links.
+2025-12-08 22:01:10,822 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1201823635179351 to C:/Users/USER/project/videoDownloader/tests\profile.php_id61570884125592
+2025-12-08 22:01:10,833 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 22:01:10,833 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 22:01:10,833 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 22:01:20,910 - INFO - Caption saved to: C:\Users\USER\project\videoDownloader\tests\profile.php_id61570884125592\Video_1201823635179351.txt
+2025-12-08 22:01:20,912 - INFO - Download completed: https://www.facebook.com/reel/1201823635179351
+2025-12-08 22:01:43,556 - INFO - Starting yt-dlp download for https://www.facebook.com/reel to C:/Users/USER/project/videoDownloader/tests\profile.php_id61570884125592
+2025-12-08 22:01:43,559 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/836639708995806 to C:/Users/USER/project/videoDownloader/tests\profile.php_id61570884125592
+2025-12-08 22:01:43,560 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/860534949670582 to C:/Users/USER/project/videoDownloader/tests\profile.php_id61570884125592
+2025-12-08 22:01:43,572 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 22:01:43,572 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 22:01:43,572 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 22:01:44,111 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 22:01:44,111 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 22:01:44,111 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 22:01:44,112 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 22:01:44,112 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 22:01:44,112 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 22:01:51,679 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.facebook.com/reel
+2025-12-08 22:02:01,384 - INFO - Caption saved to: C:\Users\USER\project\videoDownloader\tests\profile.php_id61570884125592\Video_836639708995806.txt
+2025-12-08 22:02:01,386 - INFO - Download completed: https://www.facebook.com/reel/836639708995806
+2025-12-08 22:02:02,534 - INFO - Caption saved to: C:\Users\USER\project\videoDownloader\tests\profile.php_id61570884125592\Video_860534949670582.txt
+2025-12-08 22:02:02,536 - INFO - Download completed: https://www.facebook.com/reel/860534949670582
