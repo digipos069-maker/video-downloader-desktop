@@ -6131,3 +6131,28 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-08 23:35:33,108 - INFO - Loop status: Iteration 1, Found 20/7 items (+20 new valid, +29 raw)
 2025-12-08 23:35:33,108 - INFO - Scraping loop finished. Found 20 items.
 2025-12-08 23:35:33,109 - INFO - Scraping found 20 unique valid links.
+2025-12-08 23:42:54,058 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:43:39,238 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:43:41,306 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:43:42,212 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:43:42,251 - INFO - Added 8 cookies to browser context.
+2025-12-08 23:43:42,312 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61579628825121&sk=reels_tab
+2025-12-08 23:43:42,312 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 23:43:44,291 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 23:43:44,313 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 23:43:49,877 - DEBUG - Scroll iteration 1 completed
+2025-12-08 23:43:49,926 - INFO - Loop status: Iteration 1, Found 30/7 items (+30 new valid, +44 raw)
+2025-12-08 23:43:49,926 - INFO - Scraping loop finished. Found 30 items.
+2025-12-08 23:43:49,926 - INFO - Scraping found 30 unique valid links.
+2025-12-08 23:43:58,683 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1854004292208080 to E:/test\profile.php_id61579628825121
+2025-12-08 23:43:58,694 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 23:43:58,694 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 23:43:58,694 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:44:02,047 - INFO - Caption saved to: E:\test\profile.php_id61579628825121\Video_1854004292208080.txt
+2025-12-08 23:44:02,052 - INFO - Download completed: https://www.facebook.com/reel/1854004292208080
+2025-12-08 23:44:06,224 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2441402309564649 to E:/test\profile.php_id61579628825121
+2025-12-08 23:44:06,235 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 23:44:06,235 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 23:44:06,235 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:44:09,123 - INFO - Caption saved to: E:\test\profile.php_id61579628825121\Video_2441402309564649.txt
+2025-12-08 23:44:09,128 - INFO - Download completed: https://www.facebook.com/reel/2441402309564649

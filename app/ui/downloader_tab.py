@@ -1506,9 +1506,38 @@ class DownloaderTab(QWidget):
 
     @Slot()
     def start_download_from_queue(self):
-        # Check if paths are selected
-        if not self.video_download_path and not self.photo_download_path:
-            QMessageBox.warning(self, "Download Paths Missing", "Please select a Video or Photo download path first.")
+        # Determine if we have work to do for Videos or Photos
+        has_video_work = False
+        has_photo_work = False
+        
+        # 1. Check Settings (Proactive check)
+        if self.settings_tab:
+            settings = self.settings_tab.get_settings()
+            if settings.get('video', {}).get('enabled', False):
+                has_video_work = True
+            if settings.get('photo', {}).get('enabled', False):
+                has_photo_work = True
+        
+        # 2. Check Queue Content (Reactive check - if manual items or scraped items exist)
+        # Iterate rows in activity_table
+        for row in range(self.activity_table.rowCount()):
+            type_item = self.activity_table.item(row, 4) # Column 4 is 'Type'
+            status_item = self.activity_table.item(row, 3) # Column 3 is 'Status'
+            
+            if type_item and status_item and status_item.text() != "Completed":
+                item_type = type_item.text()
+                if "Video" in item_type:
+                    has_video_work = True
+                elif "Photo" in item_type:
+                    has_photo_work = True
+        
+        # Validate Paths
+        if has_video_work and not self.video_download_path:
+            QMessageBox.warning(self, "Video Path Missing", "You have Video Download enabled or videos in queue.\nPlease select a Video Download Path.")
+            return
+            
+        if has_photo_work and not self.photo_download_path:
+            QMessageBox.warning(self, "Photo Path Missing", "You have Photo Download enabled or photos in queue.\nPlease select a Photo Download Path.")
             return
 
         # Update settings in downloader
@@ -1520,7 +1549,7 @@ class DownloaderTab(QWidget):
             'subtitles': self.subs_checkbox.isChecked(),
             'shutdown': self.shutdown_checkbox.isChecked()
         }
-        self.downloader.update_queue_settings(settings);
+        self.downloader.update_queue_settings(settings)
 
         # We need to process the items that are in the queue_table_widget
         # For now, just trigger the downloader's process_queue
