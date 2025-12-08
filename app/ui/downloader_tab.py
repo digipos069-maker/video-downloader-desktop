@@ -491,7 +491,8 @@ class DownloaderTab(QWidget):
         self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Progress"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
         for i in range(1, 9):
-            self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Stretch)
+            self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Interactive)
+        self.activity_table.horizontalHeader().setStretchLastSection(True) # Ensure table fills available width
         self.activity_table.verticalHeader().setVisible(False)
         self.activity_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)

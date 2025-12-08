@@ -150,6 +150,7 @@ QHeaderView::section {
     padding: 4px; /* Reduced padding */
     border: none;
     border-bottom: 2px solid #27272A;
+    border-right: 1px solid #27272A;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 9pt;
