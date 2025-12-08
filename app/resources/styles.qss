@@ -204,3 +204,29 @@ QLabel#global_status_label {
 QMessageBox {
     background-color: #1C1C21;
 }
+
+/* --- QMenu (Context Menu) --- */
+QMenu {
+    background-color: #1C1C21; /* Dark background */
+    border: 1px solid #27272A; /* Subtle border */
+    border-radius: 8px;
+    padding: 5px; /* Padding inside the menu */
+}
+
+QMenu::item {
+    color: #F4F4F5; /* Default text color */
+    background-color: transparent; /* No background by default */
+    padding: 5px 15px; /* Padding for each item */
+    border-radius: 5px; /* Slightly rounded corners for items */
+}
+
+QMenu::item:selected { /* or :hover */
+    background-color: #3B82F6; /* Accent blue for hover/selected */
+    color: #FFFFFF; /* White text on hover */
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #27272A; /* Separator color */
+    margin: 5px 0px; /* Spacing for separator */
+}

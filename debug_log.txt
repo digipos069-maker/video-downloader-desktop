@@ -6056,3 +6056,20 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-08 22:48:21,280 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
 2025-12-08 22:48:21,280 - INFO - Scraping loop finished. Found 1 items.
 2025-12-08 22:48:21,280 - INFO - Scraping found 1 unique valid links.
+2025-12-08 22:57:49,320 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:03,053 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:09,493 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:13,573 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:15,445 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:15,637 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 22:59:20,641 - DEBUG - Using proactor: IocpProactor
+2025-12-08 22:59:21,485 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 22:59:21,532 - INFO - Added 8 cookies to browser context.
+2025-12-08 22:59:21,600 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 22:59:21,600 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 22:59:25,953 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 22:59:25,966 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 22:59:31,648 - DEBUG - Scroll iteration 1 completed
+2025-12-08 22:59:31,754 - INFO - Loop status: Iteration 1, Found 41/7 items (+41 new valid, +49 raw)
+2025-12-08 22:59:31,755 - INFO - Scraping loop finished. Found 41 items.
+2025-12-08 22:59:31,755 - INFO - Scraping found 41 unique valid links.
