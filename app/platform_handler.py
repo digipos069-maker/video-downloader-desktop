@@ -49,7 +49,15 @@ def is_valid_media_link(href, domain):
     elif 'instagram.com' in domain:
         return '/p/' in href or '/reel/' in href
     elif 'facebook.com' in domain:
-         return '/watch' in href or '/videos/' in href or '/reel/' in href
+         # Must be a specific video/reel, not just the feed
+         # Valid: /watch?v=..., /videos/123..., /reel/123...
+         # Invalid: /watch, /videos, /reel, /reel/
+         if '/watch' in href and '?v=' in href: return True
+         if '/videos/' in href and len(href.split('/videos/')[-1]) > 1: return True
+         if '/reel/' in href and len(href.split('/reel/')[-1]) > 1 and any(char.isdigit() for char in href.split('/reel/')[-1]): return True
+         # fb.watch short links
+         if 'fb.watch' in href: return True
+         return False
     
     return False
 

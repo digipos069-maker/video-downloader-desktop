@@ -6073,3 +6073,35 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-08 22:59:31,754 - INFO - Loop status: Iteration 1, Found 41/7 items (+41 new valid, +49 raw)
 2025-12-08 22:59:31,755 - INFO - Scraping loop finished. Found 41 items.
 2025-12-08 22:59:31,755 - INFO - Scraping found 41 unique valid links.
+2025-12-08 23:12:15,508 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:12:29,605 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:12:31,883 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:12:32,773 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:12:32,806 - INFO - Added 8 cookies to browser context.
+2025-12-08 23:12:32,881 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 23:12:32,881 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 23:12:37,309 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 23:12:37,334 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 23:12:42,996 - DEBUG - Scroll iteration 1 completed
+2025-12-08 23:12:43,102 - INFO - Loop status: Iteration 1, Found 41/7 items (+41 new valid, +49 raw)
+2025-12-08 23:12:43,103 - INFO - Scraping loop finished. Found 41 items.
+2025-12-08 23:12:43,103 - INFO - Scraping found 41 unique valid links.
+2025-12-08 23:13:18,482 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/836639708995806 to E:/test\profile.php_id61570884125592
+2025-12-08 23:13:18,493 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-08 23:13:18,493 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies.txt', Browser='chrome'
+2025-12-08 23:13:18,493 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:13:27,073 - INFO - Caption saved to: E:\test\profile.php_id61570884125592\Video_836639708995806.txt
+2025-12-08 23:13:27,078 - INFO - Download completed: https://www.facebook.com/reel/836639708995806
+2025-12-08 23:17:54,251 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:18:08,661 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:18:10,745 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:18:11,629 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:18:11,657 - INFO - Added 8 cookies to browser context.
+2025-12-08 23:18:11,717 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 23:18:11,718 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 23:18:13,815 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 23:18:13,853 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 23:18:19,426 - DEBUG - Scroll iteration 1 completed
+2025-12-08 23:18:19,500 - INFO - Loop status: Iteration 1, Found 41/7 items (+41 new valid, +49 raw)
+2025-12-08 23:18:19,500 - INFO - Scraping loop finished. Found 41 items.
+2025-12-08 23:18:19,501 - INFO - Scraping found 41 unique valid links.
