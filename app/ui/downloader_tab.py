@@ -1072,7 +1072,7 @@ class DownloaderTab(QWidget):
             row_position_activity = self.activity_table.rowCount()
             self.activity_table.insertRow(row_position_activity)
             self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
-            self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', 'N/A')))
+            self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', '')))
             self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
             self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
             self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))

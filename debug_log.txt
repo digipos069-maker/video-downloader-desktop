@@ -6105,3 +6105,29 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-08 23:18:19,500 - INFO - Loop status: Iteration 1, Found 41/7 items (+41 new valid, +49 raw)
 2025-12-08 23:18:19,500 - INFO - Scraping loop finished. Found 41 items.
 2025-12-08 23:18:19,501 - INFO - Scraping found 41 unique valid links.
+2025-12-08 23:31:54,477 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:32:00,006 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:32:01,714 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:32:02,580 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:32:02,614 - INFO - Added 8 cookies to browser context.
+2025-12-08 23:32:02,675 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 23:32:02,675 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 23:32:07,023 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 23:32:07,063 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 23:32:12,675 - DEBUG - Scroll iteration 1 completed
+2025-12-08 23:32:12,782 - INFO - Loop status: Iteration 1, Found 40/7 items (+40 new valid, +49 raw)
+2025-12-08 23:32:12,782 - INFO - Scraping loop finished. Found 40 items.
+2025-12-08 23:32:12,782 - INFO - Scraping found 40 unique valid links.
+2025-12-08 23:35:19,257 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:35:22,782 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-08 23:35:24,482 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:35:25,335 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies.txt
+2025-12-08 23:35:25,362 - INFO - Added 8 cookies to browser context.
+2025-12-08 23:35:25,426 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61570884125592&sk=reels_tab
+2025-12-08 23:35:25,426 - INFO - Scraping target limit (max_entries): 7
+2025-12-08 23:35:27,436 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-08 23:35:27,480 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-08 23:35:33,082 - DEBUG - Scroll iteration 1 completed
+2025-12-08 23:35:33,108 - INFO - Loop status: Iteration 1, Found 20/7 items (+20 new valid, +29 raw)
+2025-12-08 23:35:33,108 - INFO - Scraping loop finished. Found 20 items.
+2025-12-08 23:35:33,109 - INFO - Scraping found 20 unique valid links.

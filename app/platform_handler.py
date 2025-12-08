@@ -182,10 +182,20 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 # Extraction function to run in browser (reusable)
                 extract_func = """
                     () => {
-                        return Array.from(document.querySelectorAll('a[href]')).map(a => ({
-                            url: a.href,
-                            text: a.innerText
-                        }));
+                        return Array.from(document.querySelectorAll('a[href]')).map(a => {
+                            let t = a.innerText;
+                            // Fallback 1: aria-label (Common on FB/Insta for icon-only links)
+                            if (!t || !t.trim()) t = a.getAttribute('aria-label');
+                            // Fallback 2: Image alt text (Common for thumbnail links)
+                            if (!t || !t.trim()) {
+                                const img = a.querySelector('img');
+                                if (img) t = img.alt;
+                            }
+                            return {
+                                url: a.href,
+                                text: t
+                            };
+                        });
                     }
                 """
                 
@@ -269,7 +279,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                         unique_urls.add(clean_href)
                         item = {
                             'url': clean_href,
-                            'title': text.strip(),
+                            'title': text.strip() if text else "",
                             'type': 'scraped_link'
                         }
                         results.append(item)
@@ -308,7 +318,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                     page_title = page.title()
                     item = {
                         'url': url,
-                        'title': page_title.strip() if page_title else "No Title",
+                        'title': page_title.strip() if page_title else "",
                         'type': 'webpage' 
                     }
                     results.append(item)
@@ -369,7 +379,7 @@ def extract_metadata_with_ytdlp(url, max_entries=100, settings={}, callback=None
                     if not entry: continue
                     
                     entry_url = entry.get('url') or entry.get('webpage_url')
-                    title = entry.get('title', 'Untitled')
+                    title = entry.get('title', '')
                     
                     # Construct for specific platforms if needed
                     if not entry_url:
@@ -393,7 +403,7 @@ def extract_metadata_with_ytdlp(url, max_entries=100, settings={}, callback=None
                 logging.info("yt-dlp found single video.")
                 item = {
                     'url': info.get('webpage_url', url),
-                    'title': info.get('title', 'Untitled'),
+                    'title': info.get('title', ''),
                     'type': 'video'
                 }
                 results.append(item)
