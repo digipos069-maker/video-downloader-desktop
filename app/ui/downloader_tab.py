@@ -427,7 +427,7 @@ class DownloaderTab(QWidget):
         right_content_layout.setSpacing(8)
         
         # --- Left Sidebar Widgets ---
-        queue_group = QGroupBox("Downloading Queue")
+        queue_group = QGroupBox("URL Queue")
         queue_layout = QVBoxLayout()
         self.queue_table_widget = QTableWidget()
         self.queue_table_widget.setMinimumHeight(150) # Increased height
@@ -874,7 +874,7 @@ class DownloaderTab(QWidget):
 
     @Slot(str, str)
     def add_to_queue_display(self, item_id, url):
-        """Adds an item to the left-hand 'Downloading Queue' table."""
+        """Adds an item to the left-hand 'URL Queue' table."""
         row_position = self.queue_table_widget.rowCount()
         self.queue_table_widget.insertRow(row_position)
         self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(str(row_position + 1))) # Add row number
@@ -883,7 +883,7 @@ class DownloaderTab(QWidget):
 
     @Slot(str)
     def remove_from_queue_display(self, item_id):
-        """Removes an item from the 'Downloading Queue' table once it's finished."""
+        """Removes an item from the 'URL Queue' table once it's finished."""
         if item_id in self.active_download_map:
             row_to_remove = self.active_download_map.pop(item_id)
             self.queue_table_widget.removeRow(row_to_remove)

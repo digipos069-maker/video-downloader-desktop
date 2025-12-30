@@ -8209,3 +8209,4 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 14:11:13,167 - INFO - Download completed: https://www.facebook.com/reel/1926176347953856
 2025-12-30 14:11:16,569 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100093838943895\\u1793\u1782\u179a\u1791\u17b6\u17c6\u1784\u1794\u17b8\u200b #\u179f\u17b6\u1798\u1780\u17bb\u1780\u200b #\u1797\u17b6\u178205_1221334403136755.txt
 2025-12-30 14:11:16,573 - INFO - Download completed: https://www.facebook.com/reel/1221334403136755
+2025-12-30 15:57:14,527 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
