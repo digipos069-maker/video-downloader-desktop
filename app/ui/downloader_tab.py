@@ -1261,9 +1261,6 @@ class DownloaderTab(QWidget):
         
         menu.addSeparator()
         
-        add_queue_action = menu.addAction("Add to Queue")
-        add_queue_action.triggered.connect(self.add_selected_activity_to_queue)
-        
         delete_action = menu.addAction("Remove Row")
         delete_action.triggered.connect(self.delete_selected_activity_item)
         
@@ -1362,54 +1359,6 @@ class DownloaderTab(QWidget):
                 self.start_timer()
                 
             self.downloader.process_queue()
-
-    def add_selected_activity_to_queue(self):
-        selected_rows = set()
-        for item in self.activity_table.selectedItems():
-            selected_rows.add(item.row())
-            
-        if not selected_rows:
-            return
-
-        # Gather current settings
-        settings = {
-            'video_path': self.video_download_path,
-            'photo_path': self.photo_download_path,
-            'extension': self.extension_combo.currentText().lower(),
-            'naming_style': self.naming_combo.currentText(),
-            'subtitles': self.subs_checkbox.isChecked(),
-            'shutdown': self.shutdown_checkbox.isChecked()
-        }
-        
-        count = 0
-        for row in sorted(selected_rows):
-            url_item = self.activity_table.item(row, 2) # URL is column 2
-            if url_item:
-                url = url_item.text()
-                handler = self.platform_handler_factory.get_handler(url)
-                if handler:
-                    # Re-inject Facebook credentials if needed, similar to on_scraping_item_found
-                    if "facebook.com" in url or "fb.watch" in url:
-                        fb_creds = self.credentials_manager.get_credential('facebook')
-                        if fb_creds:
-                             if fb_creds.get('cookie_file'):
-                                settings['cookie_file'] = fb_creds.get('cookie_file')
-                             if fb_creds.get('browser') and fb_creds.get('browser') != "None":
-                                settings['cookies_from_browser'] = fb_creds.get('browser')
-
-                    item_id = self.downloader.add_to_queue(url, handler, settings.copy())
-                    self.activity_table.setItem(row, 3, QTableWidgetItem("Queued")) # Update status
-                    self.activity_row_map[item_id] = row
-                    
-                    # Reset Progress Bar
-                    pb = self.activity_table.cellWidget(row, 8)
-                    if pb:
-                        pb.setValue(0)
-                    
-                    count += 1
-        
-        if count > 0:
-            self.status_message.emit(f"Re-queued {count} items. Click 'Download All' to start.")
 
     def delete_selected_activity_item(self):
         """Removes the selected row from the activity table."""
