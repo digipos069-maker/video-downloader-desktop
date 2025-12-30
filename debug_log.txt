@@ -9565,3 +9565,25 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 22:36:19,543 - INFO - Loop status: Iteration 10, Found 8/7 items (+2 new valid, +27 raw)
 2025-12-30 22:36:19,543 - INFO - Scraping loop finished. Found 8 items.
 2025-12-30 22:36:19,543 - INFO - Scraping found 8 unique valid links.
+2025-12-30 22:40:22,818 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:40:26,900 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:40:29,217 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:40:30,095 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 22:40:30,126 - INFO - Added 12 cookies to browser context.
+2025-12-30 22:40:30,190 - INFO - Playwright visiting: https://www.facebook.com/samkok2010hd
+2025-12-30 22:40:30,190 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:40:32,655 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:40:32,670 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:40:38,403 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:40:38,509 - INFO - Loop status: Iteration 1, Found 3/7 items (+3 new valid, +75 raw)
+2025-12-30 22:40:44,049 - DEBUG - Scroll iteration 2 completed
+2025-12-30 22:40:44,122 - INFO - Loop status: Iteration 2, Found 3/7 items (+0 new valid, +31 raw)
+2025-12-30 22:40:49,831 - DEBUG - Scroll iteration 3 completed
+2025-12-30 22:40:49,906 - INFO - Loop status: Iteration 3, Found 3/7 items (+0 new valid, +29 raw)
+2025-12-30 22:40:55,514 - DEBUG - Scroll iteration 4 completed
+2025-12-30 22:40:55,589 - INFO - Loop status: Iteration 4, Found 5/7 items (+2 new valid, +61 raw)
+2025-12-30 22:41:01,234 - DEBUG - Scroll iteration 5 completed
+2025-12-30 22:41:01,316 - INFO - Loop status: Iteration 5, Found 7/7 items (+2 new valid, +37 raw)
+2025-12-30 22:41:01,316 - INFO - Scraping loop finished. Found 7 items.
+2025-12-30 22:41:01,316 - INFO - Scraping found 7 unique valid links.
+2025-12-30 22:42:54,365 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

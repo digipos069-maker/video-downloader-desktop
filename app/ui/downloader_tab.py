@@ -293,7 +293,9 @@ class DownloaderTab(QWidget):
         row1_layout.addStretch()
         
         # Top Right Buttons (Update & License)
-        self.check_update_button = QPushButton("Check Update")
+        self.check_update_button = QPushButton(" Check Update")
+        self.check_update_button.setIcon(QIcon(resource_path("app/resources/images/icons/update_checked.png")))
+        self.check_update_button.setIconSize(QSize(16, 16))
         self.check_update_button.setCursor(Qt.PointingHandCursor)
         self.check_update_button.setFixedHeight(26)
         self.check_update_button.setStyleSheet("""
