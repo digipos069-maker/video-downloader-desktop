@@ -8361,3 +8361,139 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 16:37:37,194 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:41:11,425 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:50:50,034 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:55:27,909 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:56:35,330 - INFO - Starting cookie verification. File: 'C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser: 'chrome'
+2025-12-30 16:56:35,331 - INFO - Verifying with cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 16:56:36,997 - DEBUG - Verification Output: ...
+2025-12-30 16:56:36,998 - ERROR - Verification Stderr: ERROR: [instagram:user] instagram: Unable to extract data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2025-12-30 16:56:36,998 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-12-30 16:56:36,999 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:56:38,008 - INFO - Playwright visiting: https://www.instagram.com/instagram/
+2025-12-30 16:56:38,008 - INFO - Scraping target limit (max_entries): 100
+2025-12-30 16:56:41,033 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-12-30 16:56:41,051 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-12-30 16:56:46,598 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:56:46,610 - INFO - Loop status: Iteration 1, Found 0/100 items (+0 new valid, +18 raw)
+2025-12-30 16:56:52,141 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:56:52,150 - INFO - Loop status: Iteration 2, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:56:54,627 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:56:57,685 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:56:57,693 - INFO - Loop status: Iteration 3, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:57:02,195 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:57:03,218 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:57:03,219 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 16:57:03,235 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:57:03,240 - INFO - Loop status: Iteration 4, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:57:03,240 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:04,022 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 16:57:04,033 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 16:57:09,616 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:57:09,629 - INFO - Loop status: Iteration 1, Found 0/7 items (+0 new valid, +18 raw)
+2025-12-30 16:57:10,298 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:57:10,307 - INFO - Loop status: Iteration 5, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:57:10,307 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:15,161 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:57:15,172 - INFO - Loop status: Iteration 2, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:17,355 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:57:17,364 - INFO - Loop status: Iteration 6, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:57:17,364 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:20,704 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:57:20,713 - INFO - Loop status: Iteration 3, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:24,423 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:57:24,431 - INFO - Loop status: Iteration 7, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:57:24,432 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:57:24,432 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:57:24,432 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:57:24,432 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 16:57:26,242 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:57:26,250 - INFO - Loop status: Iteration 4, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:26,250 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:33,316 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:57:33,324 - INFO - Loop status: Iteration 5, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:33,324 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:40,372 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:57:40,382 - INFO - Loop status: Iteration 6, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:40,382 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:57:47,438 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:57:47,446 - INFO - Loop status: Iteration 7, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:57:47,446 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:57:47,446 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:57:47,446 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:57:47,446 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 16:58:03,493 - INFO - Starting cookie verification. File: 'C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser: 'chrome'
+2025-12-30 16:58:03,493 - INFO - Verifying with cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 16:58:04,825 - DEBUG - Verification Output: ...
+2025-12-30 16:58:04,825 - ERROR - Verification Stderr: ERROR: [instagram:user] instagram: Unable to extract data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2025-12-30 16:58:04,825 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-12-30 16:58:04,825 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:58:05,838 - INFO - Playwright visiting: https://www.instagram.com/instagram/
+2025-12-30 16:58:05,838 - INFO - Scraping target limit (max_entries): 100
+2025-12-30 16:58:06,576 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-12-30 16:58:06,580 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-12-30 16:58:12,120 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:58:12,131 - INFO - Loop status: Iteration 1, Found 0/100 items (+0 new valid, +18 raw)
+2025-12-30 16:58:17,663 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:58:17,673 - INFO - Loop status: Iteration 2, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:23,223 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:58:23,233 - INFO - Loop status: Iteration 3, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:28,766 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:58:28,776 - INFO - Loop status: Iteration 4, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:28,776 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:58:35,872 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:58:35,881 - INFO - Loop status: Iteration 5, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:35,881 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:58:42,929 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:58:42,937 - INFO - Loop status: Iteration 6, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:42,937 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:58:49,996 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:58:50,005 - INFO - Loop status: Iteration 7, Found 0/100 items (+0 new valid, +0 raw)
+2025-12-30 16:58:50,005 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:58:50,005 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:58:50,005 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:58:50,005 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 17:05:22,720 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:05:28,789 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:05:35,191 - INFO - Starting cookie verification. File: 'C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser: 'chrome'
+2025-12-30 17:05:35,192 - INFO - Verifying with cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:05:36,643 - DEBUG - Verification Output: ...
+2025-12-30 17:05:36,643 - ERROR - Verification Stderr: ERROR: [instagram:user] instagram: Unable to extract data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2025-12-30 17:05:36,643 - INFO - yt-dlp verification failed. Attempting Playwright fallback...
+2025-12-30 17:05:36,645 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:05:37,752 - INFO - Playwright visiting: https://www.instagram.com/instagram/
+2025-12-30 17:05:37,752 - INFO - Scraping target limit (max_entries): 100
+2025-12-30 17:05:38,519 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-12-30 17:05:38,524 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-12-30 17:05:44,088 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:05:44,107 - INFO - Loop status: Iteration 1, Found 12/100 items (+12 new valid, +53 raw)
+2025-12-30 17:05:49,649 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:05:49,669 - INFO - Loop status: Iteration 2, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:05:55,201 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:05:55,217 - INFO - Loop status: Iteration 3, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:05:57,293 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:05:58,215 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:05:58,259 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:05:58,327 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:05:58,327 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 17:05:59,062 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 17:05:59,078 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 17:06:00,764 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:06:00,776 - INFO - Loop status: Iteration 4, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:06:00,776 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:06:04,631 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:06:04,705 - INFO - Loop status: Iteration 1, Found 12/7 items (+12 new valid, +37 raw)
+2025-12-30 17:06:04,705 - INFO - Scraping loop finished. Found 12 items.
+2025-12-30 17:06:04,705 - INFO - Scraping found 12 unique valid links.
+2025-12-30 17:06:07,820 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:06:07,843 - INFO - Loop status: Iteration 5, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:06:07,843 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:06:14,913 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:06:14,929 - INFO - Loop status: Iteration 6, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:06:14,929 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:06:21,978 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:06:21,994 - INFO - Loop status: Iteration 7, Found 12/100 items (+0 new valid, +0 raw)
+2025-12-30 17:06:21,994 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:06:21,995 - INFO - Scraping loop finished. Found 12 items.
+2025-12-30 17:06:21,995 - INFO - Scraping found 12 unique valid links.

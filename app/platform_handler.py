@@ -139,7 +139,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 return [{'url': url, 'title': 'Error: Browser Launch Failed (run "playwright install")', 'type': 'error'}]
 
             context = browser.new_context(
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             )
             
             # Load Cookies if provided
@@ -690,7 +690,9 @@ def extract_pinterest_direct_url(url):
 
             # Use a mobile user agent to potentially get a simpler page structure
             # but desktop often has the full JSON data. Let's stick to a modern desktop UA.
-            context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36")
+            # Use a mobile user agent to potentially get a simpler page structure
+            # but desktop often has the full JSON data. Let's stick to a modern desktop UA.
+            context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
             page = context.new_page()
             page.on("response", handle_response)
             
@@ -806,7 +808,9 @@ def extract_pinterest_image_url(url):
                 logging.error(f"Error launching browser: {e}")
                 return None
 
-            context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36")
+            # Use a mobile user agent to potentially get a simpler page structure
+            # but desktop often has the full JSON data. Let's stick to a modern desktop UA.
+            context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
             page = context.new_page()
             
             logging.info(f"Playwright image scraping for: {url}")

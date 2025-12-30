@@ -121,6 +121,13 @@ class CookieVerificationWorker(QThread):
         self.test_url = test_url if test_url else "https://www.facebook.com/watch/?v=10153231379986729"
 
     def run(self):
+        # 1. Preliminary Check: Critical Cookies
+        if self.cookie_file and os.path.exists(self.cookie_file):
+            missing = self.check_critical_cookies(self.cookie_file, self.test_url)
+            if missing:
+                self.finished.emit(False, f"Verification failed: Missing critical cookie(s): {', '.join(missing)}. Please ensure you exported all cookies (including HttpOnly).")
+                return
+
         ydl_opts = {
             'quiet': True,
             'simulate': True, # Don't download
@@ -197,8 +204,12 @@ class CookieVerificationWorker(QThread):
             if pw_results and pw_results[0].get('type') != 'error':
                 # Check if we got valid-looking data (not just a login page title)
                 first_res = pw_results[0]
-                if "Login" in first_res.get('title', '') or "Log In" in first_res.get('title', ''):
+                title = first_res.get('title', '')
+                if "Login" in title or "Log In" in title:
                      self.finished.emit(False, "Verification failed: Page redirects to Login. Check cookies.")
+                elif "Instagram" == title: # Suspiciously generic title
+                     # It might be the login page wrapper.
+                     self.finished.emit(True, "Verification Warning: Accessed page, but title is generic 'Instagram'. Ensure you are logged in.")
                 else:
                      self.finished.emit(True, "Verified via Browser (Playwright). yt-dlp parsing failed, but site is accessible.")
             else:
@@ -214,6 +225,35 @@ class CookieVerificationWorker(QThread):
         except Exception as e:
             logging.error(f"Verification failed with exception: {e}")
             self.finished.emit(False, f"Verification failed with error: {e}")
+
+    def check_critical_cookies(self, cookie_file, url):
+        """Checks for presence of session cookies for known platforms."""
+        required = []
+        if "instagram.com" in url:
+            required = ['sessionid']
+        elif "facebook.com" in url:
+            required = ['c_user', 'xs']
+        elif "tiktok.com" in url:
+            required = ['sessionid_ss'] # or just sessionid
+        
+        if not required:
+            return []
+            
+        found = set()
+        try:
+            with open(cookie_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.startswith('#') or not line.strip(): continue
+                    parts = line.strip().split('\t')
+                    if len(parts) >= 6:
+                        name = parts[5]
+                        if name in required:
+                            found.add(name)
+        except Exception:
+            pass # Ignore parsing errors here, main logic will catch it
+            
+        missing = [c for c in required if c not in found]
+        return missing
 
 
 class SettingsTab(QWidget):
