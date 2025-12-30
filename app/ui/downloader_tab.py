@@ -6,7 +6,8 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QGroupBox, QTabWidget, QAbstractItemView,
     QHeaderView, QSizePolicy, QMessageBox, QSpacerItem, QTableWidgetItem,
-    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame, QProgressBar
+    QFileDialog, QComboBox, QFormLayout, QCheckBox, QSpinBox, QFrame, QProgressBar,
+    QSplitter
 )
 from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtCore import Qt, Signal, Slot, QTimer, QThread, QSize
@@ -411,19 +412,29 @@ class DownloaderTab(QWidget):
         
         top_bar_layout.addLayout(row2_layout)
 
-        # --- Content Area (Two Columns) ---
-        content_layout = QHBoxLayout()
-        content_layout.setSpacing(10)
+        # --- Content Area (Two Columns with Splitter) ---
+        self.content_splitter = QSplitter(Qt.Horizontal)
+        self.content_splitter.setHandleWidth(8)
+        self.content_splitter.setStyleSheet("""
+            QSplitter::handle {
+                background-color: #000000;
+            }
+            QSplitter::handle:hover {
+                background-color: #3B82F6;
+            }
+        """)
 
         # --- Left Sidebar ---
         left_sidebar_widget = QWidget()
         left_sidebar_layout = QVBoxLayout(left_sidebar_widget)
         left_sidebar_layout.setContentsMargins(0, 0, 0, 0)
         left_sidebar_layout.setSpacing(8)
-        left_sidebar_widget.setFixedWidth(240)
+        # left_sidebar_widget.setFixedWidth(240) # Removed fixed width
 
         # --- Right Side (Main Content) ---
-        right_content_layout = QVBoxLayout()
+        right_content_widget = QWidget() # Container for right side
+        right_content_layout = QVBoxLayout(right_content_widget)
+        right_content_layout.setContentsMargins(0, 0, 0, 0) # Adjust margins if needed
         right_content_layout.setSpacing(8)
         
         # --- Left Sidebar Widgets ---
@@ -480,7 +491,7 @@ class DownloaderTab(QWidget):
 
         left_sidebar_layout.addWidget(queue_group, 1) # Stretch factor 1 to fill space
         left_sidebar_layout.addWidget(paths_group)
-        # left_sidebar_layout.addStretch() # Removed stretch to let queue_group expand
+        left_sidebar_layout.addSpacing(35) # Spacer to align bottom of Queue with Activity
         
         # --- Right Content Widgets ---
         activity_group = QGroupBox("Download Activity")
@@ -774,13 +785,18 @@ class DownloaderTab(QWidget):
         right_content_layout.addLayout(bottom_controls_layout)
         right_content_layout.addLayout(footer_main_layout)
         
-        # --- Assemble Content Layout ---
-        content_layout.addWidget(left_sidebar_widget)
-        content_layout.addLayout(right_content_layout)
+        # --- Assemble Content Splitter ---
+        self.content_splitter.addWidget(left_sidebar_widget)
+        self.content_splitter.addWidget(right_content_widget)
+        
+        # Set initial sizes (Sidebar 180px, Rest to content)
+        self.content_splitter.setSizes([180, 800])
+        self.content_splitter.setCollapsible(0, False) # Prevent sidebar from collapsing completely
+        self.content_splitter.setCollapsible(1, False) # Prevent content from collapsing completely
 
         # --- Assemble Main Layout ---
         main_layout.addLayout(top_bar_layout)
-        main_layout.addLayout(content_layout)
+        main_layout.addWidget(self.content_splitter, 1) # Add stretch factor 1 to fill remaining vertical space
 
         # Load initial UI state
         self.load_ui_state()
