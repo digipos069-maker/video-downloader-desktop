@@ -111,12 +111,12 @@ INPUT_STYLE = """
 class CookieVerificationWorker(QThread):
     finished = Signal(bool, str)
 
-    def __init__(self, cookie_file=None, browser_source=None, parent=None):
+    def __init__(self, cookie_file=None, browser_source=None, test_url=None, parent=None):
         super().__init__(parent)
         self.cookie_file = cookie_file
         self.browser_source = browser_source
-        # Use a public watch URL for better reliability
-        self.test_url = "https://www.facebook.com/watch/?v=10153231379986729" 
+        # Use provided test URL or default to Facebook (for backward compatibility if needed)
+        self.test_url = test_url if test_url else "https://www.facebook.com/watch/?v=10153231379986729"
 
     def run(self):
         ydl_opts = {
@@ -379,6 +379,98 @@ class SettingsTab(QWidget):
         fb_layout.addStretch()
         self.credentials_tabs.addTab(facebook_tab, "Facebook")
         
+        # --- Pinterest Credentials Tab ---
+        pinterest_tab = QWidget()
+        pin_layout = QVBoxLayout(pinterest_tab)
+        pin_layout.setSpacing(8)
+        pin_layout.setContentsMargins(10, 10, 10, 10)
+        
+        pin_desc = QLabel("Pinterest requires cookies for downloading high-res images and some videos.\nSelect your 'cookies.txt' or browser.")
+        pin_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        pin_desc.setWordWrap(True)
+        pin_layout.addWidget(pin_desc)
+        
+        # Pinterest Cookies File
+        pin_cookies_layout = QHBoxLayout()
+        self.pin_cookies_path = QLineEdit()
+        self.pin_cookies_path.setPlaceholderText("Path to pinterest cookies.txt...")
+        self.pin_cookies_btn = QPushButton("Browse...")
+        self.pin_cookies_btn.clicked.connect(self.browse_pin_cookies)
+        self.pin_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        pin_cookies_layout.addWidget(QLabel("Cookies File:"))
+        pin_cookies_layout.addWidget(self.pin_cookies_path)
+        pin_cookies_layout.addWidget(self.pin_cookies_btn)
+        pin_layout.addLayout(pin_cookies_layout)
+
+        # Pinterest Browser Option
+        pin_browser_layout = QHBoxLayout()
+        self.pin_browser_combo = QComboBox()
+        self.pin_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        pin_browser_layout.addWidget(QLabel("Browser Source:"))
+        pin_browser_layout.addWidget(self.pin_browser_combo)
+        pin_browser_layout.addStretch()
+        pin_layout.addLayout(pin_browser_layout)
+        
+        # Verify Pinterest Button
+        verify_pin_layout = QHBoxLayout()
+        self.verify_pin_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_pin_cookies_btn.clicked.connect(self.verify_pin_cookies)
+        self.verify_pin_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_pin_layout.addStretch()
+        verify_pin_layout.addWidget(self.verify_pin_cookies_btn)
+        pin_layout.addLayout(verify_pin_layout)
+        
+        pin_layout.addStretch()
+        self.credentials_tabs.addTab(pinterest_tab, "Pinterest")
+
+        # --- TikTok Credentials Tab ---
+        tiktok_tab = QWidget()
+        tt_layout = QVBoxLayout(tiktok_tab)
+        tt_layout.setSpacing(8)
+        tt_layout.setContentsMargins(10, 10, 10, 10)
+        
+        tt_desc = QLabel("TikTok generally works without cookies, but they help avoid CAPTCHAs and fetch more metadata.")
+        tt_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        tt_desc.setWordWrap(True)
+        tt_layout.addWidget(tt_desc)
+        
+        # TikTok Cookies File
+        tt_cookies_layout = QHBoxLayout()
+        self.tt_cookies_path = QLineEdit()
+        self.tt_cookies_path.setPlaceholderText("Path to tiktok cookies.txt...")
+        self.tt_cookies_btn = QPushButton("Browse...")
+        self.tt_cookies_btn.clicked.connect(self.browse_tt_cookies)
+        self.tt_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        tt_cookies_layout.addWidget(QLabel("Cookies File:"))
+        tt_cookies_layout.addWidget(self.tt_cookies_path)
+        tt_cookies_layout.addWidget(self.tt_cookies_btn)
+        tt_layout.addLayout(tt_cookies_layout)
+
+        # TikTok Browser Option
+        tt_browser_layout = QHBoxLayout()
+        self.tt_browser_combo = QComboBox()
+        self.tt_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        tt_browser_layout.addWidget(QLabel("Browser Source:"))
+        tt_browser_layout.addWidget(self.tt_browser_combo)
+        tt_browser_layout.addStretch()
+        tt_layout.addLayout(tt_browser_layout)
+        
+        # Verify TikTok Button
+        verify_tt_layout = QHBoxLayout()
+        self.verify_tt_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_tt_cookies_btn.clicked.connect(self.verify_tt_cookies)
+        self.verify_tt_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_tt_layout.addStretch()
+        verify_tt_layout.addWidget(self.verify_tt_cookies_btn)
+        tt_layout.addLayout(verify_tt_layout)
+        
+        tt_layout.addStretch()
+        self.credentials_tabs.addTab(tiktok_tab, "TikTok")
+        
         # Placeholder Tabs
         self.credentials_tabs.addTab(QWidget(), "Instagram")
         self.credentials_tabs.addTab(QWidget(), "YouTube")
@@ -404,26 +496,59 @@ class SettingsTab(QWidget):
         if path:
             self.fb_cookies_path.setText(path)
 
+    def browse_pin_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select Pinterest Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.pin_cookies_path.setText(path)
+
+    def browse_tt_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select TikTok Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.tt_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
         browser_source = self.fb_browser_combo.currentText()
-        
+        test_url = "https://www.facebook.com/watch/?v=10153231379986729" # FB Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_fb_cookies_btn)
+
+    @Slot()
+    def verify_pin_cookies(self):
+        cookie_file = self.pin_cookies_path.text()
+        browser_source = self.pin_browser_combo.currentText()
+        test_url = "https://www.pinterest.com/" # Pinterest Test URL (Main page is usually sufficient for login check)
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_pin_cookies_btn)
+
+    @Slot()
+    def verify_tt_cookies(self):
+        cookie_file = self.tt_cookies_path.text()
+        browser_source = self.tt_browser_combo.currentText()
+        test_url = "https://www.tiktok.com/@tiktok" # TikTok Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_tt_cookies_btn)
+
+    def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):
             QMessageBox.warning(self, "Verification Failed", "Please provide a cookie file or select a browser source.")
             return
 
-        self.verify_fb_cookies_btn.setEnabled(False)
-        self.verify_fb_cookies_btn.setText("Verifying...")
+        btn_widget.setEnabled(False)
+        original_text = btn_widget.text()
+        btn_widget.setText("Verifying...")
+        
+        # Store reference to button to restore it later
+        self.active_verify_btn = btn_widget
+        self.active_verify_btn_text = original_text
 
-        self.cookie_worker = CookieVerificationWorker(cookie_file, browser_source, self) # Pass self as parent
+        self.cookie_worker = CookieVerificationWorker(cookie_file, browser_source, test_url, self)
         self.cookie_worker.finished.connect(self.on_cookie_verification_finished)
         self.cookie_worker.start()
 
     @Slot(bool, str)
     def on_cookie_verification_finished(self, success, message):
-        self.verify_fb_cookies_btn.setEnabled(True)
-        self.verify_fb_cookies_btn.setText("Verify Cookies")
+        if hasattr(self, 'active_verify_btn'):
+            self.active_verify_btn.setEnabled(True)
+            self.active_verify_btn.setText(self.active_verify_btn_text)
 
         if success:
             QMessageBox.information(self, "Verification Success", message)
@@ -479,10 +604,22 @@ class SettingsTab(QWidget):
         fb_creds = self.credentials_manager.get_credential('facebook')
         if fb_creds:
             self.fb_cookies_path.setText(fb_creds.get('cookie_file', ''))
-            browser = fb_creds.get('browser', 'None')
-            idx = self.fb_browser_combo.findText(browser)
-            if idx >= 0:
-                self.fb_browser_combo.setCurrentIndex(idx)
+            self._set_combo_text(self.fb_browser_combo, fb_creds.get('browser', 'None'))
+
+        pin_creds = self.credentials_manager.get_credential('pinterest')
+        if pin_creds:
+            self.pin_cookies_path.setText(pin_creds.get('cookie_file', ''))
+            self._set_combo_text(self.pin_browser_combo, pin_creds.get('browser', 'None'))
+
+        tt_creds = self.credentials_manager.get_credential('tiktok')
+        if tt_creds:
+            self.tt_cookies_path.setText(tt_creds.get('cookie_file', ''))
+            self._set_combo_text(self.tt_browser_combo, tt_creds.get('browser', 'None'))
+
+    def _set_combo_text(self, combo, text):
+        idx = combo.findText(text)
+        if idx >= 0:
+            combo.setCurrentIndex(idx)
 
     def load_initial_settings(self):
         """Loads settings from disk and populates the UI."""
@@ -501,6 +638,18 @@ class SettingsTab(QWidget):
             'browser': self.fb_browser_combo.currentText()
         }
         self.credentials_manager.set_credential('facebook', fb_data)
+
+        pin_data = {
+            'cookie_file': self.pin_cookies_path.text(),
+            'browser': self.pin_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('pinterest', pin_data)
+
+        tt_data = {
+            'cookie_file': self.tt_cookies_path.text(),
+            'browser': self.tt_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('tiktok', tt_data)
 
         if success:
             QMessageBox.information(self, "Success", "Settings and Credentials saved successfully!")
