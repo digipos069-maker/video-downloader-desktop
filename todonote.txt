@@ -6,3 +6,4 @@
 6. ADD SETTING (intragram,youtube,pinterest,tiktok)
 7. ADD APP LOGO
 8. IMPLEMEMT LOGIC CHECK UPDATE (build install NSis,nuitka)
+9. fix download photo instagram

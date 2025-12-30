@@ -210,10 +210,15 @@ class DownloaderTab(QWidget):
         row1_layout = QHBoxLayout()
         row1_layout.setSpacing(10)
 
-        self.logo_label = QLabel("Logo") 
+        self.logo_label = QLabel() 
         self.logo_label.setFixedSize(48, 48)
-        self.logo_label.setAlignment(Qt.AlignCenter)
-        self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 24px; font-weight: bold;")
+        logo_pixmap = QPixmap(resource_path("app/resources/images/logo.png"))
+        if not logo_pixmap.isNull():
+            self.logo_label.setPixmap(logo_pixmap.scaled(48, 48, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        else:
+            self.logo_label.setText("SDM")
+            self.logo_label.setAlignment(Qt.AlignCenter)
+            self.logo_label.setStyleSheet("background-color: #383e48; border-radius: 24px; font-weight: bold; color: white;")
         
         # Speed Info Box
         speed_box = QFrame()

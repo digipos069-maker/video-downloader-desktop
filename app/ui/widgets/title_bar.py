@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QWidget, QHBoxLayout, QLabel, QAbstractButton
 from PySide6.QtCore import Qt, QSize, QPoint
-from PySide6.QtGui import QPainter, QColor, QPen, QBrush
+from PySide6.QtGui import QPainter, QColor, QPen, QBrush, QPixmap
+from app.helpers import resource_path
 
 class CaptionButton(QAbstractButton):
     """
@@ -87,7 +88,15 @@ class TitleBar(QWidget):
         
         layout = QHBoxLayout(self)
         layout.setContentsMargins(10, 0, 0, 0)
-        layout.setSpacing(0) # Buttons should touch
+        layout.setSpacing(8) # Buttons should touch
+
+        # Logo
+        self.logo_icon = QLabel()
+        self.logo_icon.setFixedSize(20, 20)
+        logo_pixmap = QPixmap(resource_path("app/resources/images/logo.png"))
+        if not logo_pixmap.isNull():
+            self.logo_icon.setPixmap(logo_pixmap.scaled(20, 20, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        layout.addWidget(self.logo_icon)
 
         # Title
         self.title_label = QLabel(title)

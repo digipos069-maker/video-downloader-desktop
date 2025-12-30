@@ -8712,3 +8712,194 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 17:45:42,990 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
 2025-12-30 17:45:42,990 - INFO - Scraping loop finished. Found 40 items.
 2025-12-30 17:45:42,990 - INFO - Scraping found 40 unique valid links.
+2025-12-30 17:48:54,554 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:48:59,747 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:49:02,072 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:49:03,004 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:49:03,043 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:49:03,111 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:49:03,111 - INFO - Scraping target limit (max_entries): 205
+2025-12-30 17:49:03,840 - INFO - Starting scroll loop. Planned iterations: 12 for max 205 items.
+2025-12-30 17:49:03,858 - INFO - Starting dynamic scroll loop. Target: 205 items.
+2025-12-30 17:49:09,407 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:49:09,505 - INFO - Loop status: Iteration 1, Found 14/205 items (+14 new valid, +37 raw)
+2025-12-30 17:49:15,042 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:49:15,062 - INFO - Loop status: Iteration 2, Found 26/205 items (+12 new valid, +12 raw)
+2025-12-30 17:49:20,634 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:49:20,657 - INFO - Loop status: Iteration 3, Found 40/205 items (+14 new valid, +14 raw)
+2025-12-30 17:49:26,192 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:49:26,202 - INFO - Loop status: Iteration 4, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:31,741 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:49:31,754 - INFO - Loop status: Iteration 5, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:36,671 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reels to E:/mmo/building-page/tree kongdom
+2025-12-30 17:49:36,675 - INFO - Starting yt-dlp download for https://www.instagram.com/reels to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:49:36,696 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:49:36,696 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:49:36,697 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:49:36,701 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:49:36,701 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:49:36,701 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:49:37,293 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:49:37,417 - INFO - Loop status: Iteration 6, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:37,418 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:49:41,168 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.instagram.com/long_manin/reels
+2025-12-30 17:49:41,783 - ERROR - Download failed: [0;31mERROR:[0m [instagram:user] reels: Unable to extract [0;94mdata[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 17:49:44,560 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:49:44,571 - INFO - Loop status: Iteration 7, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:44,571 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:49:51,641 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:49:51,651 - INFO - Loop status: Iteration 8, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:51,651 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:49:58,698 - DEBUG - Scroll iteration 9 completed
+2025-12-30 17:49:58,712 - INFO - Loop status: Iteration 9, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:49:58,712 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:50:05,770 - DEBUG - Scroll iteration 10 completed
+2025-12-30 17:50:05,780 - INFO - Loop status: Iteration 10, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:50:05,780 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:50:12,828 - DEBUG - Scroll iteration 11 completed
+2025-12-30 17:50:12,838 - INFO - Loop status: Iteration 11, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:50:12,838 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:50:14,902 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:50:15,811 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:15,859 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:50:15,918 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:50:15,919 - INFO - Scraping target limit (max_entries): 25
+2025-12-30 17:50:16,643 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-30 17:50:16,655 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-30 17:50:19,885 - DEBUG - Scroll iteration 12 completed
+2025-12-30 17:50:19,894 - INFO - Loop status: Iteration 12, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:50:19,895 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:50:22,194 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:50:22,257 - INFO - Loop status: Iteration 1, Found 14/25 items (+14 new valid, +37 raw)
+2025-12-30 17:50:26,953 - DEBUG - Scroll iteration 13 completed
+2025-12-30 17:50:26,967 - INFO - Loop status: Iteration 13, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:50:26,967 - INFO - Scroll stagnant for 10 iterations. Assuming end of feed.
+2025-12-30 17:50:26,967 - INFO - Scraping loop finished. Found 40 items.
+2025-12-30 17:50:26,967 - INFO - Scraping found 40 unique valid links.
+2025-12-30 17:50:27,852 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:50:27,880 - INFO - Loop status: Iteration 2, Found 38/25 items (+24 new valid, +24 raw)
+2025-12-30 17:50:27,880 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:50:27,880 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:50:39,898 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS4gsN_kpLa to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,902 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS2ZrT3Cdr7 to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,902 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS2S5gJkQZQ to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,903 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSzojxclCxd to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,904 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSxcylqEnIH to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,905 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS4dWQ8gAIw to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,905 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSxIrt9lWvx to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,906 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSw522yjLjI to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,907 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSzvFv4kUQz to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,909 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS2DXNhioKd to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:39,959 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:39,959 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:39,960 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,077 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,078 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,078 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,144 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,144 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,161 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,173 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,179 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,182 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,183 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,186 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,186 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,186 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,186 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,187 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,187 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,188 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,188 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,189 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,212 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,310 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,346 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,375 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:40,706 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:40,735 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:40,846 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:41,517 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS4gsN_kpLa.txt
+2025-12-30 17:50:41,519 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS4gsN_kpLa
+2025-12-30 17:50:41,552 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSw1f3AFF_J to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:41,560 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:41,560 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:41,560 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:43,024 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS4dWQ8gAIw.txt
+2025-12-30 17:50:43,027 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS4dWQ8gAIw
+2025-12-30 17:50:43,031 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSw1MocAdQM to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:43,052 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:43,052 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:43,052 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:44,387 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSw522yjLjI.txt
+2025-12-30 17:50:44,391 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSw522yjLjI
+2025-12-30 17:50:44,396 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSws9y6AAIA to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:44,411 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:44,411 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:44,411 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:45,365 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS2DXNhioKd.txt
+2025-12-30 17:50:45,369 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS2DXNhioKd
+2025-12-30 17:50:45,372 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSwfRfoDRDD to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:45,385 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:45,385 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:45,386 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:46,312 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS2S5gJkQZQ.txt
+2025-12-30 17:50:46,315 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS2S5gJkQZQ
+2025-12-30 17:50:46,317 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSu1SzODuOa to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:46,326 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:46,326 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:46,327 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:49,766 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS2ZrT3Cdr7.txt
+2025-12-30 17:50:49,769 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS2ZrT3Cdr7
+2025-12-30 17:50:49,771 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSutXm9DWvy to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:49,782 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:49,783 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:49,783 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:50,032 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSw1f3AFF_J.txt
+2025-12-30 17:50:50,035 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSw1f3AFF_J
+2025-12-30 17:50:50,039 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSunb63DwzD to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:50,052 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:50,052 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:50,052 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:51,236 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSw1MocAdQM.txt
+2025-12-30 17:50:51,241 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSw1MocAdQM
+2025-12-30 17:50:51,271 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSxcylqEnIH.txt
+2025-12-30 17:50:51,272 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSuYdyuCsQ9 to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:51,278 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSxcylqEnIH
+2025-12-30 17:50:51,282 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSuNJo1FZYv to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:51,294 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:51,294 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:51,294 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:51,295 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:51,312 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:51,324 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:53,587 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSzojxclCxd.txt
+2025-12-30 17:50:53,591 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSzojxclCxd
+2025-12-30 17:50:53,593 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSsSYugCIO8 to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:50:53,604 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:50:53,604 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:50:53,604 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:50:54,313 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSutXm9DWvy.txt
+2025-12-30 17:50:54,315 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSutXm9DWvy
+2025-12-30 17:50:55,592 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSu1SzODuOa.txt
+2025-12-30 17:50:55,595 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSu1SzODuOa
+2025-12-30 17:50:56,020 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSuYdyuCsQ9.txt
+2025-12-30 17:50:56,024 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSuYdyuCsQ9
+2025-12-30 17:50:56,922 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSunb63DwzD.txt
+2025-12-30 17:50:56,926 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSunb63DwzD
+2025-12-30 17:50:57,725 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSsSYugCIO8.txt
+2025-12-30 17:50:57,728 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSsSYugCIO8
+2025-12-30 17:50:59,067 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSzvFv4kUQz.txt
+2025-12-30 17:50:59,070 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSzvFv4kUQz
+2025-12-30 17:51:01,052 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSwfRfoDRDD.txt
+2025-12-30 17:51:01,055 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSwfRfoDRDD
+2025-12-30 17:51:01,100 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSws9y6AAIA.txt
+2025-12-30 17:51:01,103 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSws9y6AAIA
+2025-12-30 17:51:02,720 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSuNJo1FZYv.txt
+2025-12-30 17:51:02,724 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSuNJo1FZYv
+2025-12-30 17:51:04,878 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSxIrt9lWvx.txt
+2025-12-30 17:51:04,883 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSxIrt9lWvx
+2025-12-30 17:56:02,896 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:56:54,957 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:58:39,139 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
