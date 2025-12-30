@@ -475,9 +475,54 @@ class SettingsTab(QWidget):
         tt_layout.addStretch()
         self.credentials_tabs.addTab(tiktok_tab, QIcon(icon_base_path + "tik-tok.png"), "TikTok")
         
+        # --- YouTube Credentials Tab ---
+        youtube_tab = QWidget()
+        yt_layout = QVBoxLayout(youtube_tab)
+        yt_layout.setSpacing(8)
+        yt_layout.setContentsMargins(10, 10, 10, 10)
+        
+        yt_desc = QLabel("YouTube cookies are often required for age-restricted content or premium videos.\nSelect your 'cookies.txt' or browser.")
+        yt_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        yt_desc.setWordWrap(True)
+        yt_layout.addWidget(yt_desc)
+        
+        # YouTube Cookies File
+        yt_cookies_layout = QHBoxLayout()
+        self.yt_cookies_path = QLineEdit()
+        self.yt_cookies_path.setPlaceholderText("Path to youtube cookies.txt...")
+        self.yt_cookies_btn = QPushButton("Browse...")
+        self.yt_cookies_btn.clicked.connect(self.browse_yt_cookies)
+        self.yt_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        yt_cookies_layout.addWidget(QLabel("Cookies File:"))
+        yt_cookies_layout.addWidget(self.yt_cookies_path)
+        yt_cookies_layout.addWidget(self.yt_cookies_btn)
+        yt_layout.addLayout(yt_cookies_layout)
+
+        # YouTube Browser Option
+        yt_browser_layout = QHBoxLayout()
+        self.yt_browser_combo = QComboBox()
+        self.yt_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        yt_browser_layout.addWidget(QLabel("Browser Source:"))
+        yt_browser_layout.addWidget(self.yt_browser_combo)
+        yt_browser_layout.addStretch()
+        yt_layout.addLayout(yt_browser_layout)
+        
+        # Verify YouTube Button
+        verify_yt_layout = QHBoxLayout()
+        self.verify_yt_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_yt_cookies_btn.clicked.connect(self.verify_yt_cookies)
+        self.verify_yt_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_yt_layout.addStretch()
+        verify_yt_layout.addWidget(self.verify_yt_cookies_btn)
+        yt_layout.addLayout(verify_yt_layout)
+        
+        yt_layout.addStretch()
+        self.credentials_tabs.addTab(youtube_tab, QIcon(icon_base_path + "youtube.png"), "YouTube")
+
         # Placeholder Tabs
         self.credentials_tabs.addTab(QWidget(), QIcon(icon_base_path + "instagram.png"), "Instagram")
-        self.credentials_tabs.addTab(QWidget(), QIcon(icon_base_path + "youtube.png"), "YouTube")
         
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
@@ -510,6 +555,11 @@ class SettingsTab(QWidget):
         if path:
             self.tt_cookies_path.setText(path)
 
+    def browse_yt_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select YouTube Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.yt_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
@@ -530,6 +580,13 @@ class SettingsTab(QWidget):
         browser_source = self.tt_browser_combo.currentText()
         test_url = "https://www.tiktok.com/@tiktok" # TikTok Test URL
         self._verify_cookies(cookie_file, browser_source, test_url, self.verify_tt_cookies_btn)
+
+    @Slot()
+    def verify_yt_cookies(self):
+        cookie_file = self.yt_cookies_path.text()
+        browser_source = self.yt_browser_combo.currentText()
+        test_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # YouTube Test URL (Rick Roll - always public, good for basic check)
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_yt_cookies_btn)
 
     def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):
@@ -620,6 +677,11 @@ class SettingsTab(QWidget):
             self.tt_cookies_path.setText(tt_creds.get('cookie_file', ''))
             self._set_combo_text(self.tt_browser_combo, tt_creds.get('browser', 'None'))
 
+        yt_creds = self.credentials_manager.get_credential('youtube')
+        if yt_creds:
+            self.yt_cookies_path.setText(yt_creds.get('cookie_file', ''))
+            self._set_combo_text(self.yt_browser_combo, yt_creds.get('browser', 'None'))
+
     def _set_combo_text(self, combo, text):
         idx = combo.findText(text)
         if idx >= 0:
@@ -654,6 +716,12 @@ class SettingsTab(QWidget):
             'browser': self.tt_browser_combo.currentText()
         }
         self.credentials_manager.set_credential('tiktok', tt_data)
+
+        yt_data = {
+            'cookie_file': self.yt_cookies_path.text(),
+            'browser': self.yt_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('youtube', yt_data)
 
         if success:
             QMessageBox.information(self, "Success", "Settings and Credentials saved successfully!")
