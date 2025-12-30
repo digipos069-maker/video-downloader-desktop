@@ -182,7 +182,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 # Extraction function to run in browser (reusable)
                 extract_func = """
                     () => {
-                        return Array.from(document.querySelectorAll('a[href]')).map(a => {
+                        const items = Array.from(document.querySelectorAll('a[href]')).map(a => {
                             let t = a.innerText;
                             // Fallback 1: aria-label (Common on FB/Insta for icon-only links)
                             if (!t || !t.trim()) t = a.getAttribute('aria-label');
@@ -191,10 +191,46 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                 const img = a.querySelector('img');
                                 if (img) t = img.alt;
                             }
+                            
+                            // Visual coordinates for sorting
+                            const rect = a.getBoundingClientRect();
+                            
+                            // Video Hint: Look for video indicators in the item's container
+                            let isVideo = false;
+                            const container = a.closest('[data-test-id="pin"], .pin, .post, article, [role="link"]');
+                            if (container) {
+                                if (container.querySelector('video, [aria-label*="video"], [aria-label*="Video"], .video-icon, [data-test-id*="video"]')) {
+                                    isVideo = true;
+                                }
+                                // Duration patterns like 0:15 or 1:20
+                                if (container.innerText && container.innerText.match(/\\d+:\\d+/)) {
+                                    isVideo = true;
+                                }
+                            }
+
                             return {
                                 url: a.href,
-                                text: t
+                                text: t,
+                                top: rect.top + window.scrollY,
+                                left: rect.left + window.scrollX,
+                                is_video_hint: isVideo
                             };
+                        });
+                        
+                        return items.filter(item => {
+                            if (!item.url || !item.url.startsWith('http')) return false;
+                            if (!item.text) return true; // Allow empty text
+                            const lowText = item.text.toLowerCase();
+                            if (lowText.includes('skip to content') || 
+                                lowText.includes('skip to main') ||
+                                lowText === 'skip') return false;
+                            return true;
+                        }).sort((a, b) => {
+                            // Sort by top (vertical), then by left (horizontal)
+                            // Masonry feeds have staggered tops, so we use a row threshold (e.g. 100px)
+                            const rowDiff = a.top - b.top;
+                            if (Math.abs(rowDiff) > 100) return rowDiff;
+                            return a.left - b.left;
                         });
                     }
                 """

@@ -98,8 +98,19 @@ class ScrapingWorker(QThread):
                             else:
                                 is_photo = True # Assume anything else on Instagram is a post/photo
                         elif 'pinterest' in item_url:
-                            if video_enabled: is_video = True
-                            if photo_enabled: is_photo = True
+                            is_hint_video = metadata.get('is_video_hint', False)
+                            if is_hint_video:
+                                is_video = True
+                                is_photo = False
+                            else:
+                                # Default Pinterest links to photo if no video hint,
+                                # unless only video download is enabled.
+                                if photo_enabled:
+                                    is_photo = True
+                                    is_video = False
+                                elif video_enabled:
+                                    is_video = True
+                                    is_photo = False
                     
                     print(f"[DEBUG] Initial Classification - is_video: {is_video}, is_photo: {is_photo}")
                     print(f"[DEBUG] Config - video_enabled: {video_enabled}, photo_enabled: {photo_enabled}, limit_photo: {limit_photo}")
