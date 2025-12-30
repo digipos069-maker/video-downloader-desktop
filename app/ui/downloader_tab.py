@@ -351,6 +351,7 @@ class DownloaderTab(QWidget):
         self.url_input = QLineEdit()
         self.url_input.setPlaceholderText("Paste video URL here...")
         self.url_input.setFixedHeight(30)
+        self.url_input.textChanged.connect(self.validate_url_input)
         self.url_input.setStyleSheet("""
             QLineEdit {
                 background-color: #1C1C21;
@@ -929,6 +930,53 @@ class DownloaderTab(QWidget):
             # re-index the self.active_download_map if rows are not always removed from the end.
             # For now, this is sufficient as we are not re-ordering.
 
+    def validate_url_input(self):
+        """Validates the current text in the URL input and provides visual feedback."""
+        url = self.url_input.text().strip()
+        if not url:
+            self.url_input.setStyleSheet("""
+                QLineEdit {
+                    background-color: #1C1C21;
+                    border: 2px solid #27272A;
+                    border-radius: 15px;
+                    padding: 0 8px;
+                    color: #F4F4F5;
+                    font-size: 10pt;
+                }
+                QLineEdit:focus { border-color: #3B82F6; background-color: #202025; }
+            """)
+            return True
+
+        handler = self.platform_handler_factory.get_handler(url)
+        if handler:
+            # Valid URL
+            self.url_input.setStyleSheet("""
+                QLineEdit {
+                    background-color: #1C1C21;
+                    border: 2px solid #10B981; /* Green border for valid */
+                    border-radius: 15px;
+                    padding: 0 8px;
+                    color: #F4F4F5;
+                    font-size: 10pt;
+                }
+                QLineEdit:focus { border-color: #34D399; background-color: #202025; }
+            """)
+            return True
+        else:
+            # Invalid URL
+            self.url_input.setStyleSheet("""
+                QLineEdit {
+                    background-color: #1C1C21;
+                    border: 2px solid #EF4444; /* Red border for invalid */
+                    border-radius: 15px;
+                    padding: 0 8px;
+                    color: #F4F4F5;
+                    font-size: 10pt;
+                }
+                QLineEdit:focus { border-color: #F87171; background-color: #202025; }
+            """)
+            return False
+
     @Slot()
     def add_url_to_download_queue(self):
         # LICENSE GATE
@@ -938,6 +986,10 @@ class DownloaderTab(QWidget):
         url = self.url_input.text().strip()
         if not url:
             self.status_message.emit("Please enter a URL to add to queue.")
+            return
+
+        if not self.validate_url_input():
+            self.status_message.emit("Unsupported platform. Please enter a valid URL (YouTube, FB, TikTok, etc.)")
             return
 
         # Check for duplicates
@@ -1035,6 +1087,10 @@ class DownloaderTab(QWidget):
         url = self.url_input.text().strip()
         if not url:
             self.status_message.emit("Please enter a URL to scrap.")
+            return
+        
+        if not self.validate_url_input():
+            self.status_message.emit("Unsupported platform for scraping.")
             return
         
         self.process_scraping(url)
@@ -1275,6 +1331,9 @@ class DownloaderTab(QWidget):
         download_action = menu.addAction("⬇️ Download Selected")
         download_action.triggered.connect(self.download_selected_activity_items)
         
+        copy_action = menu.addAction("📋 Copy URL")
+        copy_action.triggered.connect(self.copy_selected_activity_urls)
+
         menu.addSeparator()
         
         delete_action = menu.addAction("❌ Remove Row")
@@ -1478,6 +1537,28 @@ class DownloaderTab(QWidget):
             
         for row in sorted(list(selected_rows)):
             url_item = self.queue_table_widget.item(row, 1) # URL is in column 1
+            if url_item:
+                urls.append(url_item.text())
+        
+        if urls:
+            clipboard = QApplication.clipboard()
+            clipboard.setText("\n".join(urls))
+            self.status_message.emit(f"Copied {len(urls)} URL(s) to clipboard.")
+
+    def copy_selected_activity_urls(self):
+        """Copies the URLs of selected rows in the activity table to the clipboard."""
+        from PySide6.QtWidgets import QApplication
+        selected_items = self.activity_table.selectedItems()
+        if not selected_items:
+            return
+        
+        urls = []
+        selected_rows = set()
+        for item in selected_items:
+            selected_rows.add(item.row())
+            
+        for row in sorted(list(selected_rows)):
+            url_item = self.activity_table.item(row, 2) # URL is in column 2
             if url_item:
                 urls.append(url_item.text())
         

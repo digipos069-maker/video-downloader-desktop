@@ -9587,3 +9587,106 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 22:41:01,316 - INFO - Scraping loop finished. Found 7 items.
 2025-12-30 22:41:01,316 - INFO - Scraping found 7 unique valid links.
 2025-12-30 22:42:54,365 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:48:44,262 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:48:49,216 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:50:17,125 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:52:34,599 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:52:38,021 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:52:40,661 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:52:57,206 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:53:01,021 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:53:31,382 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:53:36,790 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:53:43,958 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:54:36,694 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:54:42,219 - INFO - Attempting metadata extraction with yt-dlp for: https://www.tiktok.com/@liyh0rng
+2025-12-30 22:54:42,219 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-12-30 22:54:42,219 - DEBUG - No cookies configured for metadata extraction.
+2025-12-30 22:54:42,224 - INFO - Attempting metadata extraction with yt-dlp for: https://www.youtube.com/@growthborntohustle/videos
+2025-12-30 22:54:42,225 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-12-30 22:54:42,225 - DEBUG - No cookies configured for metadata extraction.
+2025-12-30 22:54:42,225 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:54:42,226 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:54:42,226 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:54:43,748 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 22:54:43,750 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 22:54:43,788 - INFO - Added 11 cookies to browser context.
+2025-12-30 22:54:43,789 - INFO - Added 12 cookies to browser context.
+2025-12-30 22:54:43,848 - INFO - Playwright visiting: https://www.pinterest.com/pin/492649954570929/
+2025-12-30 22:54:43,849 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:54:43,859 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 22:54:43,860 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:54:43,861 - INFO - Playwright visiting: https://www.facebook.com/samkok2010hd
+2025-12-30 22:54:43,861 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:54:44,767 - INFO - yt-dlp found 7 entries.
+2025-12-30 22:54:45,103 - INFO - yt-dlp found 7 entries.
+2025-12-30 22:54:46,856 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:54:46,878 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:54:47,755 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:54:47,777 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:54:48,485 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:54:48,595 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:54:52,428 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:54:52,472 - INFO - Loop status: Iteration 1, Found 14/7 items (+14 new valid, +37 raw)
+2025-12-30 22:54:52,472 - INFO - Scraping loop finished. Found 14 items.
+2025-12-30 22:54:52,472 - INFO - Scraping found 14 unique valid links.
+2025-12-30 22:54:53,517 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:54:53,555 - INFO - Loop status: Iteration 1, Found 18/7 items (+18 new valid, +89 raw)
+2025-12-30 22:54:53,555 - INFO - Scraping loop finished. Found 18 items.
+2025-12-30 22:54:53,555 - INFO - Scraping found 18 unique valid links.
+2025-12-30 22:54:54,209 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:54:54,333 - INFO - Loop status: Iteration 1, Found 3/7 items (+3 new valid, +76 raw)
+2025-12-30 22:54:59,889 - DEBUG - Scroll iteration 2 completed
+2025-12-30 22:54:59,956 - INFO - Loop status: Iteration 2, Found 3/7 items (+0 new valid, +29 raw)
+2025-12-30 22:55:05,505 - DEBUG - Scroll iteration 3 completed
+2025-12-30 22:55:05,571 - INFO - Loop status: Iteration 3, Found 5/7 items (+2 new valid, +38 raw)
+2025-12-30 22:55:11,354 - DEBUG - Scroll iteration 4 completed
+2025-12-30 22:55:11,455 - INFO - Loop status: Iteration 4, Found 6/7 items (+1 new valid, +28 raw)
+2025-12-30 22:55:17,117 - DEBUG - Scroll iteration 5 completed
+2025-12-30 22:55:17,192 - INFO - Loop status: Iteration 5, Found 6/7 items (+0 new valid, +47 raw)
+2025-12-30 22:55:18,105 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=798Dhq0t1pM to E:/mmo/building-page/tree kongdom\growthborntohustle_videos
+2025-12-30 22:55:18,115 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 22:55:18,115 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 22:55:18,115 - DEBUG - No cookies configured for download.
+2025-12-30 22:55:20,552 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\growthborntohustle_videos\\u1787\u17c6\u1793\u17b6\u1789\u178a\u17c2\u179b\u179b\u17d2\u17a2\u1794\u17c6\u1795\u17bb\u178f\u1798\u1793\u17bb\u179f\u17d2\u179f\u1798\u17d2\u1793\u17b6\u1780\u17cb\u17a2\u17b6\u1785\u179a\u17c0\u1793\u1794\u17b6\u1793 Emotional Regulation!!_798Dhq0t1pM.txt
+2025-12-30 22:55:20,554 - INFO - Download completed: https://www.youtube.com/watch?v=798Dhq0t1pM
+2025-12-30 22:55:22,777 - DEBUG - Scroll iteration 6 completed
+2025-12-30 22:55:22,843 - INFO - Loop status: Iteration 6, Found 8/7 items (+2 new valid, +35 raw)
+2025-12-30 22:55:22,843 - INFO - Scraping loop finished. Found 8 items.
+2025-12-30 22:55:22,844 - INFO - Scraping found 8 unique valid links.
+2025-12-30 22:55:32,611 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/13933080092781590 | Title: Pinterest Download
+2025-12-30 22:55:32,611 - DEBUG - [PinterestHandler] Extracted Pin ID: '13933080092781590'
+2025-12-30 22:55:32,612 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_13933080092781590'
+2025-12-30 22:55:32,612 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/13933080092781590 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 22:55:32,622 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 22:55:32,623 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 22:55:32,623 - DEBUG - No cookies configured for download.
+2025-12-30 22:55:33,821 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 13933080092781590: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 22:55:33,822 - INFO - Standard download failed for https://www.pinterest.com/pin/13933080092781590. Attempting fallback extraction...
+2025-12-30 22:55:33,822 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:55:34,807 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/13933080092781590
+2025-12-30 22:55:41,497 - INFO - Video extraction failed for https://www.pinterest.com/pin/13933080092781590. Checking for image...
+2025-12-30 22:55:41,498 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:55:42,404 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/13933080092781590
+2025-12-30 22:55:44,000 - INFO - Found direct image URL: https://i.pinimg.com/736x/9b/42/d7/9b42d731fb195de92c4961e7aaaf63a2.jpg
+2025-12-30 22:55:44,000 - INFO - Starting direct download for https://i.pinimg.com/736x/9b/42/d7/9b42d731fb195de92c4961e7aaaf63a2.jpg to E:/test\pin_492649954570929
+2025-12-30 22:55:44,080 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download13933080092781590.txt
+2025-12-30 22:55:44,080 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download13933080092781590.jpg
+2025-12-30 22:56:36,619 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/492649954570929 | Title: Pinterest Download
+2025-12-30 22:56:36,619 - DEBUG - [PinterestHandler] Extracted Pin ID: '492649954570929'
+2025-12-30 22:56:36,619 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_492649954570929'
+2025-12-30 22:56:36,619 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/492649954570929 to E:/mmo/building-page/tree kongdom
+2025-12-30 22:56:36,630 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 22:56:36,630 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 22:56:36,630 - DEBUG - No cookies configured for download.
+2025-12-30 22:56:37,748 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 492649954570929: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 22:56:37,748 - INFO - Standard download failed for https://www.pinterest.com/pin/492649954570929. Attempting fallback extraction...
+2025-12-30 22:56:37,749 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:56:38,728 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/492649954570929
+2025-12-30 22:56:46,362 - INFO - Video extraction failed for https://www.pinterest.com/pin/492649954570929. Checking for image...
+2025-12-30 22:56:46,362 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:56:47,316 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/492649954570929
+2025-12-30 22:56:49,030 - INFO - Found direct image URL: https://i.pinimg.com/736x/0d/b2/d2/0db2d2f741b54f38cd76d6af9eb85ead.jpg
+2025-12-30 22:56:49,030 - INFO - Starting direct download for https://i.pinimg.com/736x/0d/b2/d2/0db2d2f741b54f38cd76d6af9eb85ead.jpg to E:/test
+2025-12-30 22:56:49,217 - INFO - Caption saved to: E:/test\Pinterest Download492649954570929.txt
+2025-12-30 22:56:49,217 - INFO - Direct download completed: E:/test\Pinterest Download492649954570929.jpg
