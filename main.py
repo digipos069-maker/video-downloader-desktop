@@ -1,7 +1,8 @@
 import sys
 import os
 from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QSizeGrip
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QIcon
 from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
 from app.ui.widgets.title_bar import TitleBar
@@ -34,15 +35,16 @@ class MainWindow(QMainWindow):
 
         # Create a central tab widget
         self.tabs = QTabWidget()
+        self.tabs.setIconSize(QSize(24, 24))
         main_layout.addWidget(self.tabs)
 
         # Add the downloader tab
         self.downloader_tab = DownloaderTab()
-        self.tabs.addTab(self.downloader_tab, "Downloader")
+        self.tabs.addTab(self.downloader_tab, QIcon(resource_path("app/resources/images/icons/download.png")), "Downloader")
 
         # Add the settings tab
         self.settings_tab = SettingsTab()
-        self.tabs.addTab(self.settings_tab, "Settings")
+        self.tabs.addTab(self.settings_tab, QIcon(resource_path("app/resources/images/icons/settings.png")), "Settings")
         
         # Connect settings to downloader
         self.downloader_tab.set_settings_tab(self.settings_tab)
