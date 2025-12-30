@@ -8360,3 +8360,4 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 16:34:28,866 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:37:37,194 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:41:11,425 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:50:50,034 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

@@ -521,8 +521,51 @@ class SettingsTab(QWidget):
         yt_layout.addStretch()
         self.credentials_tabs.addTab(youtube_tab, QIcon(icon_base_path + "youtube.png"), "YouTube")
 
-        # Placeholder Tabs
-        self.credentials_tabs.addTab(QWidget(), QIcon(icon_base_path + "instagram.png"), "Instagram")
+        # --- Instagram Credentials Tab ---
+        instagram_tab = QWidget()
+        ig_layout = QVBoxLayout(instagram_tab)
+        ig_layout.setSpacing(8)
+        ig_layout.setContentsMargins(10, 10, 10, 10)
+        
+        ig_desc = QLabel("Instagram highly recommends cookies to avoid 'Login Required' blocks when scraping profiles or reels.\nSelect your 'cookies.txt' or browser.")
+        ig_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        ig_desc.setWordWrap(True)
+        ig_layout.addWidget(ig_desc)
+        
+        # Instagram Cookies File
+        ig_cookies_layout = QHBoxLayout()
+        self.ig_cookies_path = QLineEdit()
+        self.ig_cookies_path.setPlaceholderText("Path to instagram cookies.txt...")
+        self.ig_cookies_btn = QPushButton("Browse...")
+        self.ig_cookies_btn.clicked.connect(self.browse_ig_cookies)
+        self.ig_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        ig_cookies_layout.addWidget(QLabel("Cookies File:"))
+        ig_cookies_layout.addWidget(self.ig_cookies_path)
+        ig_cookies_layout.addWidget(self.ig_cookies_btn)
+        ig_layout.addLayout(ig_cookies_layout)
+
+        # Instagram Browser Option
+        ig_browser_layout = QHBoxLayout()
+        self.ig_browser_combo = QComboBox()
+        self.ig_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        ig_browser_layout.addWidget(QLabel("Browser Source:"))
+        ig_browser_layout.addWidget(self.ig_browser_combo)
+        ig_browser_layout.addStretch()
+        ig_layout.addLayout(ig_browser_layout)
+        
+        # Verify Instagram Button
+        verify_ig_layout = QHBoxLayout()
+        self.verify_ig_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_ig_cookies_btn.clicked.connect(self.verify_ig_cookies)
+        self.verify_ig_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_ig_layout.addStretch()
+        verify_ig_layout.addWidget(self.verify_ig_cookies_btn)
+        ig_layout.addLayout(verify_ig_layout)
+        
+        ig_layout.addStretch()
+        self.credentials_tabs.addTab(instagram_tab, QIcon(icon_base_path + "instagram.png"), "Instagram")
         
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
@@ -560,6 +603,11 @@ class SettingsTab(QWidget):
         if path:
             self.yt_cookies_path.setText(path)
 
+    def browse_ig_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select Instagram Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.ig_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
@@ -587,6 +635,13 @@ class SettingsTab(QWidget):
         browser_source = self.yt_browser_combo.currentText()
         test_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # YouTube Test URL (Rick Roll - always public, good for basic check)
         self._verify_cookies(cookie_file, browser_source, test_url, self.verify_yt_cookies_btn)
+
+    @Slot()
+    def verify_ig_cookies(self):
+        cookie_file = self.ig_cookies_path.text()
+        browser_source = self.ig_browser_combo.currentText()
+        test_url = "https://www.instagram.com/instagram/" # Instagram Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_ig_cookies_btn)
 
     def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):
@@ -682,6 +737,11 @@ class SettingsTab(QWidget):
             self.yt_cookies_path.setText(yt_creds.get('cookie_file', ''))
             self._set_combo_text(self.yt_browser_combo, yt_creds.get('browser', 'None'))
 
+        ig_creds = self.credentials_manager.get_credential('instagram')
+        if ig_creds:
+            self.ig_cookies_path.setText(ig_creds.get('cookie_file', ''))
+            self._set_combo_text(self.ig_browser_combo, ig_creds.get('browser', 'None'))
+
     def _set_combo_text(self, combo, text):
         idx = combo.findText(text)
         if idx >= 0:
@@ -722,6 +782,12 @@ class SettingsTab(QWidget):
             'browser': self.yt_browser_combo.currentText()
         }
         self.credentials_manager.set_credential('youtube', yt_data)
+
+        ig_data = {
+            'cookie_file': self.ig_cookies_path.text(),
+            'browser': self.ig_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('instagram', ig_data)
 
         if success:
             QMessageBox.information(self, "Success", "Settings and Credentials saved successfully!")
