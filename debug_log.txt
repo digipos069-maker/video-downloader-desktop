@@ -9837,3 +9837,102 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 23:16:04,175 - DEBUG - No cookies configured for download.
 2025-12-30 23:16:05,788 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_11399805459024352.txt
 2025-12-30 23:16:05,790 - INFO - Download completed: https://www.pinterest.com/pin/11399805459024352
+2025-12-30 23:17:44,572 - DEBUG - Using proactor: IocpProactor
+2025-12-30 23:17:45,540 - INFO - Playwright visiting: https://www.pinterest.com/pin/291397038406342235
+2025-12-30 23:17:45,540 - INFO - Scraping target limit (max_entries): 15
+2025-12-30 23:17:47,008 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2025-12-30 23:17:47,045 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2025-12-30 23:17:52,895 - DEBUG - Scroll iteration 1 completed
+2025-12-30 23:17:52,939 - INFO - Loop status: Iteration 1, Found 8/15 items (+8 new valid, +33 raw)
+2025-12-30 23:17:58,490 - DEBUG - Scroll iteration 2 completed
+2025-12-30 23:17:58,529 - INFO - Loop status: Iteration 2, Found 22/15 items (+14 new valid, +27 raw)
+2025-12-30 23:17:58,530 - INFO - Scraping loop finished. Found 22 items.
+2025-12-30 23:17:58,530 - INFO - Scraping found 22 unique valid links.
+2025-12-30 23:18:04,897 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/291397038406342235 | Title: Pinterest Download
+2025-12-30 23:18:04,898 - DEBUG - [PinterestHandler] Extracted Pin ID: '291397038406342235'
+2025-12-30 23:18:04,898 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_291397038406342235'
+2025-12-30 23:18:04,898 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/291397038406342235 to E:/mmo/building-page/tree kongdom
+2025-12-30 23:18:04,899 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/173177548167348700 | Title: Pinterest Download
+2025-12-30 23:18:04,900 - DEBUG - [PinterestHandler] Extracted Pin ID: '173177548167348700'
+2025-12-30 23:18:04,900 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/50595195809139833 | Title: Pinterest Download
+2025-12-30 23:18:04,900 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_173177548167348700'
+2025-12-30 23:18:04,900 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/35254809578102479 | Title: Pinterest Download
+2025-12-30 23:18:04,901 - DEBUG - [PinterestHandler] Extracted Pin ID: '50595195809139833'
+2025-12-30 23:18:04,901 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/unlock-your-business-potential-video-in-2025--11399805458249957 | Title: Pinterest Download
+2025-12-30 23:18:04,901 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/847943436093421115 | Title: Pinterest Download
+2025-12-30 23:18:04,901 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/67905906882569080 | Title: Pinterest Download
+2025-12-30 23:18:04,901 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/3448137210416810 | Title: Pinterest Download
+2025-12-30 23:18:04,902 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/173177548167348700 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,902 - DEBUG - [PinterestHandler] Extracted Pin ID: '35254809578102479'
+2025-12-30 23:18:04,902 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_50595195809139833'
+2025-12-30 23:18:04,902 - DEBUG - [PinterestHandler] Extracted Pin ID: 'unlock-your-business-potential-video-in-2025--11399805458249957'
+2025-12-30 23:18:04,902 - DEBUG - [PinterestHandler] Extracted Pin ID: '847943436093421115'
+2025-12-30 23:18:04,903 - DEBUG - [PinterestHandler] Extracted Pin ID: '67905906882569080'
+2025-12-30 23:18:04,903 - DEBUG - [PinterestHandler] Extracted Pin ID: '3448137210416810'
+2025-12-30 23:18:04,903 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_35254809578102479'
+2025-12-30 23:18:04,903 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/50595195809139833 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,904 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_unlock-your-business-potential-video-in-2025--11399805458249957'
+2025-12-30 23:18:04,904 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_847943436093421115'
+2025-12-30 23:18:04,904 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_67905906882569080'
+2025-12-30 23:18:04,904 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_3448137210416810'
+2025-12-30 23:18:04,905 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/35254809578102479 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,905 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/unlock-your-business-potential-video-in-2025--11399805458249957 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,906 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/847943436093421115 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,906 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/67905906882569080 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,907 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3448137210416810 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:04,950 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:04,950 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:04,950 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,049 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,050 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,050 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,115 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,127 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,127 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,232 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,244 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,250 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,279 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,292 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,293 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,293 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,293 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,310 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,392 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,393 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,393 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:05,805 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:05,805 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:05,805 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:06,798 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\Pinterest Download_291397038406342235.txt
+2025-12-30 23:18:06,802 - INFO - Download completed: https://www.pinterest.com/pin/291397038406342235
+2025-12-30 23:18:07,552 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 847943436093421115: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-30 23:18:07,552 - INFO - Standard download failed for https://www.pinterest.com/pin/847943436093421115. Attempting fallback extraction...
+2025-12-30 23:18:07,552 - DEBUG - Using proactor: IocpProactor
+2025-12-30 23:18:08,268 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 67905906882569080: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-30 23:18:08,268 - INFO - Standard download failed for https://www.pinterest.com/pin/67905906882569080. Attempting fallback extraction...
+2025-12-30 23:18:08,269 - DEBUG - Using proactor: IocpProactor
+2025-12-30 23:18:08,576 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/847943436093421115
+2025-12-30 23:18:09,256 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/67905906882569080
+2025-12-30 23:18:09,345 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_unlock-your-business-potential-video-in-2025--11399805458249957.txt
+2025-12-30 23:18:09,348 - INFO - Download completed: https://www.pinterest.com/pin/unlock-your-business-potential-video-in-2025--11399805458249957
+2025-12-30 23:18:09,662 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_50595195809139833.txt
+2025-12-30 23:18:09,666 - INFO - Download completed: https://www.pinterest.com/pin/50595195809139833
+2025-12-30 23:18:11,097 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_3448137210416810.txt
+2025-12-30 23:18:11,099 - INFO - Download completed: https://www.pinterest.com/pin/3448137210416810
+2025-12-30 23:18:11,743 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_35254809578102479.txt
+2025-12-30 23:18:11,747 - INFO - Download completed: https://www.pinterest.com/pin/35254809578102479
+2025-12-30 23:18:12,549 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_173177548167348700.txt
+2025-12-30 23:18:12,551 - INFO - Download completed: https://www.pinterest.com/pin/173177548167348700
+2025-12-30 23:18:24,255 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/10/9c/1f/109c1f537214a36d1c31bee3605c6fdc.m3u8
+2025-12-30 23:18:24,255 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/10/9c/1f/109c1f537214a36d1c31bee3605c6fdc.m3u8 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:24,267 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:24,267 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:24,267 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:25,334 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [generic] 109c1f537214a36d1c31bee3605c6fdc: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-30 23:18:28,448 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/fd/c0/35/fdc03542a53a7c304eedf04b7df95076.m3u8
+2025-12-30 23:18:28,448 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/fd/c0/35/fdc03542a53a7c304eedf04b7df95076.m3u8 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:18:28,463 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:18:28,463 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:18:28,463 - DEBUG - No cookies configured for download.
+2025-12-30 23:18:29,261 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [generic] fdc03542a53a7c304eedf04b7df95076: Requested format is not available. Use --list-formats for a list of available formats

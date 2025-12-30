@@ -184,20 +184,39 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                     () => {
                         const items = Array.from(document.querySelectorAll('a[href]')).map(a => {
                             let t = a.innerText;
-                            // Fallback 1: aria-label (Common on FB/Insta for icon-only links)
-                            if (!t || !t.trim()) t = a.getAttribute('aria-label');
-                            // Fallback 2: Image alt text (Common for thumbnail links)
-                            if (!t || !t.trim()) {
-                                const img = a.querySelector('img');
-                                if (img) t = img.alt;
-                            }
                             
                             // Visual coordinates for sorting
                             const rect = a.getBoundingClientRect();
+                            const container = a.closest('[data-test-id="pin"], .pin, .post, article, [role="link"]');
+
+                            // Filter out generic titles like "Save"
+                            const isGeneric = (str) => {
+                                if (!str) return true;
+                                const s = str.trim().toLowerCase();
+                                return s === 'save' || s === 'visit' || s === 'share' || s === 'more' || s.includes('skip');
+                            };
+
+                            if (isGeneric(t)) {
+                                t = a.getAttribute('aria-label') || a.getAttribute('title');
+                            }
+
+                            // Fallback 2: Image alt text (Common for thumbnail links)
+                            if (isGeneric(t)) {
+                                const img = a.querySelector('img');
+                                if (img) t = img.alt;
+                            }
+
+                            // Fallback 3: Search the whole container for better text
+                            if (isGeneric(t) && container) {
+                                // Look for anything that isn't generic
+                                const texts = Array.from(container.querySelectorAll('h1, h2, h3, [data-test-id="pin-title"], .title'))
+                                    .map(el => el.innerText)
+                                    .filter(txt => !isGeneric(txt));
+                                if (texts.length > 0) t = texts[0];
+                            }
                             
                             // Video Hint: Look for video indicators in the item's container
                             let isVideo = false;
-                            const container = a.closest('[data-test-id="pin"], .pin, .post, article, [role="link"]');
                             if (container) {
                                 if (container.querySelector('video, [aria-label*="video"], [aria-label*="Video"], .video-icon, [data-test-id*="video"]')) {
                                     isVideo = true;
@@ -217,19 +236,26 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                             };
                         });
                         
-                        return items.filter(item => {
-                            if (!item.url || !item.url.startsWith('http')) return false;
-                            if (!item.text) return true; // Allow empty text
-                            const lowText = item.text.toLowerCase();
+                        // Filter and Deduplicate
+                        const unique = new Map();
+                        items.forEach(item => {
+                            if (!item.url || !item.url.startsWith('http')) return;
+                            const lowText = item.text ? item.text.toLowerCase() : "";
                             if (lowText.includes('skip to content') || 
                                 lowText.includes('skip to main') ||
-                                lowText === 'skip') return false;
-                            return true;
-                        }).sort((a, b) => {
+                                lowText === 'skip') return;
+                            
+                            // Normalize URL for deduplication (strip query params)
+                            const cleanUrl = item.url.split('?')[0].replace(/\\/$/, "");
+                            if (!unique.has(cleanUrl)) {
+                                unique.set(cleanUrl, item);
+                            }
+                        });
+
+                        return Array.from(unique.values()).sort((a, b) => {
                             // Sort by top (vertical), then by left (horizontal)
-                            // Masonry feeds have staggered tops, so we use a row threshold (e.g. 100px)
                             const rowDiff = a.top - b.top;
-                            if (Math.abs(rowDiff) > 100) return rowDiff;
+                            if (Math.abs(rowDiff) > 150) return rowDiff;
                             return a.left - b.left;
                         });
                     }
