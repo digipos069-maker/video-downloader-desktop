@@ -8497,3 +8497,218 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 17:06:21,994 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
 2025-12-30 17:06:21,995 - INFO - Scraping loop finished. Found 12 items.
 2025-12-30 17:06:21,995 - INFO - Scraping found 12 unique valid links.
+2025-12-30 17:10:02,007 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:10:10,994 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:10:13,713 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:10:14,621 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:10:14,662 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:10:14,735 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:10:14,735 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 17:10:15,554 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 17:10:15,565 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 17:10:21,183 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:10:21,278 - INFO - Loop status: Iteration 1, Found 24/7 items (+24 new valid, +49 raw)
+2025-12-30 17:10:21,278 - INFO - Scraping loop finished. Found 24 items.
+2025-12-30 17:10:21,278 - INFO - Scraping found 24 unique valid links.
+2025-12-30 17:10:38,838 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS4dWQ8gAIw to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:10:38,842 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DS4gsN_kpLa to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-30 17:10:38,864 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:10:38,864 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:10:38,865 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:10:38,867 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 17:10:38,867 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-30 17:10:38,867 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:10:41,323 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS4gsN_kpLa.txt
+2025-12-30 17:10:41,327 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS4gsN_kpLa
+2025-12-30 17:10:42,533 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DS4dWQ8gAIw.txt
+2025-12-30 17:10:42,536 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DS4dWQ8gAIw
+2025-12-30 17:12:58,414 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:12:59,318 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:12:59,348 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:12:59,414 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:12:59,414 - INFO - Scraping target limit (max_entries): 100
+2025-12-30 17:13:00,142 - INFO - Starting scroll loop. Planned iterations: 7 for max 100 items.
+2025-12-30 17:13:00,161 - INFO - Starting dynamic scroll loop. Target: 100 items.
+2025-12-30 17:13:05,750 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:13:05,822 - INFO - Loop status: Iteration 1, Found 24/100 items (+24 new valid, +49 raw)
+2025-12-30 17:13:11,366 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:13:11,384 - INFO - Loop status: Iteration 2, Found 36/100 items (+12 new valid, +12 raw)
+2025-12-30 17:13:16,931 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:13:16,947 - INFO - Loop status: Iteration 3, Found 38/100 items (+2 new valid, +2 raw)
+2025-12-30 17:13:22,476 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:13:22,486 - INFO - Loop status: Iteration 4, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:28,014 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:13:28,027 - INFO - Loop status: Iteration 5, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:33,556 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:13:33,564 - INFO - Loop status: Iteration 6, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:33,564 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:13:40,616 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:13:40,625 - INFO - Loop status: Iteration 7, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:40,626 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:13:47,681 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:13:47,690 - INFO - Loop status: Iteration 8, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:47,690 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:13:54,727 - DEBUG - Scroll iteration 9 completed
+2025-12-30 17:13:54,739 - INFO - Loop status: Iteration 9, Found 38/100 items (+0 new valid, +0 raw)
+2025-12-30 17:13:54,740 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:13:54,740 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:13:54,740 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:14:17,792 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:14:18,719 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:14:18,750 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:14:18,820 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:14:18,820 - INFO - Scraping target limit (max_entries): 205
+2025-12-30 17:14:19,546 - INFO - Starting scroll loop. Planned iterations: 12 for max 205 items.
+2025-12-30 17:14:19,559 - INFO - Starting dynamic scroll loop. Target: 205 items.
+2025-12-30 17:14:25,156 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:14:25,222 - INFO - Loop status: Iteration 1, Found 24/205 items (+24 new valid, +49 raw)
+2025-12-30 17:14:30,753 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:14:30,771 - INFO - Loop status: Iteration 2, Found 38/205 items (+14 new valid, +14 raw)
+2025-12-30 17:14:36,308 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:14:36,319 - INFO - Loop status: Iteration 3, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:14:41,858 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:14:41,872 - INFO - Loop status: Iteration 4, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:14:47,408 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:14:47,418 - INFO - Loop status: Iteration 5, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:14:47,419 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:14:54,474 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:14:54,486 - INFO - Loop status: Iteration 6, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:14:54,487 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:15:01,555 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:15:01,567 - INFO - Loop status: Iteration 7, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:15:01,568 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:15:08,636 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:15:08,649 - INFO - Loop status: Iteration 8, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:15:08,649 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:15:08,649 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:15:08,649 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:24:19,868 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:24:25,860 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:24:31,973 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:24:32,849 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:24:32,882 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:24:32,953 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:24:32,954 - INFO - Scraping target limit (max_entries): 205
+2025-12-30 17:24:36,544 - INFO - Starting scroll loop. Planned iterations: 12 for max 205 items.
+2025-12-30 17:24:36,563 - INFO - Starting dynamic scroll loop. Target: 205 items.
+2025-12-30 17:24:42,301 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:24:42,375 - INFO - Loop status: Iteration 1, Found 24/205 items (+24 new valid, +49 raw)
+2025-12-30 17:24:47,921 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:24:47,938 - INFO - Loop status: Iteration 2, Found 38/205 items (+14 new valid, +14 raw)
+2025-12-30 17:24:53,469 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:24:53,481 - INFO - Loop status: Iteration 3, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:24:59,017 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:24:59,031 - INFO - Loop status: Iteration 4, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:25:04,567 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:25:04,579 - INFO - Loop status: Iteration 5, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:25:04,579 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:25:11,637 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:25:11,651 - INFO - Loop status: Iteration 6, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:25:11,651 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:25:18,697 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:25:18,710 - INFO - Loop status: Iteration 7, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:25:18,710 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:25:25,770 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:25:25,782 - INFO - Loop status: Iteration 8, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:25:25,783 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:25:25,783 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:25:25,783 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:29:49,540 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:29:50,455 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:29:50,482 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:29:50,545 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:29:50,546 - INFO - Scraping target limit (max_entries): 205
+2025-12-30 17:29:51,522 - INFO - Starting scroll loop. Planned iterations: 12 for max 205 items.
+2025-12-30 17:29:51,673 - INFO - Starting dynamic scroll loop. Target: 205 items.
+2025-12-30 17:29:57,369 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:29:57,403 - INFO - Loop status: Iteration 1, Found 24/205 items (+24 new valid, +49 raw)
+2025-12-30 17:30:02,991 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:30:03,010 - INFO - Loop status: Iteration 2, Found 38/205 items (+14 new valid, +14 raw)
+2025-12-30 17:30:08,541 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:30:08,553 - INFO - Loop status: Iteration 3, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:14,087 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:30:14,101 - INFO - Loop status: Iteration 4, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:18,552 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:30:19,474 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:30:19,519 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:30:19,582 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:30:19,582 - INFO - Scraping target limit (max_entries): 25
+2025-12-30 17:30:19,636 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:30:19,646 - INFO - Loop status: Iteration 5, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:19,646 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:30:20,352 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-30 17:30:20,372 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-30 17:30:25,974 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:30:26,037 - INFO - Loop status: Iteration 1, Found 24/25 items (+24 new valid, +49 raw)
+2025-12-30 17:30:26,687 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:30:26,696 - INFO - Loop status: Iteration 6, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:26,696 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:30:31,567 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:30:31,585 - INFO - Loop status: Iteration 2, Found 36/25 items (+12 new valid, +12 raw)
+2025-12-30 17:30:31,585 - INFO - Scraping loop finished. Found 36 items.
+2025-12-30 17:30:31,585 - INFO - Scraping found 36 unique valid links.
+2025-12-30 17:30:33,767 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:30:33,780 - INFO - Loop status: Iteration 7, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:33,780 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:30:40,836 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:30:40,847 - INFO - Loop status: Iteration 8, Found 38/205 items (+0 new valid, +0 raw)
+2025-12-30 17:30:40,847 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:30:40,847 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:30:40,847 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:43:26,715 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:43:31,445 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 17:43:33,981 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:43:34,929 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:43:34,958 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:43:35,022 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:43:35,022 - INFO - Scraping target limit (max_entries): 25
+2025-12-30 17:43:38,068 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-30 17:43:38,073 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-30 17:43:43,638 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:43:43,730 - INFO - Loop status: Iteration 1, Found 26/25 items (+26 new valid, +49 raw)
+2025-12-30 17:43:43,730 - INFO - Scraping loop finished. Found 26 items.
+2025-12-30 17:43:43,730 - INFO - Scraping found 26 unique valid links.
+2025-12-30 17:44:10,480 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:44:11,434 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:44:11,464 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:44:11,529 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:44:11,529 - INFO - Scraping target limit (max_entries): 25
+2025-12-30 17:44:12,317 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-30 17:44:12,345 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-30 17:44:17,902 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:44:17,978 - INFO - Loop status: Iteration 1, Found 23/25 items (+23 new valid, +46 raw)
+2025-12-30 17:44:23,508 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:44:23,533 - INFO - Loop status: Iteration 2, Found 38/25 items (+15 new valid, +15 raw)
+2025-12-30 17:44:23,533 - INFO - Scraping loop finished. Found 38 items.
+2025-12-30 17:44:23,533 - INFO - Scraping found 38 unique valid links.
+2025-12-30 17:44:46,549 - DEBUG - Using proactor: IocpProactor
+2025-12-30 17:44:47,500 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-30 17:44:47,537 - INFO - Added 11 cookies to browser context.
+2025-12-30 17:44:47,597 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 17:44:47,597 - INFO - Scraping target limit (max_entries): 205
+2025-12-30 17:44:48,394 - INFO - Starting scroll loop. Planned iterations: 12 for max 205 items.
+2025-12-30 17:44:48,402 - INFO - Starting dynamic scroll loop. Target: 205 items.
+2025-12-30 17:44:53,962 - DEBUG - Scroll iteration 1 completed
+2025-12-30 17:44:54,023 - INFO - Loop status: Iteration 1, Found 14/205 items (+14 new valid, +37 raw)
+2025-12-30 17:44:59,570 - DEBUG - Scroll iteration 2 completed
+2025-12-30 17:44:59,596 - INFO - Loop status: Iteration 2, Found 38/205 items (+24 new valid, +24 raw)
+2025-12-30 17:45:05,133 - DEBUG - Scroll iteration 3 completed
+2025-12-30 17:45:05,149 - INFO - Loop status: Iteration 3, Found 40/205 items (+2 new valid, +2 raw)
+2025-12-30 17:45:10,683 - DEBUG - Scroll iteration 4 completed
+2025-12-30 17:45:10,696 - INFO - Loop status: Iteration 4, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:16,233 - DEBUG - Scroll iteration 5 completed
+2025-12-30 17:45:16,246 - INFO - Loop status: Iteration 5, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:21,778 - DEBUG - Scroll iteration 6 completed
+2025-12-30 17:45:21,791 - INFO - Loop status: Iteration 6, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:21,791 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:45:28,849 - DEBUG - Scroll iteration 7 completed
+2025-12-30 17:45:28,858 - INFO - Loop status: Iteration 7, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:28,859 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:45:35,916 - DEBUG - Scroll iteration 8 completed
+2025-12-30 17:45:35,928 - INFO - Loop status: Iteration 8, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:35,929 - INFO - Stuck. Trying random jumps...
+2025-12-30 17:45:42,982 - DEBUG - Scroll iteration 9 completed
+2025-12-30 17:45:42,990 - INFO - Loop status: Iteration 9, Found 40/205 items (+0 new valid, +0 raw)
+2025-12-30 17:45:42,990 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 17:45:42,990 - INFO - Scraping loop finished. Found 40 items.
+2025-12-30 17:45:42,990 - INFO - Scraping found 40 unique valid links.

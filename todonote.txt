@@ -4,3 +4,5 @@
 4. TEST BUTTON DOWNLOAD ALL AND CANCEL ALL
 5. LOGIC CHECK UPDATE 
 6. ADD SETTING (intragram,youtube,pinterest,tiktok)
+7. ADD APP LOGO
+8. IMPLEMEMT LOGIC CHECK UPDATE (build install NSis,nuitka)

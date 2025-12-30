@@ -47,7 +47,7 @@ def is_valid_media_link(href, domain):
     elif 'pinterest.com' in domain:
         return '/pin/' in href
     elif 'instagram.com' in domain:
-        return '/p/' in href or '/reel/' in href
+        return '/p/' in href or '/reel/' in href or '/reels/' in href or '/tv/' in href
     elif 'facebook.com' in domain:
          # Must be a specific video/reel, not just the feed
          # Valid: /watch?v=..., /videos/123..., /reel/123...
@@ -293,8 +293,10 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
 
                     if raw_new_items == 0:
                         stagnant_scrolls += 1
-                        if stagnant_scrolls >= 6: # Increased tolerance
-                            logging.info("Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.")
+                        # If we are far from target, be more persistent
+                        stagnation_limit = 10 if len(results) < max_entries * 0.8 else 6
+                        if stagnant_scrolls >= stagnation_limit:
+                            logging.info(f"Scroll stagnant for {stagnation_limit} iterations. Assuming end of feed.")
                             break
                         
                         # Super aggressive fallback if stuck

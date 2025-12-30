@@ -93,35 +93,47 @@ class ScrapingWorker(QThread):
                         if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
                             is_video = True
                         elif 'instagram' in item_url:
-                            if '/reel/' in item_url or '/tv/' in item_url:
+                            if any(x in item_url for x in ['/reel/', '/reels/', '/tv/']):
                                 is_video = True
                             else:
-                                is_photo = True
+                                is_photo = True # Assume anything else on Instagram is a post/photo
                         elif 'pinterest' in item_url:
                             if video_enabled: is_video = True
                             if photo_enabled: is_photo = True
                     
-                    # Apply Filters
-                    if is_video and not video_enabled:
-                        state['filtered_count'] += 1
-                        return
-                    if is_photo and not photo_enabled:
-                        state['filtered_count'] += 1
-                        return
-                        
+                    print(f"[DEBUG] Initial Classification - is_video: {is_video}, is_photo: {is_photo}")
+                    print(f"[DEBUG] Config - video_enabled: {video_enabled}, photo_enabled: {photo_enabled}, limit_photo: {limit_photo}")
+
+                    # Apply Filters - Robust Logic for Dual Types
+                    passed_video = False
+                    passed_photo = False
+                    
                     if is_video:
-                        if limit_video and state['video_count'] >= video_opts.get('count', 5):
-                            state['filtered_count'] += 1
-                            return
-                        state['video_count'] += 1
-                            
+                        if video_enabled:
+                            if not limit_video or state['video_count'] < video_opts.get('count', 5):
+                                passed_video = True
+                    
                     if is_photo:
-                        if limit_photo and state['photo_count'] >= photo_opts.get('count', 5):
-                            state['filtered_count'] += 1
-                            return
-                        state['photo_count'] += 1
+                        if photo_enabled:
+                            if not limit_photo or state['photo_count'] < photo_opts.get('count', 5):
+                                passed_photo = True
+                    
+                    print(f"[DEBUG] Filter Result - passed_video: {passed_video}, passed_photo: {passed_photo}")
+
+                    if not passed_video and not passed_photo:
+                        state['filtered_count'] += 1
+                        print(f"[DEBUG] Item FILTERED OUT: {item_url}")
+                        return
+                    
+                    if passed_video: state['video_count'] += 1
+                    if passed_photo: state['photo_count'] += 1
+                    
+                    # Update types to reflect what actually passed
+                    is_video = passed_video
+                    is_photo = passed_photo
 
                     metadata['origin_url'] = self.url
+                    print(f"[DEBUG] EMITTING item_found for: {item_url}")
                     self.item_found.emit(item_url, metadata, is_video, is_photo, handler)
                     self.status_update.emit(f"Found {state['items_found_total']} items...")
 
@@ -1023,6 +1035,7 @@ class DownloaderTab(QWidget):
         settings = {}
         if self.settings_tab:
             settings = self.settings_tab.get_settings()
+            print(f"[DEBUG] process_scraping retrieved settings: {settings}")
             
             # --- Inject Platform Credentials for Scraper ---
             # Facebook
@@ -1078,7 +1091,7 @@ class DownloaderTab(QWidget):
     def on_scraping_item_found(self, item_url, metadata, is_video, is_photo, handler):
         """Slot to handle an item found by the scraping worker."""
         try:
-            print(f"[DEBUG] on_scraping_item_found called for: {item_url}")
+            print(f"[DEBUG] on_scraping_item_found RECEIVED for: {item_url} (Video: {is_video}, Photo: {is_photo})")
             
             # Get current settings again for fresh download options if needed, 
             # but mostly we use what was passed to worker or defaults.
@@ -1096,6 +1109,8 @@ class DownloaderTab(QWidget):
                  download_settings['resolution'] = video_opts.get('resolution', "Best Available")
             if is_photo:
                  download_settings['quality'] = photo_opts.get('quality', "Best Available")
+            
+            print(f"[DEBUG] Calculated download_settings: {download_settings}")
             
             # Pass origin URL to settings for folder organization
             if 'origin_url' in metadata:
@@ -1138,6 +1153,7 @@ class DownloaderTab(QWidget):
             
             # Add to UI Table
             row_position_activity = self.activity_table.rowCount()
+            print(f"[DEBUG] Inserting row at {row_position_activity} for {item_url}")
             self.activity_table.insertRow(row_position_activity)
             self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
             self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', '')))
