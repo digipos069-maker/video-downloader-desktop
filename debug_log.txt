@@ -8358,3 +8358,4 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 16:28:31,313 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\growthborntohustle_videos\\u17a2\u17c6\u178e\u17bd\u178f\u1782\u17ba\u1787\u17b6\u179f\u178f\u17d2\u179a\u17bc\u179c Ego is the Enemy!! \uff5c \u1794\u1780\u179f\u17d2\u179a\u17b6\u1799\u179f\u17c0\u179c\u1797\u17c5_mf0m7fROEfs.txt
 2025-12-30 16:28:31,316 - INFO - Download completed: https://www.youtube.com/watch?v=mf0m7fROEfs
 2025-12-30 16:34:28,866 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:37:37,194 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

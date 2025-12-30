@@ -7,7 +7,8 @@ from PySide6.QtWidgets import (
     QCheckBox, QSpinBox, QComboBox, QLabel, QFormLayout, QPushButton, QMessageBox,
     QLineEdit, QFileDialog
 )
-from PySide6.QtCore import Qt, Signal, Slot, QThread
+from PySide6.QtGui import QIcon
+from PySide6.QtCore import Qt, Signal, Slot, QThread, QSize
 import yt_dlp
 import os
 import sys
@@ -18,6 +19,7 @@ import logging
 from app.config.settings_manager import load_settings, save_settings
 from app.config.credentials import CredentialsManager
 from app.platform_handler import extract_metadata_with_playwright
+from app.helpers import resource_path
 
 # --- Styles ---
 VERIFY_BTN_STYLE = """
@@ -332,6 +334,8 @@ class SettingsTab(QWidget):
         cred_layout = QVBoxLayout()
         
         self.credentials_tabs = QTabWidget()
+        self.credentials_tabs.setIconSize(QSize(20, 20))
+        icon_base_path = resource_path("app/resources/images/icons/social/")
         
         # --- Facebook Credentials Tab ---
         facebook_tab = QWidget()
@@ -377,7 +381,7 @@ class SettingsTab(QWidget):
         fb_layout.addLayout(verify_btn_layout)
         
         fb_layout.addStretch()
-        self.credentials_tabs.addTab(facebook_tab, "Facebook")
+        self.credentials_tabs.addTab(facebook_tab, QIcon(icon_base_path + "facebook.png"), "Facebook")
         
         # --- Pinterest Credentials Tab ---
         pinterest_tab = QWidget()
@@ -423,7 +427,7 @@ class SettingsTab(QWidget):
         pin_layout.addLayout(verify_pin_layout)
         
         pin_layout.addStretch()
-        self.credentials_tabs.addTab(pinterest_tab, "Pinterest")
+        self.credentials_tabs.addTab(pinterest_tab, QIcon(icon_base_path + "pinterest.png"), "Pinterest")
 
         # --- TikTok Credentials Tab ---
         tiktok_tab = QWidget()
@@ -469,11 +473,11 @@ class SettingsTab(QWidget):
         tt_layout.addLayout(verify_tt_layout)
         
         tt_layout.addStretch()
-        self.credentials_tabs.addTab(tiktok_tab, "TikTok")
+        self.credentials_tabs.addTab(tiktok_tab, QIcon(icon_base_path + "tik-tok.png"), "TikTok")
         
         # Placeholder Tabs
-        self.credentials_tabs.addTab(QWidget(), "Instagram")
-        self.credentials_tabs.addTab(QWidget(), "YouTube")
+        self.credentials_tabs.addTab(QWidget(), QIcon(icon_base_path + "instagram.png"), "Instagram")
+        self.credentials_tabs.addTab(QWidget(), QIcon(icon_base_path + "youtube.png"), "YouTube")
         
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
