@@ -8220,3 +8220,140 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 16:15:57,867 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:17:06,627 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 16:17:09,349 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:18:24,942 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:20:10,457 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:20:33,671 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:20:34,858 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 16:20:34,919 - INFO - Added 12 cookies to browser context.
+2025-12-30 16:20:35,205 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61550324528480
+2025-12-30 16:20:35,206 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 16:20:39,114 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 16:20:39,145 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 16:20:45,299 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:20:45,443 - INFO - Loop status: Iteration 1, Found 3/7 items (+3 new valid, +58 raw)
+2025-12-30 16:20:51,061 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:20:51,126 - INFO - Loop status: Iteration 2, Found 5/7 items (+2 new valid, +31 raw)
+2025-12-30 16:20:56,694 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:20:56,808 - INFO - Loop status: Iteration 3, Found 6/7 items (+1 new valid, +35 raw)
+2025-12-30 16:21:02,419 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:21:02,508 - INFO - Loop status: Iteration 4, Found 8/7 items (+2 new valid, +36 raw)
+2025-12-30 16:21:02,508 - INFO - Scraping loop finished. Found 8 items.
+2025-12-30 16:21:02,508 - INFO - Scraping found 8 unique valid links.
+2025-12-30 16:22:24,941 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:22:26,956 - INFO - Attempting metadata extraction with yt-dlp for: https://www.youtube.com/@growthborntohustle/videos
+2025-12-30 16:22:26,956 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2025-12-30 16:22:26,957 - DEBUG - No cookies configured for metadata extraction.
+2025-12-30 16:22:28,875 - INFO - yt-dlp found 7 entries.
+2025-12-30 16:23:16,888 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=798Dhq0t1pM to E:/mmo/building-page/tree kongdom\growthborntohustle_videos
+2025-12-30 16:23:16,907 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:23:16,907 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 16:23:16,908 - DEBUG - No cookies configured for download.
+2025-12-30 16:23:39,609 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\growthborntohustle_videos\\u1787\u17c6\u1793\u17b6\u1789\u178a\u17c2\u179b\u179b\u17d2\u17a2\u1794\u17c6\u1795\u17bb\u178f\u1798\u1793\u17bb\u179f\u17d2\u179f\u1798\u17d2\u1793\u17b6\u1780\u17cb\u17a2\u17b6\u1785\u179a\u17c0\u1793\u1794\u17b6\u1793 Emotional Regulation!!_798Dhq0t1pM.txt
+2025-12-30 16:23:39,611 - INFO - Download completed: https://www.youtube.com/watch?v=798Dhq0t1pM
+2025-12-30 16:24:24,753 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 16:24:28,063 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:24:29,103 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:24:29,103 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 16:24:29,876 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 16:24:29,886 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 16:24:35,466 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:24:35,478 - INFO - Loop status: Iteration 1, Found 0/7 items (+0 new valid, +16 raw)
+2025-12-30 16:24:41,015 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:24:41,025 - INFO - Loop status: Iteration 2, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:24:46,558 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:24:46,564 - INFO - Loop status: Iteration 3, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:24:48,618 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:24:49,625 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:24:49,625 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 16:24:50,389 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 16:24:50,394 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 16:24:52,094 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:24:52,103 - INFO - Loop status: Iteration 4, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:24:52,104 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:24:55,956 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:24:55,966 - INFO - Loop status: Iteration 1, Found 0/7 items (+0 new valid, +16 raw)
+2025-12-30 16:24:59,175 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:24:59,183 - INFO - Loop status: Iteration 5, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:24:59,183 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:25:01,509 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:25:01,519 - INFO - Loop status: Iteration 2, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:06,243 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:25:06,250 - INFO - Loop status: Iteration 6, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:06,250 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:25:07,060 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:25:07,068 - INFO - Loop status: Iteration 3, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:12,611 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:25:12,620 - INFO - Loop status: Iteration 4, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:12,621 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:25:13,308 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:25:13,314 - INFO - Loop status: Iteration 7, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:13,314 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:25:13,314 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:25:13,314 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:25:13,314 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 16:25:19,678 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:25:19,687 - INFO - Loop status: Iteration 5, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:19,687 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:25:26,743 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:25:26,752 - INFO - Loop status: Iteration 6, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:26,752 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:25:33,807 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:25:33,816 - INFO - Loop status: Iteration 7, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:25:33,816 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:25:33,816 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:25:33,817 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:25:33,817 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 16:26:28,775 - DEBUG - Using proactor: IocpProactor
+2025-12-30 16:26:29,782 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:26:29,782 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 16:26:30,589 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 16:26:30,607 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 16:26:36,152 - DEBUG - Scroll iteration 1 completed
+2025-12-30 16:26:36,165 - INFO - Loop status: Iteration 1, Found 0/7 items (+0 new valid, +18 raw)
+2025-12-30 16:26:41,705 - DEBUG - Scroll iteration 2 completed
+2025-12-30 16:26:41,713 - INFO - Loop status: Iteration 2, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:26:47,255 - DEBUG - Scroll iteration 3 completed
+2025-12-30 16:26:47,264 - INFO - Loop status: Iteration 3, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:26:52,796 - DEBUG - Scroll iteration 4 completed
+2025-12-30 16:26:52,805 - INFO - Loop status: Iteration 4, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:26:52,805 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:26:59,871 - DEBUG - Scroll iteration 5 completed
+2025-12-30 16:26:59,895 - INFO - Loop status: Iteration 5, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:26:59,895 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:27:06,955 - DEBUG - Scroll iteration 6 completed
+2025-12-30 16:27:06,964 - INFO - Loop status: Iteration 6, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:27:06,964 - INFO - Stuck. Trying random jumps...
+2025-12-30 16:27:14,022 - DEBUG - Scroll iteration 7 completed
+2025-12-30 16:27:14,031 - INFO - Loop status: Iteration 7, Found 0/7 items (+0 new valid, +0 raw)
+2025-12-30 16:27:14,031 - INFO - Scroll stagnant for 6 iterations (no new links of any kind). Assuming end of feed.
+2025-12-30 16:27:14,031 - INFO - Scraping loop finished. Found 0 items.
+2025-12-30 16:27:14,031 - INFO - Scraping found 0 unique valid links.
+2025-12-30 16:27:14,031 - WARNING - No links found after scraping loop. Returning page fallback.
+2025-12-30 16:28:10,140 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=mf0m7fROEfs to E:/mmo/building-page/tree kongdom\growthborntohustle_videos
+2025-12-30 16:28:10,140 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reels/ to E:/mmo/building-page/tree kongdom
+2025-12-30 16:28:10,141 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1247618596887889 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-30 16:28:10,141 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reels/ to E:/mmo/building-page/tree kongdom
+2025-12-30 16:28:10,142 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1817245515487209 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-30 16:28:10,168 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:28:10,169 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 16:28:10,169 - DEBUG - No cookies configured for download.
+2025-12-30 16:28:10,269 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:28:10,281 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 16:28:10,281 - DEBUG - No cookies configured for download.
+2025-12-30 16:28:10,285 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:28:10,286 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-30 16:28:10,303 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 16:28:10,350 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:28:10,368 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-30 16:28:10,385 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 16:28:10,505 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 16:28:10,534 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 16:28:10,551 - DEBUG - No cookies configured for download.
+2025-12-30 16:28:15,264 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_1817245515487209.txt
+2025-12-30 16:28:15,267 - INFO - Download completed: https://www.facebook.com/reel/1817245515487209
+2025-12-30 16:28:16,617 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:28:16,621 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.instagram.com/long_manin/reels/
+2025-12-30 16:28:16,658 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_1247618596887889.txt
+2025-12-30 16:28:16,661 - INFO - Download completed: https://www.facebook.com/reel/1247618596887889
+2025-12-30 16:28:31,313 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\growthborntohustle_videos\\u17a2\u17c6\u178e\u17bd\u178f\u1782\u17ba\u1787\u17b6\u179f\u178f\u17d2\u179a\u17bc\u179c Ego is the Enemy!! \uff5c \u1794\u1780\u179f\u17d2\u179a\u17b6\u1799\u179f\u17c0\u179c\u1797\u17c5_mf0m7fROEfs.txt
+2025-12-30 16:28:31,316 - INFO - Download completed: https://www.youtube.com/watch?v=mf0m7fROEfs

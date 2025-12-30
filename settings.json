@@ -2,13 +2,13 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 500,
+        "count": 2,
         "all": false,
         "resolution": "Best Available"
     },
     "photo": {
-        "enabled": true,
-        "top": true,
+        "enabled": false,
+        "top": false,
         "count": 2,
         "all": false,
         "quality": "Best Available"

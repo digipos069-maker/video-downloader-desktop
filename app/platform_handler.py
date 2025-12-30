@@ -451,9 +451,29 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         # Original Name
         outtmpl = f'{output_path}/%(title)s.%(ext)s'
 
+    def ydl_progress_hook(d):
+        if d['status'] == 'downloading':
+            try:
+                total = d.get('total_bytes')
+                if total is None:
+                    total = d.get('total_bytes_estimate')
+                
+                downloaded = d.get('downloaded_bytes', 0)
+                
+                if total and total > 0:
+                    percent = (downloaded / total) * 100
+                else:
+                    percent = 0
+                
+                # Clamp between 0 and 100 and ensure integer
+                safe_percent = max(0, min(100, int(percent)))
+                progress_callback(safe_percent)
+            except Exception as e:
+                logging.error(f"Progress calculation error: {e}")
+
     ydl_opts = {
         'outtmpl': outtmpl,
-        'progress_hooks': [lambda d: progress_callback(int(float(d.get('downloaded_bytes', 0)) / float(d.get('total_bytes', 1)) * 100)) if d['status'] == 'downloading' else None],
+        'progress_hooks': [ydl_progress_hook],
         'quiet': True,
         'no_warnings': True,
         'noplaylist': True, 
