@@ -417,7 +417,7 @@ class DownloaderTab(QWidget):
         self.content_splitter.setHandleWidth(8)
         self.content_splitter.setStyleSheet("""
             QSplitter::handle {
-                background-color: #000000;
+                background-color: #101014;
             }
             QSplitter::handle:hover {
                 background-color: #3B82F6;
