@@ -1179,7 +1179,12 @@ class DownloaderTab(QWidget):
             self.activity_table.insertRow(row_position_activity)
             self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
             self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', '')))
-            self.activity_table.setItem(row_position_activity, 2, QTableWidgetItem(item_url))
+            
+            url_widget = QTableWidgetItem(item_url)
+            if 'origin_url' in metadata:
+                url_widget.setData(Qt.UserRole, metadata['origin_url'])
+            self.activity_table.setItem(row_position_activity, 2, url_widget)
+            
             self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
             self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
             self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
@@ -1251,10 +1256,19 @@ class DownloaderTab(QWidget):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
         
+        selected_items = self.activity_table.selectedItems()
+        selected_rows = set(item.row() for item in selected_items)
+        
         select_all_action = menu.addAction("Select All")
         select_all_action.triggered.connect(self.select_all_activity_items)
         
         menu.addSeparator()
+
+        # Add "Open Folder" only if exactly one item is selected
+        if len(selected_rows) == 1:
+            open_folder_action = menu.addAction("📁 Open Folder")
+            open_folder_action.triggered.connect(self.open_selected_item_folder)
+            menu.addSeparator()
         
         download_action = menu.addAction("Download Selected")
         download_action.triggered.connect(self.download_selected_activity_items)
@@ -1359,6 +1373,65 @@ class DownloaderTab(QWidget):
                 self.start_timer()
                 
             self.downloader.process_queue()
+
+    def open_selected_item_folder(self):
+        """Opens the folder containing the selected item in the OS file explorer."""
+        import os
+        import subprocess
+        import sys
+
+        selected_items = self.activity_table.selectedItems()
+        if not selected_items:
+            return
+        
+        row = selected_items[0].row()
+        url_item = self.activity_table.item(row, 2) # URL is in column 2
+        type_item = self.activity_table.item(row, 4) # Type is in column 4
+        
+        if not url_item or not type_item:
+            return
+            
+        url = url_item.text()
+        is_video = "Video" in type_item.text()
+        origin_url = url_item.data(Qt.UserRole) # We will store origin_url in UserRole
+        
+        # Determine base path
+        base_path = self.video_download_path if is_video else self.photo_download_path
+        if not base_path:
+            # Fallback to the other path if one is missing, then to current dir
+            base_path = self.photo_download_path if is_video else self.video_download_path
+        if not base_path:
+            base_path = "."
+
+        # Reconstruct path using handler logic
+        handler = self.platform_handler_factory.get_handler(url)
+        if handler:
+            settings = {
+                'video_path': self.video_download_path,
+                'photo_path': self.photo_download_path,
+                'origin_url': origin_url
+            }
+            target_folder = handler.get_download_path(settings, is_video=is_video, item_url=url)
+        else:
+            target_folder = base_path
+
+        # Create path if it doesn't exist (optional, but avoids explorer errors)
+        if not os.path.exists(target_folder):
+            try:
+                os.makedirs(target_folder, exist_ok=True)
+            except Exception:
+                target_folder = base_path # Fallback to base
+
+        # Open in explorer
+        try:
+            if sys.platform == 'win32':
+                os.startfile(os.path.abspath(target_folder))
+            elif sys.platform == 'darwin': # macOS
+                subprocess.run(['open', target_folder])
+            else: # Linux
+                subprocess.run(['xdg-open', target_folder])
+        except Exception as e:
+            self.status_message.emit(f"Could not open folder: {e}")
 
     def delete_selected_activity_item(self):
         """Removes the selected row from the activity table."""
