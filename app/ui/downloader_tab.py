@@ -93,7 +93,10 @@ class ScrapingWorker(QThread):
                         if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
                             is_video = True
                         elif 'instagram' in item_url:
-                            is_photo = True
+                            if '/reel/' in item_url or '/tv/' in item_url:
+                                is_video = True
+                            else:
+                                is_photo = True
                         elif 'pinterest' in item_url:
                             if video_enabled: is_video = True
                             if photo_enabled: is_photo = True
