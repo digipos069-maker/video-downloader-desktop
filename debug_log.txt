@@ -9522,3 +9522,46 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 22:31:49,243 - INFO - Loop status: Iteration 7, Found 7/7 items (+1 new valid, +34 raw)
 2025-12-30 22:31:49,243 - INFO - Scraping loop finished. Found 7 items.
 2025-12-30 22:31:49,244 - INFO - Scraping found 7 unique valid links.
+2025-12-30 22:35:03,852 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:35:11,116 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:35:18,433 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:35:19,315 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 22:35:19,343 - INFO - Added 12 cookies to browser context.
+2025-12-30 22:35:19,406 - INFO - Playwright visiting: https://www.facebook.com/samkok2010hd
+2025-12-30 22:35:19,406 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:35:22,562 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:35:22,578 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:35:28,260 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:35:28,364 - INFO - Loop status: Iteration 1, Found 3/7 items (+3 new valid, +66 raw)
+2025-12-30 22:35:33,920 - DEBUG - Scroll iteration 2 completed
+2025-12-30 22:35:33,993 - INFO - Loop status: Iteration 2, Found 3/7 items (+0 new valid, +30 raw)
+2025-12-30 22:35:39,609 - DEBUG - Scroll iteration 3 completed
+2025-12-30 22:35:39,699 - INFO - Loop status: Iteration 3, Found 3/7 items (+0 new valid, +27 raw)
+2025-12-30 22:35:45,248 - DEBUG - Scroll iteration 4 completed
+2025-12-30 22:35:45,337 - INFO - Loop status: Iteration 4, Found 4/7 items (+1 new valid, +47 raw)
+2025-12-30 22:35:49,016 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/733562346033625 to E:/mmo/building-page/tree kongdom\samkok2010hd
+2025-12-30 22:35:49,016 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1397465965389567 to E:/mmo/building-page/tree kongdom\samkok2010hd
+2025-12-30 22:35:49,028 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 22:35:49,028 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 22:35:49,028 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-30 22:35:49,028 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-30 22:35:49,029 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 22:35:49,029 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-30 22:35:51,068 - DEBUG - Scroll iteration 5 completed
+2025-12-30 22:35:51,133 - INFO - Loop status: Iteration 5, Found 5/7 items (+1 new valid, +42 raw)
+2025-12-30 22:35:52,572 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\samkok2010hd\\u179b\u17b8\u179c\u1794\u17c9\u17b8\u1793\u17c5\u1796\u17c1\u179b\u1791\u1791\u17bd\u179b\u1794\u17b6\u1793 \u1785\u17b6\u179c\u1787\u17ba\u17a1\u17bb\u1784_1397465965389567.txt
+2025-12-30 22:35:52,575 - INFO - Download completed: https://www.facebook.com/reel/1397465965389567
+2025-12-30 22:35:56,688 - DEBUG - Scroll iteration 6 completed
+2025-12-30 22:35:56,767 - INFO - Loop status: Iteration 6, Found 5/7 items (+0 new valid, +48 raw)
+2025-12-30 22:35:59,428 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\samkok2010hd\\u1790\u17b6\u179c\u1788\u17b6\u1793\u1791\u1791\u17bd\u179b\u179f\u17d2\u1782\u17b6\u179b\u17cb\u1790\u17b6\u1781\u17d2\u179b\u17bd\u1793\u1781\u17d2\u179f\u17c4\u1799_733562346033625.txt
+2025-12-30 22:35:59,430 - INFO - Download completed: https://www.facebook.com/reel/733562346033625
+2025-12-30 22:36:02,328 - DEBUG - Scroll iteration 7 completed
+2025-12-30 22:36:02,419 - INFO - Loop status: Iteration 7, Found 6/7 items (+1 new valid, +37 raw)
+2025-12-30 22:36:07,998 - DEBUG - Scroll iteration 8 completed
+2025-12-30 22:36:08,078 - INFO - Loop status: Iteration 8, Found 6/7 items (+0 new valid, +32 raw)
+2025-12-30 22:36:13,634 - DEBUG - Scroll iteration 9 completed
+2025-12-30 22:36:13,704 - INFO - Loop status: Iteration 9, Found 6/7 items (+0 new valid, +23 raw)
+2025-12-30 22:36:19,471 - DEBUG - Scroll iteration 10 completed
+2025-12-30 22:36:19,543 - INFO - Loop status: Iteration 10, Found 8/7 items (+2 new valid, +27 raw)
+2025-12-30 22:36:19,543 - INFO - Scraping loop finished. Found 8 items.
+2025-12-30 22:36:19,543 - INFO - Scraping found 8 unique valid links.

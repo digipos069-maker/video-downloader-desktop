@@ -1239,15 +1239,15 @@ class DownloaderTab(QWidget):
     def open_queue_context_menu(self, position):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
-        scrap_action = menu.addAction("Scrap")
+        scrap_action = menu.addAction("🔍 Scrap Now")
         scrap_action.triggered.connect(self.scrap_selected_queue_item)
         
-        copy_action = menu.addAction("Copy")
+        copy_action = menu.addAction("📋 Copy URL")
         copy_action.triggered.connect(self.copy_selected_queue_urls)
 
         menu.addSeparator()
         
-        delete_action = menu.addAction("Delete")
+        delete_action = menu.addAction("🗑️ Delete")
         delete_action.triggered.connect(self.delete_selected_queue_item)
         
         menu.exec(self.queue_table_widget.viewport().mapToGlobal(position))
@@ -1259,7 +1259,7 @@ class DownloaderTab(QWidget):
         selected_items = self.activity_table.selectedItems()
         selected_rows = set(item.row() for item in selected_items)
         
-        select_all_action = menu.addAction("Select All")
+        select_all_action = menu.addAction("✅ Select All")
         select_all_action.triggered.connect(self.select_all_activity_items)
         
         menu.addSeparator()
@@ -1270,12 +1270,12 @@ class DownloaderTab(QWidget):
             open_folder_action.triggered.connect(self.open_selected_item_folder)
             menu.addSeparator()
         
-        download_action = menu.addAction("Download Selected")
+        download_action = menu.addAction("⬇️ Download Selected")
         download_action.triggered.connect(self.download_selected_activity_items)
         
         menu.addSeparator()
         
-        delete_action = menu.addAction("Remove Row")
+        delete_action = menu.addAction("❌ Remove Row")
         delete_action.triggered.connect(self.delete_selected_activity_item)
         
         menu.exec(self.activity_table.viewport().mapToGlobal(position))
