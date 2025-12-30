@@ -8908,3 +8908,387 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 18:01:05,947 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 18:01:07,145 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2025-12-30 18:01:25,243 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 18:13:54,420 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 21:56:09,792 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 21:56:11,662 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:12,647 - INFO - Playwright visiting: https://www.pinterest.com/pin/492649954570929/
+2025-12-30 21:56:12,647 - INFO - Scraping target limit (max_entries): 25
+2025-12-30 21:56:16,345 - INFO - Starting scroll loop. Planned iterations: 5 for max 25 items.
+2025-12-30 21:56:16,369 - INFO - Starting dynamic scroll loop. Target: 25 items.
+2025-12-30 21:56:22,008 - DEBUG - Scroll iteration 1 completed
+2025-12-30 21:56:22,049 - INFO - Loop status: Iteration 1, Found 19/25 items (+19 new valid, +90 raw)
+2025-12-30 21:56:27,749 - DEBUG - Scroll iteration 2 completed
+2025-12-30 21:56:27,852 - INFO - Loop status: Iteration 2, Found 40/25 items (+21 new valid, +41 raw)
+2025-12-30 21:56:27,852 - INFO - Scraping loop finished. Found 40 items.
+2025-12-30 21:56:27,852 - INFO - Scraping found 40 unique valid links.
+2025-12-30 21:56:34,287 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/492649954570929 | Title: Pinterest Download
+2025-12-30 21:56:34,287 - DEBUG - [PinterestHandler] Extracted Pin ID: '492649954570929'
+2025-12-30 21:56:34,287 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_492649954570929'
+2025-12-30 21:56:34,287 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/492649954570929 to E:/mmo/building-page/tree kongdom
+2025-12-30 21:56:34,290 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1407443630408600 | Title: Pinterest Download
+2025-12-30 21:56:34,290 - DEBUG - [PinterestHandler] Extracted Pin ID: '1407443630408600'
+2025-12-30 21:56:34,290 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1407443630408600'
+2025-12-30 21:56:34,291 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/492649954577832 | Title: Pinterest Download
+2025-12-30 21:56:34,291 - DEBUG - [PinterestHandler] Extracted Pin ID: '492649954577832'
+2025-12-30 21:56:34,291 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/13933080092781590 | Title: Pinterest Download
+2025-12-30 21:56:34,291 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/2885187257970718 | Title: Pinterest Download
+2025-12-30 21:56:34,291 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_492649954577832'
+2025-12-30 21:56:34,292 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/2674081025823309 | Title: Pinterest Download
+2025-12-30 21:56:34,292 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/3659243441533709 | Title: Pinterest Download
+2025-12-30 21:56:34,292 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1337074889855477 | Title: Pinterest Download
+2025-12-30 21:56:34,292 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1407443630429148 | Title: Pinterest Download
+2025-12-30 21:56:34,293 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/4574037118084862 | Title: Pinterest Download
+2025-12-30 21:56:34,293 - DEBUG - [PinterestHandler] Extracted Pin ID: '13933080092781590'
+2025-12-30 21:56:34,293 - DEBUG - [PinterestHandler] Extracted Pin ID: '2885187257970718'
+2025-12-30 21:56:34,294 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/492649954577832 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,294 - DEBUG - [PinterestHandler] Extracted Pin ID: '2674081025823309'
+2025-12-30 21:56:34,295 - DEBUG - [PinterestHandler] Extracted Pin ID: '3659243441533709'
+2025-12-30 21:56:34,295 - DEBUG - [PinterestHandler] Extracted Pin ID: '1337074889855477'
+2025-12-30 21:56:34,295 - DEBUG - [PinterestHandler] Extracted Pin ID: '1407443630429148'
+2025-12-30 21:56:34,296 - DEBUG - [PinterestHandler] Extracted Pin ID: '4574037118084862'
+2025-12-30 21:56:34,296 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_13933080092781590'
+2025-12-30 21:56:34,296 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1407443630408600 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,296 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_2885187257970718'
+2025-12-30 21:56:34,297 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_2674081025823309'
+2025-12-30 21:56:34,297 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_3659243441533709'
+2025-12-30 21:56:34,297 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1337074889855477'
+2025-12-30 21:56:34,297 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1407443630429148'
+2025-12-30 21:56:34,298 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_4574037118084862'
+2025-12-30 21:56:34,298 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/13933080092781590 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,298 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/2885187257970718 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,299 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/2674081025823309 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,299 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3659243441533709 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,299 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1337074889855477 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,300 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1407443630429148 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,300 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/4574037118084862 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:34,332 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,333 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,333 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,355 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,355 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,356 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,357 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,357 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,358 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,358 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,359 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,359 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,359 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,359 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,359 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,360 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,360 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,360 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,360 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,360 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,361 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,361 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,361 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,361 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,362 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,362 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,362 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:34,363 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:34,363 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:34,363 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:39,969 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 13933080092781590: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:39,969 - INFO - Standard download failed for https://www.pinterest.com/pin/13933080092781590. Attempting fallback extraction...
+2025-12-30 21:56:39,969 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:39,973 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 3659243441533709: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:39,973 - INFO - Standard download failed for https://www.pinterest.com/pin/3659243441533709. Attempting fallback extraction...
+2025-12-30 21:56:39,973 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:39,989 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 2674081025823309: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:39,994 - INFO - Standard download failed for https://www.pinterest.com/pin/2674081025823309. Attempting fallback extraction...
+2025-12-30 21:56:39,994 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,012 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 492649954577832: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,012 - INFO - Standard download failed for https://www.pinterest.com/pin/492649954577832. Attempting fallback extraction...
+2025-12-30 21:56:40,016 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 1407443630429148: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,016 - INFO - Standard download failed for https://www.pinterest.com/pin/1407443630429148. Attempting fallback extraction...
+2025-12-30 21:56:40,016 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,016 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,019 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 1407443630408600: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,022 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 492649954570929: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,035 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 2885187257970718: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,036 - INFO - Standard download failed for https://www.pinterest.com/pin/1407443630408600. Attempting fallback extraction...
+2025-12-30 21:56:40,037 - INFO - Standard download failed for https://www.pinterest.com/pin/492649954570929. Attempting fallback extraction...
+2025-12-30 21:56:40,037 - INFO - Standard download failed for https://www.pinterest.com/pin/2885187257970718. Attempting fallback extraction...
+2025-12-30 21:56:40,040 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 4574037118084862: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,040 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,041 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,042 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,044 - INFO - Standard download failed for https://www.pinterest.com/pin/4574037118084862. Attempting fallback extraction...
+2025-12-30 21:56:40,049 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:40,151 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 1337074889855477: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:40,151 - INFO - Standard download failed for https://www.pinterest.com/pin/1337074889855477. Attempting fallback extraction...
+2025-12-30 21:56:40,152 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:41,177 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/13933080092781590
+2025-12-30 21:56:41,178 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/2885187257970718
+2025-12-30 21:56:41,179 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3659243441533709
+2025-12-30 21:56:41,260 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/4574037118084862
+2025-12-30 21:56:41,261 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1407443630408600
+2025-12-30 21:56:41,289 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/492649954570929
+2025-12-30 21:56:41,289 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/492649954577832
+2025-12-30 21:56:41,290 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1407443630429148
+2025-12-30 21:56:41,290 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/2674081025823309
+2025-12-30 21:56:41,344 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1337074889855477
+2025-12-30 21:56:47,218 - INFO - Video extraction failed for https://www.pinterest.com/pin/1407443630429148. Checking for image...
+2025-12-30 21:56:47,218 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:47,232 - INFO - Video extraction failed for https://www.pinterest.com/pin/492649954570929. Checking for image...
+2025-12-30 21:56:47,233 - INFO - Video extraction failed for https://www.pinterest.com/pin/492649954577832. Checking for image...
+2025-12-30 21:56:47,233 - INFO - Video extraction failed for https://www.pinterest.com/pin/1337074889855477. Checking for image...
+2025-12-30 21:56:47,233 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:47,233 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:47,233 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:47,234 - INFO - Video extraction failed for https://www.pinterest.com/pin/2674081025823309. Checking for image...
+2025-12-30 21:56:47,234 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:48,329 - INFO - Video extraction failed for https://www.pinterest.com/pin/3659243441533709. Checking for image...
+2025-12-30 21:56:48,329 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:48,614 - INFO - Video extraction failed for https://www.pinterest.com/pin/13933080092781590. Checking for image...
+2025-12-30 21:56:48,615 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:49,887 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1337074889855477
+2025-12-30 21:56:49,977 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/2674081025823309
+2025-12-30 21:56:50,003 - INFO - Video extraction failed for https://www.pinterest.com/pin/1407443630408600. Checking for image...
+2025-12-30 21:56:50,004 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:50,208 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/492649954570929
+2025-12-30 21:56:50,302 - INFO - Video extraction failed for https://www.pinterest.com/pin/2885187257970718. Checking for image...
+2025-12-30 21:56:50,302 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:50,334 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1407443630429148
+2025-12-30 21:56:50,556 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/492649954577832
+2025-12-30 21:56:51,115 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/3659243441533709
+2025-12-30 21:56:51,185 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/13933080092781590
+2025-12-30 21:56:51,617 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1407443630408600
+2025-12-30 21:56:51,659 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/2885187257970718
+2025-12-30 21:56:51,762 - INFO - Found direct image URL: https://i.pinimg.com/736x/7f/15/80/7f15803cc853142af8b4f0c75c33c65f.jpg
+2025-12-30 21:56:51,762 - INFO - Starting direct download for https://i.pinimg.com/736x/7f/15/80/7f15803cc853142af8b4f0c75c33c65f.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:55,057 - INFO - Found direct image URL: https://i.pinimg.com/736x/d7/b0/32/d7b0325c6099e2a584349b0bd65c8b70.jpg
+2025-12-30 21:56:55,057 - INFO - Starting direct download for https://i.pinimg.com/736x/d7/b0/32/d7b0325c6099e2a584349b0bd65c8b70.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:55,074 - INFO - Found direct image URL: https://i.pinimg.com/736x/96/31/45/963145dd6ae8c93be67198935229eed4.jpg
+2025-12-30 21:56:55,074 - INFO - Starting direct download for https://i.pinimg.com/736x/96/31/45/963145dd6ae8c93be67198935229eed4.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:55,200 - INFO - Video extraction failed for https://www.pinterest.com/pin/4574037118084862. Checking for image...
+2025-12-30 21:56:55,200 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:55,344 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download1407443630429148.txt
+2025-12-30 21:56:55,344 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download1407443630429148.jpg
+2025-12-30 21:56:55,346 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/24910604185799734 | Title: Pinterest Download
+2025-12-30 21:56:55,346 - DEBUG - [PinterestHandler] Extracted Pin ID: '24910604185799734'
+2025-12-30 21:56:55,346 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_24910604185799734'
+2025-12-30 21:56:55,346 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/24910604185799734 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:55,349 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download2674081025823309.txt
+2025-12-30 21:56:55,349 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download2674081025823309.jpg
+2025-12-30 21:56:55,351 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/774124930973902 | Title: Pinterest Download
+2025-12-30 21:56:55,351 - DEBUG - [PinterestHandler] Extracted Pin ID: '774124930973902'
+2025-12-30 21:56:55,351 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_774124930973902'
+2025-12-30 21:56:55,351 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/774124930973902 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:55,359 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:55,359 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:55,359 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:55,459 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:55,459 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:55,459 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:55,707 - INFO - Found direct image URL: https://i.pinimg.com/736x/0d/b2/d2/0db2d2f741b54f38cd76d6af9eb85ead.jpg
+2025-12-30 21:56:55,707 - INFO - Starting direct download for https://i.pinimg.com/736x/0d/b2/d2/0db2d2f741b54f38cd76d6af9eb85ead.jpg to E:/test
+2025-12-30 21:56:56,005 - INFO - Found direct image URL: https://i.pinimg.com/736x/fc/e9/30/fce930581a6024dc6a2e916a62189ed3.jpg
+2025-12-30 21:56:56,005 - INFO - Starting direct download for https://i.pinimg.com/736x/fc/e9/30/fce930581a6024dc6a2e916a62189ed3.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:56,111 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download3659243441533709.txt
+2025-12-30 21:56:56,111 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download3659243441533709.jpg
+2025-12-30 21:56:56,135 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/3237030978606861 | Title: Pinterest Download
+2025-12-30 21:56:56,136 - DEBUG - [PinterestHandler] Extracted Pin ID: '3237030978606861'
+2025-12-30 21:56:56,136 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_3237030978606861'
+2025-12-30 21:56:56,136 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/3237030978606861 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:56,145 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:56,145 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:56,145 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:56,202 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/4574037118084862
+2025-12-30 21:56:56,255 - INFO - Caption saved to: E:/test\Pinterest Download492649954570929.txt
+2025-12-30 21:56:56,256 - INFO - Direct download completed: E:/test\Pinterest Download492649954570929.jpg
+2025-12-30 21:56:56,257 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1970393583956450 | Title: Pinterest Download
+2025-12-30 21:56:56,258 - DEBUG - [PinterestHandler] Extracted Pin ID: '1970393583956450'
+2025-12-30 21:56:56,258 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1970393583956450'
+2025-12-30 21:56:56,258 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1970393583956450 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:56,273 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:56,273 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:56,273 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:56,532 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 24910604185799734: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:56,532 - INFO - Standard download failed for https://www.pinterest.com/pin/24910604185799734. Attempting fallback extraction...
+2025-12-30 21:56:56,532 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:56,911 - INFO - Found direct image URL: https://i.pinimg.com/736x/1c/c9/b2/1cc9b2707ca2b083bbfc59dfd4f615b0.jpg
+2025-12-30 21:56:56,911 - INFO - Starting direct download for https://i.pinimg.com/736x/1c/c9/b2/1cc9b2707ca2b083bbfc59dfd4f615b0.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:57,028 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download1407443630408600.txt
+2025-12-30 21:56:57,028 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download1407443630408600.jpg
+2025-12-30 21:56:57,033 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/68749206345 | Title: Pinterest Download
+2025-12-30 21:56:57,033 - DEBUG - [PinterestHandler] Extracted Pin ID: '68749206345'
+2025-12-30 21:56:57,034 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_68749206345'
+2025-12-30 21:56:57,034 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/68749206345 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:57,043 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:57,044 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:57,044 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:57,472 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/24910604185799734
+2025-12-30 21:56:57,689 - INFO - Found direct image URL: https://i.pinimg.com/736x/9b/42/d7/9b42d731fb195de92c4961e7aaaf63a2.jpg
+2025-12-30 21:56:57,689 - INFO - Starting direct download for https://i.pinimg.com/736x/9b/42/d7/9b42d731fb195de92c4961e7aaaf63a2.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:58,135 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download13933080092781590.txt
+2025-12-30 21:56:58,136 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download13933080092781590.jpg
+2025-12-30 21:56:58,166 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/21744010696393001 | Title: Pinterest Download
+2025-12-30 21:56:58,166 - DEBUG - [PinterestHandler] Extracted Pin ID: '21744010696393001'
+2025-12-30 21:56:58,166 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_21744010696393001'
+2025-12-30 21:56:58,167 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/21744010696393001 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:58,184 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:58,184 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:58,185 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:58,272 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 3237030978606861: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:58,278 - INFO - Standard download failed for https://www.pinterest.com/pin/3237030978606861. Attempting fallback extraction...
+2025-12-30 21:56:58,284 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:58,491 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 1970393583956450: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:58,491 - INFO - Standard download failed for https://www.pinterest.com/pin/1970393583956450. Attempting fallback extraction...
+2025-12-30 21:56:58,492 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:58,632 - INFO - Found direct image URL: https://i.pinimg.com/736x/bd/b3/28/bdb328662efd4472f5ad1f080e0ee578.jpg
+2025-12-30 21:56:58,632 - INFO - Starting direct download for https://i.pinimg.com/736x/bd/b3/28/bdb328662efd4472f5ad1f080e0ee578.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:58,685 - INFO - Found direct image URL: https://i.pinimg.com/736x/af/be/b4/afbeb478f488a19ced2a7a5324d27902.jpg
+2025-12-30 21:56:58,685 - INFO - Starting direct download for https://i.pinimg.com/736x/af/be/b4/afbeb478f488a19ced2a7a5324d27902.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:58,745 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download2885187257970718.txt
+2025-12-30 21:56:58,746 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download2885187257970718.jpg
+2025-12-30 21:56:58,750 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/281543726473010 | Title: Pinterest Download
+2025-12-30 21:56:58,751 - DEBUG - [PinterestHandler] Extracted Pin ID: '281543726473010'
+2025-12-30 21:56:58,751 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_281543726473010'
+2025-12-30 21:56:58,751 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/281543726473010 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:58,763 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:58,763 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:58,763 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:58,896 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 68749206345: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:58,896 - INFO - Standard download failed for https://www.pinterest.com/pin/68749206345. Attempting fallback extraction...
+2025-12-30 21:56:58,896 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:58,925 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download4574037118084862.txt
+2025-12-30 21:56:58,926 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download4574037118084862.jpg
+2025-12-30 21:56:58,930 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1970393583882850 | Title: Pinterest Download
+2025-12-30 21:56:58,931 - DEBUG - [PinterestHandler] Extracted Pin ID: '1970393583882850'
+2025-12-30 21:56:58,931 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1970393583882850'
+2025-12-30 21:56:58,932 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1970393583882850 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:58,952 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:58,953 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:58,953 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:59,065 - INFO - Found direct image URL: https://i.pinimg.com/736x/8a/04/e7/8a04e7628e051d465033822593b189d3.jpg
+2025-12-30 21:56:59,066 - INFO - Starting direct download for https://i.pinimg.com/736x/8a/04/e7/8a04e7628e051d465033822593b189d3.jpg to E:/test\pin_492649954570929
+2025-12-30 21:56:59,144 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 774124930973902: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:59,144 - INFO - Standard download failed for https://www.pinterest.com/pin/774124930973902. Attempting fallback extraction...
+2025-12-30 21:56:59,145 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:59,178 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download492649954577832.txt
+2025-12-30 21:56:59,178 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download492649954577832.jpg
+2025-12-30 21:56:59,195 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/9077636744521037 | Title: Pinterest Download
+2025-12-30 21:56:59,195 - DEBUG - [PinterestHandler] Extracted Pin ID: '9077636744521037'
+2025-12-30 21:56:59,196 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_9077636744521037'
+2025-12-30 21:56:59,196 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/9077636744521037 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:56:59,209 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:56:59,209 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:56:59,209 - DEBUG - No cookies configured for download.
+2025-12-30 21:56:59,290 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/3237030978606861
+2025-12-30 21:56:59,342 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 21744010696393001: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:59,342 - INFO - Standard download failed for https://www.pinterest.com/pin/21744010696393001. Attempting fallback extraction...
+2025-12-30 21:56:59,342 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:56:59,487 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1970393583956450
+2025-12-30 21:56:59,919 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/68749206345
+2025-12-30 21:56:59,982 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 281543726473010: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:56:59,982 - INFO - Standard download failed for https://www.pinterest.com/pin/281543726473010. Attempting fallback extraction...
+2025-12-30 21:56:59,983 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:00,097 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/774124930973902
+2025-12-30 21:57:00,233 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 1970393583882850: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:57:00,233 - INFO - Standard download failed for https://www.pinterest.com/pin/1970393583882850. Attempting fallback extraction...
+2025-12-30 21:57:00,233 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:00,299 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/21744010696393001
+2025-12-30 21:57:00,489 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 9077636744521037: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:57:00,489 - INFO - Standard download failed for https://www.pinterest.com/pin/9077636744521037. Attempting fallback extraction...
+2025-12-30 21:57:00,489 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:00,904 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/281543726473010
+2025-12-30 21:57:01,165 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/1970393583882850
+2025-12-30 21:57:01,419 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/9077636744521037
+2025-12-30 21:57:05,555 - INFO - Video extraction failed for https://www.pinterest.com/pin/24910604185799734. Checking for image...
+2025-12-30 21:57:05,556 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:06,396 - INFO - Video extraction failed for https://www.pinterest.com/pin/3237030978606861. Checking for image...
+2025-12-30 21:57:06,396 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:07,275 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download1337074889855477.txt
+2025-12-30 21:57:07,275 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download1337074889855477.jpg
+2025-12-30 21:57:07,283 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/6544361954436856 | Title: Pinterest Download
+2025-12-30 21:57:07,284 - DEBUG - [PinterestHandler] Extracted Pin ID: '6544361954436856'
+2025-12-30 21:57:07,297 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_6544361954436856'
+2025-12-30 21:57:07,297 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/6544361954436856 to E:/mmo/building-page/tree kongdom\pin_492649954570929
+2025-12-30 21:57:07,321 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 21:57:07,322 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 21:57:07,322 - DEBUG - No cookies configured for download.
+2025-12-30 21:57:07,492 - INFO - Video extraction failed for https://www.pinterest.com/pin/1970393583956450. Checking for image...
+2025-12-30 21:57:07,492 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:08,309 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/24910604185799734
+2025-12-30 21:57:08,513 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/3237030978606861
+2025-12-30 21:57:08,792 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1970393583956450
+2025-12-30 21:57:09,051 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 6544361954436856: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-30 21:57:09,051 - INFO - Standard download failed for https://www.pinterest.com/pin/6544361954436856. Attempting fallback extraction...
+2025-12-30 21:57:09,052 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:10,444 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/6544361954436856
+2025-12-30 21:57:12,464 - INFO - Video extraction failed for https://www.pinterest.com/pin/1970393583882850. Checking for image...
+2025-12-30 21:57:12,465 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:12,755 - INFO - Video extraction failed for https://www.pinterest.com/pin/68749206345. Checking for image...
+2025-12-30 21:57:12,755 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:14,344 - INFO - Video extraction failed for https://www.pinterest.com/pin/21744010696393001. Checking for image...
+2025-12-30 21:57:14,344 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:15,808 - INFO - Video extraction failed for https://www.pinterest.com/pin/281543726473010. Checking for image...
+2025-12-30 21:57:15,808 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:16,616 - INFO - Video extraction failed for https://www.pinterest.com/pin/9077636744521037. Checking for image...
+2025-12-30 21:57:16,616 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:16,675 - INFO - Video extraction failed for https://www.pinterest.com/pin/774124930973902. Checking for image...
+2025-12-30 21:57:16,676 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:17,062 - INFO - Found direct image URL: https://i.pinimg.com/736x/ec/5c/84/ec5c846d988cde6694e746ce7c80c979.jpg
+2025-12-30 21:57:17,063 - INFO - Starting direct download for https://i.pinimg.com/736x/ec/5c/84/ec5c846d988cde6694e746ce7c80c979.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:17,193 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download3237030978606861.txt
+2025-12-30 21:57:17,193 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download3237030978606861.jpg
+2025-12-30 21:57:17,318 - INFO - Found direct image URL: https://i.pinimg.com/736x/2f/6f/ce/2f6fce24f5213c1f1709de54c5557aa4.jpg
+2025-12-30 21:57:17,319 - INFO - Starting direct download for https://i.pinimg.com/736x/2f/6f/ce/2f6fce24f5213c1f1709de54c5557aa4.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:17,442 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download24910604185799734.txt
+2025-12-30 21:57:17,442 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download24910604185799734.jpg
+2025-12-30 21:57:18,000 - INFO - Found direct image URL: https://i.pinimg.com/736x/45/f8/9c/45f89c388539d289922f1128651014c7.jpg
+2025-12-30 21:57:18,001 - INFO - Starting direct download for https://i.pinimg.com/736x/45/f8/9c/45f89c388539d289922f1128651014c7.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:18,138 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download1970393583956450.txt
+2025-12-30 21:57:18,138 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download1970393583956450.jpg
+2025-12-30 21:57:18,223 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/1970393583882850
+2025-12-30 21:57:18,284 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/68749206345
+2025-12-30 21:57:18,455 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/21744010696393001
+2025-12-30 21:57:18,563 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/281543726473010
+2025-12-30 21:57:18,620 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/9077636744521037
+2025-12-30 21:57:18,677 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/774124930973902
+2025-12-30 21:57:22,336 - INFO - Video extraction failed for https://www.pinterest.com/pin/6544361954436856. Checking for image...
+2025-12-30 21:57:22,336 - DEBUG - Using proactor: IocpProactor
+2025-12-30 21:57:22,636 - INFO - Found direct image URL: https://i.pinimg.com/736x/62/5d/42/625d421cdd3a00beb0d8e1be3e1ce3cb.jpg
+2025-12-30 21:57:22,636 - INFO - Starting direct download for https://i.pinimg.com/736x/62/5d/42/625d421cdd3a00beb0d8e1be3e1ce3cb.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:23,096 - INFO - Found direct image URL: https://i.pinimg.com/736x/7c/2f/ce/7c2fce40ea273c49f3186f71fabc8d00.jpg
+2025-12-30 21:57:23,096 - INFO - Starting direct download for https://i.pinimg.com/736x/7c/2f/ce/7c2fce40ea273c49f3186f71fabc8d00.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:23,172 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download1970393583882850.txt
+2025-12-30 21:57:23,172 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download1970393583882850.jpg
+2025-12-30 21:57:23,269 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/6544361954436856
+2025-12-30 21:57:23,303 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download281543726473010.txt
+2025-12-30 21:57:23,303 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download281543726473010.jpg
+2025-12-30 21:57:23,347 - INFO - Found direct image URL: https://i.pinimg.com/736x/ad/21/a0/ad21a0cefd43bd5f1cea7b5ae44046e6.jpg
+2025-12-30 21:57:23,348 - INFO - Starting direct download for https://i.pinimg.com/736x/ad/21/a0/ad21a0cefd43bd5f1cea7b5ae44046e6.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:23,440 - INFO - Found direct image URL: https://i.pinimg.com/736x/74/59/00/74590098ec40a34ecb178dd856bb7221.jpg
+2025-12-30 21:57:23,440 - INFO - Starting direct download for https://i.pinimg.com/736x/74/59/00/74590098ec40a34ecb178dd856bb7221.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:23,454 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download774124930973902.txt
+2025-12-30 21:57:23,454 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download774124930973902.jpg
+2025-12-30 21:57:23,461 - INFO - Found direct image URL: https://i.pinimg.com/736x/5c/c7/b0/5cc7b01ac5e959d129aa186b43418e92.jpg
+2025-12-30 21:57:23,461 - INFO - Starting direct download for https://i.pinimg.com/736x/5c/c7/b0/5cc7b01ac5e959d129aa186b43418e92.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:23,605 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download21744010696393001.txt
+2025-12-30 21:57:23,606 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download21744010696393001.jpg
+2025-12-30 21:57:23,608 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download68749206345.txt
+2025-12-30 21:57:23,608 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download68749206345.jpg
+2025-12-30 21:57:24,814 - INFO - Found direct image URL: https://i.pinimg.com/736x/7d/22/93/7d22936111b9733ea3f6088c063e1106.jpg
+2025-12-30 21:57:24,814 - INFO - Starting direct download for https://i.pinimg.com/736x/7d/22/93/7d22936111b9733ea3f6088c063e1106.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:24,922 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download9077636744521037.txt
+2025-12-30 21:57:24,922 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download9077636744521037.jpg
+2025-12-30 21:57:24,947 - INFO - Found direct image URL: https://i.pinimg.com/736x/fc/e1/7f/fce17fd982afcfb3d8b72810e66cd306.jpg
+2025-12-30 21:57:24,947 - INFO - Starting direct download for https://i.pinimg.com/736x/fc/e1/7f/fce17fd982afcfb3d8b72810e66cd306.jpg to E:/test\pin_492649954570929
+2025-12-30 21:57:25,062 - INFO - Caption saved to: E:/test\pin_492649954570929\Pinterest Download6544361954436856.txt
+2025-12-30 21:57:25,063 - INFO - Direct download completed: E:/test\pin_492649954570929\Pinterest Download6544361954436856.jpg
+2025-12-30 22:00:16,145 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:00:46,577 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 22:00:48,669 - DEBUG - Using proactor: IocpProactor
+2025-12-30 22:00:49,631 - INFO - Playwright visiting: https://www.pinterest.com/pin/492649954570929/
+2025-12-30 22:00:49,631 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 22:00:51,391 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 22:00:51,424 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 22:00:57,062 - DEBUG - Scroll iteration 1 completed
+2025-12-30 22:00:57,139 - INFO - Loop status: Iteration 1, Found 19/7 items (+19 new valid, +91 raw)
+2025-12-30 22:00:57,139 - INFO - Scraping loop finished. Found 19 items.
+2025-12-30 22:00:57,140 - INFO - Scraping found 19 unique valid links.

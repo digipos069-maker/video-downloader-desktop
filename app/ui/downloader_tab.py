@@ -1031,16 +1031,34 @@ class DownloaderTab(QWidget):
             return
 
         url = self.url_input.text().strip()
-
-    def process_scraping(self, url):
-        """Helper method to handle the scraping logic for a given URL using a background thread."""
-        self.handle_status_message("Scraping...")
+        if not url:
+            self.status_message.emit("Please enter a URL to scrap.")
+            return
         
-        # Get settings
-        settings = {}
+        self.process_scraping(url)
+
+    def process_scraping(self, urls):
+        """Helper method to handle the scraping logic for given URLs using background threads."""
+        if isinstance(urls, str):
+            urls = [urls]
+            
+        if not hasattr(self, 'active_scraping_workers'):
+            self.active_scraping_workers = []
+
+        self.handle_status_message(f"Scraping {len(urls)} URLs...")
+        self.scrap_button.setEnabled(False)
+
+        # Get base settings once
+        base_settings = {}
         if self.settings_tab:
-            settings = self.settings_tab.get_settings()
-            print(f"[DEBUG] process_scraping retrieved settings: {settings}")
+            base_settings = self.settings_tab.get_settings()
+            print(f"[DEBUG] process_scraping retrieved base settings: {base_settings}")
+        else:
+            print("[ERROR] Settings tab not linked!")
+
+        for url in urls:
+            # Create a copy of settings for this URL to inject specific credentials
+            settings = base_settings.copy()
             
             # --- Inject Platform Credentials for Scraper ---
             # Facebook
@@ -1078,19 +1096,18 @@ class DownloaderTab(QWidget):
                     if creds.get('cookie_file'): settings['cookie_file'] = creds.get('cookie_file')
                     if creds.get('browser') and creds.get('browser') != "None": settings['cookies_from_browser'] = creds.get('browser')
                         
-            print(f"[DEBUG] Scraping with settings: {settings}")
-        else:
-            print("[ERROR] Settings tab not linked!")
+            print(f"[DEBUG] Starting worker for {url} with settings: {settings}")
 
-        # Create and start worker
-        self.scraping_worker = ScrapingWorker(url, self.platform_handler_factory, settings, parent=self)
-        self.scraping_worker.item_found.connect(self.on_scraping_item_found)
-        self.scraping_worker.finished.connect(self.on_scraping_finished)
-        self.scraping_worker.error.connect(self.on_scraping_error)
-        self.scraping_worker.status_update.connect(self.handle_status_message) # Connect new signal
-        self.scraping_worker.start()
-        
-        self.scrap_button.setEnabled(False) # Disable button while scraping
+            # Create and start worker
+            worker = ScrapingWorker(url, self.platform_handler_factory, settings, parent=self)
+            worker.item_found.connect(self.on_scraping_item_found)
+            # Use lambda with default argument to capture current worker reference
+            worker.finished.connect(lambda w=worker: self.on_scraping_worker_finished(w))
+            worker.error.connect(self.on_scraping_error)
+            worker.status_update.connect(self.handle_status_message) # Connect new signal
+            
+            self.active_scraping_workers.append(worker)
+            worker.start()
 
     @Slot(str, dict, bool, bool, object)
     def on_scraping_item_found(self, item_url, metadata, is_video, is_photo, handler):
@@ -1197,23 +1214,33 @@ class DownloaderTab(QWidget):
             import traceback
             traceback.print_exc()
 
+    def on_scraping_worker_finished(self, worker):
+        """Internal handler for individual worker completion."""
+        if hasattr(self, 'active_scraping_workers') and worker in self.active_scraping_workers:
+            self.active_scraping_workers.remove(worker)
+        
+        if not getattr(self, 'active_scraping_workers', []):
+            self.on_scraping_finished()
+
     @Slot()
     def on_scraping_finished(self):
-        self.status_message.emit("Scraping completed.")
+        self.status_message.emit("All scraping tasks completed.")
         self.scrap_button.setEnabled(True)
-        # Clean up worker
-
 
     @Slot(str)
     def on_scraping_error(self, message):
         self.status_message.emit(message)
-        self.scrap_button.setEnabled(True)
 
     def open_queue_context_menu(self, position):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
         scrap_action = menu.addAction("Scrap")
         scrap_action.triggered.connect(self.scrap_selected_queue_item)
+        
+        copy_action = menu.addAction("Copy")
+        copy_action.triggered.connect(self.copy_selected_queue_urls)
+
+        menu.addSeparator()
         
         delete_action = menu.addAction("Delete")
         delete_action.triggered.connect(self.delete_selected_queue_item)
@@ -1402,13 +1429,38 @@ class DownloaderTab(QWidget):
         if not selected_items:
             return
         
-        # In a row selection, we get all items in the row.
-        # We want the URL, which is in column 1.
-        # We can find the row index of the first selected item.
-        row = selected_items[0].row()
-        url_item = self.queue_table_widget.item(row, 1)
-        if url_item:
-            self.process_scraping(url_item.text())
+        # Collect unique URLs from all selected rows
+        urls = set()
+        for item in selected_items:
+            row = item.row()
+            url_item = self.queue_table_widget.item(row, 1) # URL is in column 1
+            if url_item:
+                urls.add(url_item.text())
+        
+        if urls:
+            self.process_scraping(list(urls))
+
+    def copy_selected_queue_urls(self):
+        """Copies the URLs of selected rows in the queue table to the clipboard."""
+        from PySide6.QtWidgets import QApplication
+        selected_items = self.queue_table_widget.selectedItems()
+        if not selected_items:
+            return
+        
+        urls = []
+        selected_rows = set()
+        for item in selected_items:
+            selected_rows.add(item.row())
+            
+        for row in sorted(list(selected_rows)):
+            url_item = self.queue_table_widget.item(row, 1) # URL is in column 1
+            if url_item:
+                urls.append(url_item.text())
+        
+        if urls:
+            clipboard = QApplication.clipboard()
+            clipboard.setText("\n".join(urls))
+            self.status_message.emit(f"Copied {len(urls)} URL(s) to clipboard.")
 
     def delete_selected_queue_item(self):
         """Removes the selected row from the queue table."""
