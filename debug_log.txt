@@ -9808,3 +9808,32 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-30 23:09:30,792 - DEBUG - Cookie setup (download): File='None', Browser='None'
 2025-12-30 23:09:30,792 - DEBUG - No cookies configured for download.
 2025-12-30 23:09:31,925 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [generic] f44f586e4d3f52c15a710bf997163d3f_v2: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-30 23:14:38,514 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 23:14:42,184 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-30 23:14:44,893 - DEBUG - Using proactor: IocpProactor
+2025-12-30 23:14:45,930 - INFO - Playwright visiting: https://www.pinterest.com/pin/291397038406342235
+2025-12-30 23:14:45,930 - INFO - Scraping target limit (max_entries): 7
+2025-12-30 23:14:48,027 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2025-12-30 23:14:48,050 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2025-12-30 23:14:53,634 - DEBUG - Scroll iteration 1 completed
+2025-12-30 23:14:53,668 - INFO - Loop status: Iteration 1, Found 13/7 items (+13 new valid, +54 raw)
+2025-12-30 23:14:53,668 - INFO - Scraping loop finished. Found 13 items.
+2025-12-30 23:14:53,668 - INFO - Scraping found 13 unique valid links.
+2025-12-30 23:15:20,356 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/291397038406342235/repin | Title: Pinterest Download
+2025-12-30 23:15:20,356 - DEBUG - [PinterestHandler] Extracted Pin ID: '291397038406342235'
+2025-12-30 23:15:20,356 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_291397038406342235'
+2025-12-30 23:15:20,358 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/291397038406342235/repin to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:15:20,370 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:15:20,370 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:15:20,370 - DEBUG - No cookies configured for download.
+2025-12-30 23:15:23,839 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_291397038406342235.txt
+2025-12-30 23:15:23,843 - INFO - Download completed: https://www.pinterest.com/pin/291397038406342235/repin
+2025-12-30 23:16:04,162 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/11399805459024352 | Title: Pinterest Download
+2025-12-30 23:16:04,163 - DEBUG - [PinterestHandler] Extracted Pin ID: '11399805459024352'
+2025-12-30 23:16:04,163 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_11399805459024352'
+2025-12-30 23:16:04,163 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/11399805459024352 to E:/mmo/building-page/tree kongdom\pin_291397038406342235
+2025-12-30 23:16:04,174 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-30 23:16:04,175 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-30 23:16:04,175 - DEBUG - No cookies configured for download.
+2025-12-30 23:16:05,788 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\pin_291397038406342235\Pinterest Download_11399805459024352.txt
+2025-12-30 23:16:05,790 - INFO - Download completed: https://www.pinterest.com/pin/11399805459024352
