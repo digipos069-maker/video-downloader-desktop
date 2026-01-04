@@ -1,7 +1,8 @@
 import json
 import os
+from app.helpers import get_app_path
 
-SETTINGS_FILE = "settings.json"
+SETTINGS_FILE = os.path.join(get_app_path(), "settings.json")
 
 DEFAULT_SETTINGS = {
     'video': {

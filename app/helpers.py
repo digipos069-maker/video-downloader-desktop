@@ -7,14 +7,81 @@ Utility functions for the application.
 """
 
 def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
+    """ 
+    Get absolute path to resource.
+    Robustly handles Nuitka OneFile by anchoring to the module location.
+    """
+    roots = []
+    
+    # 1. Strategy: Self-Anchoring (Most Reliable for Nuitka OneFile)
+    # We are in .../temp_dir/app/helpers.py
+    # We want .../temp_dir/
     try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
+        app_dir = os.path.dirname(os.path.abspath(__file__)) # .../app
+        project_root = os.path.dirname(app_dir)              # .../
+        roots.append(project_root)
     except Exception:
-        base_path = os.path.abspath(".")
+        pass
 
-    return os.path.join(base_path, relative_path)
+    # 2. Strategy: PyInstaller / Nuitka Standard Temp Dir
+    if hasattr(sys, '_MEIPASS'):
+        roots.append(sys._MEIPASS)
+        
+    # 3. Strategy: Executable Directory (Standalone)
+    try:
+        roots.append(os.path.dirname(os.path.abspath(sys.argv[0])))
+    except Exception:
+        pass
+        
+    # 4. Strategy: CWD (Dev)
+    roots.append(os.path.abspath("."))
+
+    # --- Path Variants ---
+    rel_norm = os.path.normpath(relative_path)
+    variants = [rel_norm]
+    
+    # Variant: Mapped 'app/resources' -> 'assets'
+    match_part = os.path.join("app", "resources")
+    if match_part in rel_norm:
+        variants.append(rel_norm.replace(match_part, "assets"))
+            
+    # Variant: Filename at root (for styles.qss)
+    variants.append(os.path.basename(rel_norm))
+    
+    # Variant: Subpath in assets (e.g. assets/images/...)
+    if "images" in rel_norm:
+        sub = rel_norm.split("images")[-1]
+        variants.append(os.path.normpath(os.path.join("assets", "images", sub.lstrip(os.sep))))
+    elif "icons" in rel_norm:
+        sub = rel_norm.split("icons")[-1]
+        variants.append(os.path.normpath(os.path.join("assets", "icons", sub.lstrip(os.sep))))
+
+    # --- Search ---
+    for root in roots:
+        for variant in variants:
+            full_path = os.path.join(root, variant)
+            if os.path.exists(full_path):
+                return full_path
+
+    # Fallback
+    return os.path.join(roots[0] if roots else ".", variants[1] if len(variants) > 1 else rel_norm)
+
+def get_app_path():
+    """
+    Returns the absolute path to the application directory.
+    - Frozen (EXE): The directory containing the .exe
+    - Source: The project root directory
+    """
+    if getattr(sys, 'frozen', False):
+        # If the application is run as a bundle, the PyInstaller bootloader
+        # extends the sys module by a flag frozen=True.
+        application_path = os.path.dirname(sys.executable)
+    else:
+        application_path = os.path.dirname(os.path.abspath(__file__))
+        # Go up one level from 'app/helpers.py' to project root
+        application_path = os.path.dirname(application_path)
+    
+    return application_path
 
 def format_bytes(size):
     """Converts bytes to a human-readable format."""

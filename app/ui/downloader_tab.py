@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtCore import Qt, Signal, Slot, QTimer, QThread, QSize
+import os
 
 from app.platform_handler import PlatformHandlerFactory
 from app.downloader import Downloader
@@ -433,14 +434,16 @@ class DownloaderTab(QWidget):
         platform_icons_layout.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
 
         # Base path for icons
-        icon_base_path = resource_path("app/resources/images/icons/social/")
+        # Use os.path.join for cross-platform safety and remove trailing slash for cleaner joining later
+        icon_base_path = resource_path(os.path.join("app", "resources", "images", "icons", "social"))
 
         # Add icons using the new SocialIcon widget with animation
-        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "youtube.png", "YouTube", size=32))
-        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "tik-tok.png", "TikTok", size=32))
-        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "facebook.png", "Facebook", size=32))
-        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "instagram.png", "Instagram", size=32))
-        platform_icons_layout.addWidget(SocialIcon(icon_base_path + "pinterest.png", "Pinterest", size=32))
+        # Use os.path.join to construct full paths
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "youtube.png"), "YouTube", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "tik-tok.png"), "TikTok", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "facebook.png"), "Facebook", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "instagram.png"), "Instagram", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "pinterest.png"), "Pinterest", size=32))
         
         row2_layout.addLayout(platform_icons_layout)
         

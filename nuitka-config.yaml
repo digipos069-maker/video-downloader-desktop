@@ -1,0 +1,3 @@
+- module-name: 'yt_dlp.extractor.lazy_extractors'
+  options:
+    compilation_mode: 'bytecode'

@@ -1,13 +1,14 @@
 import sys
 import os
-from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QSizeGrip
+import time
+from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QSizeGrip, QSplashScreen
 from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QIcon
+from PySide6.QtGui import QIcon, QPixmap, QPainter, QFont, QColor
 from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
 from app.ui.widgets.title_bar import TitleBar
 from app.config.settings_manager import save_settings
-from app.helpers import resource_path
+from app.helpers import resource_path, get_app_path
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -82,7 +83,71 @@ def main():
     """
     The main function to run the application.
     """
+    # Ensure local directory is in PATH for finding ffmpeg.exe etc.
+    app_path = get_app_path()
+    os.environ["PATH"] += os.pathsep + app_path
+    
+    # Ensure Playwright can find browsers (Critical for Frozen/EXE)
+    if "PLAYWRIGHT_BROWSERS_PATH" not in os.environ:
+        # Default location on Windows
+        default_pw_path = os.path.join(os.environ.get('LOCALAPPDATA', ''), 'ms-playwright')
+        if os.path.exists(default_pw_path):
+            os.environ["PLAYWRIGHT_BROWSERS_PATH"] = default_pw_path
+            # print(f"Set PLAYWRIGHT_BROWSERS_PATH to: {default_pw_path}")
+    
     app = QApplication(sys.argv)
+
+    # --- Splash Screen Setup ---
+    # Create a pixmap for the splash screen
+    splash_pix = QPixmap(400, 300)
+    splash_pix.fill(QColor("#101014")) # Background color matching the theme
+
+    painter = QPainter(splash_pix)
+    
+    # Load and draw logo
+    logo_path = resource_path(os.path.join("app", "resources", "images", "logo.png"))
+    if os.path.exists(logo_path):
+        logo = QPixmap(logo_path)
+        logo = logo.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        
+        # Center the logo
+        logo_x = (splash_pix.width() - logo.width()) // 2
+        logo_y = (splash_pix.height() - logo.height()) // 2 - 20 # Slightly shifted up
+        painter.drawPixmap(logo_x, logo_y, logo)
+    else:
+        # Fallback if logo missing
+        logo_y = 100 
+
+    # Draw "SDM" text
+    painter.setPen(QColor("#3B82F6")) # Accent Blue
+    font = QFont("Segoe UI", 32, QFont.Bold)
+    painter.setFont(font)
+    
+    text = "SDM"
+    font_metrics = painter.fontMetrics()
+    text_width = font_metrics.horizontalAdvance(text)
+    text_x = (splash_pix.width() - text_width) // 2
+    text_y = logo_y + 100 + 40 # Below logo
+    
+    painter.drawText(text_x, text_y, text)
+
+    # Draw "Loading..." text
+    font_loading = QFont("Segoe UI", 10)
+    painter.setFont(font_loading)
+    painter.setPen(QColor("#71717A")) # Zinc-500 Gray
+    loading_text = "Loading..."
+    loading_metrics = painter.fontMetrics()
+    loading_width = loading_metrics.horizontalAdvance(loading_text)
+    loading_x = (splash_pix.width() - loading_width) // 2
+    loading_y = text_y + 35
+    painter.drawText(loading_x, loading_y, loading_text)
+
+    painter.end()
+
+    # Show Splash
+    splash = QSplashScreen(splash_pix, Qt.WindowStaysOnTopHint)
+    splash.show()
+    app.processEvents()
 
     # Load and apply stylesheet
     style_file = resource_path(os.path.join("app", "resources", "styles.qss"))
@@ -92,9 +157,15 @@ def main():
     else:
         print(f"Warning: Stylesheet not found at {style_file}")
 
+    # Simulate initialization delay (for effect)
+    time.sleep(2)
 
     window = MainWindow()
     window.show()
+    
+    # Finish splash screen
+    splash.finish(window)
+    
     sys.exit(app.exec())
 
 if __name__ == "__main__":

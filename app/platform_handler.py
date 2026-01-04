@@ -9,15 +9,17 @@ import time
 from urllib.parse import urlparse
 import logging
 import os
+import sys
 import urllib.request
 import re
 import json
 import shutil
 import psutil
+from app.helpers import get_app_path
 
 # Configure logging
 logging.basicConfig(
-    filename='debug_log.txt',
+    filename=os.path.join(get_app_path(), 'debug_log.txt'),
     level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -50,11 +52,19 @@ def is_valid_media_link(href, domain):
         return '/p/' in href or '/reel/' in href or '/reels/' in href or '/tv/' in href
     elif 'facebook.com' in domain:
          # Must be a specific video/reel, not just the feed
-         # Valid: /watch?v=..., /videos/123..., /reel/123...
-         # Invalid: /watch, /videos, /reel, /reel/
-         if '/watch' in href and '?v=' in href: return True
-         if '/videos/' in href and len(href.split('/videos/')[-1]) > 1: return True
-         if '/reel/' in href and len(href.split('/reel/')[-1]) > 1 and any(char.isdigit() for char in href.split('/reel/')[-1]): return True
+         # Accepted patterns:
+         # /watch?v=...
+         # /videos/...
+         # /reel/...
+         # /share/v/... (New sharing format)
+         # /story.php?story_fbid=... (Old format)
+         
+         if '/watch' in href: return True
+         if '/videos/' in href: return True
+         if '/reel/' in href: return True
+         if '/share/' in href: return True
+         if 'story.php' in href: return True
+         
          # fb.watch short links
          if 'fb.watch' in href: return True
          return False
@@ -136,7 +146,10 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 browser = p.chromium.launch(headless=True)
             except Exception as e:
                 logging.error(f"Error launching browser: {e}")
-                return [{'url': url, 'title': 'Error: Browser Launch Failed (run "playwright install")', 'type': 'error'}]
+                # Try to give a hint about the error
+                if "Executable doesn't exist" in str(e):
+                    logging.error("Playwright cannot find the browser. In a frozen app, you may need to set PLAYWRIGHT_BROWSERS_PATH.")
+                return [{'url': url, 'title': 'Error: Browser Launch Failed', 'type': 'error'}]
 
             context = browser.new_context(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -336,7 +349,9 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                         if domain not in href and not is_pin: continue
 
                         # Strict Content Filtering using helper
-                        if not is_valid_media_link(href, domain): continue
+                        if not is_valid_media_link(href, domain): 
+                            logging.debug(f"Filtered out link (invalid format): {href}")
+                            continue
 
                         unique_urls.add(clean_href)
                         item = {
@@ -379,6 +394,15 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 if not results:
                     # Fallback: try one last scrape or just return page
                     logging.warning("No links found after scraping loop. Returning page fallback.")
+                    
+                    # Capture debug screenshot
+                    try:
+                        screenshot_path = "debug_scrape_failure.png"
+                        page.screenshot(path=screenshot_path)
+                        logging.info(f"Saved debug screenshot to {screenshot_path}")
+                    except Exception as ss_e:
+                        logging.error(f"Failed to take debug screenshot: {ss_e}")
+
                     page_title = page.title()
                     item = {
                         'url': url,
@@ -498,8 +522,30 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
 
     # Check for FFmpeg
     ffmpeg_available = shutil.which('ffmpeg') is not None
+    ffmpeg_location = None
+    
+    # Check if ffmpeg is in current directory or executable directory (for frozen app)
     if not ffmpeg_available:
-        logging.warning("FFmpeg not found! Fallback to 'best' single file format to avoid merging.")
+        # Define potential paths where the user might have put ffmpeg.exe
+        exe_dir = os.path.dirname(sys.executable if getattr(sys, 'frozen', False) else sys.argv[0])
+        potential_paths = [
+            os.path.join(os.getcwd(), 'ffmpeg.exe'),
+            os.path.join(exe_dir, 'ffmpeg.exe'),
+            os.path.join(exe_dir, '_internal', 'ffmpeg.exe'), # For PyInstaller one-dir
+            os.path.join(exe_dir, 'ffmpeg', 'bin', 'ffmpeg.exe') # Common manual install path
+        ]
+        
+        logging.info(f"Searching for FFmpeg in: {potential_paths}")
+        
+        for p in potential_paths:
+            if os.path.exists(p):
+                ffmpeg_available = True
+                ffmpeg_location = p
+                logging.info(f"Found FFmpeg at: {ffmpeg_location}")
+                break
+
+    if not ffmpeg_available:
+        logging.warning(f"FFmpeg not found in PATH or {potential_paths}. Fallback to 'best' single file format to avoid merging.")
 
     # Define filename template based on naming style
     if settings.get('forced_filename'):
@@ -542,6 +588,9 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         'no_warnings': True,
         'noplaylist': True, 
     }
+    
+    if ffmpeg_location:
+        ydl_opts['ffmpeg_location'] = ffmpeg_location
 
     # Handle Subtitles
     if subtitles:
@@ -1168,6 +1217,7 @@ class FacebookHandler(BaseHandler):
         return 'facebook.com' in url or 'fb.watch' in url
 
     def get_metadata(self, url):
+        # Prefer Playwright for Facebook metadata as yt-dlp often fails on profiles/reels
         return extract_metadata_with_playwright(url)
     
     def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):

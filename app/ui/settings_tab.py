@@ -200,7 +200,11 @@ class CookieVerificationWorker(QThread):
             # We only try fallback if the error suggests parsing issues, not auth issues
             # But generally, if we can reach the site, it's 'Good Enough' for our Playwright-based scrapers
             
-            pw_results = extract_metadata_with_playwright(self.test_url)
+            settings = {}
+            if self.cookie_file and os.path.exists(self.cookie_file):
+                settings['cookie_file'] = self.cookie_file
+            
+            pw_results = extract_metadata_with_playwright(self.test_url, settings=settings)
             if pw_results and pw_results[0].get('type') != 'error':
                 # Check if we got valid-looking data (not just a login page title)
                 first_res = pw_results[0]
@@ -375,7 +379,8 @@ class SettingsTab(QWidget):
         
         self.credentials_tabs = QTabWidget()
         self.credentials_tabs.setIconSize(QSize(20, 20))
-        icon_base_path = resource_path("app/resources/images/icons/social/")
+        # Use os.path.join for correct path construction
+        icon_base_path = resource_path(os.path.join("app", "resources", "images", "icons", "social"))
         
         # --- Facebook Credentials Tab ---
         facebook_tab = QWidget()
@@ -421,7 +426,7 @@ class SettingsTab(QWidget):
         fb_layout.addLayout(verify_btn_layout)
         
         fb_layout.addStretch()
-        self.credentials_tabs.addTab(facebook_tab, QIcon(icon_base_path + "facebook.png"), "Facebook")
+        self.credentials_tabs.addTab(facebook_tab, QIcon(os.path.join(icon_base_path, "facebook.png")), "Facebook")
         
         # --- Pinterest Credentials Tab ---
         pinterest_tab = QWidget()
@@ -467,7 +472,7 @@ class SettingsTab(QWidget):
         pin_layout.addLayout(verify_pin_layout)
         
         pin_layout.addStretch()
-        self.credentials_tabs.addTab(pinterest_tab, QIcon(icon_base_path + "pinterest.png"), "Pinterest")
+        self.credentials_tabs.addTab(pinterest_tab, QIcon(os.path.join(icon_base_path, "pinterest.png")), "Pinterest")
 
         # --- TikTok Credentials Tab ---
         tiktok_tab = QWidget()
@@ -513,7 +518,7 @@ class SettingsTab(QWidget):
         tt_layout.addLayout(verify_tt_layout)
         
         tt_layout.addStretch()
-        self.credentials_tabs.addTab(tiktok_tab, QIcon(icon_base_path + "tik-tok.png"), "TikTok")
+        self.credentials_tabs.addTab(tiktok_tab, QIcon(os.path.join(icon_base_path, "tik-tok.png")), "TikTok")
         
         # --- YouTube Credentials Tab ---
         youtube_tab = QWidget()
@@ -559,7 +564,7 @@ class SettingsTab(QWidget):
         yt_layout.addLayout(verify_yt_layout)
         
         yt_layout.addStretch()
-        self.credentials_tabs.addTab(youtube_tab, QIcon(icon_base_path + "youtube.png"), "YouTube")
+        self.credentials_tabs.addTab(youtube_tab, QIcon(os.path.join(icon_base_path, "youtube.png")), "YouTube")
 
         # --- Instagram Credentials Tab ---
         instagram_tab = QWidget()
@@ -605,7 +610,7 @@ class SettingsTab(QWidget):
         ig_layout.addLayout(verify_ig_layout)
         
         ig_layout.addStretch()
-        self.credentials_tabs.addTab(instagram_tab, QIcon(icon_base_path + "instagram.png"), "Instagram")
+        self.credentials_tabs.addTab(instagram_tab, QIcon(os.path.join(icon_base_path, "instagram.png")), "Instagram")
         
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)

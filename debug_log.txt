@@ -10246,3 +10246,434 @@ ERROR: Could not copy Chrome cookie database. See  https://github.com/yt-dlp/yt-
 2025-12-31 07:29:52,425 - INFO - Starting direct download for https://i.pinimg.com/736x/d7/c6/a9/d7c6a95b5b86b28ecd15ff4bb2c1b8eb.jpg to E:/test\pin_72339137759473630
 2025-12-31 07:29:52,475 - INFO - Caption saved to: E:/test\pin_72339137759473630\Pinterest Download26177241580702029.txt
 2025-12-31 07:29:52,475 - INFO - Direct download completed: E:/test\pin_72339137759473630\Pinterest Download26177241580702029.jpg
+2025-12-31 07:31:52,311 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 07:45:57,776 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 07:45:59,533 - DEBUG - Using proactor: IocpProactor
+2025-12-31 07:46:00,519 - INFO - Playwright visiting: https://www.pinterest.com/pin/72339137759473630/
+2025-12-31 07:46:00,519 - INFO - Scraping target limit (max_entries): 8
+2025-12-31 07:46:04,004 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2025-12-31 07:46:04,036 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2025-12-31 07:46:09,843 - DEBUG - Scroll iteration 1 completed
+2025-12-31 07:46:09,885 - INFO - Loop status: Iteration 1, Found 16/8 items (+16 new valid, +61 raw)
+2025-12-31 07:46:09,885 - INFO - Scraping loop finished. Found 16 items.
+2025-12-31 07:46:09,885 - INFO - Scraping found 16 unique valid links.
+2025-12-31 07:56:33,578 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 07:56:36,430 - DEBUG - Using proactor: IocpProactor
+2025-12-31 07:56:37,409 - INFO - Playwright visiting: https://www.pinterest.com/search/pins/?q=video&rs=rs&source_id=rs_4oULetm2&top_pin_ids=261771797087205891&eq=&etslf=2197
+2025-12-31 07:56:37,410 - INFO - Scraping target limit (max_entries): 8
+2025-12-31 07:56:40,772 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2025-12-31 07:56:41,010 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2025-12-31 07:56:47,374 - DEBUG - Scroll iteration 1 completed
+2025-12-31 07:56:47,401 - INFO - Loop status: Iteration 1, Found 20/8 items (+20 new valid, +28 raw)
+2025-12-31 07:56:47,401 - INFO - Scraping loop finished. Found 20 items.
+2025-12-31 07:56:47,401 - INFO - Scraping found 20 unique valid links.
+2025-12-31 08:26:09,965 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 08:26:28,880 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:26:29,751 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:26:29,793 - INFO - Added 12 cookies to browser context.
+2025-12-31 08:26:29,855 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61550324528480
+2025-12-31 08:26:29,855 - INFO - Scraping target limit (max_entries): 8
+2025-12-31 08:26:33,814 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2025-12-31 08:26:33,838 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2025-12-31 08:26:39,673 - DEBUG - Scroll iteration 1 completed
+2025-12-31 08:26:39,795 - INFO - Loop status: Iteration 1, Found 2/8 items (+2 new valid, +23 raw)
+2025-12-31 08:26:45,364 - DEBUG - Scroll iteration 2 completed
+2025-12-31 08:26:45,433 - INFO - Loop status: Iteration 2, Found 4/8 items (+2 new valid, +6 raw)
+2025-12-31 08:26:51,115 - DEBUG - Scroll iteration 3 completed
+2025-12-31 08:26:51,206 - INFO - Loop status: Iteration 3, Found 5/8 items (+1 new valid, +4 raw)
+2025-12-31 08:26:56,760 - DEBUG - Scroll iteration 4 completed
+2025-12-31 08:26:56,845 - INFO - Loop status: Iteration 4, Found 7/8 items (+2 new valid, +5 raw)
+2025-12-31 08:27:02,523 - DEBUG - Scroll iteration 5 completed
+2025-12-31 08:27:02,606 - INFO - Loop status: Iteration 5, Found 8/8 items (+1 new valid, +3 raw)
+2025-12-31 08:27:02,606 - INFO - Scraping loop finished. Found 8 items.
+2025-12-31 08:27:02,606 - INFO - Scraping found 8 unique valid links.
+2025-12-31 08:27:40,689 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/72339137759473630 | Title: Pinterest Download
+2025-12-31 08:27:40,689 - DEBUG - [PinterestHandler] Extracted Pin ID: '72339137759473630'
+2025-12-31 08:27:40,689 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_72339137759473630'
+2025-12-31 08:27:40,689 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/72339137759473630 to E:/mmo/building-page/tree kongdom
+2025-12-31 08:27:40,691 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/26177241580702029 | Title: Pinterest Download
+2025-12-31 08:27:40,691 - DEBUG - [PinterestHandler] Extracted Pin ID: '26177241580702029'
+2025-12-31 08:27:40,691 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/83879611806422583 | Title: Pinterest Download
+2025-12-31 08:27:40,691 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_26177241580702029'
+2025-12-31 08:27:40,691 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/9640586696913723 | Title: Pinterest Download
+2025-12-31 08:27:40,692 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1817245515487209 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:27:40,692 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/7740630601621642 | Title: Pinterest Download
+2025-12-31 08:27:40,693 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/579557045840287454 | Title: Pinterest Download
+2025-12-31 08:27:40,693 - DEBUG - [PinterestHandler] Extracted Pin ID: '83879611806422583'
+2025-12-31 08:27:40,693 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/26177241580702029 to E:/mmo/building-page/tree kongdom\pin_72339137759473630
+2025-12-31 08:27:40,693 - DEBUG - [PinterestHandler] Extracted Pin ID: '9640586696913723'
+2025-12-31 08:27:40,694 - DEBUG - [PinterestHandler] Extracted Pin ID: '7740630601621642'
+2025-12-31 08:27:40,695 - DEBUG - [PinterestHandler] Extracted Pin ID: '579557045840287454'
+2025-12-31 08:27:40,695 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_83879611806422583'
+2025-12-31 08:27:40,696 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_9640586696913723'
+2025-12-31 08:27:40,696 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_7740630601621642'
+2025-12-31 08:27:40,696 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_579557045840287454'
+2025-12-31 08:27:40,697 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/83879611806422583 to E:/mmo/building-page/tree kongdom\pin_72339137759473630
+2025-12-31 08:27:40,697 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1247618596887889 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:27:40,697 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/9640586696913723 to E:/mmo/building-page/tree kongdom\search_pins_qvideo
+2025-12-31 08:27:40,698 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/7740630601621642 to E:/mmo/building-page/tree kongdom\search_pins_qvideo
+2025-12-31 08:27:40,698 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/579557045840287454 to E:/mmo/building-page/tree kongdom\search_pins_qvideo
+2025-12-31 08:27:40,738 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,738 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,739 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:40,747 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,747 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:27:40,748 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:27:40,749 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,750 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,750 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,751 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,751 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:40,751 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:40,752 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,752 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,752 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:40,753 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,754 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:27:40,754 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:27:40,755 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,755 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,755 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:40,755 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:40,756 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:40,756 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:45,443 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 26177241580702029: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-31 08:27:45,444 - INFO - Standard download failed for https://www.pinterest.com/pin/26177241580702029. Attempting fallback extraction...
+2025-12-31 08:27:45,444 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:45,452 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 72339137759473630: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-31 08:27:45,453 - INFO - Standard download failed for https://www.pinterest.com/pin/72339137759473630. Attempting fallback extraction...
+2025-12-31 08:27:45,453 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:45,484 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 83879611806422583: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-12-31 08:27:45,485 - INFO - Standard download failed for https://www.pinterest.com/pin/83879611806422583. Attempting fallback extraction...
+2025-12-31 08:27:45,485 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:46,461 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/83879611806422583
+2025-12-31 08:27:46,462 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/26177241580702029
+2025-12-31 08:27:46,462 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/72339137759473630
+2025-12-31 08:27:46,517 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 579557045840287454: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-31 08:27:46,517 - INFO - Standard download failed for https://www.pinterest.com/pin/579557045840287454. Attempting fallback extraction...
+2025-12-31 08:27:46,518 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:47,369 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_1247618596887889.txt
+2025-12-31 08:27:47,372 - INFO - Download completed: https://www.facebook.com/reel/1247618596887889
+2025-12-31 08:27:47,528 - INFO - Playwright fallback scraping for: https://www.pinterest.com/pin/579557045840287454
+2025-12-31 08:27:47,843 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\search_pins_qvideo\Pinterest Download_9640586696913723.txt
+2025-12-31 08:27:47,845 - INFO - Download completed: https://www.pinterest.com/pin/9640586696913723
+2025-12-31 08:27:48,420 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_1817245515487209.txt
+2025-12-31 08:27:48,424 - INFO - Download completed: https://www.facebook.com/reel/1817245515487209
+2025-12-31 08:27:52,313 - INFO - Found direct video URL: https://v1.pinimg.com/videos/iht/hls/9d/45/5b/9d455b12583ec9c23dca35ac30507b52.m3u8
+2025-12-31 08:27:52,313 - INFO - Starting yt-dlp download for https://v1.pinimg.com/videos/iht/hls/9d/45/5b/9d455b12583ec9c23dca35ac30507b52.m3u8 to E:/mmo/building-page/tree kongdom\search_pins_qvideo
+2025-12-31 08:27:52,322 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:27:52,323 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2025-12-31 08:27:52,323 - DEBUG - No cookies configured for download.
+2025-12-31 08:27:54,254 - INFO - Video extraction failed for https://www.pinterest.com/pin/83879611806422583. Checking for image...
+2025-12-31 08:27:54,255 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:54,572 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [generic] 9d455b12583ec9c23dca35ac30507b52: Requested format is not available. Use --list-formats for a list of available formats
+2025-12-31 08:27:55,433 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/83879611806422583
+2025-12-31 08:27:56,575 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\search_pins_qvideo\Pinterest Download_7740630601621642.txt
+2025-12-31 08:27:56,579 - INFO - Download completed: https://www.pinterest.com/pin/7740630601621642
+2025-12-31 08:27:57,134 - INFO - Video extraction failed for https://www.pinterest.com/pin/26177241580702029. Checking for image...
+2025-12-31 08:27:57,135 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:57,347 - INFO - Video extraction failed for https://www.pinterest.com/pin/72339137759473630. Checking for image...
+2025-12-31 08:27:57,347 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:27:57,430 - INFO - Found direct image URL: https://i.pinimg.com/736x/8d/2a/4e/8d2a4e8ee47bf3544dc86f0b74286b1e.jpg
+2025-12-31 08:27:57,430 - INFO - Starting direct download for https://i.pinimg.com/736x/8d/2a/4e/8d2a4e8ee47bf3544dc86f0b74286b1e.jpg to E:/test\pin_72339137759473630
+2025-12-31 08:27:57,512 - INFO - Caption saved to: E:/test\pin_72339137759473630\Pinterest Download83879611806422583.txt
+2025-12-31 08:27:57,512 - INFO - Direct download completed: E:/test\pin_72339137759473630\Pinterest Download83879611806422583.jpg
+2025-12-31 08:27:58,106 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/26177241580702029
+2025-12-31 08:27:58,213 - INFO - Playwright image scraping for: https://www.pinterest.com/pin/72339137759473630
+2025-12-31 08:27:59,749 - INFO - Found direct image URL: https://i.pinimg.com/736x/d7/c6/a9/d7c6a95b5b86b28ecd15ff4bb2c1b8eb.jpg
+2025-12-31 08:27:59,749 - INFO - Starting direct download for https://i.pinimg.com/736x/d7/c6/a9/d7c6a95b5b86b28ecd15ff4bb2c1b8eb.jpg to E:/test\pin_72339137759473630
+2025-12-31 08:27:59,809 - INFO - Found direct image URL: https://i.pinimg.com/736x/88/ee/2a/88ee2a5dda56312557a38bb830f2a206.jpg
+2025-12-31 08:27:59,811 - INFO - Starting direct download for https://i.pinimg.com/736x/88/ee/2a/88ee2a5dda56312557a38bb830f2a206.jpg to E:/test
+2025-12-31 08:27:59,816 - INFO - Caption saved to: E:/test\pin_72339137759473630\Pinterest Download26177241580702029.txt
+2025-12-31 08:27:59,816 - INFO - Direct download completed: E:/test\pin_72339137759473630\Pinterest Download26177241580702029.jpg
+2025-12-31 08:27:59,897 - INFO - Caption saved to: E:/test\Pinterest Download72339137759473630.txt
+2025-12-31 08:27:59,898 - INFO - Direct download completed: E:/test\Pinterest Download72339137759473630.jpg
+2025-12-31 08:30:31,341 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 08:30:34,065 - DEBUG - Using proactor: IocpProactor
+2025-12-31 08:30:34,924 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:30:34,970 - INFO - Added 12 cookies to browser context.
+2025-12-31 08:30:35,029 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61550324528480
+2025-12-31 08:30:35,030 - INFO - Scraping target limit (max_entries): 15
+2025-12-31 08:30:36,822 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2025-12-31 08:30:36,835 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2025-12-31 08:30:42,631 - DEBUG - Scroll iteration 1 completed
+2025-12-31 08:30:42,724 - INFO - Loop status: Iteration 1, Found 3/15 items (+3 new valid, +26 raw)
+2025-12-31 08:30:48,465 - DEBUG - Scroll iteration 2 completed
+2025-12-31 08:30:48,545 - INFO - Loop status: Iteration 2, Found 5/15 items (+2 new valid, +7 raw)
+2025-12-31 08:30:54,195 - DEBUG - Scroll iteration 3 completed
+2025-12-31 08:30:54,270 - INFO - Loop status: Iteration 3, Found 7/15 items (+2 new valid, +5 raw)
+2025-12-31 08:31:00,043 - DEBUG - Scroll iteration 4 completed
+2025-12-31 08:31:00,136 - INFO - Loop status: Iteration 4, Found 8/15 items (+1 new valid, +2 raw)
+2025-12-31 08:31:05,720 - DEBUG - Scroll iteration 5 completed
+2025-12-31 08:31:05,811 - INFO - Loop status: Iteration 5, Found 12/15 items (+4 new valid, +8 raw)
+2025-12-31 08:31:11,367 - DEBUG - Scroll iteration 6 completed
+2025-12-31 08:31:11,466 - INFO - Loop status: Iteration 6, Found 13/15 items (+1 new valid, +3 raw)
+2025-12-31 08:31:17,149 - DEBUG - Scroll iteration 7 completed
+2025-12-31 08:31:17,245 - INFO - Loop status: Iteration 7, Found 16/15 items (+3 new valid, +8 raw)
+2025-12-31 08:31:17,245 - INFO - Scraping loop finished. Found 16 items.
+2025-12-31 08:31:17,245 - INFO - Scraping found 16 unique valid links.
+2025-12-31 08:31:35,725 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/546823558033183 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,728 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/1544088682882133 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,729 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/890358279324838 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,729 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/488031090895449 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,730 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/1281893362830538 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,730 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/553414877141184 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,731 - INFO - Starting yt-dlp download for https://www.facebook.com/61550324528480/videos/501802819501190 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2025-12-31 08:31:35,769 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:35,770 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:35,770 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:35,886 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:35,886 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:35,886 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:35,952 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:35,952 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:35,963 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:35,981 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:35,989 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:35,990 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:36,120 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:36,120 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:36,143 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:36,148 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:36,191 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 08:31:36,203 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:36,270 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2025-12-31 08:31:36,322 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:31:36,352 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2025-12-31 08:32:41,867 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u1782\u1791\u17b890(2)_488031090895449.txt
+2025-12-31 08:32:41,872 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/488031090895449
+2025-12-31 08:32:43,640 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u1782\u1791\u17b893(2)_546823558033183.txt
+2025-12-31 08:32:43,643 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/546823558033183
+2025-12-31 08:32:46,235 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u178289(2)_1281893362830538.txt
+2025-12-31 08:32:46,238 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/1281893362830538
+2025-12-31 08:32:55,356 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u178287(1)_501802819501190.txt
+2025-12-31 08:32:55,361 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/501802819501190
+2025-12-31 08:32:56,933 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u178287(2)_553414877141184.txt
+2025-12-31 08:32:56,937 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/553414877141184
+2025-12-31 08:32:57,223 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u1782\u1791\u17b893(1)_1544088682882133.txt
+2025-12-31 08:32:57,226 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/1544088682882133
+2025-12-31 08:33:04,412 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\\u179a\u17bf\u1784\u179f\u17b6\u1798\u1780\u17bb\u1780 \u1797\u17b6\u1782\u1791\u17b891_890358279324838.txt
+2025-12-31 08:33:04,416 - INFO - Download completed: https://www.facebook.com/61550324528480/videos/890358279324838
+2025-12-31 10:42:32,868 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 10:45:28,179 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 10:45:32,899 - DEBUG - Using proactor: IocpProactor
+2025-12-31 10:45:41,871 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-31 10:45:41,906 - INFO - Added 11 cookies to browser context.
+2025-12-31 10:45:42,328 - INFO - Playwright visiting: https://www.instagram.com/long_manin/reels/
+2025-12-31 10:45:42,328 - INFO - Scraping target limit (max_entries): 1005
+2025-12-31 10:45:45,550 - INFO - Starting scroll loop. Planned iterations: 52 for max 1005 items.
+2025-12-31 10:45:45,580 - INFO - Starting dynamic scroll loop. Target: 1005 items.
+2025-12-31 10:45:51,192 - DEBUG - Scroll iteration 1 completed
+2025-12-31 10:45:51,269 - INFO - Loop status: Iteration 1, Found 14/1005 items (+14 new valid, +37 raw)
+2025-12-31 10:45:56,810 - DEBUG - Scroll iteration 2 completed
+2025-12-31 10:45:56,836 - INFO - Loop status: Iteration 2, Found 26/1005 items (+12 new valid, +12 raw)
+2025-12-31 10:46:02,378 - DEBUG - Scroll iteration 3 completed
+2025-12-31 10:46:02,421 - INFO - Loop status: Iteration 3, Found 42/1005 items (+16 new valid, +16 raw)
+2025-12-31 10:46:07,948 - DEBUG - Scroll iteration 4 completed
+2025-12-31 10:46:07,967 - INFO - Loop status: Iteration 4, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:13,511 - DEBUG - Scroll iteration 5 completed
+2025-12-31 10:46:13,529 - INFO - Loop status: Iteration 5, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:19,059 - DEBUG - Scroll iteration 6 completed
+2025-12-31 10:46:19,078 - INFO - Loop status: Iteration 6, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:19,078 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:46:26,145 - DEBUG - Scroll iteration 7 completed
+2025-12-31 10:46:26,161 - INFO - Loop status: Iteration 7, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:26,161 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:46:33,225 - DEBUG - Scroll iteration 8 completed
+2025-12-31 10:46:33,244 - INFO - Loop status: Iteration 8, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:33,244 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:46:40,284 - DEBUG - Scroll iteration 9 completed
+2025-12-31 10:46:40,303 - INFO - Loop status: Iteration 9, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:40,303 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:46:47,360 - DEBUG - Scroll iteration 10 completed
+2025-12-31 10:46:47,379 - INFO - Loop status: Iteration 10, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:47,379 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:46:54,428 - DEBUG - Scroll iteration 11 completed
+2025-12-31 10:46:54,443 - INFO - Loop status: Iteration 11, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:46:54,443 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:47:01,491 - DEBUG - Scroll iteration 12 completed
+2025-12-31 10:47:01,505 - INFO - Loop status: Iteration 12, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:47:01,505 - INFO - Stuck. Trying random jumps...
+2025-12-31 10:47:08,573 - DEBUG - Scroll iteration 13 completed
+2025-12-31 10:47:08,590 - INFO - Loop status: Iteration 13, Found 42/1005 items (+0 new valid, +0 raw)
+2025-12-31 10:47:08,590 - INFO - Scroll stagnant for 10 iterations. Assuming end of feed.
+2025-12-31 10:47:08,590 - INFO - Scraping loop finished. Found 42 items.
+2025-12-31 10:47:08,591 - INFO - Scraping found 42 unique valid links.
+2025-12-31 10:48:35,376 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2025-12-31 10:48:37,337 - DEBUG - Using proactor: IocpProactor
+2025-12-31 10:48:38,372 - INFO - Playwright visiting: https://www.pinterest.com/pin/11399805459024352/
+2025-12-31 10:48:38,373 - INFO - Scraping target limit (max_entries): 15
+2025-12-31 10:48:39,958 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2025-12-31 10:48:39,976 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2025-12-31 10:48:45,529 - DEBUG - Scroll iteration 1 completed
+2025-12-31 10:48:45,580 - INFO - Loop status: Iteration 1, Found 7/15 items (+7 new valid, +33 raw)
+2025-12-31 10:48:51,130 - DEBUG - Scroll iteration 2 completed
+2025-12-31 10:48:51,248 - INFO - Loop status: Iteration 2, Found 24/15 items (+17 new valid, +34 raw)
+2025-12-31 10:48:51,248 - INFO - Scraping loop finished. Found 24 items.
+2025-12-31 10:48:51,248 - INFO - Scraping found 24 unique valid links.
+2025-12-31 10:55:40,905 - DEBUG - Using proactor: IocpProactor
+2025-12-31 10:55:41,947 - INFO - Playwright visiting: https://www.pinterest.com/pin/11399805459024352/
+2025-12-31 10:55:41,948 - INFO - Scraping target limit (max_entries): 15
+2025-12-31 10:55:43,484 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2025-12-31 10:55:43,496 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2025-12-31 10:55:49,071 - DEBUG - Scroll iteration 1 completed
+2025-12-31 10:55:49,116 - INFO - Loop status: Iteration 1, Found 11/15 items (+11 new valid, +42 raw)
+2025-12-31 10:55:54,840 - DEBUG - Scroll iteration 2 completed
+2025-12-31 10:55:54,890 - INFO - Loop status: Iteration 2, Found 24/15 items (+13 new valid, +26 raw)
+2025-12-31 10:55:54,890 - INFO - Scraping loop finished. Found 24 items.
+2025-12-31 10:55:54,890 - INFO - Scraping found 24 unique valid links.
+2025-12-31 10:56:11,551 - INFO - Starting yt-dlp download for https://www.instagram.com/long_manin/reel/DSzvFv4kUQz to E:/mmo/building-page/tree kongdom\long_manin_reels
+2025-12-31 10:56:11,569 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2025-12-31 10:56:11,570 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2025-12-31 10:56:11,570 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2025-12-31 10:56:14,812 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\long_manin_reels\Video by long_manin_DSzvFv4kUQz.txt
+2025-12-31 10:56:14,814 - INFO - Download completed: https://www.instagram.com/long_manin/reel/DSzvFv4kUQz
+2026-01-02 10:59:56,689 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-02 11:03:13,281 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-02 17:10:00,238 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-02 17:12:12,174 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 17:13:54,631 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 17:16:21,522 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 17:16:29,063 - DEBUG - Using proactor: IocpProactor
+2026-01-03 17:16:37,780 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:16:37,822 - INFO - Added 12 cookies to browser context.
+2026-01-03 17:16:38,244 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=100065034605957
+2026-01-03 17:16:38,244 - INFO - Scraping target limit (max_entries): 15
+2026-01-03 17:16:42,797 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-03 17:16:42,844 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-03 17:16:48,703 - DEBUG - Scroll iteration 1 completed
+2026-01-03 17:16:48,816 - INFO - Loop status: Iteration 1, Found 4/15 items (+4 new valid, +38 raw)
+2026-01-03 17:16:54,415 - DEBUG - Scroll iteration 2 completed
+2026-01-03 17:16:54,491 - INFO - Loop status: Iteration 2, Found 5/15 items (+1 new valid, +2 raw)
+2026-01-03 17:17:00,086 - DEBUG - Scroll iteration 3 completed
+2026-01-03 17:17:00,165 - INFO - Loop status: Iteration 3, Found 5/15 items (+0 new valid, +2 raw)
+2026-01-03 17:17:05,774 - DEBUG - Scroll iteration 4 completed
+2026-01-03 17:17:05,852 - INFO - Loop status: Iteration 4, Found 7/15 items (+2 new valid, +10 raw)
+2026-01-03 17:17:11,496 - DEBUG - Scroll iteration 5 completed
+2026-01-03 17:17:11,571 - INFO - Loop status: Iteration 5, Found 9/15 items (+2 new valid, +12 raw)
+2026-01-03 17:17:17,234 - DEBUG - Scroll iteration 6 completed
+2026-01-03 17:17:17,322 - INFO - Loop status: Iteration 6, Found 9/15 items (+0 new valid, +8 raw)
+2026-01-03 17:17:17,522 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/718100047241561 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,523 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1669999453965905 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,523 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2529573664111098 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,524 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/884574297903969 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,525 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4390364487868912 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,525 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/906067332596403 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,525 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1756587885014385 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,525 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1173666501495367 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,569 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,570 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,570 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,572 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1592862552026913 to E:/mmo/building-page/tree kongdom\profile.php_id100065034605957
+2026-01-03 17:17:17,575 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,575 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,575 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,578 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,578 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,579 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,579 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,579 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,579 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,580 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,580 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,581 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,581 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,582 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,582 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,583 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,583 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,584 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,586 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,586 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,586 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:17,615 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 17:17:17,615 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 17:17:17,616 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 17:17:23,987 - DEBUG - Scroll iteration 7 completed
+2026-01-03 17:17:26,578 - INFO - Loop status: Iteration 7, Found 10/15 items (+1 new valid, +11 raw)
+2026-01-03 17:17:30,294 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_1756587885014385.txt
+2026-01-03 17:17:30,298 - INFO - Download completed: https://www.facebook.com/reel/1756587885014385
+2026-01-03 17:17:32,235 - DEBUG - Scroll iteration 8 completed
+2026-01-03 17:17:32,306 - INFO - Loop status: Iteration 8, Found 10/15 items (+0 new valid, +6 raw)
+2026-01-03 17:17:37,912 - DEBUG - Scroll iteration 9 completed
+2026-01-03 17:17:37,915 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_1592862552026913.txt
+2026-01-03 17:17:37,918 - INFO - Download completed: https://www.facebook.com/reel/1592862552026913
+2026-01-03 17:17:37,988 - INFO - Loop status: Iteration 9, Found 11/15 items (+1 new valid, +5 raw)
+2026-01-03 17:17:38,986 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_906067332596403.txt
+2026-01-03 17:17:38,989 - INFO - Download completed: https://www.facebook.com/reel/906067332596403
+2026-01-03 17:17:40,811 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\\u1782\u17b7\u178f\u1798\u17bb\u17b7\u1785\u179b\u17bc\u179c\U0001f979_1173666501495367.txt
+2026-01-03 17:17:40,815 - INFO - Download completed: https://www.facebook.com/reel/1173666501495367
+2026-01-03 17:17:41,664 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_884574297903969.txt
+2026-01-03 17:17:41,667 - INFO - Download completed: https://www.facebook.com/reel/884574297903969
+2026-01-03 17:17:43,596 - DEBUG - Scroll iteration 10 completed
+2026-01-03 17:17:43,679 - INFO - Loop status: Iteration 10, Found 12/15 items (+1 new valid, +10 raw)
+2026-01-03 17:17:46,786 - ERROR - Download failed: [0;31mERROR:[0m [download] Got error: HTTPSConnectionPool(host='scontent.fpnh22-2.fna.fbcdn.net', port=443): Read timed out.
+2026-01-03 17:17:49,441 - DEBUG - Scroll iteration 11 completed
+2026-01-03 17:17:49,519 - INFO - Loop status: Iteration 11, Found 14/15 items (+2 new valid, +17 raw)
+2026-01-03 17:17:55,177 - DEBUG - Scroll iteration 12 completed
+2026-01-03 17:17:55,253 - INFO - Loop status: Iteration 12, Found 14/15 items (+0 new valid, +7 raw)
+2026-01-03 17:17:57,371 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_718100047241561.txt
+2026-01-03 17:17:57,374 - INFO - Download completed: https://www.facebook.com/reel/718100047241561
+2026-01-03 17:17:58,744 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_4390364487868912.txt
+2026-01-03 17:17:58,747 - INFO - Download completed: https://www.facebook.com/reel/4390364487868912
+2026-01-03 17:18:00,939 - DEBUG - Scroll iteration 13 completed
+2026-01-03 17:18:01,027 - INFO - Loop status: Iteration 13, Found 15/15 items (+1 new valid, +10 raw)
+2026-01-03 17:18:01,028 - INFO - Scraping loop finished. Found 15 items.
+2026-01-03 17:18:01,028 - INFO - Scraping found 15 unique valid links.
+2026-01-03 17:18:01,620 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id100065034605957\Video_1669999453965905.txt
+2026-01-03 17:18:01,623 - INFO - Download completed: https://www.facebook.com/reel/1669999453965905
+2026-01-03 19:53:35,133 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 19:53:58,954 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 19:54:57,837 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 21:15:32,894 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 21:16:02,988 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 21:45:35,355 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 21:45:40,533 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-03 21:45:44,378 - DEBUG - Using proactor: IocpProactor
+2026-01-03 21:45:45,294 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 21:45:45,342 - INFO - Added 12 cookies to browser context.
+2026-01-03 21:45:45,411 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61550324528480&sk=reels_tab
+2026-01-03 21:45:45,412 - INFO - Scraping target limit (max_entries): 15
+2026-01-03 21:45:49,192 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-03 21:45:49,214 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-03 21:45:54,774 - DEBUG - Scroll iteration 1 completed
+2026-01-03 21:45:54,880 - INFO - Loop status: Iteration 1, Found 1/15 items (+1 new valid, +30 raw)
+2026-01-03 21:46:00,430 - DEBUG - Scroll iteration 2 completed
+2026-01-03 21:46:00,454 - INFO - Loop status: Iteration 2, Found 1/15 items (+0 new valid, +0 raw)
+2026-01-03 21:46:05,993 - DEBUG - Scroll iteration 3 completed
+2026-01-03 21:46:06,011 - INFO - Loop status: Iteration 3, Found 1/15 items (+0 new valid, +1 raw)
+2026-01-03 21:46:11,554 - DEBUG - Scroll iteration 4 completed
+2026-01-03 21:46:11,595 - INFO - Loop status: Iteration 4, Found 20/15 items (+19 new valid, +19 raw)
+2026-01-03 21:46:11,595 - INFO - Scraping loop finished. Found 20 items.
+2026-01-03 21:46:11,595 - INFO - Scraping found 20 unique valid links.
+2026-01-03 21:46:58,082 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3891562807773426 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2026-01-03 21:46:58,085 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1817245515487209 to E:/mmo/building-page/tree kongdom\profile.php_id61550324528480
+2026-01-03 21:46:58,098 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 21:46:58,098 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 21:46:58,099 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 21:46:58,101 - WARNING - FFmpeg not found! Fallback to 'best' single file format to avoid merging.
+2026-01-03 21:46:58,101 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-03 21:46:58,101 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-03 21:47:02,275 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_1817245515487209.txt
+2026-01-03 21:47:02,279 - INFO - Download completed: https://www.facebook.com/reel/1817245515487209
+2026-01-03 21:47:06,182 - INFO - Caption saved to: E:\mmo\building-page\tree kongdom\profile.php_id61550324528480\Video_3891562807773426.txt
+2026-01-03 21:47:06,186 - INFO - Download completed: https://www.facebook.com/reel/3891562807773426
+2026-01-04 08:29:28,583 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-04 08:29:33,261 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-04 08:29:43,699 - DEBUG - Using proactor: IocpProactor
+2026-01-04 08:29:45,007 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-04 08:29:45,031 - INFO - Added 12 cookies to browser context.
+2026-01-04 08:29:45,569 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61550324528480&sk=reels_tab
+2026-01-04 08:29:45,569 - INFO - Scraping target limit (max_entries): 15
+2026-01-04 08:29:49,489 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-04 08:29:49,506 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-04 08:29:55,200 - DEBUG - Scroll iteration 1 completed
+2026-01-04 08:29:55,279 - INFO - Loop status: Iteration 1, Found 0/15 items (+0 new valid, +25 raw)
+2026-01-04 08:30:00,811 - DEBUG - Scroll iteration 2 completed
+2026-01-04 08:30:00,836 - INFO - Loop status: Iteration 2, Found 0/15 items (+0 new valid, +0 raw)
+2026-01-04 08:30:06,380 - DEBUG - Scroll iteration 3 completed
+2026-01-04 08:30:06,403 - INFO - Loop status: Iteration 3, Found 4/15 items (+4 new valid, +4 raw)
+2026-01-04 08:30:11,945 - DEBUG - Scroll iteration 4 completed
+2026-01-04 08:30:11,999 - INFO - Loop status: Iteration 4, Found 34/15 items (+30 new valid, +30 raw)
+2026-01-04 08:30:11,999 - INFO - Scraping loop finished. Found 34 items.
+2026-01-04 08:30:12,000 - INFO - Scraping found 34 unique valid links.
