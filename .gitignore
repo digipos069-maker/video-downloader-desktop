@@ -2,3 +2,4 @@
 /build/*
 VideoDownloader.spec
 installer.cfg
+playwright-browsers/

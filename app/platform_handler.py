@@ -151,7 +151,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 logging.error(f"Error launching browser: {e}")
                 # Try to give a hint about the error
                 if "Executable doesn't exist" in str(e):
-                    logging.error("Playwright cannot find the browser. In a frozen app, you may need to set PLAYWRIGHT_BROWSERS_PATH.")
+                    logging.error("Playwright cannot find the browser. Please ensure the 'playwright-browsers' folder is in the app directory.")
                 return [{'url': url, 'title': 'Error: Browser Launch Failed', 'type': 'error'}]
 
             context = browser.new_context(
@@ -871,6 +871,8 @@ def extract_pinterest_direct_url(url):
                 browser = p.chromium.launch(headless=True)
             except Exception as e:
                 logging.error(f"Error launching browser: {e}")
+                if "Executable doesn't exist" in str(e):
+                    logging.error("Playwright cannot find the browser. Please ensure the 'playwright-browsers' folder is in the app directory.")
                 return None
 
             # Use a mobile user agent to potentially get a simpler page structure
@@ -991,6 +993,8 @@ def extract_pinterest_image_url(url):
                 browser = p.chromium.launch(headless=True)
             except Exception as e:
                 logging.error(f"Error launching browser: {e}")
+                if "Executable doesn't exist" in str(e):
+                    logging.error("Playwright cannot find the browser. Please ensure the 'playwright-browsers' folder is in the app directory.")
                 return None
 
             # Use a mobile user agent to potentially get a simpler page structure

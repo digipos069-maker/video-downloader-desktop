@@ -88,8 +88,18 @@ def main():
     os.environ["PATH"] += os.pathsep + app_path
     
     # Ensure Playwright can find browsers (Critical for Frozen/EXE)
-    if "PLAYWRIGHT_BROWSERS_PATH" not in os.environ:
-        # Default location on Windows
+    # 1. Check for bundled browsers next to executable or in _internal
+    bundled_browsers = os.path.join(app_path, 'playwright-browsers')
+    internal_browsers = os.path.join(app_path, '_internal', 'playwright-browsers')
+    
+    if os.path.exists(bundled_browsers):
+        os.environ["PLAYWRIGHT_BROWSERS_PATH"] = bundled_browsers
+        # print(f"Using bundled browsers at: {bundled_browsers}")
+    elif os.path.exists(internal_browsers):
+         os.environ["PLAYWRIGHT_BROWSERS_PATH"] = internal_browsers
+         # print(f"Using internal browsers at: {internal_browsers}")
+    elif "PLAYWRIGHT_BROWSERS_PATH" not in os.environ:
+        # 2. Fallback: Default location on Windows (Development / User Install)
         default_pw_path = os.path.join(os.environ.get('LOCALAPPDATA', ''), 'ms-playwright')
         if os.path.exists(default_pw_path):
             os.environ["PLAYWRIGHT_BROWSERS_PATH"] = default_pw_path

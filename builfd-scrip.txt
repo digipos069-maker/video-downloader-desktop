@@ -1,0 +1,7 @@
+python -m PyInstaller --noconfirm --onedir --windowed `
+--add-data "app/resources;app/resources" `
+--add-data "playwright-browsers;playwright-browsers" `
+--add-binary "ffmpeg.exe;." `
+--collect-all playwright `
+--icon "app/resources/images/logo.ico" `
+main.py
