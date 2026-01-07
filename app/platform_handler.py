@@ -51,23 +51,26 @@ def is_valid_media_link(href, domain):
     elif 'instagram.com' in domain:
         return '/p/' in href or '/reel/' in href or '/reels/' in href or '/tv/' in href
     elif 'facebook.com' in domain:
-         # Must be a specific video/reel, not just the feed
-         # Accepted patterns:
-         # /watch?v=...
-         # /videos/...
-         # /reel/...
-         # /share/v/... (New sharing format)
-         # /story.php?story_fbid=... (Old format)
-         
-         if '/watch' in href: return True
-         if '/videos/' in href: return True
-         if '/reel/' in href: return True
-         if '/share/' in href: return True
-         if 'story.php' in href: return True
-         
-         # fb.watch short links
-         if 'fb.watch' in href: return True
-         return False
+        # These are direct video/reel links and are always valid
+        if '/watch' in href or '/videos/' in href or '/reel/' in href:
+            return True
+        # Story links are valid
+        if 'story.php' in href:
+            return True
+        # fb.watch short links are valid
+        if 'fb.watch' in href:
+             return True
+             
+        # Exclude common non-video pages to avoid false positives from the scraper
+        if any(x in href for x in ['/photo.php', '/photo/', 'sk=photos', 'sk=about', 'sk=followers', 'sk=following', 'php?id=']):
+            return False
+            
+        # A simple path without a specific video indicator is usually a profile link, not a video
+        # We allow them to be passed to the handler, but the scraper shouldn't treat them as media
+        # Let the handler logic decide if it's a page to be scraped.
+        # This part of the logic is tricky, so we rely on the positive indicators above.
+        # If no specific video pattern is found, we assume it's not a direct media link.
+        return False
     
     return False
 
@@ -258,10 +261,9 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                 lowText.includes('skip to main') ||
                                 lowText === 'skip') return;
                             
-                            // Normalize URL for deduplication (strip query params)
-                            const cleanUrl = item.url.split('?')[0].replace(/\\/$/, "");
-                            if (!unique.has(cleanUrl)) {
-                                unique.set(cleanUrl, item);
+                            // DO NOT aggressively normalize URL here, let python handle it.
+                            if (!unique.has(item.url)) {
+                                unique.set(item.url, item);
                             }
                         });
 
@@ -337,8 +339,12 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                             all_seen_links.add(href)
                             raw_new_items += 1
                         
-                        # Normalize URL for de-duplication
-                        clean_href = href.split('#')[0].split('?')[0].rstrip('/')
+                        # For Facebook/Insta, DO NOT strip query params aggressively if they contain video IDs
+                        if 'facebook.com' in domain:
+                             clean_href = href
+                        else:
+                             # Normalize URL for de-duplication (strip query params)
+                             clean_href = href.split('#')[0].split('?')[0].rstrip('/')
                         
                         # Basic filtering
                         if clean_href in unique_urls: continue
@@ -509,6 +515,47 @@ def extract_metadata_with_ytdlp(url, max_entries=100, settings={}, callback=None
 
     return results
 
+class SafeYoutubeDL(yt_dlp.YoutubeDL):
+    """
+    Subclass of YoutubeDL to enforce stricter filename sanitization for Windows/OneDrive.
+    """
+    def prepare_filename(self, info_dict, *args, **kwargs):
+        try:
+            # Pass all arguments to the superclass method
+            original_path = super().prepare_filename(info_dict, *args, **kwargs)
+        except Exception as e:
+            logging.warning(f"SafeYoutubeDL: super().prepare_filename failed: {e}. Using fallback.")
+            # Fallback: simple Title.ext
+            filename = f"{info_dict.get('title', 'video')}.{info_dict.get('ext', 'mp4')}"
+            # Try to find output directory from params
+            outtmpl = self.params.get('outtmpl', {})
+            if isinstance(outtmpl, dict):
+                template = outtmpl.get('default', '.')
+            else:
+                template = outtmpl
+            directory = os.path.dirname(template) if template else '.'
+            original_path = os.path.join(directory, filename)
+        
+        # Split into directory and filename
+        directory, filename = os.path.split(original_path)
+        
+        # Sanitize filename
+        # 1. Replace Full-width Pipe (｜) and standard pipe (|) with dash
+        filename = filename.replace('｜', '-').replace('|', '-')
+        
+        # 2. Strip other potentially dangerous characters for Windows/OneDrive
+        # < > : " / \ | ? *
+        filename = re.sub(r'[<>:"/\\|?*]', '-', filename)
+        
+        # 3. Trim whitespace
+        filename = filename.strip()
+        
+        # 4. Ensure it doesn't end with a dot (Windows issue)
+        if filename.endswith('.'):
+            filename = filename[:-1]
+            
+        return os.path.join(directory, filename)
+
 def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     """
     Helper to download video using yt-dlp.
@@ -521,31 +568,50 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     resolution = settings.get('resolution', 'Best Available')
 
     # Check for FFmpeg
-    ffmpeg_available = shutil.which('ffmpeg') is not None
+    ffmpeg_available = False
     ffmpeg_location = None
     
-    # Check if ffmpeg is in current directory or executable directory (for frozen app)
-    if not ffmpeg_available:
-        # Define potential paths where the user might have put ffmpeg.exe
-        exe_dir = os.path.dirname(sys.executable if getattr(sys, 'frozen', False) else sys.argv[0])
-        potential_paths = [
-            os.path.join(os.getcwd(), 'ffmpeg.exe'),
-            os.path.join(exe_dir, 'ffmpeg.exe'),
-            os.path.join(exe_dir, '_internal', 'ffmpeg.exe'), # For PyInstaller one-dir
-            os.path.join(exe_dir, 'ffmpeg', 'bin', 'ffmpeg.exe') # Common manual install path
-        ]
-        
-        logging.info(f"Searching for FFmpeg in: {potential_paths}")
-        
-        for p in potential_paths:
-            if os.path.exists(p):
+    # Priority 1: Check in the same directory as the executable (Frozen app / PyInstaller)
+    if getattr(sys, 'frozen', False):
+        exe_dir = os.path.dirname(sys.executable)
+        bundled_ffmpeg = os.path.join(exe_dir, 'ffmpeg.exe')
+        if os.path.exists(bundled_ffmpeg):
+            ffmpeg_location = bundled_ffmpeg
+            ffmpeg_available = True
+            logging.info(f"Found bundled FFmpeg at: {ffmpeg_location}")
+        else:
+            # Check _internal for one-dir mode if not in root
+            internal_ffmpeg = os.path.join(exe_dir, '_internal', 'ffmpeg.exe')
+            if os.path.exists(internal_ffmpeg):
+                ffmpeg_location = internal_ffmpeg
                 ffmpeg_available = True
-                ffmpeg_location = p
-                logging.info(f"Found FFmpeg at: {ffmpeg_location}")
-                break
+                logging.info(f"Found bundled FFmpeg at: {ffmpeg_location}")
+
+    # Priority 2: Check in project/current directory (Dev / Fallback)
+    if not ffmpeg_available:
+        cwd_ffmpeg = os.path.join(os.getcwd(), 'ffmpeg.exe')
+        # Also check app directory if different
+        app_dir_ffmpeg = os.path.join(get_app_path(), 'ffmpeg.exe')
+        
+        if os.path.exists(cwd_ffmpeg):
+            ffmpeg_location = cwd_ffmpeg
+            ffmpeg_available = True
+            logging.info(f"Found CWD FFmpeg at: {ffmpeg_location}")
+        elif os.path.exists(app_dir_ffmpeg):
+            ffmpeg_location = app_dir_ffmpeg
+            ffmpeg_available = True
+            logging.info(f"Found App Dir FFmpeg at: {ffmpeg_location}")
+
+    # Priority 3: System PATH
+    if not ffmpeg_available:
+        if shutil.which('ffmpeg'):
+            ffmpeg_available = True
+            logging.info("FFmpeg found in system PATH.")
+        else:
+            logging.warning("FFmpeg NOT found in bundled dir, CWD, or PATH.")
 
     if not ffmpeg_available:
-        logging.warning(f"FFmpeg not found in PATH or {potential_paths}. Fallback to 'best' single file format to avoid merging.")
+        logging.warning(f"FFmpeg not found. Fallback to 'best' single file format to avoid merging.")
 
     # Define filename template based on naming style
     if settings.get('forced_filename'):
@@ -586,7 +652,10 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         'progress_hooks': [ydl_progress_hook],
         'quiet': True,
         'no_warnings': True,
-        'noplaylist': True, 
+        'noplaylist': True,
+        'overwrites': True, # Force overwrite to prevent WinError 32 on rename
+        'restrictfilenames': False, # We handle sanitization manually in SafeYoutubeDL
+        'windowsfilenames': True,   # Enforce Windows-compatible filenames
     }
     
     if ffmpeg_location:
@@ -664,7 +733,8 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             ydl_opts['format'] = 'best'
     
     try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        # Use SafeYoutubeDL subclass for stricter filename sanitization
+        with SafeYoutubeDL(ydl_opts) as ydl:
             # Use extract_info with download=True to get metadata AND download
             try:
                 info = ydl.extract_info(url, download=True)
@@ -706,6 +776,8 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         progress_callback(100)
         return True
     except Exception as e:
+        import traceback
+        logging.error(f"Download failed detailed: {traceback.format_exc()}")
         msg = str(e)
         # Check if we should suppress specific expected errors (e.g. Pinterest images)
         is_expected_error = "No video formats found" in msg or "Requested format is not available" in msg
@@ -1214,7 +1286,22 @@ class PinterestHandler(BaseHandler):
 
 class FacebookHandler(BaseHandler):
     def can_handle(self, url):
-        return 'facebook.com' in url or 'fb.watch' in url
+        # Use regex to be more specific about valid Facebook video/reel URLs
+        # This handles:
+        # - /videos/some_id
+        # - /reel/some_id
+        # - /watch/?v=some_id
+        # - fb.watch/shortlink
+        # - /story.php?story_fbid=...
+        # - profile/page URLs with sk=videos or sk=reels_tab for scraping
+        pattern = re.compile(
+            r'facebook\.com/(?:video\.php\?v=|watch/?\?v=|reel/|story\.php\?story_fbid=|[^/]+/videos/|[^/]+/reels/)|fb\.watch/'
+        )
+        # Also allow profile pages that are specifically for videos/reels to be handled for scraping
+        if 'sk=videos' in url or 'sk=reels_tab' in url:
+            return True
+            
+        return pattern.search(url) is not None
 
     def get_metadata(self, url):
         # Prefer Playwright for Facebook metadata as yt-dlp often fails on profiles/reels

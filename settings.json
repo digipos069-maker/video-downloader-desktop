@@ -2,7 +2,7 @@
     "video": {
         "enabled": true,
         "top": true,
-        "count": 10,
+        "count": 5,
         "all": false,
         "resolution": "Best Available"
     },
@@ -17,7 +17,7 @@
         "extension": "Best",
         "naming": "Video + Caption (.txt)",
         "subtitles": false,
-        "video_path": "E:/mmo/building-page/tree kongdom",
+        "video_path": "C:/Users/USER/Downloads",
         "photo_path": "E:/test"
     },
     "system": {
