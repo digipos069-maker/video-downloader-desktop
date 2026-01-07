@@ -16,6 +16,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Social download manager")
         self.resize(1280, 720)
         
+        # Set Window Icon
+        logo_path = resource_path(os.path.join("app", "resources", "images", "logo.png"))
+        if os.path.exists(logo_path):
+            self.setWindowIcon(QIcon(logo_path))
+        
         # Frameless window for custom title bar
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground) # Optional, for rounded corners if needed
@@ -106,7 +111,19 @@ def main():
             # print(f"Set PLAYWRIGHT_BROWSERS_PATH to: {default_pw_path}")
     
     app = QApplication(sys.argv)
-
+    
+    # --- Set App Icon (Taskbar & Window) ---
+    logo_path = resource_path(os.path.join("app", "resources", "images", "logo.png"))
+    if os.path.exists(logo_path):
+        app_icon = QIcon(logo_path)
+        app.setWindowIcon(app_icon)
+        
+        # Windows Taskbar Icon Fix (App User Model ID)
+        if sys.platform == 'win32':
+            import ctypes
+            myappid = 'com.video.downloader.sdm.v1' # Arbitrary string
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    
     # --- Splash Screen Setup ---
     # Create a pixmap for the splash screen
     splash_pix = QPixmap(400, 300)

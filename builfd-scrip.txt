@@ -3,5 +3,6 @@ python -m PyInstaller --noconfirm --onedir --windowed `
 --add-data "playwright-browsers;playwright-browsers" `
 --add-binary "ffmpeg.exe;." `
 --collect-all playwright `
+--name "sdm" `
 --icon "app/resources/images/logo.ico" `
 main.py
