@@ -14428,3 +14428,47 @@ TypeError: SafeYoutubeDL.prepare_filename() takes 2 positional arguments but 3 w
 2026-01-08 16:19:18,397 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id
 2026-01-08 16:19:23,711 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DSy-d6Dk1xX.txt
 2026-01-08 16:19:23,714 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 16:26:37,772 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=oRFLkN4CoaE to C:/Users/USER/Downloads\ovloeuk
+2026-01-08 16:26:37,773 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:37,773 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2026-01-08 16:26:37,773 - DEBUG - No cookies configured for download.
+2026-01-08 16:26:37,775 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=NNnnVzfZg8o to C:/Users/USER/Downloads\ovloeuk
+2026-01-08 16:26:37,775 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:37,775 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2026-01-08 16:26:37,775 - DEBUG - No cookies configured for download.
+2026-01-08 16:26:37,776 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:26:37,777 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:26:37,777 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:37,777 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:26:37,816 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:26:37,817 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:26:37,817 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:26:37,847 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:37,847 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:37,895 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:26:37,895 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:26:38,021 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:38,052 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:26:38,220 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:26:38,220 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:26:38,220 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:26:38,221 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:26:38,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:26:38,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:26:38,222 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:26:42,425 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTKjvLxE9rn.txt
+2026-01-08 16:26:42,429 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn
+2026-01-08 16:26:44,151 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DS3vwnqkwRL.txt
+2026-01-08 16:26:44,154 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
+2026-01-08 16:26:49,152 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTO5EbTE4QL.txt
+2026-01-08 16:26:49,154 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
+2026-01-08 16:26:53,244 - INFO - Caption saved to: C:\Users\USER\Downloads\ovloeuk\YAN SOCHEATAA ~ \u17a2\u178f\u17b8\u178f\u17a2\u17bc\u1793 (Lyrics)_oRFLkN4CoaE.txt
+2026-01-08 16:26:53,247 - INFO - Download completed: https://www.youtube.com/watch?v=oRFLkN4CoaE
+2026-01-08 16:26:59,745 - INFO - Caption saved to: C:\Users\USER\Downloads\ovloeuk\KHIM & SIM CHANDARA, BLACK OWL ~ \u17a2\u1793\u17b6\u1782\u178f\u1794\u17d2\u179a\u1796\u1793\u17d2\u1792\u1794\u1784 (Lyrics)_NNnnVzfZg8o.txt
+2026-01-08 16:26:59,748 - INFO - Download completed: https://www.youtube.com/watch?v=NNnnVzfZg8o
+2026-01-08 16:27:02,747 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DSy-d6Dk1xX.txt
+2026-01-08 16:27:02,750 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 16:27:05,122 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTHk19qk1gg.txt
+2026-01-08 16:27:05,126 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg
+2026-01-08 16:27:46,323 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 16:27:49,447 - ERROR - Update check failed: HTTP Error 404: Not Found
