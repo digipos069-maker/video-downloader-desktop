@@ -1861,8 +1861,17 @@ class DownloaderTab(QWidget):
         # Update Table
         if item_id in self.activity_row_map:
             row = self.activity_row_map[item_id]
-            status = "Completed" if success else "Failed"
-            self.activity_table.setItem(row, 3, QTableWidgetItem(status))
+            
+            # Smart Status Update: Don't overwrite specific statuses like "Already Downloaded"
+            current_status_item = self.activity_table.item(row, 3)
+            current_text = current_status_item.text() if current_status_item else ""
+            
+            new_status = "Completed" if success else "Failed"
+            
+            if success and current_text == "Already Downloaded":
+                new_status = current_text # Keep it
+            
+            self.activity_table.setItem(row, 3, QTableWidgetItem(new_status))
             
             pb = self.activity_table.cellWidget(row, 8)
             if pb:
