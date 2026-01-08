@@ -28,10 +28,21 @@ class DownloadWorker(QRunnable):
         """
         self.signals.status.emit(self.item_id, f"Starting download for {self.url}")
         try:
-            success = self.handler.download(
+            result = self.handler.download(
                 {'url': self.url, 'settings': self.settings},
                 self.progress_callback
             )
+            
+            # Handle tuple return (success, status_msg) or legacy bool
+            if isinstance(result, tuple):
+                success, status_msg = result
+            else:
+                success = result
+                status_msg = "Completed" if success else "Failed"
+
+            if status_msg:
+                self.signals.status.emit(self.item_id, status_msg)
+                
             self.signals.finished.emit(self.item_id, success)
         except Exception as e:
             self.signals.status.emit(self.item_id, f"Error: {str(e)}")

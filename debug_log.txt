@@ -14251,3 +14251,180 @@ TypeError: SafeYoutubeDL.prepare_filename() takes 2 positional arguments but 3 w
 2026-01-08 15:38:28,998 - ERROR - Update check failed: HTTP Error 404: Not Found
 2026-01-08 15:38:32,864 - ERROR - Update check failed: HTTP Error 404: Not Found
 2026-01-08 15:38:37,387 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 16:05:29,536 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 16:05:32,156 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 16:05:56,730 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 16:05:58,404 - INFO - Attempting metadata extraction with yt-dlp for: https://www.youtube.com/@ovloeuk
+2026-01-08 16:05:58,404 - DEBUG - Cookie setup (metadata): File='None', Browser='None'
+2026-01-08 16:05:58,404 - DEBUG - No cookies configured for metadata extraction.
+2026-01-08 16:06:00,076 - INFO - yt-dlp found 10 entries.
+2026-01-08 16:14:52,400 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=kN8BQhTdlRA to C:/Users/USER/Downloads\ovloeuk
+2026-01-08 16:14:52,401 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=xY2kEfAwtvU to C:/Users/USER/Downloads\ovloeuk
+2026-01-08 16:14:52,402 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:14:52,402 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2026-01-08 16:14:52,402 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:14:52,403 - DEBUG - No cookies configured for download.
+2026-01-08 16:14:52,403 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2026-01-08 16:14:52,405 - DEBUG - No cookies configured for download.
+2026-01-08 16:14:52,457 - INFO - Starting yt-dlp download for https://www.youtube.com/watch?v=CoZ12S4vWcA to C:/Users/USER/Downloads\ovloeuk
+2026-01-08 16:14:52,489 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:14:52,552 - DEBUG - Cookie setup (download): File='None', Browser='None'
+2026-01-08 16:14:52,581 - DEBUG - No cookies configured for download.
+2026-01-08 16:15:04,110 - INFO - Caption saved to: C:\Users\USER\Downloads\ovloeuk\CHIWAWA ~ \u1798\u17c9\u17c2\u1796\u17c1\u179b\u1785\u1794\u17cb\u179f\u1784\u17d2\u1782\u17d2\u179a\u17b6\u1798\u1796\u17bb\u1780\u1798\u1780\u179c\u17b7\u1789\u1791\u17c1 (Lyrics)_CoZ12S4vWcA.txt
+2026-01-08 16:15:04,113 - INFO - Download completed: https://www.youtube.com/watch?v=CoZ12S4vWcA
+2026-01-08 16:15:04,729 - INFO - Caption saved to: C:\Users\USER\Downloads\ovloeuk\NICO (\u1793\u17b8\u1780\u17bc) ~ \u1794\u1793\u17d2\u178f\u17b7\u1785\u1791\u17c0\u178f (Lyrics)_xY2kEfAwtvU.txt
+2026-01-08 16:15:04,732 - INFO - Download completed: https://www.youtube.com/watch?v=xY2kEfAwtvU
+2026-01-08 16:15:05,153 - INFO - Caption saved to: C:\Users\USER\Downloads\ovloeuk\JANE ~ \u1780\u17b6\u179a\u1788\u17ba\u1785\u17b6\u1794\u17cb\u1782\u17d2\u1798\u17b6\u1793\u179f\u17c6\u17a1\u17c1\u1784 (Lyrics)_kN8BQhTdlRA.txt
+2026-01-08 16:15:05,156 - INFO - Download completed: https://www.youtube.com/watch?v=kN8BQhTdlRA
+2026-01-08 16:16:04,252 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 16:16:06,414 - DEBUG - Using proactor: IocpProactor
+2026-01-08 16:16:07,321 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:07,367 - INFO - Added 10 cookies to browser context.
+2026-01-08 16:16:07,443 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 16:16:07,443 - INFO - Scraping target limit (max_entries): 10
+2026-01-08 16:16:10,409 - INFO - Starting scroll loop. Planned iterations: 5 for max 10 items.
+2026-01-08 16:16:10,419 - INFO - Starting dynamic scroll loop. Target: 10 items.
+2026-01-08 16:16:13,421 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 16:16:16,037 - DEBUG - Scroll iteration 1 completed
+2026-01-08 16:16:16,094 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 16:16:16,094 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 16:16:16,095 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 16:16:16,098 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 16:16:16,104 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 16:16:16,104 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 16:16:16,108 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 16:16:16,108 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 16:16:16,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 16:16:16,115 - INFO - Loop status: Iteration 1, Found 26/10 items (+26 new valid, +50 raw)
+2026-01-08 16:16:16,115 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 16:16:16,115 - INFO - Scraping found 26 unique valid links.
+2026-01-08 16:16:23,510 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:16:23,510 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:16:23,511 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:16:23,511 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:23,512 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:16:23,512 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:16:23,513 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:16:23,514 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:16:23,514 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:16:23,520 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:16:23,520 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:23,536 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:16:23,568 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:16:23,568 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:16:23,626 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:16:23,626 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:16:23,632 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:23,679 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:16:23,726 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:23,749 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:16:28,023 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTKjvLxE9rn.txt
+2026-01-08 16:16:28,026 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn
+2026-01-08 16:16:29,047 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DS3vwnqkwRL.txt
+2026-01-08 16:16:29,050 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
+2026-01-08 16:16:34,095 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTO5EbTE4QL.txt
+2026-01-08 16:16:34,098 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
+2026-01-08 16:16:43,695 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DSy-d6Dk1xX.txt
+2026-01-08 16:16:43,697 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 16:16:46,869 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTHk19qk1gg.txt
+2026-01-08 16:16:46,872 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg
+2026-01-08 16:17:40,022 - DEBUG - Using proactor: IocpProactor
+2026-01-08 16:17:40,893 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:17:40,938 - INFO - Added 10 cookies to browser context.
+2026-01-08 16:17:41,009 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 16:17:41,009 - INFO - Scraping target limit (max_entries): 10
+2026-01-08 16:17:41,769 - INFO - Starting scroll loop. Planned iterations: 5 for max 10 items.
+2026-01-08 16:17:41,781 - INFO - Starting dynamic scroll loop. Target: 10 items.
+2026-01-08 16:17:47,323 - DEBUG - Scroll iteration 1 completed
+2026-01-08 16:17:47,379 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 16:17:47,379 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 16:17:47,380 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 16:17:47,384 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 16:17:47,389 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 16:17:47,389 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 16:17:47,391 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 16:17:47,391 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 16:17:47,395 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 16:17:47,395 - INFO - Loop status: Iteration 1, Found 26/10 items (+26 new valid, +50 raw)
+2026-01-08 16:17:47,395 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 16:17:47,396 - INFO - Scraping found 26 unique valid links.
+2026-01-08 16:18:21,724 - DEBUG - Using proactor: IocpProactor
+2026-01-08 16:18:22,612 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:18:22,651 - INFO - Added 10 cookies to browser context.
+2026-01-08 16:18:22,725 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 16:18:22,725 - INFO - Scraping target limit (max_entries): 11
+2026-01-08 16:18:23,459 - INFO - Starting scroll loop. Planned iterations: 5 for max 11 items.
+2026-01-08 16:18:23,480 - INFO - Starting dynamic scroll loop. Target: 11 items.
+2026-01-08 16:18:29,035 - DEBUG - Scroll iteration 1 completed
+2026-01-08 16:18:29,081 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 16:18:29,082 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 16:18:29,083 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 16:18:29,086 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 16:18:29,091 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 16:18:29,091 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 16:18:29,092 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 16:18:29,092 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 16:18:29,096 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 16:18:29,096 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 16:18:29,096 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 16:18:29,097 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 16:18:29,097 - INFO - Loop status: Iteration 1, Found 26/11 items (+26 new valid, +50 raw)
+2026-01-08 16:18:29,097 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 16:18:29,097 - INFO - Scraping found 26 unique valid links.
+2026-01-08 16:18:41,896 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:18:41,897 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:18:41,898 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:18:41,898 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:18:41,898 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:18:41,899 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:18:41,899 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:18:41,899 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:18:41,899 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:18:41,900 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:18:41,900 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:18:41,900 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:18:45,217 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTKjvLxE9rn.txt
+2026-01-08 16:18:45,220 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn
+2026-01-08 16:18:47,281 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTO5EbTE4QL.txt
+2026-01-08 16:18:47,284 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
+2026-01-08 16:18:55,645 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DTHk19qk1gg.txt
+2026-01-08 16:18:55,648 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg
+2026-01-08 16:19:12,557 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:19:12,557 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:19:12,558 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:19:12,558 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:19:12,558 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:19:12,559 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 16:19:12,559 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:19:12,559 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:19:12,560 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 16:19:12,560 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:19:12,561 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-08 16:19:12,598 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-08 16:19:15,660 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DS3vwnqkwRL.txt
+2026-01-08 16:19:15,664 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
+2026-01-08 16:19:18,393 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DSwa_a8E_Id.txt
+2026-01-08 16:19:18,397 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id
+2026-01-08 16:19:23,711 - INFO - Caption saved to: C:\Users\USER\Downloads\chhornsovannareach_reels\Video by chhornsovannareach_DSy-d6Dk1xX.txt
+2026-01-08 16:19:23,714 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX

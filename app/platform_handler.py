@@ -556,9 +556,20 @@ class SafeYoutubeDL(yt_dlp.YoutubeDL):
             
         return os.path.join(directory, filename)
 
+class YtDlpLogger:
+    def __init__(self):
+        self.skipped = False
+    def debug(self, msg):
+        if "[download] " in msg and "has already been downloaded" in msg:
+            self.skipped = True
+    def warning(self, msg): pass
+    def error(self, msg): pass
+    def info(self, msg): pass
+
 def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     """
     Helper to download video using yt-dlp.
+    Returns: (success: bool, status: str)
     """
     logging.info(f"Starting yt-dlp download for {url} to {output_path}")
     
@@ -647,16 +658,18 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             except Exception as e:
                 logging.error(f"Progress calculation error: {e}")
 
+    logger = YtDlpLogger()
+
     ydl_opts = {
         'outtmpl': outtmpl,
         'progress_hooks': [ydl_progress_hook],
         'quiet': True,
         'no_warnings': True,
         'noplaylist': True,
-        'overwrites': True, # Force overwrite to prevent WinError 32 on rename
-        'force_overwrites': True, # Explicitly force overwrite for newer yt-dlp versions
+        'nooverwrites': True, # Skip download if file already exists
         'restrictfilenames': False, # We handle sanitization manually in SafeYoutubeDL
         'windowsfilenames': True,   # Enforce Windows-compatible filenames
+        'logger': logger
     }
     
     if ffmpeg_location:
@@ -807,9 +820,15 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                 except Exception as e:
                     logging.error(f"Failed to save caption: {e}")
 
-        logging.info(f"Download completed: {url}")
-        progress_callback(100)
-        return True
+        if logger.skipped:
+            logging.info(f"Download skipped (already exists): {url}")
+            progress_callback(100) # Ensure UI shows 100%
+            return True, "Already Downloaded"
+        else:
+            logging.info(f"Download completed: {url}")
+            progress_callback(100)
+            return True, "Completed"
+
     except Exception as e:
         import traceback
         logging.error(f"Download failed detailed: {traceback.format_exc()}")
@@ -825,7 +844,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         # Re-raise to allow worker to capture the specific message
         if "Please close Chrome" in msg:
             raise e 
-        return False
+        return False, "Failed"
 
 def download_direct(url, output_path, title, progress_callback, settings={}):
     """
@@ -872,10 +891,10 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
 
         logging.info(f"Direct download completed: {full_path}")
         progress_callback(100)
-        return True
+        return True, "Completed"
     except Exception as e:
         logging.error(f"Direct download failed: {e}")
-        return False
+        return False, "Failed"
 
 import json
 
