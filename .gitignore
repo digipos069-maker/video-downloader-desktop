@@ -1,5 +1,23 @@
-/dist/*
-/build/*
-VideoDownloader.spec
+# Build Artifacts
+/dist/
+/build/
+*.spec
 installer.cfg
+
+# Dependencies & Environments
 playwright-browsers/
+venv/
+env/
+.env
+__pycache__/
+*.pyc
+
+# Logs & Debug
+*.log
+debug_log.txt
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+
