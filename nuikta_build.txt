@@ -1,0 +1,14 @@
+python -m nuitka `
+--standalone `
+--plugin-enable=pyside6 `
+--include-data-dir=assets=assets `
+--include-data-file=styles.qss=styles.qss `
+--windows-icon-from-ico=assets/logo/icon.ico `
+--windows-company-name="TeleTool" `
+--windows-product-name=“Social Donwload Manager `
+--windows-file-version=1.0.0.0 `
+--windows-product-version=26.0.0.3 `
+--windows-file-description="video Downloader " `
+--copyright="Copyright © 2026" `
+--output-filename=SDM `
+main.p

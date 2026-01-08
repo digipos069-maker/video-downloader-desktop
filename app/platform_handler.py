@@ -654,6 +654,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         'no_warnings': True,
         'noplaylist': True,
         'overwrites': True, # Force overwrite to prevent WinError 32 on rename
+        'force_overwrites': True, # Explicitly force overwrite for newer yt-dlp versions
         'restrictfilenames': False, # We handle sanitization manually in SafeYoutubeDL
         'windowsfilenames': True,   # Enforce Windows-compatible filenames
     }
@@ -735,14 +736,48 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     try:
         # Use SafeYoutubeDL subclass for stricter filename sanitization
         with SafeYoutubeDL(ydl_opts) as ydl:
-            # Use extract_info with download=True to get metadata AND download
-            try:
-                info = ydl.extract_info(url, download=True)
-            except DownloadError as e:
-                if "Could not copy Chrome cookie database" in str(e):
-                    raise Exception("Please close Chrome to allow cookie access, or use 'Cookies File' option.")
-                else:
-                    raise e # Re-raise other download errors
+            # Retry loop to handle WinError 183 (File Exists)
+            max_retries = 1
+            for attempt in range(max_retries + 1):
+                try:
+                    # Use extract_info with download=True to get metadata AND download
+                    try:
+                        info = ydl.extract_info(url, download=True)
+                        break # Success, exit loop
+                    except DownloadError as e:
+                        if "Could not copy Chrome cookie database" in str(e):
+                            raise Exception("Please close Chrome to allow cookie access, or use 'Cookies File' option.")
+                        else:
+                            raise e # Re-raise other download errors
+                except Exception as e:
+                    # Check for WinError 183 (File Exists during rename)
+                    msg = str(e)
+                    if "[WinError 183]" in msg and attempt < max_retries:
+                        logging.warning(f"WinError 183 detected (File Exists). Attempting cleanup and retry... ({attempt+1}/{max_retries})")
+                        try:
+                            # Extract path: '...temp.mp4' -> '...final.mp4'
+                            # Regex to find the destination path
+                            import re
+                            match = re.search(r"-> '(.+?)'", msg)
+                            if match:
+                                conflict_path = match.group(1)
+                                if os.path.exists(conflict_path):
+                                    logging.info(f"Deleting conflicting file: {conflict_path}")
+                                    try:
+                                        os.remove(conflict_path)
+                                    except PermissionError:
+                                        # If locked, try renaming the old file out of the way
+                                        trash_path = conflict_path + f".trash_{int(time.time())}"
+                                        os.rename(conflict_path, trash_path)
+                                        logging.info(f"Could not delete, moved to: {trash_path}")
+                                    
+                                    time.sleep(1) # Wait for FS to release
+                                    continue # Retry download
+                        except Exception as cleanup_e:
+                            logging.error(f"Cleanup failed: {cleanup_e}")
+                    
+                    # If not handled or retries exhausted, re-raise
+                    raise e
             
             # Handle Caption (.txt) generation
             if naming_style == 'Video + Caption (.txt)':

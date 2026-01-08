@@ -14135,3 +14135,79 @@ TypeError: SafeYoutubeDL.prepare_filename() takes 2 positional arguments but 3 w
 2026-01-05 15:27:32,220 - INFO - Download completed: https://www.facebook.com/reel/1071597551097556/?s=fb_shorts_profile&stack_idx=0
 2026-01-05 15:27:36,521 - INFO - Caption saved to: C:\Users\USER\Downloads\profile.php_id100093545089321\\u179a\u17bf\u1784\u200b\u179f\u17d2\u178f\u17c1\u1785\u179f\u1784\u17d2\u1782\u17d2\u179a\u17b6\u1798\u200b \u1797\u17b6\u1782\u17e3\u17e0_756445743365695.txt
 2026-01-05 15:27:36,524 - INFO - Download completed: https://www.facebook.com/reel/756445743365695/?s=fb_shorts_profile&stack_idx=0
+2026-01-07 23:03:07,396 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-07 23:03:29,589 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-07 23:03:31,846 - DEBUG - Using proactor: IocpProactor
+2026-01-07 23:03:33,311 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:33,356 - INFO - Added 11 cookies to browser context.
+2026-01-07 23:03:33,445 - INFO - Playwright visiting: https://www.instagram.com/p2h_store/reels/
+2026-01-07 23:03:33,445 - INFO - Scraping target limit (max_entries): 10
+2026-01-07 23:03:34,209 - INFO - Starting scroll loop. Planned iterations: 5 for max 10 items.
+2026-01-07 23:03:34,218 - INFO - Starting dynamic scroll loop. Target: 10 items.
+2026-01-07 23:03:39,767 - DEBUG - Scroll iteration 1 completed
+2026-01-07 23:03:39,843 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-07 23:03:39,843 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/p2h_store/followers/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/p2h_store/following/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18091161025368121/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/p2h_store/
+2026-01-07 23:03:39,844 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18233926525100910/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17903729144539952/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17935389752476185/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17922026327528639/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/p2h_store/tagged/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18048959950344032/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17984825566517825/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17962615711881316/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18150297505249586/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17907359753270954/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17942573761471850/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18128037841258639/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17916532108970611/
+2026-01-07 23:03:39,845 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-07 23:03:39,859 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-07 23:03:39,860 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-07 23:03:39,860 - INFO - Loop status: Iteration 1, Found 14/10 items (+14 new valid, +50 raw)
+2026-01-07 23:03:39,860 - INFO - Scraping loop finished. Found 14 items.
+2026-01-07 23:03:39,860 - INFO - Scraping found 14 unique valid links.
+2026-01-07 23:03:45,659 - INFO - Starting yt-dlp download for https://www.instagram.com/p2h_store/reel/DTNCpEwkq57 to C:/Users/USER/Downloads\p2h_store_reels
+2026-01-07 23:03:45,660 - INFO - Starting yt-dlp download for https://www.instagram.com/p2h_store/reel/DSeMYPOkitK to C:/Users/USER/Downloads\p2h_store_reels
+2026-01-07 23:03:45,660 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-07 23:03:45,661 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-07 23:03:45,661 - INFO - Starting yt-dlp download for https://www.instagram.com/p2h_store/reel/DSeMTcdEkLC to C:/Users/USER/Downloads\p2h_store_reels
+2026-01-07 23:03:45,661 - INFO - Starting yt-dlp download for https://www.instagram.com/p2h_store/reel/DSeMKkPkiJP to C:/Users/USER/Downloads\p2h_store_reels
+2026-01-07 23:03:45,662 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-07 23:03:45,662 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-07 23:03:45,662 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-07 23:03:45,662 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-07 23:03:45,663 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:45,663 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:45,663 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-07 23:03:45,663 - INFO - Starting yt-dlp download for https://www.instagram.com/p2h_store/reel/DTNiM1OEl1s to C:/Users/USER/Downloads\p2h_store_reels
+2026-01-07 23:03:45,664 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-07 23:03:45,665 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:45,665 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-07 23:03:45,666 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:45,666 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies.txt', Browser='chrome'
+2026-01-07 23:03:45,666 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies.txt
+2026-01-07 23:03:58,605 - INFO - Caption saved to: C:\Users\USER\Downloads\p2h_store_reels\Video by p2h_store_DTNiM1OEl1s.txt
+2026-01-07 23:03:58,607 - INFO - Download completed: https://www.instagram.com/p2h_store/reel/DTNiM1OEl1s
+2026-01-07 23:04:08,708 - INFO - Caption saved to: C:\Users\USER\Downloads\p2h_store_reels\Video by p2h_store_DTNCpEwkq57.txt
+2026-01-07 23:04:08,711 - INFO - Download completed: https://www.instagram.com/p2h_store/reel/DTNCpEwkq57
+2026-01-07 23:04:26,820 - INFO - Caption saved to: C:\Users\USER\Downloads\p2h_store_reels\Video by p2h_store_DSeMTcdEkLC.txt
+2026-01-07 23:04:26,823 - INFO - Download completed: https://www.instagram.com/p2h_store/reel/DSeMTcdEkLC
+2026-01-07 23:04:27,598 - INFO - Caption saved to: C:\Users\USER\Downloads\p2h_store_reels\Video by p2h_store_DSeMKkPkiJP.txt
+2026-01-07 23:04:27,602 - INFO - Download completed: https://www.instagram.com/p2h_store/reel/DSeMKkPkiJP
+2026-01-07 23:04:28,448 - INFO - Caption saved to: C:\Users\USER\Downloads\p2h_store_reels\Video by p2h_store_DSeMYPOkitK.txt
+2026-01-07 23:04:28,451 - INFO - Download completed: https://www.instagram.com/p2h_store/reel/DSeMYPOkitK
+2026-01-07 23:13:58,063 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-07 23:14:56,094 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-07 23:23:47,550 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
