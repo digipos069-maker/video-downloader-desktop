@@ -867,6 +867,12 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
         filename = f"{safe_title}{ext}"
         full_path = os.path.join(output_path, filename)
         
+        # Check if already exists
+        if os.path.exists(full_path):
+            logging.info(f"Direct download skipped (already exists): {full_path}")
+            progress_callback(100)
+            return True, "Already Downloaded"
+        
         if not os.path.exists(output_path):
             os.makedirs(output_path)
 
