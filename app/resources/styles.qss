@@ -216,7 +216,7 @@ QMenu {
 QMenu::item {
     color: #F4F4F5; /* Default text color */
     background-color: transparent; /* No background by default */
-    padding: 5px 15px; /* Padding for each item */
+    padding: 4px 20px 4px 5px; /* Reduced padding to tighten space */
     border-radius: 5px; /* Slightly rounded corners for items */
 }
 

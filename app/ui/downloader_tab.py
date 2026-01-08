@@ -1408,15 +1408,19 @@ class DownloaderTab(QWidget):
     def open_queue_context_menu(self, position):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
-        scrap_action = menu.addAction("🔍 Scrap Now")
+        
+        # Base path for action icons
+        icon_path = resource_path(os.path.join("app", "resources", "images", "icons", "action menu"))
+        
+        scrap_action = menu.addAction(QIcon(os.path.join(icon_path, "search.png")), "Scrap Now")
         scrap_action.triggered.connect(self.scrap_selected_queue_item)
         
-        copy_action = menu.addAction("📋 Copy URL")
+        copy_action = menu.addAction(QIcon(os.path.join(icon_path, "copy.png")), "Copy URL")
         copy_action.triggered.connect(self.copy_selected_queue_urls)
 
         menu.addSeparator()
         
-        delete_action = menu.addAction("🗑️ Delete")
+        delete_action = menu.addAction(QIcon(os.path.join(icon_path, "remove.png")), "Delete")
         delete_action.triggered.connect(self.delete_selected_queue_item)
         
         menu.exec(self.queue_table_widget.viewport().mapToGlobal(position))
@@ -1425,29 +1429,32 @@ class DownloaderTab(QWidget):
         from PySide6.QtWidgets import QMenu
         menu = QMenu()
         
+        # Base path for action icons
+        icon_path = resource_path(os.path.join("app", "resources", "images", "icons", "action menu"))
+        
         selected_items = self.activity_table.selectedItems()
         selected_rows = set(item.row() for item in selected_items)
         
-        select_all_action = menu.addAction("✅ Select All")
+        select_all_action = menu.addAction(QIcon(os.path.join(icon_path, "selected all.png")), "Select All")
         select_all_action.triggered.connect(self.select_all_activity_items)
         
         menu.addSeparator()
 
         # Add "Open Folder" only if exactly one item is selected
         if len(selected_rows) == 1:
-            open_folder_action = menu.addAction("📁 Open Folder")
+            open_folder_action = menu.addAction(QIcon(os.path.join(icon_path, "open folder.png")), "Open Folder")
             open_folder_action.triggered.connect(self.open_selected_item_folder)
             menu.addSeparator()
         
-        download_action = menu.addAction("⬇️ Download Selected")
+        download_action = menu.addAction(QIcon(os.path.join(icon_path, "download.png")), "Download Selected")
         download_action.triggered.connect(self.download_selected_activity_items)
         
-        copy_action = menu.addAction("📋 Copy URL")
+        copy_action = menu.addAction(QIcon(os.path.join(icon_path, "copy.png")), "Copy URL")
         copy_action.triggered.connect(self.copy_selected_activity_urls)
 
         menu.addSeparator()
         
-        delete_action = menu.addAction("❌ Remove Row")
+        delete_action = menu.addAction(QIcon(os.path.join(icon_path, "remove.png")), "Remove Row")
         delete_action.triggered.connect(self.delete_selected_activity_item)
         
         menu.exec(self.activity_table.viewport().mapToGlobal(position))

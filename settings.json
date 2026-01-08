@@ -15,7 +15,7 @@
     },
     "download": {
         "extension": "Best",
-        "naming": "Video + Caption (.txt)",
+        "naming": "Original Name",
         "subtitles": false,
         "video_path": "C:/Users/USER/Downloads",
         "photo_path": "E:/test"

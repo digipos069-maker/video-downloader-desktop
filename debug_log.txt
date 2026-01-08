@@ -15739,3 +15739,488 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno
 2026-01-08 17:44:26,125 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
 2026-01-08 17:44:26,125 - INFO - Scraping loop finished. Found 10 items.
 2026-01-08 17:44:26,125 - INFO - Scraping found 10 unique valid links.
+2026-01-08 19:31:39,514 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:31:42,179 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 19:33:45,799 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:33:47,188 - DEBUG - Using proactor: IocpProactor
+2026-01-08 19:33:48,097 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:33:48,145 - INFO - Added 11 cookies to browser context.
+2026-01-08 19:33:48,225 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 19:33:48,225 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 19:33:51,787 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 19:33:51,808 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 19:33:57,414 - DEBUG - Scroll iteration 1 completed
+2026-01-08 19:33:57,442 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 19:33:57,443 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 19:33:57,444 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 19:33:57,447 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 19:33:57,462 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 19:33:57,462 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 19:33:57,464 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 19:33:57,464 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 19:33:57,466 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 19:33:57,467 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 19:33:57,467 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 19:33:57,467 - INFO - Loop status: Iteration 1, Found 26/12 items (+26 new valid, +50 raw)
+2026-01-08 19:33:57,467 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 19:33:57,467 - INFO - Scraping found 26 unique valid links.
+2026-01-08 19:34:02,214 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTP6mk8k_cb to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,215 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,215 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,215 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,216 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,216 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,216 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,216 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,217 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,217 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:34:02,217 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,217 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,218 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,218 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,218 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,218 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,218 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:02,218 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,219 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,219 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,219 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,219 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,220 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:34:02,220 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,221 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:02,222 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:34:09,974 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn
+2026-01-08 19:34:14,539 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
+2026-01-08 19:34:18,899 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTP6mk8k_cb
+2026-01-08 19:34:19,904 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id
+2026-01-08 19:34:20,543 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:34:22,138 - DEBUG - Using proactor: IocpProactor
+2026-01-08 19:34:22,682 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
+2026-01-08 19:34:23,005 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:23,044 - INFO - Added 8 cookies to browser context.
+2026-01-08 19:34:23,112 - INFO - Playwright visiting: https://www.facebook.com/sotoek168/reels/
+2026-01-08 19:34:23,113 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 19:34:25,440 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 19:34:25,449 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 19:34:30,993 - DEBUG - Scroll iteration 1 completed
+2026-01-08 19:34:31,006 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:34:31,007 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:34:31,008 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:34:31,008 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:31,008 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:34:31,008 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:34:31,020 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +24 raw)
+2026-01-08 19:34:32,178 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 19:34:36,544 - DEBUG - Scroll iteration 2 completed
+2026-01-08 19:34:36,560 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:36,560 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:34:36,561 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:34:36,562 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:34:36,562 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:34:36,562 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:36,562 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:34:36,562 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:34:36,563 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:34:37,011 - INFO - Download completed: https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg
+2026-01-08 19:34:39,987 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1309658467872480/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:39,987 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:39,988 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:39,988 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1604894187617738/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:39,988 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:39,989 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/652002861272666/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:39,989 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:39,990 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2014786212410840/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:39,991 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:39,991 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1232439545617886/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:40,040 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/25412479581769364/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:40,056 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:40,056 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:40,072 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:40,088 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1394937825506555/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:34:40,088 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:40,096 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:40,096 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:40,097 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:40,097 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:34:40,098 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:40,150 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:40,209 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:40,210 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:40,210 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:34:40,211 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:40,211 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:40,212 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:34:42,093 - DEBUG - Scroll iteration 3 completed
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:34:42,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:34:42,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:34:42,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:42,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:34:42,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:34:42,103 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:34:48,105 - DEBUG - Scroll iteration 4 completed
+2026-01-08 19:34:48,117 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:48,118 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:34:48,118 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:34:48,118 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:34:48,118 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:34:48,118 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:48,119 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:34:48,120 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:34:48,120 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:34:48,120 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:34:48,346 - INFO - Download completed: https://www.facebook.com/reel/1232439545617886/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:34:51,620 - INFO - Download completed: https://www.facebook.com/reel/2014786212410840/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:34:54,854 - INFO - Download completed: https://www.facebook.com/reel/1394937825506555/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:34:55,157 - DEBUG - Scroll iteration 5 completed
+2026-01-08 19:34:55,167 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:55,167 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:34:55,168 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:34:55,168 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:34:55,168 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:34:55,168 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:34:55,169 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:34:55,170 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:34:55,170 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:34:55,170 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:34:55,170 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:34:55,754 - INFO - Download completed: https://www.facebook.com/reel/1309658467872480/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:34:56,746 - INFO - Download completed: https://www.facebook.com/reel/25412479581769364/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:34:58,729 - INFO - Download completed: https://www.facebook.com/reel/652002861272666/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:02,212 - DEBUG - Scroll iteration 6 completed
+2026-01-08 19:35:02,222 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:02,222 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:02,222 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:02,222 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:02,222 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:02,223 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:02,224 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:02,224 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:02,224 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:02,224 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:35:06,045 - INFO - Download completed: https://www.facebook.com/reel/1604894187617738/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:09,260 - DEBUG - Scroll iteration 7 completed
+2026-01-08 19:35:09,275 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:09,275 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:09,276 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:09,277 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:09,277 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:09,277 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:09,277 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:09,277 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:09,277 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:09,278 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 19:35:09,278 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 19:35:09,278 - INFO - Scraping found 10 unique valid links.
+2026-01-08 19:35:14,323 - DEBUG - Using proactor: IocpProactor
+2026-01-08 19:35:15,203 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:15,245 - INFO - Added 8 cookies to browser context.
+2026-01-08 19:35:15,323 - INFO - Playwright visiting: https://www.facebook.com/sotoek168/reels/
+2026-01-08 19:35:15,323 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 19:35:17,812 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 19:35:17,880 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 19:35:23,431 - DEBUG - Scroll iteration 1 completed
+2026-01-08 19:35:23,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:23,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:23,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:23,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:23,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:23,445 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:23,455 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +24 raw)
+2026-01-08 19:35:29,004 - DEBUG - Scroll iteration 2 completed
+2026-01-08 19:35:29,018 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:29,018 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:29,019 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:29,020 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:29,021 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:34,552 - DEBUG - Scroll iteration 3 completed
+2026-01-08 19:35:34,563 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:34,564 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:34,565 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:34,566 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:37,844 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1309658467872480/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,844 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,844 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:37,845 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:37,845 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1604894187617738/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,846 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,846 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1394937825506555/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,846 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:37,846 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/652002861272666/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,846 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2014786212410840/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,847 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/25412479581769364/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,847 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1232439545617886/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\sotoek168_reels
+2026-01-08 19:35:37,861 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:37,877 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,877 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,907 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,907 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,923 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:35:37,949 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:37,951 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:37,970 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:38,033 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:38,056 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 19:35:38,056 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:38,057 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:38,057 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:38,058 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:38,059 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 19:35:40,097 - DEBUG - Scroll iteration 4 completed
+2026-01-08 19:35:40,113 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:40,113 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:40,113 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:40,113 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:40,114 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:40,114 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:40,114 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:40,114 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:40,115 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:40,115 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:40,116 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:35:40,675 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1309658467872480/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:40,714 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1604894187617738/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:41,729 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1394937825506555/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:42,347 - INFO - Download skipped (already exists): https://www.facebook.com/reel/652002861272666/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:42,442 - INFO - Download skipped (already exists): https://www.facebook.com/reel/25412479581769364/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:42,444 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2014786212410840/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:42,450 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1232439545617886/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 19:35:47,927 - DEBUG - Scroll iteration 5 completed
+2026-01-08 19:35:47,939 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:47,939 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:47,939 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:47,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:47,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:47,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:47,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:47,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:47,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:47,941 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:47,941 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:35:48,379 - DEBUG - Using proactor: IocpProactor
+2026-01-08 19:35:49,206 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:35:49,256 - INFO - Added 11 cookies to browser context.
+2026-01-08 19:35:49,324 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 19:35:49,324 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 19:35:50,148 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 19:35:50,156 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 19:35:51,825 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:35:54,983 - DEBUG - Scroll iteration 6 completed
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:35:54,994 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:35:54,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:35:54,995 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:35:54,995 - INFO - Stuck. Trying random jumps...
+2026-01-08 19:35:55,691 - DEBUG - Scroll iteration 1 completed
+2026-01-08 19:35:55,744 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 19:35:55,744 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 19:35:55,745 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 19:35:55,748 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 19:35:55,755 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 19:35:55,755 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 19:35:55,757 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 19:35:55,757 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 19:35:55,762 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 19:35:55,763 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 19:35:55,763 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 19:35:55,763 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 19:35:55,763 - INFO - Loop status: Iteration 1, Found 26/12 items (+26 new valid, +50 raw)
+2026-01-08 19:35:55,763 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 19:35:55,763 - INFO - Scraping found 26 unique valid links.
+2026-01-08 19:36:02,042 - DEBUG - Scroll iteration 7 completed
+2026-01-08 19:36:02,056 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:36:02,056 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=3462872073953939&set=a.1374717809436053
+2026-01-08 19:36:02,056 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 19:36:02,056 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=4015495688691572&set=a.1374717659436068&__tn__=%3C
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/owner_reels
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/about
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/reels_tab
+2026-01-08 19:36:02,057 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/followers/
+2026-01-08 19:36:02,058 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/photos
+2026-01-08 19:36:02,058 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fsotoek168%2Freels%2F
+2026-01-08 19:36:02,058 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/videos
+2026-01-08 19:36:02,058 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/sotoek168/following/
+2026-01-08 19:36:02,058 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 19:36:02,058 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 19:36:02,058 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 19:36:02,059 - INFO - Scraping found 10 unique valid links.
+2026-01-08 19:36:06,642 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTP6mk8k_cb to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,643 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,643 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,643 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,643 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,643 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,644 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,644 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,644 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,645 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,645 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:06,645 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,645 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,646 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,646 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:06,647 - INFO - Starting yt-dlp download for https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id to C:/Users/USER/Downloads\chhornsovannareach_reels
+2026-01-08 19:36:06,647 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,647 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,648 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:06,668 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,699 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 19:36:06,751 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,826 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:06,856 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,875 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-08 19:36:06,962 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:06,970 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:07,033 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:08,439 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DTKjvLxE9rn
+2026-01-08 19:36:08,579 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DTP6mk8k_cb
+2026-01-08 19:36:08,581 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
+2026-01-08 19:36:09,128 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DTHk19qk1gg
+2026-01-08 19:36:09,165 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DSwa_a8E_Id
+2026-01-08 19:36:09,167 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
+2026-01-08 19:36:09,184 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 19:36:35,307 - DEBUG - Using proactor: IocpProactor
+2026-01-08 19:36:36,164 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-08 19:36:36,209 - INFO - Added 11 cookies to browser context.
+2026-01-08 19:36:36,278 - INFO - Playwright visiting: https://www.instagram.com/chhornsovannareach/reels/
+2026-01-08 19:36:36,278 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 19:36:37,123 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 19:36:37,262 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 19:36:43,043 - DEBUG - Scroll iteration 1 completed
+2026-01-08 19:36:43,103 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/followers/
+2026-01-08 19:36:43,104 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/following/
+2026-01-08 19:36:43,105 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/
+2026-01-08 19:36:43,107 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/chhornsovannareach/tagged/
+2026-01-08 19:36:43,112 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-08 19:36:43,112 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-08 19:36:43,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-08 19:36:43,114 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-08 19:36:43,124 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-08 19:36:43,124 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-08 19:36:43,125 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-08 19:36:43,125 - INFO - Loop status: Iteration 1, Found 26/12 items (+26 new valid, +50 raw)
+2026-01-08 19:36:43,125 - INFO - Scraping loop finished. Found 26 items.
+2026-01-08 19:36:43,125 - INFO - Scraping found 26 unique valid links.
+2026-01-08 19:50:40,082 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:50:42,732 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 19:51:47,621 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:51:49,989 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 19:53:02,050 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 19:53:04,472 - INFO - Update available: 26.0.2 (Current: 26.0.1)
