@@ -624,8 +624,8 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         # especially when concurrent downloads share the same generic title like "Video"
         outtmpl = f'{output_path}/%(title)s_%(id)s.%(ext)s'
     else:
-        # Original Name
-        outtmpl = f'{output_path}/%(title)s.%(ext)s'
+        # Original Name - Append ID to ensure uniqueness and prevent overwrites
+        outtmpl = f'{output_path}/%(title)s [%(id)s].%(ext)s'
 
     def ydl_progress_hook(d):
         if d['status'] == 'downloading':
