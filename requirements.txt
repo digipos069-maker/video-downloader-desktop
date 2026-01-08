@@ -4,3 +4,7 @@ psutil
 pytest
 pytest-qt
 playwright
+curl_cffi
+certifi
+mutagen
+brotli
