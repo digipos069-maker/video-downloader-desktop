@@ -550,7 +550,14 @@ class SafeYoutubeDL(yt_dlp.YoutubeDL):
         # 3. Trim whitespace
         filename = filename.strip()
         
-        # 4. Ensure it doesn't end with a dot (Windows issue)
+        # 4. Truncate Length (Windows Limit Safety)
+        # Windows path limit is 260, but folder path takes space. Safe limit for file is around 100-150.
+        MAX_FILENAME_LENGTH = 100
+        name_part, ext = os.path.splitext(filename)
+        if len(name_part) > MAX_FILENAME_LENGTH:
+            filename = name_part[:MAX_FILENAME_LENGTH] + ext
+        
+        # 5. Ensure it doesn't end with a dot (Windows issue)
         if filename.endswith('.'):
             filename = filename[:-1]
             

@@ -14912,3 +14912,268 @@ TypeError: SafeYoutubeDL.prepare_filename() takes 2 positional arguments but 3 w
 2026-01-08 17:13:55,842 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DS3vwnqkwRL
 2026-01-08 17:13:55,847 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DTO5EbTE4QL
 2026-01-08 17:13:55,852 - INFO - Download skipped (already exists): https://www.instagram.com/chhornsovannareach/reel/DSy-d6Dk1xX
+2026-01-08 17:31:27,096 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:31:29,686 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 17:31:32,645 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:31:34,296 - DEBUG - Using proactor: IocpProactor
+2026-01-08 17:31:35,315 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:35,359 - INFO - Added 8 cookies to browser context.
+2026-01-08 17:31:35,437 - INFO - Playwright visiting: https://www.facebook.com/freshnewsasia/reels/
+2026-01-08 17:31:35,438 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 17:31:37,404 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 17:31:37,419 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 17:31:42,963 - DEBUG - Scroll iteration 1 completed
+2026-01-08 17:31:42,981 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:42,981 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:31:42,981 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:31:42,981 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:31:42,982 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:31:42,983 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:31:42,983 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:42,998 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +23 raw)
+2026-01-08 17:31:48,529 - DEBUG - Scroll iteration 2 completed
+2026-01-08 17:31:48,544 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:48,544 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:31:48,544 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:31:48,544 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:31:48,545 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:31:48,546 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:31:48,546 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:31:48,546 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:48,546 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:31:48,796 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1191430096428217/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,796 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,797 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,797 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,798 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,798 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,799 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,799 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:31:48,799 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,800 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,800 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,800 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,801 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,801 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,802 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:31:48,802 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,802 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,802 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,803 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,803 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,803 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,804 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:31:48,804 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,804 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,804 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,805 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,806 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:48,807 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:31:54,180 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u179c\u17b7\u1797\u17b6\u1782\u17a2\u1793\u17d2\u178f\u179a\u1787\u17b6\u178f\u17b7\u17d6 \u1794\u17b6\u1789\u17cb\u1798\u17b8\u179f\u17ca\u17b8\u179b\u1780\u17d2\u179a\u17c4\u1799\u17a2\u17b6\u1798\u17c1\u179a\u17b7\u1780\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793\u179b\u17c4\u1780 \u1798\u17c9\u17b6\u178c\u17bc\u179a\u17c9\u17bc \u178f\u17be\u179f\u17b6\u179a\u17a2\u17d2\u179c\u17b8..._944367367991446.txt
+2026-01-08 17:31:54,180 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u1782\u17d2\u1782\u17b7\u1797\u17d0\u1799\u179a\u17c4\u1784\u1785\u1780\u17d2\u179a\u1799\u17c9\u17b6\u1784\u179f\u1793\u17d2\u1792\u17c4\u179f\u1793\u17d2\u1792\u17c5 \u1793\u17c5\u1780\u17d2\u179a\u17bb\u1784\u1794\u17b6\u179c\u17b7\u178f \u1781\u17c1\u178f\u17d2\u178f\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784..._1561887831683259.txt
+2026-01-08 17:31:54,287 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1794\u17d2\u179a\u1798\u17bc\u179b\u1785\u17c6\u178e\u17bc\u179b\u1794\u17b6\u1793\u1787\u17b6\u1784 \u17e1\u17e8\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a \u1780\u17be\u1793\u17e3\u17e0% \u1793\u17c5\u1780\u17d2\u1793\u17bb\u1784\u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e5_1424182639360617.txt
+2026-01-08 17:31:54,313 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u17d2\u1793\u1780\u1793\u17b6\u17c6\u1796\u17b6\u1780\u17d2\u1799\u179a\u17b6\u1787\u179a\u178a\u17d2\u178b\u17b6\u1797\u17b7\u1794\u17b6\u179b\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 \u179a\u1798\u17d2\u179b\u17b9\u1780\u1794\u17d2\u179a\u179f\u17b6\u179f\u1793\u17cd\u179f\u1798\u17d2\u178f\u17c1\u1785\u178f\u17c1\u1787\u17c4 \u17a0\u17ca\u17bb\u1793 \u179f\u17c2\u1793 \u1793\u17b7\u1784\u179f\u1798\u17d2\u178f\u17c1\u1785\u1792\u17b7\u1794\u178f\u17b8..._1184265257211226.txt
+2026-01-08 17:31:54,317 - INFO - Download skipped (already exists): https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:54,335 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:54,352 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:54,361 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:54,366 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798 \u1785\u17bb\u17c7\u1780\u17b7\u1785\u17d2\u1785\u1796\u17d2\u179a\u1798\u1796\u17d2\u179a\u17c0\u1784\u1787\u17b6\u1798\u17bd\u1799\u1780\u17d2\u179a\u17bb\u1798\u17a0\u17ca\u17bb\u1793\u1795\u179b\u17b7\u178f\u1785\u17c6\u178e\u17b8\u179f\u178f\u17d2\u179c\u1780\u17d2\u1793\u17bb\u1784\u179f\u17d2\u179a\u17bb\u1780 \u1785\u17c6\u1793\u17bd\u1793\u17e1\u17e0_1531261864751027.txt
+2026-01-08 17:31:54,375 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:54,922 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6\u179f\u1798\u17d2\u179a\u17c1\u1785\u1794\u17b6\u1793\u1791\u17c6\u17a0\u17c6\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1787\u17b6\u1784 \u17e6\u17e5\u200b\u1796\u17b6\u1793\u17cb\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a\u1780\u17be\u1793\u17a1\u17be\u1784\u1787\u17b6\u1784 \u17e1\u17e8%..._800212439739378.txt
+2026-01-08 17:31:54,926 - INFO - Download skipped (already exists): https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:31:55,054 - DEBUG - Scroll iteration 3 completed
+2026-01-08 17:31:55,054 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\utils\_utils.py", line 606, in sanitize_open
+    raise LockingUnsupportedError
+yt_dlp.utils.LockingUnsupportedError: File locking is not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\http.py", line 264, in download
+    ctx.stream, ctx.tmpfilename = self.sanitize_open(
+                                  ~~~~~~~~~~~~~~~~~~^
+        ctx.tmpfilename, ctx.open_mode)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\common.py", line 241, in wrapper
+    for retry in RetryManager(self.params.get('file_access_retries', 3), error_callback, fd=self):
+                 ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\utils\_utils.py", line 5260, in __iter__
+    self.error_callback(self.error, self.attempt, self.retries)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\common.py", line 234, in error_callback
+    return RetryManager.report_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, count, retries, info=fd.__to_screen,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        warn=lambda e: (time.sleep(0.01), fd.to_screen(f'[download] Unable to {action} file: {e}')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        error=None if fatal else lambda e: fd.report_error(f'Unable to {action} file: {e}'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        sleep_func=fd.params.get('retry_sleep_functions', {}).get('file_access'))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\utils\_utils.py", line 5268, in report_retry
+    raise e
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\common.py", line 243, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\common.py", line 254, in sanitize_open
+    f, filename = sanitize_open(filename, open_mode)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\utils\_utils.py", line 609, in sanitize_open
+    stream = open(filename, open_mode)
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\USER\\Downloads\\freshnewsasia_reels\\149K views · 3.3K reactions - \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u179a\u1794\u179f\u17cb\u1785\u17b7\u1793 \u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chez Zhi) \u1794\u1789\u17d2\u1787\u17bc\u1793\u1791\u17c5\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793 ! (\u1794\u17c9\u17c1\u1780\u17b6\u17c6\u1784)\u17d6 \u1793\u17c5\u1790\u17d2\u1784\u17c3\u1791\u17b8\u17e0\u17e8 \u1781\u17c2\u1798\u1780\u179a\u17b6 \u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e6 \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u1785\u17b7\u1793 \u1794\u17b6\u1793\u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793 \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chen Zhi) \u1793\u17b6\u17c6\u1781\u17d2\u179b\u17bd\u1793\u1791\u17c5\u1780\u17b6\u1793\u17cb\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793\u17d4 \uff0a\uff0a\uff0a Fresh AI \u1791\u17b8\u1794\u17d2\u179a\u17b9\u1780\u17d2\u179f\u17b6\u1786\u17d2\u179b\u17b6\u178f\u179c\u17c3\u179a\u1794\u179f\u17cb\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 ! \u17a2\u17b6\u1785\u179f\u17bd\u179a\u17a2\u17d2\u179c\u17b8\u17d7\u1782\u17d2\u179a\u1794\u17cb\u1799\u17c9\u17b6\u1784\u178a\u17c2\u179b\u179b\u17c4\u1780\u17a2\u17d2\u1793\u1780\u1798\u17b6\u1793\u1785\u1798\u17d2\u1784\u179b\u17cb \u1796\u17d2\u179a\u1798\u1791\u17b6\u17c6\u1784\u1785\u1798\u17d2\u1784\u179b\u17cb\u1795\u17d2\u179b\u17bc\u179c\u1785\u17d2\u1794\u17b6\u1794\u17cb\u1795\u1784\u178a\u17c2\u179a ! Please Download\uff1a https\uff1a\u29f8\u29f8freshai.com.kh\u29f8download - Fresh News_1191430096428217.f2977727882413406v.mp4.part'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 793, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 764, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 758, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1852, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1931, in process_ie_result
+    return self.extract_info(
+           ~~~~~~~~~~~~~~~~~^
+        ie_result['url'], download,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ie_key=ie_result.get('ie_key'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        extra_info=extra_info)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1852, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1911, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 3089, in process_video_result
+    self.process_info(new_info)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 189, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 3518, in process_info
+    partial_success, real_download = self.dl(fname, new_info)
+                                     ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 3278, in dl
+    return fd.download(name, new_info, subtitle)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\common.py", line 479, in download
+    ret = self.real_download(filename, info_dict)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\http.py", line 363, in real_download
+    return download()
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\downloader\http.py", line 270, in download
+    self.report_error(f'unable to open for writing: {err}')
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno 22] Invalid argument: 'C:\\Users\\USER\\Downloads\\freshnewsasia_reels\\149K views · 3.3K reactions - \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u179a\u1794\u179f\u17cb\u1785\u17b7\u1793 \u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chez Zhi) \u1794\u1789\u17d2\u1787\u17bc\u1793\u1791\u17c5\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793 ! (\u1794\u17c9\u17c1\u1780\u17b6\u17c6\u1784)\u17d6 \u1793\u17c5\u1790\u17d2\u1784\u17c3\u1791\u17b8\u17e0\u17e8 \u1781\u17c2\u1798\u1780\u179a\u17b6 \u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e6 \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u1785\u17b7\u1793 \u1794\u17b6\u1793\u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793 \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chen Zhi) \u1793\u17b6\u17c6\u1781\u17d2\u179b\u17bd\u1793\u1791\u17c5\u1780\u17b6\u1793\u17cb\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793\u17d4 \uff0a\uff0a\uff0a Fresh AI \u1791\u17b8\u1794\u17d2\u179a\u17b9\u1780\u17d2\u179f\u17b6\u1786\u17d2\u179b\u17b6\u178f\u179c\u17c3\u179a\u1794\u179f\u17cb\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 ! \u17a2\u17b6\u1785\u179f\u17bd\u179a\u17a2\u17d2\u179c\u17b8\u17d7\u1782\u17d2\u179a\u1794\u17cb\u1799\u17c9\u17b6\u1784\u178a\u17c2\u179b\u179b\u17c4\u1780\u17a2\u17d2\u1793\u1780\u1798\u17b6\u1793\u1785\u1798\u17d2\u1784\u179b\u17cb \u1796\u17d2\u179a\u1798\u1791\u17b6\u17c6\u1784\u1785\u1798\u17d2\u1784\u179b\u17cb\u1795\u17d2\u179b\u17bc\u179c\u1785\u17d2\u1794\u17b6\u1794\u17cb\u1795\u1784\u178a\u17c2\u179a ! Please Download\uff1a https\uff1a\u29f8\u29f8freshai.com.kh\u29f8download - Fresh News_1191430096428217.f2977727882413406v.mp4.part'
+
+2026-01-08 17:31:55,056 - ERROR - Download failed: [0;31mERROR:[0m unable to open for writing: [Errno 22] Invalid argument: 'C:\\Users\\USER\\Downloads\\freshnewsasia_reels\\149K views · 3.3K reactions - \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u179a\u1794\u179f\u17cb\u1785\u17b7\u1793 \u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chez Zhi) \u1794\u1789\u17d2\u1787\u17bc\u1793\u1791\u17c5\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793 ! (\u1794\u17c9\u17c1\u1780\u17b6\u17c6\u1784)\u17d6 \u1793\u17c5\u1790\u17d2\u1784\u17c3\u1791\u17b8\u17e0\u17e8 \u1781\u17c2\u1798\u1780\u179a\u17b6 \u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e6 \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u1785\u17b7\u1793 \u1794\u17b6\u1793\u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793 \u179b\u17c4\u1780 \u1785\u17c1\u1793 \u17a0\u17d2\u179f\u17b8 (Chen Zhi) \u1793\u17b6\u17c6\u1781\u17d2\u179b\u17bd\u1793\u1791\u17c5\u1780\u17b6\u1793\u17cb\u1794\u17d2\u179a\u1791\u17c1\u179f\u1785\u17b7\u1793\u17d4 \uff0a\uff0a\uff0a Fresh AI \u1791\u17b8\u1794\u17d2\u179a\u17b9\u1780\u17d2\u179f\u17b6\u1786\u17d2\u179b\u17b6\u178f\u179c\u17c3\u179a\u1794\u179f\u17cb\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 ! \u17a2\u17b6\u1785\u179f\u17bd\u179a\u17a2\u17d2\u179c\u17b8\u17d7\u1782\u17d2\u179a\u1794\u17cb\u1799\u17c9\u17b6\u1784\u178a\u17c2\u179b\u179b\u17c4\u1780\u17a2\u17d2\u1793\u1780\u1798\u17b6\u1793\u1785\u1798\u17d2\u1784\u179b\u17cb \u1796\u17d2\u179a\u1798\u1791\u17b6\u17c6\u1784\u1785\u1798\u17d2\u1784\u179b\u17cb\u1795\u17d2\u179b\u17bc\u179c\u1785\u17d2\u1794\u17b6\u1794\u17cb\u1795\u1784\u178a\u17c2\u179a ! Please Download\uff1a https\uff1a\u29f8\u29f8freshai.com.kh\u29f8download - Fresh News_1191430096428217.f2977727882413406v.mp4.part'
+2026-01-08 17:31:55,070 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:55,070 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:31:55,070 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:31:55,070 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:31:55,071 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:31:55,071 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:32:00,601 - DEBUG - Scroll iteration 4 completed
+2026-01-08 17:32:00,615 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:00,615 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:32:00,615 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:32:00,616 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:32:00,617 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:32:00,617 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:32:00,617 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:00,617 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:32:00,617 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:32:07,661 - DEBUG - Scroll iteration 5 completed
+2026-01-08 17:32:07,676 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:07,676 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:32:07,676 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:32:07,676 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:32:07,677 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:32:07,678 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:32:07,678 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:32:07,678 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:07,678 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:32:07,678 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:32:14,722 - DEBUG - Scroll iteration 6 completed
+2026-01-08 17:32:14,740 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:14,740 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:32:14,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:32:14,742 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:32:14,742 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:32:14,742 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:32:14,742 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:32:14,742 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:14,742 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:32:14,742 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:32:21,806 - DEBUG - Scroll iteration 7 completed
+2026-01-08 17:32:21,816 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:21,816 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:32:21,816 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:32:21,816 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:32:21,817 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:32:21,818 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:32:21,818 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:32:21,818 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 17:32:21,818 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 17:32:21,818 - INFO - Scraping found 10 unique valid links.
