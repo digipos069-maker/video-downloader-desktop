@@ -543,6 +543,15 @@ class DownloaderTab(QWidget):
         activity_group = QGroupBox("Download Activity")
         activity_layout = QVBoxLayout()
         activity_layout.setContentsMargins(0, 5, 0, 0) 
+        
+        # Stats Row (Total / Selected)
+        stats_layout = QHBoxLayout()
+        stats_layout.setContentsMargins(5, 0, 5, 0)
+        self.activity_stats_label = QLabel("Total: 0 | Selected: 0")
+        self.activity_stats_label.setStyleSheet("color: #A1A1AA; font-weight: bold; font-size: 9pt;")
+        stats_layout.addStretch()
+        stats_layout.addWidget(self.activity_stats_label)
+        activity_layout.addLayout(stats_layout)
 
         # Activity Table
         self.activity_table = QTableWidget()
@@ -558,6 +567,7 @@ class DownloaderTab(QWidget):
         self.activity_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.activity_table.setContextMenuPolicy(Qt.CustomContextMenu)
         self.activity_table.customContextMenuRequested.connect(self.open_activity_context_menu)
+        self.activity_table.itemSelectionChanged.connect(self.update_activity_stats) # Connect selection change
         
         self.activity_row_map = {} # Maps item_id to row index
         
@@ -1259,6 +1269,12 @@ class DownloaderTab(QWidget):
             self.active_scraping_workers.append(worker)
             worker.start()
 
+    def update_activity_stats(self):
+        """Updates the Total/Selected count label."""
+        total = self.activity_table.rowCount()
+        selected = len(set(item.row() for item in self.activity_table.selectedItems()))
+        self.activity_stats_label.setText(f"Total: {total} | Selected: {selected}")
+
     @Slot(str, dict, bool, bool, object)
     def on_scraping_item_found(self, item_url, metadata, is_video, is_photo, handler):
         """Slot to handle an item found by the scraping worker."""
@@ -1363,6 +1379,8 @@ class DownloaderTab(QWidget):
             
             self.activity_row_map[item_id] = row_position_activity
             print(f"[DEBUG] Added to UI table at row {row_position_activity}")
+            
+            self.update_activity_stats() # Update count
 
         except Exception as e:
             print(f"[ERROR] Failed to add item to UI: {e}")
@@ -1436,6 +1454,7 @@ class DownloaderTab(QWidget):
     def select_all_activity_items(self):
         """Selects all rows in the activity table."""
         self.activity_table.selectAll()
+        self.update_activity_stats()
 
     def download_selected_activity_items(self):
         """Promotes selected items to the top of the queue and starts downloading."""
@@ -1598,6 +1617,8 @@ class DownloaderTab(QWidget):
         # Re-number
         for row in range(self.activity_table.rowCount()):
             self.activity_table.setItem(row, 0, QTableWidgetItem(str(row + 1)))
+            
+        self.update_activity_stats() # Update count
 
     def scrap_selected_queue_item(self):
         selected_items = self.queue_table_widget.selectedItems()
