@@ -847,8 +847,44 @@ class DownloaderTab(QWidget):
         # Load initial UI state
         self.load_ui_state()
 
+        # Update System State
+        self.pending_update_info = None
+        # Trigger silent update check on startup
+        QTimer.singleShot(2000, self.run_silent_update_check) # Delay slightly to let UI load
+
+    def run_silent_update_check(self):
+        """Runs update check in background without UI feedback unless update found."""
+        self.silent_update_thread = UpdateWorker(self)
+        self.silent_update_thread.finished.connect(self.on_silent_update_finished)
+        self.silent_update_thread.start()
+
+    @Slot(bool, dict)
+    def on_silent_update_finished(self, available, info):
+        if available:
+            self.pending_update_info = info
+            self.check_update_button.setText(" Update Available")
+            self.check_update_button.setStyleSheet("""
+                QPushButton {
+                    background-color: #10B981; /* Green */
+                    color: white;
+                    border: 1px solid #10B981;
+                    border-radius: 13px;
+                    padding: 0 10px;
+                    font-size: 9pt;
+                    font-weight: bold;
+                }
+                QPushButton:hover {
+                    background-color: #059669;
+                }
+            """)
+
     @Slot()
     def run_update_check(self):
+        # If we already found an update silently, show it immediately
+        if self.pending_update_info:
+            self.show_update_dialog(self.pending_update_info)
+            return
+
         self.check_update_button.setEnabled(False)
         self.check_update_button.setText(" Checking...")
         
@@ -862,18 +898,23 @@ class DownloaderTab(QWidget):
         self.check_update_button.setText(" Check Update")
         
         if available:
-            new_version = info.get("version", "Unknown")
-            notes = info.get("release_notes", "No notes available.")
-            url = info.get("download_url", "")
-            
-            msg = f"A new version (v{new_version}) is available!\n\nRelease Notes:\n{notes}\n\nWould you like to go to the download page?"
-            reply = QMessageBox.question(self, "Update Available", msg, QMessageBox.Yes | QMessageBox.No)
-            
-            if reply == QMessageBox.Yes and url:
-                import webbrowser
-                webbrowser.open(url)
+            self.pending_update_info = info # Cache it
+            self.on_silent_update_finished(True, info) # Update button style
+            self.show_update_dialog(info)
         else:
             QMessageBox.information(self, "No Updates", "You are already using the latest version.")
+
+    def show_update_dialog(self, info):
+        new_version = info.get("version", "Unknown")
+        notes = info.get("release_notes", "No notes available.")
+        url = info.get("download_url", "")
+        
+        msg = f"A new version (v{new_version}) is available!\n\nRelease Notes:\n{notes}\n\nWould you like to go to the download page?"
+        reply = QMessageBox.question(self, "Update Available", msg, QMessageBox.Yes | QMessageBox.No)
+        
+        if reply == QMessageBox.Yes and url:
+            import webbrowser
+            webbrowser.open(url)
 
     def edit_username_event(self, event):
         current_name = self.username_label.text().replace("User: ", "")
