@@ -15177,3 +15177,565 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno
 2026-01-08 17:32:21,818 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
 2026-01-08 17:32:21,818 - INFO - Scraping loop finished. Found 10 items.
 2026-01-08 17:32:21,818 - INFO - Scraping found 10 unique valid links.
+2026-01-08 17:38:31,869 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:38:34,474 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 17:38:48,648 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:38:50,365 - DEBUG - Using proactor: IocpProactor
+2026-01-08 17:38:51,217 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:38:51,273 - INFO - Added 8 cookies to browser context.
+2026-01-08 17:38:51,344 - INFO - Playwright visiting: https://www.facebook.com/freshnewsasia/reels/
+2026-01-08 17:38:51,344 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 17:38:53,697 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 17:38:53,762 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 17:38:59,328 - DEBUG - Scroll iteration 1 completed
+2026-01-08 17:38:59,346 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:38:59,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:38:59,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:38:59,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:38:59,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:38:59,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:38:59,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:38:59,349 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:38:59,364 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +23 raw)
+2026-01-08 17:39:04,913 - DEBUG - Scroll iteration 2 completed
+2026-01-08 17:39:04,925 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:04,925 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:04,925 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:04,925 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:04,926 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:04,926 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:04,926 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:04,926 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:04,926 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:04,927 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:04,927 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:04,927 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:04,927 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:04,927 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:05,144 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1191430096428217/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,144 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,144 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,145 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,145 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,146 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,146 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:39:05,146 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,147 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,147 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,147 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,148 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,148 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,148 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:39:05,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,149 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,150 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,150 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,150 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:39:05,151 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,151 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,151 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,151 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,152 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,152 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:05,152 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:39:11,102 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1794\u17d2\u179a\u1798\u17bc\u179b\u1785\u17c6\u178e\u17bc\u179b\u1794\u17b6\u1793\u1787\u17b6\u1784 \u17e1\u17e8\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a \u1780\u17be\u1793\u17e3\u17e0% \u1793\u17c5\u1780\u17d2\u1793\u17bb\u1784\u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e5_1424182639360617.txt
+2026-01-08 17:39:11,235 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798 \u1785\u17bb\u17c7\u1780\u17b7\u1785\u17d2\u1785\u1796\u17d2\u179a\u1798\u1796\u17d2\u179a\u17c0\u1784\u1787\u17b6\u1798\u17bd\u1799\u1780\u17d2\u179a\u17bb\u1798\u17a0\u17ca\u17bb\u1793\u1795\u179b\u17b7\u178f\u1785\u17c6\u178e\u17b8\u179f\u178f\u17d2\u179c\u1780\u17d2\u1793\u17bb\u1784\u179f\u17d2\u179a\u17bb\u1780 \u1785\u17c6\u1793\u17bd\u1793\u17e1\u17e0_1531261864751027.txt
+2026-01-08 17:39:11,239 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6\u179f\u1798\u17d2\u179a\u17c1\u1785\u1794\u17b6\u1793\u1791\u17c6\u17a0\u17c6\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1787\u17b6\u1784 \u17e6\u17e5\u200b\u1796\u17b6\u1793\u17cb\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a\u1780\u17be\u1793\u17a1\u17be\u1784\u1787\u17b6\u1784 \u17e1\u17e8%..._800212439739378.txt
+2026-01-08 17:39:11,294 - INFO - Download skipped (already exists): https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:11,294 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u179c\u17b7\u1797\u17b6\u1782\u17a2\u1793\u17d2\u178f\u179a\u1787\u17b6\u178f\u17b7\u17d6 \u1794\u17b6\u1789\u17cb\u1798\u17b8\u179f\u17ca\u17b8\u179b\u1780\u17d2\u179a\u17c4\u1799\u17a2\u17b6\u1798\u17c1\u179a\u17b7\u1780\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793\u179b\u17c4\u1780 \u1798\u17c9\u17b6\u178c\u17bc\u179a\u17c9\u17bc \u178f\u17be\u179f\u17b6\u179a\u17a2\u17d2\u179c\u17b8..._944367367991446.txt
+2026-01-08 17:39:11,295 - DEBUG - Scroll iteration 3 completed
+2026-01-08 17:39:11,301 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:11,316 - INFO - Download skipped (already exists): https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:11,319 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:11,322 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u1782\u17d2\u1782\u17b7\u1797\u17d0\u1799\u179a\u17c4\u1784\u1785\u1780\u17d2\u179a\u1799\u17c9\u17b6\u1784\u179f\u1793\u17d2\u1792\u17c4\u179f\u1793\u17d2\u1792\u17c5 \u1793\u17c5\u1780\u17d2\u179a\u17bb\u1784\u1794\u17b6\u179c\u17b7\u178f \u1781\u17c1\u178f\u17d2\u178f\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784..._1561887831683259.txt
+2026-01-08 17:39:11,332 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:11,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:11,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:11,345 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:11,346 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:11,346 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:11,350 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:11,350 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:11,351 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:11,353 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:11,353 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:11,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:11,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:11,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:11,355 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:12,547 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\162K views · 3.6K reactions - \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u179a\u1794\u179f\u17cb\u1785\u17b7\u1793 \u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb \u179b\u17c4\u1780 \u1785\u17c1\u1793.txt
+2026-01-08 17:39:12,551 - INFO - Download completed: https://www.facebook.com/reel/1191430096428217/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:14,765 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u17d2\u1793\u1780\u1793\u17b6\u17c6\u1796\u17b6\u1780\u17d2\u1799\u179a\u17b6\u1787\u179a\u178a\u17d2\u178b\u17b6\u1797\u17b7\u1794\u17b6\u179b\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 \u179a\u1798\u17d2\u179b\u17b9\u1780\u1794\u17d2\u179a\u179f\u17b6\u179f\u1793\u17cd\u179f\u1798\u17d2\u178f\u17c1\u1785\u178f\u17c1\u1787\u17c4 \u17a0\u17ca\u17bb\u1793 \u179f\u17c2\u1793 \u1793\u17b7\u1784\u179f\u1798\u17d2\u178f\u17c1\u1785\u1792\u17b7\u1794\u178f\u17b8..._118426525721122.txt
+2026-01-08 17:39:14,770 - INFO - Download completed: https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:39:16,881 - DEBUG - Scroll iteration 4 completed
+2026-01-08 17:39:16,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:16,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:16,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:16,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:16,895 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:16,895 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:16,895 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:16,895 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:16,895 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:16,896 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:16,896 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:16,896 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:16,896 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:16,896 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:16,896 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:39:23,939 - DEBUG - Scroll iteration 5 completed
+2026-01-08 17:39:23,950 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:23,950 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:23,950 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:23,951 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:23,952 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:23,952 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:23,952 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:23,952 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:23,952 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:39:30,999 - DEBUG - Scroll iteration 6 completed
+2026-01-08 17:39:31,013 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:31,013 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:31,013 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:31,013 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:31,014 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:31,015 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:31,015 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:31,015 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:31,015 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:39:38,087 - DEBUG - Scroll iteration 7 completed
+2026-01-08 17:39:38,101 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:38,101 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:39:38,101 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:39:38,101 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:39:38,102 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:39:38,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:39:38,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:39:38,103 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:39:38,103 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 17:39:38,103 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 17:39:38,103 - INFO - Scraping found 10 unique valid links.
+2026-01-08 17:42:14,049 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:42:16,437 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-08 17:42:27,110 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 17:42:30,035 - DEBUG - Using proactor: IocpProactor
+2026-01-08 17:42:30,942 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:30,979 - INFO - Added 8 cookies to browser context.
+2026-01-08 17:42:31,048 - INFO - Playwright visiting: https://www.facebook.com/freshnewsasia/reels/
+2026-01-08 17:42:31,049 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 17:42:33,101 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 17:42:33,112 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 17:42:38,650 - DEBUG - Scroll iteration 1 completed
+2026-01-08 17:42:38,668 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:38,669 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:42:38,669 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:42:38,669 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:42:38,669 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:42:38,670 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:42:38,671 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:38,686 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +23 raw)
+2026-01-08 17:42:44,221 - DEBUG - Scroll iteration 2 completed
+2026-01-08 17:42:44,234 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:44,234 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:42:44,234 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:42:44,234 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:42:44,235 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:42:44,236 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:42:44,236 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:44,236 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:42:44,256 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,257 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,258 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,258 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,258 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,258 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,259 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,259 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,259 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,260 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,260 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,261 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,261 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1191430096428217/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\freshnewsasia_reels
+2026-01-08 17:42:44,262 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,262 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,262 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,263 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,263 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,263 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,264 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-08 17:42:44,264 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,264 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,265 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,267 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-08 17:42:44,267 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,267 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,268 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:44,268 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:42:49,405 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6\u179f\u1798\u17d2\u179a\u17c1\u1785\u1794\u17b6\u1793\u1791\u17c6\u17a0\u17c6\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1787\u17b6\u1784 \u17e6\u17e5\u200b\u1796\u17b6\u1793\u17cb\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a\u1780\u17be\u1793\u17a1\u17be\u1784\u1787\u17b6\u1784 \u17e1\u17e8%..._800212439739378.txt
+2026-01-08 17:42:49,406 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798\u1794\u17d2\u179a\u1798\u17bc\u179b\u1785\u17c6\u178e\u17bc\u179b\u1794\u17b6\u1793\u1787\u17b6\u1784 \u17e1\u17e8\u179b\u17b6\u1793\u178a\u17bb\u179b\u17d2\u179b\u17b6\u179a \u1780\u17be\u1793\u17e3\u17e0% \u1793\u17c5\u1780\u17d2\u1793\u17bb\u1784\u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e2\u17e5_1424182639360617.txt
+2026-01-08 17:42:49,410 - INFO - Download skipped (already exists): https://www.facebook.com/reel/800212439739378/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:49,440 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1424182639360617/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:49,450 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u179c\u17b7\u1797\u17b6\u1782\u17a2\u1793\u17d2\u178f\u179a\u1787\u17b6\u178f\u17b7\u17d6 \u1794\u17b6\u1789\u17cb\u1798\u17b8\u179f\u17ca\u17b8\u179b\u1780\u17d2\u179a\u17c4\u1799\u17a2\u17b6\u1798\u17c1\u179a\u17b7\u1780\u1785\u17b6\u1794\u17cb\u1781\u17d2\u179b\u17bd\u1793\u179b\u17c4\u1780 \u1798\u17c9\u17b6\u178c\u17bc\u179a\u17c9\u17bc \u178f\u17be\u179f\u17b6\u179a\u17a2\u17d2\u179c\u17b8..._944367367991446.txt
+2026-01-08 17:42:49,453 - INFO - Download skipped (already exists): https://www.facebook.com/reel/944367367991446/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:50,237 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u17d2\u1793\u1780\u1793\u17b6\u17c6\u1796\u17b6\u1780\u17d2\u1799\u179a\u17b6\u1787\u179a\u178a\u17d2\u178b\u17b6\u1797\u17b7\u1794\u17b6\u179b\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6 \u179a\u1798\u17d2\u179b\u17b9\u1780\u1794\u17d2\u179a\u179f\u17b6\u179f\u1793\u17cd\u179f\u1798\u17d2\u178f\u17c1\u1785\u178f\u17c1\u1787\u17c4 \u17a0\u17ca\u17bb\u1793 \u179f\u17c2\u1793 \u1793\u17b7\u1784\u179f\u1798\u17d2\u178f\u17c1\u1785\u1792\u17b7\u1794\u178f\u17b8..._118426525721122.txt
+2026-01-08 17:42:50,237 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u17a2\u1782\u17d2\u1782\u17b7\u1797\u17d0\u1799\u179a\u17c4\u1784\u1785\u1780\u17d2\u179a\u1799\u17c9\u17b6\u1784\u179f\u1793\u17d2\u1792\u17c4\u179f\u1793\u17d2\u1792\u17c5 \u1793\u17c5\u1780\u17d2\u179a\u17bb\u1784\u1794\u17b6\u179c\u17b7\u178f \u1781\u17c1\u178f\u17d2\u178f\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784..._1561887831683259.txt
+2026-01-08 17:42:50,237 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\\u1780\u17d2\u179a\u179f\u17bd\u1784\u1796\u17b6\u178e\u17b7\u1787\u17d2\u1787\u1780\u1798\u17d2\u1798 \u1785\u17bb\u17c7\u1780\u17b7\u1785\u17d2\u1785\u1796\u17d2\u179a\u1798\u1796\u17d2\u179a\u17c0\u1784\u1787\u17b6\u1798\u17bd\u1799\u1780\u17d2\u179a\u17bb\u1798\u17a0\u17ca\u17bb\u1793\u1795\u179b\u17b7\u178f\u1785\u17c6\u178e\u17b8\u179f\u178f\u17d2\u179c\u1780\u17d2\u1793\u17bb\u1784\u179f\u17d2\u179a\u17bb\u1780 \u1785\u17c6\u1793\u17bd\u1793\u17e1\u17e0_1531261864751027.txt
+2026-01-08 17:42:50,240 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1184265257211226/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:50,247 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1561887831683259/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:50,249 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1531261864751027/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:50,427 - DEBUG - Scroll iteration 3 completed
+2026-01-08 17:42:50,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:50,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:42:50,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:42:50,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:42:50,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:50,439 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:42:50,759 - INFO - Caption saved to: C:\Users\USER\Downloads\freshnewsasia_reels\174K views · 3.8K reactions - \u1780\u17d2\u179a\u179f\u17bd\u1784\u179f\u1793\u17d2\u178f\u17b7\u179f\u17bb\u1781\u179f\u17b6\u1792\u17b6\u179a\u178e\u17c8\u179a\u1794\u179f\u17cb\u1785\u17b7\u1793 \u1794\u1789\u17d2\u1785\u17c1\u1789\u179c\u17b7\u178a\u17c1\u17a2\u17bc\u1795\u17d2\u179b\u17bc\u179c\u1780\u17b6\u179a\u179f\u17d2\u178f\u17b8\u1796\u17b8\u1780\u17b6\u179a\u1785\u17b6\u1794\u17cb \u179b\u17c4\u1780 \u1785\u17c1\u1793.txt
+2026-01-08 17:42:50,765 - INFO - Download completed: https://www.facebook.com/reel/1191430096428217/?s=fb_shorts_profile&stack_idx=0
+2026-01-08 17:42:55,969 - DEBUG - Scroll iteration 4 completed
+2026-01-08 17:42:55,979 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:55,979 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:42:55,979 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:42:55,979 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:42:55,980 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:42:55,981 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:42:55,981 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:42:55,981 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:01,675 - DEBUG - Using proactor: IocpProactor
+2026-01-08 17:43:02,585 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:43:02,633 - INFO - Added 8 cookies to browser context.
+2026-01-08 17:43:02,712 - INFO - Playwright visiting: https://www.facebook.com/freshnewsasia/reels/
+2026-01-08 17:43:02,712 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 17:43:03,030 - DEBUG - Scroll iteration 5 completed
+2026-01-08 17:43:03,046 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:03,046 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:03,046 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:03,046 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:03,046 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:03,047 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:03,048 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:03,048 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:03,048 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:03,048 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:04,980 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 17:43:04,990 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 17:43:10,089 - DEBUG - Scroll iteration 6 completed
+2026-01-08 17:43:10,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:10,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:10,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:10,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:10,103 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:10,104 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:10,105 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:10,105 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:10,105 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:10,596 - DEBUG - Scroll iteration 1 completed
+2026-01-08 17:43:10,608 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:10,608 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:10,609 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:10,610 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:10,610 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:10,610 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:10,610 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:10,610 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:10,624 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +23 raw)
+2026-01-08 17:43:16,153 - DEBUG - Scroll iteration 2 completed
+2026-01-08 17:43:16,163 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:16,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:16,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:16,165 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:17,151 - DEBUG - Scroll iteration 7 completed
+2026-01-08 17:43:17,164 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:17,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:17,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:17,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:17,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:17,165 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:17,166 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:17,167 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:17,167 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 17:43:17,167 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 17:43:17,167 - INFO - Scraping found 10 unique valid links.
+2026-01-08 17:43:21,701 - DEBUG - Scroll iteration 3 completed
+2026-01-08 17:43:21,715 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:21,715 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:21,715 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:21,716 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:21,717 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:21,717 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:21,717 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:21,717 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:27,249 - DEBUG - Scroll iteration 4 completed
+2026-01-08 17:43:27,261 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:27,261 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:27,261 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:27,261 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:27,261 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:27,262 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:27,263 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:27,263 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:27,263 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:34,308 - DEBUG - Scroll iteration 5 completed
+2026-01-08 17:43:34,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:34,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:34,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:34,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:34,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:34,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:34,324 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:34,324 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:34,325 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:39,732 - DEBUG - Using proactor: IocpProactor
+2026-01-08 17:43:40,610 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-08 17:43:40,666 - INFO - Added 8 cookies to browser context.
+2026-01-08 17:43:40,739 - INFO - Playwright visiting: https://www.facebook.com/freshnewsasia/reels/
+2026-01-08 17:43:40,739 - INFO - Scraping target limit (max_entries): 12
+2026-01-08 17:43:41,383 - DEBUG - Scroll iteration 6 completed
+2026-01-08 17:43:41,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:41,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:41,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:41,394 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:41,395 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:41,395 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:41,395 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:41,395 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:41,395 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:43:42,725 - INFO - Starting scroll loop. Planned iterations: 5 for max 12 items.
+2026-01-08 17:43:42,735 - INFO - Starting dynamic scroll loop. Target: 12 items.
+2026-01-08 17:43:48,278 - DEBUG - Scroll iteration 1 completed
+2026-01-08 17:43:48,292 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:48,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:48,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:48,307 - INFO - Loop status: Iteration 1, Found 10/12 items (+10 new valid, +23 raw)
+2026-01-08 17:43:48,437 - DEBUG - Scroll iteration 7 completed
+2026-01-08 17:43:48,447 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:48,447 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:48,447 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:48,447 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:48,447 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:48,448 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:48,449 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:48,449 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 17:43:48,449 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 17:43:48,449 - INFO - Scraping found 10 unique valid links.
+2026-01-08 17:43:53,837 - DEBUG - Scroll iteration 2 completed
+2026-01-08 17:43:53,851 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:53,851 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:53,851 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:53,851 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:53,851 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:53,852 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:53,853 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:53,853 - INFO - Loop status: Iteration 2, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:43:59,382 - DEBUG - Scroll iteration 3 completed
+2026-01-08 17:43:59,397 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:59,397 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:43:59,397 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:43:59,398 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:43:59,399 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:43:59,399 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:43:59,399 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:43:59,399 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:43:59,399 - INFO - Loop status: Iteration 3, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:44:04,929 - DEBUG - Scroll iteration 4 completed
+2026-01-08 17:44:04,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:04,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:44:04,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:44:04,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:44:04,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:44:04,942 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:44:04,942 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:04,942 - INFO - Loop status: Iteration 4, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:44:04,942 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:44:11,989 - DEBUG - Scroll iteration 5 completed
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:44:12,000 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:44:12,001 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:12,002 - INFO - Loop status: Iteration 5, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:44:12,002 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:44:19,047 - DEBUG - Scroll iteration 6 completed
+2026-01-08 17:44:19,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:19,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:44:19,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:44:19,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:44:19,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:44:19,062 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:44:19,063 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:19,063 - INFO - Loop status: Iteration 6, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:44:19,063 - INFO - Stuck. Trying random jumps...
+2026-01-08 17:44:26,107 - DEBUG - Scroll iteration 7 completed
+2026-01-08 17:44:26,122 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:26,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=1225502819764395&set=a.243945994586754
+2026-01-08 17:44:26,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-08 17:44:26,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=243946034586750&set=a.243945997920087&__tn__=%3C
+2026-01-08 17:44:26,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/
+2026-01-08 17:44:26,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/about
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/reels_tab
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/followers/
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/photos
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/following/
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/freshnewsasia/owner_reels
+2026-01-08 17:44:26,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Ffreshnewsasia%2Freels%2F
+2026-01-08 17:44:26,125 - INFO - Loop status: Iteration 7, Found 10/12 items (+0 new valid, +0 raw)
+2026-01-08 17:44:26,125 - INFO - Scroll stagnant for 6 iterations. Assuming end of feed.
+2026-01-08 17:44:26,125 - INFO - Scraping loop finished. Found 10 items.
+2026-01-08 17:44:26,125 - INFO - Scraping found 10 unique valid links.

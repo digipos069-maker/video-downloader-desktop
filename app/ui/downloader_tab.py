@@ -557,7 +557,7 @@ class DownloaderTab(QWidget):
         self.activity_table = QTableWidget()
         self.activity_table.setMinimumHeight(200) # Increased height
         self.activity_table.setColumnCount(9)
-        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "URL", "Status", "Type", "Platform", "ETA", "Size", "Progress"])
+        self.activity_table.setHorizontalHeaderLabels(["#", "Title", "Progress", "URL", "Status", "Type", "Platform", "ETA", "Size"])
         self.activity_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # For '#' column
         for i in range(1, 9):
             self.activity_table.horizontalHeader().setSectionResizeMode(i, QHeaderView.Interactive)
@@ -1346,17 +1346,7 @@ class DownloaderTab(QWidget):
             self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
             self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', '')))
             
-            url_widget = QTableWidgetItem(item_url)
-            if 'origin_url' in metadata:
-                url_widget.setData(Qt.UserRole, metadata['origin_url'])
-            self.activity_table.setItem(row_position_activity, 2, url_widget)
-            
-            self.activity_table.setItem(row_position_activity, 3, QTableWidgetItem("Queued"))
-            self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Video" if is_video else "Photo"))
-            self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
-            self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem("--"))
-            self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
-            
+            # Progress bar at column 2
             progress_bar = QProgressBar()
             progress_bar.setRange(0, 100)
             progress_bar.setValue(0)
@@ -1375,7 +1365,18 @@ class DownloaderTab(QWidget):
                     width: 10px;
                 }
             """)
-            self.activity_table.setCellWidget(row_position_activity, 8, progress_bar)
+            self.activity_table.setCellWidget(row_position_activity, 2, progress_bar)
+
+            url_widget = QTableWidgetItem(item_url)
+            if 'origin_url' in metadata:
+                url_widget.setData(Qt.UserRole, metadata['origin_url'])
+            self.activity_table.setItem(row_position_activity, 3, url_widget)
+            
+            self.activity_table.setItem(row_position_activity, 4, QTableWidgetItem("Queued"))
+            self.activity_table.setItem(row_position_activity, 5, QTableWidgetItem("Video" if is_video else "Photo"))
+            self.activity_table.setItem(row_position_activity, 6, QTableWidgetItem(handler.__class__.__name__.replace('Handler','')))
+            self.activity_table.setItem(row_position_activity, 7, QTableWidgetItem("--"))
+            self.activity_table.setItem(row_position_activity, 8, QTableWidgetItem("--"))
             
             self.activity_row_map[item_id] = row_position_activity
             print(f"[DEBUG] Added to UI table at row {row_position_activity}")
@@ -1768,7 +1769,7 @@ class DownloaderTab(QWidget):
         """Updates the status of an item in the activity table."""
         if item_id in self.activity_row_map:
             row = self.activity_row_map[item_id]
-            self.activity_table.setItem(row, 3, QTableWidgetItem(message))
+            self.activity_table.setItem(row, 4, QTableWidgetItem(message)) # Column 4 is Status
             
         # Optional: Also log to console/global status if needed, or just keep it clean
         # self.status_message.emit(f"ID {item_id[:8]}... status: {message}")
@@ -1838,20 +1839,17 @@ class DownloaderTab(QWidget):
     @Slot(str, int)
     def update_download_progress(self, item_id, percentage):
         """Updates the progress of an item in the activity table."""
-        # Footer progress update removed (replaced by global batch bar)
-        # self._update_footer_progress(item_id, percentage)
-        
         # Update Table Progress
         if item_id in self.activity_row_map:
             row = self.activity_row_map[item_id]
-            pb = self.activity_table.cellWidget(row, 8)
+            pb = self.activity_table.cellWidget(row, 2) # Column 2 is Progress
             if pb:
                 pb.setValue(percentage)
                 
         # print(f"Update progress for {item_id[:8]}...: {percentage}%")
 
-    @Slot(str, bool)
-    def download_finished_callback(self, item_id, success):
+    @Slot(str, bool, str)
+    def download_finished_callback(self, item_id, success, status_message):
         """Handles the completion or failure of a download."""
         # Remove from footer (logic removed in init, but good to cleanup if we kept dict)
         if item_id in self.active_progress_bars:
@@ -1862,18 +1860,15 @@ class DownloaderTab(QWidget):
         if item_id in self.activity_row_map:
             row = self.activity_row_map[item_id]
             
-            # Smart Status Update: Don't overwrite specific statuses like "Already Downloaded"
-            current_status_item = self.activity_table.item(row, 3)
-            current_text = current_status_item.text() if current_status_item else ""
+            # Determine Status Text
+            if status_message:
+                new_status = status_message
+            else:
+                new_status = "Completed" if success else "Failed"
             
-            new_status = "Completed" if success else "Failed"
+            self.activity_table.setItem(row, 4, QTableWidgetItem(new_status))
             
-            if success and current_text == "Already Downloaded":
-                new_status = current_text # Keep it
-            
-            self.activity_table.setItem(row, 3, QTableWidgetItem(new_status))
-            
-            pb = self.activity_table.cellWidget(row, 8)
+            pb = self.activity_table.cellWidget(row, 2) # Column 2 is Progress
             if pb:
                 pb.setValue(100 if success else 0)
         

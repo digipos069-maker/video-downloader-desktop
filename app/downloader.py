@@ -43,10 +43,11 @@ class DownloadWorker(QRunnable):
             if status_msg:
                 self.signals.status.emit(self.item_id, status_msg)
                 
-            self.signals.finished.emit(self.item_id, success)
+            self.signals.finished.emit(self.item_id, success, status_msg)
         except Exception as e:
-            self.signals.status.emit(self.item_id, f"Error: {str(e)}")
-            self.signals.finished.emit(self.item_id, False)
+            msg = f"Error: {str(e)}"
+            self.signals.status.emit(self.item_id, msg)
+            self.signals.finished.emit(self.item_id, False, "Failed")
 
 class WorkerSignals(QObject):
     """
@@ -54,7 +55,7 @@ class WorkerSignals(QObject):
     """
     progress = Signal(str, int)  # item_id, percentage
     status = Signal(str, str)    # item_id, status_message
-    finished = Signal(str, bool) # item_id, success
+    finished = Signal(str, bool, str) # item_id, success, status_message
 
 class Downloader(QObject):
     """
@@ -62,7 +63,7 @@ class Downloader(QObject):
     """
     progress = Signal(str, int)
     status = Signal(str, str)
-    finished = Signal(str, bool)
+    finished = Signal(str, bool, str) # Propagate status message
     download_started = Signal(str, str) # New signal: item_id, url
     download_removed = Signal(str)      # New signal: item_id
 
@@ -107,13 +108,13 @@ class Downloader(QObject):
             if not self.start_next_download():
                 break # Stop loop if we couldn't start a download (e.g. only 'held' items remain)
 
-    @Slot(str, bool)
-    def _download_finished_callback(self, item_id, success):
+    @Slot(str, bool, str)
+    def _download_finished_callback(self, item_id, success, status_message):
         """Internal callback for when a worker finishes."""
         # Emit the signal that a download has finished and should be removed from the active list
         self.download_removed.emit(item_id)
         
-        self.finished.emit(item_id, success)
+        self.finished.emit(item_id, success, status_message)
         
         # Check for shutdown if queue is empty and no active threads
         if self.queue_empty() and self.thread_pool.activeThreadCount() == 0:
@@ -172,15 +173,15 @@ class Downloader(QObject):
         worker.signals.progress.connect(self.progress)
         worker.signals.status.connect(self.status)
         # Pass settings to callback to check for shutdown
-        worker.signals.finished.connect(lambda i, s: self._download_finished_callback_with_settings(i, s, item['settings']))
+        worker.signals.finished.connect(lambda i, s, m: self._download_finished_callback_with_settings(i, s, m, item['settings']))
 
         self.thread_pool.start(worker)
         self.status.emit(item['id'], 'Starting download...')
         return True
 
-    @Slot(str, bool)
-    def _download_finished_callback_with_settings(self, item_id, success, settings):
-        self._download_finished_callback(item_id, success)
+    @Slot(str, bool, str)
+    def _download_finished_callback_with_settings(self, item_id, success, status_message, settings):
+        self._download_finished_callback(item_id, success, status_message)
         if self.queue_empty() and self.thread_pool.activeThreadCount() == 0:
             self.check_shutdown(settings)
 
