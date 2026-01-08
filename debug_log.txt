@@ -14211,3 +14211,10 @@ TypeError: SafeYoutubeDL.prepare_filename() takes 2 positional arguments but 3 w
 2026-01-07 23:13:58,063 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2026-01-07 23:14:56,094 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2026-01-07 23:23:47,550 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 14:57:20,342 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 14:58:02,668 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 14:58:34,830 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 14:58:48,718 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-08 14:59:02,199 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 14:59:06,827 - ERROR - Update check failed: HTTP Error 404: Not Found
+2026-01-08 14:59:30,787 - ERROR - Update check failed: HTTP Error 404: Not Found

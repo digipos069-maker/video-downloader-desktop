@@ -1,10 +1,37 @@
 
 import sys
 import os
+import urllib.request
+import json
+import logging
 
 """
 Utility functions for the application.
 """
+
+def check_for_updates():
+    """
+    Checks GitHub for a new version.
+    Returns (True, update_info) if update available, (False, None) otherwise.
+    """
+    from app.config.version import VERSION, VERSION_URL
+    try:
+        # Create request with headers to avoid being blocked
+        req = urllib.request.Request(
+            VERSION_URL, 
+            headers={'User-Agent': 'Mozilla/5.0'}
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode())
+            remote_version = data.get("version")
+            
+            if remote_version and remote_version != VERSION:
+                logging.info(f"Update available: {remote_version} (Current: {VERSION})")
+                return True, data
+    except Exception as e:
+        logging.error(f"Update check failed: {e}")
+    
+    return False, None
 
 def resource_path(relative_path):
     """ 

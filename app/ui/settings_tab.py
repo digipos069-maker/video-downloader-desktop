@@ -18,8 +18,9 @@ import logging
 
 from app.config.settings_manager import load_settings, save_settings
 from app.config.credentials import CredentialsManager
+from app.config.version import VERSION
 from app.platform_handler import extract_metadata_with_playwright
-from app.helpers import resource_path
+from app.helpers import resource_path, check_for_updates
 
 # --- Styles ---
 VERIFY_BTN_STYLE = """
@@ -41,15 +42,37 @@ VERIFY_BTN_STYLE = """
     }
 """
 
+UPDATE_BTN_STYLE = """
+    QPushButton {
+        background-color: #10B981;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    QPushButton:hover {
+        background-color: #059669;
+    }
+    QPushButton:pressed {
+        background-color: #047857;
+    }
+    QPushButton:disabled {
+        background-color: #3F3F46;
+        color: #71717A;
+    }
+"""
+
 SAVE_BTN_STYLE = """
     QPushButton {
         background-color: #3B82F6;
         color: white;
         border: none;
-        padding: 6px 12px;
+        padding: 10px 20px;
         border-radius: 6px;
         font-weight: bold;
-        font-size: 10pt;
+        font-size: 11pt;
     }
     QPushButton:hover {
         background-color: #2563EB;
@@ -109,6 +132,13 @@ INPUT_STYLE = """
         background-color: #202025;
     }
 """
+
+class UpdateWorker(QThread):
+    finished = Signal(bool, dict)
+
+    def run(self):
+        available, info = check_for_updates()
+        self.finished.emit(available, info if info else {})
 
 class CookieVerificationWorker(QThread):
     finished = Signal(bool, str)
@@ -617,6 +647,37 @@ class SettingsTab(QWidget):
 
         layout.addWidget(credentials_group)
 
+        # --- Update Section ---
+        update_header = QLabel("Software Updates")
+        update_header.setStyleSheet("color: #3B82F6; font-size: 12pt; font-weight: bold; margin-bottom: 2px; margin-top: 15px;")
+        layout.addWidget(update_header)
+
+        update_group = QGroupBox()
+        update_group.setStyleSheet("QGroupBox { margin-top: 0px; }")
+        update_layout = QHBoxLayout()
+        update_layout.setContentsMargins(15, 15, 15, 15)
+
+        version_info_layout = QVBoxLayout()
+        self.current_version_label = QLabel(f"Current Version: v{VERSION}")
+        self.current_version_label.setStyleSheet("color: #F4F4F5; font-size: 10pt; font-weight: bold;")
+        
+        self.update_status_label = QLabel("Your software is up to date.")
+        self.update_status_label.setStyleSheet("color: #71717A; font-size: 9pt;")
+        
+        version_info_layout.addWidget(self.current_version_label)
+        version_info_layout.addWidget(self.update_status_label)
+        
+        update_layout.addLayout(version_info_layout)
+        update_layout.addStretch()
+        
+        self.check_update_btn = QPushButton("Check for Updates")
+        self.check_update_btn.setStyleSheet(UPDATE_BTN_STYLE)
+        self.check_update_btn.clicked.connect(self.run_update_check)
+        update_layout.addWidget(self.check_update_btn)
+        
+        update_group.setLayout(update_layout)
+        layout.addWidget(update_group)
+
         # Save Button
         save_btn = QPushButton("Save Settings")
         save_btn.setStyleSheet(SAVE_BTN_STYLE)
@@ -627,6 +688,42 @@ class SettingsTab(QWidget):
         
         # Load initial settings
         self.load_initial_settings()
+
+    @Slot()
+    def run_update_check(self):
+        self.check_update_btn.setEnabled(False)
+        self.check_update_btn.setText("Checking...")
+        self.update_status_label.setText("Connecting to server...")
+        
+        self.update_thread = UpdateWorker(self)
+        self.update_thread.finished.connect(self.on_update_check_finished)
+        self.update_thread.start()
+
+    @Slot(bool, dict)
+    def on_update_check_finished(self, available, info):
+        self.check_update_btn.setEnabled(True)
+        self.check_update_btn.setText("Check for Updates")
+        
+        if available:
+            new_version = info.get("version", "Unknown")
+            notes = info.get("release_notes", "No notes available.")
+            url = info.get("download_url", "")
+            
+            self.update_status_label.setText(f"Update available: v{new_version}")
+            self.update_status_label.setStyleSheet("color: #10B981; font-size: 9pt; font-weight: bold;")
+            
+            msg = f"A new version (v{new_version}) is available!\n\nRelease Notes:\n{notes}\n\nWould you like to go to the download page?"
+            reply = QMessageBox.question(self, "Update Available", msg, QMessageBox.Yes | QMessageBox.No)
+            
+            if reply == QMessageBox.Yes and url:
+                import webbrowser
+                webbrowser.open(url)
+        else:
+            self.update_status_label.setText("Your software is up to date.")
+            self.update_status_label.setStyleSheet("color: #71717A; font-size: 9pt;")
+            # Only show messagebox if manually checked? Usually good practice.
+            # But the button is manual anyway.
+            QMessageBox.information(self, "No Updates", "You are already using the latest version.")
 
     def browse_fb_cookies(self):
         path, _ = QFileDialog.getOpenFileName(self, "Select Cookies File", "", "Text Files (*.txt);;All Files (*)")

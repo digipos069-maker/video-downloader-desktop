@@ -2,6 +2,7 @@ from PySide6.QtWidgets import QWidget, QHBoxLayout, QLabel, QAbstractButton
 from PySide6.QtCore import Qt, QSize, QPoint
 from PySide6.QtGui import QPainter, QColor, QPen, QBrush, QPixmap
 from app.helpers import resource_path
+from app.config.version import VERSION
 
 class CaptionButton(QAbstractButton):
     """
@@ -99,7 +100,7 @@ class TitleBar(QWidget):
         layout.addWidget(self.logo_icon)
 
         # Title
-        self.title_label = QLabel(title)
+        self.title_label = QLabel(f"{title} v{VERSION}")
         self.title_label.setObjectName("TitleBarTitle")
         layout.addWidget(self.title_label)
 
