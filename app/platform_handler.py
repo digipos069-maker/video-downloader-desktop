@@ -814,11 +814,19 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                     base_name = os.path.splitext(final_filename)[0]
                     txt_filename = f"{base_name}.txt"
                     
-                    # Content: Title + Description
+                    # Content: Cleaned Title
                     title = info.get('title', '')
-                    desc = info.get('description', '')
                     
-                    content = f"{title}\n\n{desc}"
+                    remove_links = settings.get('remove_links', False)
+                    remove_mentions = settings.get('remove_mentions', False)
+                    
+                    content = title
+                    if remove_links:
+                        content = re.sub(r'https?://\S+', '', content)
+                    if remove_mentions:
+                        content = re.sub(r'@\w+', '', content)
+                    
+                    content = content.strip()
                     
                     with open(txt_filename, 'w', encoding='utf-8') as f:
                         f.write(content)
@@ -896,8 +904,20 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
             try:
                 base_name = os.path.splitext(full_path)[0]
                 txt_filename = f"{base_name}.txt"
+                
+                remove_links = settings.get('remove_links', False)
+                remove_mentions = settings.get('remove_mentions', False)
+                
+                content = title
+                if remove_links:
+                    content = re.sub(r'https?://\S+', '', content)
+                if remove_mentions:
+                    content = re.sub(r'@\w+', '', content)
+                
+                content = content.strip()
+                
                 with open(txt_filename, 'w', encoding='utf-8') as f:
-                    f.write(title) # Direct downloads (images) usually only have title passed
+                    f.write(content) 
                 logging.info(f"Caption saved to: {txt_filename}")
             except Exception as e:
                 logging.error(f"Failed to save caption for direct download: {e}")

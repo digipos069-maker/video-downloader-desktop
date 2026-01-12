@@ -17,6 +17,8 @@
         "extension": "Best",
         "naming": "Original Name",
         "subtitles": false,
+        "remove_links": false,
+        "remove_mentions": false,
         "video_path": "C:/Users/USER/Downloads",
         "photo_path": "E:/test"
     },

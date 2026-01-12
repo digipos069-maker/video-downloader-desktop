@@ -16224,3 +16224,5 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno
 2026-01-08 19:51:49,989 - INFO - Update available: 26.0.2 (Current: 26.0.1)
 2026-01-08 19:53:02,050 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2026-01-08 19:53:04,472 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 21:00:07,043 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 21:00:09,783 - INFO - Update available: 26.0.2 (Current: 26.0.1)

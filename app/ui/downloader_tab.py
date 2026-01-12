@@ -693,8 +693,19 @@ class DownloaderTab(QWidget):
         self.subs_checkbox = QCheckBox("Download Subtitles")
         self.subs_checkbox.setCursor(Qt.PointingHandCursor)
         self.subs_checkbox.setStyleSheet(input_style)
+        
+        self.remove_links_checkbox = QCheckBox("Remove Links")
+        self.remove_links_checkbox.setCursor(Qt.PointingHandCursor)
+        self.remove_links_checkbox.setStyleSheet(input_style)
+        
+        self.remove_mentions_checkbox = QCheckBox("Remove Mentions (@)")
+        self.remove_mentions_checkbox.setCursor(Qt.PointingHandCursor)
+        self.remove_mentions_checkbox.setStyleSheet(input_style)
+        
         options_layout.addWidget(options_label)
         options_layout.addWidget(self.subs_checkbox)
+        options_layout.addWidget(self.remove_links_checkbox)
+        options_layout.addWidget(self.remove_mentions_checkbox)
         options_layout.addStretch()
 
         settings_layout.addLayout(ext_layout)
@@ -949,6 +960,8 @@ class DownloaderTab(QWidget):
         if idx >= 0: self.naming_combo.setCurrentIndex(idx)
         
         self.subs_checkbox.setChecked(dl_settings.get('subtitles', False))
+        self.remove_links_checkbox.setChecked(dl_settings.get('remove_links', False))
+        self.remove_mentions_checkbox.setChecked(dl_settings.get('remove_mentions', False))
         
         self.video_download_path = dl_settings.get('video_path', "")
         if self.video_download_path:
@@ -984,6 +997,8 @@ class DownloaderTab(QWidget):
                 'extension': self.extension_combo.currentText(),
                 'naming': self.naming_combo.currentText(),
                 'subtitles': self.subs_checkbox.isChecked(),
+                'remove_links': self.remove_links_checkbox.isChecked(),
+                'remove_mentions': self.remove_mentions_checkbox.isChecked(),
                 'video_path': self.video_download_path if self.video_download_path else "",
                 'photo_path': self.photo_download_path if self.photo_download_path else ""
             },
@@ -1749,6 +1764,8 @@ class DownloaderTab(QWidget):
             'extension': self.extension_combo.currentText().lower(),
             'naming_style': self.naming_combo.currentText(),
             'subtitles': self.subs_checkbox.isChecked(),
+            'remove_links': self.remove_links_checkbox.isChecked(),
+            'remove_mentions': self.remove_mentions_checkbox.isChecked(),
             'shutdown': self.shutdown_checkbox.isChecked()
         }
         self.downloader.update_queue_settings(settings)
