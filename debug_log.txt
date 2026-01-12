@@ -16226,3 +16226,126 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno
 2026-01-08 19:53:04,472 - INFO - Update available: 26.0.2 (Current: 26.0.1)
 2026-01-12 21:00:07,043 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2026-01-12 21:00:09,783 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 21:03:02,603 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 21:04:07,332 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 21:04:09,836 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 21:04:41,326 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 21:04:43,051 - DEBUG - Using proactor: IocpProactor
+2026-01-12 21:04:51,538 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 21:04:51,593 - INFO - Added 8 cookies to browser context.
+2026-01-12 21:04:51,881 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 21:04:51,882 - INFO - Scraping target limit (max_entries): 7
+2026-01-12 21:04:56,948 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2026-01-12 21:04:56,990 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2026-01-12 21:05:02,570 - DEBUG - Scroll iteration 1 completed
+2026-01-12 21:05:02,594 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 21:05:02,594 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 21:05:02,595 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 21:05:02,596 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 21:05:02,596 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 21:05:02,596 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 21:05:02,596 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 21:05:02,604 - INFO - Loop status: Iteration 1, Found 10/7 items (+10 new valid, +22 raw)
+2026-01-12 21:05:02,604 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 21:05:02,604 - INFO - Scraping found 10 unique valid links.
+2026-01-12 22:06:58,512 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 22:07:01,390 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 22:07:02,391 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 22:07:03,732 - DEBUG - Using proactor: IocpProactor
+2026-01-12 22:07:04,726 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:07:04,784 - INFO - Added 8 cookies to browser context.
+2026-01-12 22:07:04,872 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:07:04,872 - INFO - Scraping target limit (max_entries): 7
+2026-01-12 22:07:09,999 - INFO - Starting scroll loop. Planned iterations: 5 for max 7 items.
+2026-01-12 22:07:10,067 - INFO - Starting dynamic scroll loop. Target: 7 items.
+2026-01-12 22:07:15,623 - DEBUG - Scroll iteration 1 completed
+2026-01-12 22:07:15,641 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:07:15,641 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:07:15,642 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:07:15,643 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:07:15,643 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:07:15,643 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:07:15,643 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:07:15,655 - INFO - Loop status: Iteration 1, Found 10/7 items (+10 new valid, +22 raw)
+2026-01-12 22:07:15,655 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 22:07:15,656 - INFO - Scraping found 10 unique valid links.
+2026-01-12 22:07:19,421 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/25930726276562387/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\profile.php_id61554790032365
+2026-01-12 22:07:19,421 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-12 22:07:19,421 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-12 22:07:19,421 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:07:19,425 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1934095910874885/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\profile.php_id61554790032365
+2026-01-12 22:07:19,425 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-12 22:07:19,425 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-12 22:07:19,426 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:07:28,670 - INFO - Download completed: https://www.facebook.com/reel/1934095910874885/?s=fb_shorts_profile&stack_idx=0
+2026-01-12 22:07:30,682 - INFO - Download completed: https://www.facebook.com/reel/25930726276562387/?s=fb_shorts_profile&stack_idx=0
+2026-01-12 22:08:21,908 - DEBUG - Using proactor: IocpProactor
+2026-01-12 22:08:22,798 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:08:22,841 - INFO - Added 8 cookies to browser context.
+2026-01-12 22:08:22,922 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:08:22,923 - INFO - Scraping target limit (max_entries): 8
+2026-01-12 22:08:25,289 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-12 22:08:25,300 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-12 22:08:30,845 - DEBUG - Scroll iteration 1 completed
+2026-01-12 22:08:30,863 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:08:30,864 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:08:30,865 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:08:30,865 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:08:30,865 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:08:30,865 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:08:30,865 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:08:30,881 - INFO - Loop status: Iteration 1, Found 10/8 items (+10 new valid, +22 raw)
+2026-01-12 22:08:30,882 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 22:08:30,882 - INFO - Scraping found 10 unique valid links.
+2026-01-12 22:08:37,161 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1640524677284043/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\profile.php_id61554790032365
+2026-01-12 22:08:37,161 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-12 22:08:37,161 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-12 22:08:37,162 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:08:43,525 - ERROR - Failed to save caption: cannot access local variable 're' where it is not associated with a value
+2026-01-12 22:08:43,527 - INFO - Download completed: https://www.facebook.com/reel/1640524677284043/?s=fb_shorts_profile&stack_idx=0
+2026-01-12 22:11:56,572 - DEBUG - Using proactor: IocpProactor
+2026-01-12 22:11:57,435 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:11:57,489 - INFO - Added 8 cookies to browser context.
+2026-01-12 22:11:57,574 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:11:57,574 - INFO - Scraping target limit (max_entries): 9
+2026-01-12 22:12:00,055 - INFO - Starting scroll loop. Planned iterations: 5 for max 9 items.
+2026-01-12 22:12:00,075 - INFO - Starting dynamic scroll loop. Target: 9 items.
+2026-01-12 22:12:05,610 - DEBUG - Scroll iteration 1 completed
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:12:05,621 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:12:05,622 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:12:05,622 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:12:05,622 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:12:05,622 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:12:05,630 - INFO - Loop status: Iteration 1, Found 10/9 items (+10 new valid, +22 raw)
+2026-01-12 22:12:05,630 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 22:12:05,630 - INFO - Scraping found 10 unique valid links.
+2026-01-12 22:12:12,488 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1934095910874885/?s=fb_shorts_profile&stack_idx=0 to C:/Users/USER/Downloads\profile.php_id61554790032365
+2026-01-12 22:12:12,488 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-12 22:12:12,488 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/newtab_cookies.txt', Browser='chrome'
+2026-01-12 22:12:12,488 - INFO - Using cookie file: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:12:17,573 - ERROR - Failed to save caption: cannot access local variable 're' where it is not associated with a value
+2026-01-12 22:12:17,575 - INFO - Download completed: https://www.facebook.com/reel/1934095910874885/?s=fb_shorts_profile&stack_idx=0
+2026-01-12 22:14:56,610 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 22:14:59,644 - INFO - Update available: 26.0.2 (Current: 26.0.1)

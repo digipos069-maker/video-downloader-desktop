@@ -582,7 +582,6 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     
     extension = settings.get('extension', 'best')
     naming_style = settings.get('naming_style', 'Original Name')
-    subtitles = settings.get('subtitles', False)
     resolution = settings.get('resolution', 'Best Available')
 
     # Check for FFmpeg
@@ -682,10 +681,6 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     if ffmpeg_location:
         ydl_opts['ffmpeg_location'] = ffmpeg_location
 
-    # Handle Subtitles
-    if subtitles:
-        ydl_opts['writesubtitles'] = True
-        
     # Handle Cookies (Authentication)
     cookie_file = settings.get('cookie_file')
     browser_source = settings.get('cookies_from_browser')
@@ -800,15 +795,19 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                     raise e
             
             # Handle Caption (.txt) generation
+            logging.info(f"Checking caption generation. Style: '{naming_style}'")
             if naming_style == 'Video + Caption (.txt)':
                 try:
+                    logging.info("Entering caption generation block.")
                     # Determine final filename
                     if 'requested_downloads' in info:
                         # Multiformat/merged case
                         final_filename = info['requested_downloads'][0]['filepath']
+                        logging.info(f"Using requested_downloads filepath: {final_filename}")
                     else:
                         # Direct single file case
                         final_filename = ydl.prepare_filename(info)
+                        logging.info(f"Using prepare_filename: {final_filename}")
                     
                     # Change extension to .txt
                     base_name = os.path.splitext(final_filename)[0]
@@ -834,6 +833,8 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                     logging.info(f"Caption saved to: {txt_filename}")
                 except Exception as e:
                     logging.error(f"Failed to save caption: {e}")
+            else:
+                logging.info(f"Caption generation skipped. Style '{naming_style}' != 'Video + Caption (.txt)'")
 
         if logger.skipped:
             logging.info(f"Download skipped (already exists): {url}")
@@ -900,6 +901,7 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
         
         # Handle Caption (.txt) generation
         naming_style = settings.get('naming_style', 'Original Name')
+        logging.info(f"Direct Download - Checking caption generation. Style: '{naming_style}'")
         if naming_style == 'Video + Caption (.txt)':
             try:
                 base_name = os.path.splitext(full_path)[0]
@@ -921,6 +923,8 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
                 logging.info(f"Caption saved to: {txt_filename}")
             except Exception as e:
                 logging.error(f"Failed to save caption for direct download: {e}")
+        else:
+             logging.info("Direct Download - Caption generation skipped.")
 
         logging.info(f"Direct download completed: {full_path}")
         progress_callback(100)

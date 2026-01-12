@@ -1,9 +1,9 @@
 {
     "video": {
         "enabled": true,
-        "top": true,
-        "count": 7,
-        "all": false,
+        "top": false,
+        "count": 2,
+        "all": true,
         "resolution": "Best Available"
     },
     "photo": {
@@ -15,10 +15,9 @@
     },
     "download": {
         "extension": "Best",
-        "naming": "Original Name",
-        "subtitles": false,
-        "remove_links": false,
-        "remove_mentions": false,
+        "naming": "Video + Caption (.txt)",
+        "remove_links": true,
+        "remove_mentions": true,
         "video_path": "C:/Users/USER/Downloads",
         "photo_path": "E:/test"
     },

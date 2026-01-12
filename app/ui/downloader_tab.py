@@ -690,9 +690,6 @@ class DownloaderTab(QWidget):
         options_layout.setSpacing(4)
         options_label = QLabel("Extras")
         options_label.setStyleSheet(label_style)
-        self.subs_checkbox = QCheckBox("Download Subtitles")
-        self.subs_checkbox.setCursor(Qt.PointingHandCursor)
-        self.subs_checkbox.setStyleSheet(input_style)
         
         self.remove_links_checkbox = QCheckBox("Remove Links")
         self.remove_links_checkbox.setCursor(Qt.PointingHandCursor)
@@ -703,7 +700,6 @@ class DownloaderTab(QWidget):
         self.remove_mentions_checkbox.setStyleSheet(input_style)
         
         options_layout.addWidget(options_label)
-        options_layout.addWidget(self.subs_checkbox)
         options_layout.addWidget(self.remove_links_checkbox)
         options_layout.addWidget(self.remove_mentions_checkbox)
         options_layout.addStretch()
@@ -959,7 +955,6 @@ class DownloaderTab(QWidget):
         idx = self.naming_combo.findText(name_text)
         if idx >= 0: self.naming_combo.setCurrentIndex(idx)
         
-        self.subs_checkbox.setChecked(dl_settings.get('subtitles', False))
         self.remove_links_checkbox.setChecked(dl_settings.get('remove_links', False))
         self.remove_mentions_checkbox.setChecked(dl_settings.get('remove_mentions', False))
         
@@ -996,7 +991,6 @@ class DownloaderTab(QWidget):
             'download': {
                 'extension': self.extension_combo.currentText(),
                 'naming': self.naming_combo.currentText(),
-                'subtitles': self.subs_checkbox.isChecked(),
                 'remove_links': self.remove_links_checkbox.isChecked(),
                 'remove_mentions': self.remove_mentions_checkbox.isChecked(),
                 'video_path': self.video_download_path if self.video_download_path else "",
@@ -1553,7 +1547,8 @@ class DownloaderTab(QWidget):
                 'photo_path': self.photo_download_path,
                 'extension': self.extension_combo.currentText().lower(),
                 'naming_style': self.naming_combo.currentText(),
-                'subtitles': self.subs_checkbox.isChecked(),
+                'remove_links': self.remove_links_checkbox.isChecked(),
+                'remove_mentions': self.remove_mentions_checkbox.isChecked(),
                 'shutdown': self.shutdown_checkbox.isChecked()
             }
             self.downloader.update_queue_settings(settings)
@@ -1763,7 +1758,6 @@ class DownloaderTab(QWidget):
             'photo_path': self.photo_download_path,
             'extension': self.extension_combo.currentText().lower(),
             'naming_style': self.naming_combo.currentText(),
-            'subtitles': self.subs_checkbox.isChecked(),
             'remove_links': self.remove_links_checkbox.isChecked(),
             'remove_mentions': self.remove_mentions_checkbox.isChecked(),
             'shutdown': self.shutdown_checkbox.isChecked()
@@ -1955,7 +1949,8 @@ class DownloaderTab(QWidget):
             'photo_path': self.photo_download_path,
             'extension': self.extension_combo.currentText().lower(),
             'naming_style': self.naming_combo.currentText(),
-            'subtitles': self.subs_checkbox.isChecked(),
+            'remove_links': self.remove_links_checkbox.isChecked(),
+            'remove_mentions': self.remove_mentions_checkbox.isChecked(),
             'shutdown': self.shutdown_checkbox.isChecked()
         }
         self.downloader.update_queue_settings(settings)

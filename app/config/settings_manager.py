@@ -22,7 +22,8 @@ DEFAULT_SETTINGS = {
     'download': {
         'extension': "Best",
         'naming': "Original Name",
-        'subtitles': False,
+        'remove_links': False,
+        'remove_mentions': False,
         'video_path': "",
         'photo_path': ""
     },
