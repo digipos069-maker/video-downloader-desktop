@@ -17359,3 +17359,522 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m unable to open for writing: [Errno
 2026-01-12 22:45:21,977 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
 2026-01-12 22:45:21,977 - INFO - Loop status: Iteration 7, Found 10/10000 items (+0 new valid, +0 raw)
 2026-01-12 22:45:21,977 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:57:45,944 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 22:57:48,702 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 22:57:53,240 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 22:58:05,030 - DEBUG - Using proactor: IocpProactor
+2026-01-12 22:58:05,915 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 22:58:05,956 - INFO - Added 8 cookies to browser context.
+2026-01-12 22:58:06,038 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:06,038 - INFO - Scraping target limit (max_entries): 1005
+2026-01-12 22:58:09,241 - INFO - Starting scroll loop. Planned iterations: 52 for max 1005 items.
+2026-01-12 22:58:09,308 - INFO - Starting dynamic scroll loop. Target: 1005 items.
+2026-01-12 22:58:14,859 - DEBUG - Scroll iteration 1 completed
+2026-01-12 22:58:14,877 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:14,877 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:14,877 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:14,877 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:14,878 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:14,879 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:14,879 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:14,895 - INFO - Loop status: Iteration 1, Found 10/1005 items (+10 new valid, +22 raw)
+2026-01-12 22:58:20,424 - DEBUG - Scroll iteration 2 completed
+2026-01-12 22:58:20,437 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:20,437 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:20,438 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:20,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:20,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:20,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:20,439 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:20,439 - INFO - Loop status: Iteration 2, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:25,970 - DEBUG - Scroll iteration 3 completed
+2026-01-12 22:58:25,985 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:25,985 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:25,985 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:25,985 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:25,986 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:25,987 - INFO - Loop status: Iteration 3, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:31,517 - DEBUG - Scroll iteration 4 completed
+2026-01-12 22:58:31,531 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:31,531 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:31,532 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:31,532 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:31,532 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:31,532 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:31,532 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:31,533 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:31,533 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:31,533 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:31,533 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:31,533 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:31,533 - INFO - Loop status: Iteration 4, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:31,533 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:58:38,578 - DEBUG - Scroll iteration 5 completed
+2026-01-12 22:58:38,590 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:38,590 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:38,591 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:38,592 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:38,592 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:38,592 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:38,592 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:38,592 - INFO - Loop status: Iteration 5, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:38,592 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:58:45,634 - DEBUG - Scroll iteration 6 completed
+2026-01-12 22:58:45,647 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:45,647 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:45,648 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:45,649 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:45,649 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:45,649 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:45,649 - INFO - Loop status: Iteration 6, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:45,649 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:58:52,692 - DEBUG - Scroll iteration 7 completed
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:52,707 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:52,708 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:52,708 - INFO - Loop status: Iteration 7, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:52,708 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:58:59,753 - DEBUG - Scroll iteration 8 completed
+2026-01-12 22:58:59,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:59,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:58:59,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:58:59,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:58:59,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:58:59,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:58:59,766 - INFO - Loop status: Iteration 8, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:58:59,766 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:59:06,818 - DEBUG - Scroll iteration 9 completed
+2026-01-12 22:59:06,831 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:06,831 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:59:06,831 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:59:06,831 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:59:06,831 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:06,832 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:59:06,833 - INFO - Loop status: Iteration 9, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:59:06,833 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:59:13,878 - DEBUG - Scroll iteration 10 completed
+2026-01-12 22:59:13,892 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:13,892 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:59:13,892 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:59:13,893 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:59:13,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:13,894 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:59:13,894 - INFO - Loop status: Iteration 10, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:59:13,894 - INFO - Stuck. Trying random jumps...
+2026-01-12 22:59:20,937 - DEBUG - Scroll iteration 11 completed
+2026-01-12 22:59:20,946 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:20,946 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 22:59:20,946 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 22:59:20,947 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 22:59:20,947 - INFO - Loop status: Iteration 11, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 22:59:20,947 - INFO - Scroll stagnant for 10 iterations. Assuming end of feed.
+2026-01-12 22:59:20,947 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 22:59:20,948 - INFO - Scraping found 10 unique valid links.
+2026-01-12 23:04:05,498 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 23:04:08,215 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-12 23:04:09,613 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-12 23:04:11,206 - DEBUG - Using proactor: IocpProactor
+2026-01-12 23:04:12,104 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 23:04:12,149 - INFO - Added 8 cookies to browser context.
+2026-01-12 23:04:12,223 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:12,224 - INFO - Scraping target limit (max_entries): 1005
+2026-01-12 23:04:15,023 - INFO - Starting scroll loop. Planned iterations: 52 for max 1005 items.
+2026-01-12 23:04:15,086 - INFO - Starting dynamic scroll loop. Target: 1005 items.
+2026-01-12 23:04:20,641 - DEBUG - Scroll iteration 1 completed
+2026-01-12 23:04:20,659 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:20,659 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:20,659 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:20,660 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:20,661 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:20,661 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:20,677 - INFO - Loop status: Iteration 1, Found 10/1005 items (+10 new valid, +22 raw)
+2026-01-12 23:04:26,212 - DEBUG - Scroll iteration 2 completed
+2026-01-12 23:04:26,227 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:26,227 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:26,227 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:26,227 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:26,227 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:26,228 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:26,229 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:26,229 - INFO - Loop status: Iteration 2, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:31,762 - DEBUG - Scroll iteration 3 completed
+2026-01-12 23:04:31,776 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:31,776 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:31,777 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:31,778 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:31,778 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:31,778 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:31,778 - INFO - Loop status: Iteration 3, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:37,310 - DEBUG - Scroll iteration 4 completed
+2026-01-12 23:04:37,321 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:37,321 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:37,321 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:37,322 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:37,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:37,323 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:37,323 - INFO - Loop status: Iteration 4, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:37,323 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:04:44,370 - DEBUG - Scroll iteration 5 completed
+2026-01-12 23:04:44,382 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:44,382 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:44,382 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:44,383 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:44,384 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:44,384 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:44,384 - INFO - Loop status: Iteration 5, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:44,384 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:04:51,430 - DEBUG - Scroll iteration 6 completed
+2026-01-12 23:04:51,442 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:51,443 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:51,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:51,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:51,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:51,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:51,444 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:51,444 - INFO - Loop status: Iteration 6, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:51,445 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:04:58,492 - DEBUG - Scroll iteration 7 completed
+2026-01-12 23:04:58,506 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:58,506 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:04:58,506 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:04:58,507 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:04:58,508 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:04:58,508 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:04:58,508 - INFO - Loop status: Iteration 7, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:04:58,508 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:05:05,557 - DEBUG - Scroll iteration 8 completed
+2026-01-12 23:05:05,570 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:05,571 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:05,572 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:05,572 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:05,572 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:05,572 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:05,572 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:05,572 - INFO - Loop status: Iteration 8, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:05:05,572 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:05:12,621 - DEBUG - Scroll iteration 9 completed
+2026-01-12 23:05:12,635 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:12,635 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:12,635 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:12,635 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:12,636 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:12,637 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:12,637 - INFO - Loop status: Iteration 9, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:05:12,637 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:05:19,687 - DEBUG - Scroll iteration 10 completed
+2026-01-12 23:05:19,700 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:19,700 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:19,701 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:19,702 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:19,702 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:19,702 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:19,702 - INFO - Loop status: Iteration 10, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:05:19,702 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:05:26,750 - DEBUG - Scroll iteration 11 completed
+2026-01-12 23:05:26,763 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:26,763 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:26,763 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:26,763 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:26,764 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:26,765 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:26,765 - INFO - Loop status: Iteration 11, Found 10/1005 items (+0 new valid, +0 raw)
+2026-01-12 23:05:26,765 - INFO - Scroll stagnant for 10 iterations. Assuming end of feed.
+2026-01-12 23:05:26,765 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 23:05:26,765 - INFO - Scraping found 10 unique valid links.
+2026-01-12 23:05:44,477 - DEBUG - Using proactor: IocpProactor
+2026-01-12 23:05:45,334 - INFO - Loading cookies from: C:/Users/USER/Downloads/newtab_cookies.txt
+2026-01-12 23:05:45,382 - INFO - Added 8 cookies to browser context.
+2026-01-12 23:05:45,456 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:45,456 - INFO - Scraping target limit (max_entries): 10000
+2026-01-12 23:05:48,636 - INFO - Starting scroll loop. Planned iterations: 502 for max 10000 items.
+2026-01-12 23:05:48,708 - INFO - Starting dynamic scroll loop. Target: 10000 items.
+2026-01-12 23:05:54,265 - DEBUG - Scroll iteration 1 completed
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:54,284 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:54,285 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:54,300 - INFO - Loop status: Iteration 1, Found 10/10000 items (+10 new valid, +22 raw)
+2026-01-12 23:05:59,832 - DEBUG - Scroll iteration 2 completed
+2026-01-12 23:05:59,846 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:59,846 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:05:59,846 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:05:59,846 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:05:59,847 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:05:59,848 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:05:59,848 - INFO - Loop status: Iteration 2, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:05,378 - DEBUG - Scroll iteration 3 completed
+2026-01-12 23:06:05,391 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:05,391 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:05,392 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:05,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:05,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:05,393 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:05,393 - INFO - Loop status: Iteration 3, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:10,926 - DEBUG - Scroll iteration 4 completed
+2026-01-12 23:06:10,939 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:10,940 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:10,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:10,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:10,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:10,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:10,941 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:10,941 - INFO - Loop status: Iteration 4, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:10,941 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:17,982 - DEBUG - Scroll iteration 5 completed
+2026-01-12 23:06:17,995 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:17,996 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:17,997 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:17,997 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:17,997 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:17,997 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:17,997 - INFO - Loop status: Iteration 5, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:17,997 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:25,045 - DEBUG - Scroll iteration 6 completed
+2026-01-12 23:06:25,059 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:25,059 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:25,059 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:25,060 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:25,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:25,061 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:25,061 - INFO - Loop status: Iteration 6, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:25,061 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:32,110 - DEBUG - Scroll iteration 7 completed
+2026-01-12 23:06:32,123 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:32,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:32,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:32,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:32,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:32,124 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:32,125 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:32,125 - INFO - Loop status: Iteration 7, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:32,126 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:39,172 - DEBUG - Scroll iteration 8 completed
+2026-01-12 23:06:39,193 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:39,193 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:39,194 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:39,195 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:39,195 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:39,195 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:39,195 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:39,195 - INFO - Loop status: Iteration 8, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:39,195 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:46,242 - DEBUG - Scroll iteration 9 completed
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:46,253 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:46,254 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:46,254 - INFO - Loop status: Iteration 9, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:46,254 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:06:53,295 - DEBUG - Scroll iteration 10 completed
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:06:53,304 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:06:53,305 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:06:53,305 - INFO - Loop status: Iteration 10, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:06:53,305 - INFO - Stuck. Trying random jumps...
+2026-01-12 23:07:00,344 - DEBUG - Scroll iteration 11 completed
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122246333456159667&set=a.122105404628159667&__tn__=%3C
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/people/DanZzy-FC/61554790032365/?sk=owner_reels
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=about
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=reels_tab
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=followers
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=photos
+2026-01-12 23:07:00,354 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/?next=https%3A%2F%2Fwww.facebook.com%2Fpeople%2FDanZzy-FC%2F61554790032365%2F%3Fsk%3Dreels_tab
+2026-01-12 23:07:00,355 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61554790032365&sk=following
+2026-01-12 23:07:00,355 - INFO - Loop status: Iteration 11, Found 10/10000 items (+0 new valid, +0 raw)
+2026-01-12 23:07:00,355 - INFO - Scroll stagnant for 10 iterations. Assuming end of feed.
+2026-01-12 23:07:00,355 - INFO - Scraping loop finished. Found 10 items.
+2026-01-12 23:07:00,355 - INFO - Scraping found 10 unique valid links.

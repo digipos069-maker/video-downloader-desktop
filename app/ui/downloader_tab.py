@@ -68,9 +68,16 @@ class ScrapingWorker(QThread):
             if limit_photo:
                 target_count = max(target_count, photo_opts.get('count', 5))
             
+            # Check for 'unlimited' modes (Enabled but not Restricted by Top/All)
+            has_unlimited_video = video_enabled and not limit_video and not video_opts.get('all', False)
+            has_unlimited_photo = photo_enabled and not limit_photo and not photo_opts.get('all', False)
+            
             fetch_limit = 100 # Default
             if video_opts.get('all', False) or photo_opts.get('all', False):
                  fetch_limit = 10000 # Increased limit for 'all'
+            elif has_unlimited_video or has_unlimited_photo:
+                 # If one type is unlimited, ensure we fetch at least default amount
+                 fetch_limit = max(100, target_count + 5)
             elif target_count > 0:
                  fetch_limit = target_count + 5 # Fetch a few more than target just in case of filters
             
