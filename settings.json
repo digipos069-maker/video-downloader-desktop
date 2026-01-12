@@ -1,9 +1,9 @@
 {
     "video": {
         "enabled": true,
-        "top": false,
+        "top": true,
         "count": 2,
-        "all": true,
+        "all": false,
         "resolution": "Best Available"
     },
     "photo": {

@@ -772,7 +772,6 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                         try:
                             # Extract path: '...temp.mp4' -> '...final.mp4'
                             # Regex to find the destination path
-                            import re
                             match = re.search(r"-> '(.+?)'", msg)
                             if match:
                                 conflict_path = match.group(1)
