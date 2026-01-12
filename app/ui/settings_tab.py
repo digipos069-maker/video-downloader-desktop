@@ -328,6 +328,10 @@ class SettingsTab(QWidget):
 
         self.all_video_chk = QCheckBox("All Videos")
         
+        # Mutual Exclusivity for Video
+        self.top_video_chk.toggled.connect(lambda checked: self.all_video_chk.setChecked(False) if checked else None)
+        self.all_video_chk.toggled.connect(lambda checked: self.top_video_chk.setChecked(False) if checked else None)
+        
         # Resolution Row
         res_layout = QHBoxLayout()
         res_label = QLabel("Resolution:")
@@ -367,6 +371,10 @@ class SettingsTab(QWidget):
         top_photo_layout.addStretch()
 
         self.all_photo_chk = QCheckBox("All Photos")
+        
+        # Mutual Exclusivity for Photo
+        self.top_photo_chk.toggled.connect(lambda checked: self.all_photo_chk.setChecked(False) if checked else None)
+        self.all_photo_chk.toggled.connect(lambda checked: self.top_photo_chk.setChecked(False) if checked else None)
         
         # Resolution (Quality) Row
         photo_res_layout = QHBoxLayout()
