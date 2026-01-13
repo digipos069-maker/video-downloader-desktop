@@ -715,24 +715,47 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             
     elif extension in ['mp4', 'mkv', 'webm']:
         # Video Format selection
-        target_format = f'bestvideo+bestaudio/best' # Default target
+        
+        # Default: Prioritize compatibility (H.264/AAC) for MP4, otherwise best quality
+        if extension == 'mp4':
+            # Try to get H.264 (avc) video and AAC (m4a) audio first for max compatibility
+            target_format = 'bestvideo[ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+        else:
+            # For MKV/WebM, just get the absolute best (likely VP9/AV1)
+            target_format = 'bestvideo+bestaudio/best'
         
         if not ffmpeg_available:
             # Must use single file if no FFmpeg
-            target_format = 'best'
+            # Still prefer mp4 if that's what was asked
+            if extension == 'mp4':
+                target_format = 'best[ext=mp4]/best'
+            else:
+                target_format = 'best'
 
         if resolution != 'Best Available':
             res_map = { "4K": 2160, "1080p": 1080, "720p": 720, "480p": 480, "360p": 360 }
             height = res_map.get(resolution)
             if height:
                 if ffmpeg_available:
-                    ydl_opts['format'] = f'bestvideo[height<={height}]+bestaudio/best[height<={height}]'
+                    # Inject height constraint into the start of the format string parts
+                    # This is complex with the multi-part string above. 
+                    # Simplified approach for specific resolution:
+                    if extension == 'mp4':
+                        # Priority 1: H.264/AAC MP4 (Native)
+                        # Priority 2: H.264 Video (Any Container) + AAC Audio -> Merged to MP4 (Prevents AV1/VP9 fallback)
+                        # Priority 3: Any MP4 video + AAC audio
+                        # Priority 4: Any Video (e.g. WebM) + Best Audio -> Merged to MP4
+                        # Priority 5: Best Single File (Fallback)
+                        target_format = f'bestvideo[ext=mp4][vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[ext=mp4][height<={height}]+bestaudio[ext=m4a]/bestvideo[height<={height}]+bestaudio/best[height<={height}]'
+                    else:
+                        target_format = f'bestvideo[height<={height}]+bestaudio/best[height<={height}]'
                 else:
-                    ydl_opts['format'] = f'best[height<={height}]'
-            else:
-                ydl_opts['format'] = target_format
-        else:
-            ydl_opts['format'] = target_format
+                    if extension == 'mp4':
+                        target_format = f'best[ext=mp4][height<={height}]/best[height<={height}]'
+                    else:
+                        target_format = f'best[height<={height}]'
+        
+        ydl_opts['format'] = target_format
             
         # Merge output format requires FFmpeg usually, unless we are just renaming
         if ffmpeg_available:

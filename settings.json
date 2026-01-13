@@ -1,9 +1,9 @@
 {
     "video": {
         "enabled": true,
-        "top": false,
-        "count": 1000,
-        "all": true,
+        "top": true,
+        "count": 10,
+        "all": false,
         "resolution": "Best Available"
     },
     "photo": {
@@ -14,15 +14,15 @@
         "quality": "Best Available"
     },
     "download": {
-        "extension": "Best",
+        "extension": "mp4",
         "naming": "Video + Caption (.txt)",
         "remove_links": false,
         "remove_mentions": false,
-        "video_path": "C:/Users/USER/Downloads",
+        "video_path": "E:/mmo/building-page/china movie",
         "photo_path": "E:/test"
     },
     "system": {
-        "threads": 10,
+        "threads": 14,
         "shutdown": false
     },
     "user_profile": {

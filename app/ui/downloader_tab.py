@@ -1491,7 +1491,7 @@ class DownloaderTab(QWidget):
             selected_rows.add(row)
             
             # Check item type for validation
-            type_item = self.activity_table.item(row, 4) # Column 4 is Type
+            type_item = self.activity_table.item(row, 5) # Column 5 is Type
             if type_item:
                 item_type = type_item.text()
                 if "Video" in item_type:
@@ -1582,8 +1582,8 @@ class DownloaderTab(QWidget):
             return
         
         row = selected_items[0].row()
-        url_item = self.activity_table.item(row, 2) # URL is in column 2
-        type_item = self.activity_table.item(row, 4) # Type is in column 4
+        url_item = self.activity_table.item(row, 3) # URL is in column 3
+        type_item = self.activity_table.item(row, 5) # Type is in column 5
         
         if not url_item or not type_item:
             return
@@ -1696,7 +1696,7 @@ class DownloaderTab(QWidget):
             selected_rows.add(item.row())
             
         for row in sorted(list(selected_rows)):
-            url_item = self.activity_table.item(row, 2) # URL is in column 2
+            url_item = self.activity_table.item(row, 3) # URL is in column 3
             if url_item:
                 urls.append(url_item.text())
         
