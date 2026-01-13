@@ -15,6 +15,7 @@ import re
 import json
 import shutil
 import psutil
+import subprocess
 from app.helpers import get_app_path
 
 # Configure logging
@@ -573,6 +574,71 @@ class YtDlpLogger:
     def error(self, msg): pass
     def info(self, msg): pass
 
+def convert_av1_to_h264(file_path, ffmpeg_location):
+    """
+    Helper to check if a file uses AV1 codec and convert it to H.264 if so.
+    Returns True if conversion happened and was successful, False otherwise.
+    """
+    try:
+        if not os.path.exists(file_path):
+            return False
+            
+        # 1. Simple Check: Use FFprobe logic or trust calling context?
+        # Ideally we check the file itself. But for speed in this context, 
+        # we might assume the caller checked the metadata 'av01' tag.
+        # However, let's just do the conversion part here.
+        
+        logging.info(f"Initiating AV1 -> H.264 conversion for: {file_path}")
+        
+        if not ffmpeg_location or not os.path.exists(ffmpeg_location):
+            logging.error("FFmpeg location not provided or invalid.")
+            return False
+
+        # Prepare paths
+        base, ext = os.path.splitext(file_path)
+        temp_output = f"{base}_h264{ext}"
+        
+        # Command: ffmpeg -i input -c:v libx264 -preset fast -crf 23 -c:a aac output
+        cmd = [
+            ffmpeg_location,
+            '-y', # Overwrite temp if exists
+            '-i', file_path,
+            '-c:v', 'libx264',
+            '-preset', 'fast',
+            '-crf', '23',
+            '-c:a', 'aac',
+            temp_output
+        ]
+        
+        # Run conversion
+        process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        
+        if process.returncode == 0:
+            logging.info("Conversion successful. Replacing original file.")
+            
+            # Wait a brief moment to ensure handles are closed
+            time.sleep(0.5)
+            
+            # Replace original with converted
+            # Handling potential Windows file lock issues with retry
+            try:
+                os.replace(temp_output, file_path)
+            except OSError:
+                if os.path.exists(file_path):
+                    os.remove(file_path)
+                os.rename(temp_output, file_path)
+                
+            return True
+        else:
+            logging.error(f"FFmpeg conversion failed: {process.stderr.decode()}")
+            if os.path.exists(temp_output):
+                os.remove(temp_output)
+            return False
+            
+    except Exception as e:
+        logging.error(f"Error in convert_av1_to_h264: {e}")
+        return False
+
 def download_with_ytdlp(url, output_path, progress_callback, settings={}):
     """
     Helper to download video using yt-dlp.
@@ -718,8 +784,12 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         
         # Default: Prioritize compatibility (H.264/AAC) for MP4, otherwise best quality
         if extension == 'mp4':
-            # Try to get H.264 (avc) video and AAC (m4a) audio first for max compatibility
-            target_format = 'bestvideo[ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+            # Priority 1: Native H.264/AAC MP4
+            # Priority 2: H.264 Video + Any Audio (Merge)
+            # Priority 3: Any Non-AV1/Non-VP9 Video (likely H.264) + Any Audio (Merge)
+            # Priority 4: Any Non-AV1 Video (likely VP9) + Any Audio (Merge) - Better compatibility than AV1
+            # Priority 5: Any Video + Any Audio (Last Resort)
+            target_format = 'bestvideo[ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc]+bestaudio/bestvideo[vcodec!^=av01][vcodec!^=vp9]+bestaudio/bestvideo[vcodec!^=av01]+bestaudio/bestvideo+bestaudio/best'
         else:
             # For MKV/WebM, just get the absolute best (likely VP9/AV1)
             target_format = 'bestvideo+bestaudio/best'
@@ -738,15 +808,13 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             if height:
                 if ffmpeg_available:
                     # Inject height constraint into the start of the format string parts
-                    # This is complex with the multi-part string above. 
-                    # Simplified approach for specific resolution:
                     if extension == 'mp4':
                         # Priority 1: H.264/AAC MP4 (Native)
-                        # Priority 2: H.264 Video (Any Container) + AAC Audio -> Merged to MP4 (Prevents AV1/VP9 fallback)
-                        # Priority 3: Any MP4 video + AAC audio
-                        # Priority 4: Any Video (e.g. WebM) + Best Audio -> Merged to MP4
-                        # Priority 5: Best Single File (Fallback)
-                        target_format = f'bestvideo[ext=mp4][vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[ext=mp4][height<={height}]+bestaudio[ext=m4a]/bestvideo[height<={height}]+bestaudio/best[height<={height}]'
+                        # Priority 2: H.264 Video + Any Audio (Merge)
+                        # Priority 3: Non-AV1/VP9 (H.264 fallback)
+                        # Priority 4: Non-AV1 (VP9 fallback)
+                        # Priority 5: Last Resort
+                        target_format = f'bestvideo[ext=mp4][vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc][height<={height}]+bestaudio/bestvideo[vcodec!^=av01][vcodec!^=vp9][height<={height}]+bestaudio/bestvideo[vcodec!^=av01][height<={height}]+bestaudio/bestvideo[height<={height}]+bestaudio/best[height<={height}]'
                     else:
                         target_format = f'bestvideo[height<={height}]+bestaudio/best[height<={height}]'
                 else:
@@ -863,6 +931,31 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             progress_callback(100) # Ensure UI shows 100%
             return True, "Already Downloaded"
         else:
+            # --- Auto-Convert AV1 to H.264 (Fallback Safeguard) ---
+            # Even with prioritized format selection, some videos (e.g. 8K) might only be AV1.
+            # We explicitly check the codec and convert if necessary to ensure playback compatibility.
+            try:
+                # 1. Determine final filename
+                final_path = None
+                if 'requested_downloads' in info:
+                     final_path = info['requested_downloads'][0]['filepath']
+                else:
+                     final_path = ydl.prepare_filename(info)
+                
+                if final_path and os.path.exists(final_path):
+                     # 2. Check Codec via info dict
+                     vcodec = info.get('vcodec', '').lower()
+                     
+                     if vcodec.startswith('av01') or vcodec == 'av1':
+                         logging.info(f"AV1 Codec detected in metadata for {final_path}. Checking conversion...")
+                         
+                         if ffmpeg_available and ffmpeg_location:
+                             convert_av1_to_h264(final_path, ffmpeg_location)
+                         else:
+                             logging.warning("AV1 detected but FFmpeg not found/configured for conversion.")
+            except Exception as conv_e:
+                logging.error(f"Error during AV1 auto-conversion check: {conv_e}")
+
             logging.info(f"Download completed: {url}")
             progress_callback(100)
             return True, "Completed"
