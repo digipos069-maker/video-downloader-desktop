@@ -650,6 +650,52 @@ class SettingsTab(QWidget):
         ig_layout.addStretch()
         self.credentials_tabs.addTab(instagram_tab, QIcon(os.path.join(icon_base_path, "instagram.png")), "Instagram")
         
+        # --- Kuaishou Credentials Tab ---
+        kuaishou_tab = QWidget()
+        kw_layout = QVBoxLayout(kuaishou_tab)
+        kw_layout.setSpacing(8)
+        kw_layout.setContentsMargins(10, 10, 10, 10)
+        
+        kw_desc = QLabel("Kuaishou/Kwai may require cookies for some content.\nSelect your 'cookies.txt' or browser.")
+        kw_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        kw_desc.setWordWrap(True)
+        kw_layout.addWidget(kw_desc)
+        
+        # Kuaishou Cookies File
+        kw_cookies_layout = QHBoxLayout()
+        self.kw_cookies_path = QLineEdit()
+        self.kw_cookies_path.setPlaceholderText("Path to kuaishou cookies.txt...")
+        self.kw_cookies_btn = QPushButton("Browse...")
+        self.kw_cookies_btn.clicked.connect(self.browse_kw_cookies)
+        self.kw_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        kw_cookies_layout.addWidget(QLabel("Cookies File:"))
+        kw_cookies_layout.addWidget(self.kw_cookies_path)
+        kw_cookies_layout.addWidget(self.kw_cookies_btn)
+        kw_layout.addLayout(kw_cookies_layout)
+
+        # Kuaishou Browser Option
+        kw_browser_layout = QHBoxLayout()
+        self.kw_browser_combo = QComboBox()
+        self.kw_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        kw_browser_layout.addWidget(QLabel("Browser Source:"))
+        kw_browser_layout.addWidget(self.kw_browser_combo)
+        kw_browser_layout.addStretch()
+        kw_layout.addLayout(kw_browser_layout)
+        
+        # Verify Kuaishou Button
+        verify_kw_layout = QHBoxLayout()
+        self.verify_kw_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_kw_cookies_btn.clicked.connect(self.verify_kw_cookies)
+        self.verify_kw_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_kw_layout.addStretch()
+        verify_kw_layout.addWidget(self.verify_kw_cookies_btn)
+        kw_layout.addLayout(verify_kw_layout)
+        
+        kw_layout.addStretch()
+        self.credentials_tabs.addTab(kuaishou_tab, QIcon(os.path.join(icon_base_path, "Kuaishou.png")), "Kuaishou")
+        
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
 
@@ -758,6 +804,11 @@ class SettingsTab(QWidget):
         if path:
             self.ig_cookies_path.setText(path)
 
+    def browse_kw_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select Kuaishou Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.kw_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
@@ -792,6 +843,13 @@ class SettingsTab(QWidget):
         browser_source = self.ig_browser_combo.currentText()
         test_url = "https://www.instagram.com/instagram/" # Instagram Test URL
         self._verify_cookies(cookie_file, browser_source, test_url, self.verify_ig_cookies_btn)
+
+    @Slot()
+    def verify_kw_cookies(self):
+        cookie_file = self.kw_cookies_path.text()
+        browser_source = self.kw_browser_combo.currentText()
+        test_url = "https://www.kuaishou.com/" # Kuaishou Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_kw_cookies_btn)
 
     def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):
@@ -892,6 +950,11 @@ class SettingsTab(QWidget):
             self.ig_cookies_path.setText(ig_creds.get('cookie_file', ''))
             self._set_combo_text(self.ig_browser_combo, ig_creds.get('browser', 'None'))
 
+        kw_creds = self.credentials_manager.get_credential('kuaishou')
+        if kw_creds:
+            self.kw_cookies_path.setText(kw_creds.get('cookie_file', ''))
+            self._set_combo_text(self.kw_browser_combo, kw_creds.get('browser', 'None'))
+
     def _set_combo_text(self, combo, text):
         idx = combo.findText(text)
         if idx >= 0:
@@ -938,6 +1001,12 @@ class SettingsTab(QWidget):
             'browser': self.ig_browser_combo.currentText()
         }
         self.credentials_manager.set_credential('instagram', ig_data)
+
+        kw_data = {
+            'cookie_file': self.kw_cookies_path.text(),
+            'browser': self.kw_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('kuaishou', kw_data)
 
         if success:
             QMessageBox.information(self, "Success", "Settings and Credentials saved successfully!")
