@@ -7,6 +7,7 @@ from PySide6.QtGui import QIcon, QPixmap, QPainter, QFont, QColor
 from app.ui.downloader_tab import DownloaderTab
 from app.ui.settings_tab import SettingsTab
 from app.ui.widgets.title_bar import TitleBar
+from app.ui.splash_screen import ModernSplashScreen
 from app.config.settings_manager import save_settings
 from app.helpers import resource_path, get_app_path
 
@@ -124,69 +125,39 @@ def main():
             myappid = 'com.video.downloader.sdm.v1' # Arbitrary string
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     
-    # --- Splash Screen Setup ---
-    # Create a pixmap for the splash screen
-    splash_pix = QPixmap(400, 300)
-    splash_pix.fill(QColor("#101014")) # Background color matching the theme
-
-    painter = QPainter(splash_pix)
-    
-    # Load and draw logo
-    logo_path = resource_path(os.path.join("app", "resources", "images", "logo.png"))
-    if os.path.exists(logo_path):
-        logo = QPixmap(logo_path)
-        logo = logo.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-        
-        # Center the logo
-        logo_x = (splash_pix.width() - logo.width()) // 2
-        logo_y = (splash_pix.height() - logo.height()) // 2 - 20 # Slightly shifted up
-        painter.drawPixmap(logo_x, logo_y, logo)
-    else:
-        # Fallback if logo missing
-        logo_y = 100 
-
-    # Draw "SDM" text
-    painter.setPen(QColor("#3B82F6")) # Accent Blue
-    font = QFont("Segoe UI", 32, QFont.Bold)
-    painter.setFont(font)
-    
-    text = "SDM"
-    font_metrics = painter.fontMetrics()
-    text_width = font_metrics.horizontalAdvance(text)
-    text_x = (splash_pix.width() - text_width) // 2
-    text_y = logo_y + 100 + 40 # Below logo
-    
-    painter.drawText(text_x, text_y, text)
-
-    # Draw "Loading..." text
-    font_loading = QFont("Segoe UI", 10)
-    painter.setFont(font_loading)
-    painter.setPen(QColor("#71717A")) # Zinc-500 Gray
-    loading_text = "Loading..."
-    loading_metrics = painter.fontMetrics()
-    loading_width = loading_metrics.horizontalAdvance(loading_text)
-    loading_x = (splash_pix.width() - loading_width) // 2
-    loading_y = text_y + 35
-    painter.drawText(loading_x, loading_y, loading_text)
-
-    painter.end()
-
-    # Show Splash
-    splash = QSplashScreen(splash_pix, Qt.WindowStaysOnTopHint)
+    # --- Show Modern Splash Screen ---
+    splash = ModernSplashScreen()
     splash.show()
+    
+    # Process events to render immediately
     app.processEvents()
 
-    # Load and apply stylesheet
+    # --- Initialization Steps ---
+    
+    # 1. Load Styles
+    splash.update_progress(10, "Loading UI themes...")
     style_file = resource_path(os.path.join("app", "resources", "styles.qss"))
     if os.path.exists(style_file):
         with open(style_file, "r") as f:
             app.setStyleSheet(f.read())
     else:
         print(f"Warning: Stylesheet not found at {style_file}")
+    
+    # 2. Simulated Loading Steps (Replace with real checks if needed)
+    steps = [
+        (30, "Checking dependencies..."),
+        (50, "Initializing platform handlers..."),
+        (70, "Loading user settings..."),
+        (90, "Preparing interface..."),
+        (100, "Starting...")
+    ]
+    
+    for progress, msg in steps:
+        time.sleep(0.3) # Simulate work (remove or reduce in production if fast)
+        splash.update_progress(progress, msg)
+        app.processEvents()
 
-    # Simulate initialization delay (for effect)
-    time.sleep(2)
-
+    # 3. Launch Main Window
     window = MainWindow()
     window.show()
     
