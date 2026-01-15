@@ -74,6 +74,8 @@ def is_valid_media_link(href, domain):
         # This part of the logic is tricky, so we rely on the positive indicators above.
         # If no specific video pattern is found, we assume it's not a direct media link.
         return False
+    elif 'kuaishou.com' in domain or 'kwai.com' in domain:
+        return True
     
     return False
 
@@ -1693,7 +1695,23 @@ class InstagramHandler(BaseHandler):
         else:
              return download_with_ytdlp(url, output_path, progress_callback, settings)
 
+class KuaishouHandler(BaseHandler):
+    def can_handle(self, url):
+        return 'kuaishou.com' in url or 'kwai.com' in url
 
+    def get_metadata(self, url):
+        return extract_metadata_with_playwright(url)
+
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
+        # Prefer Playwright for scraping lists/feeds
+        return extract_metadata_with_playwright(url, max_entries, settings=settings, callback=callback)
+
+    def download(self, item, progress_callback):
+        url = item['url']
+        settings = item.get('settings', {})
+        # Kuaishou is primarily video
+        output_path = self.get_download_path(settings, is_video=True, item_url=url)
+        return download_with_ytdlp(url, output_path, progress_callback, settings)
 
 class PlatformHandlerFactory:
     def __init__(self):
@@ -1703,6 +1721,7 @@ class PlatformHandlerFactory:
             PinterestHandler(),
             FacebookHandler(),
             InstagramHandler(),
+            KuaishouHandler(),
         ]
 
     def get_handler(self, url):

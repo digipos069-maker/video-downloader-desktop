@@ -119,6 +119,8 @@ class ScrapingWorker(QThread):
                     if not is_video and not is_photo:
                         if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
                             is_video = True
+                        elif 'kuaishou.com' in item_url or 'kwai.com' in item_url:
+                            is_video = True
                         elif 'instagram' in item_url:
                             if any(x in item_url for x in ['/reel/', '/reels/', '/tv/']):
                                 is_video = True
@@ -475,6 +477,7 @@ class DownloaderTab(QWidget):
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "facebook.png"), "Facebook", size=32))
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "instagram.png"), "Instagram", size=32))
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "pinterest.png"), "Pinterest", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "Kuaishou.png"), "Kuaishou", size=32))
         
         row2_layout.addLayout(platform_icons_layout)
         

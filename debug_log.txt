@@ -24961,3 +24961,199 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-15 16:23:35,745 - INFO - Direct Download - Checking caption generation. Style: 'Video + Caption (.txt)'
 2026-01-15 16:23:35,747 - INFO - Caption saved to: E:/test\pin_2392606047925519\Pinterest Download20407004557522538.txt
 2026-01-15 16:23:35,747 - INFO - Direct download completed: E:/test\pin_2392606047925519\Pinterest Download20407004557522538.jpg
+2026-01-15 16:27:42,357 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:27:44,854 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 16:28:07,780 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:28:09,884 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:28:10,770 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:28:10,802 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:28:10,870 - INFO - Playwright visiting: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:28:10,871 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 16:28:11,574 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 16:28:11,599 - INFO - Adding main source URL to results: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:28:11,600 - INFO - Scraper Filtering: Video=False, Photo=True
+2026-01-15 16:28:11,600 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 16:28:11,600 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:28:15,077 - INFO - Pinterest post-delay screenshot saved to E:\project\videoDownloader\debug_pinterest_after_3s_load.png
+2026-01-15 16:28:15,087 - INFO - Initial capture found 0 items.
+2026-01-15 16:28:15,087 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:28:24,909 - DEBUG - Scroll iteration 1 completed
+2026-01-15 16:28:24,921 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:24,921 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:24,921 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:24,922 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:24,922 - INFO - Loop status: Iteration 1, Found 1/8 items (+0 new valid, +13 raw)
+2026-01-15 16:28:30,508 - DEBUG - Scroll iteration 2 completed
+2026-01-15 16:28:30,521 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:30,522 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:30,523 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:30,523 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:30,523 - DEBUG - Filtered out non-pin Pinterest link: https://www.instagram.com/reel/DS3KePhDPp5/
+2026-01-15 16:28:30,526 - INFO - Loop status: Iteration 2, Found 3/8 items (+2 new valid, +14 raw)
+2026-01-15 16:28:36,135 - DEBUG - Scroll iteration 3 completed
+2026-01-15 16:28:36,145 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:36,146 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:36,146 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:36,146 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:36,146 - INFO - Loop status: Iteration 3, Found 3/8 items (+0 new valid, +13 raw)
+2026-01-15 16:28:41,775 - DEBUG - Scroll iteration 4 completed
+2026-01-15 16:28:41,788 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:41,789 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:41,789 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:41,789 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:41,789 - INFO - Loop status: Iteration 4, Found 3/8 items (+0 new valid, +13 raw)
+2026-01-15 16:28:47,442 - DEBUG - Scroll iteration 5 completed
+2026-01-15 16:28:47,454 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:47,454 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:47,454 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:47,455 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:47,457 - INFO - Loop status: Iteration 5, Found 6/8 items (+3 new valid, +12 raw)
+2026-01-15 16:28:53,108 - DEBUG - Scroll iteration 6 completed
+2026-01-15 16:28:53,117 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:28:53,120 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:28:53,120 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:28:53,121 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:28:53,123 - INFO - Loop status: Iteration 6, Found 13/8 items (+7 new valid, +12 raw)
+2026-01-15 16:28:53,123 - INFO - Scraping loop finished. Found 13 items.
+2026-01-15 16:28:53,124 - INFO - Scraping found 13 unique valid links.
+2026-01-15 16:28:59,471 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:29:00,347 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:29:00,396 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:29:00,471 - INFO - Playwright visiting: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:29:00,471 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 16:29:01,580 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 16:29:01,595 - INFO - Adding main source URL to results: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:29:01,596 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 16:29:01,597 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 16:29:01,597 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:29:05,056 - INFO - Pinterest post-delay screenshot saved to E:\project\videoDownloader\debug_pinterest_after_3s_load.png
+2026-01-15 16:29:05,233 - INFO - Initial capture found 7 items.
+2026-01-15 16:29:05,233 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:29:09,279 - INFO - Scraping loop finished. Found 8 items.
+2026-01-15 16:29:09,279 - INFO - Scraping found 8 unique valid links.
+2026-01-15 16:32:21,704 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/1071153092643414621/ | Title: Pinterest Download
+2026-01-15 16:32:21,705 - DEBUG - [PinterestHandler] Extracted Pin ID: '1071153092643414621'
+2026-01-15 16:32:21,705 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_1071153092643414621'
+2026-01-15 16:32:21,705 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/1071153092643414621/ to E:/mmo/building-page/china movie
+2026-01-15 16:32:21,705 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:32:21,706 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:32:21,706 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:32:21,706 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/5981412002149281 | Title: Pinterest Download
+2026-01-15 16:32:21,707 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/35465915813063670 | Title: Pinterest Download
+2026-01-15 16:32:21,708 - DEBUG - [PinterestHandler] Extracted Pin ID: '5981412002149281'
+2026-01-15 16:32:21,708 - DEBUG - [PinterestHandler] Extracted Pin ID: '35465915813063670'
+2026-01-15 16:32:21,709 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_5981412002149281'
+2026-01-15 16:32:21,709 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_35465915813063670'
+2026-01-15 16:32:21,710 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/5981412002149281 to E:/mmo/building-page/china movie\pin_1071153092643414621
+2026-01-15 16:32:21,710 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/35465915813063670 to E:/mmo/building-page/china movie\pin_1071153092643414621
+2026-01-15 16:32:21,711 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:32:21,711 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:32:21,711 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:32:21,712 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:32:21,712 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:32:21,713 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:32:27,136 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 16:32:27,136 - INFO - Entering caption generation block.
+2026-01-15 16:32:27,136 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_5981412002149281.mp4
+2026-01-15 16:32:27,137 - INFO - Caption saved to: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_5981412002149281.txt
+2026-01-15 16:32:27,193 - INFO - Download completed: https://www.pinterest.com/pin/5981412002149281
+2026-01-15 16:32:27,197 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/22729173116199602 | Title: Pinterest Download
+2026-01-15 16:32:27,198 - DEBUG - [PinterestHandler] Extracted Pin ID: '22729173116199602'
+2026-01-15 16:32:27,198 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_22729173116199602'
+2026-01-15 16:32:27,212 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/22729173116199602 to E:/mmo/building-page/china movie\pin_1071153092643414621
+2026-01-15 16:32:27,212 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:32:27,212 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:32:27,212 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:32:28,664 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 16:32:28,664 - INFO - Entering caption generation block.
+2026-01-15 16:32:28,665 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\Pinterest Download_1071153092643414621.mp4
+2026-01-15 16:32:28,665 - INFO - Caption saved to: E:\mmo\building-page\china movie\Pinterest Download_1071153092643414621.txt
+2026-01-15 16:32:28,719 - INFO - Download completed: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:32:31,304 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 16:32:31,304 - INFO - Entering caption generation block.
+2026-01-15 16:32:31,304 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_35465915813063670.mp4
+2026-01-15 16:32:31,305 - INFO - Caption saved to: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_35465915813063670.txt
+2026-01-15 16:32:31,361 - INFO - Download completed: https://www.pinterest.com/pin/35465915813063670
+2026-01-15 16:32:33,179 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 16:32:33,179 - INFO - Entering caption generation block.
+2026-01-15 16:32:33,179 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_22729173116199602.mp4
+2026-01-15 16:32:33,179 - INFO - Caption saved to: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_22729173116199602.txt
+2026-01-15 16:32:33,230 - INFO - Download completed: https://www.pinterest.com/pin/22729173116199602
+2026-01-15 16:33:23,966 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:33:24,846 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:33:24,875 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:33:24,938 - INFO - Playwright visiting: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:33:24,938 - INFO - Scraping target limit (max_entries): 105
+2026-01-15 16:33:25,753 - INFO - Starting scroll loop. Planned iterations: 7 for max 105 items.
+2026-01-15 16:33:25,833 - INFO - Adding main source URL to results: https://www.pinterest.com/pin/1071153092643414621/
+2026-01-15 16:33:25,834 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 16:33:25,834 - INFO - Starting dynamic scroll loop. Target: 105 items.
+2026-01-15 16:33:25,834 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:33:29,273 - INFO - Pinterest post-delay screenshot saved to E:\project\videoDownloader\debug_pinterest_after_3s_load.png
+2026-01-15 16:33:29,328 - INFO - Initial capture found 6 items.
+2026-01-15 16:33:29,328 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:33:39,023 - DEBUG - Scroll iteration 1 completed
+2026-01-15 16:33:39,036 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:33:39,043 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:33:39,043 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:33:39,051 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:33:39,058 - INFO - Loop status: Iteration 1, Found 20/105 items (+13 new valid, +13 raw)
+2026-01-15 16:33:44,622 - DEBUG - Scroll iteration 2 completed
+2026-01-15 16:33:44,637 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:33:44,645 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:33:44,646 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:33:44,648 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:33:44,655 - INFO - Loop status: Iteration 2, Found 33/105 items (+13 new valid, +13 raw)
+2026-01-15 16:33:50,251 - DEBUG - Scroll iteration 3 completed
+2026-01-15 16:33:50,262 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:33:50,267 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:33:50,269 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:33:50,273 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:33:50,274 - DEBUG - Filtered out non-pin Pinterest link: https://www.youtube.com/@poshitanvichannel
+2026-01-15 16:33:50,275 - INFO - Loop status: Iteration 3, Found 47/105 items (+14 new valid, +15 raw)
+2026-01-15 16:33:55,840 - DEBUG - Scroll iteration 4 completed
+2026-01-15 16:33:55,850 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:33:55,863 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:33:55,864 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:33:55,870 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:33:55,874 - INFO - Loop status: Iteration 4, Found 61/105 items (+14 new valid, +14 raw)
+2026-01-15 16:34:01,473 - DEBUG - Scroll iteration 5 completed
+2026-01-15 16:34:01,484 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:34:01,491 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:34:01,491 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:34:01,497 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:34:01,505 - INFO - Loop status: Iteration 5, Found 75/105 items (+14 new valid, +14 raw)
+2026-01-15 16:34:07,084 - DEBUG - Scroll iteration 6 completed
+2026-01-15 16:34:07,098 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:34:07,104 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:34:07,104 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:34:07,114 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:34:07,116 - INFO - Loop status: Iteration 6, Found 87/105 items (+12 new valid, +12 raw)
+2026-01-15 16:34:12,672 - DEBUG - Scroll iteration 7 completed
+2026-01-15 16:34:12,681 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:34:12,689 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:34:12,689 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:34:12,691 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:34:12,694 - INFO - Loop status: Iteration 7, Found 102/105 items (+15 new valid, +15 raw)
+2026-01-15 16:34:18,254 - DEBUG - Scroll iteration 8 completed
+2026-01-15 16:34:18,267 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/romastudiosofficial/
+2026-01-15 16:34:18,270 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:34:18,270 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:34:18,272 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:34:18,276 - INFO - Loop status: Iteration 8, Found 117/105 items (+15 new valid, +15 raw)
+2026-01-15 16:34:18,276 - INFO - Scraping loop finished. Found 117 items.
+2026-01-15 16:34:18,277 - INFO - Scraping found 117 unique valid links.
+2026-01-15 16:35:31,156 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/51017408275968047 | Title: Pinterest Download
+2026-01-15 16:35:31,156 - DEBUG - [PinterestHandler] Extracted Pin ID: '51017408275968047'
+2026-01-15 16:35:31,157 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_51017408275968047'
+2026-01-15 16:35:31,157 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/51017408275968047 to E:/mmo/building-page/china movie\pin_1071153092643414621
+2026-01-15 16:35:31,157 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:35:31,157 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:35:31,158 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:35:40,807 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 16:35:40,807 - INFO - Entering caption generation block.
+2026-01-15 16:35:40,807 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_51017408275968047.mp4
+2026-01-15 16:35:40,807 - INFO - Caption saved to: E:\mmo\building-page\china movie\pin_1071153092643414621\Pinterest Download_51017408275968047.txt
+2026-01-15 16:35:40,861 - INFO - Download completed: https://www.pinterest.com/pin/51017408275968047
+2026-01-15 17:04:30,579 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 17:04:33,321 - INFO - Update available: 26.0.2 (Current: 26.0.1)
