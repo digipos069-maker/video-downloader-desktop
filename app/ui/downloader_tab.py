@@ -1300,6 +1300,13 @@ class DownloaderTab(QWidget):
                 if creds:
                     if creds.get('cookie_file'): settings['cookie_file'] = creds.get('cookie_file')
                     if creds.get('browser') and creds.get('browser') != "None": settings['cookies_from_browser'] = creds.get('browser')
+
+            # Kuaishou
+            elif "kuaishou.com" in url or "kwai.com" in url:
+                creds = self.credentials_manager.get_credential('kuaishou')
+                if creds:
+                    if creds.get('cookie_file'): settings['cookie_file'] = creds.get('cookie_file')
+                    if creds.get('browser') and creds.get('browser') != "None": settings['cookies_from_browser'] = creds.get('browser')
                         
             print(f"[DEBUG] Starting worker for {url} with settings: {settings}")
 
@@ -1376,6 +1383,12 @@ class DownloaderTab(QWidget):
 
             elif "instagram.com" in item_url:
                 creds = self.credentials_manager.get_credential('instagram')
+                if creds:
+                    if creds.get('cookie_file'): download_settings['cookie_file'] = creds.get('cookie_file')
+                    if creds.get('browser') and creds.get('browser') != "None": download_settings['cookies_from_browser'] = creds.get('browser')
+
+            elif "kuaishou.com" in item_url or "kwai.com" in item_url:
+                creds = self.credentials_manager.get_credential('kuaishou')
                 if creds:
                     if creds.get('cookie_file'): download_settings['cookie_file'] = creds.get('cookie_file')
                     if creds.get('browser') and creds.get('browser') != "None": download_settings['cookies_from_browser'] = creds.get('browser')
