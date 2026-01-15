@@ -576,24 +576,40 @@ class YtDlpLogger:
 
 def convert_av1_to_h264(file_path, ffmpeg_location):
     """
-    Helper to check if a file uses AV1 codec and convert it to H.264 if so.
+    Helper to check if a file uses AV1 codec using FFmpeg and convert it to H.264 if so.
     Returns True if conversion happened and was successful, False otherwise.
     """
     try:
         if not os.path.exists(file_path):
             return False
-            
-        # 1. Simple Check: Use FFprobe logic or trust calling context?
-        # Ideally we check the file itself. But for speed in this context, 
-        # we might assume the caller checked the metadata 'av01' tag.
-        # However, let's just do the conversion part here.
-        
-        logging.info(f"Initiating AV1 -> H.264 conversion for: {file_path}")
         
         if not ffmpeg_location or not os.path.exists(ffmpeg_location):
             logging.error("FFmpeg location not provided or invalid.")
             return False
 
+        # 1. Inspect File Codec using FFmpeg (capture stderr)
+        # We run 'ffmpeg -i file' and check stderr for 'Video: av1'
+        # This is more robust than metadata as it checks the actual container stream
+        check_cmd = [ffmpeg_location, '-i', file_path]
+        check_proc = subprocess.run(check_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = check_proc.stderr.decode('utf-8', errors='ignore').lower()
+        
+        # Look for typical AV1 identifiers in FFmpeg output
+        # Some versions might format it differently, so we check multiple patterns
+        # We also check for 'av01' which is the MP4 FourCC for AV1
+        is_av1 = False
+        if "video: av1" in output or "video: av01" in output:
+            is_av1 = True
+        elif "av01" in output and "video" in output: # Broader check for FourCC
+             is_av1 = True
+             
+        if is_av1:
+            logging.info(f"AV1 Codec detected in file analysis: {file_path}. Initiating conversion...")
+        else:
+            # Not AV1, no conversion needed
+            return False
+
+        # 2. Conversion Logic
         # Prepare paths
         base, ext = os.path.splitext(file_path)
         temp_output = f"{base}_h264{ext}"
@@ -943,16 +959,10 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
                      final_path = ydl.prepare_filename(info)
                 
                 if final_path and os.path.exists(final_path):
-                     # 2. Check Codec via info dict
-                     vcodec = info.get('vcodec', '').lower()
-                     
-                     if vcodec.startswith('av01') or vcodec == 'av1':
-                         logging.info(f"AV1 Codec detected in metadata for {final_path}. Checking conversion...")
-                         
-                         if ffmpeg_available and ffmpeg_location:
-                             convert_av1_to_h264(final_path, ffmpeg_location)
-                         else:
-                             logging.warning("AV1 detected but FFmpeg not found/configured for conversion.")
+                     # 2. Always run the smart codec check/converter
+                     # The helper function inspects the file header, so we don't rely on potentially stale metadata
+                     if ffmpeg_available and ffmpeg_location:
+                         convert_av1_to_h264(final_path, ffmpeg_location)
             except Exception as conv_e:
                 logging.error(f"Error during AV1 auto-conversion check: {conv_e}")
 
