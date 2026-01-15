@@ -24612,3 +24612,161 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [instagram:user] reels: Unable to 
 2026-01-15 16:04:37,473 - INFO - Loop status: Iteration 1, Found 16/8 items (+16 new valid, +22 raw)
 2026-01-15 16:04:37,473 - INFO - Scraping loop finished. Found 16 items.
 2026-01-15 16:04:37,473 - INFO - Scraping found 16 unique valid links.
+2026-01-15 16:11:59,994 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:12:02,715 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 16:12:04,026 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:12:17,915 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:12:18,811 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:12:18,861 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:12:18,933 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 16:12:18,933 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 16:12:22,118 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 16:12:22,126 - INFO - Scraper Filtering: Video=False, Photo=True
+2026-01-15 16:12:22,126 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 16:12:22,126 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:12:25,581 - INFO - Pinterest post-delay screenshot saved to E:\project\videoDownloader\debug_pinterest_after_3s_load.png
+2026-01-15 16:12:25,602 - INFO - Initial capture found 8 items.
+2026-01-15 16:12:25,602 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:12:29,754 - INFO - Scraping loop finished. Found 8 items.
+2026-01-15 16:12:29,754 - INFO - Scraping found 8 unique valid links.
+2026-01-15 16:13:01,738 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/20407004557522538 | Title: Pinterest Download
+2026-01-15 16:13:01,739 - DEBUG - [PinterestHandler] Extracted Pin ID: '20407004557522538'
+2026-01-15 16:13:01,739 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_20407004557522538'
+2026-01-15 16:13:01,740 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/17240411070216220 | Title: Pinterest Download
+2026-01-15 16:13:01,740 - DEBUG - [PinterestHandler] Extracted Pin ID: '17240411070216220'
+2026-01-15 16:13:01,740 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_17240411070216220'
+2026-01-15 16:13:01,740 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/17240411070216220 to E:/mmo/building-page/china movie\pin_2392606047925519
+2026-01-15 16:13:01,741 - DEBUG - [PinterestHandler] Processing: https://www.pinterest.com/pin/81135230782244989 | Title: Pinterest Download
+2026-01-15 16:13:01,741 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:13:01,741 - DEBUG - [PinterestHandler] Extracted Pin ID: '81135230782244989'
+2026-01-15 16:13:01,741 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:13:01,742 - DEBUG - [PinterestHandler] Final Forced Filename: 'Pinterest Download_81135230782244989'
+2026-01-15 16:13:01,743 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:13:01,743 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/81135230782244989 to E:/mmo/building-page/china movie\pin_2392606047925519
+2026-01-15 16:13:01,746 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:13:01,746 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:13:01,746 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:13:01,748 - INFO - Starting yt-dlp download for https://www.pinterest.com/pin/20407004557522538 to E:/mmo/building-page/china movie\pin_2392606047925519
+2026-01-15 16:13:01,749 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 16:13:01,749 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.pinterest.com_cookies.txt', Browser='None'
+2026-01-15 16:13:01,750 - INFO - Using cookie file: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:13:04,347 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1852, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1911, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 2924, in process_video_result
+    self.raise_no_formats(info_dict)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1185, in raise_no_formats
+    raise ExtractorError(msg, video_id=info['id'], ie=info['extractor'],
+                         expected=has_drm or ignored or expected)
+yt_dlp.utils.ExtractorError: [Pinterest] 17240411070216220: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 1020, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 992, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 986, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1714, in wrapper
+    self.report_error(str(e), e.format_traceback())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 17240411070216220: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-01-15 16:13:04,347 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 17240411070216220: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-01-15 16:13:04,353 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1852, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1911, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 2924, in process_video_result
+    self.raise_no_formats(info_dict)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1185, in raise_no_formats
+    raise ExtractorError(msg, video_id=info['id'], ie=info['extractor'],
+                         expected=has_drm or ignored or expected)
+yt_dlp.utils.ExtractorError: [Pinterest] 20407004557522538: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 1020, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 992, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 986, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1714, in wrapper
+    self.report_error(str(e), e.format_traceback())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-01-15 16:13:04,353 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 20407004557522538: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-01-15 16:13:04,988 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1852, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1911, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 2924, in process_video_result
+    self.raise_no_formats(info_dict)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1185, in raise_no_formats
+    raise ExtractorError(msg, video_id=info['id'], ie=info['extractor'],
+                         expected=has_drm or ignored or expected)
+yt_dlp.utils.ExtractorError: [Pinterest] 81135230782244989: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 1020, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 992, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 986, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1714, in wrapper
+    self.report_error(str(e), e.format_traceback())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 81135230782244989: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-01-15 16:13:04,988 - INFO - yt-dlp did not find video (likely an image/mixed content): [0;31mERROR:[0m [Pinterest] 81135230782244989: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U

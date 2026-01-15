@@ -1598,7 +1598,8 @@ class PinterestHandler(BaseHandler):
             # Note: yt-dlp might fail for simple images, so we consider failure as "try next method"
             # Suppress "No video formats found" errors for Pinterest as they are common for images
             settings['suppress_expected_errors'] = True 
-            if download_with_ytdlp(url, output_path, progress_callback, settings):
+            success, _ = download_with_ytdlp(url, output_path, progress_callback, settings)
+            if success:
                 return True
             
             # 2. Fallback: Extract direct video URL
