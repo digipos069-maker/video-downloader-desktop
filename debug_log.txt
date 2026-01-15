@@ -22804,3 +22804,905 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m 'C:/Users/USER/Downloads/www.faceb
 2026-01-15 13:59:36,457 - INFO - Download completed: https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0
 2026-01-15 13:59:40,877 - INFO - Conversion successful. Replacing original file.
 2026-01-15 13:59:41,381 - INFO - Download completed: https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:05:55,480 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:05:58,207 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 14:06:02,246 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:06:04,751 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:06:05,658 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:05,701 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:06:05,778 - INFO - Playwright visiting: https://www.facebook.com/LoungUngAuthor/reels/
+2026-01-15 14:06:05,778 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:06:10,562 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:06:10,619 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:06:16,221 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:06:16,272 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=399442208669024&set=a.151246610155253
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=924542002825706&set=a.151246593488588&__tn__=%3C
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/followers/
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/MarketGardenBrewery
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/following/
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/SaintMichaelsCollege
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Floungung.author%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExdWtiVFZlWVFUckV3UGNZVHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7icqycnCqLypJXXmipPAWiflcl13_BjYbcdkiDwo-ZmlWj3gpzkzMc8qFDcA_aem_cLMZrLZOBAxMsJCBUYdkdg&h=AT0-soo-pJNeOE-cz6baZmFnoIbyfOwA2MbL1AEczxy5qXMj5-XbVDVkkM8Mx6z-XUEcJTRoccf7SMH9HVbPVzHUFAXTENElB3ho94tI6h1ftcYPtMhAju-GrWIYiH0KxlXd
+2026-01-15 14:06:16,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/reels_tab
+2026-01-15 14:06:16,291 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:06:16,291 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor
+2026-01-15 14:06:16,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:06:16,293 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:06:16,294 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:06:16,296 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:06:16,310 - INFO - Loop status: Iteration 1, Found 41/15 items (+41 new valid, +55 raw)
+2026-01-15 14:06:16,310 - INFO - Scraping loop finished. Found 41 items.
+2026-01-15 14:06:16,310 - INFO - Scraping found 41 unique valid links.
+2026-01-15 14:06:19,809 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:19,810 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:19,810 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:19,811 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:19,811 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:19,811 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:19,812 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:19,813 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:19,817 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:19,817 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:19,817 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:19,817 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:23,842 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:23,842 - INFO - Entering caption generation block.
+2026-01-15 14:06:23,842 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.mp4
+2026-01-15 14:06:23,868 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:23,868 - INFO - Entering caption generation block.
+2026-01-15 14:06:23,873 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.mp4
+2026-01-15 14:06:23,878 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:23,878 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.txt
+2026-01-15 14:06:23,878 - INFO - Entering caption generation block.
+2026-01-15 14:06:23,879 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.mp4
+2026-01-15 14:06:23,879 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.txt
+2026-01-15 14:06:23,879 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.txt
+2026-01-15 14:06:23,881 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:23,884 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:23,887 - INFO - Download skipped (already exists): https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:23,887 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:23,887 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:23,887 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:23,888 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:23,888 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:23,889 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:23,889 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:23,889 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:23,904 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:23,935 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:23,951 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:24,009 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:26,901 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:26,901 - INFO - Entering caption generation block.
+2026-01-15 14:06:26,902 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.mp4
+2026-01-15 14:06:26,902 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.txt
+2026-01-15 14:06:26,905 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:27,381 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:27,414 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:27,506 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:27,534 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:27,745 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:27,745 - INFO - Entering caption generation block.
+2026-01-15 14:06:27,746 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.mp4
+2026-01-15 14:06:27,755 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.txt
+2026-01-15 14:06:27,776 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:27,776 - INFO - Entering caption generation block.
+2026-01-15 14:06:27,776 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.mp4
+2026-01-15 14:06:27,776 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.txt
+2026-01-15 14:06:27,779 - INFO - Download skipped (already exists): https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:27,783 - INFO - Download skipped (already exists): https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:27,783 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:27,783 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:27,783 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:27,784 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:27,867 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:27,893 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:27,893 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:27,893 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:30,393 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:30,393 - INFO - Entering caption generation block.
+2026-01-15 14:06:30,393 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.mp4
+2026-01-15 14:06:30,394 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.txt
+2026-01-15 14:06:30,396 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:30,400 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:06:30,400 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:06:30,400 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:06:30,400 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:30,809 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:30,809 - INFO - Entering caption generation block.
+2026-01-15 14:06:30,809 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.mp4
+2026-01-15 14:06:30,810 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.txt
+2026-01-15 14:06:30,812 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:31,177 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:31,177 - INFO - Entering caption generation block.
+2026-01-15 14:06:31,177 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.mp4
+2026-01-15 14:06:31,177 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.txt
+2026-01-15 14:06:31,179 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:33,381 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:06:33,381 - INFO - Entering caption generation block.
+2026-01-15 14:06:33,381 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.mp4
+2026-01-15 14:06:33,382 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.txt
+2026-01-15 14:06:33,385 - INFO - Download skipped (already exists): https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:06:43,956 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:06:43,964 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:06:44,818 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:06:44,858 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:06:44,931 - INFO - Playwright visiting: https://www.facebook.com/LoungUngAuthor/reels/
+2026-01-15 14:06:44,931 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:06:47,428 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:06:47,451 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:06:53,033 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=399442208669024&set=a.151246610155253
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=924542002825706&set=a.151246593488588&__tn__=%3C
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/followers/
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/MarketGardenBrewery
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/following/
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/SaintMichaelsCollege
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Floungung.author%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExdWtiVFZlWVFUckV3UGNZVHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5k1tWA37Are0HdE_7s_xReRWoy6wppYHpjDiCsorTkBTnt2Orppip4BrznPw_aem_3TplVZ6XyJJNJzdQF0ZxDg&h=AT2Kq7pYXiaWCnlLfw2rvWROqmonIKNXwb8AfsL5Fxd--6J2sxdd5gsNrFa7YmZjxEKTqeXJUTvRfNYLa3WB8mTTKpC61LlXEQPVkVKCEv0ayqWCyBpvkgVzYHVvm8kSMGxj
+2026-01-15 14:06:53,084 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/reels_tab
+2026-01-15 14:06:53,097 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:06:53,098 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor
+2026-01-15 14:06:53,099 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:06:53,099 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:06:53,100 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:06:53,101 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:06:53,112 - INFO - Loop status: Iteration 1, Found 41/15 items (+41 new valid, +55 raw)
+2026-01-15 14:06:53,112 - INFO - Scraping loop finished. Found 41 items.
+2026-01-15 14:06:53,112 - INFO - Scraping found 41 unique valid links.
+2026-01-15 14:09:55,537 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:13:52,809 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:13:57,405 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:13:57,405 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:13:58,324 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:13:58,342 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:13:58,357 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:13:58,370 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:13:58,425 - INFO - Playwright visiting: https://www.facebook.com/LoungUngAuthor/reels/
+2026-01-15 14:13:58,425 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:13:58,434 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61579938422467&sk=reels_tab
+2026-01-15 14:13:58,434 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:14:01,682 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:14:01,695 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:14:01,700 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:14:01,713 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:14:07,239 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:14:07,272 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122099523224997947&set=a.122099489522997947
+2026-01-15 14:14:07,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122099522978997947&set=a.122098479686997947&__tn__=%3C
+2026-01-15 14:14:07,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=friends_likes
+2026-01-15 14:14:07,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=followers
+2026-01-15 14:14:07,273 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=reels_tab
+2026-01-15 14:14:07,286 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:14:07,287 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467
+2026-01-15 14:14:07,288 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:14:07,288 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:14:07,289 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:14:07,290 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:14:07,304 - INFO - Loop status: Iteration 1, Found 41/15 items (+41 new valid, +52 raw)
+2026-01-15 14:14:07,304 - INFO - Scraping loop finished. Found 41 items.
+2026-01-15 14:14:07,304 - INFO - Scraping found 41 unique valid links.
+2026-01-15 14:14:07,320 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:14:07,343 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=399442208669024&set=a.151246610155253
+2026-01-15 14:14:07,343 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=924542002825706&set=a.151246593488588&__tn__=%3C
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/followers/
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/MarketGardenBrewery
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/following/
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/SaintMichaelsCollege
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Floungung.author%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExdWtiVFZlWVFUckV3UGNZVHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6jxMpiCz4wfAXWWhAuafDLOD8cQubmysRPbLlJuYG5o4SLKd9G35NMOJIBBw_aem_MtadIAQ-J6pF8dKhIX8LgQ&h=AT0FxE8WML95on4dGEYq6w4BDhCGYUtD-0iCbz5gBR3v2jVFIMLkDaQbNacW_yk--jsRhilrZicpp4V2w-9jiGZNmYTwes4ZlKN4LE4rcbA0pI1G8tdnuL5dVYDJBRnXlaTG
+2026-01-15 14:14:07,344 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/reels_tab
+2026-01-15 14:14:07,346 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:14:07,346 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor
+2026-01-15 14:14:07,347 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:14:07,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:14:07,348 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:14:07,349 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:14:07,352 - INFO - Loop status: Iteration 1, Found 21/15 items (+21 new valid, +35 raw)
+2026-01-15 14:14:07,352 - INFO - Scraping loop finished. Found 21 items.
+2026-01-15 14:14:07,352 - INFO - Scraping found 21 unique valid links.
+2026-01-15 14:14:23,367 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:23,368 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:23,368 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:23,369 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:23,369 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:23,369 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:23,369 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:23,369 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:23,369 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:23,370 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:23,370 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:23,370 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:26,700 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:26,700 - INFO - Entering caption generation block.
+2026-01-15 14:14:26,808 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.mp4
+2026-01-15 14:14:26,950 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.txt
+2026-01-15 14:14:26,974 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:26,974 - INFO - Entering caption generation block.
+2026-01-15 14:14:26,974 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.mp4
+2026-01-15 14:14:26,975 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.txt
+2026-01-15 14:14:26,978 - INFO - Download skipped (already exists): https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:26,980 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:26,984 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:26,984 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:26,984 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:26,984 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:26,986 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:26,986 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:26,986 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:26,987 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:27,516 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:27,517 - INFO - Entering caption generation block.
+2026-01-15 14:14:27,517 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.mp4
+2026-01-15 14:14:27,517 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.txt
+2026-01-15 14:14:27,519 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:27,525 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:27,525 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:27,525 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:27,525 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:30,190 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:30,190 - INFO - Entering caption generation block.
+2026-01-15 14:14:30,190 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.mp4
+2026-01-15 14:14:30,191 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.txt
+2026-01-15 14:14:30,194 - INFO - Download skipped (already exists): https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:30,197 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:30,197 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:30,198 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:30,198 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:30,667 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:30,667 - INFO - Entering caption generation block.
+2026-01-15 14:14:30,667 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.mp4
+2026-01-15 14:14:30,670 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.txt
+2026-01-15 14:14:30,672 - INFO - Download skipped (already exists): https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:30,674 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:30,675 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:30,675 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:30,675 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:31,168 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:31,169 - INFO - Entering caption generation block.
+2026-01-15 14:14:31,170 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.mp4
+2026-01-15 14:14:31,170 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.txt
+2026-01-15 14:14:31,173 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:31,205 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:31,205 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:31,206 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:31,206 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:33,753 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:33,754 - INFO - Entering caption generation block.
+2026-01-15 14:14:33,754 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.mp4
+2026-01-15 14:14:33,754 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.txt
+2026-01-15 14:14:33,756 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:33,759 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:33,760 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:33,760 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:33,760 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:34,463 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:34,463 - INFO - Entering caption generation block.
+2026-01-15 14:14:34,463 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.mp4
+2026-01-15 14:14:34,464 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.txt
+2026-01-15 14:14:34,466 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:34,469 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/837506872186065/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:34,469 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:34,469 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:34,469 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:36,479 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:36,479 - INFO - Entering caption generation block.
+2026-01-15 14:14:36,479 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.mp4
+2026-01-15 14:14:36,480 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.txt
+2026-01-15 14:14:36,482 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:36,664 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/809627415000462/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:36,757 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:36,757 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:36,790 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:36,838 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:36,853 - INFO - Entering caption generation block.
+2026-01-15 14:14:36,869 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.mp4
+2026-01-15 14:14:36,923 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.txt
+2026-01-15 14:14:36,927 - INFO - Download skipped (already exists): https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:36,931 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1534403010898397/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:36,932 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:36,932 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:36,932 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:38,747 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:38,747 - INFO - Entering caption generation block.
+2026-01-15 14:14:38,747 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\interior\U0001f5a4_837506872186065.mp4
+2026-01-15 14:14:38,748 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\interior\U0001f5a4_837506872186065.txt
+2026-01-15 14:14:38,823 - INFO - Download completed: https://www.facebook.com/reel/837506872186065/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:38,824 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1569005694475537/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:38,825 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:38,825 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:38,825 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:41,388 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:41,388 - INFO - Entering caption generation block.
+2026-01-15 14:14:41,388 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Design Styles We Love \u2764\ufe0f https msha.ke stormbubbledesigns_1534403010898397.mp4
+2026-01-15 14:14:41,389 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Design Styles We Love \u2764\ufe0f https msha.ke stormbubbledesigns_1534403010898397.txt
+2026-01-15 14:14:41,443 - INFO - Download completed: https://www.facebook.com/reel/1534403010898397/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:41,444 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1123660419419286/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:41,445 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:41,445 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:41,445 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:42,129 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:42,130 - INFO - Entering caption generation block.
+2026-01-15 14:14:42,130 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1569005694475537.mp4
+2026-01-15 14:14:42,131 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1569005694475537.txt
+2026-01-15 14:14:42,152 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:42,153 - INFO - Entering caption generation block.
+2026-01-15 14:14:42,153 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Decorate easily with the stickers from Malldeco! \U0001f31f Versatile and easy to apply, they add personality.mp4
+2026-01-15 14:14:42,154 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Decorate easily with the stickers from Malldeco! \U0001f31f Versatile and easy to apply, they add personality.txt
+2026-01-15 14:14:42,190 - INFO - Download completed: https://www.facebook.com/reel/1569005694475537/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:42,191 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/827361947121691/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:42,191 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:42,192 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:42,192 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:42,307 - INFO - Download completed: https://www.facebook.com/reel/809627415000462/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:42,308 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1132049811706351/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:42,309 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:42,309 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:42,310 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:45,843 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:45,843 - INFO - Entering caption generation block.
+2026-01-15 14:14:45,843 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1123660419419286.mp4
+2026-01-15 14:14:45,844 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1123660419419286.txt
+2026-01-15 14:14:45,902 - INFO - Download completed: https://www.facebook.com/reel/1123660419419286/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:45,903 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4174130059527087/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:45,903 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:45,903 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:45,903 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:46,148 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:46,148 - INFO - Entering caption generation block.
+2026-01-15 14:14:46,148 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1132049811706351.mp4
+2026-01-15 14:14:46,150 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1132049811706351.txt
+2026-01-15 14:14:46,211 - INFO - Download completed: https://www.facebook.com/reel/1132049811706351/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:46,212 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1491199365532448/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:46,212 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:46,212 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:46,213 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:46,332 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:46,332 - INFO - Entering caption generation block.
+2026-01-15 14:14:46,332 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_827361947121691.mp4
+2026-01-15 14:14:46,333 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_827361947121691.txt
+2026-01-15 14:14:46,406 - INFO - Download completed: https://www.facebook.com/reel/827361947121691/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:46,408 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1442843323491177/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:14:46,408 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:46,408 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:46,409 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:50,500 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:50,500 - INFO - Entering caption generation block.
+2026-01-15 14:14:50,501 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1491199365532448.mp4
+2026-01-15 14:14:50,501 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1491199365532448.txt
+2026-01-15 14:14:50,556 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:50,556 - INFO - Entering caption generation block.
+2026-01-15 14:14:50,556 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_4174130059527087.mp4
+2026-01-15 14:14:50,556 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_4174130059527087.txt
+2026-01-15 14:14:50,557 - INFO - Download completed: https://www.facebook.com/reel/1491199365532448/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:50,560 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:50,561 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:50,561 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:50,561 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:50,663 - INFO - Download completed: https://www.facebook.com/reel/4174130059527087/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:50,666 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:50,667 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:50,667 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:50,667 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:51,397 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:51,397 - INFO - Entering caption generation block.
+2026-01-15 14:14:51,398 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.mp4
+2026-01-15 14:14:51,398 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.txt
+2026-01-15 14:14:51,457 - INFO - Download completed: https://www.facebook.com/reel/1442843323491177/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:51,458 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:51,458 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:51,458 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:51,459 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:53,767 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:53,767 - INFO - Entering caption generation block.
+2026-01-15 14:14:53,767 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.mp4
+2026-01-15 14:14:53,767 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.txt
+2026-01-15 14:14:53,770 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:53,773 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:53,774 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:53,774 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:53,774 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:54,535 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:54,536 - INFO - Entering caption generation block.
+2026-01-15 14:14:54,536 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.mp4
+2026-01-15 14:14:54,547 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:54,547 - INFO - Entering caption generation block.
+2026-01-15 14:14:54,547 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.mp4
+2026-01-15 14:14:54,548 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.txt
+2026-01-15 14:14:54,548 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.txt
+2026-01-15 14:14:54,550 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:54,554 - INFO - Download skipped (already exists): https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:54,555 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:54,556 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:54,556 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:54,556 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:54,556 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:54,557 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:54,557 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:54,557 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:57,207 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:57,207 - INFO - Entering caption generation block.
+2026-01-15 14:14:57,207 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.mp4
+2026-01-15 14:14:57,208 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.txt
+2026-01-15 14:14:57,211 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:57,737 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:57,737 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:57,738 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:57,868 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:57,945 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:57,962 - INFO - Entering caption generation block.
+2026-01-15 14:14:57,978 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.mp4
+2026-01-15 14:14:58,073 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:14:58,073 - INFO - Entering caption generation block.
+2026-01-15 14:14:58,074 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.txt
+2026-01-15 14:14:58,082 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.mp4
+2026-01-15 14:14:58,084 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.txt
+2026-01-15 14:14:58,086 - INFO - Download skipped (already exists): https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:58,088 - INFO - Download skipped (already exists): https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:14:58,132 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:58,133 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:14:58,133 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:58,133 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:14:58,133 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:58,134 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:14:58,134 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:14:58,134 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:15:00,588 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:15:00,588 - INFO - Entering caption generation block.
+2026-01-15 14:15:00,588 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.mp4
+2026-01-15 14:15:00,588 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.txt
+2026-01-15 14:15:00,590 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:15:00,594 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:15:00,594 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:15:00,594 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:15:00,594 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:15:01,182 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:15:01,182 - INFO - Entering caption generation block.
+2026-01-15 14:15:01,182 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.mp4
+2026-01-15 14:15:01,183 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.txt
+2026-01-15 14:15:01,185 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:15:02,511 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:15:02,511 - INFO - Entering caption generation block.
+2026-01-15 14:15:02,511 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.mp4
+2026-01-15 14:15:02,511 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.txt
+2026-01-15 14:15:02,514 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:15:04,089 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:15:04,089 - INFO - Entering caption generation block.
+2026-01-15 14:15:04,089 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.mp4
+2026-01-15 14:15:04,090 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.txt
+2026-01-15 14:15:04,092 - INFO - Download skipped (already exists): https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:17:25,115 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:17:28,636 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:17:28,638 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:17:28,640 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:17:29,512 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:17:29,537 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:17:29,541 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:17:29,548 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:17:29,572 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:17:29,577 - INFO - Added 11 cookies to browser context.
+2026-01-15 14:17:29,621 - INFO - Playwright visiting: https://www.facebook.com/profile.php?id=61579938422467&sk=reels_tab
+2026-01-15 14:17:29,621 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:17:29,643 - INFO - Playwright visiting: https://www.instagram.com/md_shop4/reels/
+2026-01-15 14:17:29,643 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:17:29,649 - INFO - Playwright visiting: https://www.facebook.com/LoungUngAuthor/reels/
+2026-01-15 14:17:29,649 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:17:30,377 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:17:30,394 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:17:32,488 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:17:32,499 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:17:33,116 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:17:33,137 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:17:35,969 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:17:36,004 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/phone/
+2026-01-15 14:17:36,004 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/address/
+2026-01-15 14:17:36,004 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/followers/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/following/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17856927053959536/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18210988294242613/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17864635397822567/
+2026-01-15 14:17:36,005 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18181422913174018/
+2026-01-15 14:17:36,006 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17942825320963688/
+2026-01-15 14:17:36,006 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/tagged/
+2026-01-15 14:17:36,006 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17911496813544902/
+2026-01-15 14:17:36,013 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-15 14:17:36,014 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-15 14:17:36,015 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-15 14:17:36,015 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-15 14:17:36,017 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-15 14:17:36,017 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-15 14:17:36,017 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-15 14:17:36,018 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-15 14:17:36,018 - INFO - Loop status: Iteration 1, Found 26/15 items (+26 new valid, +58 raw)
+2026-01-15 14:17:36,018 - INFO - Scraping loop finished. Found 26 items.
+2026-01-15 14:17:36,018 - INFO - Scraping found 26 unique valid links.
+2026-01-15 14:17:38,046 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:17:38,081 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122099523224997947&set=a.122099489522997947
+2026-01-15 14:17:38,081 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=122099522978997947&set=a.122098479686997947&__tn__=%3C
+2026-01-15 14:17:38,081 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=friends_likes
+2026-01-15 14:17:38,081 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=followers
+2026-01-15 14:17:38,081 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467&sk=reels_tab
+2026-01-15 14:17:38,089 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:17:38,089 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/profile.php?id=61579938422467
+2026-01-15 14:17:38,090 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:17:38,090 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:17:38,091 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:17:38,092 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:17:38,096 - INFO - Loop status: Iteration 1, Found 41/15 items (+41 new valid, +52 raw)
+2026-01-15 14:17:38,097 - INFO - Scraping loop finished. Found 41 items.
+2026-01-15 14:17:38,097 - INFO - Scraping found 41 unique valid links.
+2026-01-15 14:17:38,681 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:17:38,733 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=399442208669024&set=a.151246610155253
+2026-01-15 14:17:38,733 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/photo/?fbid=924542002825706&set=a.151246593488588&__tn__=%3C
+2026-01-15 14:17:38,733 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/followers/
+2026-01-15 14:17:38,734 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/MarketGardenBrewery
+2026-01-15 14:17:38,734 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/following/
+2026-01-15 14:17:38,734 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/SaintMichaelsCollege
+2026-01-15 14:17:38,734 - DEBUG - Filtered out link (invalid format): https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Floungung.author%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExdWtiVFZlWVFUckV3UGNZVHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7P3O1_70BdZywITg9B3vdIwWc2F0P7pGU0SssMa3soXlxW56qWysIsQCW0ag_aem_pBtqwuBBGWWCXreRDW-XIQ&h=AT0UqogOWJxjo06GBEjaRiTVt21CU9H96T5MAsESvC5MBhUWJ19H4yAud5Eshr1CDKGnzToPMgpFx2cLhTDu43r8RaEGEH0VTwqTiFHDKxk2c1eGhdCdHzbnOkq41Mk6QzL2
+2026-01-15 14:17:38,734 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor/reels_tab
+2026-01-15 14:17:38,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/
+2026-01-15 14:17:38,741 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/LoungUngAuthor
+2026-01-15 14:17:38,745 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/pages/?category=your_pages&ref=bookmarks
+2026-01-15 14:17:38,745 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/professional_dashboard/?ref=tab_bar
+2026-01-15 14:17:38,746 - DEBUG - Filtered out link (invalid format): https://www.facebook.com/61585989322886/ad_center/
+2026-01-15 14:17:38,747 - DEBUG - Filtered out link (invalid format): https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=895023793699827
+2026-01-15 14:17:38,750 - INFO - Loop status: Iteration 1, Found 21/15 items (+21 new valid, +35 raw)
+2026-01-15 14:17:38,750 - INFO - Scraping loop finished. Found 21 items.
+2026-01-15 14:17:38,750 - INFO - Scraping found 21 unique valid links.
+2026-01-15 14:23:49,376 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reels to E:/mmo/building-page/china movie
+2026-01-15 14:23:49,377 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRSF8-2AWCa to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:49,377 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRKUBOmgYHe to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:49,378 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:49,378 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:49,378 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:49,378 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:49,379 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:49,379 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:49,379 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:49,379 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:49,380 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:51,733 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:51,733 - INFO - Entering caption generation block.
+2026-01-15 14:23:51,733 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRSF8-2AWCa.mp4
+2026-01-15 14:23:51,734 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRSF8-2AWCa.txt
+2026-01-15 14:23:51,813 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DRSF8-2AWCa
+2026-01-15 14:23:51,814 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRCkp_eAe9D to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:51,814 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:51,814 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:51,814 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:52,225 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:52,225 - INFO - Entering caption generation block.
+2026-01-15 14:23:52,226 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRKUBOmgYHe.mp4
+2026-01-15 14:23:52,226 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRKUBOmgYHe.txt
+2026-01-15 14:23:52,281 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DRKUBOmgYHe
+2026-01-15 14:23:52,282 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ_okJBgbGW to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:52,282 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:52,282 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:52,282 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:53,775 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:53,775 - INFO - Entering caption generation block.
+2026-01-15 14:23:53,775 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ_okJBgbGW.mp4
+2026-01-15 14:23:53,776 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ_okJBgbGW.txt
+2026-01-15 14:23:53,825 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:53,825 - INFO - Entering caption generation block.
+2026-01-15 14:23:53,826 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRCkp_eAe9D.mp4
+2026-01-15 14:23:53,827 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRCkp_eAe9D.txt
+2026-01-15 14:23:53,830 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQ_okJBgbGW
+2026-01-15 14:23:53,832 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ39CTBASsa to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:53,832 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:53,832 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:53,833 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:53,939 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DRCkp_eAe9D
+2026-01-15 14:23:53,940 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ389FKAdeg to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:53,941 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:53,941 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:53,941 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:55,354 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:55,355 - INFO - Entering caption generation block.
+2026-01-15 14:23:55,355 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ39CTBASsa.mp4
+2026-01-15 14:23:55,357 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ39CTBASsa.txt
+2026-01-15 14:23:55,427 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQ39CTBASsa
+2026-01-15 14:23:55,429 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ383O2AWPH to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:55,429 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:55,429 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:55,429 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:55,940 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:55,941 - INFO - Entering caption generation block.
+2026-01-15 14:23:55,941 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ389FKAdeg.mp4
+2026-01-15 14:23:55,941 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ389FKAdeg.txt
+2026-01-15 14:23:56,029 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQ389FKAdeg
+2026-01-15 14:23:56,030 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQdk2hfkfYV to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:56,031 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:56,031 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:56,037 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:56,639 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1831, in __extract_info
+    ie_result = ie.extract(url)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\common.py", line 762, in extract
+    ie_result = self._real_extract(url)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\generic.py", line 980, in _real_extract
+    raise UnsupportedError(url)
+yt_dlp.utils.UnsupportedError: Unsupported URL: https://www.instagram.com/md_shop4/reels
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 901, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 873, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 867, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1714, in wrapper
+    self.report_error(str(e), e.format_traceback())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m Unsupported URL: https://www.instagram.com/md_shop4/reels
+
+2026-01-15 14:23:56,639 - ERROR - Download failed: [0;31mERROR:[0m Unsupported URL: https://www.instagram.com/md_shop4/reels
+2026-01-15 14:23:56,642 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQaw1cEAcnc to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:56,642 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:56,642 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:56,642 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:57,069 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:57,070 - INFO - Entering caption generation block.
+2026-01-15 14:23:57,070 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ383O2AWPH.mp4
+2026-01-15 14:23:57,070 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ383O2AWPH.txt
+2026-01-15 14:23:57,167 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQ383O2AWPH
+2026-01-15 14:23:57,175 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DPvzJM-EW8o to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:57,175 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:57,175 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:57,176 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:57,359 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:57,359 - INFO - Entering caption generation block.
+2026-01-15 14:23:57,360 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQdk2hfkfYV.mp4
+2026-01-15 14:23:57,367 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQdk2hfkfYV.txt
+2026-01-15 14:23:57,442 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQdk2hfkfYV
+2026-01-15 14:23:57,443 - INFO - Starting yt-dlp download for https://www.instagram.com/reels to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:23:57,444 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:57,444 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:57,444 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:23:58,863 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:58,863 - INFO - Entering caption generation block.
+2026-01-15 14:23:58,863 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQaw1cEAcnc.mp4
+2026-01-15 14:23:58,864 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQaw1cEAcnc.txt
+2026-01-15 14:23:58,928 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DQaw1cEAcnc
+2026-01-15 14:23:58,930 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/837506872186065/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:23:58,930 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:58,930 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:58,931 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:23:59,570 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:23:59,571 - INFO - Entering caption generation block.
+2026-01-15 14:23:59,571 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DPvzJM-EW8o.mp4
+2026-01-15 14:23:59,571 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DPvzJM-EW8o.txt
+2026-01-15 14:23:59,641 - INFO - Download completed: https://www.instagram.com/md_shop4/reel/DPvzJM-EW8o
+2026-01-15 14:23:59,642 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/809627415000462/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:23:59,642 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:23:59,642 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:23:59,642 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:01,237 - ERROR - Download failed detailed: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1696, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1831, in __extract_info
+    ie_result = ie.extract(url)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\common.py", line 762, in extract
+    ie_result = self._real_extract(url)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\instagram.py", line 598, in _real_extract
+    data = self._parse_graphql(webpage, user_or_tag)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\instagram.py", line 531, in _parse_graphql
+    self._search_regex(
+    ~~~~~~~~~~~~~~~~~~^
+        r'sharedData\s*=\s*({.+?})\s*;\s*[<\n]', webpage, 'data'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\extractor\common.py", line 1344, in _search_regex
+    raise RegexNotFoundError(f'Unable to extract {_name}')
+yt_dlp.utils.RegexNotFoundError: [instagram:user] reels: Unable to extract [0;94mdata[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\videoDownloader\app\platform_handler.py", line 901, in download_with_ytdlp
+    raise e
+  File "E:\project\videoDownloader\app\platform_handler.py", line 873, in download_with_ytdlp
+    raise e # Re-raise other download errors
+    ^^^^^^^
+  File "E:\project\videoDownloader\app\platform_handler.py", line 867, in download_with_ytdlp
+    info = ydl.extract_info(url, download=True)
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1685, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1714, in wrapper
+    self.report_error(str(e), e.format_traceback())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\AppData\Roaming\Python\Python313\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [instagram:user] reels: Unable to extract [0;94mdata[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-01-15 14:24:01,237 - ERROR - Download failed: [0;31mERROR:[0m [instagram:user] reels: Unable to extract [0;94mdata[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-01-15 14:24:01,238 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1534403010898397/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:01,239 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:01,239 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:01,239 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:01,649 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:01,649 - INFO - Entering caption generation block.
+2026-01-15 14:24:01,649 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\interior\U0001f5a4_837506872186065.mp4
+2026-01-15 14:24:01,649 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\interior\U0001f5a4_837506872186065.txt
+2026-01-15 14:24:01,652 - INFO - Download skipped (already exists): https://www.facebook.com/reel/837506872186065/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:01,655 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1569005694475537/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:01,656 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:01,656 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:01,656 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:03,570 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:03,570 - INFO - Entering caption generation block.
+2026-01-15 14:24:03,570 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Design Styles We Love \u2764\ufe0f https msha.ke stormbubbledesigns_1534403010898397.mp4
+2026-01-15 14:24:03,571 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Design Styles We Love \u2764\ufe0f https msha.ke stormbubbledesigns_1534403010898397.txt
+2026-01-15 14:24:03,573 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1534403010898397/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:03,575 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1123660419419286/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:03,575 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:03,575 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:03,575 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:04,273 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:04,273 - INFO - Entering caption generation block.
+2026-01-15 14:24:04,274 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1569005694475537.mp4
+2026-01-15 14:24:04,274 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1569005694475537.txt
+2026-01-15 14:24:04,276 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1569005694475537/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:04,277 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/827361947121691/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:04,278 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:04,278 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:04,278 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:06,308 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:06,309 - INFO - Entering caption generation block.
+2026-01-15 14:24:06,309 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1123660419419286.mp4
+2026-01-15 14:24:06,309 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1123660419419286.txt
+2026-01-15 14:24:06,312 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1123660419419286/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:06,313 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1132049811706351/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:06,313 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:06,314 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:06,314 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:06,792 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:06,792 - INFO - Entering caption generation block.
+2026-01-15 14:24:06,792 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_827361947121691.mp4
+2026-01-15 14:24:06,793 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_827361947121691.txt
+2026-01-15 14:24:06,795 - INFO - Download skipped (already exists): https://www.facebook.com/reel/827361947121691/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:06,801 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4174130059527087/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:06,801 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:06,801 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:06,801 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:07,551 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:07,551 - INFO - Entering caption generation block.
+2026-01-15 14:24:07,551 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Decorate easily with the stickers from Malldeco! \U0001f31f Versatile and easy to apply, they add personality.mp4
+2026-01-15 14:24:07,552 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Decorate easily with the stickers from Malldeco! \U0001f31f Versatile and easy to apply, they add personality.txt
+2026-01-15 14:24:07,554 - INFO - Download skipped (already exists): https://www.facebook.com/reel/809627415000462/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:07,555 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1491199365532448/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:07,555 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:07,556 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:07,556 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:09,233 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:09,233 - INFO - Entering caption generation block.
+2026-01-15 14:24:09,233 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1132049811706351.mp4
+2026-01-15 14:24:09,234 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1132049811706351.txt
+2026-01-15 14:24:09,236 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1132049811706351/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:09,237 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1442843323491177/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\profile.php_id61579938422467
+2026-01-15 14:24:09,238 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:09,238 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:09,238 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:10,324 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:10,324 - INFO - Entering caption generation block.
+2026-01-15 14:24:10,324 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_4174130059527087.mp4
+2026-01-15 14:24:10,334 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:10,334 - INFO - Entering caption generation block.
+2026-01-15 14:24:10,334 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1491199365532448.mp4
+2026-01-15 14:24:10,335 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_4174130059527087.txt
+2026-01-15 14:24:10,335 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1491199365532448.txt
+2026-01-15 14:24:10,338 - INFO - Download skipped (already exists): https://www.facebook.com/reel/4174130059527087/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:10,340 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1491199365532448/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:10,342 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:10,342 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:10,343 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:10,343 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:10,343 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:10,343 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:10,344 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:10,344 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:12,120 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:12,120 - INFO - Entering caption generation block.
+2026-01-15 14:24:12,120 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.mp4
+2026-01-15 14:24:12,120 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.txt
+2026-01-15 14:24:12,123 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1442843323491177/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:12,133 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:12,133 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:12,133 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:12,133 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:12,896 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:12,896 - INFO - Entering caption generation block.
+2026-01-15 14:24:12,896 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.mp4
+2026-01-15 14:24:12,897 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2260996284396175.txt
+2026-01-15 14:24:12,899 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2260996284396175/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:12,927 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:12,928 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:12,928 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:12,928 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:13,671 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:13,671 - INFO - Entering caption generation block.
+2026-01-15 14:24:13,671 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.mp4
+2026-01-15 14:24:13,672 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2068375560585592.txt
+2026-01-15 14:24:13,674 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2068375560585592/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:13,676 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:13,676 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:13,676 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:13,677 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:14,554 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:14,554 - INFO - Entering caption generation block.
+2026-01-15 14:24:14,554 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.mp4
+2026-01-15 14:24:14,555 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_917875830958527.txt
+2026-01-15 14:24:14,557 - INFO - Download skipped (already exists): https://www.facebook.com/reel/917875830958527/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:14,559 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:14,559 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:14,560 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:14,560 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:16,381 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:16,381 - INFO - Entering caption generation block.
+2026-01-15 14:24:16,381 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.mp4
+2026-01-15 14:24:16,382 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1462457014819210.txt
+2026-01-15 14:24:16,385 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1462457014819210/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:16,394 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:16,394 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:16,394 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:16,395 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:16,862 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:16,862 - INFO - Entering caption generation block.
+2026-01-15 14:24:16,862 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.mp4
+2026-01-15 14:24:16,862 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_4376275105985128.txt
+2026-01-15 14:24:16,865 - INFO - Download skipped (already exists): https://www.facebook.com/reel/4376275105985128/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:16,866 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:16,866 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:16,866 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:16,866 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:17,435 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:17,436 - INFO - Entering caption generation block.
+2026-01-15 14:24:17,436 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.mp4
+2026-01-15 14:24:17,436 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_3052830148223013.txt
+2026-01-15 14:24:17,438 - INFO - Download skipped (already exists): https://www.facebook.com/reel/3052830148223013/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:17,455 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:17,456 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:17,456 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:17,456 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:19,346 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:19,346 - INFO - Entering caption generation block.
+2026-01-15 14:24:19,346 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.mp4
+2026-01-15 14:24:19,346 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1335984874985231.txt
+2026-01-15 14:24:19,349 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1335984874985231/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:19,351 - INFO - Starting yt-dlp download for https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0 to E:/mmo/building-page/china movie\LoungUngAuthor_reels
+2026-01-15 14:24:19,351 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:24:19,352 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:24:19,352 - INFO - Using cookie file: C:/Users/USER/Downloads/www.facebook.com_cookies (4).txt
+2026-01-15 14:24:20,119 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:20,120 - INFO - Entering caption generation block.
+2026-01-15 14:24:20,120 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.mp4
+2026-01-15 14:24:20,120 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_2013808692718252.txt
+2026-01-15 14:24:20,122 - INFO - Download skipped (already exists): https://www.facebook.com/reel/2013808692718252/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:20,487 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:20,487 - INFO - Entering caption generation block.
+2026-01-15 14:24:20,487 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.mp4
+2026-01-15 14:24:20,488 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_1168215528587043.txt
+2026-01-15 14:24:20,492 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1168215528587043/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:24:22,063 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:24:22,063 - INFO - Entering caption generation block.
+2026-01-15 14:24:22,063 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.mp4
+2026-01-15 14:24:22,063 - INFO - Caption saved to: E:\mmo\building-page\china movie\LoungUngAuthor_reels\Video_826474773114704.txt
+2026-01-15 14:24:22,066 - INFO - Download skipped (already exists): https://www.facebook.com/reel/826474773114704/?s=fb_shorts_profile&stack_idx=0

@@ -1365,7 +1365,12 @@ class DownloaderTab(QWidget):
             row_position_activity = self.activity_table.rowCount()
             print(f"[DEBUG] Inserting row at {row_position_activity} for {item_url}")
             self.activity_table.insertRow(row_position_activity)
-            self.activity_table.setItem(row_position_activity, 0, QTableWidgetItem(str(row_position_activity + 1)))
+            
+            # Store item_id in the first column item for robust retrieval
+            num_item = QTableWidgetItem(str(row_position_activity + 1))
+            num_item.setData(Qt.UserRole, item_id)
+            self.activity_table.setItem(row_position_activity, 0, num_item)
+            
             self.activity_table.setItem(row_position_activity, 1, QTableWidgetItem(metadata.get('title', '')))
             
             # Progress bar at column 2
@@ -1517,14 +1522,14 @@ class DownloaderTab(QWidget):
             QMessageBox.warning(self, "Photo Path Missing", "You have selected photos to download.\nPlease select a Photo Download Path.")
             return
             
-        # Find item IDs for the selected rows
+        # Find item IDs for the selected rows using robust UserRole data
         item_ids = []
         for row in selected_rows:
-            # Inefficient reverse lookup, but safe given existing structure
-            for i_id, r_idx in self.activity_row_map.items():
-                if r_idx == row:
+            item_num = self.activity_table.item(row, 0)
+            if item_num:
+                i_id = item_num.data(Qt.UserRole)
+                if i_id:
                     item_ids.append(i_id)
-                    break
         
         if item_ids:
             # Filter item_ids to only those in the downloader queue (pending/held)
@@ -1645,9 +1650,16 @@ class DownloaderTab(QWidget):
         for row in sorted(selected_rows, reverse=True):
             self.activity_table.removeRow(row)
             
-        # Re-number
+        # Re-number and Rebuild Map
+        self.activity_row_map = {}
         for row in range(self.activity_table.rowCount()):
-            self.activity_table.setItem(row, 0, QTableWidgetItem(str(row + 1)))
+            item_num = self.activity_table.item(row, 0)
+            if item_num:
+                item_num.setText(str(row + 1))
+                # Re-map ID to new Row index
+                i_id = item_num.data(Qt.UserRole)
+                if i_id:
+                    self.activity_row_map[i_id] = row
             
         self.update_activity_stats() # Update count
 
