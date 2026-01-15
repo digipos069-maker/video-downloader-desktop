@@ -4,7 +4,7 @@ import time
 from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QVBoxLayout, QWidget, QSizeGrip, QSplashScreen
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QIcon, QPixmap, QPainter, QFont, QColor
-from app.ui.downloader_tab import DownloaderTab
+from app.ui.downloader_tab import DownloaderTab, UpdateWorker
 from app.ui.settings_tab import SettingsTab
 from app.ui.widgets.title_bar import TitleBar
 from app.ui.splash_screen import ModernSplashScreen
@@ -12,7 +12,7 @@ from app.config.settings_manager import save_settings
 from app.helpers import resource_path, get_app_path
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, initial_update_info=None):
         super().__init__()
         self.setWindowTitle("Social download manager")
         self.resize(1280, 720)
@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         main_layout.addWidget(self.tabs)
 
         # Add the downloader tab
-        self.downloader_tab = DownloaderTab()
+        self.downloader_tab = DownloaderTab(initial_update_info=initial_update_info)
         self.tabs.addTab(self.downloader_tab, QIcon(resource_path("app/resources/images/icons/download.png")), "Downloader")
 
         # Add the settings tab
@@ -128,9 +128,21 @@ def main():
     # --- Show Modern Splash Screen ---
     splash = ModernSplashScreen()
     splash.show()
-    
-    # Process events to render immediately
     app.processEvents()
+
+    # --- Start Background Update Check ---
+    update_result = {'info': None}
+    
+    # Create worker
+    update_worker = UpdateWorker()
+    
+    # Define slot to capture result
+    def on_update_checked(available, info):
+        if available:
+            update_result['info'] = info
+            
+    update_worker.finished.connect(on_update_checked)
+    update_worker.start()
 
     # --- Initialization Steps ---
     
@@ -143,22 +155,34 @@ def main():
     else:
         print(f"Warning: Stylesheet not found at {style_file}")
     
-    # 2. Simulated Loading Steps (Replace with real checks if needed)
+    # 2. Loading Steps + Update Wait
     steps = [
         (30, "Checking dependencies..."),
         (50, "Initializing platform handlers..."),
-        (70, "Loading user settings..."),
-        (90, "Preparing interface..."),
-        (100, "Starting...")
+        (70, "Checking for updates..."), # Critical step
     ]
     
     for progress, msg in steps:
-        time.sleep(0.3) # Simulate work (remove or reduce in production if fast)
+        time.sleep(0.2)
         splash.update_progress(progress, msg)
         app.processEvents()
+        
+    # Wait for update worker to finish (timeout 3 seconds to avoid hanging)
+    wait_start = time.time()
+    while update_worker.isRunning():
+        if time.time() - wait_start > 3.0:
+            update_worker.terminate() # Force stop if taking too long
+            break
+        app.processEvents()
+        time.sleep(0.05)
+
+    splash.update_progress(90, "Preparing interface...")
+    time.sleep(0.2)
+    splash.update_progress(100, "Starting...")
+    time.sleep(0.2)
 
     # 3. Launch Main Window
-    window = MainWindow()
+    window = MainWindow(initial_update_info=update_result['info'])
     window.show()
     
     # Finish splash screen

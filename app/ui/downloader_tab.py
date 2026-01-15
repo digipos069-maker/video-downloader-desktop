@@ -200,7 +200,7 @@ class ScrapingWorker(QThread):
 class DownloaderTab(QWidget):
     status_message = Signal(str)
 
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, initial_update_info=None):
         super().__init__(parent)
         
         self.settings_tab = None # Reference to settings tab
@@ -897,8 +897,13 @@ class DownloaderTab(QWidget):
 
         # Update System State
         self.pending_update_info = None
-        # Trigger silent update check on startup
-        QTimer.singleShot(2000, self.run_silent_update_check) # Delay slightly to let UI load
+        
+        if initial_update_info:
+            # Update check already done by splash screen
+            self.on_silent_update_finished(True, initial_update_info)
+        else:
+            # Trigger silent update check on startup (fallback)
+            QTimer.singleShot(2000, self.run_silent_update_check)
 
     def run_silent_update_check(self):
         """Runs update check in background without UI feedback unless update found."""
