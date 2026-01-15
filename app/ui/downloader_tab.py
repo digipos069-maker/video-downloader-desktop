@@ -706,9 +706,15 @@ class DownloaderTab(QWidget):
         self.remove_mentions_checkbox.setCursor(Qt.PointingHandCursor)
         self.remove_mentions_checkbox.setStyleSheet(input_style)
         
+        # Checkboxes Row
+        checkboxes_layout = QHBoxLayout()
+        checkboxes_layout.setSpacing(10)
+        checkboxes_layout.setContentsMargins(0, 0, 0, 0)
+        checkboxes_layout.addWidget(self.remove_links_checkbox)
+        checkboxes_layout.addWidget(self.remove_mentions_checkbox)
+        
         options_layout.addWidget(options_label)
-        options_layout.addWidget(self.remove_links_checkbox)
-        options_layout.addWidget(self.remove_mentions_checkbox)
+        options_layout.addLayout(checkboxes_layout)
         options_layout.addStretch()
 
         settings_layout.addLayout(ext_layout)
