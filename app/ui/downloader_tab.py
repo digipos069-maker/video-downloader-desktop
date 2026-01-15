@@ -102,6 +102,11 @@ class ScrapingWorker(QThread):
                     item_url = metadata['url']
                     print(f"[DEBUG] Processing URL: {item_url}")
                     
+                    # Ignore the source URL itself (often returned by fallback logic)
+                    if item_url == self.url or item_url.rstrip('/') == self.url.rstrip('/'):
+                        print(f"[DEBUG] Ignoring source URL: {item_url}")
+                        return
+
                     is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))
                     is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
                     
@@ -111,8 +116,12 @@ class ScrapingWorker(QThread):
                         elif 'instagram' in item_url:
                             if any(x in item_url for x in ['/reel/', '/reels/', '/tv/']):
                                 is_video = True
+                            elif '/p/' in item_url:
+                                is_photo = True # Standard posts
                             else:
-                                is_photo = True # Assume anything else on Instagram is a post/photo
+                                # Profile links or other non-media pages
+                                print(f"[DEBUG] Ignoring non-media Instagram link: {item_url}")
+                                return
                         elif 'pinterest' in item_url:
                             is_hint_video = metadata.get('is_video_hint', False)
                             if is_hint_video:
