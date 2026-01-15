@@ -1,8 +1,8 @@
 {
     "video": {
-        "enabled": false,
+        "enabled": true,
         "top": true,
-        "count": 3,
+        "count": 100,
         "all": false,
         "resolution": "Best Available"
     },

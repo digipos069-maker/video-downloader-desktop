@@ -102,9 +102,15 @@ class ScrapingWorker(QThread):
                     item_url = metadata['url']
                     print(f"[DEBUG] Processing URL: {item_url}")
                     
-                    # Ignore the source URL itself (often returned by fallback logic)
-                    if item_url == self.url or item_url.rstrip('/') == self.url.rstrip('/'):
-                        print(f"[DEBUG] Ignoring source URL: {item_url}")
+                    # Check if this is a direct media item (Pin, Post, Reel)
+                    is_direct_item = False
+                    if 'pinterest.com' in item_url and '/pin/' in item_url: is_direct_item = True
+                    elif 'instagram.com' in item_url and ('/p/' in item_url or '/reel/' in item_url or '/reels/' in item_url): is_direct_item = True
+                    elif 'facebook.com' in item_url and ('/videos/' in item_url or '/reel/' in item_url or 'watch' in item_url): is_direct_item = True
+
+                    # Ignore the source URL itself ONLY if it's a profile/collection/playlist (non-direct)
+                    if (item_url == self.url or item_url.rstrip('/') == self.url.rstrip('/')) and not is_direct_item:
+                        print(f"[DEBUG] Ignoring source URL (profile/collection): {item_url}")
                         return
 
                     is_video = item_url.lower().endswith(('.mp4', '.mkv', '.avi', '.mov', '.webm'))

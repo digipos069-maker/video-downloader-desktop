@@ -195,8 +195,20 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 domain = parsed_url.netloc.replace('www.', '') # Remove www for broader matching
                 
                 unique_urls = set()
-                all_seen_links = set() # Track all seen links to detect true stagnation
+                all_seen_links = set()
                 results = []
+
+                # --- Explicitly Add Main URL if it's a direct item ---
+                if is_valid_media_link(url, domain):
+                    logging.info(f"Adding main source URL to results: {url}")
+                    item = {
+                        'url': url,
+                        'title': "Main Item", # Will be updated by metadata extraction if possible
+                        'type': 'scraped_link'
+                    }
+                    unique_urls.add(url.split('#')[0].split('?')[0].rstrip('/'))
+                    results.append(item)
+                    if callback: callback(item)
 
                 # Extraction function to run in browser (reusable)
                 extract_func = """
