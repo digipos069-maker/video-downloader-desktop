@@ -24034,3 +24034,581 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [instagram:user] reels: Unable to 
 2026-01-15 14:36:38,419 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.mp4
 2026-01-15 14:36:38,420 - INFO - Caption saved to: E:\mmo\building-page\china movie\profile.php_id61579938422467\Video_1442843323491177.txt
 2026-01-15 14:36:38,422 - INFO - Download skipped (already exists): https://www.facebook.com/reel/1442843323491177/?s=fb_shorts_profile&stack_idx=0
+2026-01-15 14:42:52,031 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:42:54,786 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 14:42:56,217 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:42:58,184 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:42:59,052 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:42:59,081 - INFO - Added 10 cookies to browser context.
+2026-01-15 14:42:59,147 - INFO - Playwright visiting: https://www.instagram.com/md_shop4/reels/
+2026-01-15 14:42:59,147 - INFO - Scraping target limit (max_entries): 15
+2026-01-15 14:42:59,822 - INFO - Starting scroll loop. Planned iterations: 5 for max 15 items.
+2026-01-15 14:42:59,832 - INFO - Starting dynamic scroll loop. Target: 15 items.
+2026-01-15 14:43:05,380 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:43:05,430 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/phone/
+2026-01-15 14:43:05,430 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/address/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/followers/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/following/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17856927053959536/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18210988294242613/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17864635397822567/
+2026-01-15 14:43:05,431 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18181422913174018/
+2026-01-15 14:43:05,432 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17942825320963688/
+2026-01-15 14:43:05,432 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/tagged/
+2026-01-15 14:43:05,432 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17911496813544902/
+2026-01-15 14:43:05,446 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-15 14:43:05,446 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-15 14:43:05,448 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-15 14:43:05,448 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-15 14:43:05,451 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-15 14:43:05,452 - INFO - Loop status: Iteration 1, Found 26/15 items (+26 new valid, +58 raw)
+2026-01-15 14:43:05,452 - INFO - Scraping loop finished. Found 26 items.
+2026-01-15 14:43:05,452 - INFO - Scraping found 26 unique valid links.
+2026-01-15 14:43:15,231 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRKUBOmgYHe to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:15,232 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRCkp_eAe9D to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:15,232 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:15,233 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:15,233 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:15,233 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:15,234 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:15,236 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:15,238 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DRSF8-2AWCa to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:15,239 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:15,239 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:15,239 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:17,192 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:17,192 - INFO - Entering caption generation block.
+2026-01-15 14:43:17,192 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRCkp_eAe9D.mp4
+2026-01-15 14:43:17,197 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRCkp_eAe9D.txt
+2026-01-15 14:43:17,209 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:17,210 - INFO - Entering caption generation block.
+2026-01-15 14:43:17,210 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRSF8-2AWCa.mp4
+2026-01-15 14:43:17,212 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DRCkp_eAe9D
+2026-01-15 14:43:17,214 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRSF8-2AWCa.txt
+2026-01-15 14:43:17,218 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ_okJBgbGW to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:17,219 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:17,219 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:17,219 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:17,221 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DRSF8-2AWCa
+2026-01-15 14:43:17,323 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ39CTBASsa to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:17,323 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:17,324 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:17,324 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:17,455 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:17,465 - INFO - Entering caption generation block.
+2026-01-15 14:43:17,465 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRKUBOmgYHe.mp4
+2026-01-15 14:43:17,467 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DRKUBOmgYHe.txt
+2026-01-15 14:43:17,470 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DRKUBOmgYHe
+2026-01-15 14:43:17,474 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ389FKAdeg to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:17,474 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:17,474 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:17,475 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:18,577 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:18,577 - INFO - Entering caption generation block.
+2026-01-15 14:43:18,577 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ_okJBgbGW.mp4
+2026-01-15 14:43:18,578 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ_okJBgbGW.txt
+2026-01-15 14:43:18,581 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQ_okJBgbGW
+2026-01-15 14:43:18,588 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQ383O2AWPH to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:18,588 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:18,588 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:18,588 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:18,701 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:18,702 - INFO - Entering caption generation block.
+2026-01-15 14:43:18,702 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ39CTBASsa.mp4
+2026-01-15 14:43:18,702 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ39CTBASsa.txt
+2026-01-15 14:43:18,704 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQ39CTBASsa
+2026-01-15 14:43:18,708 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQdk2hfkfYV to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:18,708 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:18,708 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:18,708 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:18,860 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:18,860 - INFO - Entering caption generation block.
+2026-01-15 14:43:18,860 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ389FKAdeg.mp4
+2026-01-15 14:43:18,861 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ389FKAdeg.txt
+2026-01-15 14:43:18,863 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQ389FKAdeg
+2026-01-15 14:43:18,891 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DQaw1cEAcnc to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:18,891 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:18,891 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:18,892 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:19,880 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:19,880 - INFO - Entering caption generation block.
+2026-01-15 14:43:19,880 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ383O2AWPH.mp4
+2026-01-15 14:43:19,880 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQ383O2AWPH.txt
+2026-01-15 14:43:19,882 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQ383O2AWPH
+2026-01-15 14:43:19,894 - INFO - Starting yt-dlp download for https://www.instagram.com/md_shop4/reel/DPvzJM-EW8o to E:/mmo/building-page/china movie\md_shop4_reels
+2026-01-15 14:43:19,894 - INFO - Found CWD FFmpeg at: E:\project\videoDownloader\ffmpeg.exe
+2026-01-15 14:43:19,894 - DEBUG - Cookie setup (download): File='C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt', Browser='chrome'
+2026-01-15 14:43:19,894 - INFO - Using cookie file: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:43:20,205 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:20,206 - INFO - Entering caption generation block.
+2026-01-15 14:43:20,206 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQaw1cEAcnc.mp4
+2026-01-15 14:43:20,206 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQaw1cEAcnc.txt
+2026-01-15 14:43:20,208 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQaw1cEAcnc
+2026-01-15 14:43:20,599 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:20,599 - INFO - Entering caption generation block.
+2026-01-15 14:43:20,599 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQdk2hfkfYV.mp4
+2026-01-15 14:43:20,599 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DQdk2hfkfYV.txt
+2026-01-15 14:43:20,602 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DQdk2hfkfYV
+2026-01-15 14:43:21,061 - INFO - Checking caption generation. Style: 'Video + Caption (.txt)'
+2026-01-15 14:43:21,061 - INFO - Entering caption generation block.
+2026-01-15 14:43:21,061 - INFO - Using requested_downloads filepath: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DPvzJM-EW8o.mp4
+2026-01-15 14:43:21,062 - INFO - Caption saved to: E:\mmo\building-page\china movie\md_shop4_reels\Video by md_shop4_DPvzJM-EW8o.txt
+2026-01-15 14:43:21,065 - INFO - Download skipped (already exists): https://www.instagram.com/md_shop4/reel/DPvzJM-EW8o
+2026-01-15 14:56:30,361 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:56:46,684 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:56:47,555 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.instagram.com_cookies (4).txt
+2026-01-15 14:56:47,590 - INFO - Added 10 cookies to browser context.
+2026-01-15 14:56:47,660 - INFO - Playwright visiting: https://www.instagram.com/md_shop4/reels/
+2026-01-15 14:56:47,660 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 14:56:50,652 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 14:56:50,661 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 14:56:56,223 - DEBUG - Scroll iteration 1 completed
+2026-01-15 14:56:56,284 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/phone/
+2026-01-15 14:56:56,284 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/tags/address/
+2026-01-15 14:56:56,284 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/followers/
+2026-01-15 14:56:56,284 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/following/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17856927053959536/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18210988294242613/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17864635397822567/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/18181422913174018/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17942825320963688/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/md_shop4/tagged/
+2026-01-15 14:56:56,285 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/stories/highlights/17911496813544902/
+2026-01-15 14:56:56,299 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/
+2026-01-15 14:56:56,299 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/
+2026-01-15 14:56:56,300 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/direct/inbox/
+2026-01-15 14:56:56,300 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/dullrich19953855/
+2026-01-15 14:56:56,302 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/
+2026-01-15 14:56:56,302 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/blog/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://about.instagram.com/about-us/careers
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://help.instagram.com/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/privacy/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/legal/terms/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/explore/locations/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/web/lite/
+2026-01-15 14:56:56,303 - DEBUG - Filtered out link (invalid format): https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer
+2026-01-15 14:56:56,303 - INFO - Loop status: Iteration 1, Found 26/8 items (+26 new valid, +58 raw)
+2026-01-15 14:56:56,303 - INFO - Scraping loop finished. Found 26 items.
+2026-01-15 14:56:56,303 - INFO - Scraping found 26 unique valid links.
+2026-01-15 14:59:51,912 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:59:54,653 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 14:59:56,440 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 14:59:58,656 - DEBUG - Using proactor: IocpProactor
+2026-01-15 14:59:59,632 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 14:59:59,633 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 15:00:01,697 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 15:00:01,708 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 15:00:01,708 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 15:00:07,395 - DEBUG - Scroll iteration 1 completed
+2026-01-15 15:00:07,432 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/elcoolbeaner/
+2026-01-15 15:00:07,432 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/
+2026-01-15 15:00:07,432 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/esterpl2010/
+2026-01-15 15:00:07,432 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/esterpl2010
+2026-01-15 15:00:07,432 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/design/902065567321/
+2026-01-15 15:00:07,433 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/alexaluwhelan/coffee-shop/
+2026-01-15 15:00:07,433 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/interior-design/922773544354/
+2026-01-15 15:00:07,434 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/beautyorhair/
+2026-01-15 15:00:07,434 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/beautyorhair
+2026-01-15 15:00:07,434 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cafe-themes-interior-design/897729530181/
+2026-01-15 15:00:07,435 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cosy-cafe-design/924487402628/
+2026-01-15 15:00:07,435 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/coffee-shops-exterior-design/901990463700/
+2026-01-15 15:00:07,435 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-coffee-shops-exterior/893844652296/
+2026-01-15 15:00:07,435 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/unique-cafe-exterior/943364469593/
+2026-01-15 15:00:07,441 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-coffee-shop-exterior/910590130656/
+2026-01-15 15:00:07,441 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/coffee-shop-aesthetic-exterior/931601576483/
+2026-01-15 15:00:07,441 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/exterior-coffee-shop-design/932297220454/
+2026-01-15 15:00:07,442 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cafe-design-exterior/956264321956/
+2026-01-15 15:00:07,444 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/
+2026-01-15 15:00:07,445 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ykasugai/cafe/
+2026-01-15 15:00:07,445 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas
+2026-01-15 15:00:07,445 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/alyssonbeaulieu/pret-%c3%a0-manger/
+2026-01-15 15:00:07,445 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/merveyelimtoz/b/
+2026-01-15 15:00:07,446 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tmch93/b-a-c-k-g-r-o-u-n-d-s/
+2026-01-15 15:00:07,446 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/anageto45/home/
+2026-01-15 15:00:07,446 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/lanthasamisti/bathroom-interior-design/
+2026-01-15 15:00:07,446 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dianaaap22/flor-de-caf%c3%a9/
+2026-01-15 15:00:07,447 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/marianaitujim/mar%c3%ada-dolores/
+2026-01-15 15:00:07,447 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tiaresj/suns-business-idea/
+2026-01-15 15:00:07,447 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/mylooksbyrosiedaza/vision-board/
+2026-01-15 15:00:07,447 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/mariabestregui2/aa/
+2026-01-15 15:00:07,447 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/rowenariley_/dwellings/
+2026-01-15 15:00:07,448 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/klimti/watercolorhuis-ideen/
+2026-01-15 15:00:07,448 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/larabotha1771/coffee-shopp/
+2026-01-15 15:00:07,448 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/latifxon/ssr/
+2026-01-15 15:00:07,449 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/arzu_ucpinar/kafe-tasar%c4%b1m%c4%b1/
+2026-01-15 15:00:07,451 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/rph3711/%ec%b9%b4%ed%8e%98/
+2026-01-15 15:00:07,452 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/lizfriends_4065/ilustraciones/
+2026-01-15 15:00:07,453 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:00:07,453 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/anthonygeorges1/ag-red-coffee-shop/
+2026-01-15 15:00:07,454 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/anakenley/cafecito-y-chisme/
+2026-01-15 15:00:07,455 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:00:07,455 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/hayoumaelzwi/decor/
+2026-01-15 15:00:07,455 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/geane_06/decoshop/
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/robinnbanana/mi-brunch/
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/chetanmagdani/chetan-home-plan/
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/erikavolmer/casa-de-t%c3%a9-2024/
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/crepesandcupcakes/stunning-storefronts/
+2026-01-15 15:00:07,456 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/kristallenia16/%ce%ba%ce%b1%cf%86%ce%b5%cf%84%ce%ad%cf%81%ce%b9%ce%b1/
+2026-01-15 15:00:07,456 - INFO - Loop status: Iteration 1, Found 19/8 items (+19 new valid, +69 raw)
+2026-01-15 15:00:07,456 - INFO - Scraping loop finished. Found 19 items.
+2026-01-15 15:00:07,456 - INFO - Scraping found 19 unique valid links.
+2026-01-15 15:03:28,564 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 15:03:30,548 - DEBUG - Using proactor: IocpProactor
+2026-01-15 15:03:31,519 - INFO - Playwright visiting: https://www.pinterest.com/pin/586382814023510211/
+2026-01-15 15:03:31,520 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 15:03:35,119 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 15:03:35,137 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 15:03:35,137 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 15:03:40,992 - DEBUG - Scroll iteration 1 completed
+2026-01-15 15:03:41,017 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/laxmankushwah8889/la/
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/art/961238559656/
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/pandiyarajan259/
+2026-01-15 15:03:41,018 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/aniyahdrake7/
+2026-01-15 15:03:41,019 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/aniyahdrake7
+2026-01-15 15:03:41,019 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cats-funny-cartoon/944986310822/
+2026-01-15 15:03:41,019 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/animal-mashups/893818993541/
+2026-01-15 15:03:41,019 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/animal-cartoon-video/904702440273/
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tammysmithlovestoclub/
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tammysmithlovestoclub
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/funny-animal-clips/919337189606/
+2026-01-15 15:03:41,020 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/video-chat/941835105875/
+2026-01-15 15:03:41,021 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/dancing-cat/900277697169/
+2026-01-15 15:03:41,021 - DEBUG - Filtered out link (invalid format): https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:03:41,022 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/theonlyrealmaryjaneEVER
+2026-01-15 15:03:41,022 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/xXtherimonXx/
+2026-01-15 15:03:41,022 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/xXtherimonXx
+2026-01-15 15:03:41,022 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-cat-gif/943797329409/
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-animal-videos/895294419028/
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/theonlyrealmaryjaneEVER/
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/funny-cat-videos/960811157453/
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dinosaurchickennuggetz/
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dinosaurchickennuggetz
+2026-01-15 15:03:41,023 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ThatOneWaysian/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ThatOneWaysian
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/thebravesquirrelai/_quick_creates/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/talesofbrownie/_quick_creates/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/maviyapathan7248/_quick_creates/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/SlayPotatoe/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/SlayPotatoe
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gavnotaburetki/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gavnotaburetki
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/designartxo/_quick_creates/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/jemaicky/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/skopich13/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/jemaicky
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/unbelievablethoughtsai/life-of-animals/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/missshilpamondal94/
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/skopich13
+2026-01-15 15:03:41,024 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/missshilpamondal94
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sarana11/
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sarana11
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/HannaPinterestUser/
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/HannaPinterestUser
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gunpwd3r/
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gunpwd3r
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/Gunkbot/
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/Gunkbot
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/BoscoGR/
+2026-01-15 15:03:41,025 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/BoscoGR
+2026-01-15 15:03:41,025 - INFO - Loop status: Iteration 1, Found 7/8 items (+7 new valid, +63 raw)
+2026-01-15 15:03:46,817 - DEBUG - Scroll iteration 2 completed
+2026-01-15 15:03:46,977 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/zryanmahli/%d9%88%d9%88/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sabrinaross4200/_quick_creates/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/laxmankushwah8889/la/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/art/961238559656/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/pandiyarajan259/
+2026-01-15 15:03:46,978 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/aniyahdrake7/
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/aniyahdrake7
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cats-funny-cartoon/944986310822/
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/animal-mashups/893818993541/
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/animal-cartoon-video/904702440273/
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tammysmithlovestoclub/
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tammysmithlovestoclub
+2026-01-15 15:03:46,979 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/funny-animal-clips/919337189606/
+2026-01-15 15:03:46,980 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/video-chat/941835105875/
+2026-01-15 15:03:46,980 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/dancing-cat/900277697169/
+2026-01-15 15:03:46,980 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/theonlyrealmaryjaneEVER/
+2026-01-15 15:03:46,981 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/theonlyrealmaryjaneEVER
+2026-01-15 15:03:46,982 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/xXtherimonXx/
+2026-01-15 15:03:46,982 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/xXtherimonXx
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-cat-gif/943797329409/
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-animal-videos/895294419028/
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/funny-cat-videos/960811157453/
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dinosaurchickennuggetz/
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dinosaurchickennuggetz
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ThatOneWaysian/
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ThatOneWaysian
+2026-01-15 15:03:46,983 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/SlayPotatoe/
+2026-01-15 15:03:46,984 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/SlayPotatoe
+2026-01-15 15:03:46,984 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gavnotaburetki/
+2026-01-15 15:03:46,984 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gavnotaburetki
+2026-01-15 15:03:46,984 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/jemaicky/
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/skopich13/
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/jemaicky
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/missshilpamondal94/
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/skopich13
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/missshilpamondal94
+2026-01-15 15:03:46,985 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sarana11/
+2026-01-15 15:03:46,986 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sarana11
+2026-01-15 15:03:46,986 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/HannaPinterestUser/
+2026-01-15 15:03:46,987 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/HannaPinterestUser
+2026-01-15 15:03:46,987 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gunpwd3r/
+2026-01-15 15:03:46,987 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/gunpwd3r
+2026-01-15 15:03:46,989 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/Gunkbot/
+2026-01-15 15:03:46,989 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/Gunkbot
+2026-01-15 15:03:46,989 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/BoscoGR/
+2026-01-15 15:03:46,989 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/BoscoGR
+2026-01-15 15:03:46,990 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/
+2026-01-15 15:03:46,990 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas
+2026-01-15 15:03:46,990 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/kame0679/%e3%81%8b%e3%82%8f%e3%81%84%e3%81%84%e7%8c%ab%e3%81%ae%e8%a6%aa%e5%ad%90/
+2026-01-15 15:03:46,991 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/safayasin323/_quick_creates/
+2026-01-15 15:03:46,992 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/auk7360/_quick_creates/
+2026-01-15 15:03:46,992 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/joinatprabhas/_quick_saves/
+2026-01-15 15:03:46,993 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/shubhamgamer826/anime-reels/
+2026-01-15 15:03:46,994 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/qa820608/_quick_saves/
+2026-01-15 15:03:46,995 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/brendadilorinzo/stuff/
+2026-01-15 15:03:46,995 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/mashhura_creative/animal-motivation/
+2026-01-15 15:03:46,995 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/fluffyden_official/_quick_creates/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/cutieinfluencerai/_quick_creates/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/smotilal391/_quick_saves/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/winie_home/ai/
+2026-01-15 15:03:46,996 - DEBUG - Filtered out link (invalid format): https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:03:46,997 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/haimv911/_quick_creates/
+2026-01-15 15:03:46,997 - INFO - Loop status: Iteration 2, Found 22/8 items (+15 new valid, +30 raw)
+2026-01-15 15:03:46,997 - INFO - Scraping loop finished. Found 22 items.
+2026-01-15 15:03:46,997 - INFO - Scraping found 22 unique valid links.
+2026-01-15 15:11:58,322 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 15:12:01,042 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 15:12:02,746 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 15:12:04,712 - DEBUG - Using proactor: IocpProactor
+2026-01-15 15:12:05,706 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 15:12:05,706 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 15:12:08,796 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 15:12:08,813 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 15:12:08,813 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 15:12:08,813 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 15:12:18,677 - DEBUG - Scroll iteration 1 completed
+2026-01-15 15:12:18,716 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/elcoolbeaner/
+2026-01-15 15:12:18,716 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/
+2026-01-15 15:12:18,716 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/esterpl2010/
+2026-01-15 15:12:18,717 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/esterpl2010
+2026-01-15 15:12:18,717 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/design/902065567321/
+2026-01-15 15:12:18,717 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/alexaluwhelan/coffee-shop/
+2026-01-15 15:12:18,717 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/interior-design/922773544354/
+2026-01-15 15:12:18,718 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/beautyorhair/
+2026-01-15 15:12:18,718 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/beautyorhair
+2026-01-15 15:12:18,719 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cafe-themes-interior-design/897729530181/
+2026-01-15 15:12:18,719 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cosy-cafe-design/924487402628/
+2026-01-15 15:12:18,719 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/coffee-shops-exterior-design/901990463700/
+2026-01-15 15:12:18,719 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-coffee-shops-exterior/893844652296/
+2026-01-15 15:12:18,720 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/unique-cafe-exterior/943364469593/
+2026-01-15 15:12:18,726 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cute-coffee-shop-exterior/910590130656/
+2026-01-15 15:12:18,726 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/coffee-shop-aesthetic-exterior/931601576483/
+2026-01-15 15:12:18,726 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/exterior-coffee-shop-design/932297220454/
+2026-01-15 15:12:18,727 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas/cafe-design-exterior/956264321956/
+2026-01-15 15:12:18,729 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/
+2026-01-15 15:12:18,739 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/vvv16089090/%d0%be%d1%82%d0%b5%d0%bb%d1%8c-%d0%b8%d0%b4%d0%b5%d0%b8-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/
+2026-01-15 15:12:18,739 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ideas
+2026-01-15 15:12:18,739 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/oviratiffani/amabile/
+2026-01-15 15:12:18,740 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/florenciaszwarc/drishti-cafe/
+2026-01-15 15:12:18,740 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/kjkostka/bakeries/
+2026-01-15 15:12:18,741 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/averygoodstudio/%ed%83%80%ec%bd%94%ec%95%bc%eb%81%bc/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/geane_06/decoshop/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/lemonadeze/%e0%b8%9a%e0%b8%b2%e0%b8%99%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%84%e0%b8%b2%e0%b9%80%e0%b8%9f/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/indradewibpn/design-coffe-shop/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/merveyelimtoz/b/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/tmch93/b-a-c-k-g-r-o-u-n-d-s/
+2026-01-15 15:12:18,742 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/atheer_40/interior-design-ideas/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/lanthasamisti/bathroom-interior-design/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/sunraess_/business-idea/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/marianaitujim/mar%c3%ada-dolores/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/mylooksbyrosiedaza/vision-board/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/mariabestregui2/aa/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/rowenariley_/dwellings/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/klimti/watercolorhuis-ideen/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/larabotha1771/coffee-shopp/
+2026-01-15 15:12:18,743 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/latifxon/ssr/
+2026-01-15 15:12:18,744 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:12:18,744 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:12:18,744 - DEBUG - Filtered out link (invalid format): https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:12:18,744 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/rashikhande9097/rashi/
+2026-01-15 15:12:18,745 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/nash0897/nashika/
+2026-01-15 15:12:18,747 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/dianaaap22/flor-de-caf%c3%a9/
+2026-01-15 15:12:18,747 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/arzu_ucpinar/kafe-tasar%c4%b1m%c4%b1/
+2026-01-15 15:12:18,747 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/rph3711/%ec%b9%b4%ed%8e%98/
+2026-01-15 15:12:18,747 - DEBUG - Filtered out link (invalid format): https://www.pinterest.com/ykasugai/cafe/
+2026-01-15 15:12:18,747 - INFO - Loop status: Iteration 1, Found 19/8 items (+19 new valid, +68 raw)
+2026-01-15 15:12:18,747 - INFO - Scraping loop finished. Found 19 items.
+2026-01-15 15:12:18,747 - INFO - Scraping found 19 unique valid links.
+2026-01-15 15:38:20,286 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 15:38:23,025 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 15:38:24,440 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 15:38:26,145 - DEBUG - Using proactor: IocpProactor
+2026-01-15 15:38:27,148 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 15:38:27,148 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 15:38:31,015 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 15:38:31,033 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 15:38:31,033 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 15:38:31,033 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 15:38:40,927 - DEBUG - Scroll iteration 1 completed
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/elcoolbeaner/
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/esterpl2010/
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/esterpl2010
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/design/902065567321/
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/alexaluwhelan/coffee-shop/
+2026-01-15 15:38:40,953 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/interior-design/922773544354/
+2026-01-15 15:38:40,954 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/beautyorhair/
+2026-01-15 15:38:40,955 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/beautyorhair
+2026-01-15 15:38:40,955 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cafe-themes-interior-design/897729530181/
+2026-01-15 15:38:40,955 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cosy-cafe-design/924487402628/
+2026-01-15 15:38:40,955 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/coffee-shops-exterior-design/901990463700/
+2026-01-15 15:38:40,956 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cute-coffee-shops-exterior/893844652296/
+2026-01-15 15:38:40,956 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/unique-cafe-exterior/943364469593/
+2026-01-15 15:38:40,956 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cute-coffee-shop-exterior/910590130656/
+2026-01-15 15:38:40,956 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/coffee-shop-aesthetic-exterior/931601576483/
+2026-01-15 15:38:40,956 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/exterior-coffee-shop-design/932297220454/
+2026-01-15 15:38:40,957 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cafe-design-exterior/956264321956/
+2026-01-15 15:38:40,961 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/pin/mi-brunch-in-2025--1759287348353191/
+2026-01-15 15:38:40,962 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 15:38:40,962 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 15:38:40,965 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/kristallenia16/%ce%ba%ce%b1%cf%86%ce%b5%cf%84%ce%ad%cf%81%ce%b9%ce%b1/
+2026-01-15 15:38:40,965 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/geane_06/decoshop/
+2026-01-15 15:38:40,966 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/alex_mva05/places/
+2026-01-15 15:38:40,966 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/robinnbanana/mi-brunch/
+2026-01-15 15:38:40,966 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/crepesandcupcakes/stunning-storefronts/
+2026-01-15 15:38:40,967 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/casatrazo/espacio-onigiri/
+2026-01-15 15:38:40,967 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/f22fortes/kitchen-design/
+2026-01-15 15:38:40,967 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/juhill601/wie-sch%c3%b6n/
+2026-01-15 15:38:40,968 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/brifay/amenities/
+2026-01-15 15:38:40,968 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/andiniah/emerald/
+2026-01-15 15:38:40,969 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ialepd30/displays-shops-restaurants/
+2026-01-15 15:38:40,969 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/bel15790/abi/
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/camilobenavidesr/cafeteria/
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/fromagefrais59/art-inspiration/
+2026-01-15 15:38:40,970 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/pizkis/home-sweet-home/
+2026-01-15 15:38:40,970 - INFO - Loop status: Iteration 1, Found 16/8 items (+16 new valid, +55 raw)
+2026-01-15 15:38:40,971 - INFO - Scraping loop finished. Found 16 items.
+2026-01-15 15:38:40,971 - INFO - Scraping found 16 unique valid links.
+2026-01-15 15:54:54,518 - DEBUG - Using proactor: IocpProactor
+2026-01-15 15:54:55,571 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 15:54:55,571 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 15:54:56,804 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 15:54:56,831 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 15:54:56,831 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 15:54:56,831 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 15:55:06,707 - DEBUG - Scroll iteration 1 completed
+2026-01-15 15:55:06,830 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/nicolesander/coffee-shop/
+2026-01-15 15:55:06,831 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/madhuleenadm/caf%c3%a9/
+2026-01-15 15:55:06,832 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/elcoolbeaner/
+2026-01-15 15:55:06,832 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/
+2026-01-15 15:55:06,832 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/esterpl2010/
+2026-01-15 15:55:06,832 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/esterpl2010
+2026-01-15 15:55:06,832 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/design/902065567321/
+2026-01-15 15:55:06,833 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/alexaluwhelan/coffee-shop/
+2026-01-15 15:55:06,833 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/interior-design/922773544354/
+2026-01-15 15:55:06,835 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/beautyorhair/
+2026-01-15 15:55:06,836 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/beautyorhair
+2026-01-15 15:55:06,836 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cafe-themes-interior-design/897729530181/
+2026-01-15 15:55:06,836 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cosy-cafe-design/924487402628/
+2026-01-15 15:55:06,836 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/coffee-shops-exterior-design/901990463700/
+2026-01-15 15:55:06,836 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cute-coffee-shops-exterior/893844652296/
+2026-01-15 15:55:06,837 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/unique-cafe-exterior/943364469593/
+2026-01-15 15:55:06,837 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cute-coffee-shop-exterior/910590130656/
+2026-01-15 15:55:06,837 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/coffee-shop-aesthetic-exterior/931601576483/
+2026-01-15 15:55:06,837 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/exterior-coffee-shop-design/932297220454/
+2026-01-15 15:55:06,837 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas/cafe-design-exterior/956264321956/
+2026-01-15 15:55:06,841 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 15:55:06,841 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 15:55:06,841 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/juhill601/wie-sch%c3%b6n/
+2026-01-15 15:55:06,842 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/f22fortes/kitchen-design/
+2026-01-15 15:55:06,843 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/chetanmagdani/chetan-home-plan/
+2026-01-15 15:55:06,843 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/andiniah/emerald/
+2026-01-15 15:55:06,844 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ialepd30/displays-shops-restaurants/
+2026-01-15 15:55:06,844 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/casatrazo/espacio-onigiri/
+2026-01-15 15:55:06,845 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/crepesandcupcakes/stunning-storefronts/
+2026-01-15 15:55:06,845 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/alobark23/coffee-shop/
+2026-01-15 15:55:06,846 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/fromagefrais59/art-inspiration/
+2026-01-15 15:55:06,847 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/bel15790/abi/
+2026-01-15 15:55:06,849 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/pizkis/home-sweet-home/
+2026-01-15 15:55:06,851 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/tiaresj/suns-business-idea/
+2026-01-15 15:55:06,851 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/azrakavak/d%c3%bckkan/
+2026-01-15 15:55:06,851 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/_/_/policy/terms-of-service/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/amoucito14/jardin/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/_/_/policy/privacy-policy/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://policy.pinterest.com/notice-at-collection
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/alessbork1996/caf%c3%a9-macanal/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/jorge2099/my-works-visual-merchandising-desing/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/tdhuth/window-displays/
+2026-01-15 15:55:06,852 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/brifay/amenities/
+2026-01-15 15:55:06,853 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/kellibendixen/barndominiums/
+2026-01-15 15:55:06,853 - INFO - Loop status: Iteration 1, Found 23/8 items (+23 new valid, +67 raw)
+2026-01-15 15:55:06,853 - INFO - Scraping loop finished. Found 23 items.
+2026-01-15 15:55:06,853 - INFO - Scraping found 23 unique valid links.
+2026-01-15 16:00:54,751 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:00:57,512 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 16:01:06,128 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:01:07,971 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:01:08,929 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:01:08,983 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:01:09,069 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 16:01:09,069 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 16:01:09,808 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 16:01:09,890 - INFO - Scraper Filtering: Video=True, Photo=True
+2026-01-15 16:01:09,890 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 16:01:09,890 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:01:12,891 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:01:22,576 - DEBUG - Scroll iteration 1 completed
+2026-01-15 16:01:22,593 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/pin/2392606047925519/#
+2026-01-15 16:01:22,594 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/elcoolbeaner/
+2026-01-15 16:01:22,599 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:01:22,606 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:01:22,606 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:01:22,613 - INFO - Loop status: Iteration 1, Found 14/8 items (+14 new valid, +19 raw)
+2026-01-15 16:01:22,614 - INFO - Scraping loop finished. Found 14 items.
+2026-01-15 16:01:22,614 - INFO - Scraping found 14 unique valid links.
+2026-01-15 16:04:15,527 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:04:17,988 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-15 16:04:20,393 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-15 16:04:22,586 - DEBUG - Using proactor: IocpProactor
+2026-01-15 16:04:23,472 - INFO - Loading cookies from: C:/Users/USER/Downloads/www.pinterest.com_cookies.txt
+2026-01-15 16:04:23,521 - INFO - Added 9 cookies to browser context.
+2026-01-15 16:04:23,592 - INFO - Playwright visiting: https://www.pinterest.com/pin/2392606047925519/
+2026-01-15 16:04:23,592 - INFO - Scraping target limit (max_entries): 8
+2026-01-15 16:04:24,339 - INFO - Starting scroll loop. Planned iterations: 5 for max 8 items.
+2026-01-15 16:04:24,423 - INFO - Scraper Filtering: Video=False, Photo=True
+2026-01-15 16:04:24,424 - INFO - Starting dynamic scroll loop. Target: 8 items.
+2026-01-15 16:04:24,424 - INFO - Pinterest detected. Waiting 3 seconds for page to settle before scraping...
+2026-01-15 16:04:27,837 - INFO - Pinterest post-delay screenshot saved to E:\project\videoDownloader\debug_pinterest_after_3s_load.png
+2026-01-15 16:04:27,837 - INFO - Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.
+2026-01-15 16:04:37,448 - DEBUG - Scroll iteration 1 completed
+2026-01-15 16:04:37,459 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/pin/2392606047925519/#
+2026-01-15 16:04:37,459 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/elcoolbeaner/
+2026-01-15 16:04:37,464 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/
+2026-01-15 16:04:37,467 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/reveal169/
+2026-01-15 16:04:37,467 - DEBUG - Filtered out non-pin Pinterest link: https://www.pinterest.com/ideas
+2026-01-15 16:04:37,473 - INFO - Loop status: Iteration 1, Found 16/8 items (+16 new valid, +22 raw)
+2026-01-15 16:04:37,473 - INFO - Scraping loop finished. Found 16 items.
+2026-01-15 16:04:37,473 - INFO - Scraping found 16 unique valid links.

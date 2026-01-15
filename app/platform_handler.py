@@ -48,7 +48,9 @@ def is_valid_media_link(href, domain):
     elif 'tiktok.com' in domain:
         return '/video/' in href
     elif 'pinterest.com' in domain:
-        return '/pin/' in href
+        # Match /pin/12345, /pin/12345/, /pin/12345?foo...
+        # Reject /pin/12345/repin
+        return bool(re.search(r'/pin/\d+(?:/|\?|$)', href)) and not re.search(r'/pin/\d+/.+', href)
     elif 'instagram.com' in domain:
         return '/p/' in href or '/reel/' in href or '/reels/' in href or '/tv/' in href
     elif 'facebook.com' in domain:
@@ -270,8 +272,9 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
 
                         return Array.from(unique.values()).sort((a, b) => {
                             // Sort by top (vertical), then by left (horizontal)
+                            // Increased tolerance to 250px to better handle Pinterest's masonry grid on the right
                             const rowDiff = a.top - b.top;
-                            if (Math.abs(rowDiff) > 150) return rowDiff;
+                            if (Math.abs(rowDiff) > 250) return rowDiff;
                             return a.left - b.left;
                         });
                     }
@@ -281,12 +284,88 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                 # Use a while loop to ensure we keep scrolling until we get enough items
                 # or we hit a hard limit/stagnation.
                 
+                # Retrieve Filtering Settings
+                req_video = settings.get('video_enabled', True) # Default to True if not specified
+                req_photo = settings.get('photo_enabled', True)
+                
+                logging.info(f"Scraper Filtering: Video={req_video}, Photo={req_photo}")
+                
                 iteration = 0
                 max_iterations = 200 # Safety hard limit
                 previous_count = 0
                 stagnant_scrolls = 0
                 
                 logging.info(f"Starting dynamic scroll loop. Target: {max_entries} items.")
+                
+                # Pinterest specific delay to allow content to settle
+                if 'pinterest.com' in domain:
+                    logging.info("Pinterest detected. Waiting 3 seconds for page to settle before scraping...")
+                    time.sleep(3.0)
+                    try:
+                        ss_path = os.path.join(get_app_path(), "debug_pinterest_after_3s_load.png")
+                        page.screenshot(path=ss_path)
+                        logging.info(f"Pinterest post-delay screenshot saved to {ss_path}")
+                    except Exception as e:
+                        logging.error(f"Failed to take Pinterest post-delay screenshot: {e}")
+
+                # --- Initial Extraction (Before Scroll) ---
+                # Capture what is immediately visible (e.g. related pins on the right)
+                try:
+                    initial_links = page.evaluate(extract_func)
+                    initial_count = 0
+                    for link in initial_links:
+                        href = link['url']
+                        text = link['text'] or "Scraped Link"
+                        if href not in all_seen_links:
+                            all_seen_links.add(href)
+                        
+                        if 'facebook.com' in domain: clean_href = href
+                        else: clean_href = href.split('#')[0].split('?')[0].rstrip('/')
+                        
+                        if clean_href in unique_urls: continue
+                        if not href.startswith('http'): continue
+                        
+                        if 'pinterest.com' in domain:
+                             if not (re.search(r'/pin/\d+(?:/|\?|$)', href) and not re.search(r'/pin/\d+/.+', href)): continue
+                        else:
+                             if domain not in href: continue
+
+                        if not is_valid_media_link(href, domain): continue
+
+                        # Type Filtering
+                        is_likely_video = False
+                        is_likely_photo = False
+                        if 'pinterest.com' in domain:
+                            if link.get('is_video_hint', False): is_likely_video = True
+                            else: is_likely_photo = True
+                        elif 'youtube' in domain or 'tiktok' in domain or 'facebook' in domain: is_likely_video = True
+                        elif 'instagram' in domain:
+                             if '/reel/' in href or '/reels/' in href or '/tv/' in href: is_likely_video = True
+                             elif '/p/' in href: is_likely_photo = True
+                        else:
+                             if href.lower().endswith(('.mp4', '.mov', '.avi')): is_likely_video = True
+                             else: is_likely_photo = True
+                        
+                        if is_likely_video and not req_video: continue
+                        if is_likely_photo and not req_photo: continue
+
+                        unique_urls.add(clean_href)
+                        item = {'url': clean_href, 'title': text.strip(), 'type': 'scraped_link', 'is_video_hint': is_likely_video}
+                        results.append(item)
+                        if callback: callback(item)
+                        initial_count += 1
+                    
+                    logging.info(f"Initial capture found {initial_count} items.")
+                except Exception as e:
+                    logging.error(f"Error during initial extraction: {e}")
+
+                # Special handling for Single Pin pages to trigger "More like this"
+                if '/pin/' in url:
+                    logging.info("Single Pin detected. Performing initial deep scroll to trigger 'More like this' grid.")
+                    page.keyboard.press("End")
+                    time.sleep(2.0)
+                    page.mouse.wheel(0, 5000)
+                    time.sleep(2.0)
                 
                 while len(results) < max_entries and iteration < max_iterations:
                     iteration += 1
@@ -352,19 +431,59 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                         if not href.startswith('http'): continue
                         
                         # Check if link belongs to same domain (fuzzy match)
-                        is_pin = 'pinterest.com/pin/' in href
-                        if domain not in href and not is_pin: continue
+                        if 'pinterest.com' in domain:
+                             # Strict check for Pin format: /pin/[numeric_id]
+                             # Reject sub-actions like /repin
+                             if not (re.search(r'/pin/\d+(?:/|\?|$)', href) and not re.search(r'/pin/\d+/.+', href)):
+                                 logging.debug(f"Filtered out non-pin Pinterest link: {href}")
+                                 continue
+                        else:
+                             if domain not in href: continue
 
                         # Strict Content Filtering using helper
                         if not is_valid_media_link(href, domain): 
                             logging.debug(f"Filtered out link (invalid format): {href}")
                             continue
+                            
+                        # --- TYPE FILTERING (Optimized) ---
+                        # Determine potential type based on URL and Hint
+                        # Note: This is a best-guess. Pinterest is tricky.
+                        is_likely_video = False
+                        is_likely_photo = False
+                        
+                        if 'pinterest.com' in domain:
+                            # Use the visual hint from extraction
+                            if link.get('is_video_hint', False):
+                                is_likely_video = True
+                            else:
+                                # Default to photo if no video hint
+                                is_likely_photo = True
+                        elif 'youtube' in domain or 'tiktok' in domain or 'facebook' in domain:
+                            is_likely_video = True
+                        elif 'instagram' in domain:
+                             if '/reel/' in href or '/reels/' in href or '/tv/' in href:
+                                 is_likely_video = True
+                             elif '/p/' in href:
+                                 is_likely_photo = True
+                        else:
+                             # Generic fallback based on extension
+                             if href.lower().endswith(('.mp4', '.mov', '.avi')):
+                                 is_likely_video = True
+                             else:
+                                 is_likely_photo = True
+                        
+                        # Apply User Settings
+                        if is_likely_video and not req_video:
+                             continue # Skip video
+                        if is_likely_photo and not req_photo:
+                             continue # Skip photo
 
                         unique_urls.add(clean_href)
                         item = {
                             'url': clean_href,
                             'title': text.strip() if text else "",
-                            'type': 'scraped_link'
+                            'type': 'scraped_link',
+                            'is_video_hint': is_likely_video # Pass hint back
                         }
                         results.append(item)
                         if callback:

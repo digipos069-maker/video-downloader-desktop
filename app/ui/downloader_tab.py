@@ -1251,6 +1251,11 @@ class DownloaderTab(QWidget):
             # Create a copy of settings for this URL to inject specific credentials
             settings = base_settings.copy()
             
+            # --- Inject Type Filtering Flags for Scraper ---
+            # Flatten these so the scraper (platform_handler) can access them easily
+            settings['video_enabled'] = base_settings.get('video', {}).get('enabled', False)
+            settings['photo_enabled'] = base_settings.get('photo', {}).get('enabled', False)
+            
             # --- Inject Platform Credentials for Scraper ---
             # Facebook
             if "facebook.com" in url or "fb.watch" in url:
