@@ -514,7 +514,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
         if ffmpeg_available: ydl_opts['format'] = 'bestaudio/best'; ydl_opts['postprocessors'] = [{'key': 'FFmpegExtractAudio', 'preferredcodec': extension, 'preferredquality': '192'}]
         else: ydl_opts['format'] = 'bestaudio/best'
     elif extension in ['mp4', 'mkv', 'webm']:
-        if extension == 'mp4': target_format = 'bestvideo[ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc]+bestaudio/bestvideo[vcodec!=^av01][vcodec!=^vp9]+bestaudio/bestvideo[vcodec!=^av01]+bestaudio/bestvideo+bestaudio/best'
+        if extension == 'mp4': target_format = 'bestvideo[ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc]+bestaudio/bestvideo[vcodec!^=av01][vcodec!^=vp9]+bestaudio/bestvideo[vcodec!^=av01]+bestaudio/bestvideo+bestaudio/best'
         else: target_format = 'bestvideo+bestaudio/best'
         if not ffmpeg_available: target_format = 'best[ext=mp4]/best' if extension == 'mp4' else 'best'
         if resolution != 'Best Available':
@@ -522,7 +522,7 @@ def download_with_ytdlp(url, output_path, progress_callback, settings={}):
             height = res_map.get(resolution)
             if height:
                 if ffmpeg_available:
-                    if extension == 'mp4': target_format = f'bestvideo[ext=mp4][vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc][height<={height}]+bestaudio/bestvideo[vcodec!=^av01][vcodec!=^vp9][height<={height}]+bestaudio/bestvideo[vcodec!=^av01][height<={height}]+bestaudio/bestvideo[height<={height}]+bestaudio/best[height<={height}]'
+                    if extension == 'mp4': target_format = f'bestvideo[ext=mp4][vcodec^=avc][height<={height}]+bestaudio[ext=m4a]/bestvideo[vcodec^=avc][height<={height}]+bestaudio/bestvideo[vcodec!^=av01][vcodec!^=vp9][height<={height}]+bestaudio/bestvideo[vcodec!^=av01][height<={height}]+bestaudio/bestvideo[height<={height}]+bestaudio/best[height<={height}]'
                     else: target_format = f'bestvideo[height<={height}]+bestaudio/best[height<={height}]'
                 else: target_format = f'best[ext=mp4][height<={height}]/best[height<={height}]' if extension == 'mp4' else f'best[height<={height}]'
         ydl_opts['format'] = target_format
@@ -670,6 +670,21 @@ def extract_pinterest_direct_url(url):
                         return None
                     extracted = find_v(data)
                     if extracted: browser.close(); return extracted
+            except Exception: pass
+            
+            # ReelShort / Next.js JSON fallback
+            try:
+                next_data = page.evaluate("() => document.getElementById('__NEXT_DATA__') ? document.getElementById('__NEXT_DATA__').innerText : null")
+                if next_data:
+                    data = json.loads(next_data)
+                    # Navigate safe path: props.pageProps.data.video_url
+                    try:
+                        v_url = data.get('props', {}).get('pageProps', {}).get('data', {}).get('video_url')
+                        if v_url and ('.m3u8' in v_url or '.mp4' in v_url):
+                            logging.info(f"Found video in __NEXT_DATA__: {v_url}")
+                            browser.close()
+                            return v_url
+                    except Exception: pass
             except Exception: pass
             
             # Video Tag fallback
@@ -827,8 +842,15 @@ class ReelShortHandler(BaseHandler):
         if s: return True
         du = extract_pinterest_direct_url(url)
         if du:
-            logging.info(f"Found direct video URL: {du}. Using urllib for direct download.")
-            return download_direct(du, op, item.get('title', 'ReelShort_Video'), progress_callback, settings)
+            logging.info(f"Found direct video URL: {du}")
+            # If it's HLS (m3u8), we MUST use yt-dlp to process/convert it
+            if '.m3u8' in du:
+                # Force mp4 extension for output
+                settings['extension'] = 'mp4'
+                return download_with_ytdlp(du, op, progress_callback, settings)
+            else:
+                # Direct file (mp4), use urllib
+                return download_direct(du, op, item.get('title', 'ReelShort_Video'), progress_callback, settings)
         return False
 
 class PlatformHandlerFactory:
