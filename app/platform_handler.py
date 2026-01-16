@@ -153,13 +153,18 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                     parsed_url = urlparse(visit_url)
                     domain = parsed_url.netloc.replace('www.', '') 
                     
+                    # --- Explicitly Add Main URL if it's a direct item ---
                     if is_valid_media_link(visit_url, domain):
-                        clean_main = visit_url.split('#')[0].split('?')[0].rstrip('/')
-                        if clean_main not in unique_urls:
-                            item = {'url': visit_url, 'title': page_title, 'type': 'scraped_link'}
-                            unique_urls.add(clean_main)
-                            results.append(item)
-                            if callback: callback(item)
+                        # ReelShort Exception: Don't add 'full-episodes' (series pages) as items, only actual episodes
+                        if 'reelshort.com' in domain and '/full-episodes/' in visit_url:
+                            pass # Skip adding series page
+                        else:
+                            clean_main = visit_url.split('#')[0].split('?')[0].rstrip('/')
+                            if clean_main not in unique_urls:
+                                item = {'url': visit_url, 'title': page_title, 'type': 'scraped_link'}
+                                unique_urls.add(clean_main)
+                                results.append(item)
+                                if callback: callback(item)
 
                     extract_func = """
                         () => {
@@ -273,7 +278,11 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                  if href.lower().endswith(('.mp4', '.mov', '.avi')): is_likely_video = True
                                  else: is_likely_photo = True
                             if is_likely_video and not req_video: continue
-                            if is_likely_photo and not req_photo: continue
+                            # ReelShort: Filter out pagination/series pages from results, keep only episodes
+                            # We want /episodes/ (videos), NOT /full-episodes/ (series/pagination)
+                            if 'reelshort.com' in domain and ('/full-episodes/' in clean_href or clean_href.rstrip('/').split('/')[-1].isdigit()):
+                                continue
+
                             unique_urls.add(clean_href)
                             item = {'url': clean_href, 'title': text.strip(), 'type': 'scraped_link', 'is_video_hint': is_likely_video}
                             results.append(item)

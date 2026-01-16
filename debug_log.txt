@@ -25491,3 +25491,36 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-16 16:08:30,523 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8 (Target: 105)
 2026-01-16 16:09:37,122 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9
 2026-01-16 16:09:37,123 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9 (Target: 105)
+2026-01-16 16:09:57,253 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:09:58,036 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:10:02,371 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:10:22,654 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:10:23,602 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 16:10:23,602 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 205)
+2026-01-16 16:11:30,786 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 16:11:30,786 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 205)
+2026-01-16 16:12:14,839 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:12:15,950 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:12:19,596 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:12:22,676 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:12:23,675 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 16:12:23,675 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 205)
+2026-01-16 16:13:30,875 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 16:13:30,876 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 205)
+2026-01-16 16:14:10,470 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:14:11,583 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:14:16,246 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:14:18,026 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:14:18,993 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 16:14:18,993 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 205)
+2026-01-16 16:17:08,914 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:17:09,815 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:17:13,512 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:17:25,280 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:17:27,147 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:17:28,130 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 16:17:28,130 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 205)
+2026-01-16 16:18:35,517 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 16:18:35,517 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 205)
+2026-01-16 16:19:42,336 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3
+2026-01-16 16:19:42,336 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3 (Target: 205)
