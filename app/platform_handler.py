@@ -299,22 +299,30 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                     stagnant_scrolls = 0
                     while len(results) < max_entries and iteration < 200:
                         iteration += 1
-                        page.keyboard.press("PageDown")
-                        time.sleep(0.5)
-                        page.mouse.wheel(0, 15000)
-                        time.sleep(0.5)
-                        page.keyboard.press("End")
-                        time.sleep(0.5)
-                        try:
-                            page.evaluate("""
-                                () => {
-                                    const containers = document.querySelectorAll('[role="feed"], .scrollable, [style*="overflow: auto"], [style*="overflow: scroll"], [style*="overflow-y: auto"], [style*="overflow-y: scroll"]');
-                                    containers.forEach(el => { el.scrollTop += 1500; });
-                                    window.scrollTo(0, document.body.scrollHeight);
-                                }
-                            """)
-                        except Exception: pass
-                        time.sleep(4.0)
+                        
+                        # Optimization for ReelShort (Paginated, not Infinite Scroll)
+                        if 'reelshort.com' in visit_url:
+                            page.keyboard.press("End")
+                            time.sleep(1.0)
+                        else:
+                            # Standard Aggressive Scroll
+                            page.keyboard.press("PageDown")
+                            time.sleep(0.5)
+                            page.mouse.wheel(0, 15000)
+                            time.sleep(0.5)
+                            page.keyboard.press("End")
+                            time.sleep(0.5)
+                            try:
+                                page.evaluate("""
+                                    () => {
+                                        const containers = document.querySelectorAll('[role="feed"], .scrollable, [style*="overflow: auto"], [style*="overflow: scroll"], [style*="overflow-y: auto"], [style*="overflow-y: scroll"]');
+                                        containers.forEach(el => { el.scrollTop += 1500; });
+                                        window.scrollTo(0, document.body.scrollHeight);
+                                    }
+                                """)
+                            except Exception: pass
+                            time.sleep(4.0)
+                        
                         extracted_links = page.evaluate(extract_func)
                         raw_new_items = 0
                         for link in extracted_links:

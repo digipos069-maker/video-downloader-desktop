@@ -25524,3 +25524,122 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-16 16:18:35,517 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 205)
 2026-01-16 16:19:42,336 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3
 2026-01-16 16:19:42,336 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3 (Target: 205)
+2026-01-16 16:23:30,199 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:23:31,085 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:23:34,468 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:23:39,600 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:23:43,843 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:23:44,857 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 16:23:44,858 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 205)
+2026-01-16 16:24:52,132 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 16:24:52,132 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 205)
+2026-01-16 16:25:58,994 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3
+2026-01-16 16:25:58,994 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3 (Target: 205)
+2026-01-16 16:26:06,832 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:26:09,556 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:26:09,556 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:27:05,822 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/4
+2026-01-16 16:27:05,823 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/4 (Target: 205)
+2026-01-16 16:28:12,488 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/5
+2026-01-16 16:28:12,488 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/5 (Target: 205)
+2026-01-16 16:29:19,223 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/6
+2026-01-16 16:29:19,223 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/6 (Target: 205)
+2026-01-16 16:30:25,944 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/7
+2026-01-16 16:30:25,944 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/7 (Target: 205)
+2026-01-16 16:31:32,631 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8
+2026-01-16 16:31:32,631 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8 (Target: 205)
+2026-01-16 16:32:39,303 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9
+2026-01-16 16:32:39,303 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9 (Target: 205)
+2026-01-16 16:32:48,843 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:32:51,047 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:32:51,048 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:33:34,166 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:33:36,343 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:33:36,344 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:33:50,618 - INFO - No new items on page 9. Stopping.
+2026-01-16 16:34:15,447 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:17,625 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:34:17,625 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:34:55,467 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:55,797 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:55,818 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:55,866 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,187 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,470 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,577 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,647 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,779 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,784 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:56,795 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:57,077 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:57,133 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:57,176 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:34:59,326 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:34:59,327 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:34:59,807 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:34:59,807 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:35:00,700 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:35:00,701 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:35:04,650 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:05,621 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:06,225 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:07,585 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:08,116 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:09,036 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:09,921 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/vod-112094/60052814ec3e71f09d9c5114c0db0102/896dfa28be6f411eb5ad3b25e2f3a9a0-ff7ffa2a3ac92bc5531b63dd2e2bf06b-hd.m3u8. Using urllib for direct download.
+2026-01-16 16:35:09,922 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.m3u8
+2026-01-16 16:35:10,500 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:10,878 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:13,036 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/vod-112094/800ae2b6ec3e71f0806997c6360c0102/d45f2490e7544433b3a178896906505b-ea12a6b58713a4f7bd48e25ee145e411-hd.m3u8. Using urllib for direct download.
+2026-01-16 16:35:13,036 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.m3u8
+2026-01-16 16:35:13,275 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:14,517 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:35:14,517 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:35:16,773 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:35:16,774 - INFO - Direct Download Target: E:\mmo\building-page\china movie\full-episodes_step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a\ReelShortVideo.mp4
+2026-01-16 16:35:18,254 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:18,484 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:18,748 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:19,786 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:20,401 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:21,241 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:23,737 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:24,712 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:25,004 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:25,167 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:25,387 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:26,134 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:27,008 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:28,019 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:30,507 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:31,475 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:31,689 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:31,985 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:32,786 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:33,469 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:34,336 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:34,713 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:36,053 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:37,074 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:38,490 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:38,585 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:38,795 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:39,532 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:40,057 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:41,062 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:41,523 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:42,888 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:43,864 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:45,440 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:45,846 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:45,956 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:46,694 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:47,511 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:48,209 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:49,764 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:50,990 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:52,261 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:52,418 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:52,507 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:52,740 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:35:53,031 - DEBUG - Using proactor: IocpProactor
