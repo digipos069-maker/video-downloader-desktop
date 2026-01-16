@@ -107,6 +107,7 @@ class ScrapingWorker(QThread):
                     if 'pinterest.com' in item_url and '/pin/' in item_url: is_direct_item = True
                     elif 'instagram.com' in item_url and ('/p/' in item_url or '/reel/' in item_url or '/reels/' in item_url): is_direct_item = True
                     elif 'facebook.com' in item_url and ('/videos/' in item_url or '/reel/' in item_url or 'watch' in item_url): is_direct_item = True
+                    elif 'reelshort.com' in item_url and ('/episodes/' in item_url or '/full-episodes/' in item_url): is_direct_item = True
 
                     # Ignore the source URL itself ONLY if it's a profile/collection/playlist (non-direct)
                     if (item_url == self.url or item_url.rstrip('/') == self.url.rstrip('/')) and not is_direct_item:
@@ -117,7 +118,7 @@ class ScrapingWorker(QThread):
                     is_photo = item_url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp'))
                     
                     if not is_video and not is_photo:
-                        if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook']):
+                        if any(x in item_url for x in ['youtube', 'youtu.be', 'tiktok', 'facebook', 'reelshort.com']):
                             is_video = True
                         elif 'kuaishou.com' in item_url or 'kwai.com' in item_url:
                             is_video = True
@@ -478,6 +479,7 @@ class DownloaderTab(QWidget):
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "instagram.png"), "Instagram", size=32))
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "pinterest.png"), "Pinterest", size=32))
         platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "Kuaishou.png"), "Kuaishou", size=32))
+        platform_icons_layout.addWidget(SocialIcon(os.path.join(icon_base_path, "reelshort.png"), "ReelShort", size=32))
         
         row2_layout.addLayout(platform_icons_layout)
         
