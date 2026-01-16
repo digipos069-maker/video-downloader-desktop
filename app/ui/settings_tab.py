@@ -696,6 +696,52 @@ class SettingsTab(QWidget):
         kw_layout.addStretch()
         self.credentials_tabs.addTab(kuaishou_tab, QIcon(os.path.join(icon_base_path, "Kuaishou.png")), "Kuaishou")
         
+        # --- ReelShort Credentials Tab ---
+        reelshort_tab = QWidget()
+        rs_layout = QVBoxLayout(reelshort_tab)
+        rs_layout.setSpacing(8)
+        rs_layout.setContentsMargins(10, 10, 10, 10)
+        
+        rs_desc = QLabel("ReelShort episodes are often locked. Provide cookies to access content you have purchased/unlocked.")
+        rs_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        rs_desc.setWordWrap(True)
+        rs_layout.addWidget(rs_desc)
+        
+        # ReelShort Cookies File
+        rs_cookies_layout = QHBoxLayout()
+        self.rs_cookies_path = QLineEdit()
+        self.rs_cookies_path.setPlaceholderText("Path to reelshort cookies.txt...")
+        self.rs_cookies_btn = QPushButton("Browse...")
+        self.rs_cookies_btn.clicked.connect(self.browse_rs_cookies)
+        self.rs_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        rs_cookies_layout.addWidget(QLabel("Cookies File:"))
+        rs_cookies_layout.addWidget(self.rs_cookies_path)
+        rs_cookies_layout.addWidget(self.rs_cookies_btn)
+        rs_layout.addLayout(rs_cookies_layout)
+
+        # ReelShort Browser Option
+        rs_browser_layout = QHBoxLayout()
+        self.rs_browser_combo = QComboBox()
+        self.rs_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        rs_browser_layout.addWidget(QLabel("Browser Source:"))
+        rs_browser_layout.addWidget(self.rs_browser_combo)
+        rs_browser_layout.addStretch()
+        rs_layout.addLayout(rs_browser_layout)
+        
+        # Verify ReelShort Button
+        verify_rs_layout = QHBoxLayout()
+        self.verify_rs_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_rs_cookies_btn.clicked.connect(self.verify_rs_cookies)
+        self.verify_rs_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_rs_layout.addStretch()
+        verify_rs_layout.addWidget(self.verify_rs_cookies_btn)
+        rs_layout.addLayout(verify_rs_layout)
+        
+        rs_layout.addStretch()
+        self.credentials_tabs.addTab(reelshort_tab, QIcon(os.path.join(icon_base_path, "reelshort.png")), "ReelShort")
+        
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
 
@@ -809,6 +855,11 @@ class SettingsTab(QWidget):
         if path:
             self.kw_cookies_path.setText(path)
 
+    def browse_rs_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select ReelShort Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.rs_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
@@ -850,6 +901,13 @@ class SettingsTab(QWidget):
         browser_source = self.kw_browser_combo.currentText()
         test_url = "https://www.kuaishou.com/" # Kuaishou Test URL
         self._verify_cookies(cookie_file, browser_source, test_url, self.verify_kw_cookies_btn)
+
+    @Slot()
+    def verify_rs_cookies(self):
+        cookie_file = self.rs_cookies_path.text()
+        browser_source = self.rs_browser_combo.currentText()
+        test_url = "https://www.reelshort.com/" # ReelShort Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_rs_cookies_btn)
 
     def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):

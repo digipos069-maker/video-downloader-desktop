@@ -25643,3 +25643,36 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-16 16:35:52,507 - DEBUG - Using proactor: IocpProactor
 2026-01-16 16:35:52,740 - DEBUG - Using proactor: IocpProactor
 2026-01-16 16:35:53,031 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:43:37,669 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:43:40,312 - INFO - Direct Download Target: E:\project\videoDownloader\DEBUG_DOWNLOADS\ReelShortDebugVideo.mp4
+2026-01-16 16:53:42,228 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 16:53:44,719 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:53:45,671 - INFO - Playwright visiting: https://www.reelshort.com/episodes/episode-1-the-billionaire-female-ceo-from-the-trailer-park-6858fb34698cc855a209fe28-mktu6zb0hi?play_time=1
+2026-01-16 16:53:45,671 - INFO - Scraping page: https://www.reelshort.com/episodes/episode-1-the-billionaire-female-ceo-from-the-trailer-park-6858fb34698cc855a209fe28-mktu6zb0hi?play_time=1 (Target: 15)
+2026-01-16 16:54:08,968 - DEBUG - Using proactor: IocpProactor
+2026-01-16 16:54:11,688 - INFO - Found direct video URL: https://v-mps.crazymaplestudios.com/activity/mp4/10001_0100.mp4. Using urllib for direct download.
+2026-01-16 16:54:11,688 - INFO - Direct Download Target: E:\mmo\building-page\china movie\ReelShortVideo.mp4
+2026-01-16 16:58:31,188 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 16:58:32,102 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:03:23,829 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:03:24,936 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:03:47,457 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:03:48,169 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:04:27,362 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:05:42,495 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:05:43,552 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:07:16,920 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:07:18,051 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:10:07,247 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:10:10,001 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:10:11,052 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8
+2026-01-16 17:10:11,052 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8 (Target: 15)
+2026-01-16 17:10:35,309 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 17:10:35,309 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 15)
+2026-01-16 17:10:46,720 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3
+2026-01-16 17:10:46,721 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3 (Target: 15)
+2026-01-16 17:10:48,059 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:11:05,917 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:14:56,460 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:22:00,431 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:22:01,306 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

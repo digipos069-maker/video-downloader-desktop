@@ -611,12 +611,23 @@ def download_direct(url, output_path, title, progress_callback, settings={}):
 
 def extract_pinterest_direct_url(url):
     if not PLAYWRIGHT_AVAILABLE: return None
-    video_url = None
+    m3u8_url = None
+    mp4_url = None
+    seen_placeholder = False
+    
     def handle_response(response):
-        nonlocal video_url
-        if video_url: return
-        if (response.request.resource_type == "media" or '.m3u8' in response.url or '.mp4' in response.url):
-             video_url = response.url
+        nonlocal m3u8_url, mp4_url, seen_placeholder
+        if m3u8_url: return
+        
+        r_url = response.url
+        if '10001_0100.mp4' in r_url:
+            seen_placeholder = True
+            return
+        
+        if response.request.resource_type == "media" or '.m3u8' in r_url or '.mp4' in r_url:
+             if '.m3u8' in r_url: m3u3_url = r_url
+             elif '.mp4' in r_url and not mp4_url: mp4_url = r_url
+
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
@@ -624,9 +635,19 @@ def extract_pinterest_direct_url(url):
             page = context.new_page(); page.on("response", handle_response)
             try: page.goto(url, timeout=30000, wait_until="domcontentloaded")
             except Exception: pass 
+            
             start_time = time.time()
-            while not video_url and time.time() - start_time < 3: page.wait_for_timeout(500)
-            if video_url: browser.close(); return video_url
+            while not m3u8_url and time.time() - start_time < 8: page.wait_for_timeout(500)
+            
+            final_url = m3u8_url if m3u8_url else mp4_url
+            if final_url: 
+                browser.close()
+                return final_url
+            
+            if seen_placeholder:
+                logging.warning("Only placeholder video found. ReelShort likely requires login/cookies to play this episode.")
+            
+            # Pinterest JSON fallback
             try:
                 json_data = page.evaluate("() => document.getElementById('__PWS_DATA__') ? document.getElementById('__PWS_DATA__').innerText : null")
                 if json_data:
@@ -640,25 +661,31 @@ def extract_pinterest_direct_url(url):
                                 for k, v in vl.items():
                                     if 'url' in v: return v['url']
                             for k, v in obj.items():
-                                r = find_v(v)
+                                r = find_v(v); 
                                 if r: return r
                         elif isinstance(obj, list):
                             for i in obj:
-                                r = find_v(i)
+                                r = find_v(i); 
                                 if r: return r
                         return None
                     extracted = find_v(data)
                     if extracted: browser.close(); return extracted
             except Exception: pass
+            
+            # Video Tag fallback
             try:
                 page.evaluate("() => { const v = document.querySelector('video'); if(v) v.play(); }"); time.sleep(2)
-                if video_url: browser.close(); return video_url
+                # Check captured network vars again
+                final = m3u8_url if m3u8_url else mp4_url
+                if final: browser.close(); return final
+                
                 src = page.evaluate("() => document.querySelector('video') ? document.querySelector('video').src : null")
-                if src and src.startswith('http'): browser.close(); return src
+                if src and src.startswith('http') and '10001_0100.mp4' not in src: 
+                    browser.close(); return src
             except Exception: pass
             browser.close()
     except Exception: pass
-    return video_url
+    return m3u8_url if m3u8_url else mp4_url
 
 def extract_pinterest_image_url(url):
     if not PLAYWRIGHT_AVAILABLE: return None
