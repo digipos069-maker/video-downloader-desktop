@@ -163,15 +163,18 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
 
                     extract_func = """
                         () => {
+                            // Define isGeneric at top level scope
+                            const isGeneric = (str) => {
+                                if (!str) return true;
+                                const s = str.trim().toLowerCase();
+                                return s === 'save' || s === 'visit' || s === 'share' || s === 'more' || s.includes('skip') || s.includes('skip to');
+                            };
+
                             const items = Array.from(document.querySelectorAll('a[href]')).map(a => {
                                 let t = a.innerText;
                                 const rect = a.getBoundingClientRect();
                                 const container = a.closest('[data-test-id="pin"], .pin, .post, article, [role="link"]');
-                                const isGeneric = (str) => {
-                                    if (!str) return true;
-                                    const s = str.trim().toLowerCase();
-                                    return s === 'save' || s === 'visit' || s === 'share' || s === 'more' || s.includes('skip');
-                                };
+
                                 if (isGeneric(t)) t = a.getAttribute('aria-label') || a.getAttribute('title');
                                 if (isGeneric(t)) { const img = a.querySelector('img'); if (img) t = img.alt; }
                                 if (isGeneric(t) && container) {
@@ -181,17 +184,26 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                 }
                                 // ReelShort Specific: Force title extraction from Episode links
                                 if (window.location.host.includes('reelshort.com') && a.href.includes('/episodes/')) {
-                                    // User Request: "use link text a tag as primary"
-                                    // We trim to handle whitespace if the a-tag wraps block elements
-                                    const rawText = a.innerText;
-                                    if (rawText) {
-                                        t = rawText.trim();
+                                    // Structure: <h2 class="line-clamp-2..."><a ...>Title</a></h2>
+                                    // Check if parent has the specific class
+                                    if (a.parentElement && a.parentElement.classList.contains('line-clamp-2')) {
+                                        t = a.innerText.trim();
+                                    } 
+                                    // Fallback: Check inside link or container (previous logic)
+                                    else {
+                                        let specificTitleEl = a.querySelector('.line-clamp-2');
+                                        if (!specificTitleEl && container) {
+                                            specificTitleEl = container.querySelector('.line-clamp-2');
+                                        }
+                                        if (specificTitleEl) {
+                                            t = specificTitleEl.innerText.trim();
+                                        }
                                     }
                                     
-                                    // Fallback only if strictly empty
+                                    // Final safety: simple text
                                     if (!t || t === '') {
-                                        const titleEl = a.querySelector('.title, .name, h3, h4, div[class*="title"]');
-                                        if (titleEl) t = titleEl.innerText.trim();
+                                        const rawText = a.innerText;
+                                        if (rawText && rawText.trim() !== '') t = rawText.trim();
                                     }
                                 }
                                 let isVideo = false;
@@ -203,10 +215,23 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                     url: a.href, text: t, top: rect.top + window.scrollY, left: rect.left + window.scrollX, is_video_hint: isVideo
                                 };
                             });
+                            // Filter and Deduplicate (with Title Improvement)
                             const unique = new Map();
                             items.forEach(item => {
                                 if (!item.url || !item.url.startsWith('http')) return;
-                                if (!unique.has(item.url)) unique.set(item.url, item);
+                                
+                                if (!unique.has(item.url)) {
+                                    unique.set(item.url, item);
+                                } else {
+                                    // Check if we can improve the title
+                                    const existing = unique.get(item.url);
+                                    const existingIsGeneric = !existing.text || existing.text.trim() === '' || isGeneric(existing.text) || existing.text === 'Scraped Link';
+                                    const newIsGood = item.text && item.text.trim() !== '' && !isGeneric(item.text);
+                                    
+                                    if (existingIsGeneric && newIsGood) {
+                                        unique.set(item.url, item);
+                                    }
+                                }
                             });
                             return Array.from(unique.values()).sort((a, b) => {
                                 const rowDiff = a.top - b.top;
@@ -304,6 +329,11 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                  else: is_likely_photo = True
                             if is_likely_video and not req_video: continue
                             if is_likely_photo and not req_photo: continue
+                            
+                            # ReelShort: Filter out pagination/series pages from results, keep only episodes
+                            if 'reelshort.com' in domain and '/full-episodes/' in clean_href:
+                                continue
+
                             unique_urls.add(clean_href)
                             item = {'url': clean_href, 'title': text.strip(), 'type': 'scraped_link', 'is_video_hint': is_likely_video}
                             results.append(item)
