@@ -25721,3 +25721,71 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-16 17:40:13,473 - WARNING - Only placeholder video found. ReelShort likely requires login/cookies to play this episode.
 2026-01-16 17:40:13,497 - INFO - Found video in __NEXT_DATA__: https://v-mps.crazymaplestudios.com/vod-112094/4038b09cec3d71f0800f3108f4940102/b55370f2b8c844d6aa010fb38611147d-ad4b1a36866a5def71c009b313f4dd0e-sd.m3u8
 2026-01-16 17:40:13,679 - INFO - Direct Download Target: E:\project\videoDownloader\DEBUG_DOWNLOADS\ReelShortDebugVideo.m3u8
+2026-01-16 17:45:37,553 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-16 17:45:38,375 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:45:42,429 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:45:44,254 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:45:45,200 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 17:45:45,200 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 15)
+2026-01-16 17:46:07,372 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 17:46:07,373 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 15)
+2026-01-16 17:48:45,981 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:48:46,957 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a
+2026-01-16 17:48:46,957 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a (Target: 105)
+2026-01-16 17:49:09,043 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2
+2026-01-16 17:49:09,044 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/2 (Target: 105)
+2026-01-16 17:49:30,551 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3
+2026-01-16 17:49:30,551 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/3 (Target: 105)
+2026-01-16 17:49:52,057 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/4
+2026-01-16 17:49:52,057 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/4 (Target: 105)
+2026-01-16 17:50:13,419 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/5
+2026-01-16 17:50:13,419 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/5 (Target: 105)
+2026-01-16 17:50:35,078 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/6
+2026-01-16 17:50:35,078 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/6 (Target: 105)
+2026-01-16 17:50:56,413 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/7
+2026-01-16 17:50:56,414 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/7 (Target: 105)
+2026-01-16 17:51:17,810 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8
+2026-01-16 17:51:17,810 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/8 (Target: 105)
+2026-01-16 17:51:39,127 - INFO - Next page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9
+2026-01-16 17:51:39,127 - INFO - Scraping page: https://www.reelshort.com/full-episodes/step-aside-i-m-the-king-of-capital-690306d7afd90472c800cf3a/9 (Target: 105)
+2026-01-16 17:52:05,177 - INFO - No new items on page 9. Stopping.
+2026-01-16 17:54:16,808 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 17:54:23,447 - DEBUG - Using proactor: IocpProactor
+2026-01-16 17:54:24,375 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852
+2026-01-16 17:54:24,375 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852 (Target: 105)
+2026-01-16 17:54:46,413 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/2
+2026-01-16 17:54:46,413 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/2 (Target: 105)
+2026-01-16 17:55:07,931 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/3
+2026-01-16 17:55:07,931 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/3 (Target: 105)
+2026-01-16 17:55:29,257 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/4
+2026-01-16 17:55:29,257 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/4 (Target: 105)
+2026-01-16 17:55:50,639 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/5
+2026-01-16 17:55:50,639 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/5 (Target: 105)
+2026-01-16 17:56:12,001 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/6
+2026-01-16 17:56:12,001 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/6 (Target: 105)
+2026-01-16 17:56:33,419 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/7
+2026-01-16 17:56:33,419 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/7 (Target: 105)
+2026-01-16 17:56:54,784 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/8
+2026-01-16 17:56:54,785 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/8 (Target: 105)
+2026-01-16 17:57:16,153 - INFO - Next page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/9
+2026-01-16 17:57:16,153 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-daughter-of-zeus-694c357b064f1471500ea852/9 (Target: 105)
+2026-01-16 17:57:42,240 - INFO - No new items on page 9. Stopping.
+2026-01-16 19:46:01,367 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-16 19:46:03,117 - DEBUG - Using proactor: IocpProactor
+2026-01-16 19:46:10,689 - INFO - Playwright visiting: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f
+2026-01-16 19:46:10,689 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f (Target: 105)
+2026-01-16 19:46:35,120 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/2
+2026-01-16 19:46:35,120 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/2 (Target: 105)
+2026-01-16 19:46:56,682 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/3
+2026-01-16 19:46:56,683 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/3 (Target: 105)
+2026-01-16 19:47:18,093 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/4
+2026-01-16 19:47:18,093 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/4 (Target: 105)
+2026-01-16 19:47:39,402 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/5
+2026-01-16 19:47:39,402 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/5 (Target: 105)
+2026-01-16 19:48:00,760 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/6
+2026-01-16 19:48:00,760 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/6 (Target: 105)
+2026-01-16 19:48:22,145 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/7
+2026-01-16 19:48:22,145 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/7 (Target: 105)
+2026-01-16 19:48:43,511 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/8
+2026-01-16 19:48:43,511 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/8 (Target: 105)
+2026-01-16 19:49:09,591 - INFO - No new items on page 8. Stopping.

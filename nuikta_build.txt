@@ -11,4 +11,4 @@ python -m nuitka `
 --windows-file-description="video Downloader " `
 --copyright="Copyright © 2026" `
 --output-filename=SDM `
-main.p
+main.py
