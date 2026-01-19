@@ -53,6 +53,8 @@ def is_valid_media_link(href, domain):
         return True
     elif 'reelshort.com' in domain:
         return '/episodes/' in href or '/full-episodes/' in href
+    elif 'dramaboxdb.com' in domain:
+        return '/ep/' in href or '/movie/' in href
     return False
 
 def check_browser_process(browser_name):
@@ -853,9 +855,96 @@ class ReelShortHandler(BaseHandler):
                 return download_direct(du, op, item.get('title', 'ReelShort_Video'), progress_callback, settings)
         return False
 
+class DramaboxHandler(BaseHandler):
+    def can_handle(self, url): return 'dramaboxdb.com' in url
+    
+    def get_metadata(self, url): return extract_metadata_with_playwright(url)
+    
+    def get_playlist_metadata(self, url, max_entries=100, settings={}, callback=None):
+        if not PLAYWRIGHT_AVAILABLE:
+            return [{'url': url, 'title': 'Error: Playwright Missing', 'type': 'error'}]
+
+        results = []
+        try:
+            with sync_playwright() as p:
+                try:
+                    browser = p.chromium.launch(headless=True)
+                except Exception as e:
+                    logging.error(f"Error launching browser: {e}")
+                    return [{'url': url, 'title': 'Error: Browser Launch Failed', 'type': 'error'}]
+
+                context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+                page = context.new_page()
+                
+                logging.info(f"Dramabox scraping: {url}")
+                try:
+                    page.goto(url, timeout=60000, wait_until="domcontentloaded")
+                    time.sleep(3)
+                    
+                    all_episodes = set()
+                    unique_urls = set()
+                    page_num = 1
+                    
+                    while len(results) < max_entries:
+                        logging.info(f"Scraping Dramabox page {page_num}")
+                        
+                        # Extract Links
+                        links_data = page.evaluate("""
+                            () => {
+                                return Array.from(document.querySelectorAll('a[href*="/ep/"]')).map(a => {
+                                    return {href: a.href, text: a.innerText || 'Episode'};
+                                });
+                            }
+                        """)
+                        
+                        new_items = 0
+                        for l in links_data:
+                            link = l['href']
+                            text = l['text']
+                            if link not in all_episodes:
+                                all_episodes.add(link)
+                                clean_link = link.split('#')[0].split('?')[0]
+                                if clean_link not in unique_urls:
+                                    unique_urls.add(clean_link)
+                                    item = {'url': clean_link, 'title': text, 'type': 'scraped_link'}
+                                    results.append(item)
+                                    if callback: callback(item)
+                                    new_items += 1
+                        
+                        if new_items == 0 and page_num > 1:
+                            logging.info("No new items found. Stopping.")
+                            break
+                        
+                        # Pagination Logic
+                        buttons = page.locator(".RightList_tabTitle__zvZRp").all()
+                        if page_num < len(buttons):
+                            logging.info(f"Clicking tab index {page_num}...")
+                            buttons[page_num].click()
+                            time.sleep(3)
+                            page_num += 1
+                        else:
+                            logging.info("No more tabs to click.")
+                            break
+                            
+                        if page_num > 20: break # Safety limit
+
+                except Exception as e:
+                    logging.error(f"Dramabox scrape error: {e}")
+                finally:
+                    browser.close()
+        except Exception as e:
+             logging.error(f"Playwright error: {e}")
+             results.append({'url': url, 'title': 'Scrape Error', 'type': 'error'})
+        return results
+
+    def download(self, item, progress_callback):
+        # Default to yt-dlp for now, as it handles generic HLS/mp4 often found on these sites
+        # If it fails, we might need a custom extraction similar to ReelShort
+        return download_with_ytdlp(item['url'], self.get_download_path(item.get('settings', {}), True, item['url']), progress_callback, item.get('settings', {}))
+
 class PlatformHandlerFactory:
     def __init__(self):
-        self.handlers = [YouTubeHandler(), TikTokHandler(), PinterestHandler(), FacebookHandler(), InstagramHandler(), KuaishouHandler(), ReelShortHandler()]
+        self.handlers = [YouTubeHandler(), TikTokHandler(), PinterestHandler(), FacebookHandler(), InstagramHandler(), KuaishouHandler(), ReelShortHandler(), DramaboxHandler()]
     def get_handler(self, url):
         for h in self.handlers:
             if h.can_handle(url): return h
