@@ -13,6 +13,22 @@ from PySide6.QtCore import Qt, QThread, Signal, Slot, QUrl
 from app.config.version import VERSION
 from app.helpers import get_app_path, resource_path
 
+def is_writable(path):
+    try:
+        test_file = os.path.join(path, "temp_write_test")
+        with open(test_file, "w") as f: f.write("test")
+        os.remove(test_file)
+        return True
+    except PermissionError:
+        return False
+
+def run_as_admin(executable, args=None):
+    import ctypes
+    if args is None:
+        args = []
+    params = " ".join([f'"{arg}"' for arg in args])
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", executable, params, None, 1)
+
 class DownloadWorker(QThread):
     progress = Signal(int)
     finished = Signal(str) # Path to downloaded file
@@ -235,66 +251,93 @@ class UpdateDialog(QDialog):
         current_exe = sys.executable
         exe_name = os.path.basename(current_exe)
         
-        # 1. Rename current executable to archive version
-        # "keep app version exe with app name v{app version}"
-        # e.g., SocialDownloadManager_v26.0.0.exe
+        # Check permissions
+        if not is_writable(app_path):
+            QMessageBox.warning(self, "Permissions Required", "The application folder is not writable.\nPlease restart the update; you will be prompted to grant Administrator privileges.")
+            # Launch current exe as admin with a flag (not implemented) or just user restarts
+            # Better: Launch the UPDATER (this logic) as admin? 
+            # Since we are deep in logic, let's just try to elevate the current app to restart?
+            # Or assume the user will restart.
+            # However, we can try to run the *updater.bat* as admin later.
+            # Let's proceed to create the bat file in TEMP (writable) and run IT as admin.
+        
+        extract_dir = os.path.join(os.path.dirname(zip_path), "extracted_update")
+        if os.path.exists(extract_dir):
+            shutil.rmtree(extract_dir)
+        os.makedirs(extract_dir)
+
+        # 1. Extract to temp
+        try:
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(extract_dir)
+        except Exception as e:
+            raise Exception(f"Failed to extract zip: {e}")
+
+        # 2. Identify the new content
+        # If the zip contains a root folder (e.g. sdm_v26.0.2/), we need to copy contents FROM there.
+        # Otherwise copy from extract_dir.
+        source_dir = extract_dir
+        items = os.listdir(extract_dir)
+        if len(items) == 1 and os.path.isdir(os.path.join(extract_dir, items[0])):
+            source_dir = os.path.join(extract_dir, items[0])
+
+        # 3. Create Updater Bat
+        # We use a batch file to wait for PID termination and then move files.
+        # This avoids "File in use" errors.
+        
+        bat_path = os.path.join(os.path.dirname(zip_path), "updater.bat")
+        
+        # Escape paths for batch
+        # We need to copy FROM source_dir TO app_path
+        # And rename current_exe to backup
         
         name_part, ext = os.path.splitext(exe_name)
-        # Avoid double versioning if already has version
         base_name = name_part.split('_v')[0]
+        backup_name = f"{base_name}_v{VERSION}{ext}"
         
-        archive_name = f"{base_name}_v{VERSION}{ext}"
-        archive_path = os.path.join(app_path, archive_name)
+        bat_content = f"""@echo off
+title Updating Social Download Manager...
+echo Waiting for application to close...
+timeout /t 3 /nobreak > NUL
+
+:LOOP
+tasklist /FI "PID eq {os.getpid()}" 2>NUL | find /I /N "{os.getpid()}" >NUL
+if "%ERRORLEVEL%"=="0" (
+    timeout /t 1 /nobreak > NUL
+    goto LOOP
+)
+
+echo Backing up current version...
+cd /d "{app_path}"
+if exist "{exe_name}" (
+    move /y "{exe_name}" "{backup_name}"
+)
+
+echo Installing new version...
+xcopy /s /e /y "{source_dir}\\*" "{app_path}\\"
+
+echo Restarting...
+start "" "{exe_name}"
+
+echo Cleaning up...
+rmdir /s /q "{os.path.dirname(zip_path)}"
+
+del "%~f0"
+"""
+        with open(bat_path, "w") as f:
+            f.write(bat_content)
+
+        # 4. Run Bat and Exit
+        self.status_label.setText("Restarting to apply update...")
         
-        # If running from source (python.exe), we can't really "update" the exe. 
-        # We assume this runs in the frozen environment.
         if getattr(sys, 'frozen', False):
-            try:
-                # Rename current running exe? Windows allows renaming running executables usually.
-                if os.path.exists(archive_path):
-                    os.remove(archive_path) # Remove old archive if exists
-                
-                os.rename(current_exe, archive_path)
-                
-                # 2. Extract Zip
-                with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                    zip_ref.extractall(app_path)
-                
-                # 3. Check if new exe exists
-                # The zip should contain the executable with the ORIGINAL name (e.g. SocialDownloadManager.exe)
-                # If the zip structure is different, this might fail. We assume flat or root structure.
-                
-                # Clean up zip
-                try:
-                    os.remove(zip_path)
-                    os.rmdir(os.path.dirname(zip_path))
-                except:
-                    pass
-
-                # 4. Restart
-                self.status_label.setText("Restarting application...")
-                QMessageBox.information(self, "Update Complete", "Update installed successfully!\nThe application will now restart.")
-                
-                # Launch new exe
-                # We expect the new file to have the original name 'SocialDownloadManager.exe' (or whatever exe_name was)
-                new_exe_path = os.path.join(app_path, exe_name)
-                
-                if os.path.exists(new_exe_path):
-                    subprocess.Popen([new_exe_path])
-                    sys.exit(0)
-                else:
-                    # Fallback: Maybe zip had a folder?
-                    # For now, just restore logic? 
-                    # If failed, rename back
-                    os.rename(archive_path, current_exe)
-                    raise Exception("New executable not found after extraction.")
-
-            except Exception as e:
-                # Attempt rollback
-                if os.path.exists(archive_path) and not os.path.exists(current_exe):
-                    os.rename(archive_path, current_exe)
-                raise e
+            # If app dir is NOT writable, run the BAT as admin
+            if not is_writable(app_path):
+                run_as_admin(bat_path)
+            else:
+                subprocess.Popen([bat_path], shell=True)
+            
+            sys.exit(0)
         else:
-            # Dev mode
-            QMessageBox.information(self, "Dev Mode", f"Update downloaded to:\n{zip_path}\n\nCannot auto-update in dev mode.")
-            self.accept()
+             QMessageBox.information(self, "Dev Mode", f"Updater script created at:\n{bat_path}")
+             self.accept()
