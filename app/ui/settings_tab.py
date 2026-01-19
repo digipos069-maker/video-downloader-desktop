@@ -741,6 +741,52 @@ class SettingsTab(QWidget):
         
         rs_layout.addStretch()
         self.credentials_tabs.addTab(reelshort_tab, QIcon(os.path.join(icon_base_path, "reelshort.png")), "ReelShort")
+
+        # --- Dramabox Credentials Tab ---
+        dramabox_tab = QWidget()
+        db_layout = QVBoxLayout(dramabox_tab)
+        db_layout.setSpacing(8)
+        db_layout.setContentsMargins(10, 10, 10, 10)
+        
+        db_desc = QLabel("Dramabox episodes are often locked. Provide cookies to access content you have purchased/unlocked.")
+        db_desc.setStyleSheet("color: #A1A1AA; font-size: 9pt; margin-bottom: 10px;")
+        db_desc.setWordWrap(True)
+        db_layout.addWidget(db_desc)
+        
+        # Dramabox Cookies File
+        db_cookies_layout = QHBoxLayout()
+        self.db_cookies_path = QLineEdit()
+        self.db_cookies_path.setPlaceholderText("Path to dramabox cookies.txt...")
+        self.db_cookies_btn = QPushButton("Browse...")
+        self.db_cookies_btn.clicked.connect(self.browse_db_cookies)
+        self.db_cookies_btn.setStyleSheet("background-color: #27272A; color: #F4F4F5; border: 1px solid #3F3F46; border-radius: 6px; padding: 5px 10px;")
+        
+        db_cookies_layout.addWidget(QLabel("Cookies File:"))
+        db_cookies_layout.addWidget(self.db_cookies_path)
+        db_cookies_layout.addWidget(self.db_cookies_btn)
+        db_layout.addLayout(db_cookies_layout)
+
+        # Dramabox Browser Option
+        db_browser_layout = QHBoxLayout()
+        self.db_browser_combo = QComboBox()
+        self.db_browser_combo.addItems(["None", "chrome", "firefox", "opera", "edge", "brave", "vivaldi"])
+        
+        db_browser_layout.addWidget(QLabel("Browser Source:"))
+        db_browser_layout.addWidget(self.db_browser_combo)
+        db_browser_layout.addStretch()
+        db_layout.addLayout(db_browser_layout)
+        
+        # Verify Dramabox Button
+        verify_db_layout = QHBoxLayout()
+        self.verify_db_cookies_btn = QPushButton("Verify Cookies")
+        self.verify_db_cookies_btn.clicked.connect(self.verify_db_cookies)
+        self.verify_db_cookies_btn.setStyleSheet(VERIFY_BTN_STYLE)
+        verify_db_layout.addStretch()
+        verify_db_layout.addWidget(self.verify_db_cookies_btn)
+        db_layout.addLayout(verify_db_layout)
+        
+        db_layout.addStretch()
+        self.credentials_tabs.addTab(dramabox_tab, QIcon(os.path.join(icon_base_path, "dramabox.png")), "Dramabox")
         
         cred_layout.addWidget(self.credentials_tabs)
         credentials_group.setLayout(cred_layout)
@@ -860,6 +906,11 @@ class SettingsTab(QWidget):
         if path:
             self.rs_cookies_path.setText(path)
 
+    def browse_db_cookies(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select Dramabox Cookies File", "", "Text Files (*.txt);;All Files (*)")
+        if path:
+            self.db_cookies_path.setText(path)
+
     @Slot()
     def verify_fb_cookies(self):
         cookie_file = self.fb_cookies_path.text()
@@ -908,6 +959,13 @@ class SettingsTab(QWidget):
         browser_source = self.rs_browser_combo.currentText()
         test_url = "https://www.reelshort.com/" # ReelShort Test URL
         self._verify_cookies(cookie_file, browser_source, test_url, self.verify_rs_cookies_btn)
+
+    @Slot()
+    def verify_db_cookies(self):
+        cookie_file = self.db_cookies_path.text()
+        browser_source = self.db_browser_combo.currentText()
+        test_url = "https://www.dramaboxdb.com/" # Dramabox Test URL
+        self._verify_cookies(cookie_file, browser_source, test_url, self.verify_db_cookies_btn)
 
     def _verify_cookies(self, cookie_file, browser_source, test_url, btn_widget):
         if not cookie_file and (not browser_source or browser_source == "None"):
@@ -1013,6 +1071,16 @@ class SettingsTab(QWidget):
             self.kw_cookies_path.setText(kw_creds.get('cookie_file', ''))
             self._set_combo_text(self.kw_browser_combo, kw_creds.get('browser', 'None'))
 
+        rs_creds = self.credentials_manager.get_credential('reelshort')
+        if rs_creds:
+            self.rs_cookies_path.setText(rs_creds.get('cookie_file', ''))
+            self._set_combo_text(self.rs_browser_combo, rs_creds.get('browser', 'None'))
+
+        db_creds = self.credentials_manager.get_credential('dramabox')
+        if db_creds:
+            self.db_cookies_path.setText(db_creds.get('cookie_file', ''))
+            self._set_combo_text(self.db_browser_combo, db_creds.get('browser', 'None'))
+
     def _set_combo_text(self, combo, text):
         idx = combo.findText(text)
         if idx >= 0:
@@ -1065,6 +1133,18 @@ class SettingsTab(QWidget):
             'browser': self.kw_browser_combo.currentText()
         }
         self.credentials_manager.set_credential('kuaishou', kw_data)
+
+        rs_data = {
+            'cookie_file': self.rs_cookies_path.text(),
+            'browser': self.rs_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('reelshort', rs_data)
+
+        db_data = {
+            'cookie_file': self.db_cookies_path.text(),
+            'browser': self.db_browser_combo.currentText()
+        }
+        self.credentials_manager.set_credential('dramabox', db_data)
 
         if success:
             QMessageBox.information(self, "Success", "Settings and Credentials saved successfully!")
