@@ -25836,3 +25836,5 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-19 13:32:41,114 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
 2026-01-19 13:33:03,984 - INFO - Update available: 26.0.2 (Current: 26.0.1)
 2026-01-19 13:33:05,039 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 13:34:57,157 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-19 13:34:58,287 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177

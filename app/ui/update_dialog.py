@@ -9,9 +9,9 @@ from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, 
     QTextBrowser, QProgressBar, QMessageBox, QWidget
 )
-from PySide6.QtCore import Qt, QThread, Signal, Slot
+from PySide6.QtCore import Qt, QThread, Signal, Slot, QUrl
 from app.config.version import VERSION
-from app.helpers import get_app_path
+from app.helpers import get_app_path, resource_path
 
 class DownloadWorker(QThread):
     progress = Signal(int)
@@ -105,7 +105,24 @@ class UpdateDialog(QDialog):
         layout.addWidget(notes_label)
 
         self.notes_browser = QTextBrowser()
-        self.notes_browser.setHtml(self.release_notes.replace("\n", "<br>"))
+        
+        # Format Release Notes with Icons
+        icon_path = resource_path("app/resources/images/icons/checklist.png")
+        icon_url = QUrl.fromLocalFile(icon_path).toString()
+        
+        html_notes = ""
+        for line in self.release_notes.split("\n"):
+            line = line.strip()
+            if not line: continue
+            
+            # If line starts with - or *, add icon
+            if line.startswith("- ") or line.startswith("* "):
+                text = line[2:].strip()
+                html_notes += f'<div style="margin-bottom: 8px;"><img src="{icon_url}" width="14" height="14"> &nbsp; {text}</div>'
+            else:
+                html_notes += f'<div style="margin-bottom: 8px;">{line}</div>'
+                
+        self.notes_browser.setHtml(html_notes)
         layout.addWidget(self.notes_browser)
 
         # Progress Bar (Hidden initially)
@@ -125,6 +142,7 @@ class UpdateDialog(QDialog):
         btn_layout = QHBoxLayout()
         
         self.skip_btn = QPushButton("Skip This Version")
+        self.skip_btn.setCursor(Qt.PointingHandCursor)
         self.skip_btn.setStyleSheet(
             """
             QPushButton {
@@ -141,6 +159,7 @@ class UpdateDialog(QDialog):
         self.skip_btn.clicked.connect(self.reject)
 
         self.update_btn = QPushButton("Update Now")
+        self.update_btn.setCursor(Qt.PointingHandCursor)
         self.update_btn.setStyleSheet(
             """
             QPushButton {
