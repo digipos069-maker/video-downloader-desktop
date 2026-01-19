@@ -900,13 +900,27 @@ class DramaboxHandler(BaseHandler):
                         new_items = 0
                         for l in links_data:
                             link = l['href']
-                            text = l['text']
+                            text = l['text'].strip()
                             if link not in all_episodes:
                                 all_episodes.add(link)
                                 clean_link = link.split('#')[0].split('?')[0]
                                 if clean_link not in unique_urls:
                                     unique_urls.add(clean_link)
-                                    item = {'url': clean_link, 'title': text, 'type': 'scraped_link'}
+                                    
+                                    # Extract episode number from URL (format: ..._Episode-1)
+                                    ep_match = re.search(r'Episode-(\d+)', clean_link)
+                                    display_title = text
+                                    if ep_match:
+                                        ep_num = ep_match.group(1)
+                                        # Avoid redundancy if text is just the number or "Episode X"
+                                        if text.isdigit() or text.lower() == f"episode {ep_num}":
+                                            display_title = f"epsode-{ep_num}"
+                                        else:
+                                            display_title = f"epsode-{ep_num} {text}"
+                                    elif text.isdigit(): # Fallback if text is just the number
+                                        display_title = f"epsode-{text}"
+                                        
+                                    item = {'url': clean_link, 'title': display_title, 'type': 'scraped_link'}
                                     results.append(item)
                                     if callback: callback(item)
                                     new_items += 1

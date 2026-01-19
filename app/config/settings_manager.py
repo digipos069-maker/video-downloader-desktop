@@ -6,14 +6,14 @@ SETTINGS_FILE = os.path.join(get_app_path(), "settings.json")
 
 DEFAULT_SETTINGS = {
     'video': {
-        'enabled': False,
+        'enabled': True,
         'top': False,
         'count': 5,
         'all': False,
         'resolution': "Best Available"
     },
     'photo': {
-        'enabled': False,
+        'enabled': True,
         'top': False,
         'count': 5,
         'all': False,

@@ -25789,3 +25789,31 @@ yt_dlp.utils.DownloadError: [0;31mERROR:[0m [Pinterest] 20407004557522538: No 
 2026-01-16 19:48:43,511 - INFO - Next page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/8
 2026-01-16 19:48:43,511 - INFO - Scraping page: https://www.reelshort.com/full-episodes/the-words-694aea21e7b4a4d2ab0d7d5f/8 (Target: 105)
 2026-01-16 19:49:09,591 - INFO - No new items on page 8. Stopping.
+2026-01-19 11:17:47,859 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-19 11:17:48,784 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:18:00,235 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:18:10,330 - DEBUG - Using proactor: IocpProactor
+2026-01-19 11:18:12,458 - INFO - Dramabox scraping: https://www.dramaboxdb.com/ep/42000000606_his-love-was-a-lie/700038723_Episode-1
+2026-01-19 11:18:18,321 - INFO - Scraping Dramabox page 1
+2026-01-19 11:18:18,430 - INFO - Clicking tab index 1...
+2026-01-19 11:18:21,482 - INFO - Scraping Dramabox page 2
+2026-01-19 11:18:21,500 - INFO - No new items found. Stopping.
+2026-01-19 11:26:51,283 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-19 11:26:52,138 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:26:56,820 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:26:58,518 - DEBUG - Using proactor: IocpProactor
+2026-01-19 11:26:59,494 - INFO - Dramabox scraping: https://www.dramaboxdb.com/ep/42000000606_his-love-was-a-lie/700038723_Episode-1
+2026-01-19 11:27:03,828 - INFO - Scraping Dramabox page 1
+2026-01-19 11:27:03,940 - INFO - Clicking tab index 1...
+2026-01-19 11:27:06,996 - INFO - Scraping Dramabox page 2
+2026-01-19 11:27:07,011 - INFO - No new items found. Stopping.
+2026-01-19 11:34:32,515 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-19 11:34:33,343 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:34:35,656 - INFO - Update available: 26.0.2 (Current: 26.0.1)
+2026-01-19 11:34:38,162 - DEBUG - Verifying with Key Hash: 6c076f664c8a0d87392fb327c193a6908dff35ce0cd564c33aac7fe335e5c177
+2026-01-19 11:34:40,494 - DEBUG - Using proactor: IocpProactor
+2026-01-19 11:34:41,498 - INFO - Dramabox scraping: https://www.dramaboxdb.com/ep/42000000606_his-love-was-a-lie/700038723_Episode-1
+2026-01-19 11:34:45,008 - INFO - Scraping Dramabox page 1
+2026-01-19 11:34:45,144 - INFO - Clicking tab index 1...
+2026-01-19 11:34:48,189 - INFO - Scraping Dramabox page 2
+2026-01-19 11:34:48,202 - INFO - No new items found. Stopping.

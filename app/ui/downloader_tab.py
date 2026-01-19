@@ -1271,8 +1271,15 @@ class DownloaderTab(QWidget):
             
             # --- Inject Type Filtering Flags for Scraper ---
             # Flatten these so the scraper (platform_handler) can access them easily
-            settings['video_enabled'] = base_settings.get('video', {}).get('enabled', False)
-            settings['photo_enabled'] = base_settings.get('photo', {}).get('enabled', False)
+            # FORCE ENABLE for explicit Scraping action to ensure user sees results
+            settings['video_enabled'] = True 
+            settings['photo_enabled'] = True
+            
+            # Update the base settings dict too so the Worker logic respects it
+            if 'video' not in settings: settings['video'] = {}
+            if 'photo' not in settings: settings['photo'] = {}
+            settings['video']['enabled'] = True
+            settings['photo']['enabled'] = True
             
             # --- Inject Platform Credentials for Scraper ---
             # Facebook
