@@ -25,7 +25,20 @@ def check_for_updates():
             data = json.loads(response.read().decode())
             remote_version = data.get("version")
             
-            if remote_version and remote_version != VERSION:
+            # Semantic Version Check
+            update_available = False
+            if remote_version:
+                try:
+                    current_parts = [int(x) for x in VERSION.split('.')]
+                    remote_parts = [int(x) for x in remote_version.split('.')]
+                    if remote_parts > current_parts:
+                        update_available = True
+                except ValueError:
+                    # Fallback for non-numeric versions (e.g. "v1.0a")
+                    if remote_version != VERSION:
+                        update_available = True
+
+            if update_available:
                 logging.info(f"Update available: {remote_version} (Current: {VERSION})")
                 return True, data
     except Exception as e:

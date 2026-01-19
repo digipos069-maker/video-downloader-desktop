@@ -22,6 +22,7 @@ from app.config.license_manager import LicenseManager
 from app.config.version import VERSION
 from app.ui.license_dialog import LicenseDialog
 from app.ui.edit_username_dialog import EditUsernameDialog
+from app.ui.update_dialog import UpdateDialog
 from app.ui.widgets.custom_message_box import CustomMessageBox
 from app.ui.widgets.social_icon import SocialIcon
 from app.helpers import resource_path, check_for_updates
@@ -962,16 +963,8 @@ class DownloaderTab(QWidget):
             QMessageBox.information(self, "No Updates", "You are already using the latest version.")
 
     def show_update_dialog(self, info):
-        new_version = info.get("version", "Unknown")
-        notes = info.get("release_notes", "No notes available.")
-        url = info.get("download_url", "")
-        
-        msg = f"A new version (v{new_version}) is available!\n\nRelease Notes:\n{notes}\n\nWould you like to go to the download page?"
-        reply = QMessageBox.question(self, "Update Available", msg, QMessageBox.Yes | QMessageBox.No)
-        
-        if reply == QMessageBox.Yes and url:
-            import webbrowser
-            webbrowser.open(url)
+        dialog = UpdateDialog(info, self)
+        dialog.exec()
 
     def edit_username_event(self, event):
         current_name = self.username_label.text().replace("User: ", "")

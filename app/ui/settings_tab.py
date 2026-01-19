@@ -21,6 +21,7 @@ from app.config.credentials import CredentialsManager
 from app.config.version import VERSION
 from app.platform_handler import extract_metadata_with_playwright
 from app.helpers import resource_path, check_for_updates
+from app.ui.update_dialog import UpdateDialog
 
 # --- Styles ---
 VERIFY_BTN_STYLE = """
@@ -851,25 +852,17 @@ class SettingsTab(QWidget):
         self.check_update_btn.setText("Check for Updates")
         
         if available:
-            new_version = info.get("version", "Unknown")
-            notes = info.get("release_notes", "No notes available.")
-            url = info.get("download_url", "")
-            
-            self.update_status_label.setText(f"Update available: v{new_version}")
-            self.update_status_label.setStyleSheet("color: #10B981; font-size: 9pt; font-weight: bold;")
-            
-            msg = f"A new version (v{new_version}) is available!\n\nRelease Notes:\n{notes}\n\nWould you like to go to the download page?"
-            reply = QMessageBox.question(self, "Update Available", msg, QMessageBox.Yes | QMessageBox.No)
-            
-            if reply == QMessageBox.Yes and url:
-                import webbrowser
-                webbrowser.open(url)
+            self.show_update_dialog(info)
         else:
             self.update_status_label.setText("Your software is up to date.")
             self.update_status_label.setStyleSheet("color: #71717A; font-size: 9pt;")
             # Only show messagebox if manually checked? Usually good practice.
             # But the button is manual anyway.
             QMessageBox.information(self, "No Updates", "You are already using the latest version.")
+
+    def show_update_dialog(self, info):
+        dialog = UpdateDialog(info, self)
+        dialog.exec()
 
     def browse_fb_cookies(self):
         path, _ = QFileDialog.getOpenFileName(self, "Select Cookies File", "", "Text Files (*.txt);;All Files (*)")
