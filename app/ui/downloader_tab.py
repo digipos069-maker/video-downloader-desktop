@@ -1460,6 +1460,56 @@ class DownloaderTab(QWidget):
             import traceback
             traceback.print_exc()
 
+    @Slot()
+    def paste_urls_from_clipboard(self):
+        from PySide6.QtWidgets import QApplication
+        clipboard = QApplication.clipboard()
+        text = clipboard.text()
+        
+        if not text:
+            return
+            
+        urls = text.splitlines()
+        added_count = 0
+        invalid_urls = []
+        
+        for url in urls:
+            url = url.strip()
+            if not url: continue
+            
+            # Validate URL
+            if self.platform_handler_factory.get_handler(url):
+                # Check for duplicates in UI
+                is_duplicate = False
+                for row in range(self.queue_table_widget.rowCount()):
+                    item = self.queue_table_widget.item(row, 1)
+                    if item and item.text() == url:
+                        is_duplicate = True
+                        break
+                
+                if not is_duplicate:
+                    row_position = self.queue_table_widget.rowCount()
+                    self.queue_table_widget.insertRow(row_position)
+                    self.queue_table_widget.setItem(row_position, 0, QTableWidgetItem(str(row_position + 1)))
+                    self.queue_table_widget.setItem(row_position, 1, QTableWidgetItem(url))
+                    added_count += 1
+            else:
+                invalid_urls.append(url)
+        
+        if added_count > 0:
+            self.status_message.emit(f"Pasted {added_count} URL(s) from clipboard.")
+        elif invalid_urls:
+             self.status_message.emit("No valid URLs pasted.")
+        else:
+            self.status_message.emit("Clipboard is empty or contains no URLs.")
+
+        if invalid_urls:
+            msg = f"Skipped {len(invalid_urls)} unsupported URL(s):\n\n"
+            msg += "\n".join(invalid_urls[:5])
+            if len(invalid_urls) > 5:
+                msg += f"\n...and {len(invalid_urls) - 5} more."
+            QMessageBox.warning(self, "Invalid URLs", msg)
+
     def on_scraping_worker_finished(self, worker):
         """Internal handler for individual worker completion."""
         if hasattr(self, 'active_scraping_workers') and worker in self.active_scraping_workers:
@@ -1483,6 +1533,11 @@ class DownloaderTab(QWidget):
         
         # Base path for action icons
         icon_path = resource_path(os.path.join("app", "resources", "images", "icons", "action menu"))
+        
+        paste_action = menu.addAction("Paste URLs")
+        paste_action.triggered.connect(self.paste_urls_from_clipboard)
+        
+        menu.addSeparator()
         
         scrap_action = menu.addAction(QIcon(os.path.join(icon_path, "search.png")), "Scrap Now")
         scrap_action.triggered.connect(self.scrap_selected_queue_item)
