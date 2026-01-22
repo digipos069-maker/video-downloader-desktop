@@ -168,7 +168,7 @@ def extract_metadata_with_playwright(url, max_entries=100, settings={}, callback
                                 results.append(item)
                                 if callback: callback(item)
 
-                    extract_func = """
+                    extract_func = r"""
                         () => {
                             // Define isGeneric at top level scope
                             const isGeneric = (str) => {
