@@ -1534,7 +1534,9 @@ class DownloaderTab(QWidget):
         # Base path for action icons
         icon_path = resource_path(os.path.join("app", "resources", "images", "icons", "action menu"))
         
-        paste_action = menu.addAction("Paste URLs")
+        # Paste Action
+        paste_icon_path = resource_path(os.path.join("app", "resources", "images", "icons", "paste.png"))
+        paste_action = menu.addAction(QIcon(paste_icon_path), "Paste URLs")
         paste_action.triggered.connect(self.paste_urls_from_clipboard)
         
         menu.addSeparator()
